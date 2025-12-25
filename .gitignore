@@ -1,0 +1,32 @@
+# Old R code - not needed
+old_r_data/
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Terraform state files (may contain sensitive data)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs (optional - uncomment if you don't want to track logs)
+# data/logs/
+

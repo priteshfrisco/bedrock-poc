@@ -1,0 +1,35 @@
+{
+  "amz_p5_2025": {
+    "file_id": "amz_p5_2025",
+    "filename": "uncoded_amz_p5_2025.csv",
+    "status": "completed",
+    "product_count": 31446,
+    "start_time": "2025-12-23T20:03:56.116276",
+    "end_time": "2025-12-23T20:03:57.145048",
+    "removed_count": 25673,
+    "classified_count": 0,
+    "error_message": null
+  },
+  "amz_2025_p6": {
+    "file_id": "amz_2025_p6",
+    "filename": "uncoded_amz_2025_p6.csv",
+    "status": "processing",
+    "product_count": 21694,
+    "start_time": "2025-12-23T18:30:42.234146",
+    "end_time": null,
+    "removed_count": 0,
+    "classified_count": 0,
+    "error_message": null
+  },
+  "amz_2025_p7": {
+    "file_id": "amz_2025_p7",
+    "filename": "uncoded_amz_2025_p7.csv",
+    "status": "processing",
+    "product_count": 35311,
+    "start_time": "2025-12-23T18:30:43.000656",
+    "end_time": null,
+    "removed_count": 0,
+    "classified_count": 0,
+    "error_message": null
+  }
+}

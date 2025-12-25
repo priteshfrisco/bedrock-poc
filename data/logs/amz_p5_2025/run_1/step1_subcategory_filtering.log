@@ -1,0 +1,22 @@
+[2025-12-23T18:30:41.193374] INFO: ==================================================
+[2025-12-23T18:30:41.193569] INFO: STEP 1: SUBCATEGORY FILTERING
+[2025-12-23T18:30:41.193615] INFO: ==================================================
+[2025-12-23T18:30:41.193647] INFO: Input: 31,446 products
+[2025-12-23T18:30:42.090182] INFO: 
+[2025-12-23T18:30:42.090361] INFO: Results:
+[2025-12-23T18:30:42.090590] INFO:   Removed by subcategory:   25,283
+[2025-12-23T18:30:42.090624] INFO:   Removed by title keyword: 390
+[2025-12-23T18:30:42.090670] INFO:   Total removed:            25,673
+[2025-12-23T18:30:42.090716] INFO:   Not in lookup (kept):     4
+[2025-12-23T18:30:42.090742] INFO:   Remapped (supplements):   6,159
+[2025-12-23T18:30:42.090788] INFO:   Total passed forward:     5,773
+[2025-12-23T18:30:42.090818] INFO: 
+[2025-12-23T18:30:42.090853] INFO: Anomalies - Unknown subcategories:
+[2025-12-23T18:30:42.090889] INFO:   - 'intimate moisturizers': 4 product(s)
+[2025-12-23T18:30:42.090933] INFO: 
+[2025-12-23T18:30:42.091338] INFO: Unknown subcategories saved: audit/amz_p5_2025/run_1/unknown_subcategories.csv
+[2025-12-23T18:30:42.091372] INFO: 
+[2025-12-23T18:30:42.146136] INFO: All removed products: audit/amz_p5_2025/run_1/step1_subcategory_filtering/removed_all.csv
+[2025-12-23T18:30:42.197378] INFO: Subcategory removals: audit/amz_p5_2025/run_1/step1_subcategory_filtering/removed_by_subcategory.csv
+[2025-12-23T18:30:42.199289] INFO: Title keyword removals: audit/amz_p5_2025/run_1/step1_subcategory_filtering/removed_by_title_keyword.csv
+[2025-12-23T18:30:42.199329] INFO: ==================================================

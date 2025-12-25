@@ -1,0 +1,14 @@
+{
+  "total_products": 31446,
+  "removed": 25673,
+  "supplements_passed": 5773,
+  "step1_subcategory_filtering": {
+    "removed": 25673,
+    "passed_forward": 5773
+  },
+  "generated_at": "2025-12-23T20:03:57.144917",
+  "filename": "uncoded_amz_p5_2025.csv",
+  "file_id": "amz_p5_2025",
+  "run_id": "run_2",
+  "run_num": 2
+}

@@ -1,0 +1,71 @@
+keyword,category,auto_variations,exceptions,notes
+book,books_media,yes,,Catches books/ebook/e-book etc
+dvd,books_media,yes,,Video content
+jewelry,jewelry,no,,Jewelry/jewellery
+gemstone,jewelry,yes,,Healing crystals and gemstones
+key chain,jewelry,yes,,Keychains/key-chains
+body wash,body_care,yes,,Personal care products
+facial mask,body_care,yes,,Face masks
+shampoo,body_care,no,,Hair care (no plural needed)
+perfume,body_care,yes,,Fragrances
+lotion,body_care,yes,,Body lotions
+cleanser,body_care,yes,,Facial cleansers
+essential oil,topical_oils,yes,"supplement,capsule,softgel",Keep if supplement form (e.g. fish oil capsules)
+test kit,equipment,yes,,Testing devices and kits
+machine,equipment,no,,Equipment/devices
+grooming kit,equipment,yes,,Grooming kits
+shirt,apparel,yes,,Clothing items
+banana drops,food,no,,Specific food items
+clean gainer,food,no,,Specific food items
+treadmill,exercise_equipment,yes,,Walking pads and treadmills
+trampoline,exercise_equipment,yes,,Exercise trampolines
+resistance band,exercise_equipment,yes,,Workout bands
+exercise ball,exercise_equipment,yes,,Fitness balls
+kinesiology tape,exercise_equipment,no,,Athletic tape
+vibration plate,exercise_equipment,yes,,Exercise machines
+yoga mat,exercise_equipment,yes,,Fitness mats
+foam roller,exercise_equipment,yes,,Recovery equipment
+ankle weight,exercise_equipment,yes,,Workout weights
+kettlebell,exercise_equipment,yes,,Exercise weights
+dog cone,pet_products,yes,,Pet medical supplies
+recovery suit,pet_products,yes,,Post-surgery pet clothing
+pet medication,pet_products,no,,Veterinary products
+flea,pet_products,no,,Flea/tick products
+tick chewable,pet_products,no,,Pet pest control
+dog surgery,pet_products,no,,Veterinary supplies
+cat cone,pet_products,yes,,Pet medical supplies
+pet vest,pet_products,yes,,Pet clothing
+serum,cosmetics,yes,"supplement,oral",Face/skin serums - keep if oral supplement
+cream,cosmetics,yes,"supplement,oral,capsule,protein,ice cream,sour cream,whey,isolate",Keep if supplement/food form
+moisturizer,cosmetics,yes,,Skin care products
+toner,cosmetics,yes,,Facial toners
+balm,cosmetics,yes,"supplement,oral,capsule",Keep if supplement form
+gel,cosmetics,yes,"softgel,capsule,supplement,oral,energy gel,protein,gelatin,gelatein",Keep if supplement/energy form
+scrub,cosmetics,yes,,Exfoliating products
+exfoliant,cosmetics,yes,,Skin care products
+concealer,cosmetics,yes,,Makeup products
+foundation,cosmetics,yes,"supplement,vitamin",Makeup - keep if vitamin foundation
+primer,cosmetics,yes,,Makeup products
+snoring device,medical_devices,no,,Anti-snoring products
+cpap,medical_devices,no,,Sleep apnea devices
+blood pressure monitor,medical_devices,no,,Monitoring devices
+thermometer,medical_devices,yes,,Medical devices
+stethoscope,medical_devices,yes,,Medical equipment
+underwear,apparel,no,,Clothing items
+period underwear,apparel,no,,Menstrual products
+vest,apparel,yes,"supplement,omega",Clothing - keep if supplement vest/pack
+pants,apparel,no,,Clothing items
+shorts,apparel,no,,Clothing items
+jacket,apparel,yes,,Clothing items
+socks,apparel,no,,Clothing items
+syrup,food,yes,"supplement,extract",Keep if supplement/extract form
+snow cone,food,no,,Food products
+popcorn,food,no,,Snack foods
+candy,food,no,"supplement,gummy",Keep if gummy supplement
+cookie,food,yes,"supplement,protein",Keep if protein/supplement
+snack bar,food,yes,"protein,supplement",Keep if protein/supplement bar
+tattoo,household,yes,,Tattoo supplies/patches
+patch,household,yes,"supplement,vitamin,nicotine",Keep if supplement/vitamin/nicotine patch
+incontinence,household,no,,Personal care products
+diaper,household,yes,,Baby/adult diapers
+wipe,household,yes,"supplement,alcohol",Keep if supplement wipes
