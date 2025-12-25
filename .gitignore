@@ -1,6 +1,11 @@
 # Old R code - not needed
 old_r_data/
 
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
 # Virtual environment
 venv/
 
