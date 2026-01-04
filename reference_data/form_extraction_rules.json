@@ -1,0 +1,29 @@
+{
+  "keywords": {
+    "CAPSULE": ["capsule", "capsules", "vcap", "vcaps", "cap", "caps"],
+    "VEGETABLE CAPSULE": ["vegetable capsule", "veg capsule", "veggie capsule", "vegcap", "vegetable capsules", "veg capsules", "veggie caps", "vegan capsules", "vegetarian capsules", "vcaps", "vegicaps", "veg drcaps", "vegetarian caps", "vegecapsules", "vtab", "drcaps"],
+    "TABLET": ["tablet", "tablets", "tab", "tabs"],
+    "CAPLET": ["caplet", "caplets"],
+    "CHEWABLE TABLET": ["chewable", "chewables", "chewable tablet", "chewable tablets", "chew tablet"],
+    "SOFTGEL": ["softgel", "softgels", "soft gel", "soft gels", "soft-gel", "soft-gels", "liquid gels", "liquid gel", "liqui-gels", "liquid capsules", "liquid capsule", "liquid soft-gels", "liquidcaps", "liquidgels", "gelcaps", "gel caps", "gel cap", "gels", "sgels"],
+    "SOFT CHEW": ["soft chew", "soft chews", "softchew"],
+    "POWDER": ["powder"],
+    "LIQUID": ["liquid", "drink", "shake", "syrup", "shake mix", "juice"],
+    "GUMMY": ["gummy", "gummies", "gummi"],
+    "DROPS": ["drops", "drop"],
+    "LOZENGE": ["lozenge", "lozenges", "lozeng", "throat drop", "cough drop", "throat drops", "cough drops", "throatdrop", "coughdrop", "throatdrops", "coughdrops"],
+    "BAR": ["bar", "bars", "clif bar"],
+    "SPRAY": ["spray", "sprai", "nasal spray", "throat spray", "inhaler", "mist", "relief spray"],
+    "TOPICAL GELS & CREAMS": ["cream", "creams", "gel", "gels", "topical gels & creams", "ointment", "topic"],
+    "PELLET": ["pellet", "pellets"],
+    "TINCTURE": ["tincture", "tinctures", "tinctur", "tincture oil drops"],
+    "TEST KITS AND OTHER KITS": ["test kit", "test kits", "kit", "kits", "drug test", "drugtest"],
+    "LOOSE MEDICINAL HERBS": ["loose", "bulk", "herb", "loose medicinal herbs"],
+    "ENERGY GEL & FOOD - GEL": ["energy gel", "energy gels", "energygel"],
+    "ENERGY GEL & FOOD - CHEW": ["energy chew", "energy chews", "energychew"],
+    "GUM": ["gum", "gums", "chewing gum", "energy gum"],
+    "SUPPOSITORIES": ["suppository", "suppositories", "suppositori"]
+  },
+  "default": "OTHER/UNKNOWN",
+  "instructions": "Search title for form keywords. Extract the physical form of the supplement. Match the most specific form possible. Use uppercase for the output value. IMPORTANT: Do NOT confuse ingredient descriptions with form indicators (e.g., 'turmeric powder in capsules' → form is CAPSULE, not POWDER)."
+}

@@ -1,0 +1,20 @@
+{
+  "priority_order": [
+    {
+      "priority": 1,
+      "keywords": ["inorganic"],
+      "result": "NOT ORGANIC",
+      "reason": "If 'inorganic' is mentioned, the product is NOT organic (even if 'organic' also appears)"
+    },
+    {
+      "priority": 2,
+      "keywords": ["organic", "usda organic", "certified organic"],
+      "result": "ORGANIC",
+      "reason": "If 'organic' is mentioned (and no 'inorganic'), the product is organic"
+    }
+  ],
+  "default": "NOT ORGANIC",
+  "instructions": "Check title for organic keywords using PRIORITY ORDER. Check 'inorganic' FIRST (priority 1), then 'organic' (priority 2). If neither found, default to NOT ORGANIC.",
+  "edge_case_example": "Title: 'Supplement with organic and inorganic minerals' → Contains BOTH keywords → Check 'inorganic' first (Priority 1) → Result: NOT ORGANIC"
+}
+

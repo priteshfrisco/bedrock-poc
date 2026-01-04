@@ -1,0 +1,86 @@
+{
+  "description": "Rules for extracting Unit of Measurement from product title",
+  "instructions": "Identify the unit type from the product title. Return the standardized unit form.",
+  "unit_types": {
+    "discrete_units": {
+      "description": "Discrete countable units - return 'COUNT'",
+      "indicators": [
+        "capsules", "capsule", "caps", "cap",
+        "tablets", "tablet", "tabs", "tab",
+        "softgels", "softgel", "gels",
+        "gummies", "gummy",
+        "pills", "pill",
+        "servings", "serving",
+        "lozenges", "lozenge",
+        "drops",
+        "count", "ct",
+        "ea", "each",
+        "pieces", "piece"
+      ],
+      "output": "COUNT"
+    },
+    "volume_units": {
+      "description": "Volume units",
+      "indicators": ["oz", "fl oz", "fluid oz", "ounce", "ounces", "fluid ounce"],
+      "output": "oz"
+    },
+    "weight_units": {
+      "description": "Weight units",
+      "indicators": {
+        "lb": ["lb", "lbs", "pound", "pounds"],
+        "kg": ["kg", "kgs", "kilos", "kilogram", "kilograms"],
+        "g": ["g", "gm", "gram", "grams"],
+        "mg": ["mg", "milligram", "milligrams"],
+        "ml": ["ml", "milliliter", "milliliters", "millil"]
+      }
+    }
+  },
+  "default": "UNKNOWN",
+  "rules": [
+    "Discrete units (capsules, tablets, softgels, etc.) → return 'COUNT'",
+    "Volume units (oz, fl oz) → return 'oz'",
+    "Weight units found (lbs, pounds, etc.) → return base form ('lb', 'kg', 'g', 'mg', 'ml')",
+    "No unit found → return 'UNKNOWN'"
+  ],
+  "examples": [
+    {
+      "title": "Fish Oil 1000mg 180 Softgels",
+      "unit": "COUNT",
+      "reasoning": "Discrete units 'softgels' found → return COUNT"
+    },
+    {
+      "title": "Elderberry Syrup 8 fl oz",
+      "unit": "oz",
+      "reasoning": "Volume unit 'fl oz' found → return 'oz'"
+    },
+    {
+      "title": "Whey Protein Powder 2 lbs",
+      "unit": "lb",
+      "reasoning": "Weight unit 'lbs' found → return 'lb'"
+    },
+    {
+      "title": "Creatine Monohydrate 500 g",
+      "unit": "g",
+      "reasoning": "Weight unit 'g' found → return 'g'"
+    },
+    {
+      "title": "Vitamin C Powder 1 kg",
+      "unit": "kg",
+      "reasoning": "Weight unit 'kg' found → return 'kg'"
+    },
+    {
+      "title": "Multivitamin Gummy",
+      "unit": "UNKNOWN",
+      "reasoning": "No unit found → return UNKNOWN"
+    }
+  ],
+  "conversion_factors_for_python": {
+    "lb": 16,
+    "kg": 35.274,
+    "g": 0.035274,
+    "mg": 0.000035274,
+    "ml": 0.033814
+  }
+}
+
+

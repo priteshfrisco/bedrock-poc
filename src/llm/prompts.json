@@ -1,0 +1,57 @@
+{
+  "system_prompt": "You are a supplement classification expert. Extract structured information from product titles step by step. Be accurate and precise. Only extract information that is present in the title.",
+
+  "extraction_workflow": {
+    "step1_basic_attributes": {
+      "title": "STEP 1: Extract Basic Attributes",
+      "description": "Extract age, gender, form, organic, count, unit, and size.",
+      
+      "attributes": [
+        {
+          "name": "age",
+          "description": "Target age group",
+          "rules_file": "age_extraction_rules.json",
+          "note": "Valid values extracted from keywords + default in rules_file"
+        },
+        {
+          "name": "gender",
+          "description": "Target gender",
+          "rules_file": "gender_extraction_rules.json",
+          "note": "Valid values extracted from keywords + default in rules_file"
+        },
+        {
+          "name": "form",
+          "description": "Physical form of supplement",
+          "rules_file": "form_extraction_rules.json",
+          "note": "Valid values extracted from keywords + default in rules_file"
+        },
+        {
+          "name": "organic",
+          "description": "Is product organic?",
+          "rules_file": "organic_extraction_rules.json",
+          "valid_values": ["ORGANIC", "NOT ORGANIC"]
+        },
+        {
+          "name": "count",
+          "description": "Number of units in package",
+          "rules_file": "count_extraction_rules.json"
+        },
+        {
+          "name": "unit",
+          "description": "Unit of measurement (COUNT or OZ)",
+          "rules_file": "unit_extraction_rules.json",
+          "valid_values": ["COUNT", "OZ", "UNKNOWN"]
+        },
+        {
+          "name": "size",
+          "description": "Pack size (number of packages/bottles)",
+          "rules_file": "size_extraction_rules.json"
+        }
+      ],
+
+      "instructions": "For each attribute, search the title for keywords defined in the rules file. Assign the corresponding value. If no keyword match, use the default value."
+    }
+  },
+
+  "notes": "At runtime, the prompt builder will load each rules_file and inject keywords into the actual prompt sent to the LLM."
+}

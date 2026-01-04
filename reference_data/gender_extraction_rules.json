@@ -1,0 +1,13 @@
+{
+  "keywords": {
+    "GENDER - MALE": ["men", "men's", "male", "mens", "prostate"],
+    "GENDER - FEMALE": ["women", "women's", "female", "womens", "prenatal", "pregnancy", "pregnant", "menopause", "menstrual"]
+  },
+  "default": "GENDER - NON SPECIFIC",
+  "instructions": "Search title for gender keywords. If found, assign corresponding gender. If no keyword found, default to NON SPECIFIC. IMPORTANT: Do NOT extract gender keywords from brand names.",
+  "special_rules": [
+    "Products containing 'prostate' are male-specific",
+    "Products containing 'prenatal', 'pregnancy', or 'menopause' are female-specific",
+    "IGNORE gender keywords that appear in brand names (e.g., 'Women's Best' is a brand, not a gender indicator)"
+  ]
+}

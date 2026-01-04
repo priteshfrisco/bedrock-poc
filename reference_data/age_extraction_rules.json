@@ -1,0 +1,21 @@
+{
+  "instructions": "Search title for age keywords. If found, assign corresponding age group. If NO keyword found, default to NON SPECIFIC (not ADULT). IMPORTANT: Do NOT extract age keywords from brand names or ingredient names (e.g., 'Elderberry' does NOT mean 'elder').",
+  "default": "AGE GROUP - NON SPECIFIC",
+  "keywords": {
+    "AGE GROUP - CHILD": ["kids", "children", "child", "pediatric", "kid's", "toddler"],
+    "AGE GROUP - BABY": ["infant", "baby", "newborn"],
+    "AGE GROUP - TEEN": ["teen", "teenager", "adolescent"],
+    "AGE GROUP - ADULT": ["adult", "adults"],
+    "AGE GROUP - MATURE ADULT": ["mature adult", "50+", "60+", "50 plus", "60 plus", "50 & wiser", "mature", "senior"],
+    "AGE GROUP - PRENATAL": ["prenatal", "pregnancy", "pregnant", "postnatal", "postpartum"]
+  },
+  "important_notes": [
+    "ADULT and NON SPECIFIC are DIFFERENT values with different business rule implications",
+    "Only assign ADULT if the title explicitly contains 'adult' or 'adults' as a descriptor",
+    "If no age keyword is found, use NON SPECIFIC (do not assume ADULT)",
+    "Prenatal products get AGE GROUP - PRENATAL (not ADULT like the R system did)",
+    "IGNORE age keywords that appear in brand names (e.g., 'Baby's Only Organic' brand)",
+    "IGNORE age keywords that are part of ingredient names (e.g., 'Elderberry' contains 'elder' but is NOT an age indicator)"
+  ],
+  "business_rule_context": "In multivitamin subcategory logic: Age=ADULT+Gender=NON SPECIFIC → ADULT subcategory, but Age=NON SPECIFIC+Gender=NON SPECIFIC → NON-SPECIFIC subcategory. These are different outcomes."
+}

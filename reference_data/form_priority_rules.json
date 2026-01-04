@@ -1,0 +1,48 @@
+{
+  "title": "Form Priority and Conflict Resolution Rules",
+  "description": "These rules handle cases where multiple form keywords appear in the title or when specific combinations need special handling.",
+  "rules": [
+    {
+      "rule_id": "FORM-RULE-01",
+      "priority": 1,
+      "description": "Cough drops or throat drops are always lozenges",
+      "condition": "If title contains 'cough drop' OR 'throat drop'",
+      "action": "Set form to LOZENGE",
+      "reason": "These terms always indicate lozenge form, regardless of other keywords"
+    },
+    {
+      "rule_id": "FORM-RULE-02",
+      "priority": 2,
+      "description": "Powder IN capsules means capsule form, not powder",
+      "condition": "If title contains BOTH 'powder' AND 'capsule'",
+      "action": "Set form to CAPSULE (not POWDER)",
+      "reason": "Powder describes the ingredient state, capsule is the delivery form"
+    },
+    {
+      "rule_id": "FORM-RULE-03",
+      "priority": 3,
+      "description": "Upgrade generic capsule to vegetable capsule if specified",
+      "condition": "If title contains 'vegetable capsule' or 'veg capsule' or similar variants",
+      "action": "Set form to VEGETABLE CAPSULE (not just CAPSULE)",
+      "reason": "Be specific when the product explicitly mentions vegetable/vegan/vegetarian capsules"
+    },
+    {
+      "rule_id": "FORM-RULE-04",
+      "priority": 4,
+      "description": "Gel capsules or liquid capsules are softgels",
+      "condition": "If title contains 'gel capsule' OR 'liquid capsule'",
+      "action": "Set form to SOFTGEL (not CAPSULE)",
+      "reason": "These terms specifically indicate softgel form, not hard capsules"
+    },
+    {
+      "rule_id": "FORM-RULE-05",
+      "priority": 5,
+      "description": "Chew tablets are chewable tablets",
+      "condition": "If title contains 'chew tablet' or 'chewable tablet'",
+      "action": "Set form to CHEWABLE TABLET (not TABLET)",
+      "reason": "Distinguish chewable from regular swallow tablets"
+    }
+  ],
+  "client_instructions": "To add a new rule, add an entry with the next rule_id (FORM-RULE-06, etc.). Include: condition (when to apply), action (what to do), and reason (why this rule exists)."
+}
+

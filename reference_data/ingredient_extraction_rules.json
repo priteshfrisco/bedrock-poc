@@ -1,0 +1,83 @@
+{
+  "instructions": "Extract ALL functional ingredients from the product title. For each ingredient found, record its NAME and POSITION (character index in title). This is CRITICAL for determining the primary ingredient.",
+  
+  "extraction_steps": [
+    "1. Scan the entire title for ingredient names",
+    "2. For EACH ingredient found, record:",
+    "   - ingredient_name: The name of the ingredient (e.g., 'vitamin d', 'turmeric', 'whey protein')",
+    "   - position: Character position where ingredient starts in title (0-indexed)",
+    "3. Return ALL ingredients found, not just the first one",
+    "4. For each ingredient, you MUST call the lookup_ingredient() tool to get its category/subcategory"
+  ],
+  
+  "critical_rules": [
+    "⚠️ DO NOT split compound ingredient names into separate ingredients",
+    "Example: 'Vitamin D3' → Extract as ONE ingredient 'vitamin d3' (NOT 'vitamin d' + 'd3')",
+    "Example: 'Vitamin B12' → Extract as ONE ingredient 'vitamin b12' (NOT 'vitamin b' + 'b12')",
+    "Example: 'Omega-3' → Extract as ONE ingredient 'omega-3' (NOT 'omega' + '3')",
+    "⚠️ IMPORTANT: 'Vitamin D' and 'Vitamin D3' are DIFFERENT ingredients:",
+    "  - 'Vitamin D3 5000 IU' → Extract 'vitamin d3' (specific form)",
+    "  - 'Vitamin D 5000 IU' → Extract 'vitamin d' (generic)",
+    "  - Only extract what's actually in the title - don't add or assume numbers",
+    "If you see adjacent words that form a single ingredient name, extract them together"
+  ],
+  
+  "special_cases": {
+    "multivitamin": {
+      "keywords": ["multivitamin", "multi vitamin", "multi-vitamin", "multiple vitamin"],
+      "note": "If detected, this becomes the PRIMARY ingredient regardless of position"
+    },
+    "protein": {
+      "keywords": ["protein", "whey", "isolate", "casein", "pea protein", "soy protein"],
+      "note": "Protein ingredients trigger special category override"
+    }
+  },
+  
+  "tool_calling": {
+    "tool_name": "lookup_ingredient",
+    "description": "For EACH ingredient found, call this tool to get category and subcategory from the database",
+    "parameters": {
+      "ingredient_name": "The name of the ingredient to look up"
+    },
+    "response": {
+      "ingredient": "Normalized ingredient name",
+      "nw_category": "Nature's Way category",
+      "nw_subcategory": "Nature's Way subcategory",
+      "found": "Boolean - whether ingredient was found in database"
+    }
+  },
+  
+  "primary_ingredient_logic": {
+    "rule": "PRIMARY ingredient is determined by POSITION in title (first found = primary)",
+    "exception": "If 'Multiple Vitamin' is detected anywhere, it becomes PRIMARY regardless of position",
+    "example": {
+      "title": "Vitamin D3 with Calcium and Magnesium 120 Softgels",
+      "ingredients_found": [
+        {"name": "vitamin d3", "position": 0},
+        {"name": "calcium", "position": 18},
+        {"name": "magnesium", "position": 30}
+      ],
+      "primary_ingredient": "vitamin d3 (first by position)",
+      "other_ingredients": ["calcium", "magnesium"]
+    }
+  },
+  
+  "output_format": {
+    "description": "Return a list of ingredients with their lookup results",
+    "structure": {
+      "ingredients": [
+        {
+          "name": "ingredient_name",
+          "position": 0,
+          "lookup_result": {
+            "nw_category": "CATEGORY",
+            "nw_subcategory": "SUBCATEGORY",
+            "found": true
+          }
+        }
+      ],
+      "primary_ingredient": "ingredient_name",
+      "reasoning": "Why this was chosen as primary"
+    }
+  }
+}

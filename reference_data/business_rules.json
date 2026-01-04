@@ -1,0 +1,196 @@
+{
+  "instructions": "After you receive all tool call results, apply these business rules IN ORDER to refine the category and subcategory. Later rules override earlier ones.",
+  
+  "rules": [
+    {
+      "rule_id": "BR-01",
+      "name": "Title-Based Overrides",
+      "priority": 1,
+      "description": "Check title for specific keywords that override category",
+      "conditions": [
+        {
+          "if": "title contains 'PROTEIN POWDER'",
+          "then": {
+            "category": "ACTIVE NUTRITION",
+            "subcategory": "PROTEIN & MEAL REPLACEMENTS"
+          },
+          "reasoning": "Protein powder products always go to ACTIVE NUTRITION"
+        },
+        {
+          "if": "title contains 'WEIGHT LOSS' or 'WEIGHT MANAGEMENT'",
+          "then": {
+            "category": "ACTIVE NUTRITION",
+            "subcategory": "WEIGHT MANAGEMENT"
+          },
+          "reasoning": "Weight loss products always go to weight management category"
+        }
+      ]
+    },
+    {
+      "rule_id": "BR-02",
+      "name": "Ingredient-Specific Overrides",
+      "priority": 2,
+      "description": "Override category/subcategory based on specific ingredient names",
+      "conditions": [
+        {
+          "if": "primary_ingredient = 'SAM E' or 'SAM-E'",
+          "then": {
+            "category": "MISCELLANEOUS SUPPLEMENTS",
+            "subcategory": "MISCELLANEOUS SUPPLEMENTS"
+          }
+        },
+        {
+          "if": "primary_ingredient in ['SPIRULINA', 'SPIRULINA BLUE GREEN ALGAE', 'ALGAE', 'ALGAE - OTHER', 'SEA MOSS', 'CHLORELLA', 'CHLOROPHYLL / CHLORELLA']",
+          "then": {
+            "category": "HERBAL REMEDIES",
+            "subcategory": "FOOD SUPPLEMENTS"
+          }
+        },
+        {
+          "if": "primary_ingredient = 'ECHINACEA GOLDENSEAL COMBO'",
+          "then": {
+            "category": "HERBAL/HOMEOPATHIC COLD & FLU",
+            "subcategory": "HERBAL FORMULAS COLD & FLU"
+          }
+        },
+        {
+          "if": "primary_ingredient = 'CHOLINE AND INOSITOL (COMBO)' or 'CHOLINE INOSITOL'",
+          "then": {
+            "category": "MISCELLANEOUS SUPPLEMENTS",
+            "subcategory": "MISCELLANEOUS SUPPLEMENTS"
+          }
+        },
+        {
+          "if": "primary_ingredient contains 'UBIQUINOL' or = 'CO-ENZYME Q 10 - UBIQUINOL'",
+          "then": {
+            "category": "COENZYME Q10",
+            "subcategory": "COENZYME Q10"
+          }
+        },
+        {
+          "if": "primary_ingredient = 'GLANDULAR'",
+          "then": {
+            "category": "MISCELLANEOUS SUPPLEMENTS",
+            "subcategory": "MISCELLANEOUS SUPPLEMENTS"
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "BR-03",
+      "name": "Protein Category Override",
+      "priority": 3,
+      "description": "All protein ingredients go to SPORTS NUTRITION",
+      "conditions": [
+        {
+          "if": "primary_ingredient contains any of: ['PROTEIN', 'WHEY', 'ISOLATE', 'CASEIN', 'PEA PROTEIN', 'SOY PROTEIN']",
+          "then": {
+            "category": "SPORTS NUTRITION",
+            "subcategory": "PROTEIN"
+          },
+          "reasoning": "All protein supplements are categorized under sports nutrition"
+        }
+      ]
+    },
+    {
+      "rule_id": "BR-04",
+      "name": "Herb Formula Logic",
+      "priority": 4,
+      "description": "Count herbs to determine if FORMULAS or SINGLES",
+      "conditions": [
+        {
+          "if": "primary category = 'HERBAL REMEDIES' AND count of ingredients with category='HERBAL REMEDIES' >= 2",
+          "then": {
+            "subcategory": "FORMULAS"
+          },
+          "reasoning": "2 or more herbal ingredients = FORMULAS"
+        },
+        {
+          "if": "primary category = 'HERBAL REMEDIES' AND count of ingredients with category='HERBAL REMEDIES' = 1",
+          "then": {
+            "subcategory": "SINGLES"
+          },
+          "reasoning": "Single herbal ingredient = SINGLES"
+        }
+      ]
+    },
+    {
+      "rule_id": "BR-05",
+      "name": "Multivitamin Refinement",
+      "priority": 5,
+      "description": "Refine multivitamin subcategory based on age + gender + title",
+      "conditions": [
+        {
+          "if": "primary category = 'COMBINED MULTIVITAMINS'",
+          "then": "Apply the following subcategory refinement logic:",
+          "logic": {
+            "priority_1_age_based": [
+              {
+                "if": "age = 'AGE GROUP - CHILD'",
+                "then": {"subcategory": "CHILD"}
+              },
+              {
+                "if": "age = 'AGE GROUP - TEEN'",
+                "then": {"subcategory": "TEEN"}
+              }
+            ],
+            "priority_2_age_and_gender": [
+              {
+                "if": "gender = 'GENDER - MALE' AND age = 'AGE GROUP - ADULT'",
+                "then": {"subcategory": "MEN"}
+              },
+              {
+                "if": "gender = 'GENDER - MALE' AND age = 'AGE GROUP - NON SPECIFIC'",
+                "then": {"subcategory": "MEN"}
+              },
+              {
+                "if": "gender = 'GENDER - MALE' AND age = 'AGE GROUP - MATURE ADULT'",
+                "then": {"subcategory": "MEN MATURE"}
+              },
+              {
+                "if": "gender = 'GENDER - FEMALE' AND age = 'AGE GROUP - ADULT'",
+                "then": {"subcategory": "WOMEN"}
+              },
+              {
+                "if": "gender = 'GENDER - FEMALE' AND age = 'AGE GROUP - NON SPECIFIC'",
+                "then": {"subcategory": "WOMEN"}
+              },
+              {
+                "if": "gender = 'GENDER - FEMALE' AND age = 'AGE GROUP - MATURE ADULT'",
+                "then": {"subcategory": "WOMEN MATURE"}
+              },
+              {
+                "if": "gender = 'GENDER - NON SPECIFIC' AND age = 'AGE GROUP - ADULT'",
+                "then": {"subcategory": "ADULT"}
+              },
+              {
+                "if": "gender = 'GENDER - NON SPECIFIC' AND age = 'AGE GROUP - NON SPECIFIC'",
+                "then": {"subcategory": "NON-SPECIFIC"}
+              },
+              {
+                "if": "gender = 'GENDER - NON SPECIFIC' AND age = 'AGE GROUP - MATURE ADULT'",
+                "then": {"subcategory": "MATURE ADULT"}
+              }
+            ],
+            "priority_3_title_override": [
+              {
+                "if": "title contains 'PRENATAL' or 'POSTNATAL'",
+                "then": {"subcategory": "PRENATAL"},
+                "note": "THIS OVERRIDES ALL AGE/GENDER RULES ABOVE! Highest priority!"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  
+  "important_notes": [
+    "Apply rules IN ORDER (1-5)",
+    "Later rules override earlier rules",
+    "PRENATAL title override is HIGHEST priority for multivitamins",
+    "Explain which rules you applied in your reasoning",
+    "Use the category and subcategory from tool call results as your starting point"
+  ]
+}
+

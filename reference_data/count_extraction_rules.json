@@ -1,0 +1,69 @@
+{
+  "description": "Rules for extracting Count (number of units in package) from product title",
+  "instructions": "Extract the NUMBER OF UNITS in the package. Look for numbers before unit keywords like 'capsules', 'tablets', 'softgels', etc. Be careful NOT to confuse dosage (mg, IU) with count.",
+  "keywords": {
+    "count_indicators": [
+      "capsules", "capsule", "caps", "cap", "vcaps", "vegcaps",
+      "tablets", "tablet", "tabs", "tab",
+      "softgels", "softgel", "gels", "gel",
+      "gummies", "gummy",
+      "pills", "pill",
+      "servings", "serving",
+      "doses", "dose",
+      "pieces", "piece",
+      "lozenges", "lozenge",
+      "drops",
+      "count", "ct",
+      "ea", "each"
+    ],
+    "volume_indicators": ["oz", "fl oz", "fluid oz", "ounces", "ounce"],
+    "weight_indicators": [
+      "lb", "lbs", "pound", "pounds",
+      "kg", "kgs", "kilos", "kilogram", "kilograms",
+      "g", "gm", "gram", "grams",
+      "mg", "milligram", "milligrams",
+      "ml", "milliliter", "milliliters", "millil"
+    ]
+  },
+  "default": "UNKNOWN",
+  "examples": [
+    {
+      "title": "Fish Oil 1000mg 180 Softgels",
+      "count": "180",
+      "reasoning": "Found '180 softgels' - the count is 180 (not 1000, which is dosage)"
+    },
+    {
+      "title": "Vitamin D 5000 IU 60 Capsules",
+      "count": "60",
+      "reasoning": "Found '60 capsules' - the count is 60 (not 5000, which is dosage in IU)"
+    },
+    {
+      "title": "Elderberry Syrup 8 fl oz",
+      "count": "8",
+      "reasoning": "Found '8 fl oz' - the count is 8 (volume measurement)"
+    },
+    {
+      "title": "Whey Protein Powder 2 lbs",
+      "count": "2",
+      "reasoning": "Found '2 lbs' - the count is 2 (weight measurement, will be converted to OZ)"
+    },
+    {
+      "title": "Creatine Monohydrate 500 g",
+      "count": "500",
+      "reasoning": "Found '500 g' - the count is 500 grams (will be converted to OZ)"
+    },
+    {
+      "title": "Multivitamin Gummy",
+      "count": "UNKNOWN",
+      "reasoning": "No count information found in title"
+    }
+  ],
+  "warnings": [
+    "CRITICAL: Do NOT confuse dosage numbers (mg, mcg, IU, mcg/ml) with count.",
+    "CRITICAL: Look for the number that comes BEFORE unit keywords (capsules, tablets, softgels, oz).",
+    "CRITICAL: If you see multiple numbers, choose the one associated with units, NOT dosage.",
+    "Example: 'CoQ10 100mg 60 Capsules' → Count is 60 (not 100, not 10 from CoQ10)"
+  ]
+}
+
+
