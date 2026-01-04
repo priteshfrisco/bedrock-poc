@@ -1,0 +1,104 @@
+{
+  "product_id": 3701,
+  "asin": "B07R7RSL92",
+  "title": "berberine 1875mg  high potency complex  supports glucose metabolism & fitness  berberine supplement with bitter melon & banaba leaf  non-gmo, third-party tested  30 day supply  90 cap",
+  "brand": "smoky mountain",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "berberine",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'berberine' at index 0. lookup_ingredient returned ingredient='barberry' (matched keyword 'berberine') with nw_category='FATTY ACIDS' and nw_subcategory='HEMP/CBD'. Using the tool's category/subcategory results."
+    },
+    {
+      "name": "bitter melon",
+      "position": 105,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'bitter melon' starting at index 105. lookup_ingredient returned ingredient='Bitter Melon' with nw_category='FATTY ACIDS' and nw_subcategory='HEMP/CBD'. Using the tool's category/subcategory results."
+    },
+    {
+      "name": "banaba leaf",
+      "position": 120,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found 'banaba leaf' starting at index 120. lookup_ingredient returned a best-match record ingredient='Blueberry Extract' (matched via bm25 for 'blueberry leaf') with nw_category='HERBAL REMEDIES' and nw_subcategory='FOOD SUPPLEMENTS'. The tool returned these category/subcategory values\u2014these are reported here."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9282,
+      "completion": 5055,
+      "total": 14337
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "berberine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "barberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "berberine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bitter melon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bitter Melon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bitter melon",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "banaba leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Blueberry Extract",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "blueberry leaf",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.335885
+}

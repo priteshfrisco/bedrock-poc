@@ -1,0 +1,101 @@
+{
+  "product_id": 7733,
+  "asin": "B0BNCKC7RW",
+  "title": "1md nutrition cardiofitmd - vegan beets superfood keto-friendly heart health powder - high fiber nutritional supplement drink - 30 servings (2-pack)",
+  "brand": "1md nutrition",
+  "source_subcategory": "beet root supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "beets",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "beets",
+    "fiber"
+  ],
+  "category": "HERBAL REMEDIES (possible: Beet Root)",
+  "subcategory": "FOOD SUPPLEMENTS (possible)",
+  "health_focus": "COUGH, COLD & FLU",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9344,
+      "completion": 5213,
+      "total": 14557
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beets"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Boneset",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "boneset",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bee Products",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "bee products (not propolis)",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 63.422872
+}

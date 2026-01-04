@@ -1,0 +1,145 @@
+{
+  "product_id": 7629,
+  "asin": "B0BKTGZSQ7",
+  "title": "nature made iron 65 mg (325 mg ferrous sulfate) tablets, dietary supplement for red blood cell support 180 tablets 180 day supply?",
+  "brand": "nature made",
+  "source_subcategory": "iron supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "iron",
+      "position": 12,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Iron",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS"
+      },
+      "reasoning": "The title contains 'iron' starting at character index 12. lookup_ingredient returned Iron \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "ferrous sulfate",
+      "position": 31,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Folic Acid",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "keyword": "folate",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Vandyl Sulfate",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "MINERALS",
+            "keyword": "vanadyl complex",
+            "match_type": "fuzzy",
+            "score": 55.172413793103445,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Vandyl Sulfate",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "MINERALS",
+            "keyword": "vanadyl sulfate",
+            "match_type": "fuzzy",
+            "score": 55.172413793103445,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "lookup_ingredient did not return an exact match for 'ferrous sulfate'."
+      },
+      "reasoning": "The title contains the phrase 'ferrous sulfate' starting at index 31 (inside parentheses). lookup_ingredient did not return an exact match; tool indicates disambiguation needed. (Note: ferrous sulfate is an iron salt (a mineral) based on domain knowledge, but the lookup call did not return a confirmed mapping.)"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9354,
+      "completion": 4744,
+      "total": 14098
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "iron"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Iron",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "iron",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ferrous sulfate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "folate",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vandyl Sulfate",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "vanadyl complex",
+              "match_type": "fuzzy",
+              "score": 55.172413793103445,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vandyl Sulfate",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "vanadyl sulfate",
+              "match_type": "fuzzy",
+              "score": 55.172413793103445,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 62.674639
+}

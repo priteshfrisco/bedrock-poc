@@ -1,0 +1,15 @@
+{
+  "product_id": 8486,
+  "asin": "B0C5JC789Z",
+  "title": "dynatech hydration electrolyte powder packets- contains bcaas & multi-vitamins- sodium & sugar low- non-gmo, gluten free- on the go convenience- 20 stick packs vegan electrolyte mix drink(n5)",
+  "brand": "dynatech",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 79)",
+  "processing_time_sec": 69.43629
+}

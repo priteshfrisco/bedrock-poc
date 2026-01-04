@@ -1,0 +1,228 @@
+{
+  "product_id": 10372,
+  "asin": "B0CRVN6TCC",
+  "title": "nmnh (dihydronicotinamide mononucleotide), 500mg per serving nad supplement to boost nad+ levels as we age (may be more effective than nicotinamide riboside) for anti aging, energy focus - 120 capsule",
+  "brand": "ucessuyy",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nmnh",
+      "position": 0,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Extracted 'nmnh' at position 0. lookup_ingredient returned no definitive match for 'nmnh' (not found / needs disambiguation). NMNH is the reduced form of NMN but the lookup did not return a confirmed category/subcategory, so category/subcategory set to UNKNOWN."
+    },
+    {
+      "name": "dihydronicotinamide mononucleotide",
+      "position": 6,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The parenthetical expansion '(dihydronicotinamide mononucleotide)' starts at position 6. lookup_ingredient did not return a confirmed mapping for this exact string (needs disambiguation), so category/subcategory set to UNKNOWN."
+    },
+    {
+      "name": "nad",
+      "position": 61,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The word 'nad' appears at position 61 ('...serving nad supplement...'). lookup_ingredient returned a match mapped to 'NADH' with category 'MISCELLANEOUS SUPPLEMENTS' and subcategory 'NON-SPECIFIC'. Using the tool result for category/subcategory."
+    },
+    {
+      "name": "nad+",
+      "position": 85,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The token 'nad+' appears at position 85 ('...boost nad+ levels...'). lookup_ingredient returned a mapping to 'NADH' (tool result). Using the tool result category 'MISCELLANEOUS SUPPLEMENTS' / 'NON-SPECIFIC'."
+    },
+    {
+      "name": "nicotinamide riboside",
+      "position": 135,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'nicotinamide riboside' begins at position 135 in the comparison clause '(may be more effective than nicotinamide riboside)'. lookup_ingredient did not return a definitive match for this exact string (returned ambiguous/low-confidence candidates), so category/subcategory set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10018,
+      "completion": 6230,
+      "total": 16248
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nmnh"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Menthol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "mentho-lyptus",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Menthol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "menthol",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cinnamon",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cinnamon",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "dihydronicotinamide mononucleotide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Dyclonine Hydrochloride",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "dyclonine hydrochloride",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dehydroepiandrosterone",
+              "match_type": "fuzzy",
+              "score": 46.42857142857143,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Dimenhydrinate",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "dimenhydrinate",
+              "match_type": "fuzzy",
+              "score": 45.833333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nad"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nad+"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nicotinamide riboside"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Dyclonine Hydrochloride",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "dyclonine hydrochloride",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Shark Cartilage",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "cartilago de tiburon",
+              "match_type": "fuzzy",
+              "score": 48.78048780487805,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 92.170606
+}

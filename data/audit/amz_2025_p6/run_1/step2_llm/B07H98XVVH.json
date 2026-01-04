@@ -1,0 +1,107 @@
+{
+  "product_id": 3330,
+  "asin": "B07H98XVVH",
+  "title": "3-month women's hormone health support supplement  all-in-1 formula for women  perfect blend of 11 herbs/extracts  female hormonal balance complex pills  bulk savings 90-day supply  180 capsules",
+  "brand": "elevate recovery supplements",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "herbs",
+      "position": 99,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title contains the generic term 'herbs' in '11 herbs/extracts' starting at character index 99. lookup_ingredient returned no definitive match (ambiguous / found=false), so category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "extracts",
+      "position": 105,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The title contains the generic term 'extracts' (part of 'herbs/extracts') starting at index 105. lookup_ingredient() returned a match normalized to 'Liver Extract' with nw_category='HERBAL REMEDIES' and nw_subcategory='FOOD SUPPLEMENTS', so those category values are reported (tool returned found=true for a match). Note: the title does not list specific extracts by name, only the generic term."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9368,
+      "completion": 6352,
+      "total": 15720
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbs"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Chlorpheniramine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "chlortabs",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cherry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cherry extract",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ribose",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "ribose",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "extracts"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Liver Extract",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "liver extracts",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 87.467453
+}

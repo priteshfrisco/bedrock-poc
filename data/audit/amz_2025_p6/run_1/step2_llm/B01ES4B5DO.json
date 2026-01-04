@@ -1,0 +1,36 @@
+{
+  "product_id": 1997,
+  "asin": "B01ES4B5DO",
+  "title": "48 fl.oz premium burdock root oil pure & organic skin hair nails health",
+  "brand": "liquid gold",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title refers to 'burdock root oil' as a topical ingredient for skin/hair/nails. Ingredient extraction and lookup not performed because the item is classified as a non-supplement (topical oil)."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4579,
+      "completion": 1086,
+      "total": 5665
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.810254
+}

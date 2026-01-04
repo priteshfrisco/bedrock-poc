@@ -1,0 +1,58 @@
+{
+  "product_id": 7899,
+  "asin": "B0BSTJTST7",
+  "title": "powdered 100% natural organic pure date palm pollen (8.8oz / 250gm)",
+  "brand": "tuunio",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 8.8185,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "date palm pollen",
+      "position": 35,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The phrase 'date palm pollen' appears in the title starting at character index 35 (0-indexed). lookup_ingredient(date palm pollen) returned normalized ingredient 'Bee Pollen' mapped to category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'. Using the literal title phrase as the extracted ingredient name."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9053,
+      "completion": 3738,
+      "total": 12791
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "date palm pollen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bee Pollen",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "bee pollen",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 3512.729902
+}

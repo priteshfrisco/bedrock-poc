@@ -1,0 +1,14 @@
+{
+  "product_id": 1337,
+  "asin": "B00KIXJSVG",
+  "title": "cat hide a vibe",
+  "brand": "ozze creations",
+  "source_subcategory": "performance enhancers & stimulants",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.003288,
+  "lookup_action": "REMOVE"
+}

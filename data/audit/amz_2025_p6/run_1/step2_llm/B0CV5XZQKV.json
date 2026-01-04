@@ -1,0 +1,104 @@
+{
+  "product_id": 10559,
+  "asin": "B0CV5XZQKV",
+  "title": "(3 pack) ketogenix keto pills 1275mg new & improved formula contains apple cider vinegar extra virgin olive oil powder green tea leaf 180 capsules",
+  "brand": "justified laboratories",
+  "source_subcategory": "apple cider vinegar supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to HERBAL REMEDIES / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "apple cider vinegar",
+      "position": 69,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The phrase 'apple cider vinegar' appears starting at character index 69 in the title. lookup_ingredient returned normalized 'Cider Vinegar' with category HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "extra virgin olive oil powder",
+      "position": 89,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'extra virgin olive oil powder' appears starting at character index 89. lookup_ingredient returned 'Olive Leaf' with category FATTY ACIDS / HEMP/CBD (tool mapping)."
+    },
+    {
+      "name": "green tea leaf",
+      "position": 119,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "The phrase 'green tea leaf' appears starting at character index 119. lookup_ingredient returned normalized 'Green Tea' with category HERBAL REMEDIES / POLYPHENOLS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9267,
+      "completion": 5028,
+      "total": 14295
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "extra virgin olive oil powder"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Olive Leaf",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "olive leaf",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green tea leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Green Tea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "green tea",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.121474533637393
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 92.301117
+}

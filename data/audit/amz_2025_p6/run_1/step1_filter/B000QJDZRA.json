@@ -1,0 +1,14 @@
+{
+  "product_id": 190,
+  "asin": "B000QJDZRA",
+  "title": "organic valley small curd organic cottage cheese",
+  "brand": "organic valley",
+  "source_subcategory": "cottage cheese",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.006668,
+  "lookup_action": "REMOVE"
+}

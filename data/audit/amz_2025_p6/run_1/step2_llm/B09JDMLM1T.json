@@ -1,0 +1,15 @@
+{
+  "product_id": 6020,
+  "asin": "B09JDMLM1T",
+  "title": "kids vegan multivitamin gummies & focus supplement for kids bundle by maryruth's  immune support for kids, natural brain support  may help improve focus & manage stress",
+  "brand": "maryruth organics",
+  "source_subcategory": "multivitamins",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "error": "Extra data: line 2 column 1 (char 638)",
+  "processing_time_sec": 27.259382
+}

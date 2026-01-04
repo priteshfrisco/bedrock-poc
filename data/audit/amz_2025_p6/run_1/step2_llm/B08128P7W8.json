@@ -1,0 +1,90 @@
+{
+  "product_id": 4082,
+  "asin": "B08128P7W8",
+  "title": "evlution nutrition beta-alanine - supports muscle endurance, intense training & strength - 1.6g pure beta-alanine per serving - recovery - dietary supplement - unflavored powder - 125 servings",
+  "brand": "evlution",
+  "source_subcategory": "amino blends & bcaas",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 125,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beta-alanine",
+      "position": 19,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "confidence": "low",
+        "reason": "lookup_ingredient returned no exact match; candidate fuzzy matches were provided but none clearly correspond to 'beta-alanine'."
+      },
+      "reasoning": "'beta-alanine' appears in the title (first occurrence starts at character index 19). It is the clear functional ingredient in the title ('1.6g pure beta-alanine per serving')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9265,
+      "completion": 3859,
+      "total": 13124
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beta-alanine"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Celandine",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "celandine",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Phenylalanine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "phenylalanine",
+              "match_type": "fuzzy",
+              "score": 64.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beta glucans",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 49.074678
+}

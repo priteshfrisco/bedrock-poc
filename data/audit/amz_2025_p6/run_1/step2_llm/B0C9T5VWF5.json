@@ -1,0 +1,123 @@
+{
+  "product_id": 8809,
+  "asin": "B0C9T5VWF5",
+  "title": "rivkin organic gold coin grass extract capsules 500 mg 60 count",
+  "brand": "rivkin",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "gold coin grass extract",
+      "position": 15,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "called_with": "gold coin grass",
+        "tool_response": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemon grass",
+              "match_type": "fuzzy",
+              "score": 69.23076923076923,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemongrass",
+              "match_type": "fuzzy",
+              "score": 64.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Wheat Barley Grass",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "wheat grass",
+              "match_type": "bm25",
+              "score": 4.683898611632149,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      "reasoning": "The title phrase 'gold coin grass extract' appears starting at character index 15 ('rivkin ' = 0-6, 'organic ' = 7-14, 'gold' starts at 15). lookup_ingredient returned no confident match (found=false) and provided candidate fuzzy matches (e.g., lemongrass, wheat/grass candidates). Because the tool did not return a definitive Nature's Way category/subcategory, category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9210,
+      "completion": 4190,
+      "total": 13400
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gold coin grass"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemon grass",
+              "match_type": "fuzzy",
+              "score": 69.23076923076923,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemongrass",
+              "match_type": "fuzzy",
+              "score": 64.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Wheat Barley Grass",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "wheat grass",
+              "match_type": "bm25",
+              "score": 4.683898611632149,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 87.108197
+}

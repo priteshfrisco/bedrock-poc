@@ -1,0 +1,39 @@
+{
+  "product_id": 10091,
+  "asin": "B0CN1LHPR7",
+  "title": "biote",
+  "brand": "biote",
+  "source_subcategory": "weight loss detox & cleanse",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4565,
+      "completion": 1163,
+      "total": 5728
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 18.447895
+}

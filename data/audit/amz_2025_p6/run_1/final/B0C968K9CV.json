@@ -1,0 +1,39 @@
+{
+  "product_id": 8747,
+  "asin": "B0C968K9CV",
+  "title": "elite fuel spartacus promotes strength, endurance & muscle growth",
+  "brand": "ef",
+  "source_subcategory": "pre-workout nitric oxide boosters",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4574,
+      "completion": 1967,
+      "total": 6541
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 21.77898
+}

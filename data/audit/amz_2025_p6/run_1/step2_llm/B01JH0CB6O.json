@@ -1,0 +1,120 @@
+{
+  "product_id": 2107,
+  "asin": "B01JH0CB6O",
+  "title": "quinton hypertonic ampoules - 30 by quintessential",
+  "brand": "quintessential",
+  "source_subcategory": "feminine menopause products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quinton",
+      "position": 0,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Ubiquinol",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "COENZYME Q10",
+            "keyword": "ubiquinol",
+            "match_type": "fuzzy",
+            "score": 62.5,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Inosine",
+            "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+            "nw_subcategory": "NON-SPECIFIC",
+            "keyword": "inosine",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Iron",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "MINERALS",
+            "keyword": "iron",
+            "match_type": "fuzzy",
+            "score": 54.54545454545454,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup did not find a clear match for 'quinton'. Candidate matches returned by the tool are low-confidence fuzzy matches; 'quinton' appears to be a product/brand name (e.g., Quinton seawater products) rather than a standard ingredient name in the lookup database."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title's leading token 'quinton' is likely the product/product-line name. lookup_ingredient() returned no definitive match (found=false) and low-confidence candidates. Because there is no clear normalized ingredient/category from the tool, category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9210,
+      "completion": 4732,
+      "total": 13942
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quinton"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ubiquinol",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "ubiquinol",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Inosine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "inosine",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Iron",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "iron",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 71.973201
+}

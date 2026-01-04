@@ -1,0 +1,104 @@
+{
+  "product_id": 7961,
+  "asin": "B0BVG8G9J2",
+  "title": "nature'sbountyhair,skin&nailswithbiotinandcollagenandvitaminb12500mcg",
+  "brand": "natures bounty",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "biotin",
+      "position": 33,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The substring 'biotin' appears in the title starting at character index 33. lookup_ingredient returned category/subcategory accordingly."
+    },
+    {
+      "name": "collagen",
+      "position": 42,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The substring 'collagen' appears in the title starting at character index 42 ('...biotinandcollagen...'). lookup_ingredient returned category/subcategory accordingly."
+    },
+    {
+      "name": "vitamin b12",
+      "position": 53,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The substring 'vitaminb12' (interpreted as 'vitamin b12') appears starting at index 53 ('...andvitaminb12...'). The title also includes '500mcg' immediately after, which is the dosage for vitamin B12. lookup_ingredient returned category/subcategory accordingly."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9237,
+      "completion": 4308,
+      "total": 13545
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b12"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B12",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 12",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 51.568249
+}

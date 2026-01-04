@@ -111,6 +111,7 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         unit = attributes['unit']
         size = attributes['size']
         ingredients = attributes['ingredients']
+        business_rules = attributes.get('business_rules', {})
         
         # Extract metadata
         metadata = extract_metadata_from_llm_result(llm_result)
@@ -135,7 +136,37 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         log_manager.save_audit_json('step2_llm', step2_result, f"{asin}.json")
         
         # ========== STEP 3: POST-PROCESSING ==========
+        # Business rules already applied by LLM, but still get health focus and high level category
         postprocess_result = apply_postprocessing(ingredients, age, gender, title, asin, log_manager)
+        
+        # Use business_rules from LLM if available, otherwise use postprocess_result
+        if business_rules and business_rules.get('final_category'):
+            category = business_rules.get('final_category')
+            subcategory = business_rules.get('final_subcategory')
+            primary_ingredient = business_rules.get('primary_ingredient')
+            business_rules_reasoning = business_rules.get('reasoning', '')
+            initial_category = business_rules.get('initial_category', category)
+            initial_subcategory = business_rules.get('initial_subcategory', subcategory)
+            has_changes = business_rules.get('has_changes', False)
+            has_unknown = business_rules.get('has_unknown', False)
+            
+            # Log if changes were made
+            if has_changes:
+                log_manager.log_step(
+                    'step3_postprocess',
+                    f"[{asin}] Business rules changed: {initial_category}/{initial_subcategory} → {category}/{subcategory}"
+                )
+            if has_unknown:
+                log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: Contains UNKNOWN values")
+        else:
+            # Fallback to Python business rules if LLM didn't call the tool
+            category = postprocess_result['category']
+            subcategory = postprocess_result['subcategory']
+            primary_ingredient = postprocess_result['primary_ingredient']
+            business_rules_reasoning = ''
+            has_changes = False
+            has_unknown = False
+            log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: LLM did not call business_rules tool, using Python fallback")
         
         # Build final result
         result['status'] = 'success'
@@ -147,7 +178,7 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         result['count'] = count
         result['unit'] = unit
         result['size'] = size
-        result['primary_ingredient'] = postprocess_result['primary_ingredient']
+        result['primary_ingredient'] = primary_ingredient
         result['num_ingredients'] = len(ingredients)
         
         # Store all ingredients (up to 20) like R system
@@ -156,10 +187,16 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
             ing_name = ing.get('name', '') if isinstance(ing, dict) else ing
             result['all_ingredients'].append(ing_name)
         
-        result['category'] = postprocess_result['category']
-        result['subcategory'] = postprocess_result['subcategory']
+        result['category'] = category
+        result['subcategory'] = subcategory
         result['health_focus'] = postprocess_result['health_focus']
         result['high_level_category'] = postprocess_result['high_level_category']
+        
+        # Add reasoning from business rules (only if changes were made or has unknown)
+        result['business_rules_reasoning'] = business_rules_reasoning if (has_changes or has_unknown) else ''
+        result['has_business_rule_changes'] = has_changes
+        result['has_unknown_values'] = has_unknown
+        
         result['tokens_used'] = metadata['tokens_used']
         result['api_cost'] = metadata['api_cost']
         result['_metadata'] = metadata['_metadata']
@@ -222,6 +259,7 @@ def save_results(output_dir: Path, results: List[Dict], input_filename: str, log
             'Unit of Measure': r.get('unit', ''),
             'Pack Count': r.get('count', ''),
             'Organic': r.get('organic', ''),
+            'Reasoning': r.get('business_rules_reasoning', ''),  # Single reasoning column
             
             # Additional Ingredients (at the end)
             'other ing. 2': get_ingredient(r, 2),
@@ -286,7 +324,8 @@ def main():
     print(f"\nStart Time: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     
     # Configuration
-    INPUT_FILE = 'data/input/uncoded_100_records.csv'  # 100 records for quick verification against R
+    import sys
+    INPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else 'data/input/uncoded_100_records.csv'  # Allow command line override
     MAX_WORKERS = 100  # Number of parallel threads for maximum speed
     BATCH_SIZE = 100  # Save results every 100 records (intermediate saves for safety)
     

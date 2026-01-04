@@ -1,0 +1,36 @@
+{
+  "product_id": 3945,
+  "asin": "B07WWJVGYB",
+  "title": "lifetone the tea for better life, neem leaf tea  teatox extreme detox  herbal tea 100% natural and tropics (20 teabags) (100 teabags)",
+  "brand": "lifetone the tea for better life",
+  "source_subcategory": "weight loss detox & cleanse",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title describes an herbal tea ('neem leaf tea'); ingredient extraction and lookup are skipped for non-supplement products."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4601,
+      "completion": 1187,
+      "total": 5788
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 15.408764
+}

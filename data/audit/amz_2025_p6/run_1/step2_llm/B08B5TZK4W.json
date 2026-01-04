@@ -1,0 +1,127 @@
+{
+  "product_id": 4545,
+  "asin": "B08B5TZK4W",
+  "title": "balancebreensimmunityboosteroliveleafextract60capsules-quercetin400mgwithbioperineblackpepperfruitextractpowerfulantioxidant,supportscardiovascularhealth",
+  "brand": "balancebreens",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "olive leaf extract",
+      "position": 28,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found the contiguous substring 'oliveleafextract' starting at character index 28 in the title. lookup_ingredient returned normalized 'Olive Leaf' with category/subcategory as shown."
+    },
+    {
+      "name": "quercetin",
+      "position": 55,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "Found 'quercetin' starting at character index 55 (appears as 'quercetin400mg' in title). lookup_ingredient returned Quercetin with the shown category/subcategory."
+    },
+    {
+      "name": "bioperine",
+      "position": 73,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'bioperine' starting at character index 73 (appears as 'withbioperine...' in title). lookup_ingredient returned Bioperine with the shown category/subcategory."
+    },
+    {
+      "name": "black pepper fruit extract",
+      "position": 82,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'blackpepperfruitextract' starting at character index 82 in the title. lookup_ingredient matched 'black pepper' (returned Bioperine mapping) and returned the category/subcategory shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9351,
+      "completion": 5269,
+      "total": 14620
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "olive leaf extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Olive Leaf",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "olive leaf",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 11.311410790053557
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioperine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bioperine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black pepper extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black pepper",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.673573603647004
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 7457.58387
+}

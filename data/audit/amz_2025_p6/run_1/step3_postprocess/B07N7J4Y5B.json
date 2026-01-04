@@ -1,0 +1,229 @@
+{
+  "product_id": 3561,
+  "asin": "B07N7J4Y5B",
+  "title": "complete electrolyte supplement pills high absorption  cmax potassium chloride magnesium sodium calcium zinc  boost endurance muscle recovery mental focus  salt electrolytes tablets  keto friendly",
+  "brand": "youth & tonic",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "electrolyte",
+  "num_ingredients": 8,
+  "all_ingredients": [
+    "electrolyte",
+    "potassium chloride",
+    "magnesium",
+    "sodium",
+    "calcium",
+    "zinc",
+    "salt",
+    "electrolytes"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "ENERGY SUPPORT",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10007,
+      "completion": 7502,
+      "total": 17509
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "potassium chloride"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Potassium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "potassium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sodium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saline",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "sodium chloride",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 101.080089
+}

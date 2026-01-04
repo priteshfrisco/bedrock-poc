@@ -1,0 +1,42 @@
+{
+  "product_id": 2211,
+  "asin": "B01M4RK3QX",
+  "title": "icyhot 3oz",
+  "brand": "icy hot",
+  "source_subcategory": "pain relievers",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - PAIN & INFLAMMATION",
+  "remap_reason": "Maps to OTC / OTC - PAIN & INFLAMMATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4568,
+      "completion": 1145,
+      "total": 5713
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 18.778865
+}

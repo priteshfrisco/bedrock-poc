@@ -1,0 +1,204 @@
+{
+  "product_id": 1194,
+  "asin": "B00GSWWQNS",
+  "title": "wonderland herbs cordyceps/worm grass cephalosporium mycelia sinensis mushroom powder 100 grams (3.5 oz). adenosine>0.2%",
+  "brand": "kaxilu",
+  "source_subcategory": "mushrooms herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "g",
+  "size": 1,
+  "primary_ingredient": "cordyceps",
+  "num_ingredients": 5,
+  "all_ingredients": [
+    "cordyceps",
+    "worm grass",
+    "cephalosporium mycelia sinensis",
+    "mushroom",
+    "adenosine"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9988,
+      "completion": 6901,
+      "total": 16889
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cordyceps"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cordyceps Mushroom",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "cordyceps",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "worm grass"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemon grass",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Wheat Barley Grass",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "wheat grass",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Wheat Barley Grass",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "barley grass",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cephalosporium mycelia sinensis"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Phosphatidylserine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "phosphatidyl serine",
+              "match_type": "fuzzy",
+              "score": 52.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Phosphatidylserine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "phosphatidylserine",
+              "match_type": "fuzzy",
+              "score": 48.97959183673469,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Zma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "zmag t",
+              "match_type": "bm25",
+              "score": 0.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mushroom"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Other Mushroom",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "mushroom",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "adenosine"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Carnosine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "carnosine & metabolites",
+              "match_type": "fuzzy",
+              "score": 77.77777777777779,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Inosine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "inosine",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Sennoside",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "perdiem sennosides",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 98.817221
+}

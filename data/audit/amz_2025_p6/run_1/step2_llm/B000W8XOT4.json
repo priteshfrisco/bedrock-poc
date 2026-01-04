@@ -1,0 +1,256 @@
+{
+  "product_id": 220,
+  "asin": "B000W8XOT4",
+  "title": "amazing oranges powder by purity products - power packed with vitamin c, vitamin d, calcium, magnesium, potassium, fiber, electrolytes and bio flavonoids - 30 day supply",
+  "brand": "purity products",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "N/A",
+  "gender": "N/A",
+  "form": "N/A",
+  "organic": "N/A",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10280,
+      "completion": 3872,
+      "total": 14152
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "oranges"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Borage",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "ALL OTHER OILS",
+              "keyword": "borage",
+              "match_type": "fuzzy",
+              "score": 76.92307692307692,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Orange Peel",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "limonene",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Orange Peel",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "orange peel",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "potassium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Potassium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "potassium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioflavonoids"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavone",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavones",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bioflavonoid Complex",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bioflavonoid complex",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 69.881646
+}

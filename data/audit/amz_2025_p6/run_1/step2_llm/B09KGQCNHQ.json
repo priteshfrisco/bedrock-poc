@@ -1,0 +1,33 @@
+{
+  "product_id": 6057,
+  "asin": "B09KGQCNHQ",
+  "title": "witch bells for magic home protection, handmade wicca decor for door knob, witch decor clear negative energies and attracts positive, wicca supplies, witch stuff, gifts for witchy women",
+  "brand": "safcare",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4601,
+      "completion": 643,
+      "total": 5244
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 12.185146
+}

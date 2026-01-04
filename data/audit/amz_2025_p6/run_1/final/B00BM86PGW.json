@@ -1,0 +1,58 @@
+{
+  "product_id": 1028,
+  "asin": "B00BM86PGW",
+  "title": "2x omega 60 count",
+  "brand": "ironkids",
+  "source_subcategory": "omega oils",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "omega",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "omega"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "FISH",
+  "health_focus": "IMMUNE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9018,
+      "completion": 2938,
+      "total": 11956
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 60.892796
+}

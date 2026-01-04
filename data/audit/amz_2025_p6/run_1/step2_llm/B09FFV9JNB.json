@@ -1,0 +1,173 @@
+{
+  "product_id": 5912,
+  "asin": "B09FFV9JNB",
+  "title": "naturelo sleep aid - with melatonin, magnesium, gaba, valerian root, lemon balm, chamomile herbal extracts - plant-based sleeping aid - 60 vegan capsules (pack of 2)",
+  "brand": "naturelo",
+  "source_subcategory": "medicinal sleep aids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / DHEA & PREGNENOLONE & HORMONES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "melatonin",
+      "position": 26,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "DHEA & PREGNENOLONE & HORMONES",
+      "reasoning": "Found the token 'melatonin' starting at character index 26. lookup_ingredient returned category/subcategory shown."
+    },
+    {
+      "name": "magnesium",
+      "position": 37,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Found the token 'magnesium' starting at character index 37. lookup_ingredient returned category/subcategory shown."
+    },
+    {
+      "name": "gaba",
+      "position": 48,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Found the token 'gaba' starting at character index 48. lookup_ingredient returned category/subcategory shown."
+    },
+    {
+      "name": "valerian root",
+      "position": 54,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found the token 'valerian root' starting at character index 54 ('valerian' begins at 54). lookup_ingredient returned 'Valerian' with category/subcategory shown."
+    },
+    {
+      "name": "lemon balm",
+      "position": 69,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found the token 'lemon balm' starting at character index 69. lookup_ingredient returned category/subcategory shown."
+    },
+    {
+      "name": "chamomile",
+      "position": 81,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found the token 'chamomile' starting at character index 81. lookup_ingredient returned category/subcategory shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9519,
+      "completion": 4979,
+      "total": 14498
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "melatonin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Melatonin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+          "keyword": "melatonin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gaba"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "GABA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "gaba",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "valerian root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Valerian",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "valarian",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemon balm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lemon Balm",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lemon balm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chamomile"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chamomile",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "chamomile",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 71.196734
+}

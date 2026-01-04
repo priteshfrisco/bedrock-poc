@@ -1,0 +1,36 @@
+{
+  "product_id": 5166,
+  "asin": "B08SS53H24",
+  "title": "365 by whole foods market, regular strength antacid travel size, 12 count",
+  "brand": "whole foods market",
+  "source_subcategory": "antacids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title contains 'antacid' (OTC medication), so ingredient extraction and lookup are not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4579,
+      "completion": 894,
+      "total": 5473
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 12.724897
+}

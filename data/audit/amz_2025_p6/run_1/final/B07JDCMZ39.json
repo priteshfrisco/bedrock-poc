@@ -1,0 +1,14 @@
+{
+  "product_id": 3381,
+  "asin": "B07JDCMZ39",
+  "title": "rikesa cheddar",
+  "brand": "polar",
+  "source_subcategory": "cheddar cheese",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.021065,
+  "lookup_action": "REMOVE"
+}

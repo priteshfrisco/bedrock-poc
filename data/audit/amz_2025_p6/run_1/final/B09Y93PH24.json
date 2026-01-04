@@ -1,0 +1,42 @@
+{
+  "product_id": 6621,
+  "asin": "B09Y93PH24",
+  "title": "healing crystal bracelet, chakra bracelets for women & men, bracelet for meditation, positive energy & balance, handmade bracelets crystal by karma pledge (black matte with red tiger eye)",
+  "brand": "karmapledge",
+  "source_subcategory": "other alternative medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4597,
+      "completion": 853,
+      "total": 5450
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 15.414316
+}

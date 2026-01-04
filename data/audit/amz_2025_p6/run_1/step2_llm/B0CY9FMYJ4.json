@@ -1,0 +1,173 @@
+{
+  "product_id": 10793,
+  "asin": "B0CY9FMYJ4",
+  "title": "lukaree 16 in 1 mullein drops for lungs, 30,000mg mullein leaf extract with chlorophyll, elderberry, black seed oil, oregano, mullein tincture for lung cleanse, immune, respiratory 2 fl oz",
+  "brand": "lukaree",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "mullein",
+        "position": 16,
+        "lookup_result": {
+          "ingredient": "Mullein",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "found": true
+        },
+        "reasoning": "The word 'mullein' appears multiple times; first occurrence starts at character index 16 ('...1 mullein drops...'). Mullein is a functional herbal ingredient in the title."
+      },
+      {
+        "name": "chlorophyll",
+        "position": 76,
+        "lookup_result": {
+          "ingredient": "Chlorella",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "found": true
+        },
+        "reasoning": "'chlorophyll' appears in the phrase 'with chlorophyll' starting at index 76; it is a functional ingredient. Lookup returned normalized 'Chlorella'."
+      },
+      {
+        "name": "elderberry",
+        "position": 88,
+        "lookup_result": {
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "found": true
+        },
+        "reasoning": "'elderberry' appears in the ingredients list beginning at index 88 ('...chlorophyll, elderberry,...')."
+      },
+      {
+        "name": "black seed oil",
+        "position": 100,
+        "lookup_result": {
+          "ingredient": "Black Seed",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "SEED",
+          "found": true
+        },
+        "reasoning": "The phrase 'black seed oil' (functional oil ingredient) appears starting at index 100 ('...elderberry, black seed oil,...'). Lookup returned 'Black Seed'."
+      },
+      {
+        "name": "oregano",
+        "position": 116,
+        "lookup_result": {
+          "ingredient": "Oregano",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "found": true
+        },
+        "reasoning": "'oregano' appears in the ingredient list starting at index 116 ('..., oregano, mullein tincture ...')."
+      }
+    ],
+    "reasoning": "All explicit functional ingredients listed in the title were extracted with their first occurrence positions. Dosage ('30,000mg') was ignored as not an ingredient name."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9442,
+      "completion": 6577,
+      "total": 16019
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mullein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Mullein",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "mullein",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chlorophyll"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chlorella",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "chlorophyll",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black seed oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Black Seed",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "SEED",
+          "keyword": "black cumin seed",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.305343350012532
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "oregano"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Oregano",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "oregano",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 88.172498
+}

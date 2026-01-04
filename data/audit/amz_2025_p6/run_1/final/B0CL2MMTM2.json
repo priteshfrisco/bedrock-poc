@@ -1,0 +1,118 @@
+{
+  "product_id": 9880,
+  "asin": "B0CL2MMTM2",
+  "title": "puregen labs sodium chloride tablets 1 gm (1000 mg), usp  (15.4gr.)  normal salt tablets  made in usa  electrolytes replenisher hydration drink  2 pack - 200 tablets total",
+  "brand": "p puregen labs",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 200,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "sodium chloride",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "sodium chloride",
+    "salt",
+    "electrolytes"
+  ],
+  "category": "OTC",
+  "subcategory": "OTC - NON-SPECIFIC",
+  "health_focus": "GENERAL HEALTH",
+  "high_level_category": "OTC",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9450,
+      "completion": 7301,
+      "total": 16751
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sodium chloride"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saline",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "sodium chloride",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 86.568797
+}

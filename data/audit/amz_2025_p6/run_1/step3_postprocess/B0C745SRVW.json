@@ -1,0 +1,118 @@
+{
+  "product_id": 8618,
+  "asin": "B0C745SRVW",
+  "title": "plix - the plant fix ksm-66 ashwagandha 300mg effervescent supplements for stress, mood & energy support with vitamin d3 & brahmi - 120 vegan, non-gmo, gluten-free tablets, pack of 8",
+  "brand": "plix - the plant fix",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 8,
+  "primary_ingredient": "ksm-66 ashwagandha",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "ksm-66 ashwagandha",
+    "vitamin d3",
+    "brahmi"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "MOOD & STRESS SUPPORT",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9494,
+      "completion": 5847,
+      "total": 15341
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ksm-66 ashwagandha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "brahmi"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "holybasil",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "basil",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "basil",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "holy basil",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "bromelain",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "bromelain",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 61.251547
+}

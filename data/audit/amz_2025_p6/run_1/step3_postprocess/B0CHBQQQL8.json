@@ -1,0 +1,75 @@
+{
+  "product_id": 9488,
+  "asin": "B0CHBQQQL8",
+  "title": "catalo lung defense formula - quercetin & green tea extract, take 2-3 capsules daily, 60 plant-based capsules",
+  "brand": "catalo",
+  "source_subcategory": "flavonoid supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "quercetin",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "quercetin",
+    "green tea extract"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "COUGH, COLD & FLU",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9165,
+      "completion": 3963,
+      "total": 13128
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green tea extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Green Tea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "green tea",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.121474533637393
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.070004
+}

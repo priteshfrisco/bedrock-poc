@@ -1,0 +1,229 @@
+{
+  "product_id": 1290,
+  "asin": "B00JAJ7Z9G",
+  "title": "hepatiben liver detox cleanse, non-gmo, w/digestive repair. natural liver supplement w/milk thistle, silybin, nac, choline, turmeric, berberine, l-glutathione 120ct",
+  "brand": "liver medic",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "milk thistle",
+      "position": 87,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned ingredient 'Milk Thistle' with nw_category 'FATTY ACIDS' and nw_subcategory 'HEMP/CBD'. (Using tool results as provided.)"
+    },
+    {
+      "name": "silybin",
+      "position": 101,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_found": false,
+      "lookup_note": "lookup_ingredient returned no definitive match for 'silybin' (needs disambiguation). Candidate fuzzy matches provided by the tool include 'Spirulina' and 'Lysine' but these are low-confidence and do not match the expected botanical 'silybin'."
+    },
+    {
+      "name": "nac",
+      "position": 110,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned 'NAC' with nw_category 'BASIC VITAMINS & MINERALS' and nw_subcategory 'AMINO ACIDS'."
+    },
+    {
+      "name": "choline",
+      "position": 115,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned 'Choline' with nw_category 'MISCELLANEOUS SUPPLEMENTS' and nw_subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "turmeric",
+      "position": 124,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned 'Turmeric' (normalized to 'curcumin' in the lookup) with nw_category 'FATTY ACIDS' and nw_subcategory 'HEMP/CBD' (using tool results as provided)."
+    },
+    {
+      "name": "berberine",
+      "position": 134,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned an entry normalized as 'barberry' with keyword 'berberine' and nw_category 'FATTY ACIDS' / nw_subcategory 'HEMP/CBD' (using tool results as provided)."
+    },
+    {
+      "name": "l-glutathione",
+      "position": 144,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned 'Glutathione' with nw_category 'MISCELLANEOUS SUPPLEMENTS' and nw_subcategory 'NON-SPECIFIC'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9789,
+      "completion": 5517,
+      "total": 15306
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "silybin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina blue green algae",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lysine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "lysine",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nac"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NAC",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "n a c",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "choline"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Choline",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "choline",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "berberine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "barberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "berberine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-glutathione"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glutathione",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "glutathione",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 95.406608
+}

@@ -1,0 +1,127 @@
+{
+  "product_id": 54,
+  "asin": "B0FFHS6LJ7",
+  "title": "nutricost nopal cactus (2000mg) 180 vegan capsules - prickly pear cactus, 60 servings",
+  "brand": "nutricost",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "nopal cactus",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "nopal cactus",
+    "prickly pear cactus"
+  ],
+  "category": "UNKNOWN",
+  "subcategory": "UNKNOWN",
+  "health_focus": "BONE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9505,
+      "completion": 3836,
+      "total": 13341
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nopal cactus"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Coral Calcium",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "coral calcium",
+              "match_type": "fuzzy",
+              "score": 64.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Larax A R A Larch",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "arabinogalactn",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lactase",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "lactase",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "prickly pear cactus"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Pepper Spear Mint",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "peppermint",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pepper Spear Mint",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "spearmint",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cherry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cherry extract",
+              "match_type": "fuzzy",
+              "score": 48.484848484848484,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 52.691513
+}

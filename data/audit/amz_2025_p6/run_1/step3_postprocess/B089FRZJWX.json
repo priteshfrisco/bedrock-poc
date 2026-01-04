@@ -1,0 +1,170 @@
+{
+  "product_id": 4516,
+  "asin": "B089FRZJWX",
+  "title": "kinderlyte original electrolyte powder  natural, 2-3x more electrolytes, 80% less sugar  no artificial sweeteners, colors or flavors (fruit punch, 6 count)",
+  "brand": "kinderlyte",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "6",
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "electrolyte",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "electrolyte",
+    "sugar",
+    "artificial sweeteners"
+  ],
+  "category": "UNKNOWN",
+  "subcategory": "UNKNOWN",
+  "health_focus": "ENERGY SUPPORT",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9774,
+      "completion": 6203,
+      "total": 15977
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sugar"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Suma",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "suma",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Garlic",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "garlic",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Guarana",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "guarana",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "artificial sweeteners"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Acacia Fiber",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "acacia senegal",
+              "match_type": "fuzzy",
+              "score": 51.42857142857142,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "actifruitcranberry",
+              "match_type": "fuzzy",
+              "score": 51.28205128205128,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Flower Essences",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FLOWER ESSENCES",
+              "keyword": "flower essence",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4916.640388
+}

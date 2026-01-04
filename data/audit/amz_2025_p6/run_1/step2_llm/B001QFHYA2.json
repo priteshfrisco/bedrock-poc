@@ -1,0 +1,36 @@
+{
+  "product_id": 374,
+  "asin": "B001QFHYA2",
+  "title": "sqwincher powder pack, mixed berry flavor electrolyte drink concentrate, 23.83 oz packet (pack of 32)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title refers to an electrolyte drink concentrate (food/beverage). Per safety instructions, do not extract ingredients for non-supplements."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4587,
+      "completion": 1252,
+      "total": 5839
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.978707
+}

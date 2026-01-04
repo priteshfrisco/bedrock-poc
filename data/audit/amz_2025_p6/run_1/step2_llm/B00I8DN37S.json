@@ -1,0 +1,33 @@
+{
+  "product_id": 1251,
+  "asin": "B00I8DN37S",
+  "title": "tylenol extra strength pain reliever & fever reducer caplets-10 count",
+  "brand": "remove",
+  "source_subcategory": "non-aspirin pain relievers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4579,
+      "completion": 770,
+      "total": 5349
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 12.116157
+}

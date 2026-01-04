@@ -1,0 +1,36 @@
+{
+  "product_id": 3649,
+  "asin": "B07Q4QZ6LT",
+  "title": "decal sticker multiple sizes get your flu shot today doctor office health & medical get your flu shot here today outdoor store sign orange",
+  "brand": "sign destination",
+  "source_subcategory": "energy shots",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: this is a sticker/sign product and contains no functional ingredients to extract."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4588,
+      "completion": 950,
+      "total": 5538
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 10.711767
+}

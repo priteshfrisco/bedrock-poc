@@ -1,0 +1,16 @@
+{
+  "product_id": 55,
+  "asin": "B0DM63Y1QR",
+  "title": "creatine monohydrate gummies 5000mg for men & women, chewables creatine monohydrate for muscle strength, muscle builder, energy boost, pre-workout supplement-180 pineapple gummies",
+  "brand": "noavii",
+  "source_subcategory": "creatine amino acids",
+  "status": "error",
+  "step_completed": 0,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/main.py\", line 101, in process_single_record\n    attributes = extract_attributes_from_llm_result(llm_result)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/pipeline/step2_llm.py\", line 125, in extract_attributes_from_llm_result\n    'gender': llm_result.get('gender', {}).get('value', 'N/A'),\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+  "error": "'str' object has no attribute 'get'",
+  "processing_time_sec": 37.002433
+}

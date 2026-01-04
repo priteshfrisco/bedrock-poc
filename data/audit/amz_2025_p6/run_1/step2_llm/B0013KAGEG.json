@@ -1,0 +1,36 @@
+{
+  "product_id": 255,
+  "asin": "B0013KAGEG",
+  "title": "sqwincher powder pack, grape flavor electrolyte drink concentrate, 47.66 oz packet (pack of 16)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title does not present functional dietary supplement ingredients to extract; it names a flavored electrolyte drink concentrate (grape flavor) which is a beverage/food product."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4586,
+      "completion": 1318,
+      "total": 5904
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 24.305444
+}

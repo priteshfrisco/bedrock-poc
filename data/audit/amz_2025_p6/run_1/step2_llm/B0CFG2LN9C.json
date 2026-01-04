@@ -1,0 +1,60 @@
+{
+  "product_id": 9201,
+  "asin": "B0CFG2LN9C",
+  "title": "omega-3 natural lemon flavor spring valley dietary supplement twin pack, 1000 mg, 360 count",
+  "brand": "yolomolo",
+  "source_subcategory": "omega oils",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 360,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "omega-3",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "lookup_name": "Fish Oil",
+      "lookup_found": true,
+      "lookup_reasoning": "lookup_ingredient matched 'omega-3' to normalized ingredient 'Fish Oil' (Nature's Way category 'FATTY ACIDS', subcategory 'FISH')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9043,
+      "completion": 2036,
+      "total": 11079
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega-3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega-3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 44.489714
+}

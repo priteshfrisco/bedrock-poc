@@ -1,0 +1,15 @@
+{
+  "product_id": 9192,
+  "asin": "B0CFC7J135",
+  "title": "bulksupplements.com organic spinach powder - herbal supplement, spinach powder organic - green superfood, vegan & gluten free - 4g per serving, 100g (3.5 oz) (pack of 1)",
+  "brand": "bulksupplements",
+  "source_subcategory": "superfoods",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "error": "Extra data: line 2 column 1 (char 37)",
+  "processing_time_sec": 71.501628
+}

@@ -1,0 +1,58 @@
+{
+  "product_id": 10142,
+  "asin": "B0CNKWXRYR",
+  "title": "herbera barberry root a120 usda organic tincture  alcohol extract, high-potency herbal drops  certified organic barberry (berberis vulgaris) dried root bark (4 oz)",
+  "brand": "herbera",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "ORGANIC",
+  "count": 4,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "barberry",
+      "position": 8,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title contains 'barberry root' starting at character index 8 (first occurrence). This identifies the functional ingredient as barberry (scientific name 'berberis vulgaris' also appears later). lookup_ingredient was called for 'barberry' and returned category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9079,
+      "completion": 4980,
+      "total": 14059
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "barberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "barberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "barberry",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.301126
+}

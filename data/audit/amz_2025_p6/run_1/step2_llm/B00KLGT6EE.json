@@ -1,0 +1,211 @@
+{
+  "product_id": 1340,
+  "asin": "B00KLGT6EE",
+  "title": "heartsease liquid extract, heartsease (viola tricolor) tincture supplement 4 oz",
+  "brand": "hawaiipharm",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": "4",
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "heartsease",
+      "position": 0,
+      "lookup_result": {
+        "found": false,
+        "raw_tool_response": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Yeast",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "yeast-cleanse",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Wheat Barley Grass",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "wheatgrass",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lactase",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "lactase",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        },
+        "category": "HERBAL REMEDIES",
+        "subcategory": "HERBS",
+        "reasoning": "The lookup tool returned no exact match (found:false) with only low-confidence fuzzy candidates. 'Heartsease' is the common name for Viola tricolor (a plant/herb) and the product is a tincture (herbal liquid extract). Therefore the best-fit category is HERBAL REMEDIES with subcategory 'HERBS' (assigned by domain knowledge given lack of exact tool match)."
+      }
+    },
+    {
+      "name": "viola tricolor",
+      "position": 39,
+      "lookup_result": {
+        "found": false,
+        "raw_tool_response": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Plant Sterols",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "plant sterols",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Noni",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "morinda citrifolia",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Devils Claw",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "devil s claw",
+              "match_type": "fuzzy",
+              "score": 48.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        },
+        "category": "HERBAL REMEDIES",
+        "subcategory": "HERBS",
+        "reasoning": "Lookup returned no exact match and only low-confidence fuzzy candidates. 'Viola tricolor' is the botanical name for heartsease (a medicinal herb). Given the product is a tincture of Viola tricolor, the appropriate category is HERBAL REMEDIES and subcategory 'HERBS' (assigned by domain knowledge in absence of exact tool mapping)."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9498,
+      "completion": 5211,
+      "total": 14709
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "heartsease"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Yeast",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "yeast-cleanse",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Wheat Barley Grass",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "wheatgrass",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lactase",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "lactase",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "viola tricolor"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Plant Sterols",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "plant sterols",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Noni",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "morinda citrifolia",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Devils Claw",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "devil s claw",
+              "match_type": "fuzzy",
+              "score": 48.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.424669
+}

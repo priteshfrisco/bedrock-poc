@@ -1,0 +1,101 @@
+{
+  "product_id": 6699,
+  "asin": "B09ZBKXL69",
+  "title": "agelessmalemaxdeliciouschewablenitricoxidesupplementformenhighpotencyashwagandhaextracttoboostworkouts,muscle&performance,reducestress,supportsleep(100chews,1-bottle)",
+  "brand": "new vitality",
+  "source_subcategory": "pre-workout nitric oxide boosters",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - MALE",
+  "form": "CHEWABLE TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "nitric oxide",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "nitric oxide",
+    "ashwagandha"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9395,
+      "completion": 5745,
+      "total": 15140
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric oxide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B6",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "pyridoxine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ashwagandha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 101.183035
+}

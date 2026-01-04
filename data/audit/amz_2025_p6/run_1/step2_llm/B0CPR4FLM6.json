@@ -1,0 +1,81 @@
+{
+  "product_id": 10222,
+  "asin": "B0CPR4FLM6",
+  "title": "revive md cortisol manager, 90 vegetarian capsules - cortisol supplement with magnesium & l-theanine support health, focus, energy, fatigue, & adrenal gland function - vegan & gluten-free",
+  "brand": "revive",
+  "source_subcategory": "glandular extracts",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "magnesium",
+      "position": 78,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'magnesium' appears in the title at character index 78. lookup_ingredient returned category/subcategory as shown."
+    },
+    {
+      "name": "l-theanine",
+      "position": 90,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "The term 'l-theanine' appears in the title starting at character index 90 (includes hyphen). lookup_ingredient returned category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9181,
+      "completion": 4643,
+      "total": 13824
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-theanine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Theanine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "l-theanine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 52.872394
+}

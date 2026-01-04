@@ -1,0 +1,75 @@
+{
+  "product_id": 2618,
+  "asin": "B074TNKF29",
+  "title": "kirkland hmdou  extra strength glucosamine hci with msm 375 count (pack of 4)",
+  "brand": "remove",
+  "source_subcategory": "chondroitin & glucosamine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+  "remap_reason": "Maps to GLUCOSAMINE & CHONDROITIN / GLUCOSAMINE & CHONDROITIN",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 375,
+  "unit": "COUNT",
+  "size": 4,
+  "primary_ingredient": "glucosamine hci",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "glucosamine hci",
+    "msm"
+  ],
+  "category": "MISCELLANEOUS SUPPLEMENTS",
+  "subcategory": "GLUCOSAMINE & CHONDROITIN",
+  "health_focus": "JOINT HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9171,
+      "completion": 3975,
+      "total": 13146
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "glucosamine hci"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glucosamine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+          "keyword": "glucosamine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "msm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MSM",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "msm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 51.791161
+}

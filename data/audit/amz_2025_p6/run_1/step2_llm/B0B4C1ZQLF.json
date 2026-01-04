@@ -1,0 +1,36 @@
+{
+  "product_id": 6954,
+  "asin": "B0B4C1ZQLF",
+  "title": "tumbeelluwa crystal chips money tree with natural rock crystal cluster base handmade stones figurine bonsai tree for good luck and wealth, amethyst",
+  "brand": "tumbeelluwa",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title lists crystals/stones (e.g., 'amethyst', 'rock crystal') as decorative materials, not functional supplement ingredients."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4592,
+      "completion": 1056,
+      "total": 5648
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 17.170286
+}

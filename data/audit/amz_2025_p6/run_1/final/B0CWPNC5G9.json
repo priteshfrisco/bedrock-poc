@@ -1,0 +1,135 @@
+{
+  "product_id": 10657,
+  "asin": "B0CWPNC5G9",
+  "title": "generic silver biotics sugar-free colloidal silver lozenges  60 ppm silversol  immune support + throat soothing comfort  elderberry zinc (21 count x 5 package bundle)",
+  "brand": "silver biotics",
+  "source_subcategory": "cough drops & lozenges",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LOZENGE",
+  "organic": "NOT ORGANIC",
+  "count": "21",
+  "unit": "COUNT",
+  "size": 5,
+  "primary_ingredient": "colloidal silver",
+  "num_ingredients": 4,
+  "all_ingredients": [
+    "colloidal silver",
+    "silversol",
+    "elderberry",
+    "zinc"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "MINERALS",
+  "health_focus": "COUGH, COLD & FLU",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9515,
+      "completion": 6073,
+      "total": 15588
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "colloidal silver"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collodial Silver",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "colloidal silver",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "silversol"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Collodial Silver",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "silver hydrosol",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Resveratrol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "resveratrol",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cleavers",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cleavers",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 83.156616
+}

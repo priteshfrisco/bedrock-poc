@@ -1,0 +1,213 @@
+{
+  "product_id": 9311,
+  "asin": "B0CG6V9SRX",
+  "title": "rize labs (2 pack) evaxatropin gummies for men, evoxatropin performance gumies reviews, evaxatropin gummy, evaxatropinmale support, health supplement gomitas, vitality and energy (120 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "multivitamins",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - MALE",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "evaxatropin",
+  "num_ingredients": 4,
+  "all_ingredients": [
+    "evaxatropin",
+    "evoxatropin",
+    "evaxatropin",
+    "evaxatropinmale"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10119,
+      "completion": 6816,
+      "total": 16935
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evaxatropin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Valerian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "valarian",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Melatonin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "melatonin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gelatin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "gelatin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evoxatropin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Melatonin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "melatonin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gelatin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "gelatin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Keratin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "keratin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evaxatropin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Valerian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "valarian",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Melatonin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "melatonin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gelatin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "gelatin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evaxatropinmale"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto kinase",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto-k",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto-serra",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 130.511563
+}

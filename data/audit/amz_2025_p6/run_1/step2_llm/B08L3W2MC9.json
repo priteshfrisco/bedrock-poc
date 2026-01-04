@@ -1,0 +1,36 @@
+{
+  "product_id": 4905,
+  "asin": "B08L3W2MC9",
+  "title": "naomi harmony - menopause relief  natural support for hot flashes - 30 capsules",
+  "brand": "naomi",
+  "source_subcategory": "menopause care products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [],
+    "reasoning": "No functional ingredient names (e.g., black cohosh, soy isoflavones, vitamin D) appear in the title. The title contains brand/marketing text ('naomi harmony') and intended benefit ('menopause relief', 'hot flashes') but no ingredient names to look up. Therefore no lookup_ingredient calls were made."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4579,
+      "completion": 1986,
+      "total": 6565
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 35.495388
+}

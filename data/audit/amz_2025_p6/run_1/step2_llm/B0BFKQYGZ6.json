@@ -1,0 +1,173 @@
+{
+  "product_id": 7420,
+  "asin": "B0BFKQYGZ6",
+  "title": "ultra hyaluronic acid capsules 3700mg with collagen peptide vit c - anti-aging supplement, promote healthy skin, hair, joint with l-arginine resveratrol vit d3 (90 count (pack of 2))",
+  "brand": "ultra herbs",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hyaluronic acid",
+      "position": 6,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Phrase 'hyaluronic acid' appears starting at character index 6. lookup_ingredient returned normalized 'Hyaluronic Acid' with category 'MISCELLANEOUS SUPPLEMENTS' and subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "collagen peptide",
+      "position": 43,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Phrase 'collagen peptide' appears starting at character index 43 ('collagen' at 43). lookup_ingredient returned normalized 'Collagen' with category 'ACTIVE NUTRITION' and subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "vit c",
+      "position": 60,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Abbreviated 'vit c' appears starting at character index 60. lookup_ingredient was called for 'vitamin c' but the lookup tool returned a mapping to 'Vitamin D' (Category: 'BASIC VITAMINS & MINERALS', Subcategory: 'LETTER VITAMINS')\u2014the returned category/subcategory are included exactly as provided by the lookup tool."
+    },
+    {
+      "name": "l-arginine",
+      "position": 130,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Text 'l-arginine' starts at character index 130. lookup_ingredient returned normalized 'Arginine' with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS'."
+    },
+    {
+      "name": "resveratrol",
+      "position": 141,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "Word 'resveratrol' begins at character index 141. lookup_ingredient returned 'Resveratrol' with category 'HERBAL REMEDIES' and subcategory 'POLYPHENOLS'."
+    },
+    {
+      "name": "vit d3",
+      "position": 153,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "'vit d3' (abbreviated for vitamin D3) starts at character index 153. lookup_ingredient returned normalized 'Vitamin D' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9559,
+      "completion": 6002,
+      "total": 15561
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hyaluronic acid"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hyaluronic Acid",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "hyaluronic acid",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen peptide"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-arginine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Arginine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "arginine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "resveratrol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Resveratrol",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "resveratrol",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 96.682823
+}

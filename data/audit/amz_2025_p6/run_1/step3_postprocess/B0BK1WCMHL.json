@@ -1,0 +1,58 @@
+{
+  "product_id": 7589,
+  "asin": "B0BK1WCMHL",
+  "title": "nature'sbountymarvel\u00e2avengerskidsgummymultivitamin,naturalgrape,orange&cherryflavored,supportsimmunehealth&more,180gummies(packof2)",
+  "brand": "nature's bounty",
+  "source_subcategory": "multivitamins",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "multivitamin",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "multivitamin"
+  ],
+  "category": "COMBINED MULTIVITAMINS",
+  "subcategory": "CHILD",
+  "health_focus": "OVERALL HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9095,
+      "completion": 2861,
+      "total": 11956
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multivitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "alive once daily",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4345.884706
+}

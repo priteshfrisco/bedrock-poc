@@ -1,0 +1,36 @@
+{
+  "product_id": 4097,
+  "asin": "B081HYB1FK",
+  "title": "2 pack, large weekly pill organizer boxes in gold leather case - 7 day week pill planner organizers & medication reminder with 4 times a day - daily compartments that is ideal for travel",
+  "brand": "medca",
+  "source_subcategory": "cold & flu treatments",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: product is a pill organizer/weekly pill planner (equipment), contains no functional supplement ingredients."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4600,
+      "completion": 1143,
+      "total": 5743
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 18.052693
+}

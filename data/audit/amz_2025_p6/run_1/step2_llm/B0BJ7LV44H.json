@@ -1,0 +1,225 @@
+{
+  "product_id": 7558,
+  "asin": "B0BJ7LV44H",
+  "title": "sprout living's colorfuel, hydration powder drink mix, organic superfoods and adaptogens  hydration support & recovery, electrolytes, himalayan pink salt, coconut water, lemon flavor (25 servings)",
+  "brand": "sprout living",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 25,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "superfoods",
+      "position": 62,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found 'organic superfoods' in title starting at character index 62. lookup_ingredient returned normalized ingredient 'Whole Food Concentrate' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    },
+    {
+      "name": "adaptogens",
+      "position": 77,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Found 'adaptogens' in title starting at index 77. lookup_ingredient returned no exact match (ambiguous / needs disambiguation). Tool did not return a definitive category/subcategory, so category/subcategory set to UNKNOWN."
+    },
+    {
+      "name": "electrolytes",
+      "position": 119,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Found 'electrolytes' in title starting at index 119. lookup_ingredient did not return a definitive exact match (ambiguous candidates). Therefore category/subcategory set to UNKNOWN based on tool output."
+    },
+    {
+      "name": "himalayan pink salt",
+      "position": 133,
+      "category": "HOMEOPATHICS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'himalayan pink salt' starting at index 133. lookup_ingredient returned 'Cell Salt' with category 'HOMEOPATHICS' and subcategory 'NON-SPECIFIC'. (Using tool result as required.)"
+    },
+    {
+      "name": "coconut water",
+      "position": 154,
+      "category": "FATTY ACIDS",
+      "subcategory": "COCONUT",
+      "reasoning": "Found 'coconut water' starting at index 154. lookup_ingredient returned a match 'Coconut Oil' (category 'FATTY ACIDS', subcategory 'COCONUT'). The returned category/subcategory are recorded even though the normalized tool match differs from the exact phrase in the title."
+    },
+    {
+      "name": "lemon flavor",
+      "position": 169,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'lemon flavor' starting at index 169. lookup_ingredient returned 'Lemon Balm' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. The tool result is recorded as returned."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9879,
+      "completion": 6647,
+      "total": 16526
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "superfoods"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Whole Food Concentrate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "superfoods",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "adaptogens"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Naproxen",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "naproxen",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Laxatives",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "laxative",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Laxatives",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "laxatives",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "himalayan pink salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coconut water"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Coconut Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "COCONUT",
+          "keyword": "coconut oil",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemon flavor"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lemon Balm",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lemon balm",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4415.551221
+}

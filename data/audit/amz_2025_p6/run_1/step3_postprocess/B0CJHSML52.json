@@ -1,0 +1,118 @@
+{
+  "product_id": 9688,
+  "asin": "B0CJHSML52",
+  "title": "health by habit beauty full kit - women's multi supplement (60 capsules) + collagen (60 capsules) + hair, skin & nails gummies (60 gummies), non gmo",
+  "brand": "health by habit",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "multivitamin",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "multivitamin",
+    "collagen",
+    "hair, skin & nails"
+  ],
+  "category": "COMBINED MULTIVITAMINS",
+  "subcategory": "WOMEN",
+  "health_focus": "OVERALL HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9447,
+      "completion": 6520,
+      "total": 15967
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multivitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "alive once daily",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hair skin nails"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Shark Cartilage",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "cartilago de tiburon",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Shark Cartilage",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "shark cartilage",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto kinase",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.135626
+}

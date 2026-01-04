@@ -1,0 +1,213 @@
+{
+  "product_id": 8533,
+  "asin": "B0C5YP7P4Q",
+  "title": "flavcity raspberry lychee electrolytes drink mix, 28 on-the-go stick packs - healthy electrolytes powder packets made with real fruit - keto powdered drink with no added sugar, gluten-free",
+  "brand": "flavcity",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 28,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "raspberry",
+      "position": 9,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_ingredient": "Red Raspberry",
+      "lookup_found": true,
+      "lookup_notes": "lookup_ingredient returned a match: ingredient='Red Raspberry', nw_category='FATTY ACIDS', nw_subcategory='HEMP/CBD' (medium confidence). Included as returned by the lookup tool."
+    },
+    {
+      "name": "lychee",
+      "position": 19,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_ingredient": "UNKNOWN",
+      "lookup_found": false,
+      "lookup_notes": "lookup_ingredient did not return a direct match. Candidate suggestions were provided (e.g., lycopene, glycine, larch) but none clearly match 'lychee'. Marked UNKNOWN for category/subcategory."
+    },
+    {
+      "name": "electrolytes",
+      "position": 26,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_ingredient": "UNKNOWN",
+      "lookup_found": false,
+      "lookup_notes": "lookup_ingredient did not return a direct match for the term 'electrolytes' (candidates returned but not relevant). 'Electrolytes' is a functional ingredient term (mixture of minerals) but the lookup returned no clear NW category \u2014 set to UNKNOWN."
+    },
+    {
+      "name": "fruit",
+      "position": 128,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_ingredient": "UNKNOWN",
+      "lookup_found": false,
+      "lookup_notes": "Title states 'made with real fruit' \u2014 'fruit' is generic. lookup_ingredient returned ambiguous candidates; no clear normalized ingredient/category identified. Marked UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9874,
+      "completion": 6854,
+      "total": 16728
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "raspberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Red Raspberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "raspberry ketones",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.383094026799263
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lychee"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Lycopene",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "lycopene",
+              "match_type": "fuzzy",
+              "score": 71.42857142857143,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Glycine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "glycine",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Larax A R A Larch",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "larch",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fruit"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Rutin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "rutin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "cfu",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grapefruit seed",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 85.460739
+}

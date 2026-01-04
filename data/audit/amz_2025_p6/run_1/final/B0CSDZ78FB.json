@@ -1,0 +1,15 @@
+{
+  "product_id": 10418,
+  "asin": "B0CSDZ78FB",
+  "title": "vegan vitamin b complex liquid - 9-in-1 liquid b complex vitamins for women & men with b1 b2 b3 b5 b6 b7 folate methyl b12 plus vitamin c - super concentrated non gmo & naturally flavored (240svg)",
+  "brand": "natures craft",
+  "source_subcategory": "vitamin b-complex",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "error": "Extra data: line 2 column 1 (char 67)",
+  "processing_time_sec": 100.756415
+}

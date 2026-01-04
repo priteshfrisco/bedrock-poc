@@ -1,0 +1,89 @@
+{
+  "product_id": 4212,
+  "asin": "B083RV1PV7",
+  "title": "pristine foods nitric shock pre-workout supplement | fruit punch flavored | promotes lean muscle growth | promotes tissue repair | enhanced performance | 300 grams (fruit punch)",
+  "brand": "pristine foods",
+  "source_subcategory": "pre-workout nitric oxide boosters",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 10.5822,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nitric shock",
+      "position": 15,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "notes": "lookup_ingredient returned no confirmed match; 'nitric shock' appears to be a product/proprietary name or proprietary blend name rather than a standard, single functional ingredient."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'nitric shock' appears in the title and is the only candidate for a functional ingredient. No standard ingredient names (e.g., L-citrulline, arginine, caffeine) are explicitly present in the title, so we cannot assume or infer them."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9250,
+      "completion": 4243,
+      "total": 13493
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric shock"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Artichoke",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "artichoke",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin K",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "k",
+              "match_type": "fuzzy",
+              "score": 47.61904761904761,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin K",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "k 1",
+              "match_type": "fuzzy",
+              "score": 47.61904761904761,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 52.572747
+}

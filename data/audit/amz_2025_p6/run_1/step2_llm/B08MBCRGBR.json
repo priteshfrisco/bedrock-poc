@@ -1,0 +1,36 @@
+{
+  "product_id": 4976,
+  "asin": "B08MBCRGBR",
+  "title": "zotos professional acclaim acid perm regular 1 application (pack of 4)",
+  "brand": "acclaim",
+  "source_subcategory": "antacids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title contains no dietary/functional ingredients; it names a hair perm product ('acid perm') which is a cosmetic/processing chemical, not a supplement ingredient."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4578,
+      "completion": 1101,
+      "total": 5679
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.082035
+}

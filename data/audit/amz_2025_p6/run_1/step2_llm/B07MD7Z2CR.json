@@ -1,0 +1,36 @@
+{
+  "product_id": 3512,
+  "asin": "B07MD7Z2CR",
+  "title": "halls minis cherry flavor sugar free cough drops, 48 drops",
+  "brand": "halls",
+  "source_subcategory": "cough drops & lozenges",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Ingredient extraction skipped because the product is a cough drop/throat lozenge (not a dietary supplement)."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4576,
+      "completion": 1191,
+      "total": 5767
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.431754
+}

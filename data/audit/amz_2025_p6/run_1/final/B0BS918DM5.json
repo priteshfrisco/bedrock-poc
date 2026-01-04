@@ -1,0 +1,14 @@
+{
+  "product_id": 7887,
+  "asin": "B0BS918DM5",
+  "title": "whole foods market chicken, goat cheese & arugula sandwich",
+  "brand": "whole foods market",
+  "source_subcategory": "other cheeses",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.003506,
+  "lookup_action": "REMOVE"
+}

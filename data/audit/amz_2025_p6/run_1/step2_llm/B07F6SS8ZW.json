@@ -1,0 +1,36 @@
+{
+  "product_id": 3180,
+  "asin": "B07F6SS8ZW",
+  "title": "plant therapy complete chakra set",
+  "brand": "plant therapy",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title refers to an essential oil/aromatherapy set (Plant Therapy chakra set). Do not extract supplement functional ingredients from non-supplement products."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4568,
+      "completion": 1456,
+      "total": 6024
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.803577
+}

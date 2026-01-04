@@ -1,0 +1,89 @@
+{
+  "product_id": 3516,
+  "asin": "B07MG5V8JS",
+  "title": "secrets of the tribe - iron secret, iron rich formula, herbal supplement blend drops alcohol liquid extract (4 fl oz)",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "oz",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "iron",
+      "position": 23,
+      "lookup_result": {
+        "ingredient": "Iron",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "found": true
+      },
+      "reasoning": "Explicitly mentioned as 'iron secret' and 'iron rich formula'. First occurrence of a functional ingredient in the title at index 23."
+    },
+    {
+      "name": "herbal supplement blend",
+      "position": 55,
+      "lookup_result": {
+        "ingredient": "Ayurvedic Herb",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "Title contains the phrase 'herbal supplement blend' starting at index 55. Treated as a named blend/functional ingredient (tool lookup returned a related herbal classification)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9159,
+      "completion": 5067,
+      "total": 14226
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "iron"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Iron",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "iron",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal supplement blend"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ayurvedic Herb",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ayurvedic herbal supplement",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.489352188599828
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 58.133517
+}

@@ -1,0 +1,58 @@
+{
+  "product_id": 1791,
+  "asin": "B017O8EEAW",
+  "title": "saltstickfastchewsresealable,variety4packoftartorange&zestylemon-lime",
+  "brand": "salt stick",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFT CHEW",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 4,
+  "ingredients": [
+    {
+      "name": "salt",
+      "position": 0,
+      "category": "HOMEOPATHICS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The string begins with 'saltstick...'; 'salt' appears at the start of the title (index 0). 'Salt' was looked up and matched to 'Cell Salt' in the lookup tool (category HOMEOPATHICS / NON-SPECIFIC). Note: 'SaltStick' is also a brand name; however 'salt' is present in the title and was matched by the ingredient lookup."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9046,
+      "completion": 4699,
+      "total": 13745
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.004491
+}

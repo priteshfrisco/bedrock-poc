@@ -1,0 +1,319 @@
+{
+  "product_id": 8744,
+  "asin": "B0C93PHYYJ",
+  "title": "b beworths fruit supplements for daily energy balance - fruit liquid drops - whole fruits and veggies supplement - 1 pack",
+  "brand": "b beworths",
+  "source_subcategory": "energy supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "fruit",
+      "position": 11,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_details": {
+        "called_name": "fruit",
+        "lookup_found": false,
+        "candidates": [
+          {
+            "ingredient": "Rutin",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "note": "fuzzy match from tool output"
+          },
+          {
+            "ingredient": "Probiotic",
+            "nw_category": "PROBIOTICS+",
+            "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+            "note": "fuzzy match from tool output"
+          },
+          {
+            "ingredient": "Grape Fruit Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "note": "fuzzy match from tool output"
+          }
+        ],
+        "reasoning": "lookup_ingredient returned no confident direct match for generic term 'fruit'. Provided candidates are low-confidence fuzzy matches; therefore category/subcategory set to UNKNOWN."
+      },
+      "reasoning": "The word 'fruit' appears at index 11 in the title ('b beworths fruit ...'). 'fruit' is a functional ingredient descriptor in this title (part of 'fruit supplements')."
+    },
+    {
+      "name": "fruit",
+      "position": 56,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_details": {
+        "called_name": "fruit",
+        "lookup_found": false,
+        "candidates": [
+          {
+            "ingredient": "Rutin",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "note": "fuzzy match from tool output"
+          },
+          {
+            "ingredient": "Probiotic",
+            "nw_category": "PROBIOTICS+",
+            "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+            "note": "fuzzy match from tool output"
+          },
+          {
+            "ingredient": "Grape Fruit Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "note": "fuzzy match from tool output"
+          }
+        ],
+        "reasoning": "Second occurrence of the term 'fruit' (in 'fruit liquid drops') returned the same ambiguous lookup results. Category/subcategory set to UNKNOWN."
+      },
+      "reasoning": "The word 'fruit' appears again at index 56 in '... - fruit liquid drops - ...' and is a functional ingredient descriptor in the title."
+    },
+    {
+      "name": "fruits",
+      "position": 83,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_details": {
+        "called_name": "fruits",
+        "lookup_found": false,
+        "candidates": [
+          {
+            "ingredient": "Grape Fruit Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "note": "fuzzy match from tool output"
+          },
+          {
+            "ingredient": "Grape Fruit Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "note": "alt fuzzy candidate from tool output"
+          }
+        ],
+        "reasoning": "lookup_ingredient returned low-confidence fuzzy matches for 'fruits' (e.g., grapefruit seed). 'fruits' here is generic/whole-food style wording; no confident single normalized ingredient returned."
+      },
+      "reasoning": "The phrase 'whole fruits' appears starting at index 77 for 'whole' and 83 for 'fruits' ('... - whole fruits and veggies ...'). 'fruits' is a functional descriptor in the product title."
+    },
+    {
+      "name": "veggies",
+      "position": 94,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_details": {
+        "called_name": "veggies",
+        "lookup_found": false,
+        "candidates": [
+          {
+            "ingredient": "Whole Food Concentrate",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "note": "top fuzzy candidate from tool output"
+          },
+          {
+            "ingredient": "Veg Supp Oils",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "ALL OTHER OILS",
+            "note": "lower-confidence fuzzy candidate"
+          }
+        ],
+        "reasoning": "'veggies' is a generic whole-food style ingredient descriptor; lookup returned low-confidence candidates (e.g., whole food concentrate). Category/subcategory set to UNKNOWN."
+      },
+      "reasoning": "The word 'veggies' appears at index 94 in 'whole fruits and veggies supplement' and represents a functional ingredient descriptor (whole vegetables)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9988,
+      "completion": 6458,
+      "total": 16446
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fruit"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Rutin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "rutin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "cfu",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grapefruit seed",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fruit"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Rutin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "rutin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "cfu",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grapefruit seed",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fruits"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grapefruit seed",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grape fruit seed",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Zma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "zmag t",
+              "match_type": "bm25",
+              "score": 0.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "veggies"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "veggie whole foods",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Veg Supp Oils",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "ALL OTHER OILS",
+              "keyword": "castor oil",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Veg Supp Oils",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "ALL OTHER OILS",
+              "keyword": "laxative mineral oil",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 69.906324
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 6371,
+  "asin": "B09SKB48YQ",
+  "title": "puritan's pride senior healthy aging",
+  "brand": "puritan's pride",
+  "source_subcategory": "multivitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - MATURE ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4570,
+      "completion": 1452,
+      "total": 6022
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.4919
+}

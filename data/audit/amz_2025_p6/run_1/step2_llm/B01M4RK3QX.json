@@ -1,0 +1,36 @@
+{
+  "product_id": 2211,
+  "asin": "B01M4RK3QX",
+  "title": "icyhot 3oz",
+  "brand": "icy hot",
+  "source_subcategory": "pain relievers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - PAIN & INFLAMMATION",
+  "remap_reason": "Maps to OTC / OTC - PAIN & INFLAMMATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: product is a topical analgesic (Icy Hot); ingredient extraction for dietary supplements is not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4568,
+      "completion": 1145,
+      "total": 5713
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 18.77694
+}

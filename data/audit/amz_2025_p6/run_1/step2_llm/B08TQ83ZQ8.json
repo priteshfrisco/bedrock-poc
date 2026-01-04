@@ -1,0 +1,104 @@
+{
+  "product_id": 5192,
+  "asin": "B08TQ83ZQ8",
+  "title": "(2pack)12,000,000mghempoilextractforbettersleep-aceitedecamo,immunesupport-bestpurenaturalorganichempoilextract-richinomega3-6-9,non-gmo",
+  "brand": "gpgp greenpeople",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "mg",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp oil extract",
+      "position": 19,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'hempoilextract' starting at character index 19 in the title. Lookup returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "hemp oil extract",
+      "position": 97,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "A second occurrence 'hempoilextract' starts at character index 97 in the title. Lookup returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "omega 3-6-9",
+      "position": 118,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The phrase 'omega3-6-9' starts at character index 118 ('omega' at 118). Lookup for 'omega 3' returned a match mapped to category 'FATTY ACIDS' and subcategory 'FISH' (tool returned 'Fish Oil' mapping)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9306,
+      "completion": 6876,
+      "total": 16182
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3-6-9"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.843989500065074
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 94.488165
+}

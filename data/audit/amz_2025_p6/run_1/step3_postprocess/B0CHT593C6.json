@@ -1,0 +1,58 @@
+{
+  "product_id": 9556,
+  "asin": "B0CHT593C6",
+  "title": "(3 pack) elevate well gummies, elevate well gummies with all natural hemp, elevate well maximum strength supplement, elevate well advanced formula gummy s, elevatewell reviews 300 mg (180 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "primary_ingredient": "hemp",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "hemp"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9075,
+      "completion": 3059,
+      "total": 12134
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 52.61977
+}

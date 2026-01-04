@@ -1,0 +1,84 @@
+{
+  "product_id": 5086,
+  "asin": "B08QMSZB66",
+  "title": "hanan prostasan prostate care blend  100 capsules  naturally aids in cleansing the prostate and urinary tract",
+  "brand": "hanan peruvian secrets",
+  "source_subcategory": "saw palmetto herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - MALE",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "prostate care blend",
+      "position": 16,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title does not list specific ingredient names; it contains the product/mixture name 'prostate care blend' starting at character index 16. lookup_ingredient(\"prostate care blend\") returned no definitive match (found=false) and only low-confidence fuzzy candidates. Because no specific functional ingredients (e.g., saw palmetto, beta-sitosterol) are named, we record the blend name but cannot assign a known category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9244,
+      "completion": 4191,
+      "total": 13435
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "prostate care blend"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Progesterone",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "progesterone",
+              "match_type": "fuzzy",
+              "score": 51.61290322580645,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Carotene",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "beta carotene",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Carotene",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "beta carotene vitamin a",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.178618
+}

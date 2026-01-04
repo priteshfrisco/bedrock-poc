@@ -1,0 +1,126 @@
+{
+  "product_id": 4617,
+  "asin": "B08D5H23P6",
+  "title": "nature's way sambucus zinc lozenges - with elderberry & vitamin c - black elderberry extract - for immune support* - honey lemon flavor - 24 lozenges (2 pack)",
+  "brand": "nature's way",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LOZENGE",
+  "organic": "NOT ORGANIC",
+  "count": 24,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "sambucus",
+  "num_ingredients": 5,
+  "all_ingredients": [
+    "sambucus",
+    "zinc",
+    "elderberry",
+    "vitamin c",
+    "black elderberry extract"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "FORMULAS",
+  "health_focus": "URINARY TRACT HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9432,
+      "completion": 6999,
+      "total": 16431
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sambucus"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "sambucus",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black elderberry extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.409833504706679
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.769247
+}

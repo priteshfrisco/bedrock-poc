@@ -1,0 +1,94 @@
+{
+  "product_id": 3944,
+  "asin": "B07WVB2SHC",
+  "title": "bb company previtalize  prebiotics for women, prebiotic fiber for gut health, digestive health  food for good probiotics  complement to probiotics & provitalize  packaging vary  60 ct",
+  "brand": "better body co.",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "prebiotics",
+        "position": 24,
+        "category": "PROBIOTICS+",
+        "subcategory": "PREBIOTICS AND PROBIOTICS"
+      },
+      {
+        "name": "prebiotic fiber",
+        "position": 46,
+        "category": "PROBIOTICS+",
+        "subcategory": "PREBIOTICS AND PROBIOTICS"
+      },
+      {
+        "name": "probiotics",
+        "position": 110,
+        "category": "PROBIOTICS+",
+        "subcategory": "PREBIOTICS AND PROBIOTICS"
+      },
+      {
+        "name": "probiotics",
+        "position": 136,
+        "category": "PROBIOTICS+",
+        "subcategory": "PREBIOTICS AND PROBIOTICS"
+      }
+    ],
+    "reasoning": "Found functional ingredient keywords in the title: 'prebiotics' (starts at char 24), 'prebiotic fiber' (starts at char 46), and two occurrences of 'probiotics' (starts at chars 110 and 136). Each occurrence was looked up. lookup_ingredient results: 'prebiotics' -> ingredient normalized to 'Probiotic', category 'PROBIOTICS+', subcategory 'PREBIOTICS AND PROBIOTICS'; 'probiotics' -> same mapping. 'prebiotic fiber' maps to the same prebiotic/probiotic category (treated as prebiotic). 'previtalize'/'provitalize' appear to be brand/product names and were not treated as functional ingredients."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9186,
+      "completion": 6760,
+      "total": 15946
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "prebiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "prebiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "probiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 3446.259101
+}

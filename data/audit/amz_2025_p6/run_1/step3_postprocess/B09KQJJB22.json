@@ -1,0 +1,186 @@
+{
+  "product_id": 6092,
+  "asin": "B09KQJJB22",
+  "title": "gluco support supplement capsules - boost metabolism supplements, vitamin herbal formula pill - ultra balance optimizer vitamins, chromium, cinnamon, bitter melon leaf, gymnema, vanadium - 60 pills",
+  "brand": "dr. bo",
+  "source_subcategory": "cinnamon herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "vitamin",
+  "num_ingredients": 7,
+  "all_ingredients": [
+    "vitamin",
+    "vitamins",
+    "chromium",
+    "cinnamon",
+    "bitter melon leaf",
+    "gymnema",
+    "vanadium"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "BEAUTY",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9794,
+      "completion": 7949,
+      "total": 17743
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chromium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chromium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "chromium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cinnamon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cinnamon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "cinnamon",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bitter melon leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bitter Melon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bitter melon",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 11.382445719732498
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gymnema"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Gymnema Sylvestre",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "gymnema sylvestre",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vanadium"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Germanium",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "germanium",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Magnesium",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "magnesium",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DIM",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "diindolylmethane",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 146.297969
+}

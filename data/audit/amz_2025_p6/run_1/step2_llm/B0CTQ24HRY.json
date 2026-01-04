@@ -1,0 +1,104 @@
+{
+  "product_id": 10524,
+  "asin": "B0CTQ24HRY",
+  "title": "magnesium glycinate gummies - 600 mg magnesium citrate complex, magnesium calcium supplement promotes immune energy support - 60 vegan",
+  "brand": "b beworths",
+  "source_subcategory": "magnesium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "magnesium glycinate",
+      "position": 0,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Phrase 'magnesium glycinate' appears at the start of the title (position 0). lookup_ingredient returned normalized ingredient 'Magnesium' with category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "magnesium citrate",
+      "position": 37,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "'magnesium citrate' appears after the dosage segment ('600 mg') starting at character index 37. lookup_ingredient returned normalized ingredient 'Magnesium' with category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "calcium",
+      "position": 74,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'calcium' appears in the phrase 'magnesium calcium supplement' starting at index 74. lookup_ingredient returned 'Calcium' with category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9250,
+      "completion": 4607,
+      "total": 13857
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium glycinate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium citrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 86.075386
+}

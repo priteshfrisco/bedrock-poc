@@ -1,0 +1,14 @@
+{
+  "product_id": 990,
+  "asin": "B00B03XSAK",
+  "title": "nancys organic cottage cheese  16 ounce -- 6 per case.",
+  "brand": "nancy's shop",
+  "source_subcategory": "cottage cheese",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.010888,
+  "lookup_action": "REMOVE"
+}

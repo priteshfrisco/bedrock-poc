@@ -1,0 +1,75 @@
+{
+  "product_id": 9634,
+  "asin": "B0CJ7CS8WJ",
+  "title": "leader women 50+ multivitamin and mineral supplement, 100 tablets",
+  "brand": "leader",
+  "source_subcategory": "multivitamins",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - MATURE ADULT",
+  "gender": "GENDER - FEMALE",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9147,
+      "completion": 3501,
+      "total": 12648
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multivitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "alive once daily",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mineral"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 47.138263
+}

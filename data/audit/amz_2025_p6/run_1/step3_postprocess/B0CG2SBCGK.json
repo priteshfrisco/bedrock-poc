@@ -1,0 +1,195 @@
+{
+  "product_id": 9294,
+  "asin": "B0CG2SBCGK",
+  "title": "santa cruz paleo real salt electrolytes powder, kiwi, hydration drink mix made with himalayan pink salt, sea salt, magnesium glycinate, gluten free, keto, sugar free, paleo, 30 servings, 1 jar",
+  "brand": "santa cruz paleo",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "real salt",
+  "num_ingredients": 6,
+  "all_ingredients": [
+    "real salt",
+    "electrolytes",
+    "kiwi",
+    "himalayan pink salt",
+    "sea salt",
+    "magnesium glycinate"
+  ],
+  "category": "HOMEOPATHICS",
+  "subcategory": "NON-SPECIFIC",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9894,
+      "completion": 6557,
+      "total": 16451
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "real salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "kiwi"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Krill Oil",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "FISH",
+              "keyword": "krill oil",
+              "match_type": "fuzzy",
+              "score": 46.15384615384615,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Forskohlii",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "forskohlii",
+              "match_type": "fuzzy",
+              "score": 42.85714285714286,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Forskohlii",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "forskohlii (coleus)",
+              "match_type": "fuzzy",
+              "score": 42.85714285714286,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "himalayan pink salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sea salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium glycinate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 139.692924
+}

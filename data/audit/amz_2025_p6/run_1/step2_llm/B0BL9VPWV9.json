@@ -1,0 +1,196 @@
+{
+  "product_id": 7662,
+  "asin": "B0BL9VPWV9",
+  "title": "bio vitalica berberine quercetin gummies by biovitalica - quercetin with bromelain vitamin c and zinc & elderberry + vitamin d3 - immune support - zinc quercetin 750 mg for kids and adults",
+  "brand": "bio vitalica",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "berberine",
+      "position": 13,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found the token 'berberine' starting at character index 13. lookup_ingredient returned category/subcategory as shown."
+    },
+    {
+      "name": "quercetin",
+      "position": 23,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "Found 'quercetin' at index 23 (first occurrence). lookup_ingredient returned HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "bromelain",
+      "position": 73,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "Found 'bromelain' at index 73. lookup_ingredient returned PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES."
+    },
+    {
+      "name": "vitamin c",
+      "position": 83,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'vitamin c' starting at index 83. The lookup_ingredient call returned BASIC VITAMINS & MINERALS / LETTER VITAMINS (tool matched to a vitamin entry). I used the tool's returned category/subcategory."
+    },
+    {
+      "name": "zinc",
+      "position": 97,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Found 'zinc' at index 97. lookup_ingredient returned BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "elderberry",
+      "position": 104,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "Found 'elderberry' at index 104. lookup_ingredient returned HERBAL REMEDIES / SINGLES."
+    },
+    {
+      "name": "vitamin d3",
+      "position": 117,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'vitamin d3' starting at index 117. lookup_ingredient returned BASIC VITAMINS & MINERALS / LETTER VITAMINS for the vitamin D/D3 match."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9622,
+      "completion": 7374,
+      "total": 16996
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "berberine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "barberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "berberine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bromelain"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "bromelain",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "bromelain",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 103.691119
+}

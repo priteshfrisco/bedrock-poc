@@ -1,0 +1,130 @@
+{
+  "product_id": 67,
+  "asin": "B0DSQMLMZ7",
+  "title": "protein your whey (30 servings, chai flavored) - whey protein isolate",
+  "brand": "wellah",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 0,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The word 'protein' appears at the start of the title (index 0). lookup_ingredient('protein') returned a match mapping to ACTIVE NUTRITION / PROTEIN & MEAL REPLACEMENTS."
+    },
+    {
+      "name": "whey",
+      "position": 13,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The word 'whey' appears at index 13. lookup_ingredient('whey') did not return a single confident mapping (returned no definitive 'found' result and several low-confidence candidates), so category/subcategory are set to UNKNOWN and further disambiguation would be needed."
+    },
+    {
+      "name": "whey protein isolate",
+      "position": 49,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The phrase 'whey protein isolate' begins at index 49. lookup_ingredient('whey protein isolate') returned a mapping to ACTIVE NUTRITION / PROTEIN & MEAL REPLACEMENTS (same mapping returned for generic 'protein' in the lookup results)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9422,
+      "completion": 4556,
+      "total": 13978
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cherry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cherry extract",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dehydroepiandrosterone",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dhea",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey protein isolate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 62.252699
+}

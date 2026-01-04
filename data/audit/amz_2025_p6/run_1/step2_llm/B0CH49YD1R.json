@@ -1,0 +1,33 @@
+{
+  "product_id": 9452,
+  "asin": "B0CH49YD1R",
+  "title": "(3 pack) alpha tone booster t powder - alphatone tonic supplement pills, alpha tone powder reviews, himalayan alpha tone pills for men, women advanced formula support extra strength (180 capsules)",
+  "brand": "healthly",
+  "source_subcategory": "testosterone boosters",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4602,
+      "completion": 2538,
+      "total": 7140
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 46.718359
+}

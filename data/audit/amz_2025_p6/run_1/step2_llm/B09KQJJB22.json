@@ -1,0 +1,248 @@
+{
+  "product_id": 6092,
+  "asin": "B09KQJJB22",
+  "title": "gluco support supplement capsules - boost metabolism supplements, vitamin herbal formula pill - ultra balance optimizer vitamins, chromium, cinnamon, bitter melon leaf, gymnema, vanadium - 60 pills",
+  "brand": "dr. bo",
+  "source_subcategory": "cinnamon herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "vitamin",
+      "position": 65,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "The token 'vitamin' appears in the title at character index 65 ('...supplements, vitamin herbal...'). Lookup returned a best match 'Vitamin D' (tool output)."
+    },
+    {
+      "name": "vitamins",
+      "position": 119,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Multivitamin",
+        "nw_category": "COMBINED MULTIVITAMINS",
+        "nw_subcategory": "COMBINED MULTIVITAMINS"
+      },
+      "reasoning": "The token 'vitamins' appears at index 119 ('...optimizer vitamins, chromium...'). Lookup mapped this to 'Multivitamin' in the database (tool output). Note: the literal title contains 'vitamin'/'vitamins' rather than the exact keyword 'multivitamin'."
+    },
+    {
+      "name": "chromium",
+      "position": 129,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Chromium",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS"
+      },
+      "reasoning": "The token 'chromium' appears at index 129 in the ingredient list. Lookup returned Chromium (MINERALS)."
+    },
+    {
+      "name": "cinnamon",
+      "position": 139,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Cinnamon",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The token 'cinnamon' appears at index 139. Lookup returned Cinnamon (tool output)."
+    },
+    {
+      "name": "bitter melon leaf",
+      "position": 149,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Bitter Melon",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The phrase 'bitter melon leaf' begins at index 149 ('bitter' at 149). Lookup matched to 'Bitter Melon' (tool output)."
+    },
+    {
+      "name": "gymnema",
+      "position": 168,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Gymnema Sylvestre",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The token 'gymnema' appears at index 168. Lookup returned 'Gymnema Sylvestre' (tool output)."
+    },
+    {
+      "name": "vanadium",
+      "position": 177,
+      "lookup_result": {
+        "found": false,
+        "note": "Lookup returned no exact match for 'vanadium'. Tool provided candidate suggestions but no confident exact match."
+      },
+      "reasoning": "The token 'vanadium' appears at index 177. The ingredient lookup returned no definitive match for 'vanadium' (tool returned 'found': false)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9794,
+      "completion": 7949,
+      "total": 17743
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chromium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chromium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "chromium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cinnamon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cinnamon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "cinnamon",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bitter melon leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bitter Melon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bitter melon",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 11.382445719732498
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gymnema"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Gymnema Sylvestre",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "gymnema sylvestre",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vanadium"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Germanium",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "germanium",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Magnesium",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "magnesium",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DIM",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "diindolylmethane",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 146.295496
+}

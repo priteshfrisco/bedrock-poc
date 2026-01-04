@@ -1,0 +1,76 @@
+{
+  "product_id": 5464,
+  "asin": "B093381MLL",
+  "title": "(2 pack) hemp gummies 1,200,000mg high strength - fruity gummy bear with hemp oil, 100% natural hemp candy supplements",
+  "brand": "m inch",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "mg",
+  "size": 2,
+  "primary_ingredient": "hemp",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "hemp",
+    "hemp oil",
+    "hemp"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9162,
+      "completion": 4820,
+      "total": 13982
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 62.521633
+}

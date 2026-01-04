@@ -1,0 +1,153 @@
+{
+  "product_id": 8814,
+  "asin": "B0C9TGTTXQ",
+  "title": "dynatech bcaas hydration electrolyte powder sodium & sugar less-& multi-vitamins- on the go convenient- non-gmo, vegan electrolyte drink mix, lemon flavor(20 stick packs)",
+  "brand": "dynatech",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 20,
+  "unit": "COUNT",
+  "size": 20,
+  "ingredients": [
+    {
+      "name": "bcaas",
+      "position": 9,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Found 'bcaas' at index 9. lookup_ingredient returned normalized 'BCAA' with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS'."
+    },
+    {
+      "name": "electrolyte",
+      "position": 25,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Found 'electrolyte' at index 25. lookup_ingredient returned no clear exact match (ambiguous result/candidates). 'Electrolyte' is a generic functional term; tool lookup was ambiguous, so category/subcategory set to UNKNOWN."
+    },
+    {
+      "name": "sodium",
+      "position": 44,
+      "category": "OTC",
+      "subcategory": "OTC - NON-SPECIFIC",
+      "reasoning": "Found 'sodium' at index 44. lookup_ingredient matched to saline/sodium chloride with category 'OTC' and subcategory 'OTC - NON-SPECIFIC'."
+    },
+    {
+      "name": "multi-vitamins",
+      "position": 66,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "Found 'multi-vitamins' (hyphenated) at index 66. lookup_ingredient returned normalized 'Multivitamin' with category and subcategory 'COMBINED MULTIVITAMINS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9528,
+      "completion": 7462,
+      "total": 16990
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bcaas"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "bcaa",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sodium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saline",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "sodium chloride",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multi-vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi-vitamins",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 132.473501
+}

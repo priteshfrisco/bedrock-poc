@@ -1,0 +1,15 @@
+{
+  "product_id": 9770,
+  "asin": "B0CK47KDDM",
+  "title": "skinnyfit fit iv hydrating electrolytes plus weight managing innoslim, vitamin b12 & vitamin c, rapid hydration, supports a healthy weight, healthy aging & metabolism, 24 servings",
+  "brand": "skinnyfit",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 86)",
+  "processing_time_sec": 53.98052
+}

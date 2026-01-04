@@ -1,0 +1,15 @@
+{
+  "product_id": 8822,
+  "asin": "B0C9VRB962",
+  "title": "hydration packets - watermelon cucumber pack - sugar free electrolytes powder packets - 75 stick packs of electrolytes powder no sugar - hydration drink - with acv & vitamin c",
+  "brand": "essential elements",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 86)",
+  "processing_time_sec": 85.187272
+}

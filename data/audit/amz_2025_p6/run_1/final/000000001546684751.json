@@ -1,0 +1,14 @@
+{
+  "product_id": 29,
+  "asin": "000000001546684751",
+  "title": "balanced",
+  "brand": "createspace",
+  "source_subcategory": "balance trainers",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004816,
+  "lookup_action": "REMOVE"
+}

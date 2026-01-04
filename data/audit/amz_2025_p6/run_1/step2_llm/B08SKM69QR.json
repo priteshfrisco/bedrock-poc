@@ -1,0 +1,58 @@
+{
+  "product_id": 5160,
+  "asin": "B08SKM69QR",
+  "title": "super strength mammary glandular formula 200 capsules",
+  "brand": "sor, inc.",
+  "source_subcategory": "glandular extracts",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 200,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "mammary glandular",
+      "position": 15,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The phrase 'mammary glandular' appears in the title starting at character index 15. lookup_ingredient returned normalized ingredient 'Glandular' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9037,
+      "completion": 2681,
+      "total": 11718
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mammary glandular"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glandular",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "glandular",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.945431600525635
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 33.241748
+}

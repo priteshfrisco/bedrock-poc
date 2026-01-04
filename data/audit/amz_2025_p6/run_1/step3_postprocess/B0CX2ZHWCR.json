@@ -1,0 +1,39 @@
+{
+  "product_id": 10690,
+  "asin": "B0CX2ZHWCR",
+  "title": "liquid i.v. hydration multiplier hydration powder packets",
+  "brand": "liquid i.v.",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4573,
+      "completion": 2615,
+      "total": 7188
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 48.003905
+}

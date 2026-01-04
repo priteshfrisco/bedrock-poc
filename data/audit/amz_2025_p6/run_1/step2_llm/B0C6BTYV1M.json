@@ -1,0 +1,15 @@
+{
+  "product_id": 8561,
+  "asin": "B0C6BTYV1M",
+  "title": "jocko fuel hydrate electrolytes powder packets no sugar - hydration amplifier packets for recovery, dehydration, & exercise - with vitamins b6, b12 & c (16 packets) lemon lime",
+  "brand": "jocko fuel",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 83)",
+  "processing_time_sec": 59.13985
+}

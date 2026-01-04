@@ -1,0 +1,36 @@
+{
+  "product_id": 10835,
+  "asin": "B0CYM15694",
+  "title": "plus severe cold and flu nighttime, 5.76 oz - day/night powder for headache, sore throat, fever - bundle with moofin ss metal straw, effervescent, multi-symptom, 12 doses [pack of 2]",
+  "brand": "moofin",
+  "source_subcategory": "cold & flu treatments",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title is for an OTC multi-symptom cold & flu medicine (mentions symptoms and dosing). No extractable dietary supplement functional ingredients to lookup; treat as non-supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4614,
+      "completion": 1383,
+      "total": 5997
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 27.22961
+}

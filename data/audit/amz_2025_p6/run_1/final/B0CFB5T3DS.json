@@ -1,0 +1,42 @@
+{
+  "product_id": 9188,
+  "asin": "B0CFB5T3DS",
+  "title": "kadielona motion sickness bands, anti-nausea wristband relieve nausea electrode stimulator wrist bands relieve motion sickness bands rechargeable relieve nausea bands, mcsh-a02 1",
+  "brand": "kadielona",
+  "source_subcategory": "motion sickness & nausea",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4598,
+      "completion": 1023,
+      "total": 5621
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.795043
+}

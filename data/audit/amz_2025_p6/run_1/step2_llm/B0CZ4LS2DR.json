@@ -1,0 +1,94 @@
+{
+  "product_id": 10885,
+  "asin": "B0CZ4LS2DR",
+  "title": "3 pack - life boost hemp gummies, life boost hemp gummy supplement, life boost gummies, life boost gummies advanced formula hemp 9000mg, 30 gummies per bottle for 90 days",
+  "brand": "livorka",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 20,
+      "lookup_result": {
+        "ingredient": "Hemp",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The word 'hemp' appears in the title. First occurrence starts at character index 20 (0-indexed). Lookup indicates Hemp \u2192 FATTY ACIDS / HEMP/CBD."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9249,
+      "completion": 5306,
+      "total": 14555
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 82.195191
+}

@@ -1,0 +1,119 @@
+{
+  "product_id": 1369,
+  "asin": "B00LQ26XA2",
+  "title": "douglaslaboratories-hesperidinmethylchalcone-60caps(ffp)",
+  "brand": "douglas labs",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "hesperidin methyl chalcone",
+      "position": 20,
+      "reasoning": "The title contains the functional ingredient string 'hesperidinmethylchalcone' (parsed as 'hesperidin methyl chalcone'). Its first character 'h' appears at index 20 in the provided title.",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "DMG",
+            "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+            "nw_subcategory": "NON-SPECIFIC",
+            "keyword": "dimethylglycine",
+            "match_type": "fuzzy",
+            "score": 58.53658536585367,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Trimethylglycine",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "keyword": "tmg",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Trimethylglycine",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "keyword": "tmg (trimethylglycine)",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          }
+        ],
+        "reason": "Lookup returned no definitive match for 'hesperidin methyl chalcone' (found=false) and provided low-confidence fuzzy candidates. Category/subcategory not determined."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9234,
+      "completion": 3656,
+      "total": 12890
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hesperidin methyl chalcone"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "DMG",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "dimethylglycine",
+              "match_type": "fuzzy",
+              "score": 58.53658536585367,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trimethylglycine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "tmg",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trimethylglycine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "tmg (trimethylglycine)",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 58.463381
+}

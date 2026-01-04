@@ -1,0 +1,121 @@
+{
+  "product_id": 3081,
+  "asin": "B07CYLWYMB",
+  "title": "pure product australia acetyl l-carnitine alcar hcl powder premium quality 0.44lbs",
+  "brand": "pure product australia",
+  "source_subcategory": "carnitine amino acids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 7.04,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "acetyl l-carnitine",
+        "position": 23,
+        "lookup_result": {
+          "ingredient": "Acetyl L Carnitine",
+          "found": true,
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS"
+        },
+        "reasoning": "Exact match for 'acetyl l-carnitine' found starting at character index 23. lookup_ingredient returned a normalized match with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS'."
+      },
+      {
+        "name": "alcar",
+        "position": 42,
+        "lookup_result": {
+          "ingredient": "UNKNOWN / abbreviation",
+          "found": false,
+          "note": "lookup_ingredient returned no exact match for 'alcar' and suggested ambiguous candidates. 'ALCAR' is a common abbreviation/synonym for 'acetyl l-carnitine'."
+        },
+        "assigned_category": {
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS"
+        },
+        "reasoning": "The token 'alcar' appears at position 42 and is a common abbreviation for acetyl-L-carnitine (the same functional ingredient already present). The lookup tool did not return an exact match for 'alcar' (found=false), so by domain knowledge 'alcar' is mapped to 'acetyl l-carnitine' and assigned the same category/subcategory as the exact lookup result."
+      }
+    ],
+    "reasoning": "Extracted functional ingredient tokens explicitly present in the title. 'acetyl l-carnitine' is the full ingredient name (exact lookup match). 'alcar' is the abbreviation that appears separately; mapped to the same ingredient by domain knowledge after the lookup returned no exact match."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9335,
+      "completion": 5753,
+      "total": 15088
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "acetyl l-carnitine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acetyl L Carnitine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "acetyl l-carnitine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "alcar"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Alpha Lipoic Acid",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "ala",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Acai",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "acai",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gooseberry",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "amla",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 65.696172
+}

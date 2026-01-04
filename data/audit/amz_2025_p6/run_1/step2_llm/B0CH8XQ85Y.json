@@ -1,0 +1,203 @@
+{
+  "product_id": 9477,
+  "asin": "B0CH8XQ85Y",
+  "title": "purec60oliveoil c60 organic hemp seed oil capsules pills 100ml / 3.4 fl oz - 99.99% carbon 60 solvent free 80mg - food grade - carbon 60 hemp seed oil - from the leading global producer",
+  "brand": "purec60oliveoil.com",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "ml",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "c60",
+      "position": 4,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "reasoning": "lookup_ingredient returned no direct match for 'c60' and flagged multiple low-confidence candidates. No clear Nature's Way category/subcategory was returned."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title contains 'c60' (starts at index 4 inside 'purec60oliveoil'). The lookup call returned found=false and ambiguous candidates, so category/subcategory cannot be determined from the tool."
+    },
+    {
+      "name": "olive oil",
+      "position": 7,
+      "lookup_result": {
+        "ingredient": "Olive Leaf",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true,
+        "reasoning": "lookup_ingredient returned 'Olive Leaf' (mapped to FATTY ACIDS / HEMP/CBD)."
+      },
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title's initial concatenated token 'purec60oliveoil' is interpreted as 'pure c60 olive oil' \u2192 'olive oil' detected starting at index 7. The lookup returned 'Olive Leaf' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD' (returned by the lookup tool)."
+    },
+    {
+      "name": "hemp seed oil",
+      "position": 28,
+      "lookup_result": {
+        "ingredient": "Hemp",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true,
+        "reasoning": "lookup_ingredient matched 'hemp seed oil' to 'Hemp' with category FATTY ACIDS and subcategory HEMP/CBD."
+      },
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'hemp seed oil' appears starting at index 28 ('hemp seed oil capsules ...'). The lookup returned Hemp \u2192 FATTY ACIDS / HEMP/CBD."
+    },
+    {
+      "name": "carbon 60",
+      "position": 84,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "reasoning": "lookup_ingredient returned no direct match for 'carbon 60' and flagged multiple low-confidence candidates. No clear Nature's Way category/subcategory was returned."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title explicitly contains the text 'carbon 60' (starts at index 84 and again later). The lookup call did not produce a clear category/subcategory, so these are marked UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9752,
+      "completion": 9076,
+      "total": 18828
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "c60"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin Cnot Ester",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "c",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Co Q10",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "coq10",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Co Q10",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "co enzyme q10",
+              "match_type": "fuzzy",
+              "score": 44.44444444444444,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "carbon 60"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Carob",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "carob",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Carnosine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "carnosine & metabolites",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Co Q10",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "co enzyme q10",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp seed oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "olive oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Olive Leaf",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "olive leaf",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 201.921302
+}

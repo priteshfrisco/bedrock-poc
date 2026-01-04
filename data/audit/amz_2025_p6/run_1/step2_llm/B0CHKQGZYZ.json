@@ -1,0 +1,62 @@
+{
+  "product_id": 9524,
+  "asin": "B0CHKQGZYZ",
+  "title": "(3 pack) blue vibe hemp gummies - blue vibe gummies, bluevibe gummies maximum strength blue vibe hemp gummies bluevibe advanced formula gummy ss code great taste gummies 1500mg 2023 (180 gummies)",
+  "brand": "healthly",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": {
+    "list": [
+      {
+        "name": "hemp",
+        "position": 19,
+        "normalized_name": "Hemp",
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD",
+        "found": true
+      }
+    ],
+    "reasoning": "The only functional ingredient word present is 'hemp', first occurring at character index 19. lookup_ingredient('hemp') returned normalized name 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. Other words (e.g., 'blue vibe', 'bluevibe') are brand/product names, not ingredients."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9087,
+      "completion": 4066,
+      "total": 13153
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 78.406756
+}

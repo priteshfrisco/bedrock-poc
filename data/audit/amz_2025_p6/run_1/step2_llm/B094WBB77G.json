@@ -1,0 +1,89 @@
+{
+  "product_id": 5539,
+  "asin": "B094WBB77G",
+  "title": "humann superbeets heart & mind bundle, heart chews and memory + focus chews",
+  "brand": "humann",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFT CHEW",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "superbeets",
+      "position": 7,
+      "lookup_result": {
+        "found": false,
+        "ingredient_normalized": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "tool_reasoning": "lookup_ingredient returned found=false with low-confidence fuzzy candidates (e.g., 'Whole Food Concentrate' under HERBAL REMEDIES / FOOD SUPPLEMENTS) but no definitive match for the term 'superbeets'."
+      },
+      "reasoning": "'superbeets' appears in the title and is the only clear product/ingredient term. It starts at character index 7. It may be a brand/product name (humann SuperBeets) or a beet-derived ingredient; the ingredient lookup did not return a confident match."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9210,
+      "completion": 3879,
+      "total": 13089
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "superbeets"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "superfoods",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Zma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "zma supplements",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "elderberries",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 49.328046
+}

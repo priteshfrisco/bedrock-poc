@@ -1,0 +1,133 @@
+{
+  "product_id": 4982,
+  "asin": "B08MC9RMLK",
+  "title": "neuro, mints energy focus mint single, 12 count",
+  "brand": "neuro",
+  "source_subcategory": "energy shots",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 12,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "mints",
+      "position": 7,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Found the token 'mints' starting at character index 7. This likely indicates the mint-flavored product item rather than a distinct botanical/standard supplement ingredient. lookup_ingredient returned no exact match (found=false) and only low-confidence fuzzy candidates (e.g., spearmint/peppermint-like matches). Because there was no clear normalized match from the ingredient lookup, category/subcategory set to UNKNOWN. Tool candidates (low confidence) included 'Pepper Spear Mint' and 'Peppermint' suggestions."
+    },
+    {
+      "name": "mint",
+      "position": 26,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Found the token 'mint' starting at character index 26. This is a flavor/botanical term but the lookup returned no exact normalized ingredient (found=false) and only low-confidence fuzzy candidates (similar to 'spearmint'/'peppermint'). Because there's no definitive match from the lookup tool, category/subcategory set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9467,
+      "completion": 4522,
+      "total": 13989
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mints"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Pepper Spear Mint",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "spearmint",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pepper Spear Mint",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "peppermint",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Damiana",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "damiana",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mint"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Pepper Spear Mint",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "spearmint",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "MCT",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "MCT",
+              "keyword": "m.c.t.",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "MCT",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "MCT",
+              "keyword": "mct",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 61.525338
+}

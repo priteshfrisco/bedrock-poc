@@ -1,0 +1,58 @@
+{
+  "product_id": 9841,
+  "asin": "B0CKS4JJBG",
+  "title": "(3 pack) wellness peak gummies, wellness peak maximum strength supplement, wellness peak pemium blend hemp gummies, wellness peak advanced formula gummy, wellnesspeak gomitas (180 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 102,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The term 'hemp' appears in the title as part of 'pemium blend hemp gummies'. Location computed from the provided title (starts at character index 102). lookup_ingredient returned Hemp \u2192 FATTY ACIDS / HEMP/CBD."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9069,
+      "completion": 3797,
+      "total": 12866
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 58.353723
+}

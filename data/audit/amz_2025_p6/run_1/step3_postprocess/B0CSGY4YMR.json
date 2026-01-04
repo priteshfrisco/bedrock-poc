@@ -1,0 +1,92 @@
+{
+  "product_id": 10433,
+  "asin": "B0CSGY4YMR",
+  "title": "itl health pure magnesium bisglycinate vit k2 d3, 120 ct",
+  "brand": "mag365",
+  "source_subcategory": "magnesium supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "magnesium bisglycinate",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "magnesium bisglycinate",
+    "vit k2",
+    "vit d3"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "MINERALS",
+  "health_focus": "DIGESTIVE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9250,
+      "completion": 4411,
+      "total": 13661
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium bisglycinate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vit k2"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin K",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "k2",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vit d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.268743
+}

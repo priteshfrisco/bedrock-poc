@@ -1,0 +1,264 @@
+{
+  "product_id": 7219,
+  "asin": "B0B8ZG5Y7M",
+  "title": "vegatot 11 in 1 muscle builder 9100mg nitric oxide booster with l-arginine l-citrulline beet root ashwagandha tongkat ali strawberry- increase stamina strength (90 count (pack of 2))",
+  "brand": "vegatot",
+  "source_subcategory": "beet root supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "nitric oxide",
+  "num_ingredients": 7,
+  "all_ingredients": [
+    "nitric oxide",
+    "l-arginine",
+    "l-citrulline",
+    "beet root",
+    "ashwagandha",
+    "tongkat ali",
+    "strawberry"
+  ],
+  "category": "UNKNOWN",
+  "subcategory": "UNKNOWN",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10356,
+      "completion": 6430,
+      "total": 16786
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric oxide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B6",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "pyridoxine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-arginine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Arginine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "arginine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-citrulline"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Acetyl L Carnitine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "l-carnitine",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cysteine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "l-cysteine",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Tyrosine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "l-tyrosine",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ashwagandha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "tongkat ali"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Dong Quai",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "dong quai",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Oat Bran",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "oat bran",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bone Meal",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "bone meal",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "strawberry"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "actifruitcranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cran berry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 74.806385
+}

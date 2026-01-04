@@ -1,0 +1,135 @@
+{
+  "product_id": 86,
+  "asin": "B088FFV6YV",
+  "title": "healthyhey organic spirulina powder micro superfood, rich in protein, vitamins & minerals 100 g (pack of 1)",
+  "brand": "healthyhey organic",
+  "source_subcategory": "superfoods",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 3.5274,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "spirulina",
+  "num_ingredients": 4,
+  "all_ingredients": [
+    "spirulina",
+    "protein",
+    "vitamins",
+    "minerals"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "SINGLES",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9513,
+      "completion": 5149,
+      "total": 14662
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "spirulina"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Spirulina",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "spirulina",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "minerals"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "minerals and trace",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace mineral",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace minerals",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.781246
+}

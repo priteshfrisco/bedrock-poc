@@ -1,0 +1,126 @@
+{
+  "product_id": 5921,
+  "asin": "B09FQ9KLCM",
+  "title": "total nutra liquid biotin & collagen - healthy hair, glowing skin & strong nails - extra strength 5 in 1 formula - vitamin e, vitamin c and msm - high absorption liquid drops - coconut lime flavor 2oz",
+  "brand": "total nutra",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "oz",
+  "size": 1,
+  "primary_ingredient": "biotin",
+  "num_ingredients": 5,
+  "all_ingredients": [
+    "biotin",
+    "collagen",
+    "vitamin e",
+    "vitamin c",
+    "msm"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "LETTER VITAMINS",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9443,
+      "completion": 5896,
+      "total": 15339
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin e"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "msm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MSM",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "msm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 97.80197
+}

@@ -1,0 +1,152 @@
+{
+  "product_id": 8530,
+  "asin": "B0C5XFQ5BG",
+  "title": "nad+ boosting supplement 14,300 mg nr with resveratrol quercetin milk thistle - support cellular energy, healthy aging *usa made & tested* (90 count (pack of 1))",
+  "brand": "ultra herbs",
+  "source_subcategory": "flavonoid supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "90",
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "nad+",
+  "num_ingredients": 5,
+  "all_ingredients": [
+    "nad+",
+    "nicotinamide riboside (nr)",
+    "resveratrol",
+    "quercetin",
+    "milk thistle"
+  ],
+  "category": "MISCELLANEOUS SUPPLEMENTS",
+  "subcategory": "NON-SPECIFIC",
+  "health_focus": "BRAIN HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9627,
+      "completion": 5406,
+      "total": 15033
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nad+"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nicotinamide riboside (nr)"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Shark Cartilage",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "cartilago de tiburon",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin Cnot Ester",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "c",
+              "match_type": "fuzzy",
+              "score": 47.61904761904761,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "resveratrol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Resveratrol",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "resveratrol",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.553756
+}

@@ -1,0 +1,137 @@
+{
+  "product_id": 63,
+  "asin": "B0D73JWQSJ",
+  "title": "(2 pack) new vida keto gummies, newvida keto acv gummies, new vita acv keto support supplement, all natural apple cider vinegar 1000mg, new keto vitamins, official new vida reviews (120 gummies)",
+  "brand": "nutrarize",
+  "source_subcategory": "weight loss supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "acv",
+      "position": 45,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The abbreviation 'acv' appears starting at character index 45 ('newvida keto acv gummies'). A lookup for 'acv' returned no definitive match (ambiguous). Likely stands for 'apple cider vinegar' (which is explicitly present later), but the literal token 'acv' could not be unambiguously mapped by the lookup tool."
+    },
+    {
+      "name": "acv",
+      "position": 67,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "A second occurrence of the abbreviation 'acv' appears starting at character index 67 ('new vita acv keto support...'). Same mapping ambiguity as the earlier 'acv' occurrence."
+    },
+    {
+      "name": "apple cider vinegar",
+      "position": 108,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The phrase 'apple cider vinegar' appears starting at character index 108 ('all natural apple cider vinegar 1000mg'). lookup_ingredient('apple cider vinegar') returned ingredient: 'Cider Vinegar' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'. This is an explicit functional ingredient and maps cleanly."
+    },
+    {
+      "name": "vitamins",
+      "position": 145,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The token 'vitamins' appears starting at character index 145 ('new keto vitamins'). lookup_ingredient('vitamins') returned 'Multivitamin' with category/subcategory 'COMBINED MULTIVITAMINS'. Note: the title does not literally say 'multivitamin', only 'vitamins'; the lookup mapped this to a multivitamin classification."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9481,
+      "completion": 7320,
+      "total": 16801
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "acv"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n a c",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n acetyl cysteine",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n acetyl l cysteine",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 97.177406
+}

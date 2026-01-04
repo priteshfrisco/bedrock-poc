@@ -1,0 +1,267 @@
+{
+  "product_id": 3328,
+  "asin": "B07H98J6Z1",
+  "title": "2-month multimineral supplement (all-in-1) multiminerals  iron free formula  high-potency multi mineral supplements (mineral complex & trace minerals pills) bulk savings 60-day supply  120 tablets",
+  "brand": "elevate recovery supplements",
+  "source_subcategory": "multimineral supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "multimineral",
+      "position": 8,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "notes": "lookup_ingredient returned no exact match; candidate suggestions (low confidence) pointed toward 'Multivitamin' in COMBINED MULTIVITAMINS, but match was low-confidence. Title term 'multimineral' is a functional ingredient phrase but did not map cleanly in lookup."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The word 'multimineral' appears starting at character 8. The lookup tool did not return a direct match (low-confidence candidates)."
+    },
+    {
+      "name": "multiminerals",
+      "position": 41,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "notes": "lookup_ingredient returned no exact match; low-confidence candidates suggested 'Multivitamin' mappings. Treated as a multimineral mention in the title."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The plural form 'multiminerals' appears at character 41. Lookup did not provide an exact category/subcategory match."
+    },
+    {
+      "name": "iron",
+      "position": 56,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Iron",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "Exact match from lookup_ingredient."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'iron' appears starting at character 56 in the phrase 'iron free formula'. Lookup returned Iron \u2192 BASIC VITAMINS & MINERALS / MINERALS. Note: title indicates 'iron free', so iron is mentioned as absent, but it is still a referenced functional mineral in the title."
+    },
+    {
+      "name": "multi mineral",
+      "position": 88,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Trace Minerals",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "lookup_ingredient mapped this phrase to Trace Minerals (tool returned a Trace Minerals mapping for this variant)."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The phrase 'multi mineral' appears starting at character 88 within 'high-potency multi mineral supplements'. The lookup mapped this to Trace Minerals / MINERALS."
+    },
+    {
+      "name": "mineral complex",
+      "position": 115,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Trace Minerals",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "lookup_ingredient returned Trace Minerals mapping for this phrase."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The phrase 'mineral complex' begins at character 115 inside the parentheses '(mineral complex & trace minerals pills)'. Lookup mapped it to Trace Minerals."
+    },
+    {
+      "name": "trace minerals",
+      "position": 133,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Trace Minerals",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "Exact/strong mapping returned by lookup_ingredient (Trace Minerals)."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The phrase 'trace minerals' starts at character 133. Lookup returned Trace Minerals \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9914,
+      "completion": 8817,
+      "total": 18731
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multimineral"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "alive once daily",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "alive!",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "complete multi",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multiminerals"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "multigummies",
+              "match_type": "fuzzy",
+              "score": 72.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "multi gummies",
+              "match_type": "fuzzy",
+              "score": 69.23076923076923,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "multivitamins",
+              "match_type": "fuzzy",
+              "score": 69.23076923076923,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "iron"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Iron",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "iron",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multi mineral"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mineral complex"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "trace minerals"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "minerals and trace",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 114.017557
+}

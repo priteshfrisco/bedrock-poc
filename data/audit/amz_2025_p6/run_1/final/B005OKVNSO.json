@@ -1,0 +1,14 @@
+{
+  "product_id": 724,
+  "asin": "B005OKVNSO",
+  "title": "lactaid  low fat cottage cheese, plain, 16 oz",
+  "brand": "lactaid",
+  "source_subcategory": "cottage cheese",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.003769,
+  "lookup_action": "REMOVE"
+}

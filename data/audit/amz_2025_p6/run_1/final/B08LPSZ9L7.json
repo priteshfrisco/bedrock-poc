@@ -1,0 +1,126 @@
+{
+  "product_id": 4942,
+  "asin": "B08LPSZ9L7",
+  "title": "suja organic vitamin d shot with zinc (60 pack) ginger and turmeric | immunity boost & support | functional shots | cold-pressed juice with live probiotics | plant-based & gluten-free",
+  "brand": "suja",
+  "source_subcategory": "vitamin d supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 60,
+  "primary_ingredient": "vitamin d",
+  "num_ingredients": 5,
+  "all_ingredients": [
+    "vitamin d",
+    "zinc",
+    "ginger",
+    "turmeric",
+    "probiotics"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "BONE HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9419,
+      "completion": 8382,
+      "total": 17801
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "probiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 110.531335
+}

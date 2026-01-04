@@ -1,0 +1,101 @@
+{
+  "product_id": 7446,
+  "asin": "B0BG3KRGHF",
+  "title": "amazing formulas vitamin d3 (cholecalciferol) supplement  1000 iu  480 softgels  non-gmo  gluten-free  made in usa",
+  "brand": "amazing nutrition",
+  "source_subcategory": "vitamin d supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 480,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "vitamin d3",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "vitamin d3",
+    "cholecalciferol"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "LETTER VITAMINS",
+  "health_focus": "BONE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9375,
+      "completion": 3699,
+      "total": 13074
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cholecalciferol"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Coral Calcium",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "coral calcium",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Choline",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "choline",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Coilloidal Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "coilloidal minerals",
+              "match_type": "fuzzy",
+              "score": 52.94117647058824,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 54.88799
+}

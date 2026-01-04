@@ -1,0 +1,14 @@
+{
+  "product_id": 3228,
+  "asin": "B07FZ9MS1X",
+  "title": "whole foods market, cookie molten chocolate walnut, 5 ounce",
+  "brand": "whole foods market",
+  "source_subcategory": "walnuts",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004026,
+  "lookup_action": "REMOVE"
+}

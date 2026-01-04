@@ -1,0 +1,120 @@
+{
+  "product_id": 5763,
+  "asin": "B09B5BQTN2",
+  "title": "dr. reckeweg germany homeopathic sepia (30 ch) (11 ml) by homeostore",
+  "brand": "dr. reckeweg",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 0.371954,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "sepia",
+      "position": 33,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Stevia",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "stevia",
+            "match_type": "fuzzy",
+            "score": 72.72727272727273,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Senna",
+            "nw_category": "PROBIOTICS+",
+            "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+            "keyword": "senna",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Senna",
+            "nw_category": "PROBIOTICS+",
+            "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+            "keyword": "senna-s",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no exact match; multiple low-confidence fuzzy candidates provided."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "'Sepia' is the functional ingredient named in the title (homeopathic Sepia). lookup_ingredient() did not return a definitive Nature's Way category/subcategory (found=false). Therefore category/subcategory are set to UNKNOWN and the raw lookup result (candidates, low confidence) is provided."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9216,
+      "completion": 4464,
+      "total": 13680
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sepia"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Stevia",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "stevia",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Senna",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "senna",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Senna",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "senna-s",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 6231.858323
+}

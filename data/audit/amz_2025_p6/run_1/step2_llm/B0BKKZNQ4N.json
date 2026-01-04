@@ -1,0 +1,179 @@
+{
+  "product_id": 7609,
+  "asin": "B0BKKZNQ4N",
+  "title": "halo iced caramel latte - energy drink powder - instant latte mix for hydration with electrolytes, caffeine, vitamins and minerals - 20 calories - keto, vegan and low calorie - 1 x 6 sticks",
+  "brand": "halo sport",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 6,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 85,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'electrolytes' appears in the title at character index 85 ('...hydration with electrolytes,...'). Lookup returned ambiguous/no exact match; electrolytes are best classified under minerals (BASIC VITAMINS & MINERALS / MINERALS)."
+    },
+    {
+      "name": "caffeine",
+      "position": 99,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "'caffeine' appears at index 99 ('..., caffeine, ...'). lookup_ingredient returned ingredient 'Caffeine' with category 'MISCELLANEOUS SUPPLEMENTS' and subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "vitamins",
+      "position": 109,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "'vitamins' appears at index 109 ('..., vitamins and minerals ...'). lookup_ingredient mapped 'vitamins' to 'Multivitamin' (COMBINED MULTIVITAMINS). Note: the title uses the plural 'vitamins' (not the exact token 'multivitamin'); we report the lookup mapping as returned by the tool."
+    },
+    {
+      "name": "minerals",
+      "position": 122,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "'minerals' appears at index 122 ('..., vitamins and minerals - ...'). lookup_ingredient returned ambiguous candidates but the correct classification is BASIC VITAMINS & MINERALS / MINERALS (e.g., trace minerals)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9714,
+      "completion": 5604,
+      "total": 15318
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "caffeine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Caffeine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "caffeinated",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "minerals"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "minerals and trace",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace mineral",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace minerals",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.300034
+}

@@ -1,0 +1,14 @@
+{
+  "product_id": 81,
+  "asin": "B0002APT4A",
+  "title": "lee's the ultimate super pump",
+  "brand": "lee's",
+  "source_subcategory": "balance trainers",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.006907,
+  "lookup_action": "REMOVE"
+}

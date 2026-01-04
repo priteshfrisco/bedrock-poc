@@ -1,0 +1,14 @@
+{
+  "product_id": 20,
+  "asin": "000000001461354072",
+  "title": "thoracic trauma and critical care",
+  "brand": "springer",
+  "source_subcategory": "skin care kits & sets",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004529,
+  "lookup_action": "REMOVE"
+}

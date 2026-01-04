@@ -1,0 +1,288 @@
+{
+  "product_id": 9686,
+  "asin": "B0CJGXRJ5H",
+  "title": "(120 capsules), quercetin 1,000mg, vitamin c 1,000mg, zinc 50mg, vitamin d3 5,000iu, selenium, copper, acerola, ginger, rutin, bitter orange, rose hips, echinacea, immune c plus, 12 in 1 immune c plus",
+  "brand": "kappa nutrition",
+  "source_subcategory": "flavonoid supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "quercetin",
+  "num_ingredients": 13,
+  "all_ingredients": [
+    "quercetin",
+    "vitamin c",
+    "zinc",
+    "vitamin d3",
+    "selenium",
+    "copper",
+    "acerola",
+    "ginger",
+    "rutin",
+    "bitter orange",
+    "rose hips",
+    "echinacea",
+    "immune c plus"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "FORMULAS",
+  "health_focus": "COUGH, COLD & FLU",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10324,
+      "completion": 8853,
+      "total": 19177
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "selenium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Selenium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "selenium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "copper"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Copper",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "copper",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "acerola"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "bacopa",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bacopa",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bitter Melon",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "karela",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Alpha Lipoic Acid",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "ala",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rutin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Rutin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "rutin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bitter orange"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bitter Melon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bitter melon",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rose hips"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Rose Hips",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "rose hip",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "echinacea"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Echinacea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "echinacea",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "immune c plus"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin Cnot Ester",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "c",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.081661410860199
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 147.038504
+}

@@ -1,0 +1,92 @@
+{
+  "product_id": 8538,
+  "asin": "B0C61SJ6H4",
+  "title": "ultra herbs supper nac (n-acetyl-l-cysteine) 20,900mg with quercetin, milk thistle - support liver & lung health *usa made & tested* (90 count (pack of 2))",
+  "brand": "ultra herbs",
+  "source_subcategory": "flavonoid supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "n-acetyl-l-cysteine",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "n-acetyl-l-cysteine",
+    "quercetin",
+    "milk thistle"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "AMINO ACIDS",
+  "health_focus": "CLEANSE & DETOX",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9300,
+      "completion": 5751,
+      "total": 15051
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "n-acetyl-l-cysteine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NAC",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "n acetyl l cysteine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.610194114411744
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 64.376053
+}

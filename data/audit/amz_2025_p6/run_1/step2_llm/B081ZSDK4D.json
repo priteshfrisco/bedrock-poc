@@ -1,0 +1,65 @@
+{
+  "product_id": 4122,
+  "asin": "B081ZSDK4D",
+  "title": "longrich nutri v rich green tea",
+  "brand": "longrich",
+  "source_subcategory": "green tea herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "POLYPHENOLS",
+  "remap_reason": "Maps to HERBAL REMEDIES / POLYPHENOLS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "green tea",
+      "position": 22,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "lookup": {
+        "ingredient": "Green Tea",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS",
+        "found": true,
+        "note": "Matched exact 'green tea' (case-insensitive) starting at character index 22."
+      },
+      "reasoning": "The title contains the phrase 'green tea' starting at character index 22. This is a functional ingredient; lookup_ingredient returned category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9018,
+      "completion": 2469,
+      "total": 11487
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green tea"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Green Tea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "green tea",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 29.983563
+}

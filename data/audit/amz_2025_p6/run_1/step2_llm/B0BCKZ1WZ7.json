@@ -1,0 +1,127 @@
+{
+  "product_id": 7323,
+  "asin": "B0BCKZ1WZ7",
+  "title": "doctors best glucosamine chondroitin msm with optimsm, non-gmo, vegan, 120 capsule (pack of 1)",
+  "brand": "doctor's best",
+  "source_subcategory": "chondroitin & glucosamine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+  "remap_reason": "Maps to GLUCOSAMINE & CHONDROITIN / GLUCOSAMINE & CHONDROITIN",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "glucosamine",
+      "position": 13,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "GLUCOSAMINE & CHONDROITIN",
+      "reasoning": "Found 'glucosamine' starting at character index 13 in the title. lookup_ingredient returned category/subcategory matching glucosamine & chondroitin."
+    },
+    {
+      "name": "chondroitin",
+      "position": 25,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "GLUCOSAMINE & CHONDROITIN",
+      "reasoning": "Found 'chondroitin' starting at character index 25 in the title. lookup_ingredient returned category/subcategory matching glucosamine & chondroitin."
+    },
+    {
+      "name": "msm",
+      "position": 37,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'msm' starting at character index 37 in the title. lookup_ingredient returned MSM in 'MISCELLANEOUS SUPPLEMENTS' with subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "optimsm",
+      "position": 46,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'optimsm' starting at character index 46 in the title. lookup_ingredient matched 'optimsm' to MSM (same category/subcategory as MSM)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9347,
+      "completion": 4205,
+      "total": 13552
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "glucosamine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glucosamine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+          "keyword": "glucosamine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chondroitin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chondroitin",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+          "keyword": "chondroitin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "msm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MSM",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "msm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "optimsm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MSM",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "optimsm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 51.337982
+}

@@ -1,0 +1,42 @@
+{
+  "product_id": 6018,
+  "asin": "B09JCG81K5",
+  "title": "reikiera blue dot stone thumb worry stone healing reiki balancing pocket palm stone natural relaxing crystal therapy, 1 piece",
+  "brand": "reikiera",
+  "source_subcategory": "other alternative medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4587,
+      "completion": 1048,
+      "total": 5635
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.511988
+}

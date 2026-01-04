@@ -1,0 +1,42 @@
+{
+  "product_id": 5580,
+  "asin": "B095R5R5MV",
+  "title": "damtuh korean corn flackes gastrodia elata tea, gastrodia elata tea with corn flackes, tianma powder, meal replacement, instant breakfast drinks, 20g x 50 sticks x 2 boxes",
+  "brand": "damtuh",
+  "source_subcategory": "protein powder blends",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4613,
+      "completion": 1392,
+      "total": 6005
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.667425
+}

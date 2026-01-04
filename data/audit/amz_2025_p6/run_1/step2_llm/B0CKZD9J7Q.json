@@ -1,0 +1,104 @@
+{
+  "product_id": 9875,
+  "asin": "B0CKZD9J7Q",
+  "title": "liposomal vitamin c 1000mg capsules - premium absorption vitamin c capsules for immune health & antioxidant support. high potency dose of liposomal vit c yet gentle on your tummy. fast uptake. 40 caps",
+  "brand": "vimerson health",
+  "source_subcategory": "vitamin c-complex",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 40,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "liposomal vitamin c",
+      "position": 0,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Detected at the start of the title ('liposomal vitamin c ...'). lookup_ingredient returned normalized ingredient 'Vitamin Cnot Ester' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'."
+    },
+    {
+      "name": "vitamin c",
+      "position": 57,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Detected at 'premium absorption vitamin c capsules ...' (position 57). lookup_ingredient returned a match (tool output shows category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS')."
+    },
+    {
+      "name": "liposomal vit c",
+      "position": 138,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Detected at 'dose of liposomal vit c yet gentle ...' (position 138). lookup_ingredient returned normalized ingredient 'Vitamin Cnot Ester' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9296,
+      "completion": 5486,
+      "total": 14782
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "liposomal vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin Cnot Ester",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "c",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.081661410860199
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "liposomal vit c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin Cnot Ester",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "c",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.081661410860199
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 74.606618
+}

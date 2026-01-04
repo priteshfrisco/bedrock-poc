@@ -1,0 +1,15 @@
+{
+  "product_id": 7882,
+  "asin": "B0BS5LX1BD",
+  "title": "bluebonnet nutrition super quercetin vegetable capsules, vitamin c formula, best for seasonal & immune support, non gmo, gluten free, soy free, milk free, kosher, 30 vegetable capsules (pack of 2)",
+  "brand": "bluebonnet",
+  "source_subcategory": "flavonoid supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "error": "Extra data: line 3239 column 1 (char 18130)",
+  "processing_time_sec": 3571.197873
+}

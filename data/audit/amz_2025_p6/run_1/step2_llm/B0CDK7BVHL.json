@@ -1,0 +1,58 @@
+{
+  "product_id": 9096,
+  "asin": "B0CDK7BVHL",
+  "title": "mylyfe gummies - mylyfe hemp gummies with all natural hemp mylife maximum strength support advanced formula pill shark energy tank extra strength my lyfe gomitas life (60 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 24,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The word 'hemp' appears in the title starting at character index 24 ('mylyfe hemp ...'). lookup_ingredient('hemp') returned normalized name 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9073,
+      "completion": 4339,
+      "total": 13412
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 105.925357
+}

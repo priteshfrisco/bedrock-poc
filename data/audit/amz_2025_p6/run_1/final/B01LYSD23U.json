@@ -1,0 +1,58 @@
+{
+  "product_id": 2177,
+  "asin": "B01LYSD23U",
+  "title": "21st century, cranberry extract, standardized, 200 veggie caps - pack of 2",
+  "brand": "21st century",
+  "source_subcategory": "cranberry herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to HERBAL REMEDIES / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 200,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "cranberry extract",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "cranberry extract"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "BEAUTY",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9050,
+      "completion": 3400,
+      "total": 12450
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cranberry extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cranberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "actifruitcranberry",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.613956342756415
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 55.941925
+}

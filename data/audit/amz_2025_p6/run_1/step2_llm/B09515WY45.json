@@ -1,0 +1,33 @@
+{
+  "product_id": 5549,
+  "asin": "B09515WY45",
+  "title": "r v essential bakuchi oil  psoralea corylifolia  for skin  for nails  for hair health  for hair growth  for face  for body  100% pure natural  cold pressed  300ml  10oz",
+  "brand": "r v essential",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4614,
+      "completion": 911,
+      "total": 5525
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.9611
+}

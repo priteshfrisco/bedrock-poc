@@ -1,0 +1,15 @@
+{
+  "product_id": 5974,
+  "asin": "B09H3F21MM",
+  "title": "hydromate electrolyte powder packets drink mix hydration accelerator rapid hydrate powder low sugar single serving stick rehydrate fast hangover party recovery and vitamin c peach tea 16 sticks",
+  "brand": "natureworks",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 83)",
+  "processing_time_sec": 37.084695
+}

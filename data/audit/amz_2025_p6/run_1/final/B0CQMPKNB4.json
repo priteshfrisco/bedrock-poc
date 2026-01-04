@@ -1,0 +1,221 @@
+{
+  "product_id": 10278,
+  "asin": "B0CQMPKNB4",
+  "title": "black magic multi-source protein - pre workout and post workout - 2lb - 23g protein - whey, egg albumin enzymes, micellar casein & mcts (birthday cake)",
+  "brand": "black magic",
+  "source_subcategory": "whey protein",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 32.0,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "multi-source protein",
+  "num_ingredients": 6,
+  "all_ingredients": [
+    "multi-source protein",
+    "whey",
+    "egg albumin",
+    "enzymes",
+    "micellar casein",
+    "mcts"
+  ],
+  "category": "SPORTS NUTRITION",
+  "subcategory": "PROTEIN",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10087,
+      "completion": 7819,
+      "total": 17906
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multi-source protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cherry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cherry extract",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dehydroepiandrosterone",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dhea",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "egg albumin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Glutamine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "glutamine",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Glucosamine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+              "keyword": "glucosamine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pepper Spear Mint",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "spearmint",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "enzymes"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Proteolytic",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "proteolytic enzymes",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "micellar casein"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Celadrin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "celadrin",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n acetyl l cysteine",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "nacetyllcysteine",
+              "match_type": "fuzzy",
+              "score": 58.06451612903225,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mcts"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MCT",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "MCT",
+          "keyword": "m.c.t.",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 102.482111
+}

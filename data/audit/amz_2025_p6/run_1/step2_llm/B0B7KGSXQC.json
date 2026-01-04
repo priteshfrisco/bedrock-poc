@@ -1,0 +1,58 @@
+{
+  "product_id": 7144,
+  "asin": "B0B7KGSXQC",
+  "title": "bio absorb l-glutamine powder, corn-free, non-gmo, 100-day supply, vegan l glutamine for gut health & post workout (500 g)",
+  "brand": "bio absorb nutraceuticals",
+  "source_subcategory": "l-glutamine amino acids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 17.637,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "l-glutamine",
+      "position": 11,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Detected 'l-glutamine' starting at character index 11. lookup_ingredient(ingredient_name=\"l-glutamine\") returned normalized ingredient 'Glutamine' with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9083,
+      "completion": 4054,
+      "total": 13137
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-glutamine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glutamine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "glutamine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 60.669955
+}

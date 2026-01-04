@@ -1,0 +1,75 @@
+{
+  "product_id": 2270,
+  "asin": "B01MXLC4MO",
+  "title": "americamedic&sciencepenamaxmen\u00e2swellnesssupplement\u00e2helpsmaintainenergylevels\u00e2withacetyl-l-carnitine&propionyl-l-carnitine\u00e260capsules\u00e2gluten-free&non-gmo",
+  "brand": "america medic & science",
+  "source_subcategory": "testosterone boosters",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - MALE",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "acetyl-l-carnitine",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "acetyl-l-carnitine",
+    "propionyl-l-carnitine"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "AMINO ACIDS",
+  "health_focus": "BRAIN HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9247,
+      "completion": 5144,
+      "total": 14391
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "acetyl-l-carnitine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acetyl L Carnitine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "acetyl-l-carnitine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "propionyl-l-carnitine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acetyl L Carnitine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "l carnitine",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.497131915557613
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 79.274111
+}

@@ -1,0 +1,101 @@
+{
+  "product_id": 561,
+  "asin": "B0040HNPJW",
+  "title": "ban zhi lian - barbed skullcap, 100 grams",
+  "brand": "e-fong",
+  "source_subcategory": "testosterone boosters",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 3.5274,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "ban zhi lian",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "ban zhi lian",
+    "barbed skullcap"
+  ],
+  "category": "UNKNOWN",
+  "subcategory": "UNKNOWN",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9337,
+      "completion": 4398,
+      "total": 13735
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ban zhi lian"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hci",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hcl",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hydrochloride",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "barbed skullcap"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Skullcap",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "chinese skullcap",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.8589609881658165
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 94.047903
+}

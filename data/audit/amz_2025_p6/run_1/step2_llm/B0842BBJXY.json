@@ -1,0 +1,120 @@
+{
+  "product_id": 4231,
+  "asin": "B0842BBJXY",
+  "title": "sphingolin 240 capsules - 2 pack - ecological formulas/cardiovascular research",
+  "brand": "ecological formulas",
+  "source_subcategory": "blended supplements & vitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 240,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "sphingolin",
+      "position": 0,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Spirulina",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "spirulina",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Spirulina",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "spirulina blue green algae",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Phenol",
+            "nw_category": "OTC",
+            "nw_subcategory": "OTC - NON-SPECIFIC",
+            "keyword": "phenol",
+            "match_type": "fuzzy",
+            "score": 62.5,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup tool returned no exact match for 'sphingolin' and provided low-confidence fuzzy candidates. No definitive category/subcategory available."
+      },
+      "reasoning": "The token 'sphingolin' appears at the start of the title (index 0) and is the only apparent functional ingredient in the title. lookup_ingredient returned no exact match (found: false) and suggested low-confidence fuzzy candidates; therefore category/subcategory are set to UNKNOWN rather than forcing an incorrect mapping."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9212,
+      "completion": 2405,
+      "total": 11617
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sphingolin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina blue green algae",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Phenol",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "phenol",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 27.929822
+}

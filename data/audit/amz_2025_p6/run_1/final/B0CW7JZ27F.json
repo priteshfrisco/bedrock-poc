@@ -1,0 +1,58 @@
+{
+  "product_id": 10623,
+  "asin": "B0CW7JZ27F",
+  "title": "true nutrition egg white protein powder - low carb, paleo, keto, carnivore, lactose-free, gluten-free - french vanilla - 2lb",
+  "brand": "true nutrition",
+  "source_subcategory": "protein powder blends",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 32.0,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "egg white protein",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "egg white protein"
+  ],
+  "category": "SPORTS NUTRITION",
+  "subcategory": "PROTEIN",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9072,
+      "completion": 3414,
+      "total": 12486
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "egg white protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 50.515128
+}

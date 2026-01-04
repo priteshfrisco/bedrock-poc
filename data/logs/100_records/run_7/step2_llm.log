@@ -1,0 +1,123 @@
+[2026-01-02T17:42:15.854544] ============================================================
+[2026-01-02T17:42:15.854600] STEP 2: LLM EXTRACTION
+[2026-01-02T17:42:15.854623] ============================================================
+[2026-01-02T17:42:15.877638] [B0DT98X7C5] Starting LLM extraction: gpgpgreenpeoplemelatonin5mgextrastrengthadultextrastrengthsu...
+[2026-01-02T17:42:15.876664] [B0DWH2V3X5] Starting LLM extraction: bronson elderberry extra strength, supports healthy immune s...
+[2026-01-02T17:42:15.875301] [B0CRSR8NZ4] Starting LLM extraction: liquidhealth ultimate bariatric liquid vitamin supplement bu...
+[2026-01-02T17:42:15.880029] [B0F94G1PLD] Starting LLM extraction: (2 pack) presgera capsules - presgera supplements pills adva...
+[2026-01-02T17:42:15.879210] [B07661Z3YX] Starting LLM extraction: doctor's best high absorption coq10 with bioperine, gluten f...
+[2026-01-02T17:42:15.886618] [B077XK525F] Starting LLM extraction: abrotanum 6c homeopathic remedy, urenus...
+[2026-01-02T17:42:15.886668] [B0FD1WF2HJ] Starting LLM extraction: nutricost red clover blossoms supplement (5000 mg equivalent...
+[2026-01-02T17:42:15.888819] [B00ORTRKRG] Starting LLM extraction: 1/2 oz ball style lead drop shot weights hand poured (100 pe...
+[2026-01-02T17:42:15.891562] [B0785GPGXM] Starting LLM extraction: spigelia 200c homeopathic remedy, urenus...
+[2026-01-02T17:42:15.891628] [B0F3QJ841K] Starting LLM extraction: force factor ultimate magnesium supplement, 330mg magnesium ...
+[2026-01-02T17:42:15.892205] [B083JP1G11] Starting LLM extraction: baccoff, premium flavored coffee pouches, no tobacco dip, no...
+[2026-01-02T17:42:15.895339] [B0DM63Y1QR] Starting LLM extraction: creatine monohydrate gummies 5000mg for men & women, chewabl...
+[2026-01-02T17:42:15.895372] [B0DQFBTG4K] Starting LLM extraction: protein powder, brownie batter flavor, 25 g whey protein per...
+[2026-01-02T17:42:15.893769] [B0FFHS6LJ7] Starting LLM extraction: nutricost nopal cactus (2000mg) 180 vegan capsules - prickly...
+[2026-01-02T17:42:15.896893] [B07BZT4NR7] Starting LLM extraction: earthborn elements diatomaceous earth (1 gallon), resealable...
+[2026-01-02T17:42:15.896536] [B0DSQMLMZ7] Starting LLM extraction: protein your whey (30 servings, chai flavored) - whey protei...
+[2026-01-02T17:42:15.896222] [B0D73JWQSJ] Starting LLM extraction: (2 pack) new vida keto gummies, newvida keto acv gummies, ne...
+[2026-01-02T17:42:15.897617] [B0FDH4WMJY] Starting LLM extraction: blood flow supplement capsules, official bloodflow advanced ...
+[2026-01-02T17:42:15.897647] [B0FBMFX7TK] Starting LLM extraction: theraflu severe congestion relief nasal mist, 0.34 fl oz...
+[2026-01-02T17:42:15.900286] [B0F69PMFS4] Starting LLM extraction: magna electrolyte powder drink mix, hydration, energy & focu...
+[2026-01-02T17:42:15.899618] [B0DN2YNDNP] Starting LLM extraction: lunakaiusamadesupermushroomgummiesforadultsã10-in-1adaptoge...
+[2026-01-02T17:42:15.898425] [B0BH6FHLHM] Starting LLM extraction: quality choice advanced probiotic - ultra potency - digestiv...
+[2026-01-02T17:42:15.903829] [B088FFV6YV] Starting LLM extraction: healthyhey organic spirulina powder micro superfood, rich in...
+[2026-01-02T17:42:15.903900] [B0D2M79C6Y] Starting LLM extraction: nutrarize (2 pack) pronerve6 neuropathy, pronerve 6 nerve su...
+[2026-01-02T17:42:15.904540] [B0F3VLXJ42] Starting LLM extraction: herbalife nutrition personalized protein powder, health supp...
+[2026-01-02T17:42:15.905246] [B0D93N7GZM] Starting LLM extraction: center-filled magnesium glycinate gummies 400mg - high absor...
+[2026-01-02T17:42:15.905487] [B0B4MBM3D6] Starting LLM extraction: secrets of the tribe tribal cough ease alcohol-free extract,...
+[2026-01-02T17:42:15.905602] [B0FC4GYHK5] Starting LLM extraction: vittaburnliquiddropsãnaturalenergy&wellnessbooster,premiumh...
+[2026-01-02T17:42:15.906009] [B09Z1F981N] Starting LLM extraction: mixhers herhydration  electrolytes powder packets 15 hydrati...
+[2026-01-02T17:42:15.906073] [B0D2L5D3QB] Starting LLM extraction: nano defense pro supplement, (official) nano defense pro adv...
+[2026-01-02T17:42:28.105494] [B0FBMFX7TK] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:28.106331] [B0FBMFX7TK] Extracted 0 ingredients
+[2026-01-02T17:42:28.107509] Saved: audit/100_records/run_7/step2_llm/B0FBMFX7TK.json
+[2026-01-02T17:42:32.353856] [B0785GPGXM] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:32.354504] [B0785GPGXM] Extracted 0 ingredients
+[2026-01-02T17:42:32.355403] Saved: audit/100_records/run_7/step2_llm/B0785GPGXM.json
+[2026-01-02T17:42:34.752491] [B00ORTRKRG] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:34.753145] [B00ORTRKRG] Extracted 2 ingredients
+[2026-01-02T17:42:34.754126] Saved: audit/100_records/run_7/step2_llm/B00ORTRKRG.json
+[2026-01-02T17:42:35.261183] [B083JP1G11] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:35.261959] [B083JP1G11] Extracted 2 ingredients
+[2026-01-02T17:42:35.262884] Saved: audit/100_records/run_7/step2_llm/B083JP1G11.json
+[2026-01-02T17:42:36.228677] [B0D2M79C6Y] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:36.229728] [B0D2M79C6Y] Extracted 0 ingredients
+[2026-01-02T17:42:36.230382] Saved: audit/100_records/run_7/step2_llm/B0D2M79C6Y.json
+[2026-01-02T17:42:43.356974] [B07BZT4NR7] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:43.358386] [B07BZT4NR7] Extracted 2 ingredients
+[2026-01-02T17:42:43.360104] Saved: audit/100_records/run_7/step2_llm/B07BZT4NR7.json
+[2026-01-02T17:42:47.943673] [B0DWH2V3X5] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:47.944465] [B0DWH2V3X5] Extracted 1 ingredients
+[2026-01-02T17:42:47.946047] Saved: audit/100_records/run_7/step2_llm/B0DWH2V3X5.json
+[2026-01-02T17:42:49.522002] [B0FC4GYHK5] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:49.522646] [B0FC4GYHK5] Extracted 0 ingredients
+[2026-01-02T17:42:49.523598] Saved: audit/100_records/run_7/step2_llm/B0FC4GYHK5.json
+[2026-01-02T17:42:58.712954] [B0FFHS6LJ7] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:42:58.714415] [B0FFHS6LJ7] Extracted 2 ingredients
+[2026-01-02T17:42:58.715673] Saved: audit/100_records/run_7/step2_llm/B0FFHS6LJ7.json
+[2026-01-02T17:43:01.490144] [B077XK525F] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:01.490696] [B077XK525F] Extracted 2 ingredients
+[2026-01-02T17:43:01.491723] Saved: audit/100_records/run_7/step2_llm/B077XK525F.json
+[2026-01-02T17:43:04.468169] [B0F3VLXJ42] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:04.468563] [B0F3VLXJ42] Extracted 1 ingredients
+[2026-01-02T17:43:04.470715] Saved: audit/100_records/run_7/step2_llm/B0F3VLXJ42.json
+[2026-01-02T17:43:06.037260] [B07661Z3YX] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:06.037737] [B07661Z3YX] Extracted 2 ingredients
+[2026-01-02T17:43:06.041040] Saved: audit/100_records/run_7/step2_llm/B07661Z3YX.json
+[2026-01-02T17:43:09.772797] [B0D2L5D3QB] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:09.773490] [B0D2L5D3QB] Extracted 1 ingredients
+[2026-01-02T17:43:09.774610] Saved: audit/100_records/run_7/step2_llm/B0D2L5D3QB.json
+[2026-01-02T17:43:12.535835] [B088FFV6YV] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:12.536583] [B088FFV6YV] Extracted 4 ingredients
+[2026-01-02T17:43:12.538223] Saved: audit/100_records/run_7/step2_llm/B088FFV6YV.json
+[2026-01-02T17:43:12.560529] [B0FDH4WMJY] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:12.561389] [B0FDH4WMJY] Extracted 1 ingredients
+[2026-01-02T17:43:12.562367] Saved: audit/100_records/run_7/step2_llm/B0FDH4WMJY.json
+[2026-01-02T17:43:14.687054] [B0FD1WF2HJ] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:14.687645] [B0FD1WF2HJ] Extracted 2 ingredients
+[2026-01-02T17:43:14.688856] Saved: audit/100_records/run_7/step2_llm/B0FD1WF2HJ.json
+[2026-01-02T17:43:16.902803] [B0BH6FHLHM] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:16.903469] [B0BH6FHLHM] Extracted 2 ingredients
+[2026-01-02T17:43:16.904438] Saved: audit/100_records/run_7/step2_llm/B0BH6FHLHM.json
+[2026-01-02T17:43:18.142955] [B0DSQMLMZ7] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:18.143619] [B0DSQMLMZ7] Extracted 3 ingredients
+[2026-01-02T17:43:18.144758] Saved: audit/100_records/run_7/step2_llm/B0DSQMLMZ7.json
+[2026-01-02T17:43:24.314187] [B0D93N7GZM] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:24.313484] [B0DQFBTG4K] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:24.314659] [B0D93N7GZM] Extracted 3 ingredients
+[2026-01-02T17:43:24.314786] [B0DQFBTG4K] Extracted 3 ingredients
+[2026-01-02T17:43:24.315990] Saved: audit/100_records/run_7/step2_llm/B0DQFBTG4K.json
+[2026-01-02T17:43:24.315948] Saved: audit/100_records/run_7/step2_llm/B0D93N7GZM.json
+[2026-01-02T17:43:27.282750] [B0DM63Y1QR] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:27.284245] [B0DM63Y1QR] Extracted 2 ingredients
+[2026-01-02T17:43:27.285519] Saved: audit/100_records/run_7/step2_llm/B0DM63Y1QR.json
+[2026-01-02T17:43:27.302670] [B09Z1F981N] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:27.303277] [B09Z1F981N] Extracted 3 ingredients
+[2026-01-02T17:43:27.304377] Saved: audit/100_records/run_7/step2_llm/B09Z1F981N.json
+[2026-01-02T17:43:27.624633] [B0F3QJ841K] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:27.625279] [B0F3QJ841K] Extracted 3 ingredients
+[2026-01-02T17:43:27.626707] Saved: audit/100_records/run_7/step2_llm/B0F3QJ841K.json
+[2026-01-02T17:43:30.752044] [B0F94G1PLD] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:30.752717] [B0F94G1PLD] Extracted 1 ingredients
+[2026-01-02T17:43:30.754055] Saved: audit/100_records/run_7/step2_llm/B0F94G1PLD.json
+[2026-01-02T17:43:34.865312] [B0DT98X7C5] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:34.866263] [B0DT98X7C5] Extracted 6 ingredients
+[2026-01-02T17:43:34.867768] Saved: audit/100_records/run_7/step2_llm/B0DT98X7C5.json
+[2026-01-02T17:43:36.434917] [B0CRSR8NZ4] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:36.435577] [B0CRSR8NZ4] Extracted 6 ingredients
+[2026-01-02T17:43:36.436841] Saved: audit/100_records/run_7/step2_llm/B0CRSR8NZ4.json
+[2026-01-02T17:43:38.848382] [B0DN2YNDNP] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:38.849119] [B0DN2YNDNP] Extracted 3 ingredients
+[2026-01-02T17:43:38.851113] Saved: audit/100_records/run_7/step2_llm/B0DN2YNDNP.json
+[2026-01-02T17:43:40.238604] [B0D73JWQSJ] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:40.239749] [B0D73JWQSJ] Extracted 2 ingredients
+[2026-01-02T17:43:40.241727] Saved: audit/100_records/run_7/step2_llm/B0D73JWQSJ.json
+[2026-01-02T17:43:42.511559] [B0B4MBM3D6] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:42.512200] [B0B4MBM3D6] Extracted 2 ingredients
+[2026-01-02T17:43:42.513409] Saved: audit/100_records/run_7/step2_llm/B0B4MBM3D6.json
+[2026-01-02T17:43:53.155125] [B0F69PMFS4] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-02T17:43:53.155671] [B0F69PMFS4] Extracted 9 ingredients
+[2026-01-02T17:43:53.157436] Saved: audit/100_records/run_7/step2_llm/B0F69PMFS4.json

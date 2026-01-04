@@ -1,0 +1,143 @@
+{
+  "product_id": 8336,
+  "asin": "B0C3D4V4Y8",
+  "title": "ved glucosamine chondroitin turmeric vitamin c  joint support supplement non-gmo, gluten free  120 capsules  60 days supply.",
+  "brand": "ved",
+  "source_subcategory": "chondroitin & glucosamine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+  "remap_reason": "Maps to GLUCOSAMINE & CHONDROITIN / GLUCOSAMINE & CHONDROITIN",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "glucosamine",
+      "position": 4,
+      "lookup_result": {
+        "ingredient": "Glucosamine",
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+        "found": true
+      },
+      "reasoning": "The word 'glucosamine' appears in the title starting at character index 4. lookup_ingredient called and returned the shown category/subcategory."
+    },
+    {
+      "name": "chondroitin",
+      "position": 16,
+      "lookup_result": {
+        "ingredient": "Chondroitin",
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+        "found": true
+      },
+      "reasoning": "The word 'chondroitin' appears in the title starting at character index 16. lookup_ingredient called and returned the shown category/subcategory."
+    },
+    {
+      "name": "turmeric",
+      "position": 28,
+      "lookup_result": {
+        "ingredient": "Turmeric",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The word 'turmeric' appears in the title starting at character index 28. lookup_ingredient called and returned the shown category/subcategory (as provided by the lookup tool)."
+    },
+    {
+      "name": "vitamin c",
+      "position": 37,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "The phrase 'vitamin c' appears in the title starting at character index 37. lookup_ingredient was called for 'vitamin c' and the lookup tool returned the shown result (note: the tool returned 'Vitamin D' entry for this lookup). Included the tool's returned category/subcategory as required."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9349,
+      "completion": 4167,
+      "total": 13516
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "glucosamine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glucosamine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+          "keyword": "glucosamine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chondroitin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chondroitin",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+          "keyword": "chondroitin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 47.558548
+}

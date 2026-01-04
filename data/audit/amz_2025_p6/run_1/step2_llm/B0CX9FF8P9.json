@@ -1,0 +1,130 @@
+{
+  "product_id": 10720,
+  "asin": "B0CX9FF8P9",
+  "title": "moofin daily prebiotic dietary fiber supplement, 0.2kg - support digestive health with inulin fiber, mixes easily, 114 servings, bundle with bonus silicone spatula, non-gmo, 2-pack",
+  "brand": "moofin",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 114,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "prebiotic",
+      "position": 13,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "reasoning": "The word 'prebiotic' appears starting at character index 13. lookup_ingredient returned a match with ingredient normalized as 'Probiotic', category 'PROBIOTICS+', subcategory 'PREBIOTICS AND PROBIOTICS'."
+    },
+    {
+      "name": "dietary fiber",
+      "position": 23,
+      "category": "PROBIOTICS+",
+      "subcategory": "FIBER PRODUCTS & LAXATIVES",
+      "reasoning": "The phrase 'dietary fiber' starts at character index 23. lookup_ingredient returned a match (normalized to 'Acacia Fiber' in the tool) with category 'PROBIOTICS+' and subcategory 'FIBER PRODUCTS & LAXATIVES'. The title explicitly contains the words 'dietary fiber'."
+    },
+    {
+      "name": "inulin",
+      "position": 87,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The word 'inulin' starts at character index 87 in the title ('...with inulin fiber...'). lookup_ingredient returned no confident exact match for 'inulin' (found=false) and provided ambiguous/low-confidence candidates; therefore category/subcategory cannot be reliably determined from the tool output and are reported as UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9463,
+      "completion": 6065,
+      "total": 15528
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "prebiotic"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "prebiotic",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "dietary fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "inulin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina blue green algae",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "billion",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.43821
+}

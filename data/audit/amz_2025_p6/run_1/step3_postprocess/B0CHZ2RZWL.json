@@ -1,0 +1,91 @@
+{
+  "product_id": 9584,
+  "asin": "B0CHZ2RZWL",
+  "title": "hair, skin & nails with biotin and collagen, gummies vitamin supplement, 2500mcg, 80ct,.",
+  "brand": "natures bounty",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 80,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "biotin",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "biotin",
+    "collagen"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "LETTER VITAMINS",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9235,
+      "completion": 4221,
+      "total": 13456
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 65.153486
+}

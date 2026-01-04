@@ -1,0 +1,222 @@
+{
+  "product_id": 5964,
+  "asin": "B09GRPHWYL",
+  "title": "1md nutrition cholestmd with olive leaf extract, bergavit, niacin, garlic  120 capsules (2-pack)",
+  "brand": "1md",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "cholestmd",
+      "position": 14,
+      "lookup_result": {
+        "found": false,
+        "ingredient_normalized": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "note": "lookup_ingredient returned no confident match. Candidates include 'Colostrum' (low confidence) and others; likely a branded product name/unique trademark rather than a standard ingredient."
+      }
+    },
+    {
+      "name": "olive leaf extract",
+      "position": 29,
+      "lookup_result": {
+        "found": true,
+        "ingredient_normalized": "Olive Leaf",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "note": "lookup_ingredient matched 'Olive Leaf' (tool returned category/subcategory as shown)."
+      }
+    },
+    {
+      "name": "bergavit",
+      "position": 49,
+      "lookup_result": {
+        "found": false,
+        "ingredient_normalized": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "note": "lookup_ingredient returned no confident match for 'bergavit'. This appears to be a branded extract/trade name (candidate matches returned by tool were low-confidence and ambiguous)."
+      }
+    },
+    {
+      "name": "niacin",
+      "position": 59,
+      "lookup_result": {
+        "found": true,
+        "ingredient_normalized": "Vitamin B3",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "note": "lookup_ingredient matched 'niacin' \u2192 Vitamin B3 (exact match)."
+      }
+    },
+    {
+      "name": "garlic",
+      "position": 67,
+      "lookup_result": {
+        "found": true,
+        "ingredient_normalized": "Garlic",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "note": "lookup_ingredient matched 'garlic' (exact match)."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9750,
+      "completion": 4988,
+      "total": 14738
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cholestmd"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Colostrum",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "colostrum",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Colostrum",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "colostrum6",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Zma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "zmag t",
+              "match_type": "bm25",
+              "score": 0.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "olive leaf extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Olive Leaf",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "olive leaf",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 11.311410790053557
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bergavit"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Keratin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "keratin",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vervain",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "vervain",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "niacin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B3",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "niacin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "garlic"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Garlic",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "garlic",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 69.939149
+}

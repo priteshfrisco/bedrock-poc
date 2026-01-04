@@ -1,0 +1,39 @@
+{
+  "product_id": 8381,
+  "asin": "B0C3Y3F68B",
+  "title": "spring valley hair, skin & nails dietary supplement, gel capsules, 5,000 mcg, 120 count",
+  "brand": "adnan",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4586,
+      "completion": 1967,
+      "total": 6553
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.683988
+}

@@ -1,0 +1,161 @@
+{
+  "product_id": 8618,
+  "asin": "B0C745SRVW",
+  "title": "plix - the plant fix ksm-66 ashwagandha 300mg effervescent supplements for stress, mood & energy support with vitamin d3 & brahmi - 120 vegan, non-gmo, gluten-free tablets, pack of 8",
+  "brand": "plix - the plant fix",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 8,
+  "ingredients": [
+    {
+      "name": "ksm-66 ashwagandha",
+      "position": 21,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "ashwaganda",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The title contains 'ksm-66 ashwagandha' starting at character index 21. lookup_ingredient('ksm-66 ashwagandha') returned a match (normalized to 'ashwaganda') with the tool's category/subcategory as returned above. I do not alter the tool output even though the category appears unexpected for ashwagandha; reporting the tool result as returned."
+    },
+    {
+      "name": "vitamin d3",
+      "position": 109,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "The title contains 'vitamin d3' beginning at character index 109. lookup_ingredient('vitamin d3') returned 'Vitamin D' in BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "brahmi",
+      "position": 122,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "holybasil",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "confidence": "low"
+          },
+          {
+            "ingredient": "basil",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "confidence": "low"
+          },
+          {
+            "ingredient": "bromelain",
+            "nw_category": "PROBIOTICS+",
+            "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+            "confidence": "low"
+          }
+        ]
+      },
+      "reasoning": "The title contains 'brahmi' starting at character index 122. lookup_ingredient('brahmi') did not return a confident match; the tool returned no definitive mapping and provided low-confidence candidates. I report the tool response without introducing an external mapping."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9494,
+      "completion": 5847,
+      "total": 15341
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ksm-66 ashwagandha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "brahmi"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "holybasil",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "basil",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "basil",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "holy basil",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "bromelain",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "bromelain",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 61.248519
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 2134,
+  "asin": "B01KYNGPLA",
+  "title": "21st century sentry senior 50+ tablets 100 ct (3 pack)",
+  "brand": "21st century",
+  "source_subcategory": "antacids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "AGE GROUP - MATURE ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4579,
+      "completion": 2245,
+      "total": 6824
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 37.766891
+}

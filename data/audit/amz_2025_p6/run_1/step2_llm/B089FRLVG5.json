@@ -1,0 +1,15 @@
+{
+  "product_id": 4515,
+  "asin": "B089FRLVG5",
+  "title": "kinderlyte advanced electrolyte powder  natural, 4-5x more electrolytes, 80% less sugar  with premax prebiotics  no artificial sweeteners, colors or flavors (lemon lime, 6 count)",
+  "brand": "kinderlyte",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 86)",
+  "processing_time_sec": 4900.445871
+}

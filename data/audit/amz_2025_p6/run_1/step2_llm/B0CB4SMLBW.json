@@ -1,0 +1,130 @@
+{
+  "product_id": 8841,
+  "asin": "B0CB4SMLBW",
+  "title": "hydroxycut hardcore ultra shred drink sticks,meta-energy drink powder metabolic energy from b vitamins, key electrolytes, metabolite of caffeine  zero sugar, zero calories  for adult  20 servings",
+  "brand": "hydroxycut",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 20,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "b vitamins",
+      "position": 92,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The title text 'b vitamins' starts at character index 92. lookup_ingredient('b vitamins') returned normalized ingredient 'Multivitamin' with category/subcategory 'COMBINED MULTIVITAMINS'."
+    },
+    {
+      "name": "electrolytes",
+      "position": 108,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'electrolytes' starts at index 108 ('key electrolytes' in the title). lookup_ingredient('electrolytes') did not return a clear exact match (returned no exact found / ambiguous candidates), so category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "caffeine",
+      "position": 136,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The word 'caffeine' appears as part of 'metabolite of caffeine', starting at index 136. lookup_ingredient('caffeine') returned category 'MISCELLANEOUS SUPPLEMENTS' and subcategory 'NON-SPECIFIC'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9452,
+      "completion": 6138,
+      "total": 15590
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "b vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "caffeine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Caffeine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "caffeinated",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 113.303069
+}

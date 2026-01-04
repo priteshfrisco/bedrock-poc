@@ -1,0 +1,15 @@
+{
+  "product_id": 10713,
+  "asin": "B0CX89BN7B",
+  "title": "pure whey isolate  high protein whey isolate protein powder  27g protein, 6g bcaas, sugar free, gluten free, low carb, low lactose  30 servings, 2lb (choco ferrerolicious)",
+  "brand": "limitless pharma",
+  "source_subcategory": "whey protein",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "error": "Extra data: line 2 column 1 (char 80)",
+  "processing_time_sec": 87.089809
+}

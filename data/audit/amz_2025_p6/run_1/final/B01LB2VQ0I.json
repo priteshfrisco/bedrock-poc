@@ -1,0 +1,58 @@
+{
+  "product_id": 2147,
+  "asin": "B01LB2VQ0I",
+  "title": "natrol biotin fast dissolve tablets, 10,000 mcg, 60 count",
+  "brand": "natrol",
+  "source_subcategory": "vitamin b7 (biotin)",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "biotin",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "biotin"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "LETTER VITAMINS",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9043,
+      "completion": 2701,
+      "total": 11744
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 39.794198
+}

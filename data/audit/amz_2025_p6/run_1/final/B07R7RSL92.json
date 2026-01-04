@@ -1,0 +1,92 @@
+{
+  "product_id": 3701,
+  "asin": "B07R7RSL92",
+  "title": "berberine 1875mg  high potency complex  supports glucose metabolism & fitness  berberine supplement with bitter melon & banaba leaf  non-gmo, third-party tested  30 day supply  90 cap",
+  "brand": "smoky mountain",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "berberine",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "berberine",
+    "bitter melon",
+    "banaba leaf"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9282,
+      "completion": 5055,
+      "total": 14337
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "berberine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "barberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "berberine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bitter melon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bitter Melon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bitter melon",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "banaba leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Blueberry Extract",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "blueberry leaf",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.339693
+}

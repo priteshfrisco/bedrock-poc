@@ -1,0 +1,183 @@
+{
+  "product_id": 3067,
+  "asin": "B07CWJM1SB",
+  "title": "whey protein isolate & hydrolyzed - premium grass fed - 30g protein per serve, fast absorbing - non-gmo - easy digesting - 2kg (4.4 lbs) vanilla",
+  "brand": "pure product australia",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 70.548,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "whey protein isolate",
+      "position": 0,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+        "raw_tool_info": {
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      "reasoning": "The title begins with 'whey protein isolate' (starts at character 0). This is a functional ingredient (whey protein isolate). lookup_ingredient() returned a mapping to 'Soy Foods' with category 'ACTIVE NUTRITION' / 'PROTEIN & MEAL REPLACEMENTS' (tool match info shown)."
+    },
+    {
+      "name": "hydrolyzed whey protein",
+      "position": 23,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+        "raw_tool_info": {
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      "reasoning": "The title contains '& hydrolyzed' immediately after 'whey protein isolate' (the word 'hydrolyzed' starts at character 23). This indicates hydrolyzed form of the whey protein (hydrolyzed whey). lookup_ingredient() returned the same mapping as above to 'Soy Foods' with category 'ACTIVE NUTRITION' / 'PROTEIN & MEAL REPLACEMENTS'."
+    },
+    {
+      "name": "vanilla",
+      "position": 137,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "raw_tool_info": {
+          "reason": "Multiple possible matches / no direct match",
+          "candidates": [
+            {
+              "ingredient": "arnica",
+              "nw_category": "HOMEOPATHICS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Alpha Lipoic Acid",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranesbill",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ]
+        }
+      },
+      "reasoning": "The flavor 'vanilla' appears at the end of the title (starts at character 137). It is a non-primary flavoring ingredient. lookup_ingredient() did not return a clear match (returned UNKNOWN / ambiguous candidates), so category/subcategory are set to unknown per tool output."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9460,
+      "completion": 6977,
+      "total": 16437
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey protein isolate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hydrolyzed whey protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vanilla"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "arnica",
+              "nw_category": "HOMEOPATHICS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "arnica",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Alpha Lipoic Acid",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "ala",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranesbill",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cranesbill",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 86.656405
+}

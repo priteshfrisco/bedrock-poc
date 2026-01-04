@@ -1,0 +1,14 @@
+{
+  "product_id": 17,
+  "asin": "000000001096383144",
+  "title": "surgical precision (dr. beckett campbell, medical examiner)",
+  "brand": "independently published",
+  "source_subcategory": "other medical & healthcare supplies",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.010455,
+  "lookup_action": "REMOVE"
+}

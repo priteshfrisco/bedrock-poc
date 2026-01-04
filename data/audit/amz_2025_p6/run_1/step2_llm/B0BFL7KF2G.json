@@ -1,0 +1,182 @@
+{
+  "product_id": 7421,
+  "asin": "B0BFL7KF2G",
+  "title": "ultra hyaluronic acid capsules 3700mg with collagen peptide vit c - anti-aging supplement, promote healthy skin, hair, joint with l-arginine resveratrol vit d3 (90 count (pack of 1))",
+  "brand": "ultra herbs",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "reasoning": "Extracted ingredient keywords found directly in the title with their start positions (0-indexed). Each ingredient was looked up with lookup_ingredient().",
+    "list": [
+      {
+        "name": "hyaluronic acid",
+        "position": 6,
+        "lookup_name": "Hyaluronic Acid",
+        "category": "MISCELLANEOUS SUPPLEMENTS",
+        "subcategory": "NON-SPECIFIC",
+        "reasoning": "Phrase 'hyaluronic acid' appears immediately after 'ultra' at index 6."
+      },
+      {
+        "name": "collagen peptide",
+        "position": 43,
+        "lookup_name": "Collagen",
+        "category": "ACTIVE NUTRITION",
+        "subcategory": "NON-SPECIFIC",
+        "reasoning": "'collagen peptide' appears after 'with' starting at index 43; lookup matched to Collagen."
+      },
+      {
+        "name": "vit c",
+        "position": 60,
+        "lookup_name": "Vitamin Cnot Ester",
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "LETTER VITAMINS",
+        "reasoning": "Abbreviated 'vit c' appears at index 60; lookup returned Vitamin C (letter vitamins)."
+      },
+      {
+        "name": "l-arginine",
+        "position": 130,
+        "lookup_name": "Arginine",
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "AMINO ACIDS",
+        "reasoning": "'l-arginine' appears in the phrase 'with l-arginine' starting at index 130; lookup matched Arginine."
+      },
+      {
+        "name": "resveratrol",
+        "position": 141,
+        "lookup_name": "Resveratrol",
+        "category": "HERBAL REMEDIES",
+        "subcategory": "POLYPHENOLS",
+        "reasoning": "'resveratrol' follows l-arginine and starts at index 141; lookup matched Resveratrol."
+      },
+      {
+        "name": "vit d3",
+        "position": 153,
+        "lookup_name": "Vitamin D",
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "LETTER VITAMINS",
+        "reasoning": "Abbreviated 'vit d3' appears near the end starting at index 153; lookup matched Vitamin D (letter vitamins)."
+      }
+    ]
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9565,
+      "completion": 5778,
+      "total": 15343
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hyaluronic acid"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hyaluronic Acid",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "hyaluronic acid",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen peptide"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vit c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin Cnot Ester",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "c",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.081661410860199
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-arginine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Arginine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "arginine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "resveratrol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Resveratrol",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "resveratrol",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vit d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 93.203226
+}

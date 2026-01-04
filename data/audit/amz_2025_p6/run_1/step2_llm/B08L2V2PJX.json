@@ -1,0 +1,89 @@
+{
+  "product_id": 4893,
+  "asin": "B08L2V2PJX",
+  "title": "herbes du monde - rosehip cy+ organic 250g - rich in vitamin c, immune boost & organic antioxidant, digestive support, energy, ab certified - 1 sachet",
+  "brand": "herbes du monde",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "PACKET",
+  "organic": "ORGANIC",
+  "count": 8.8185,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "rosehip",
+      "position": 18,
+      "lookup_result": {
+        "ingredient": "Rose Hips",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The word 'rosehip' appears in the title starting at character index 18. lookup_ingredient('rosehip') returned normalized ingredient 'Rose Hips' with category/subcategory as shown."
+    },
+    {
+      "name": "vitamin c",
+      "position": 53,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "The phrase 'vitamin c' appears in the title starting at character index 53 ('...rich in vitamin c...'). lookup_ingredient('vitamin c') was called and returned the tool result shown (note: the tool returned 'Vitamin D' as the normalized ingredient). I report the tool's returned category/subcategory exactly as provided."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9178,
+      "completion": 6243,
+      "total": 15421
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rosehip"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Rose Hips",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "rosehip",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.176228
+}

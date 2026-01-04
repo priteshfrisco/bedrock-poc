@@ -1,0 +1,127 @@
+{
+  "product_id": 10361,
+  "asin": "B0CRRV4G9C",
+  "title": "saglikli liposomal ashwagandha liquid drops 2000mg, ashwagandha root extract supplement with black pepper extract & probiotics for focus, cognition & energy - 4 fl.oz (2 bottle)",
+  "brand": "saglikli",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": 4,
+  "unit": "OZ",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "ashwagandha",
+      "position": 19,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "First functional ingredient in the title is 'ashwagandha' starting at character index 19. lookup_ingredient returned normalized 'ashwaganda' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "ashwagandha root extract",
+      "position": 52,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title also contains 'ashwagandha root extract' starting at index 52. lookup_ingredient matched this to the same normalized 'ashwaganda' (category 'FATTY ACIDS', subcategory 'HEMP/CBD')."
+    },
+    {
+      "name": "black pepper extract",
+      "position": 93,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'black pepper extract' appears beginning at index 93 ('black' at 93). lookup_ingredient returned 'Bioperine' (mapped to category 'FATTY ACIDS' and subcategory 'HEMP/CBD') for the black pepper extract term."
+    },
+    {
+      "name": "probiotics",
+      "position": 116,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "reasoning": "The term 'probiotics' appears starting at index 116. lookup_ingredient returned 'Probiotic' with category 'PROBIOTICS+' and subcategory 'PREBIOTICS AND PROBIOTICS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9378,
+      "completion": 7296,
+      "total": 16674
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ashwagandha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ashwagandha root extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black pepper extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black pepper",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.673573603647004
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "probiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 121.876913
+}

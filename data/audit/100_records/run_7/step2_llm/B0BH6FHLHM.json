@@ -1,0 +1,58 @@
+{
+  "product_id": 70,
+  "asin": "B0BH6FHLHM",
+  "title": "quality choice advanced probiotic - ultra potency - digestive and immune support - dietary supplement in 60 count bottles of capsules (3 pack)",
+  "brand": "quality choice",
+  "source_subcategory": "probiotics",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+  "remap_reason": "Maps to PREBIOTICS & PROBIOTICS / PREBIOTICS & PROBIOTICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "probiotic",
+      "position": 24,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "found": true
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9057,
+      "completion": 4386,
+      "total": 13443
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotic"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "billion",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 61.011827
+}

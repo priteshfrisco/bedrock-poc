@@ -1,0 +1,306 @@
+{
+  "product_id": 8790,
+  "asin": "B0C9JRKFH4",
+  "title": "beet root powder capsules 20x concentrated 8000mg extra strength formula, beetroot extract, elderberry with vitamin c and zinc, pomegranate, grape seed, nitric oxide supplement - non-gmo - usa made.",
+  "brand": "gade nutrition boost your health",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "mg",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beet root",
+      "position": 0,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Beet Root",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "notes": "Matched lookup for 'beet root'."
+      },
+      "reasoning": "Phrase 'beet root' appears at start of title (index 0). Identified as functional ingredient 'beet root'. Lookup returned Beet Root \u2192 HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "beetroot",
+      "position": 74,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Beet Root",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "notes": "Matched lookup for 'beetroot' (normalized to Beet Root)."
+      },
+      "reasoning": "The title includes 'beetroot extract' starting at index 74. This is an additional mention of beet root (appears as 'beetroot'), and lookup mapped it to Beet Root."
+    },
+    {
+      "name": "elderberry",
+      "position": 92,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Elderberry",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "SINGLES",
+        "notes": "Exact match for 'elderberry'."
+      },
+      "reasoning": "'elderberry' appears in title starting at index 92. Lookup returned Elderberry \u2192 HERBAL REMEDIES / SINGLES."
+    },
+    {
+      "name": "vitamin c",
+      "position": 108,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "notes": "Lookup call for 'vitamin c' returned a fuzzy match to 'Vitamin D' (medium confidence). This is the tool's returned result; it may be a fuzzy/ambiguous match but is included as returned."
+      },
+      "reasoning": "The substring 'vitamin c' begins at index 108 ('vitamin' at 108, 'c' at 116). A lookup was performed for 'vitamin c' and the tool returned a fuzzy normalization to 'Vitamin D' under LETTER VITAMINS (see lookup_result notes). The ingredient in the title is 'vitamin c'."
+    },
+    {
+      "name": "zinc",
+      "position": 122,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Zinc",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "Exact match for 'zinc'."
+      },
+      "reasoning": "'zinc' appears in the title starting at index 122. Lookup returned Zinc \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "pomegranate",
+      "position": 128,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Pomegranate",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "notes": "Exact match for 'pomegranate'."
+      },
+      "reasoning": "'pomegranate' appears in title starting at index 128. Lookup mapped it to Pomegranate under HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "grape seed",
+      "position": 141,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Grape Seed",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS",
+        "notes": "Exact match for 'grape seed'."
+      },
+      "reasoning": "'grape seed' appears starting at index 141 ('grape' at 141). Lookup returned Grape Seed \u2192 HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "nitric oxide",
+      "position": 153,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "notes": "Lookup did not find a direct match for 'nitric oxide'. Tool returned candidate suggestions (low confidence) but no definitive normalized ingredient.",
+        "candidates": [
+          {
+            "ingredient": "Vitamin B6",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "score": 54.54545454545454,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Vitamin B3",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "score": 52.17391304347826,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Licorice",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "score": 50.0,
+            "confidence": "low"
+          }
+        ]
+      },
+      "reasoning": "'nitric oxide' appears in the title starting at index 153. This term was included as an ingredient phrase, but the lookup tool did not return a definitive match (found=false) and returned low-confidence candidate suggestions. Included the lookup output as returned by the tool."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9868,
+      "completion": 7484,
+      "total": 17352
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beetroot"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beetroot",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pomegranate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pomegranate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "pomegranate",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "grape seed"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Grape Seed",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "grape seed",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric oxide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B6",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "pyridoxine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 141.11754
+}

@@ -1,0 +1,89 @@
+{
+  "product_id": 3710,
+  "asin": "B07RD189PH",
+  "title": "swanson full spectrum herbal joint care 60 capsules (4 pack)",
+  "brand": "swanson",
+  "source_subcategory": "joint & muscle pain relief",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 4,
+  "ingredients": [
+    {
+      "name": "herbal",
+      "position": 22,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "returned_ingredient": "UNKNOWN",
+        "reason": "lookup_ingredient returned no definitive match for the generic term 'herbal' and suggested multiple low-confidence candidates. 'Herbal' in the title is a generic descriptor, not a specific functional ingredient."
+      },
+      "reasoning": "The title contains the generic descriptor 'herbal' (starts at character index 22). No specific herb names (e.g., turmeric, boswellia, glucosamine) are present, so 'herbal' is the only extractable ingredient-like term. Because the lookup did not return a definitive category/subcategory, category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9228,
+      "completion": 3618,
+      "total": 12846
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ephedra",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ephedra",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dehydroepiandrosterone",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dhea",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 48.945079
+}

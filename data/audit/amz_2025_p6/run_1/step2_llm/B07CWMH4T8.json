@@ -1,0 +1,64 @@
+{
+  "product_id": 3073,
+  "asin": "B07CWMH4T8",
+  "title": "pure product australia - creatine monohydrate (orange) 1.1 lb - vegetarian friendly",
+  "brand": "pure product australia",
+  "source_subcategory": "creatine amino acids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 17.6,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "creatine monohydrate",
+      "position": 25,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PERFORMANCE NUTRITION",
+      "lookup_raw": {
+        "found": true,
+        "ingredient": "Creatine",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PERFORMANCE NUTRITION"
+      },
+      "reasoning": "The title explicitly contains 'creatine monohydrate' starting at character index 25. This is the functional ingredient in the product title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9056,
+      "completion": 3533,
+      "total": 12589
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "creatine monohydrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Creatine",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PERFORMANCE NUTRITION",
+          "keyword": "creatine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 40.727343
+}

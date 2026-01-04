@@ -1,0 +1,81 @@
+{
+  "product_id": 9204,
+  "asin": "B0CFG95MV9",
+  "title": "quercetin with bromelain 1,200mg per serving (120 count) immune health capsules - supports healthy immune functions in men and women (vegan safe, manufactured in usa, gluten free) - (120 capsules)",
+  "brand": "dorado nutrition",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 0,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "Found 'quercetin' starting at character index 0 in the title. lookup_ingredient returned ingredient 'Quercetin' with category 'HERBAL REMEDIES' and subcategory 'POLYPHENOLS'."
+    },
+    {
+      "name": "bromelain",
+      "position": 15,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "Found 'bromelain' starting at character index 15 in the title. lookup_ingredient returned ingredient 'bromelain' with category 'PROBIOTICS+' and subcategory 'DIGESTIVE AIDS & ENZYMES'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9202,
+      "completion": 3779,
+      "total": 12981
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bromelain"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "bromelain",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "bromelain",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 77.259676
+}

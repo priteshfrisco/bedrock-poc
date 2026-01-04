@@ -1,0 +1,84 @@
+{
+  "product_id": 2255,
+  "asin": "B01MSPJ3FR",
+  "title": "symbio notatum drops 4x potency .34 fl. oz (10ml)",
+  "brand": "ungrol",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": 0.33814,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "symbio notatum",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "symbio notatum"
+  ],
+  "category": "UNKNOWN",
+  "subcategory": "UNKNOWN",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9221,
+      "completion": 3536,
+      "total": 12757
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "symbio notatum"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Strontium",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "strontium",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lomatium",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "lomatium",
+              "match_type": "fuzzy",
+              "score": 45.45454545454546,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Psyllium",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "psyllium",
+              "match_type": "fuzzy",
+              "score": 45.45454545454546,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 51.723967
+}

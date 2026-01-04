@@ -1,0 +1,62 @@
+{
+  "product_id": 2699,
+  "asin": "B076DSS15S",
+  "title": "chlorella a60 alcohol herbal extract tincture, concentrated liquid drops natural chlorella (pyrenoidosa) dried entire plant (2 fl oz)",
+  "brand": "herbera",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "chlorella",
+      "position": 0,
+      "lookup_result": {
+        "ingredient": "Chlorella",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "found": true
+      },
+      "reasoning": "The title begins with 'chlorella' (position 0). This is the functional herb/extract in the product. Lookup returned category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9068,
+      "completion": 3896,
+      "total": 12964
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chlorella"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chlorella",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "chlorella",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 50.28249
+}

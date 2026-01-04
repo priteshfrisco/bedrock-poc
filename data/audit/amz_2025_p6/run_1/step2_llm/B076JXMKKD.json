@@ -1,0 +1,15 @@
+{
+  "product_id": 2713,
+  "asin": "B076JXMKKD",
+  "title": "beth root (birthroot trillium) powder (1 oz, zin: 515026) - 3 pack",
+  "brand": "terravita",
+  "source_subcategory": "other herbal supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "error": "Extra data: line 8733 column 1 (char 22397)",
+  "processing_time_sec": 137.205166
+}

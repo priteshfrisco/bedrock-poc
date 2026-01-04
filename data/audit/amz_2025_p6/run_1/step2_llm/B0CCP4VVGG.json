@@ -1,0 +1,36 @@
+{
+  "product_id": 8996,
+  "asin": "B0CCP4VVGG",
+  "title": "eielo 16-40 pairs cute funny weird earrings boba water bottle pearl milk tea food gummy bear fruit mushroom goldfish earring set cute funny dangle drop earrings for women",
+  "brand": "eielo",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title describes jewelry ('earrings', 'earring set', 'dangle drop earrings')"
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4599,
+      "completion": 1011,
+      "total": 5610
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.49802
+}

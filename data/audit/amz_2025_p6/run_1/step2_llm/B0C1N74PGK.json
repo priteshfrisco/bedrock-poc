@@ -1,0 +1,93 @@
+{
+  "product_id": 8198,
+  "asin": "B0C1N74PGK",
+  "title": "3 packs organic hemp gummies extra strengthen high potency with pure hemp oil extract vegan edible bear candy - non-gmo, vegan, low sugar, made in usa",
+  "brand": "hmone",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 16,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_result": {
+        "ingredient": "Hemp",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The word 'hemp' appears at character index 16 ('...organic hemp gummies...'). lookup_ingredient returned Hemp \u2192 FATTY ACIDS / HEMP/CBD."
+    },
+    {
+      "name": "hemp oil extract",
+      "position": 69,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_result": {
+        "ingredient": "Hemp",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The phrase 'hemp oil extract' starts at character index 69 ('...with pure hemp oil extract...'). lookup_ingredient for this phrase matched to Hemp \u2192 FATTY ACIDS / HEMP/CBD."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9167,
+      "completion": 5306,
+      "total": 14473
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 66.236969
+}

@@ -1,0 +1,104 @@
+{
+  "product_id": 9407,
+  "asin": "B0CGVSTGWN",
+  "title": "leb best 3 quercetin 675 mg with bromelain & zinc supplement- 4 month supply, 120 natural veggie capsules, support immunity, made in usa (16oz) (1)",
+  "brand": "leb best 3",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 11,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "The word 'quercetin' appears in the title starting at character index 11. lookup_ingredient returned Quercetin \u2192 HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "bromelain",
+      "position": 33,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The word 'bromelain' appears in the title starting at character index 33. lookup_ingredient returned bromelain \u2192 PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES."
+    },
+    {
+      "name": "zinc",
+      "position": 45,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'zinc' appears in the title starting at character index 45. lookup_ingredient returned Zinc \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9274,
+      "completion": 4187,
+      "total": 13461
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bromelain"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "bromelain",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "bromelain",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 70.816184
+}

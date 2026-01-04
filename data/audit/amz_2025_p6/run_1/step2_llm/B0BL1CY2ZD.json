@@ -1,0 +1,127 @@
+{
+  "product_id": 7643,
+  "asin": "B0BL1CY2ZD",
+  "title": "(2 pack) biolyfe keto gummies maax acv with pomegranate juice beet root b12 60 gummys max strength biolife keto gummies bio lyfe biolife keto acv gummies bio life keto gummies (60 gummies)",
+  "brand": "nutrocell",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "apple cider vinegar",
+      "position": 35,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected 'acv' at characters 35-37 which is the common abbreviation for apple cider vinegar (ACV). lookup_ingredient called with 'apple cider vinegar' returned normalized 'Cider Vinegar' in category 'HERBAL REMEDIES' / 'FOOD SUPPLEMENTS'. Using the first occurrence position (35)."
+    },
+    {
+      "name": "pomegranate",
+      "position": 44,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected 'pomegranate' starting at character 44 as part of 'pomegranate juice'. lookup_ingredient called with 'pomegranate' returned category 'HERBAL REMEDIES' / 'FOOD SUPPLEMENTS'."
+    },
+    {
+      "name": "beet root",
+      "position": 62,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected 'beet root' starting at character 62. lookup_ingredient called with 'beet root' returned category 'HERBAL REMEDIES' / 'FOOD SUPPLEMENTS'."
+    },
+    {
+      "name": "vitamin b12",
+      "position": 72,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Detected 'b12' starting at character 72 which corresponds to Vitamin B12. lookup_ingredient called with 'vitamin b12' returned category 'BASIC VITAMINS & MINERALS' / 'LETTER VITAMINS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9375,
+      "completion": 4743,
+      "total": 14118
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pomegranate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pomegranate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "pomegranate",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b12"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B12",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 12",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 63.314368
+}

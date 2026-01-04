@@ -1,0 +1,122 @@
+{
+  "product_id": 2854,
+  "asin": "B078YFQV59",
+  "title": "sundance probiotic acidophilus quick release - 60 capsules, pack of 5",
+  "brand": "sundance",
+  "source_subcategory": "probiotics",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+  "remap_reason": "Maps to PREBIOTICS & PROBIOTICS / PREBIOTICS & PROBIOTICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 5,
+  "ingredients": [
+    {
+      "name": "probiotic",
+      "position": 9,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Probiotic",
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "PREBIOTICS AND PROBIOTICS"
+      },
+      "reasoning": "'probiotic' appears in the title at character index 9. lookup_ingredient returned a direct match mapping to PROBIOTICS+ / PREBIOTICS AND PROBIOTICS."
+    },
+    {
+      "name": "acidophilus",
+      "position": 19,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "lookup_result": {
+        "found": false,
+        "notes": "Tool returned fuzzy candidates; top candidate was 'Probiotic' (fuzzy match for 'dophilus') with highest score.",
+        "chosen_mapping": {
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS"
+        }
+      },
+      "reasoning": "'acidophilus' appears at character index 19. The lookup returned fuzzy matches; given 'acidophilus' is a probiotic species (commonly Lactobacillus acidophilus) the best mapping is to PROBIOTICS+ / PREBIOTICS AND PROBIOTICS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9315,
+      "completion": 3589,
+      "total": 12904
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotic"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "billion",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "acidophilus"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "dophilus",
+              "match_type": "fuzzy",
+              "score": 84.21052631578947,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Andrographis",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "andrographis",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Acetaminophen",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "acetaminophen",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 46.340922
+}

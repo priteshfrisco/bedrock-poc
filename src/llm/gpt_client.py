@@ -115,13 +115,18 @@ class GPTClient:
                     })
                 
                 # Send tool results back to LLM for final response
-                # Use structured outputs even after tool execution for guaranteed schema
+                # IMPORTANT: Include tools again so LLM can make more tool calls if needed (e.g., apply_business_rules after lookup_ingredient)
                 final_response_format = RESPONSE_FORMAT_SCHEMA if use_schema else {"type": "json_object"}
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    messages=messages,
-                    response_format=final_response_format
-                )
+                final_params = {
+                    "model": self.model,
+                    "messages": messages,
+                    "response_format": final_response_format
+                }
+                if tools:
+                    final_params["tools"] = tools
+                    final_params["tool_choice"] = "auto"  # Let LLM decide if it needs more tool calls
+                
+                response = self.client.chat.completions.create(**final_params)
                 message = response.choices[0].message
                 
                 # Update token usage

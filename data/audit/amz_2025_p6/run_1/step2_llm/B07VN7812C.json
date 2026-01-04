@@ -1,0 +1,150 @@
+{
+  "product_id": 3889,
+  "asin": "B07VN7812C",
+  "title": "hair vitamins to help thinning and fallout - hair supplement to grow hair faster , stronger & have healthy skin & nails - scientifically made with biotin , keratin , folic acid , vitamin b , c",
+  "brand": "hey girl nutrition",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "biotin",
+      "position": 147,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Exact term 'biotin' appears in the title starting at character index 147. lookup_ingredient returned Biotin mapped to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "keratin",
+      "position": 156,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Exact term 'keratin' appears in the title starting at character index 156. lookup_ingredient returned Keratin mapped to MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC."
+    },
+    {
+      "name": "folic acid",
+      "position": 166,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Exact phrase 'folic acid' appears starting at character index 166. lookup_ingredient returned Folic Acid mapped to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin b",
+      "position": 179,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Title contains the generic term 'vitamin b' starting at index 179. lookup_ingredient('vitamin b') returned a best match of 'Vitamin B1' mapped to BASIC VITAMINS & MINERALS / LETTER VITAMINS (fuzzy match). The title itself is generic 'vitamin b'."
+    },
+    {
+      "name": "vitamin c",
+      "position": 191,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Title lists '..., c' after 'vitamin b', indicating vitamin C at index 191. lookup_ingredient('vitamin c') returned a (fuzzy/incorrect) match normalized to 'Vitamin D' but with category BASIC VITAMINS & MINERALS / LETTER VITAMINS. I am reporting the title-intended ingredient as 'vitamin c' with the tool's returned category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9443,
+      "completion": 6273,
+      "total": 15716
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "keratin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Keratin",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "keratin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "folic acid"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Folic Acid",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 9",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B1",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 1",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 94
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 81.618068
+}

@@ -1,0 +1,89 @@
+{
+  "product_id": 1100,
+  "asin": "B00DWYFPCO",
+  "title": "fusion plant based vegan protein meal replacement powder - creamy chocolate flavor, best raw plant-based protein isolate shake, dairy and gluten free, sugar free, 10 servings by fusion diet systems",
+  "brand": "fusion diet systems",
+  "source_subcategory": "plant powders",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 10,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "plant based protein",
+      "position": 7,
+      "lookup_result": {
+        "ingredient": "Plant Sterols",
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "NON-SPECIFIC",
+        "found": true
+      },
+      "reasoning": "Detected phrase 'plant based ... protein' starting at character index 7. Treated as a functional ingredient ('plant based protein'). Called lookup_ingredient('plant based protein') \u2014 tool returned normalized ingredient 'Plant Sterols' with category/subcategory as above. (Using the tool output as returned.)"
+    },
+    {
+      "name": "protein isolate",
+      "position": 105,
+      "lookup_result": {
+        "ingredient": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+        "found": true
+      },
+      "reasoning": "Detected phrase 'protein isolate' starting at character index 105 (in 'plant-based protein isolate shake'). Called lookup_ingredient('protein isolate') \u2014 tool returned normalized ingredient 'Soy Foods' with category/subcategory as above. (Using the tool output as returned.)"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9194,
+      "completion": 5840,
+      "total": 15034
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "plant based protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Plant Sterols",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "plant sterols",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein isolate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 136.527224
+}

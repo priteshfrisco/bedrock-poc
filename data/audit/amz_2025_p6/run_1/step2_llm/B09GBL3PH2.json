@@ -1,0 +1,36 @@
+{
+  "product_id": 5942,
+  "asin": "B09GBL3PH2",
+  "title": "cure peach tea energizing hydration mix - natural energy drink with electrolytes and caffeine  made with coconut water  no added sugar  vegan  pouch of 14 energy packets - peach tea",
+  "brand": "cure hydration",
+  "source_subcategory": "energy powders",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title lists beverage ingredients/attributes ('electrolytes', 'caffeine', 'coconut water') in the context of a drink/mix; per safety rules all fields are removed for non-supplements."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4601,
+      "completion": 1044,
+      "total": 5645
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.526256
+}

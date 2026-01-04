@@ -1,0 +1,170 @@
+{
+  "product_id": 8985,
+  "asin": "B0CCKYS216",
+  "title": "tiens nutrient super calcium powder - high-potency calcium powder, high potency calcium powder supplement derived from calf bones for enhanced bone health - fortified with vitamins d, k, c, e",
+  "brand": "tiens",
+  "source_subcategory": "calcium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "calcium",
+      "position": 21,
+      "lookup_result": {
+        "ingredient": "Calcium",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "found": true
+      },
+      "reasoning": "First functional ingredient in title is 'calcium' (first occurrence starts at character index 21). Lookup returned Calcium \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "vitamin d",
+      "position": 181,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "Title ends with 'vitamins d, k, c, e' \u2014 the 'd' appears at index 181. Lookup returned Vitamin D \u2192 BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin k",
+      "position": 184,
+      "lookup_result": {
+        "ingredient": "Vitamin K",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "The 'k' in 'vitamins d, k, c, e' starts at index 184. Lookup returned Vitamin K \u2192 BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin c",
+      "position": 187,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "The 'c' in the vitamins list starts at index 187. I called lookup_ingredient('vitamin c'); the lookup tool returned 'Vitamin D' (fuzzy match) with category LETTER VITAMINS. The ingredient detected in the title is clearly 'vitamin c' (position 187); I include the tool result as returned (note the tool mapped it to Vitamin D)."
+    },
+    {
+      "name": "vitamin e",
+      "position": 190,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "The 'e' in the vitamins list starts at index 190. I called lookup_ingredient('vitamin e'); the lookup tool returned 'Vitamin D' (fuzzy match) with category LETTER VITAMINS. The ingredient in the title is 'vitamin e' (position 190); included here with the tool's returned mapping (note mapping mismatch)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9429,
+      "completion": 6699,
+      "total": 16128
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin k"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin K",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "k",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin e"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 130.841531
+}

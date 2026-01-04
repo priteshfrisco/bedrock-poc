@@ -1,0 +1,39 @@
+{
+  "product_id": 3327,
+  "asin": "B07H9869VC",
+  "title": "2-month kidney health & bladder support supplement all-in-1 with 21 active ingredients  natural urinary tract supplements & nutrients  kidney cleanse detox  bulk savings 60-day supply  60 capsules",
+  "brand": "elevate recovery supplements",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4602,
+      "completion": 1654,
+      "total": 6256
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.557332
+}

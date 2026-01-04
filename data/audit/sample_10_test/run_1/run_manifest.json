@@ -1,0 +1,18 @@
+{
+  "total_records": 10,
+  "success": 4,
+  "filtered": 0,
+  "errors": 0,
+  "total_cost": 0,
+  "total_tokens": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "duration_seconds": 122.327781,
+  "test_mode_step1_only": false,
+  "output_csv": "data/output/sample_10_test/run_1/sample_10_test.csv",
+  "generated_at": "2026-01-01T02:42:52.919261",
+  "filename": "sample_10_test",
+  "file_id": "sample_10_test",
+  "run_id": "run_1",
+  "run_num": 1
+}

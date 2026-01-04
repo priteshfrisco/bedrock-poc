@@ -1,0 +1,156 @@
+{
+  "product_id": 4620,
+  "asin": "B08D6VG1T9",
+  "title": "high absorption electrolyte supplement 100 pills and mct keto electrolytes 120 capsules bundle  for low carb & keto diets  rehydration boost endurance muscle recovery mental focus",
+  "brand": "youth & tonic",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": "100",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 16,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Detected the term 'electrolyte' starting at character index 16. Called lookup_ingredient('electrolyte') \u2014 the lookup returned no exact match (found: false) and ambiguous candidates; no definitive Nature's Way category/subcategory could be returned, so set category/subcategory to UNKNOWN."
+    },
+    {
+      "name": "mct",
+      "position": 53,
+      "category": "FATTY ACIDS",
+      "subcategory": "MCT",
+      "reasoning": "Detected 'mct' starting at index 53. Called lookup_ingredient('mct') \u2014 lookup returned ingredient 'MCT' with nw_category 'FATTY ACIDS' and nw_subcategory 'MCT' (found: true)."
+    },
+    {
+      "name": "electrolytes",
+      "position": 62,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Detected plural term 'electrolytes' starting at index 62. Called lookup_ingredient('electrolytes') \u2014 lookup returned no exact match (found: false) and ambiguous candidates; no definitive Nature's Way category/subcategory could be returned, so set category/subcategory to UNKNOWN. This is included separately because it appears at a distinct position in the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9591,
+      "completion": 5733,
+      "total": 15324
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mct"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MCT",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "MCT",
+          "keyword": "m.c.t.",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.97291
+}

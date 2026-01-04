@@ -1,0 +1,33 @@
+{
+  "product_id": 10175,
+  "asin": "B0CP2Z21ZS",
+  "title": "komil\u00e3n-dietarysupplement8floz(240ml)",
+  "brand": "heine",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 8,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4577,
+      "completion": 1626,
+      "total": 6203
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.166919
+}

@@ -1,0 +1,49 @@
+[2026-01-01T02:44:33.419098] ============================================================
+[2026-01-01T02:44:33.419165] STEP 1: NON-SUPPLEMENT FILTERING
+[2026-01-01T02:44:33.419191] ============================================================
+[2026-01-01T02:44:33.419802] [B0F47VTGSN] Checking: silicone pillow, face massage pillow face pillow cushion pad spa beauty salon sk...
+[2026-01-01T02:44:33.419862] [B0DYV8BKHY] Checking: vilosatibetansingingbowlsetãâmeditationsoundbowlhandcraftedinnepalwithstriker&...
+[2026-01-01T02:44:33.419736] [B0DX7JCTT6] Checking: bakuchiol retinol rejuvenation serum, anti-aging face serum hydrates skin, reduc...
+[2026-01-01T02:44:33.419920] [B0CRSR8NZ4] Checking: liquidhealth ultimate bariatric liquid vitamin supplement bundle - daily bariatr...
+[2026-01-01T02:44:33.420033] [B0F94G1PLD] Checking: (2 pack) presgera capsules - presgera supplements pills advanced formula for wel...
+[2026-01-01T02:44:33.420288] [B0F48YTHV6] Checking: siliconescarsheets-(1.6ãâx60ãâ)scartaperollforc-section,surgery,tummytuck,ke...
+[2026-01-01T02:44:33.420095] [B0D9W7H2VN] Checking: la fermiere hibiscus raspberry yogurt, 5.6 oz...
+[2026-01-01T02:44:33.420544] [B0DT98X7C5] Checking: gpgpgreenpeoplemelatonin5mgextrastrengthadultextrastrengthsupplement,sleepaidwit...
+[2026-01-01T02:44:33.420792] [B003W0XMC8] Checking: blumenthal button shank remover...
+[2026-01-01T02:44:33.421272] [B07661Z3YX] Checking: doctor's best high absorption coq10 with bioperine, gluten free, naturally ferme...
+[2026-01-01T02:44:33.427485] [B0F47VTGSN] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:44:33.434216] [B003W0XMC8] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:44:33.430417] [B0DX7JCTT6] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:44:33.433309] [B0F48YTHV6] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:44:33.431334] [B0DYV8BKHY] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:44:33.434274] [B0F94G1PLD] PASSED - REMAP: HERBAL REMEDIES/NON-SPECIFIC
+[2026-01-01T02:44:33.433076] [B0D9W7H2VN] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:44:33.434473] [B0CRSR8NZ4] PASSED - REMAP: COMBINED MULTIVITAMINS/NON-SPECIFIC
+[2026-01-01T02:44:33.435505] [B0DT98X7C5] PASSED - REMAP: BASIC VITAMINS & MINERALS/DHEA & PREGNENOLONE & HORMONES
+[2026-01-01T02:44:33.435698] Saved: audit/sample_10_test/run_2/step1_filter/B0F47VTGSN.json
+[2026-01-01T02:44:33.436172] [B0DT98X7C5] PASSED filtering
+[2026-01-01T02:44:33.437159] Saved: audit/sample_10_test/run_2/step1_filter/B003W0XMC8.json
+[2026-01-01T02:44:33.436368] Saved: audit/sample_10_test/run_2/step1_filter/B0DYV8BKHY.json
+[2026-01-01T02:44:33.437114] [B07661Z3YX] PASSED - REMAP: BASIC VITAMINS & MINERALS/MINERALS
+[2026-01-01T02:44:33.436120] [B0F94G1PLD] PASSED filtering
+[2026-01-01T02:44:33.437192] Saved: audit/sample_10_test/run_2/step1_filter/B0F48YTHV6.json
+[2026-01-01T02:44:33.436092] [B0CRSR8NZ4] PASSED filtering
+[2026-01-01T02:44:33.437493] [B07661Z3YX] PASSED filtering
+[2026-01-01T02:44:33.437308] Saved: audit/sample_10_test/run_2/step1_filter/B0DX7JCTT6.json
+[2026-01-01T02:44:33.437388] Saved: audit/sample_10_test/run_2/step1_filter/B0D9W7H2VN.json
+[2026-01-01T02:47:06.362644] Saved: audit/sample_10_test/run_2/step1_filter/records_filtered_by_remove.csv (6 rows)
+[2026-01-01T02:47:06.363821] Saved: audit/sample_10_test/run_2/step1_filter/records_remap.csv (4 rows)
+[2026-01-01T02:47:06.364157] Saved: audit/sample_10_test/run_2/step1_filter/step1_statistics.json
+[2026-01-01T02:47:06.364230] ============================================================
+[2026-01-01T02:47:06.364287] STEP 1 FILTERING STATISTICS
+[2026-01-01T02:47:06.364340] ============================================================
+[2026-01-01T02:47:06.364392] Total products checked: 10
+[2026-01-01T02:47:06.364442] 
+[2026-01-01T02:47:06.364492] FILTERED BY REMOVE ACTION: 6
+[2026-01-01T02:47:06.364542] FILTERED BY KEYWORD: 0
+[2026-01-01T02:47:06.364592] MARKED FOR REMAP: 4
+[2026-01-01T02:47:06.364640] UNKNOWN SUBCATEGORY: 0
+[2026-01-01T02:47:06.364720] 
+[2026-01-01T02:47:06.364778] Total to be removed: 6
+[2026-01-01T02:47:06.364835] Total to proceed to LLM: 4
+[2026-01-01T02:47:06.364892] ============================================================

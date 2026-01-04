@@ -1,0 +1,58 @@
+{
+  "product_id": 5914,
+  "asin": "B09FH5YT7R",
+  "title": "grow vitamin total glow, biotin gummies 10,000mcg [highest potency] for healthy hair, skin & nails for adults & kids - vegan, non-gmo, strawberry, pectin-based hair growth supplement",
+  "brand": "grow vitamin",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "biotin",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "biotin"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "LETTER VITAMINS",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9095,
+      "completion": 4557,
+      "total": 13652
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.903349
+}

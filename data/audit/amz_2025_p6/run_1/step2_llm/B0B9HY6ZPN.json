@@ -1,0 +1,130 @@
+{
+  "product_id": 7242,
+  "asin": "B0B9HY6ZPN",
+  "title": "bulksupplements.com ascorbyl palmitate capsules - vitamin c ester, vitamin c supplement - gluten free, 1 capsule per serving, 240 count (pack of 1)",
+  "brand": "bulksupplements",
+  "source_subcategory": "vitamin c-complex",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 240,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "ascorbyl palmitate",
+      "position": 20,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The title contains 'ascorbyl palmitate' starting at character 20. Ascorbyl palmitate is an ester/form of vitamin C; mapped to the Letter Vitamins category (vitamin C). (lookup_ingredient returned no exact single match for the exact string but candidates and context indicate vitamin C ester mapping.)"
+    },
+    {
+      "name": "vitamin c ester",
+      "position": 50,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The title contains the phrase 'vitamin c ester' starting at character 50. This is explicitly a vitamin C form; lookup_ingredient matched 'Vitamin C Ester' to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin c",
+      "position": 67,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The title contains 'vitamin c' again in 'vitamin c supplement' starting at character 67. Vitamin C maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9454,
+      "completion": 5918,
+      "total": 15372
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ascorbyl palmitate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Saw Palmetto",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "saw palmetto",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Corydalis",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "corydalis",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Corydalis",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "yan hu suo",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c ester"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin C Ester",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "ester c",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 89.121385
+}

@@ -1,0 +1,101 @@
+{
+  "product_id": 2628,
+  "asin": "B0755WT9CN",
+  "title": "secrets of the tribe - cycle regulator, herbal supplement blend drops alcohol liquid extract, menstrual cycle support (2 fl oz)",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "2",
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "herbal supplement blend",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "herbal supplement blend",
+    "alcohol"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "SLEEP",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9342,
+      "completion": 5948,
+      "total": 15290
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal supplement blend"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ayurvedic Herb",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ayurvedic herbal supplement",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.489352188599828
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "alcohol"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Choline",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "choline",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Blue Cohosh",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "blue cohosh",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Policosanol",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "policosanol",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.213551
+}

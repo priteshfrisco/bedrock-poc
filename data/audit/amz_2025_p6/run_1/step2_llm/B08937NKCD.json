@@ -1,0 +1,115 @@
+{
+  "product_id": 4501,
+  "asin": "B08937NKCD",
+  "title": "hydralyte electrolyte hydration powder packets  lightly sparkling  single serve powder drink mix for workout, cold & flu, late night recovery  non-gmo, instant dissolve  all natural orange, 36 ct",
+  "brand": "hydralyte",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 36,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 10,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "reasoning": "lookup_ingredient('electrolyte') returned no definitive normalized ingredient. The title clearly uses the word 'electrolyte' (position 10) as the functional ingredient/feature, but the lookup tool did not return a matched Nature's Way category/subcategory."
+      }
+    },
+    {
+      "name": "orange",
+      "position": 182,
+      "lookup_result": {
+        "ingredient": "Orange Peel",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "reasoning": "lookup_ingredient('orange') returned normalized ingredient 'Orange Peel' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'. The title contains 'all natural orange' (position 182), indicating the orange flavor/ingredient."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9361,
+      "completion": 5702,
+      "total": 15063
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "orange"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Orange Peel",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "limonene",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4911.247233
+}

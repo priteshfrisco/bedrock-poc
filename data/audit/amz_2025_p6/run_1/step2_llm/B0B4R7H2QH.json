@@ -1,0 +1,209 @@
+{
+  "product_id": 6975,
+  "asin": "B0B4R7H2QH",
+  "title": "ladder sport hydration powder mix, sports drink powder with essential electrolytes, sodium, potassium, magnesium, calcium, no artificial sweeteners, nsf certified (30 serving bag)",
+  "brand": "ladder",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 70,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "notes": "lookup_ingredient returned found=false and ambiguous candidate suggestions (not a clear match)."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'essential electrolytes' appears in the title; the specific word 'electrolytes' begins at character index 70. This is a functional ingredient group but the lookup returned no clear normalized mapping, so category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "sodium",
+      "position": 84,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Saline",
+        "nw_category": "OTC",
+        "nw_subcategory": "OTC - NON-SPECIFIC",
+        "notes": "lookup_ingredient returned 'Saline' (sodium chloride) as the best match."
+      },
+      "category": "OTC",
+      "subcategory": "OTC - NON-SPECIFIC",
+      "reasoning": "'sodium' appears explicitly in the title starting at index 84. The lookup mapped it to 'Saline' with nw_category 'OTC' and nw_subcategory 'OTC - NON-SPECIFIC'. Using the tool result for category/subcategory."
+    },
+    {
+      "name": "potassium",
+      "position": 92,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Potassium",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "Exact match from lookup_ingredient."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "'potassium' appears explicitly in the title starting at index 92. Lookup returned category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "magnesium",
+      "position": 103,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Magnesium",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "Exact match from lookup_ingredient."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "'magnesium' appears explicitly in the title starting at index 103. Lookup returned category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "calcium",
+      "position": 114,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Calcium",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "notes": "Exact match from lookup_ingredient."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "'calcium' appears explicitly in the title starting at index 114. Lookup returned category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9594,
+      "completion": 6529,
+      "total": 16123
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sodium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saline",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "sodium chloride",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "potassium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Potassium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "potassium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.794951
+}

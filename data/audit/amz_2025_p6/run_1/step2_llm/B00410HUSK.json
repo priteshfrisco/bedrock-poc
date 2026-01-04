@@ -1,0 +1,133 @@
+{
+  "product_id": 563,
+  "asin": "B00410HUSK",
+  "title": "jie geng - platycodon root, 100 grams",
+  "brand": "e-fong",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LOOSE MEDICINAL HERBS",
+  "organic": "NOT ORGANIC",
+  "count": 3.5274,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "jie geng",
+      "position": 0,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Ingredient text 'jie geng' begins at character index 0. lookup_ingredient() was called but did not return a confident/definitive match (found=false). Because the lookup returned no clear category/subcategory, category/subcategory are set to UNKNOWN rather than inventing a mapping."
+    },
+    {
+      "name": "platycodon root",
+      "position": 11,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Ingredient text 'platycodon root' begins at character index 11. lookup_ingredient() was called but did not return a confident/definitive match (found=false). The tool results were ambiguous, so category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9480,
+      "completion": 4123,
+      "total": 13603
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "jie geng"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Siberian Ginseng",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "eleuthero",
+              "match_type": "fuzzy",
+              "score": 58.33333333333333,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Siberian Ginseng",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ginseng - siberian",
+              "match_type": "fuzzy",
+              "score": 58.33333333333333,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Siberian Ginseng",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "siberian ginseng",
+              "match_type": "fuzzy",
+              "score": 58.33333333333333,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "platycodon root"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Bloodroot",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "blood root",
+              "match_type": "fuzzy",
+              "score": 64.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bloodroot",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bloodroot",
+              "match_type": "fuzzy",
+              "score": 58.33333333333333,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet root",
+              "match_type": "bm25",
+              "score": 4.466481390640588,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.7729
+}

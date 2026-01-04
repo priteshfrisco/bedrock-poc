@@ -1,0 +1,15 @@
+{
+  "product_id": 8733,
+  "asin": "B0C8SZMD26",
+  "title": "organic veda beets nitric oxide booster capsules, super greens nitric oxide supplements for men, flow, energy, focus & performance, 120 capsules with organic beet root",
+  "brand": "organic veda",
+  "source_subcategory": "beet root supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "error": "Extra data: line 2 column 1 (char 86)",
+  "processing_time_sec": 105.442313
+}

@@ -1,0 +1,52 @@
+{
+  "run_info": {
+    "file_id": "sample_10_test",
+    "run_id": "run_1",
+    "run_num": 1,
+    "generated_at": "2026-01-01T02:42:52.917674",
+    "total_records_checked": 10,
+    "processing_duration_seconds": 0.0
+  },
+  "filtering_summary": {
+    "filtered_by_remove": {
+      "count": 6,
+      "percentage": 60.0
+    },
+    "filtered_by_keyword": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "marked_for_remap": {
+      "count": 4,
+      "percentage": 40.0
+    },
+    "unknown_subcategory": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "total_removed": {
+      "count": 6,
+      "percentage": 60.0
+    },
+    "total_to_llm": {
+      "count": 4,
+      "percentage": 40.0
+    }
+  },
+  "unknown_subcategories": {},
+  "keyword_breakdown": {},
+  "top_removed_subcategories": {
+    "face serums": 1,
+    "professional massage equipment": 1,
+    "sound therapy & tuning forks": 1,
+    "yogurt": 1,
+    "wound & scar care": 1,
+    "makeup removers": 1
+  },
+  "top_remap_subcategories": {
+    "multivitamins": 1,
+    "other herbal supplements": 1,
+    "medicinal sleep aids": 1,
+    "antioxidants": 1
+  }
+}

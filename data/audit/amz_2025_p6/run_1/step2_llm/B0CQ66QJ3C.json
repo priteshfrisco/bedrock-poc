@@ -1,0 +1,173 @@
+{
+  "product_id": 10245,
+  "asin": "B0CQ66QJ3C",
+  "title": "sugarbear hair vitamin gummy 14 day supply extra strength biotin 6000mcg, growth for men & women, vegan vitamin b12, msm, inositol, omega 3, elderberry, certified kosher, halal, cruelty-free",
+  "brand": "sugarbearhair",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "biotin",
+      "position": 58,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'biotin' in 'extra strength biotin 6000mcg' starting at character index 58. Looked up via lookup_ingredient \u2192 category/subcategory returned."
+    },
+    {
+      "name": "vitamin b12",
+      "position": 104,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'vitamin b12' starting at character index 104 ('vegan vitamin b12'). Verified with lookup_ingredient."
+    },
+    {
+      "name": "msm",
+      "position": 117,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'msm' at character index 117 (sequence ', msm,'). Lookup_ingredient confirmed category/subcategory."
+    },
+    {
+      "name": "inositol",
+      "position": 122,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found 'inositol' at character index 122 (', inositol,'). Lookup_ingredient confirmed category/subcategory."
+    },
+    {
+      "name": "omega 3",
+      "position": 132,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Found 'omega 3' at character index 132 (', omega 3,'). lookup_ingredient mapped this to 'Fish Oil' category/subcategory 'FATTY ACIDS / FISH'."
+    },
+    {
+      "name": "elderberry",
+      "position": 141,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "Found 'elderberry' at character index 141 (', elderberry,'). lookup_ingredient confirmed category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9528,
+      "completion": 5765,
+      "total": 15293
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b12"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B12",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 12",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "msm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MSM",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "msm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "inositol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Inositol",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "inositol",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.74275
+}

@@ -1,0 +1,89 @@
+{
+  "product_id": 2323,
+  "asin": "B01N7HN2O3",
+  "title": "ferosul 325mg (5gr) ferrous sulfate coated easy-to-swallow 100 ct. tablets (green) by feosol",
+  "brand": "remove",
+  "source_subcategory": "iron supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "ferrous sulfate",
+      "position": 20,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "notes": "lookup_ingredient returned no exact match for 'ferrous sulfate' (low-confidence suggestions)."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Title explicitly states 'ferrous sulfate' starting at character index 20. Ferrous sulfate is an iron salt used as a mineral (iron) supplement, so categorized under BASIC VITAMINS & MINERALS \u2192 MINERALS. The lookup tool did not return an exact match, so classification is assigned based on ingredient knowledge."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9259,
+      "completion": 3521,
+      "total": 12780
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ferrous sulfate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "folate",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vandyl Sulfate",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "vanadyl complex",
+              "match_type": "fuzzy",
+              "score": 55.172413793103445,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vandyl Sulfate",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "vanadyl sulfate",
+              "match_type": "fuzzy",
+              "score": 55.172413793103445,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 44.410403
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 5528,
+  "asin": "B094N655B6",
+  "title": "mb herbals organically cultivated fenugreek seeds 1 lb | 454 gram | raw untreated methi seeds | non gmo, gluten free | for indian curries, hair & skin care",
+  "brand": "mb herbals",
+  "source_subcategory": "fenugreek spice",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4602,
+      "completion": 866,
+      "total": 5468
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.955058
+}

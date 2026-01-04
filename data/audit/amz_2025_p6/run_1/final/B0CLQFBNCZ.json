@@ -1,0 +1,84 @@
+{
+  "product_id": 9979,
+  "asin": "B0CLQFBNCZ",
+  "title": "hair supplement 180ct tablets - hair growth",
+  "brand": "tricomax",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "hair",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "hair"
+  ],
+  "category": "UNKNOWN",
+  "subcategory": "UNKNOWN",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9191,
+      "completion": 3538,
+      "total": 12729
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hair"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "DHA",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "DHA",
+              "keyword": "dha",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "HCA",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+              "keyword": "garcinia cambogia",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "HCA",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+              "keyword": "hca",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 43.079684
+}

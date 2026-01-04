@@ -1,0 +1,36 @@
+{
+  "product_id": 6916,
+  "asin": "B0B3NFZZ62",
+  "title": "peak refuel re-energizing drink mix  hydration blend  extended energy  improved performance  increased focus  premium flavors  easy-tear single serving sticks  mountain berry lemonade - 24-pack",
+  "brand": "peak refuel",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 24,
+  "unit": "COUNT",
+  "size": 24,
+  "ingredients": {
+    "value": [],
+    "reasoning": "No specific functional ingredient names (e.g., electrolytes, caffeine, vitamins, amino acids, creatine, etc.) are present in the title. Phrases like 'hydration blend', 'extended energy', and 'increased focus' are functional claims, and 'mountain berry lemonade' is a flavor \u2014 these are not specific ingredient names, so no ingredient lookups were performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4602,
+      "completion": 2413,
+      "total": 7015
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 32.331683
+}

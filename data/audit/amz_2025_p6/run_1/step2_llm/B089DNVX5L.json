@@ -1,0 +1,33 @@
+{
+  "product_id": 4511,
+  "asin": "B089DNVX5L",
+  "title": "shangingerpowder,3.52oz(100g)\u00e2puregroundgingerrootpowder,naturalseasoningspice,halal&vegetarians,nopreservatives,airtightaluminumpouch,idealforcooking,baking&beverages",
+  "brand": "shan",
+  "source_subcategory": "ginger spice",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4619,
+      "completion": 880,
+      "total": 5499
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 15.665584
+}

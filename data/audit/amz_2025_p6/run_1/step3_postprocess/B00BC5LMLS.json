@@ -1,0 +1,58 @@
+{
+  "product_id": 1007,
+  "asin": "B00BC5LMLS",
+  "title": "msm capsules, 100% pure (250 v-caps, 1000mg each, made in the usa), raw power organics brand",
+  "brand": "lija",
+  "source_subcategory": "msm",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "ORGANIC",
+  "count": 250,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "msm",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "msm"
+  ],
+  "category": "MISCELLANEOUS SUPPLEMENTS",
+  "subcategory": "NON-SPECIFIC",
+  "health_focus": "JOINT HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9065,
+      "completion": 3126,
+      "total": 12191
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "msm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MSM",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "msm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 66.424264
+}

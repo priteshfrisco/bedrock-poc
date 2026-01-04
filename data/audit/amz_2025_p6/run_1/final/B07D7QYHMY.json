@@ -1,0 +1,39 @@
+{
+  "product_id": 3112,
+  "asin": "B07D7QYHMY",
+  "title": "vaidyaratnam digestol liquid pack of 2 (2 * 200ml)",
+  "brand": "vaidyaratnam",
+  "source_subcategory": "enzyme supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 0.067628,
+  "unit": "OZ",
+  "size": 2,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4580,
+      "completion": 1680,
+      "total": 6260
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.953615
+}

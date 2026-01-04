@@ -1,0 +1,170 @@
+{
+  "product_id": 9481,
+  "asin": "B0CHBBLT2Q",
+  "title": "unived elite drink mix 160  isotonic energy drink  2:1 ratio & 40g carbohydrates with betaine & beta-alanine  endurance athletes sports drink bare naked, 8 pack",
+  "brand": "unived",
+  "source_subcategory": "energy powders",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 8,
+  "primary_ingredient": "carbohydrates",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "carbohydrates",
+    "betaine",
+    "beta-alanine"
+  ],
+  "category": "ACTIVE NUTRITION",
+  "subcategory": "PERFORMANCE NUTRITION",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "NON-PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9809,
+      "completion": 6803,
+      "total": 16612
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "carbohydrates"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate fuel",
+              "match_type": "fuzzy",
+              "score": 80.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate powder",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate xtreme",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "betaine"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hci",
+              "match_type": "fuzzy",
+              "score": 77.77777777777779,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hcl",
+              "match_type": "fuzzy",
+              "score": 77.77777777777779,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Taurine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "taurine",
+              "match_type": "fuzzy",
+              "score": 71.42857142857143,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beta-alanine"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Celandine",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "celandine",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Phenylalanine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "phenylalanine",
+              "match_type": "fuzzy",
+              "score": 64.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beta glucans",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 155.936008
+}

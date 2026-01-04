@@ -1,0 +1,119 @@
+{
+  "product_id": 5031,
+  "asin": "B08NWBRPS8",
+  "title": "kinderlyte electrolyte powder, rapid hydration, easy open packets, supplement drink mix (fruit punch, 16 count)",
+  "brand": "kinderlyte",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 16,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 11,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beetroot",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet crystals",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet powder",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "lookup_ingredient returned no direct match for 'electrolyte'; multiple low-confidence candidates were returned. No clear Nature's Way category/subcategory mapping available from the tool."
+      },
+      "reasoning": "The functional term 'electrolyte' appears in the title and describes the product type (electrolyte powder for hydration). It starts at character index 11 in the title string."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9222,
+      "completion": 4279,
+      "total": 13501
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.415872
+}

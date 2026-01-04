@@ -1,0 +1,16 @@
+{
+  "product_id": 87,
+  "asin": "B0D2M79C6Y",
+  "title": "nutrarize (2 pack) pronerve6 neuropathy, pronerve 6 nerve support supplement, pro nerve 6 capsules, pronerve6 pastillas reviews (120 capsules)",
+  "brand": "nutrarize",
+  "source_subcategory": "other dietary supplements",
+  "status": "error",
+  "step_completed": 0,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/main.py\", line 101, in process_single_record\n    attributes = extract_attributes_from_llm_result(llm_result)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/pipeline/step2_llm.py\", line 125, in extract_attributes_from_llm_result\n    'gender': llm_result.get('gender', {}).get('value', 'N/A'),\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+  "error": "'str' object has no attribute 'get'",
+  "processing_time_sec": 43.446848
+}

@@ -1,0 +1,101 @@
+{
+  "product_id": 1868,
+  "asin": "B01AN5VIPM",
+  "title": "chuan xin lian alcohol-free liquid extract, chuan xin lian, andrographis (andrographis paniculata) herb glycerite hawaii pharm natural herbal supplement 4x4 oz",
+  "brand": "hawaiipharm",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "4",
+  "unit": "OZ",
+  "size": 4,
+  "primary_ingredient": "chuan xin lian",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "chuan xin lian",
+    "andrographis"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9360,
+      "completion": 6698,
+      "total": 16058
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chuan xin lian"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Skullcap",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "huang qin",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Rheumania",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "rheumania",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cats Claw",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "cat s claw",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "andrographis"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Andrographis",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "andrographis",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 93.940055
+}

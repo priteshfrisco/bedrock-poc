@@ -1,0 +1,15 @@
+{
+  "product_id": 6861,
+  "asin": "B0B2NDX1W5",
+  "title": "vitamin drink mix hydrant powder packets  no added sugar  natural flavors  non gmo  2500 mcg b12, c + d + b6, folate, iron zinc + more",
+  "brand": "swigg",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 83)",
+  "processing_time_sec": 85.807274
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 628,
+  "asin": "B004QGYRSK",
+  "title": "sqwincher 060103-la 0.11 oz lite qwik stik powder concentrate electrolyte replacement beverage mix, lemonade flavor (10 bags of 50)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title refers to an electrolyte replacement beverage mix (flavor and concentrate) rather than listing functional supplement ingredients; tool-based ingredient extraction withheld."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4594,
+      "completion": 1312,
+      "total": 5906
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.314601
+}

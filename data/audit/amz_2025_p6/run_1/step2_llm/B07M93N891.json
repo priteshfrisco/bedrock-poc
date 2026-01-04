@@ -1,0 +1,176 @@
+{
+  "product_id": 3504,
+  "asin": "B07M93N891",
+  "title": "chlorella powder  8 pounds - kosher, raw green algae, vegan superfood, bulk, pure vegan green protein, rich in vitamins and minerals, great for drinks, teas and smoothies",
+  "brand": "remove",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "lb",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "chlorella",
+      "position": 0,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Exact match 'chlorella' at start of title. lookup_ingredient returned 'Chlorella' \u2192 HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "green algae",
+      "position": 41,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Phrase 'green algae' appears in title ('raw green algae'). lookup_ingredient returned 'Algae' \u2192 HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "protein",
+      "position": 94,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "Title contains 'pure vegan green protein'. lookup_ingredient( 'protein' ) matched to 'Soy Foods' entry in the tool mapping \u2192 ACTIVE NUTRITION / PROTEIN & MEAL REPLACEMENTS (tool match, medium confidence)."
+    },
+    {
+      "name": "vitamins",
+      "position": 111,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "Title contains 'vitamins' ('rich in vitamins and minerals'). lookup_ingredient returned 'Multivitamin' \u2192 COMBINED MULTIVITAMINS / COMBINED MULTIVITAMINS."
+    },
+    {
+      "name": "minerals",
+      "position": 124,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Title contains 'minerals'. lookup_ingredient returned no exact single match but suggested 'Trace Minerals' candidates; best match assigned to BASIC VITAMINS & MINERALS / MINERALS (chosen from tool candidates, low confidence)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9630,
+      "completion": 5426,
+      "total": 15056
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chlorella"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chlorella",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "chlorella",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green algae"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Algae",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "algae",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.1655548375503155
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "minerals"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "minerals and trace",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace mineral",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace minerals",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 72.048608
+}

@@ -1,0 +1,176 @@
+{
+  "product_id": 8530,
+  "asin": "B0C5XFQ5BG",
+  "title": "nad+ boosting supplement 14,300 mg nr with resveratrol quercetin milk thistle - support cellular energy, healthy aging *usa made & tested* (90 count (pack of 1))",
+  "brand": "ultra herbs",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "90",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nad+",
+      "position": 0,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Detected 'nad+' at start of title (position 0). lookup_ingredient('nad+') returned a fuzzy match to 'NADH' with category 'MISCELLANEOUS SUPPLEMENTS' / 'NON-SPECIFIC' (medium confidence). Kept the tool result; NAD+ was matched by the tool to NADH as the closest entry."
+    },
+    {
+      "name": "nicotinamide riboside (nr)",
+      "position": 35,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The token 'nr' appears after the dosage ('14,300 mg nr') starting at position 35 and is commonly shorthand for nicotinamide riboside. lookup_ingredient('nicotinamide riboside (nr)') did not return a confident exact match and provided multiple low-confidence candidates; the best candidate corresponds to Vitamin B3 (BASIC VITAMINS & MINERALS / LETTER VITAMINS). I used that candidate because 'NR' is a form of vitamin B3 (niacinamide/niacin family). Tool indicated low confidence \u2014 noted here."
+    },
+    {
+      "name": "resveratrol",
+      "position": 43,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "Found 'resveratrol' at position 43. lookup_ingredient('resveratrol') returned 'Resveratrol' with category 'HERBAL REMEDIES' and subcategory 'POLYPHENOLS' (exact match)."
+    },
+    {
+      "name": "quercetin",
+      "position": 55,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "Found 'quercetin' at position 55. lookup_ingredient('quercetin') returned 'Quercetin' with category 'HERBAL REMEDIES' and subcategory 'POLYPHENOLS' (exact match)."
+    },
+    {
+      "name": "milk thistle",
+      "position": 65,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'milk thistle' starting at position 65. lookup_ingredient('milk thistle') returned 'Milk Thistle' but with an unexpected mapping to category 'FATTY ACIDS' and subcategory 'HEMP/CBD' (tool returned exact match text but category/subcategory appear inconsistent). I include the tool's returned category/subcategory as provided."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9627,
+      "completion": 5406,
+      "total": 15033
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nad+"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nicotinamide riboside (nr)"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Shark Cartilage",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "cartilago de tiburon",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin Cnot Ester",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "c",
+              "match_type": "fuzzy",
+              "score": 47.61904761904761,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "resveratrol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Resveratrol",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "resveratrol",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.551585
+}

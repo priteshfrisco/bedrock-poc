@@ -1,0 +1,14 @@
+{
+  "product_id": 4761,
+  "asin": "B08HZ881HW",
+  "title": "whole foods market, cheese muenster charcuterie",
+  "brand": "whole foods market",
+  "source_subcategory": "other cheeses",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.008088,
+  "lookup_action": "REMOVE"
+}

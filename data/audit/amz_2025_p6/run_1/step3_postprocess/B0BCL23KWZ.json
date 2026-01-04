@@ -1,0 +1,58 @@
+{
+  "product_id": 7324,
+  "asin": "B0BCL23KWZ",
+  "title": "swanson vitamin a 10,000 iu (3,000 mcg rae) natural nourishment for bone, skin health, vision support & immune system function - high absorption vitamin a 250 softgels (2 pack)",
+  "brand": "swanson",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": "250",
+  "unit": "COUNT",
+  "size": "2",
+  "primary_ingredient": "vitamin a",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "vitamin a"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "LETTER VITAMINS",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9099,
+      "completion": 4483,
+      "total": 13582
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin a"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin A",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "vitamin a",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 48.649376
+}

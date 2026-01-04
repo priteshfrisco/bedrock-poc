@@ -1,0 +1,109 @@
+{
+  "product_id": 8739,
+  "asin": "B0C8YBSDW4",
+  "title": "nac supplement n-acetyl cysteine 14,233mg - high purity with quercetin, milk thistle for lung, liver and immune support (180 count (pack of 1))",
+  "brand": "grimed",
+  "source_subcategory": "milk thistle herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "nac",
+  "num_ingredients": 4,
+  "all_ingredients": [
+    "nac",
+    "n-acetyl cysteine",
+    "quercetin",
+    "milk thistle"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "AMINO ACIDS",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9360,
+      "completion": 5305,
+      "total": 14665
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nac"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NAC",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "n a c",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "n-acetyl cysteine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NAC",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "n-acetylcysteine",
+          "match_type": "fuzzy",
+          "confidence": "high",
+          "score": 96
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 57.214467
+}

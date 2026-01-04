@@ -1,0 +1,58 @@
+{
+  "product_id": 6462,
+  "asin": "B09V2Q6YVJ",
+  "title": "hemp oil - 3 pack - 800,000 maximum strength - pure & co2 extract drops - organic, vegan, non-gmo, grown in usa",
+  "brand": "hmone",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "hemp oil",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'hemp oil' appears at the start of the title (index 0). lookup_ingredient('hemp oil') returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. No other functional ingredient names are present."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9075,
+      "completion": 3103,
+      "total": 12178
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 66.215789
+}

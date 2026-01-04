@@ -1,0 +1,39 @@
+{
+  "product_id": 10126,
+  "asin": "B0CNGLPTRB",
+  "title": "justinstones 7 chakra stone champagne wire wrapped crystal quartz pendant necklace 22 inch",
+  "brand": "justinstones",
+  "source_subcategory": "other alternative medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4580,
+      "completion": 531,
+      "total": 5111
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 8.534034
+}

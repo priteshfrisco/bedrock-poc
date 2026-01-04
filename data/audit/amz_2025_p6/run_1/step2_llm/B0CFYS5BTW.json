@@ -1,0 +1,202 @@
+{
+  "product_id": 9281,
+  "asin": "B0CFYS5BTW",
+  "title": "unbroken electrolyte tablets for post workout recovery, hydration tablets, immune support supplement, electrolyte drink with amino acids, vitamins, minerals, & salts, lemon flavor, 10 ct",
+  "brand": "unbroken",
+  "source_subcategory": "amino blends & bcaas",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 10,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 9,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title's first functional term is 'electrolyte' at position 9 (\"unbroken electrolyte tablets ...\"). lookup_ingredient returned no clear match (ambiguous candidates unrelated like beet root). Electrolyte (as a term) did not map cleanly in the lookup results, so category/subcategory set to UNKNOWN based on the tool response."
+    },
+    {
+      "name": "amino acids",
+      "position": 125,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "\"amino acids\" appears at position 125 (\"...with amino acids...\"). lookup_ingredient matched this to BCAA with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS'. Using the tool's match."
+    },
+    {
+      "name": "vitamins",
+      "position": 138,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "\"vitamins\" appears at position 138. lookup_ingredient returned a match to 'Multivitamin' (category/subcategory: COMBINED MULTIVITAMINS). Using the tool's normalized result for 'vitamins'. Note: the title uses the plural 'vitamins' rather than the explicit keyword 'multivitamin'; we follow the lookup result."
+    },
+    {
+      "name": "minerals",
+      "position": 148,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "\"minerals\" appears at position 148. lookup_ingredient did not return a single definitive 'found' result but suggested candidates mapping to 'Trace Minerals' (category 'BASIC VITAMINS & MINERALS' / subcategory 'MINERALS'). Based on the lookup candidates, minerals are assigned to that category/subcategory."
+    },
+    {
+      "name": "salts",
+      "position": 160,
+      "category": "HOMEOPATHICS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "\"salts\" appears at position 160 (\"& salts\"). lookup_ingredient returned a match to 'Cell Salt' with category 'HOMEOPATHICS' and subcategory 'NON-SPECIFIC'. Using the tool's matched result."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9791,
+      "completion": 6988,
+      "total": 16779
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "amino acids"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "branched chain amino acids",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.225189729299222
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "minerals"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "minerals and trace",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace mineral",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace minerals",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "salts"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salts",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 128.207372
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 165,
+  "asin": "B000KOU0EC",
+  "title": "anacin tablets 100-count box",
+  "brand": "anacin",
+  "source_subcategory": "pain relievers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - PAIN & INFLAMMATION",
+  "remap_reason": "Maps to OTC / OTC - PAIN & INFLAMMATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: The product is an OTC medication (Anacin). Ingredient extraction and lookup are not performed for non-supplements per the safety instructions."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4570,
+      "completion": 1606,
+      "total": 6176
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 31.995449
+}

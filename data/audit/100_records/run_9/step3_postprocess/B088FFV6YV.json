@@ -1,0 +1,59 @@
+{
+  "product_id": 86,
+  "asin": "B088FFV6YV",
+  "title": "healthyhey organic spirulina powder micro superfood, rich in protein, vitamins & minerals 100 g (pack of 1)",
+  "brand": "healthyhey organic",
+  "source_subcategory": "superfoods",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "N/A",
+  "gender": "N/A",
+  "form": "N/A",
+  "organic": "N/A",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "business_rules_reasoning": "",
+  "has_business_rule_changes": false,
+  "has_unknown_values": false,
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 11198,
+      "completion": 2666,
+      "total": 13864
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "spirulina"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Spirulina",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "spirulina",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 36.596061
+}

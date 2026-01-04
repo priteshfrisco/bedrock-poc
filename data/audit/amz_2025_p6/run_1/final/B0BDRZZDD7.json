@@ -1,0 +1,109 @@
+{
+  "product_id": 7367,
+  "asin": "B0BDRZZDD7",
+  "title": "keto blast gummies maax acv with pomegranate juice beet root b12 60 gummys",
+  "brand": "nutrocell",
+  "source_subcategory": "beet root supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "apple cider vinegar",
+  "num_ingredients": 4,
+  "all_ingredients": [
+    "apple cider vinegar",
+    "pomegranate juice",
+    "beet root",
+    "vitamin b12"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "FORMULAS",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9327,
+      "completion": 4383,
+      "total": 13710
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pomegranate juice"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pomegranate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "pomegranate",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b12"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B12",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 12",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 48.296522
+}

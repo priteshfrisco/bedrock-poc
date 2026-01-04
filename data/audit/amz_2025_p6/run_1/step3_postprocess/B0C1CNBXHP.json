@@ -1,0 +1,39 @@
+{
+  "product_id": 8186,
+  "asin": "B0C1CNBXHP",
+  "title": "ungent them get well soon gifts for men, feel better recovery gifts after surgery cancer gifts for men, inspirational bracelets gifts for men him healing stone anxiety bracelet",
+  "brand": "ungent them",
+  "source_subcategory": "other alternative medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4594,
+      "completion": 668,
+      "total": 5262
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 9.503116
+}

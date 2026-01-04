@@ -1,0 +1,14 @@
+{
+  "product_id": 8113,
+  "asin": "B0BZ3QFZLJ",
+  "title": "kivus nutritional_supplement",
+  "brand": "kivus",
+  "source_subcategory": "other thermogenics supplements",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.002293,
+  "lookup_action": "REMOVE"
+}

@@ -1,0 +1,62 @@
+{
+  "product_id": 5659,
+  "asin": "B097TWSB74",
+  "title": "vegan pure - outdoor brunch/multivitamin strength growth",
+  "brand": "vegan pure",
+  "source_subcategory": "multivitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "multivitamin",
+      "position": 28,
+      "lookup_result": {
+        "ingredient": "Multivitamin",
+        "nw_category": "COMBINED MULTIVITAMINS",
+        "nw_subcategory": "COMBINED MULTIVITAMINS",
+        "found": true
+      },
+      "reasoning": "The token 'multivitamin' appears in the title starting at character index 28 (after 'outdoor brunch/'). Treated as a functional ingredient (combined multivitamins)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9035,
+      "completion": 2843,
+      "total": 11878
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multivitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "alive once daily",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 31.850346
+}

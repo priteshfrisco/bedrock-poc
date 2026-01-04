@@ -1,0 +1,33 @@
+{
+  "product_id": 996,
+  "asin": "B00B53YCKU",
+  "title": "cell shield rtq - 60 capsules - 2 bottles",
+  "brand": "remove",
+  "source_subcategory": "fat burners",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4575,
+      "completion": 1369,
+      "total": 5944
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 24.298088
+}

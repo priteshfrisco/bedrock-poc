@@ -1,0 +1,14 @@
+{
+  "product_id": 3574,
+  "asin": "B07NJ3MYG3",
+  "title": "vitamin water energy - tropical citrus, 20 fl oz bottle (pack of 6, total of 120 fl oz)",
+  "brand": "glaceau vitaminwater",
+  "source_subcategory": "energy drinks",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.011496,
+  "lookup_action": "REMOVE"
+}

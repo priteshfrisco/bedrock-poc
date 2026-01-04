@@ -1,0 +1,66 @@
+{
+  "product_id": 10,
+  "asin": "B07661Z3YX",
+  "title": "doctor's best high absorption coq10 with bioperine, gluten free, naturally fermented, heart health, energy production,100 mg, 120 count",
+  "brand": "doctor's best",
+  "source_subcategory": "antioxidants",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "N/A",
+  "gender": "N/A",
+  "form": "N/A",
+  "organic": "N/A",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 11984,
+      "completion": 3777,
+      "total": 15761
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coq10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "coq10",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioperine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bioperine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.730854
+}

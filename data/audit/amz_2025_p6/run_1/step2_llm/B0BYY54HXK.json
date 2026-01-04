@@ -1,0 +1,36 @@
+{
+  "product_id": 8107,
+  "asin": "B0BYY54HXK",
+  "title": "sigmaceutical deep cleanse",
+  "brand": "sigmaceutical",
+  "source_subcategory": "weight loss detox & cleanse",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title does not list dietary supplement ingredients and instead appears to be a topical/cleansing product ('deep cleanse')."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4568,
+      "completion": 950,
+      "total": 5518
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.203133
+}

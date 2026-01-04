@@ -1,0 +1,165 @@
+{
+  "product_id": 10432,
+  "asin": "B0CSGVQSWV",
+  "title": "pure ionic magnesium citrate powder - natural & bioavailable water-soluble supplement with citric acid - supports energy, muscle, bone & heart function  passion fruit 300g 75-servings",
+  "brand": "mag365",
+  "source_subcategory": "magnesium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 75,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "magnesium citrate",
+      "position": 11,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Magnesium",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "confidence": "high"
+      },
+      "reasoning": "'magnesium citrate' appears in the title starting at character index 11 ('pure ionic magnesium citrate powder'). lookup_ingredient() returned normalized 'Magnesium' with category BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "citric acid",
+      "position": 91,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Caprylic Acid",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "ALL OTHER OILS",
+            "score": 75.0
+          },
+          {
+            "ingredient": "Folic Acid",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "score": 66.66666666666667
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned ambiguous/low-confidence matches."
+      },
+      "reasoning": "'citric acid' appears in the title starting at character index 91 ('...supplement with citric acid - ...'). lookup_ingredient() did not return a clear match (ambiguous/low-confidence), so category/subcategory set to UNKNOWN; candidates returned by the tool are noted in lookup_result."
+    },
+    {
+      "name": "passion fruit",
+      "position": 153,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Passion Flower",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "confidence": "medium"
+      },
+      "reasoning": "'passion fruit' (flavor) appears in the title starting at character index 153 ('...passion fruit 300g 75-servings'). lookup_ingredient() returned a match mapped to 'Passion Flower' with category/subcategory as returned by the tool (FATTY ACIDS / HEMP/CBD)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9457,
+      "completion": 6482,
+      "total": 15939
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium citrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "citric acid"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Caprylic Acid",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "ALL OTHER OILS",
+              "keyword": "caprylic acid",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "b 9",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "b9",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "passion fruit"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Passion Flower",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "passion flower",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 94.890013
+}

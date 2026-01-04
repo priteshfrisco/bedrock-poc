@@ -1,0 +1,145 @@
+{
+  "product_id": 7974,
+  "asin": "B0BVZGM9L4",
+  "title": "pureclinica triple strength omega 3 1000mg x 1080 capsules - 3 years supply. with a concentrated 650mg of the actives dha & epa per capsule",
+  "brand": "pureclinica",
+  "source_subcategory": "omega oils",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": "1080",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "omega 3",
+      "position": 28,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Fish Oil",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "FISH"
+      },
+      "reasoning": "The title explicitly contains 'omega 3' starting at character index 28. lookup_ingredient returned normalized ingredient 'Fish Oil' with category 'FATTY ACIDS' and subcategory 'FISH'."
+    },
+    {
+      "name": "dha",
+      "position": 118,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "DHA",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "DHA"
+      },
+      "reasoning": "The title explicitly contains 'dha' starting at index 118 ('dha & epa'). lookup_ingredient returned 'DHA' under category 'FATTY ACIDS', subcategory 'DHA'."
+    },
+    {
+      "name": "epa",
+      "position": 124,
+      "lookup_result": {
+        "found": false,
+        "tool_message": "lookup_ingredient did not return an exact match for 'epa'; provided candidate suggestions unrelated or low-confidence.",
+        "assigned_by_model": {
+          "ingredient": "EPA",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "EPA"
+        }
+      },
+      "reasoning": "The title explicitly contains 'epa' starting at index 124 ('dha & epa'). The lookup tool did not return an exact match for 'epa' (found=false). Based on domain knowledge, EPA (eicosapentaenoic acid) is a fatty acid closely related to omega-3 fish oil; therefore I assign category 'FATTY ACIDS' and subcategory 'EPA' and note the tool did not return an exact match."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9452,
+      "completion": 4226,
+      "total": 13678
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "dha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "DHA",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "DHA",
+          "keyword": "dha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "epa"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ephedra",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ephedra",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dehydroepiandrosterone",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dhea",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 50.530238
+}

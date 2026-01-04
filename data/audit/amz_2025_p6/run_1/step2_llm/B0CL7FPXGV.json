@@ -1,0 +1,58 @@
+{
+  "product_id": 9905,
+  "asin": "B0CL7FPXGV",
+  "title": "stinging nettle leaf usda organic  alcohol extract, high-potency herbal drops  made from 100% certified organic stinging nettle (urtica dioica) dried leaf (2 oz)",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "stinging nettle",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title begins with 'stinging nettle leaf...' so the ingredient 'stinging nettle' starts at character index 0. lookup_ingredient('stinging nettle') returned normalized ingredient 'Nettles' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9091,
+      "completion": 2840,
+      "total": 11931
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "stinging nettle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Nettles",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "nettle",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 40.326125
+}

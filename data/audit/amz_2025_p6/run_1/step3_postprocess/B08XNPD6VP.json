@@ -1,0 +1,58 @@
+{
+  "product_id": 5306,
+  "asin": "B08XNPD6VP",
+  "title": "now foods supplements, kids liquid echinacea with dropper, immune system support, formulated for kids, 2 fl ounce, packaging may vary",
+  "brand": "now",
+  "source_subcategory": "echinacea herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "2",
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "echinacea",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "echinacea"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "IMMUNE HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9061,
+      "completion": 4245,
+      "total": 13306
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "echinacea"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Echinacea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "echinacea",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.27334
+}

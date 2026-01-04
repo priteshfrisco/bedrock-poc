@@ -1,0 +1,203 @@
+{
+  "product_id": 2208,
+  "asin": "B01M3SY8ET",
+  "title": "wu jia pi (eleutherococcus gracilistylus) tincture, dried roots liquid extract, acanthopanax, herbal supplement 4 oz",
+  "brand": "hawaiipharm",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "oz",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "wu jia pi",
+      "position": 0,
+      "lookup_result": {
+        "found": false,
+        "ingredient_returned": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "reasoning": "lookup_ingredient returned found=false / UNKNOWN for 'wu jia pi'. No clear direct match in the lookup tool results. Tool provided low-confidence candidate suggestions but none were a clear match."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title clearly lists 'wu jia pi' (start of title). The lookup tool did not return a definitive category/subcategory for this name."
+    },
+    {
+      "name": "eleutherococcus gracilistylus",
+      "position": 11,
+      "lookup_result": {
+        "found": false,
+        "ingredient_returned": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "reasoning": "lookup_ingredient returned found=false / UNKNOWN for 'eleutherococcus gracilistylus'. Tool suggestions were low-confidence and ambiguous."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The Latin name 'eleutherococcus gracilistylus' appears in parentheses immediately after 'wu jia pi' and is therefore extracted as an ingredient. The lookup tool did not provide a definitive category/subcategory."
+    },
+    {
+      "name": "acanthopanax",
+      "position": 80,
+      "lookup_result": {
+        "found": false,
+        "ingredient_returned": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "reasoning": "lookup_ingredient returned found=false / UNKNOWN for 'acanthopanax'. Tool returned ambiguous, low-confidence candidate suggestions."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title explicitly lists 'acanthopanax' as a component. The lookup tool did not return a definitive category/subcategory for this name."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9787,
+      "completion": 4439,
+      "total": 14226
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "wu jia pi"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Muira Puama",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "muira puama",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Uva Ursi",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "uva ursi",
+              "match_type": "fuzzy",
+              "score": 47.05882352941176,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "multi vitamin",
+              "match_type": "fuzzy",
+              "score": 45.45454545454546,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "eleutherococcus gracilistylus"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Siberian Ginseng",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "eleuthero",
+              "match_type": "fuzzy",
+              "score": 47.36842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemon grass",
+              "match_type": "fuzzy",
+              "score": 44.99999999999999,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pelargonium",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "south african geranium",
+              "match_type": "fuzzy",
+              "score": 43.13725490196079,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "acanthopanax"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Acetaminophen",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "acetaminophen",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "bacopa",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bacopa",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Astaxanthin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "astaxanthin",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 69.034113
+}

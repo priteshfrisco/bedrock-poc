@@ -1,0 +1,104 @@
+{
+  "product_id": 9658,
+  "asin": "B0CJCG6J84",
+  "title": "hemp gummies extra strength (2 pack) high potency fruity gummy with hemp oil - premium organic edibles gummies - natural hemp omega 3 nutritional supplements hemp gummies",
+  "brand": "hemyum",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The word 'hemp' appears at the very start of the title (index 0). lookup_ingredient returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "hemp oil",
+      "position": 68,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'hemp oil' appears in '...with hemp oil...' starting at index 68. lookup_ingredient matched this to 'Hemp' (category 'FATTY ACIDS', subcategory 'HEMP/CBD')."
+    },
+    {
+      "name": "omega 3",
+      "position": 126,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The phrase 'omega 3' appears in '...natural hemp omega 3 nutritional...' with 'omega' starting at index 126. lookup_ingredient returned a match for 'omega 3' mapping to normalized ingredient 'Fish Oil' in category 'FATTY ACIDS', subcategory 'FISH'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9245,
+      "completion": 4983,
+      "total": 14228
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 65.435609
+}

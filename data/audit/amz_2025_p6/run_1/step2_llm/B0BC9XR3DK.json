@@ -1,0 +1,199 @@
+{
+  "product_id": 7316,
+  "asin": "B0BC9XR3DK",
+  "title": "electrolytes by santa cruz paleo (dragonfruit), 20 count (pack of 1)",
+  "brand": "santa cruz paleo",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 20,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 0,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beetroot",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet crystals",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet powder",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no direct match for 'electrolytes'; multiple low-confidence candidates provided. The lookup result did not return a definitive Nature's Way category/subcategory."
+      }
+    },
+    {
+      "name": "dragonfruit",
+      "position": 34,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Grape Fruit Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "keyword": "grapefruit seed",
+            "match_type": "fuzzy",
+            "score": 53.84615384615385,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Grape Fruit Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "keyword": "grape fruit seed",
+            "match_type": "fuzzy",
+            "score": 51.85185185185186,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Zma",
+            "nw_category": "ACTIVE NUTRITION",
+            "nw_subcategory": "PERFORMANCE NUTRITION",
+            "keyword": "zmag t",
+            "match_type": "bm25",
+            "score": 0.0,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no direct match for 'dragonfruit'; multiple low-confidence/fuzzy candidates returned. Likely a flavor term rather than a primary functional ingredient."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9489,
+      "completion": 3729,
+      "total": 13218
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "dragonfruit"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grapefruit seed",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grape fruit seed",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Zma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "zmag t",
+              "match_type": "bm25",
+              "score": 0.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 50.278751
+}

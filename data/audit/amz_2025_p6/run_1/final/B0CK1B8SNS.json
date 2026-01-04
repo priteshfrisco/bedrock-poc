@@ -1,0 +1,75 @@
+{
+  "product_id": 9743,
+  "asin": "B0CK1B8SNS",
+  "title": "armracolostrumpremiumpowder,grassfed,guthealthbloatingimmunityskin&hair,contains400+bioactivenutrients,keto,gluten&fatfree(unflavored,bloodorangebundle120servings)",
+  "brand": "armra",
+  "source_subcategory": "other dietary supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "colostrum",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "colostrum",
+    "blood orange"
+  ],
+  "category": "PROBIOTICS+",
+  "subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "health_focus": "IMMUNE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9208,
+      "completion": 5721,
+      "total": 14929
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "colostrum"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Colostrum",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "colostrum",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "blood orange"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bloodroot",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "blood root",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 82.163284
+}

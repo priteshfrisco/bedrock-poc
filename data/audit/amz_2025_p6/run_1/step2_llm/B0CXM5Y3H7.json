@@ -1,0 +1,150 @@
+{
+  "product_id": 10738,
+  "asin": "B0CXM5Y3H7",
+  "title": "iron supplement gummies 18mg for women & men, sugar free vegan iron with beet root, vitamin c,b12,zinc - iron vitamins for blood builder & energy support for iron deficiency,nitric oxide levels 60 cts",
+  "brand": "lilicare",
+  "source_subcategory": "iron supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "iron",
+      "position": 0,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The term 'iron' appears at the start of the title (index 0). lookup_ingredient returned: ingredient='Iron', nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='MINERALS'. Iron is the first ingredient and thus primary (see primary_ingredient)."
+    },
+    {
+      "name": "beet root",
+      "position": 73,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Phrase 'beet root' appears in the title at index 73 ('...iron with beet root,...'). lookup_ingredient returned: ingredient='Beet Root', nw_category='HERBAL REMEDIES', nw_subcategory='FOOD SUPPLEMENTS'."
+    },
+    {
+      "name": "vitamin c",
+      "position": 84,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The substring 'vitamin c' starts at index 84 ('...beet root, vitamin c,b12,zinc...'). lookup_ingredient was called for 'vitamin c' and the lookup returned category/subcategory: nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='LETTER VITAMINS' (lookup returned a closely related letter-vitamins mapping)."
+    },
+    {
+      "name": "vitamin b12",
+      "position": 94,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The token 'b12' (vitamin B12) starts at index 94 (',' at 93 then 'b' at 94). lookup_ingredient returned: ingredient='Vitamin B12', nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='LETTER VITAMINS'."
+    },
+    {
+      "name": "zinc",
+      "position": 98,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'zinc' begins at index 98 in the sequence '...b12,zinc...'. lookup_ingredient returned: ingredient='Zinc', nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='MINERALS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9446,
+      "completion": 9583,
+      "total": 19029
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "iron"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Iron",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "iron",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b12"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B12",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 12",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 139.424148
+}

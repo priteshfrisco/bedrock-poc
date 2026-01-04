@@ -1,0 +1,127 @@
+{
+  "product_id": 566,
+  "asin": "B0041MB1XS",
+  "title": "zhi zi - gardenia fruit, 100 grams",
+  "brand": "e-fong",
+  "source_subcategory": "energy powders",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 3.5274,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "zhi zi",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "zhi zi",
+    "gardenia fruit"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "FORMULAS",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9460,
+      "completion": 3917,
+      "total": 13377
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zhi zi"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B1",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "thiamin",
+              "match_type": "fuzzy",
+              "score": 46.15384615384615,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Willow Bark",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "white willow",
+              "match_type": "fuzzy",
+              "score": 44.44444444444444,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Fish Oil",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "FISH",
+              "keyword": "fish oil",
+              "match_type": "fuzzy",
+              "score": 42.85714285714286,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gardenia fruit"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grape fruit seed",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "grapefruit seed",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Fruit Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "gse",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 64.991035
+}

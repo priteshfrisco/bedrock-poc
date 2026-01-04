@@ -1,0 +1,155 @@
+{
+  "product_id": 7054,
+  "asin": "B0B5YKQJZV",
+  "title": "humann superbeets circulation gummies & superbeets black cherry powder",
+  "brand": "humann",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "superbeets",
+      "position": 7,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "details": {
+          "reason": "lookup_ingredient returned found=false and needs disambiguation for 'superbeets'. No exact match in the database. Candidate suggestions (low confidence) were provided but none was a clear match.",
+          "candidates": [
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "superfoods",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Zma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "zma supplements",
+              "match_type": "fuzzy",
+              "score": 56.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "elderberries",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low"
+        }
+      },
+      "reasoning": "The word 'superbeets' appears in the title and is the brand/formulation name for a beet product; it is treated as a functional ingredient term in the title. lookup_ingredient did not return an exact normalized match."
+    },
+    {
+      "name": "black cherry",
+      "position": 51,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Blackberry",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "details": {
+          "keyword": "black berry",
+          "match_type": "fuzzy",
+          "score": 86,
+          "confidence": "medium",
+          "reason": "lookup_ingredient matched 'black cherry' (title text) to 'Blackberry' in the database (fuzzy match). This likely reflects a flavor/fruit mapping in the lookup tool."
+        }
+      },
+      "reasoning": "The title contains 'black cherry powder' \u2014 'black cherry' is a flavor/fruit term in the product name and was identified as an ingredient-like term. lookup_ingredient returned a fuzzy match to 'Blackberry'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9294,
+      "completion": 4750,
+      "total": 14044
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "superbeets"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "superfoods",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Zma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "zma supplements",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "elderberries",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black cherry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Blackberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black berry",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 86
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 79.291511
+}

@@ -5,8 +5,9 @@ Step 2: LLM Extraction - Extract product attributes using GPT
 from typing import Dict, Any
 from src.llm.gpt_client import GPTClient
 from src.llm.prompt_builder import build_complete_prompt
-from src.llm.tools import INGREDIENT_TOOL
+from src.llm.tools import ALL_TOOLS
 from src.llm.tools.ingredient_lookup import lookup_ingredient
+from src.llm.tools.business_rules_tool import apply_business_rules_tool
 from src.core.log_manager import LogManager
 from src.llm.utils.error_handler import APIErrorHandler
 
@@ -42,9 +43,12 @@ def extract_llm_attributes(
     def make_llm_call():
         client = GPTClient()
         client.register_tool('lookup_ingredient', lookup_ingredient)
+        client.register_tool('apply_business_rules', apply_business_rules_tool)
         
         prompt = build_complete_prompt(title)
-        return client.extract_attributes(prompt, tools=[INGREDIENT_TOOL], use_schema=False)
+        # IMPORTANT: use_schema=False because business_rules is populated via tool call
+        # The schema is too strict and doesn't allow for the tool call workflow
+        return client.extract_attributes(prompt, tools=ALL_TOOLS, use_schema=False)
     
     # Execute with retry logic
     result = error_handler.execute_with_retry(make_llm_call, product_id)
@@ -126,7 +130,8 @@ def extract_attributes_from_llm_result(llm_result: Dict[str, Any]) -> Dict[str, 
         'count': llm_result.get('count', {}).get('value', 'N/A'),
         'unit': llm_result.get('unit', {}).get('value', 'N/A'),
         'size': llm_result.get('size', {}).get('value', 'N/A'),
-        'ingredients': normalized_ingredients
+        'ingredients': normalized_ingredients,
+        'business_rules': llm_result.get('business_rules', {})
     }
 
 

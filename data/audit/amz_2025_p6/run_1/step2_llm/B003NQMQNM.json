@@ -1,0 +1,58 @@
+{
+  "product_id": 532,
+  "asin": "B003NQMQNM",
+  "title": "gai herbs valerian root, certified organic",
+  "brand": "gaia herbs",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "valerian root",
+      "position": 10,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Detected 'valerian root' beginning at character index 10 in the title 'gai herbs valerian root, certified organic'. Called lookup_ingredient('valerian root') which returned normalized ingredient 'Valerian' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. (Using the tool output as returned.)"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9027,
+      "completion": 2254,
+      "total": 11281
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "valerian root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Valerian",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "valarian",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 55.304555
+}

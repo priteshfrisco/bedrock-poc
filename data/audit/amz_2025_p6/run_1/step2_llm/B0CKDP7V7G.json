@@ -1,0 +1,15 @@
+{
+  "product_id": 9788,
+  "asin": "B0CKDP7V7G",
+  "title": "airborneimmunesupportsupplementwithelectrolytesvitaminczinc,sugarfreeeffervescentreplenisher10fizzydrinktablets(watermelonflavor)",
+  "brand": "airborne",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 86)",
+  "processing_time_sec": 70.079868
+}

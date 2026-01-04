@@ -1,0 +1,36 @@
+{
+  "product_id": 5595,
+  "asin": "B0961PHJGC",
+  "title": "1 bottle attract customers spiritual water-llama clientes indio agua espiritual 16 oz. - magick pagan",
+  "brand": "mistic",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: No functional dietary supplement ingredients are present in the title; product is spiritual/ritual water ('spiritual water', 'agua espiritual', 'magick pagan'), so ingredient extraction is not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4585,
+      "completion": 1214,
+      "total": 5799
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 21.280617
+}

@@ -1,0 +1,81 @@
+{
+  "product_id": 3824,
+  "asin": "B07TDSVM2P",
+  "title": "vidanatspirulinaalgae200tablets\u00e2400mgpertablet\u00e2naturalsuperfoodforenergy,immunesupport&detox\u00e2200tablets(packof1)",
+  "brand": "vidanat",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 200,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "spirulina",
+      "position": 8,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected the word 'spirulina' starting at character index 8 in the raw title. lookup_ingredient returned normalized ingredient 'Spirulina' with category/subcategory as shown."
+    },
+    {
+      "name": "algae",
+      "position": 16,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected the word 'algae' starting at character index 16 in the raw title. lookup_ingredient returned normalized ingredient 'Algae' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9173,
+      "completion": 4029,
+      "total": 13202
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "spirulina"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Spirulina",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "spirulina",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "algae"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Algae",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "algae",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 46.162795
+}

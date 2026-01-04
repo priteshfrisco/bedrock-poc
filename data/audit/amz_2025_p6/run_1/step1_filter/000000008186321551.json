@@ -1,0 +1,14 @@
+{
+  "product_id": 47,
+  "asin": "000000008186321551",
+  "title": "vegetable oils sources & enhancement research in i",
+  "brand": "jain brothers",
+  "source_subcategory": "vegetable oil",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004895,
+  "lookup_action": "REMOVE"
+}

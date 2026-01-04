@@ -1,0 +1,14 @@
+{
+  "product_id": 2163,
+  "asin": "B01LVZ5E14",
+  "title": "brown cow, yogurt cream top vanilla, 32 ounce",
+  "brand": "brown cow",
+  "source_subcategory": "yogurt",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.01007,
+  "lookup_action": "REMOVE"
+}

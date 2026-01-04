@@ -1,0 +1,36 @@
+{
+  "product_id": 1275,
+  "asin": "B00IVPTP34",
+  "title": "gericare low dose enteric coated aspirin 81mg pain reliever, 100 count (pack of 1)",
+  "brand": "gericare",
+  "source_subcategory": "pain relievers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - PAIN & INFLAMMATION",
+  "remap_reason": "Maps to OTC / OTC - PAIN & INFLAMMATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Active ingredient is aspirin (pharmaceutical). Ingredient extraction and lookup suppressed because product is not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4586,
+      "completion": 1083,
+      "total": 5669
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.214202
+}

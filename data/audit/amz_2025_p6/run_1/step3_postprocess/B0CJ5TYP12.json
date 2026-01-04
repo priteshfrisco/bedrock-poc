@@ -1,0 +1,144 @@
+{
+  "product_id": 9629,
+  "asin": "B0CJ5TYP12",
+  "title": "ryse signature series pump daddy v2  official noel deyzel non stim pre workout  with citrulline, beta alanine, creatine  40 servings (blue raspberry)",
+  "brand": "ryse up supplements",
+  "source_subcategory": "pre-workout powders",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 40,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "citrulline",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "citrulline",
+    "beta alanine",
+    "creatine"
+  ],
+  "category": "UNKNOWN",
+  "subcategory": "UNKNOWN",
+  "health_focus": "WEIGHT MANAGEMENT",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9618,
+      "completion": 5616,
+      "total": 15234
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "citrulline"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina blue green algae",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cetirizine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "cetirizine",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beta alanine"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beta glucans",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "glucan",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Carotene",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "beta carotene",
+              "match_type": "bm25",
+              "score": 4.466481390640588,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "creatine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Creatine",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PERFORMANCE NUTRITION",
+          "keyword": "creatine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 77.949593
+}

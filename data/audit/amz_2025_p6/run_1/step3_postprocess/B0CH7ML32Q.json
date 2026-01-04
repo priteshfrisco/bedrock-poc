@@ -1,0 +1,58 @@
+{
+  "product_id": 9464,
+  "asin": "B0CH7ML32Q",
+  "title": "(5 pack) earthmed gummies, earthmed hemp gummies enriched with all natural hemp, earthmed supplement for overall body function, earth med gummy s used to revive the body deep within (300 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 300,
+  "unit": "COUNT",
+  "size": 5,
+  "primary_ingredient": "hemp",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "hemp"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9079,
+      "completion": 2529,
+      "total": 11608
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.505771
+}

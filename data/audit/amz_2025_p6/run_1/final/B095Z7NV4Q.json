@@ -1,0 +1,42 @@
+{
+  "product_id": 5591,
+  "asin": "B095Z7NV4Q",
+  "title": "mistic 3 bottles 7 churches spiritual water-7 espiritus agua espiritual 16 oz. - magick pagan (3), 1",
+  "brand": "mistic",
+  "source_subcategory": "other alternative medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4592,
+      "completion": 1293,
+      "total": 5885
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 22.570981
+}

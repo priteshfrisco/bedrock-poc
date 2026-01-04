@@ -1,0 +1,14 @@
+{
+  "product_id": 1970,
+  "asin": "B01DKYQSFS",
+  "title": "pure mccartney",
+  "brand": "paul mccartney",
+  "source_subcategory": "sugars",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.008292,
+  "lookup_action": "REMOVE"
+}

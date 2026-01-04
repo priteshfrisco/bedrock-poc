@@ -1,0 +1,58 @@
+{
+  "product_id": 10530,
+  "asin": "B0CTRQJKTW",
+  "title": "livorka 3 pack - therazen gummies - therazen 90 gummies for 3 months, thera zen gummies 9000 mg per bottle, therazen hemp great taste gummys, therazene, therazengummies.",
+  "brand": "livorka",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 117,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The token 'hemp' appears in the title ('therazen hemp great taste gummys') at character index 117. lookup_ingredient returned category FATTY ACIDS and subcategory HEMP/CBD."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9097,
+      "completion": 4797,
+      "total": 13894
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 78.110802
+}

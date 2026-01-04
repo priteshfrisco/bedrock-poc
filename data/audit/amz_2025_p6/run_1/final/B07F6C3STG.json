@@ -1,0 +1,14 @@
+{
+  "product_id": 3176,
+  "asin": "B07F6C3STG",
+  "title": "beehive cheese company seahive",
+  "brand": "beehive cheese",
+  "source_subcategory": "other cheeses",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.027641,
+  "lookup_action": "REMOVE"
+}

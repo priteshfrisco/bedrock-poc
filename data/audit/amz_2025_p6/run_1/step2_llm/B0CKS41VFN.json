@@ -1,0 +1,33 @@
+{
+  "product_id": 9840,
+  "asin": "B0CKS41VFN",
+  "title": "(2 pack) wellness peak gummies, wellness peak energy gummies organic joint and cognitive health, wellness peak reviews, wellness peak performance gummy, wellness peak gomitas (120 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4596,
+      "completion": 1491,
+      "total": 6087
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.344393
+}

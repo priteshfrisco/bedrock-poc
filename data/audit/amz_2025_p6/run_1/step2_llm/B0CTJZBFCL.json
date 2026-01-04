@@ -1,0 +1,36 @@
+{
+  "product_id": 10507,
+  "asin": "B0CTJZBFCL",
+  "title": "mookaitedecor 1 lb strawberry quartz raw crystals rough healing stones rocks for tumbling, cutting, polishing, wire wrapping, wicca and reiki balancing",
+  "brand": "mookaitedecor",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: the title lists 'strawberry quartz raw crystals' (minerals/stones), not functional supplement ingredients; lookup not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4598,
+      "completion": 897,
+      "total": 5495
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.229262
+}

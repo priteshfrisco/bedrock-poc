@@ -1,0 +1,127 @@
+{
+  "product_id": 8539,
+  "asin": "B0C61W458S",
+  "title": "nac supplement n-aetyl cysteine 22,900mg with quercetin, milk thistle - support liver & lung health *usa made & tested* (150 count (pack of 1))",
+  "brand": "ultra herbs",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 150,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nac",
+      "position": 0,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "\"nac\" appears at the very start of the title (index 0). lookup_ingredient returned NAC \u2192 BASIC VITAMINS & MINERALS / AMINO ACIDS."
+    },
+    {
+      "name": "n-aetyl cysteine",
+      "position": 15,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "The phrase 'n-aetyl cysteine' appears starting at index 15. This is a variant/spelling of N\u2011acetyl cysteine; lookup_ingredient matched to NAC \u2192 BASIC VITAMINS & MINERALS / AMINO ACIDS."
+    },
+    {
+      "name": "quercetin",
+      "position": 46,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "'quercetin' appears after 'with' at index 46. lookup_ingredient returned Quercetin \u2192 HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "milk thistle",
+      "position": 57,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "'milk thistle' appears after 'quercetin,' starting at index 57. lookup_ingredient returned Milk Thistle with category/subcategory as provided by the lookup tool."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9364,
+      "completion": 5705,
+      "total": 15069
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nac"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NAC",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "n a c",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "n-acetyl cysteine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NAC",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "n-acetylcysteine",
+          "match_type": "fuzzy",
+          "confidence": "high",
+          "score": 96
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 71.441939
+}

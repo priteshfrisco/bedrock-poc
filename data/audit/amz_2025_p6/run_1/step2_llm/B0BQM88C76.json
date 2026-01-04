@@ -1,0 +1,115 @@
+{
+  "product_id": 7809,
+  "asin": "B0BQM88C76",
+  "title": "arogya vardhini capsules traditional ayurvedic formulation pitta and kapha balancing formula 90 vege capsules 800 mg each",
+  "brand": "herbsforever",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "arogya vardhini",
+      "position": 0,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reasoning": "lookup_ingredient returned no exact match for 'arogya vardhini'. It appears to be a classical ayurvedic formula name rather than a single standardized ingredient in the lookup database.",
+        "candidates": [
+          {
+            "ingredient": "Arginine",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "AMINO ACIDS",
+            "match_type": "fuzzy",
+            "score": 52.17391304347826,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Andrographis",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "match_type": "fuzzy",
+            "score": 51.85185185185186,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Shatavari",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "match_type": "fuzzy",
+            "score": 50.0,
+            "confidence": "low"
+          }
+        ]
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The lookup tool did not return a definitive category/subcategory for 'arogya vardhini'. Candidate matches were low-confidence fuzzy matches; therefore category/subcategory set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9234,
+      "completion": 3478,
+      "total": 12712
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "arogya vardhini"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Arginine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "arginine",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Andrographis",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "andrographis",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Shatavari",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "shatavari",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 3509.396038
+}

@@ -1,0 +1,75 @@
+{
+  "product_id": 35,
+  "asin": "B0FD1WF2HJ",
+  "title": "nutricost red clover blossoms supplement (5000 mg equivalent) 120 capsules - red clover extract, vegan",
+  "brand": "nutricost",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "red clover blossoms",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "red clover blossoms",
+    "red clover extract"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "REPRODUCTIVE HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 8834,
+      "completion": 3607,
+      "total": 12441
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "red clover blossoms"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Red Colver",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "red clover",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.5065842986129
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "red clover extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Red Colver",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "red clover",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.5065842986129
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 61.177115
+}

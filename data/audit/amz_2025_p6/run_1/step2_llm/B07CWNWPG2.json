@@ -1,0 +1,172 @@
+{
+  "product_id": 3075,
+  "asin": "B07CWNWPG2",
+  "title": "pure product australia- l-arginine alpha-ketoglutarate (aakg) 2:1 powder - 1.1 lb - vegetarian friendly",
+  "brand": "pure product australia",
+  "source_subcategory": "l-arginine amino acids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 17.6,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "l-arginine",
+      "position": 24,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Arginine",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "AMINO ACIDS",
+        "note": "Lookup matched 'l-arginine' to Arginine (amino acid)."
+      },
+      "reasoning": "Detected 'l-arginine' starting at character index 24 in the title ('...- l-arginine ...')."
+    },
+    {
+      "name": "alpha-ketoglutarate",
+      "position": 35,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "lookup_result": {
+        "found": true,
+        "ingredient": "OKG",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "AMINO ACIDS",
+        "note": "Lookup returned OKG (ornithine/alpha-ketoglutarate mapping) classified under amino acids."
+      },
+      "reasoning": "Detected 'alpha-ketoglutarate' starting at character index 35 in the title ('...l-arginine alpha-ketoglutarate ...')."
+    },
+    {
+      "name": "aakg",
+      "position": 56,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "lookup_result": {
+        "found": false,
+        "reason": "Lookup did not return a direct match for the short form 'aakg'. Returned ambiguous candidates.",
+        "candidates": [
+          {
+            "ingredient": "Vitamin A D K",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "keyword": "adk",
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Alpha Lipoic Acid",
+            "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+            "nw_subcategory": "NON-SPECIFIC",
+            "keyword": "ala",
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Oak Bark",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "oak",
+            "confidence": "low"
+          }
+        ],
+        "note": "Although the lookup failed for the abbreviation, 'AAKG' in context ('l-arginine alpha-ketoglutarate (aakg)') is the common abbreviation for arginine alpha-ketoglutarate (a combination of amino-acid related components). Therefore it is mapped to amino-acids category for classification."
+      },
+      "reasoning": "Detected '(aakg)' starting at character index 55 for '(' and 56 for 'a' in 'aakg'. The parenthetical abbreviation corresponds to the previous terms and is included as an ingredient entry."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9460,
+      "completion": 5574,
+      "total": 15034
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-arginine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Arginine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "arginine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "alpha-ketoglutarate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "OKG",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "ornithine alpha ketoglutarate",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.242603173270265
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "aakg"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin A D K",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "adk",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Alpha Lipoic Acid",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "ala",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Oak Bark",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "oak",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.940514
+}

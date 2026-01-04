@@ -1,0 +1,58 @@
+{
+  "product_id": 9641,
+  "asin": "B0CJ8J92QV",
+  "title": "theracalm gummies, theracalm advanced formula supplement, theracalm premium blend hemp gummies, theracalm maximum strength, thera calm gomitas reviews (60 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 82,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The term 'hemp' appears in the title ('...premium blend hemp gummies...'). It starts at character index 82 (0-indexed). lookup_ingredient returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. No other identifiable functional ingredients are present in the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9071,
+      "completion": 3813,
+      "total": 12884
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 52.448711
+}

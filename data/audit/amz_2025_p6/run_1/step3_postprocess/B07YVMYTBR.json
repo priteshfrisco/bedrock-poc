@@ -1,0 +1,59 @@
+{
+  "product_id": 4035,
+  "asin": "B07YVMYTBR",
+  "title": "secrets of the tribe - tribal cough-ease, cough formula, herbal supplement blend (120 capsules)",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other dietary supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9055,
+      "completion": 4772,
+      "total": 13827
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal supplement blend"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ayurvedic Herb",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ayurvedic herbal supplement",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.489352188599828
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.833444
+}

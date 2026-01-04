@@ -1,0 +1,137 @@
+{
+  "product_id": 63,
+  "asin": "B0D73JWQSJ",
+  "title": "(2 pack) new vida keto gummies, newvida keto acv gummies, new vita acv keto support supplement, all natural apple cider vinegar 1000mg, new keto vitamins, official new vida reviews (120 gummies)",
+  "brand": "nutrarize",
+  "source_subcategory": "weight loss supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "acv",
+      "position": 45,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The abbreviation 'acv' appears starting at character index 45 in '...newvida keto acv gummies...'. 'ACV' is commonly used for apple cider vinegar. The title also contains the full phrase 'apple cider vinegar' later; the lookup for 'apple cider vinegar' returned 'Cider Vinegar' -> HERBAL REMEDIES / FOOD SUPPLEMENTS. The explicit 'acv' lookup returned an ambiguous result, but presence of the full phrase supports mapping 'acv' to apple cider vinegar's category/subcategory."
+    },
+    {
+      "name": "acv",
+      "position": 67,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "A second occurrence of 'acv' starts at index 67 in '...new vita acv keto support...'. Treated as the same functional ingredient (apple cider vinegar) with the same lookup-based mapping to HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "apple cider vinegar",
+      "position": 108,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The explicit phrase 'apple cider vinegar' starts at index 108 in '...all natural apple cider vinegar 1000mg...'. lookup_ingredient('apple cider vinegar') returned ingredient 'Cider Vinegar' with category HERBAL REMEDIES and subcategory FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "vitamins",
+      "position": 145,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The phrase 'new keto vitamins' appears starting at index 140, with the word 'vitamins' starting at index 145. lookup_ingredient('vitamins') returned 'Multivitamin' mapping to COMBINED MULTIVITAMINS / COMBINED MULTIVITAMINS. The title does not literally say 'multivitamin' but the lookup mapped 'vitamins' to that category."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9481,
+      "completion": 7678,
+      "total": 17159
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "acv"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n a c",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n acetyl cysteine",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n acetyl l cysteine",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 103.249467
+}

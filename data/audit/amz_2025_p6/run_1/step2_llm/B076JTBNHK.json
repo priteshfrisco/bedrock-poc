@@ -1,0 +1,36 @@
+{
+  "product_id": 2711,
+  "asin": "B076JTBNHK",
+  "title": "bianca rosa vitex chasteberry cream (2 oz, zin: 512765) - 3 pack",
+  "brand": "bianca rosa",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title indicates a topical cream (body care product: 'cream'), which is not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4586,
+      "completion": 1083,
+      "total": 5669
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.955008
+}

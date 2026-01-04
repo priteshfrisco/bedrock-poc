@@ -1,0 +1,42 @@
+{
+  "product_id": 8110,
+  "asin": "B0BZ1RGXWF",
+  "title": "gatorade zero and propel powder packets drink mix with electrolytes - hydration packets - sugar free 4 flavor variety pack - g zero glacier freeze & orange, propel berry & kiwi strawberry - 5 packets per flavor (20 packets total) + on the go pouch",
+  "brand": "ayd goods",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4616,
+      "completion": 1044,
+      "total": 5660
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.292601
+}

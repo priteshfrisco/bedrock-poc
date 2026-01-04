@@ -1,0 +1,173 @@
+{
+  "product_id": 4983,
+  "asin": "B08MC9Z27M",
+  "title": "organic cadane quercetin extract capsules 1900mg & turmeric, berberine, stinging nettle, black seed, black pepper",
+  "brand": "organic cadane",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "mg",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 15,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "Found 'quercetin' starting at character index 15. lookup_ingredient returned normalized ingredient 'Quercetin' with category/subcategory."
+    },
+    {
+      "name": "turmeric",
+      "position": 51,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'turmeric' starting at character index 51. lookup_ingredient returned normalized ingredient 'Turmeric' with provided category/subcategory."
+    },
+    {
+      "name": "berberine",
+      "position": 61,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'berberine' starting at character index 61. lookup_ingredient returned a normalized match ('barberry') and the provided category/subcategory."
+    },
+    {
+      "name": "stinging nettle",
+      "position": 72,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found phrase 'stinging nettle' beginning at index 72 (the word 'stinging' starts at 72). lookup_ingredient returned normalized 'Nettles' with provided category/subcategory."
+    },
+    {
+      "name": "black seed",
+      "position": 89,
+      "category": "FATTY ACIDS",
+      "subcategory": "SEED",
+      "reasoning": "Found 'black seed' starting at character index 89. lookup_ingredient returned normalized 'Black Seed' with provided category/subcategory."
+    },
+    {
+      "name": "black pepper",
+      "position": 101,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'black pepper' starting at character index 101. lookup_ingredient returned normalized 'Bioperine' (black pepper extract) with provided category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9479,
+      "completion": 5182,
+      "total": 14661
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "berberine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "barberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "berberine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "stinging nettle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Nettles",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "nettle",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black seed"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Black Seed",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "SEED",
+          "keyword": "black cumin seed",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black pepper"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black pepper",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.280496
+}

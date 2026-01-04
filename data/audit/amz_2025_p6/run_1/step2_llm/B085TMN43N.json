@@ -1,0 +1,126 @@
+{
+  "product_id": 4342,
+  "asin": "B085TMN43N",
+  "title": "new roots herbal quercetin bioflavonoid complex with rutin and bromelain (250 mg of quercetin)  90 veggie capsules  nutritional immune function supplement  helps circulatory health  non gmo",
+  "brand": "new roots herbal",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "quercetin",
+        "position": 17,
+        "category": "HERBAL REMEDIES",
+        "subcategory": "POLYPHENOLS"
+      },
+      {
+        "name": "bioflavonoid complex",
+        "position": 27,
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD"
+      },
+      {
+        "name": "rutin",
+        "position": 53,
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "LETTER VITAMINS"
+      },
+      {
+        "name": "bromelain",
+        "position": 63,
+        "category": "PROBIOTICS+",
+        "subcategory": "DIGESTIVE AIDS & ENZYMES"
+      }
+    ],
+    "reasoning": "Functional ingredients explicitly named in the title: 'quercetin bioflavonoid complex with rutin and bromelain'. Positions are 0-indexed start indices in the provided title string (first 'quercetin' begins at index 17). Each ingredient was looked up with lookup_ingredient() and category/subcategory from the tool are included."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9372,
+      "completion": 6606,
+      "total": 15978
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioflavonoid complex"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioflavonoid Complex",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bioflavonoid complex",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rutin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Rutin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "rutin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bromelain"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "bromelain",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "bromelain",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 310.730347
+}

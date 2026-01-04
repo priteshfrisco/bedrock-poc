@@ -1,0 +1,89 @@
+{
+  "product_id": 8495,
+  "asin": "B0C5K4DWMJ",
+  "title": "reclaim super greens",
+  "brand": "complete nutrition",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "super greens",
+      "position": 8,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reason": "lookup_ingredient returned no definitive match for 'super greens'. Multiple low-confidence candidates were suggested (e.g., 'Whole Food Concentrate' / 'superfoods' fuzzy match)."
+      },
+      "reasoning": "The phrase 'super greens' is the functional ingredient/blend present in the title. It starts at character index 8 in 'reclaim super greens'. The ingredient lookup did not return a confident normalized result, so category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9192,
+      "completion": 2395,
+      "total": 11587
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "super greens"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Red Raspberry",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "raspberry ketones",
+              "match_type": "fuzzy",
+              "score": 55.172413793103445,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "superfoods",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin Eester",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "ester e",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 32.257531
+}

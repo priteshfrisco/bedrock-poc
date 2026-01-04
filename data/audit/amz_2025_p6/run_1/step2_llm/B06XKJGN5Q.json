@@ -1,0 +1,58 @@
+{
+  "product_id": 2395,
+  "asin": "B06XKJGN5Q",
+  "title": "dynamic health organic beetroot dietary supplement  no added sugar, artificial color, preservatives, no gluten or bpa  32oz, 32 serv",
+  "brand": "dynamic health",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "ORGANIC",
+  "count": 32,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beetroot",
+      "position": 23,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found 'beetroot' at character index 23 in the title. lookup_ingredient returned normalized ingredient 'Beet Root' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9065,
+      "completion": 4159,
+      "total": 13224
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beetroot"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beetroot",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 54.054856
+}

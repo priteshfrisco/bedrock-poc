@@ -1,0 +1,109 @@
+{
+  "product_id": 4591,
+  "asin": "B08CDXKHXZ",
+  "title": "herbera superior temper a60 alcohol extract tincture: ashwagandha root, st. john's wort herb, ginkgo biloba leaf, lemon balm leaf. mood balance formula 2 fl oz",
+  "brand": "herbera",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "ashwagandha root",
+  "num_ingredients": 4,
+  "all_ingredients": [
+    "ashwagandha root",
+    "st. john's wort herb",
+    "ginkgo biloba leaf",
+    "lemon balm leaf"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "MOOD & STRESS SUPPORT",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9385,
+      "completion": 4968,
+      "total": 14353
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ashwagandha root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "st. john's wort herb"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "St Johns Wort",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "saint john's wort",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.85191533361032
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginkgo biloba leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginkgo",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginkgo biloba",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.351801920237829
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemon balm leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lemon Balm",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lemon balm",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 11.849867009720981
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4900.133726
+}

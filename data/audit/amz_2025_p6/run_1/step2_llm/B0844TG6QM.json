@@ -1,0 +1,120 @@
+{
+  "product_id": 4238,
+  "asin": "B0844TG6QM",
+  "title": "project ad nitr-ox nitric oxide supplement for muscle growth, huge muscle pumps, increased vascularity, & energy - extra strength pre workout n.o. booster & muscle builder (unflavored)",
+  "brand": "project ad llc",
+  "source_subcategory": "pre-workout nitric oxide boosters",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nitric oxide",
+      "position": 19,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Vitamin B6",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "keyword": "pyridoxine",
+            "match_type": "fuzzy",
+            "score": 54.54545454545454,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Vitamin B3",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "keyword": "niacinamide",
+            "match_type": "fuzzy",
+            "score": 52.17391304347826,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Licorice",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "deglycyrrhizinated licorice",
+            "match_type": "fuzzy",
+            "score": 50,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "lookup_ingredient returned no definitive match for 'nitric oxide' and provided low-confidence candidate suggestions."
+      },
+      "reasoning": "The phrase 'nitric oxide' appears explicitly in the title starting at character index 19 ('...nitr-ox nitric oxide...'). 'n.o.' later in the title is an abbreviation referring to the same concept, so only 'nitric oxide' was recorded once."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9271,
+      "completion": 3731,
+      "total": 13002
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric oxide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B6",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "pyridoxine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 42.402928
+}

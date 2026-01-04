@@ -1,0 +1,156 @@
+{
+  "product_id": 7516,
+  "asin": "B0BH4MWMWZ",
+  "title": "botanicgardenpurebhringrajrawherbecliptaalbafalsedaisypurebhringarajherbpromoteshealthhairgrowth\u00e2250g",
+  "brand": "botanic garden",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LOOSE MEDICINAL HERBS",
+  "organic": "NOT ORGANIC",
+  "count": 8.8185,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "bhringraj",
+      "position": 17,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title contains 'bhringraj' starting at character index 17. lookup_ingredient returned no high-confidence match (found=false) and suggested multiple low-confidence fuzzy candidates; therefore category/subcategory cannot be determined reliably from the tool output."
+    },
+    {
+      "name": "eclipta alba",
+      "position": 33,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title contains 'ecliptaalba' (interpreted as 'eclipta alba') starting at index 33. lookup_ingredient returned no high-confidence match (found=false) with low-confidence candidates, so category/subcategory are marked UNKNOWN."
+    },
+    {
+      "name": "false daisy",
+      "position": 44,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title contains 'falsedaisy' (interpreted as 'false daisy') starting at index 44. lookup_ingredient returned found=true and normalized to 'False Unicorn' with nw_category='FATTY ACIDS' and nw_subcategory='HEMP/CBD' (medium confidence). This mapping appears likely to be a mismatch semantically (False Daisy is a common name for Eclipta species), but the tool returned the shown category/subcategory and those are reported here."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9606,
+      "completion": 6803,
+      "total": 16409
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bhringraj"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Moringa",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "moringa",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Hydrangea",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "hydrangea",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ginger",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ginger",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "eclipta alba"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Eucalyptol",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "eucalyptol",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beta glucans",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "glucan",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "false daisy"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "False Unicorn",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "false unicorn",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4416.910284
+}

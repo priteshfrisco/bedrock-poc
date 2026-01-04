@@ -1,0 +1,14 @@
+{
+  "product_id": 3,
+  "asin": "000000000323810411",
+  "title": "plastic surgery: volume 4: trunk and lower extremity (plastic surgery, 4)",
+  "brand": "elsevier",
+  "source_subcategory": "other medical & healthcare supplies",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.008824,
+  "lookup_action": "REMOVE"
+}

@@ -1,0 +1,14 @@
+{
+  "product_id": 2335,
+  "asin": "B01N9BGMBR",
+  "title": "nuit blanche",
+  "brand": "verve",
+  "source_subcategory": "other seeds",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.003479,
+  "lookup_action": "REMOVE"
+}

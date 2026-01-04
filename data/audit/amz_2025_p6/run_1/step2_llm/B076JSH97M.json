@@ -1,0 +1,58 @@
+{
+  "product_id": 2708,
+  "asin": "B076JSH97M",
+  "title": "buckthorn bark - 450 mg (100 capsules, zin: 510973) - 3 pack",
+  "brand": "terravita",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "buckthorn bark",
+      "position": 0,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The title begins with 'buckthorn bark' (starts at character index 0). lookup_ingredient('buckthorn bark') returned normalized ingredient 'Sea Buckthorn' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9054,
+      "completion": 2297,
+      "total": 11351
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "buckthorn bark"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Sea Buckthorn",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "sea buckthorn",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 37.897732
+}

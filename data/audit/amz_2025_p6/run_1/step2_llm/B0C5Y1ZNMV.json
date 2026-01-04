@@ -1,0 +1,81 @@
+{
+  "product_id": 8531,
+  "asin": "B0C5Y1ZNMV",
+  "title": "number one nutrition n1n premium and organic beet root tablets and organic superfood greens for immunity support, 120 tablets",
+  "brand": "number one",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beet root",
+      "position": 45,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found phrase 'beet root' starting at character index 45 in the title. lookup_ingredient returned normalized ingredient 'Beet Root' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    },
+    {
+      "name": "superfood greens",
+      "position": 75,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found phrase 'superfood greens' starting at character index 75 in the title. lookup_ingredient returned normalized mapping to 'Whole Food Concentrate' (matched from 'superfood') with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9159,
+      "completion": 3826,
+      "total": 12985
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "superfood greens"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Whole Food Concentrate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "superfood",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 42.053549
+}

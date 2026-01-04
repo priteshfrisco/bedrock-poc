@@ -1,0 +1,127 @@
+{
+  "product_id": 4113,
+  "asin": "B081S87J73",
+  "title": "hello bello organic kid's multi vitamin i vegan, certified organic and nongmo gummies i made with vitamin a for growth, vitamin b6 for immunity and vitamin d for healthy bones i 60 count (1 pack)",
+  "brand": "bell'o",
+  "source_subcategory": "multivitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "multi vitamin",
+      "position": 26,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The phrase 'multi vitamin' appears starting at character index 26. lookup_ingredient returned normalized 'Multivitamin' with category/subcategory COMBINED MULTIVITAMINS."
+    },
+    {
+      "name": "vitamin a",
+      "position": 98,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The phrase 'vitamin a' appears starting at character index 98 in the title. lookup_ingredient returned 'Vitamin A' in BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin b6",
+      "position": 120,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The phrase 'vitamin b6' appears starting at character index 120. lookup_ingredient returned 'Vitamin B6' in BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin d",
+      "position": 148,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The phrase 'vitamin d' appears starting at character index 148. lookup_ingredient returned 'Vitamin D' in BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9366,
+      "completion": 4707,
+      "total": 14073
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multi vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin a"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin A",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "vitamin a",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b6"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B6",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 6",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.180818
+}

@@ -1,0 +1,111 @@
+{
+  "product_id": 7941,
+  "asin": "B0BV6DFKPS",
+  "title": "hemp gummies big cubes extra strength for sound bedtime & wind down, 6 fruity flavors chewable hemp gummy vitamins infused hemp oil, pack of 2, made in usa",
+  "brand": "hooloo",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title begins with 'hemp' at index 0. lookup_ingredient('hemp') returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "hemp",
+      "position": 95,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title contains 'hemp' again in 'chewable hemp gummy...' starting at index 95. Reused lookup_ingredient('hemp') results: category 'FATTY ACIDS', subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "vitamins",
+      "position": 106,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The phrase 'vitamins' appears starting at index 106 in 'gummy vitamins'. lookup_ingredient('vitamins') mapped to normalized 'Multivitamin' with category/subcategory 'COMBINED MULTIVITAMINS'. The title does not explicitly say 'multivitamin', only 'vitamins', so we record the detected ingredient and the tool's normalization."
+    },
+    {
+      "name": "hemp oil",
+      "position": 123,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'hemp oil' appears in 'infused hemp oil' starting at index 123. lookup_ingredient('hemp oil') returned mapping to 'Hemp' (category 'FATTY ACIDS', subcategory 'HEMP/CBD')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9266,
+      "completion": 6435,
+      "total": 15701
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 71.27185
+}

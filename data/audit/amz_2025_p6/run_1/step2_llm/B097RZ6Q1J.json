@@ -1,0 +1,133 @@
+{
+  "product_id": 5654,
+  "asin": "B097RZ6Q1J",
+  "title": "carlyle vitamin c 1000mg  120 caplets  with rose hips  supplement for women and men  as ascorbic acid  time release  vegetarian, non-gmo, and gluten free",
+  "brand": "carlyle",
+  "source_subcategory": "vitamin c-complex",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPLET",
+  "organic": "NOT ORGANIC",
+  "count": "120",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "vitamin c",
+      "position": 8,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned normalized ingredient 'Vitamin D' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'. The tool result is recorded as returned, but the extracted name from title is 'vitamin c' (position 8)."
+    },
+    {
+      "name": "rose hips",
+      "position": 44,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_found": true,
+      "lookup_note": "lookup_ingredient returned normalized ingredient 'Rose Hips' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. The tool result is recorded as returned, although this category mapping appears unexpected for rose hips."
+    },
+    {
+      "name": "ascorbic acid",
+      "position": 88,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_found": false,
+      "lookup_note": "lookup_ingredient did not return a definitive match for 'ascorbic acid' (returned candidates related to folic acid with low confidence). The title includes 'as ascorbic acid' so 'ascorbic acid' is extracted at position 88, but the lookup did not resolve to a clear category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9462,
+      "completion": 4893,
+      "total": 14355
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rose hips"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Rose Hips",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "rose hip",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ascorbic acid"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "b 9",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "b9",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "folate",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 62.158799
+}

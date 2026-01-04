@@ -1,0 +1,14 @@
+{
+  "product_id": 1895,
+  "asin": "B01BKGLBJG",
+  "title": "red bull, the red edition, cranberry, 12 fl oz",
+  "brand": "red bull",
+  "source_subcategory": "energy drinks",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004807,
+  "lookup_action": "REMOVE"
+}

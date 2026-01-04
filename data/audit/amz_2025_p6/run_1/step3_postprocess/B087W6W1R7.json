@@ -1,0 +1,101 @@
+{
+  "product_id": 4450,
+  "asin": "B087W6W1R7",
+  "title": "nova nutritions certified organic ginger root powder 16 oz (454 gm) - also called zingiber officinale (root)",
+  "brand": "nova nutrition",
+  "source_subcategory": "ginger spice",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 16,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "ginger root",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "ginger root",
+    "zingiber officinale"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "DIGESTIVE HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9335,
+      "completion": 5304,
+      "total": 14639
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zingiber officinale"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Siberian Ginseng",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ginseng - siberian",
+              "match_type": "fuzzy",
+              "score": 48.64864864864865,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Benzocaine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "benzocaine",
+              "match_type": "fuzzy",
+              "score": 48.275862068965516,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Benzocaine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "benzodent",
+              "match_type": "fuzzy",
+              "score": 48.275862068965516,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 319.053593
+}

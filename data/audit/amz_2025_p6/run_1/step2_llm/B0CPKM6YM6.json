@@ -1,0 +1,119 @@
+{
+  "product_id": 10207,
+  "asin": "B0CPKM6YM6",
+  "title": "globe electrolyte replacement tablets for rehydration, exercise recovery, youth & adult athletes, hiking, camping, & sports recovery and more... 10,000 packets/bag, 20,000 tablets bulk",
+  "brand": "globe",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 20000,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 6,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beetroot",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet crystals",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet powder",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          }
+        ],
+        "reason": "lookup_ingredient returned no confident match for 'electrolyte'."
+      },
+      "reasoning": "The title explicitly includes 'electrolyte replacement' \u2014 'electrolyte' is the functional ingredient term. It starts at character index 6 in the title (0-indexed). lookup_ingredient() returned no confident normalized match for 'electrolyte'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9258,
+      "completion": 5420,
+      "total": 14678
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 69.973251
+}

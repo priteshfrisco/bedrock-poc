@@ -1,0 +1,81 @@
+{
+  "product_id": 5935,
+  "asin": "B09FZRWZZR",
+  "title": "grow vitamin multi collagen capsules 1800mg (types i, ii, iii, v & x) - non gmo, grass fed collagen - anti aging support for hair, skin, nails - protein pills for joint support - 90 capsules",
+  "brand": "grow vitamin",
+  "source_subcategory": "collagen supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "collagen",
+      "position": 19,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The word 'collagen' appears starting at character index 19 ('...multi collagen...'). lookup_ingredient returned normalized ingredient 'Collagen' with category 'ACTIVE NUTRITION' and subcategory 'NON-SPECIFIC'. Types I, II, III, V & X are descriptors of collagen types but do not change the ingredient name."
+    },
+    {
+      "name": "protein",
+      "position": 145,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The word 'protein' appears starting at character index 145 ('... - protein pills ...'). lookup_ingredient was called for 'protein' and returned category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'. 'Protein' is present as a functional descriptor in the title ('protein pills')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9205,
+      "completion": 6635,
+      "total": 15840
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 110.056932
+}

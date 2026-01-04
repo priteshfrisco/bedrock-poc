@@ -1,0 +1,33 @@
+{
+  "product_id": 4542,
+  "asin": "B08B51JM9H",
+  "title": "wellgenix omni herbal cleanse detox capsules: fast acting, extra strength detox cleanse for whole body, flush your system with detoxifying capsules, 4 count (2)",
+  "brand": "wellgenix",
+  "source_subcategory": "weight loss detox & cleanse",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 4,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4596,
+      "completion": 2535,
+      "total": 7131
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 280.558775
+}

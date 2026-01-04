@@ -413,26 +413,111 @@ Include "ingredients" in your final JSON output:
 - NEVER leave it as "N/A" or empty!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+================================================================================
+STEP 9: APPLY BUSINESS RULES
+================================================================================
+
+🔧 CRITICAL: After extracting all ingredients, you MUST call apply_business_rules()
+
+This tool applies deterministic business rules to determine the final category
+and subcategory. It handles:
+- Primary ingredient selection (first by position, or multivitamin override)
+- Title-based overrides (protein powder, weight loss, etc.)
+- Ingredient-specific overrides (CoQ10, SAM-E, algae, probiotics)
+- Protein rules (whey, isolate, casein)
+- Herb formula rules (2+ herbs = FORMULAS, 1 herb = SINGLES)
+- Multivitamin refinement (age + gender subcategory logic)
+
+CALL THE TOOL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  apply_business_rules(
+    ingredients=[...all ingredient objects from lookup_ingredient calls...],
+    age_group="[the age value you extracted]",
+    gender="[the gender value you extracted]",
+    title="[the product title]"
+  )
+
+The tool will return:
+- initial_category: Category from primary ingredient lookup (BEFORE business rules)
+- initial_subcategory: Subcategory from primary ingredient lookup (BEFORE business rules)
+- final_category: Final category AFTER business rules
+- final_subcategory: Final subcategory AFTER business rules
+- primary_ingredient: Name of primary ingredient
+- changes_made: Array of changes (e.g., "Category: X → Y")
+- has_changes: Boolean (true if category/subcategory changed)
+- has_unknown: Boolean (true if contains UNKNOWN values)
+- should_explain: Boolean (true if you should provide reasoning)
+- reasoning_context: What changed and why (use this for your reasoning)
+
+REASONING INSTRUCTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  CRITICAL: Only provide reasoning when should_explain is TRUE!
+
+When should_explain is TRUE, write a brief explanation (1-2 sentences) based on:
+- reasoning_context: Contains what changed and why
+- changes_made: Shows before → after for category/subcategory
+- has_unknown: If true, explain that ingredient wasn't found in database
+
+Examples of GOOD reasoning:
+✅ "CoQ10 triggered subcategory override from MINERALS to COENZYME Q10"
+✅ "Multivitamin refined to WOMEN MATURE based on female gender and mature adult age"
+✅ "Title contains 'protein powder' which overrode category to ACTIVE NUTRITION"
+✅ "Primary ingredient not found in database, category set to UNKNOWN"
+
+Examples of BAD reasoning (don't do this):
+❌ "Standard processing" (don't provide reasoning if should_explain is FALSE)
+❌ "Category is LETTER VITAMINS" (just stating the result, not explaining changes)
+❌ "Applied business rules" (too vague)
+
+When should_explain is FALSE:
+- Leave reasoning field NULL or empty string
+- This means no significant changes occurred (standard processing)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
-    
-    # Business rules and Health Focus will be applied in Python post-processing
-    # Removed from prompt for better reliability and determinism
     
     prompt += """
 ================================================================================
 OUTPUT FORMAT
 ================================================================================
 
-Return a JSON object with ALL attributes.
+Return a JSON object with ALL attributes AND business rules result.
+
+EXAMPLE COMPLETE OUTPUT STRUCTURE:
+
+{{
+  "age": {{ "value": "AGE GROUP - MATURE ADULT", "reasoning": "..." }},
+  "gender": {{ "value": "GENDER - FEMALE", "reasoning": "..." }},
+  "form": {{ "value": "FORM - SOFTGEL", "reasoning": "..." }},
+  "organic": {{ "value": "N/A", "reasoning": "..." }},
+  "count": {{ "value": "60", "reasoning": "..." }},
+  "unit": {{ "value": "N/A", "reasoning": "..." }},
+  "size": {{ "value": "1", "reasoning": "..." }},
+  "ingredients": [ /* array from lookup_ingredient calls */ ],
+  "primary_ingredient": "multivitamin",
+  "business_rules": {{
+    "initial_category": "COMBINED MULTIVITAMINS",
+    "initial_subcategory": "COMBINED MULTIVITAMINS",
+    "final_category": "COMBINED MULTIVITAMINS",
+    "final_subcategory": "WOMEN 50+",
+    "primary_ingredient": "multivitamin",
+    "has_changes": true,
+    "has_unknown": false,
+    "reasoning": "Refined subcategory from COMBINED MULTIVITAMINS to WOMEN 50+ based on age (MATURE ADULT) and gender (FEMALE)"
+  }}
+}}
 
 IMPORTANT:
-- Always provide reasoning for EVERY attribute
+- Always provide reasoning for EVERY attribute extraction
 - For count: Be careful NOT to confuse dosage (mg, IU) with count
 - For size: Default to 1 if no pack keywords found
 - For ingredients: Call lookup_ingredient() for EACH ingredient found
-- For primary_ingredient: First by position (except multivitamin exception)
-- Return the category/subcategory from tool lookup results
-- Business rules will be applied in Python post-processing
+- For business_rules: Call apply_business_rules() AFTER extracting all ingredients
+- CRITICAL: Include the full result from apply_business_rules() in your final JSON output
+- Provide business_rules.reasoning only when business rules made significant changes
 
 ================================================================================
 PRODUCT TO CLASSIFY
@@ -450,9 +535,18 @@ Interpret the title as best as you can and extract all relevant attributes.
 """
     prompt += f'Title: "{product_title}"\n\n'
     
-    prompt += """Now extract all attributes (age, gender, form, organic, count, unit, size, ingredients) with reasoning.
-For each ingredient, call lookup_ingredient() and return the results.
+    prompt += """Now extract all attributes (age, gender, form, organic, count, unit, size, ingredients).
+
+WORKFLOW (CRITICAL - FOLLOW EXACTLY):
+1. Extract age, gender, form, organic, count, unit, size from the title
+2. Extract ingredient names from the title
+3. For EACH ingredient, call lookup_ingredient() to get category/subcategory
+4. ⚠️  AFTER ALL lookups are complete, you MUST call apply_business_rules()
+   with the ingredients array, age_group, gender, and title
+
 Handle any formatting issues in the title gracefully.
+
+REMINDER: Your final JSON output MUST include the business_rules object!
 """
     
     return prompt

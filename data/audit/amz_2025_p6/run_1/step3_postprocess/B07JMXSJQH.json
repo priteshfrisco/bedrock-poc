@@ -1,0 +1,75 @@
+{
+  "product_id": 3399,
+  "asin": "B07JMXSJQH",
+  "title": "horb\u00e3achgreenlippedmussel750mg120capsulesfromnewzealandpremiumfreezedriedmusselpowdernon-gmoandglutenfree",
+  "brand": "horb\u00e3ach",
+  "source_subcategory": "omega oils",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "green lipped mussel",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "green lipped mussel",
+    "mussel powder"
+  ],
+  "category": "MISCELLANEOUS SUPPLEMENTS",
+  "subcategory": "NON-SPECIFIC",
+  "health_focus": "PAIN & INFLAMMATION",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9191,
+      "completion": 4332,
+      "total": 13523
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green lipped mussel"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Green Lipped Mussel",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "green lipped mussel",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mussel powder"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet powder",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.383094026799263
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 57.055354
+}

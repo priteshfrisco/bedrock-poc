@@ -1,0 +1,81 @@
+{
+  "product_id": 1712,
+  "asin": "B012I65968",
+  "title": "kirkland signature omega-3 fish oil concentrate  400 softgels, 1000 mg fish oil with 30% omega-3s (300 mg), pack of 3",
+  "brand": "remove",
+  "source_subcategory": "omega oils",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 400,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "omega-3",
+      "position": 19,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The token 'omega-3' appears starting at character index 19. lookup_ingredient('omega-3') returned normalized ingredient 'Fish Oil', category FATTY ACIDS, subcategory FISH."
+    },
+    {
+      "name": "fish oil",
+      "position": 27,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The token 'fish oil' appears starting at character index 27. lookup_ingredient('fish oil') returned ingredient 'Fish Oil', category FATTY ACIDS, subcategory FISH."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9172,
+      "completion": 4816,
+      "total": 13988
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega-3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega-3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fish oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "fish oil",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.417111
+}

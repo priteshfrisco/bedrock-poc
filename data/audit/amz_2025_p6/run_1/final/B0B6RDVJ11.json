@@ -1,0 +1,39 @@
+{
+  "product_id": 7098,
+  "asin": "B0B6RDVJ11",
+  "title": "12 pcs silicone pods refills accessories for navage nasal care, save salt for easy operation (blue)",
+  "brand": "enadvd",
+  "source_subcategory": "sinus medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4583,
+      "completion": 772,
+      "total": 5355
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.63536
+}

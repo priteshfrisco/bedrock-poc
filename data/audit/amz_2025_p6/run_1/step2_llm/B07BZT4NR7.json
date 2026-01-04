@@ -1,0 +1,36 @@
+{
+  "product_id": 2987,
+  "asin": "B07BZT4NR7",
+  "title": "earthborn elements diatomaceous earth (1 gallon), resealable bucket, pure freshwater amorphous silica",
+  "brand": "earthborn elements",
+  "source_subcategory": "trace minerals",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Although the title names 'diatomaceous earth' / 'amorphous silica', the product is presented as a bulk industrial/household material in a bucket rather than a dietary supplement; ingredient lookup not performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4584,
+      "completion": 1432,
+      "total": 6016
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 15.862048
+}

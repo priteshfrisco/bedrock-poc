@@ -1,0 +1,36 @@
+{
+  "product_id": 700,
+  "asin": "B005GHGQTQ",
+  "title": "diurex water pills box of 42",
+  "brand": "diurex",
+  "source_subcategory": "weight loss diuretics",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title refers to a branded OTC diuretic product ('Diurex water pills'), not a dietary supplement; ingredient extraction and lookup are not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4572,
+      "completion": 1128,
+      "total": 5700
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.599582
+}

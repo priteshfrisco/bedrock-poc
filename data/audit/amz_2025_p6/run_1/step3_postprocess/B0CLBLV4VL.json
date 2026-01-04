@@ -1,0 +1,42 @@
+{
+  "product_id": 9920,
+  "asin": "B0CLBLV4VL",
+  "title": "clsrmvr-243 ezpedi electric vibrating portable callus remover - white",
+  "brand": "iso beauty",
+  "source_subcategory": "sinus medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4579,
+      "completion": 995,
+      "total": 5574
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 12.881402
+}

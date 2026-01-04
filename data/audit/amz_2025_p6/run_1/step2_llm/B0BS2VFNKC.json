@@ -1,0 +1,15 @@
+{
+  "product_id": 7875,
+  "asin": "B0BS2VFNKC",
+  "title": "health by habit hair, skin and nails supplement (60 gummies) - 2500mcg biotin, vitamin c, vitamin e, strong nails, peach flavor, vegan, gluten free, non-gmo",
+  "brand": "health by habit",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "error": "Extra data: line 2 column 1 (char 83)",
+  "processing_time_sec": 3512.226049
+}

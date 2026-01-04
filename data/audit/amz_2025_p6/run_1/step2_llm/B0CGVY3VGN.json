@@ -1,0 +1,153 @@
+{
+  "product_id": 9414,
+  "asin": "B0CGVY3VGN",
+  "title": "revive md betaine hcl with pepsin digestive enzymes, 180 vegetarian capsules - betaine hydrochloride supplement supports healthy digestion & nutrient absorption - helps with stomach acid levels",
+  "brand": "revive",
+  "source_subcategory": "enzyme supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "betaine hcl",
+      "position": 10,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The phrase 'betaine hcl' appears starting at character index 10. lookup_ingredient returned normalized 'Betaine H C L' mapped to PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES."
+    },
+    {
+      "name": "pepsin",
+      "position": 27,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The word 'pepsin' appears starting at character index 27. Pepsin is a digestive enzyme. lookup_ingredient returned ambiguous/no exact match for 'pepsin' but suggested digestive-enzyme-related candidates; therefore assigned to PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES (consistent with digestive enzyme classification)."
+    },
+    {
+      "name": "digestive enzymes",
+      "position": 34,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The phrase 'digestive enzymes' begins at character index 34. lookup_ingredient mapped this concept to a digestive-aids category (PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES)."
+    },
+    {
+      "name": "betaine hydrochloride",
+      "position": 79,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The phrase 'betaine hydrochloride' appears starting at character index 79 (after the dash). lookup_ingredient returned 'Betaine H C L' mapped to PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES. This is the same compound as 'betaine hcl' earlier in the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9534,
+      "completion": 6455,
+      "total": 15989
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "betaine hcl"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Betaine H C L",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "betaine hcl",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pepsin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Papain",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "papain",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pectin",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "pectin",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pepper Spear Mint",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "peppermint",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "digestive enzymes"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Digestive Bitters",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "digestive bitters",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "betaine hydrochloride"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Betaine H C L",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "betaine hydrochloride",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 149.091852
+}

@@ -1,0 +1,121 @@
+{
+  "product_id": 10054,
+  "asin": "B0CMFYCW7T",
+  "title": "unicitybalancenaturalorange\u00e2stayfulllongerbyslowingcarbohydrateabsorption(30packets).helpssupportahealthydigestivesystemandkeepsyourbodywellmaintained(30-daysupply)",
+  "brand": "unicity",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "PACKET",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "orange",
+      "position": 21,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Orange Peel",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS"
+      },
+      "reasoning": "The substring 'naturalorange' in the title indicates 'orange' (starts at character index 21). lookup_ingredient returned a match ('Orange Peel') in HERBAL REMEDIES / FOOD SUPPLEMENTS. This likely represents the flavor/ingredient mention in the title."
+    },
+    {
+      "name": "carbohydrate",
+      "position": 51,
+      "lookup_result": {
+        "found": false,
+        "candidates": [
+          {
+            "ingredient": "Supplemental Carb Source",
+            "nw_category": "ACTIVE NUTRITION",
+            "nw_subcategory": "PERFORMANCE NUTRITION",
+            "confidence": "medium",
+            "note": "Top candidate from the tool; tool flagged low/ambiguous match."
+          }
+        ]
+      },
+      "reasoning": "The title contains the concatenated word 'carbohydrateabsorption' (carbohydrate starts at index 51). This term appears as the target/process ('slowing carbohydrate absorption') rather than a clearly named active ingredient. The lookup did not return a definitive normalized match; the top candidate suggests a supplemental carbohydrate concept (ACTIVE NUTRITION / PERFORMANCE NUTRITION) but with low confidence."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9383,
+      "completion": 6330,
+      "total": 15713
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "orange"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Orange Peel",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "limonene",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "carbohydrate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate fuel",
+              "match_type": "fuzzy",
+              "score": 82.75862068965517,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate powder",
+              "match_type": "fuzzy",
+              "score": 77.41935483870968,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate xtreme",
+              "match_type": "fuzzy",
+              "score": 77.41935483870968,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 92.806237
+}

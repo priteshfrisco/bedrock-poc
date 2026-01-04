@@ -1,0 +1,14 @@
+{
+  "product_id": 2594,
+  "asin": "B074H5ZHHY",
+  "title": "365 by whole foods market  organic cottage cheese, lowfat, 16 ounce",
+  "brand": "365 everyday value",
+  "source_subcategory": "cottage cheese",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.005721,
+  "lookup_action": "REMOVE"
+}

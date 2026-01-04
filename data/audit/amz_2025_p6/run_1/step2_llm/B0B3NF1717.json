@@ -1,0 +1,33 @@
+{
+  "product_id": 6914,
+  "asin": "B0B3NF1717",
+  "title": "peak refuel re-energizing drink mix  hydration blend  extended energy  improved performance  increased focus  premium flavors  easy-tear single serving sticks  fresh melon - 10-pack",
+  "brand": "peak refuel",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 10,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4601,
+      "completion": 3140,
+      "total": 7741
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 40.883357
+}

@@ -1,0 +1,15 @@
+{
+  "product_id": 10884,
+  "asin": "B0CZ4HPRJ3",
+  "title": "maryruth's liquid morning multivitamin travel pack  mens & womens multivitamin vitamin a c d e b6 b12 biotin zinc  beauty  immunity  vegan  non-gmo  gluten free  1 oz  8 servings",
+  "brand": "maryruth organics",
+  "source_subcategory": "multivitamins",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "error": "Extra data: line 22435 column 1 (char 34623)",
+  "processing_time_sec": 417.610117
+}

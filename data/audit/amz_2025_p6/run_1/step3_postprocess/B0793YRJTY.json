@@ -1,0 +1,75 @@
+{
+  "product_id": 2874,
+  "asin": "B0793YRJTY",
+  "title": "terravita psyllium husk (fiber) glycerite liquid extract (1:5) - strawberry flavored (1 oz, zin: 522873) - 2 pack",
+  "brand": "terravita",
+  "source_subcategory": "other digestive supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 1,
+  "unit": "OZ",
+  "size": 2,
+  "primary_ingredient": "psyllium husk",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "psyllium husk",
+    "fiber"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "CARDIOVASCULAR HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9199,
+      "completion": 6628,
+      "total": 15827
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "psyllium husk"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Psyllium",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "psyllium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.116415
+}

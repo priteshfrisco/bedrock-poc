@@ -1,0 +1,58 @@
+{
+  "product_id": 1515,
+  "asin": "B00SZ49IF6",
+  "title": "beet root juice powder organic 8 oz. - made in usa - vegan superfood supplement",
+  "brand": "go nutra",
+  "source_subcategory": "beet root supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 8,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "beet root",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "beet root"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "SINGLES",
+  "health_focus": "CARDIOVASCULAR HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9043,
+      "completion": 2371,
+      "total": 11414
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 40.332476
+}

@@ -1,0 +1,43 @@
+[2026-01-01T02:40:50.593991] ============================================================
+[2026-01-01T02:40:50.594053] STEP 1: NON-SUPPLEMENT FILTERING
+[2026-01-01T02:40:50.594081] ============================================================
+[2026-01-01T02:40:50.594688] [B0DX7JCTT6] Checking: bakuchiol retinol rejuvenation serum, anti-aging face serum hydrates skin, reduc...
+[2026-01-01T02:40:50.594767] [B0F47VTGSN] Checking: silicone pillow, face massage pillow face pillow cushion pad spa beauty salon sk...
+[2026-01-01T02:40:50.594851] [B0DYV8BKHY] Checking: vilosatibetansingingbowlsetãâmeditationsoundbowlhandcraftedinnepalwithstriker&...
+[2026-01-01T02:40:50.595059] [B0F94G1PLD] Checking: (2 pack) presgera capsules - presgera supplements pills advanced formula for wel...
+[2026-01-01T02:40:50.595007] [B0CRSR8NZ4] Checking: liquidhealth ultimate bariatric liquid vitamin supplement bundle - daily bariatr...
+[2026-01-01T02:40:50.595214] [B0D9W7H2VN] Checking: la fermiere hibiscus raspberry yogurt, 5.6 oz...
+[2026-01-01T02:40:50.595297] [B0F48YTHV6] Checking: siliconescarsheets-(1.6ãâx60ãâ)scartaperollforc-section,surgery,tummytuck,ke...
+[2026-01-01T02:40:50.596027] [B003W0XMC8] Checking: blumenthal button shank remover...
+[2026-01-01T02:40:50.595527] [B0DT98X7C5] Checking: gpgpgreenpeoplemelatonin5mgextrastrengthadultextrastrengthsupplement,sleepaidwit...
+[2026-01-01T02:40:50.596317] [B07661Z3YX] Checking: doctor's best high absorption coq10 with bioperine, gluten free, naturally ferme...
+[2026-01-01T02:40:50.605343] [B0F94G1PLD] PASSED - REMAP: HERBAL REMEDIES/NON-SPECIFIC
+[2026-01-01T02:40:50.605785] [B0F48YTHV6] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:40:50.605287] [B0D9W7H2VN] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:40:50.602859] [B0F47VTGSN] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:40:50.606290] [B0DYV8BKHY] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:40:50.606091] [B0DX7JCTT6] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:40:50.609178] [B07661Z3YX] PASSED - REMAP: BASIC VITAMINS & MINERALS/MINERALS
+[2026-01-01T02:40:50.609035] [B0CRSR8NZ4] PASSED - REMAP: COMBINED MULTIVITAMINS/NON-SPECIFIC
+[2026-01-01T02:40:50.609277] [B0F94G1PLD] PASSED filtering
+[2026-01-01T02:40:50.610479] [B003W0XMC8] FILTERED OUT: Amazon subcategory marked as REMOVE
+[2026-01-01T02:40:50.610612] [B07661Z3YX] PASSED filtering
+[2026-01-01T02:40:50.610586] [B0CRSR8NZ4] PASSED filtering
+[2026-01-01T02:40:50.611379] [B0DT98X7C5] PASSED - REMAP: BASIC VITAMINS & MINERALS/DHEA & PREGNENOLONE & HORMONES
+[2026-01-01T02:40:50.611997] [B0DT98X7C5] PASSED filtering
+[2026-01-01T02:42:52.916363] Saved: audit/sample_10_test/run_1/step1_filter/records_filtered_by_remove.csv (6 rows)
+[2026-01-01T02:42:52.917544] Saved: audit/sample_10_test/run_1/step1_filter/records_remap.csv (4 rows)
+[2026-01-01T02:42:52.917914] Saved: audit/sample_10_test/run_1/step1_filter/step1_statistics.json
+[2026-01-01T02:42:52.917996] ============================================================
+[2026-01-01T02:42:52.918065] STEP 1 FILTERING STATISTICS
+[2026-01-01T02:42:52.918125] ============================================================
+[2026-01-01T02:42:52.918182] Total products checked: 10
+[2026-01-01T02:42:52.918237] 
+[2026-01-01T02:42:52.918293] FILTERED BY REMOVE ACTION: 6
+[2026-01-01T02:42:52.918349] FILTERED BY KEYWORD: 0
+[2026-01-01T02:42:52.918410] MARKED FOR REMAP: 4
+[2026-01-01T02:42:52.918467] UNKNOWN SUBCATEGORY: 0
+[2026-01-01T02:42:52.918520] 
+[2026-01-01T02:42:52.918574] Total to be removed: 6
+[2026-01-01T02:42:52.918627] Total to proceed to LLM: 4
+[2026-01-01T02:42:52.918680] ============================================================

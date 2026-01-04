@@ -1,0 +1,120 @@
+{
+  "product_id": 7550,
+  "asin": "B0BHZM6C2S",
+  "title": "potassium magnesium gummies, potassium gummies sugar free for adults kids, support leg cramps & muscle & heart health, magnesium glycinate gummies best for bedtime, vegan, non-gmo, berry flavor, 120",
+  "brand": "tinies bers",
+  "source_subcategory": "magnesium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "potassium",
+      "position": 0,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "lookup_reasoning": "Found 'potassium' at the start of the title. lookup_ingredient returned normalized 'Potassium' \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "magnesium",
+      "position": 10,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "lookup_reasoning": "Found 'magnesium' immediately after the first 'potassium'. lookup_ingredient returned normalized 'Magnesium' \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "magnesium glycinate",
+      "position": 119,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "lookup_reasoning": "Found the phrase 'magnesium glycinate' later in the title ('...magnesium glycinate gummies...'). lookup_ingredient mapped this to 'Magnesium' \u2192 BASIC VITAMINS & MINERALS / MINERALS (glycinate form resolved to magnesium)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9357,
+      "completion": 6157,
+      "total": 15514
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "potassium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Potassium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "potassium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "potassium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Potassium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "potassium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium glycinate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4403.221305
+}

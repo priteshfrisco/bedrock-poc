@@ -1,0 +1,15 @@
+{
+  "product_id": 8925,
+  "asin": "B0CBW8JXBZ",
+  "title": "salud 2-in-1 hydration and immunity electrolytes powder, guava - 15 servings, guayaba agua fresca drink mix, elderberry, dairy & soy free, non-gmo, gluten free, vegan, low calorie, 1g of sugar",
+  "brand": "taste salud",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 81)",
+  "processing_time_sec": 102.755717
+}

@@ -1,0 +1,58 @@
+{
+  "product_id": 8139,
+  "asin": "B0BZMNCZ5B",
+  "title": "nick & hannah spring valley cranberry ultra triple strength, 15000 mg, 60 capsules + 1 mini pill container (color varies)",
+  "brand": "nick & hannah",
+  "source_subcategory": "cranberry herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to HERBAL REMEDIES / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "cranberry",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "cranberry"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "SINGLES",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9062,
+      "completion": 3877,
+      "total": 12939
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cranberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cranberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "actifruitcranberry",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 49.841302
+}

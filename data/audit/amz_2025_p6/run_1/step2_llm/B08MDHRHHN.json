@@ -1,0 +1,143 @@
+{
+  "product_id": 4986,
+  "asin": "B08MDHRHHN",
+  "title": "atp lab  pentacarb 1,1kg  carbohydrate supplements and electrolytes  unflavoured",
+  "brand": "atp lab",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 38.8014,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "carbohydrate",
+      "position": 26,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "Supplemental Carb Source",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PERFORMANCE NUTRITION",
+        "confidence_note": "Tool returned candidates with low confidence; top candidate mapped to a generic 'Supplemental Carb Source'. This mapping is the best available suggestion from the lookup call but flagged as low confidence/ambiguous."
+      },
+      "reasoning": "The word 'carbohydrate' appears in the title at character index 26 and is a functional ingredient (source of carbs)."
+    },
+    {
+      "name": "electrolytes",
+      "position": 55,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "confidence_note": "Tool returned low-confidence/ambiguous candidates (top candidate was 'Beet Root') which do not closely match 'electrolytes'. The lookup call result is low confidence and ambiguous. Conceptually 'electrolytes' would normally map to minerals/electrolyte category, but the tool did not return a clear match."
+      },
+      "reasoning": "The word 'electrolytes' appears in the title at character index 55 and is a functional ingredient listed explicitly."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9510,
+      "completion": 4956,
+      "total": 14466
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "carbohydrate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate fuel",
+              "match_type": "fuzzy",
+              "score": 82.75862068965517,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate powder",
+              "match_type": "fuzzy",
+              "score": 77.41935483870968,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Supplemental Carb Source",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "PERFORMANCE NUTRITION",
+              "keyword": "carbohydrate xtreme",
+              "match_type": "fuzzy",
+              "score": 77.41935483870968,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 62.819206
+}

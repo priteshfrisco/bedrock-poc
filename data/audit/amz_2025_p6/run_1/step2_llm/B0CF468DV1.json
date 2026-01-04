@@ -1,0 +1,104 @@
+{
+  "product_id": 9158,
+  "asin": "B0CF468DV1",
+  "title": "colossallabsmuscleproteinwheypowder[5lbs/packof1]\u00e2coldfiltered,25gpureprotein,6.6gbcaas(packagingmayvary)(20pound(packof4),strawberry)",
+  "brand": "colossal labs",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 80.0,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 18,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The substring 'protein' appears first within 'muscleprotein' starting at index 18. lookup_ingredient('protein') returned category/subcategory above."
+    },
+    {
+      "name": "whey protein",
+      "position": 25,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The title contains 'whey' at index 25 (part of 'wheypowder'), indicating whey-based protein. lookup_ingredient('whey protein') returned category/subcategory above. (Recorded as 'whey protein' with start position at the 'whey' substring.)"
+    },
+    {
+      "name": "bcaas",
+      "position": 82,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "The substring 'bcaas' appears as '6.6gbcaas' starting at index 82. lookup_ingredient('bcaas') returned category/subcategory above."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9306,
+      "completion": 8044,
+      "total": 17350
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bcaas"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "bcaa",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 161.955171
+}

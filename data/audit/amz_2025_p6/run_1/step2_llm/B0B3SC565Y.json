@@ -1,0 +1,15 @@
+{
+  "product_id": 6927,
+  "asin": "B0B3SC565Y",
+  "title": "hydration multiplier liquid i.v.  8 pack  3 strawberry, 3 lemon lime, and 2 tangerine  niro assortment",
+  "brand": "niro",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 33)",
+  "processing_time_sec": 121.719374
+}

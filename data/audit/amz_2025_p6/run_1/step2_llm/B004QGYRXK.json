@@ -1,0 +1,36 @@
+{
+  "product_id": 630,
+  "asin": "B004QGYRXK",
+  "title": "sqwincher zero qwik stik - sugar free electrolyte powdered beverage mix, grape 060107-gr (pack of 50)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: product is a powdered electrolyte beverage mix (flavored drink mix), ingredient extraction not performed"
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4588,
+      "completion": 1026,
+      "total": 5614
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 15.744894
+}

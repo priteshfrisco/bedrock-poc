@@ -1,0 +1,36 @@
+{
+  "product_id": 1468,
+  "asin": "B00PA4AVF0",
+  "title": "sos, mix drink box berry, 0.16 ounce, 10 count",
+  "brand": "s.o.s",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains no clear functional supplement ingredients; product appears to be a beverage/food mix, so ingredient lookup not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4580,
+      "completion": 1438,
+      "total": 6018
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 15.418219
+}

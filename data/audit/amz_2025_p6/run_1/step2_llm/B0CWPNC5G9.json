@@ -1,0 +1,153 @@
+{
+  "product_id": 10657,
+  "asin": "B0CWPNC5G9",
+  "title": "generic silver biotics sugar-free colloidal silver lozenges  60 ppm silversol  immune support + throat soothing comfort  elderberry zinc (21 count x 5 package bundle)",
+  "brand": "silver biotics",
+  "source_subcategory": "cough drops & lozenges",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LOZENGE",
+  "organic": "NOT ORGANIC",
+  "count": "21",
+  "unit": "COUNT",
+  "size": 5,
+  "ingredients": [
+    {
+      "name": "colloidal silver",
+      "position": 34,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The phrase 'colloidal silver' begins at character index 34. lookup_ingredient returned normalized ingredient 'Collodial Silver' (found=true) with category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "silversol",
+      "position": 68,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The trademark/term 'silversol' appears starting at index 68. The lookup returned no exact found match but provided a top candidate mapping to 'Collodial Silver' (BASIC VITAMINS & MINERALS / MINERALS). 'Silversol' is commonly a trade name/variant for colloidal silver; mapped to colloidal silver with low/ambiguous confidence per lookup results, so category/subcategory use the best-match candidate."
+    },
+    {
+      "name": "elderberry",
+      "position": 121,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The word 'elderberry' begins at character index 121. lookup_ingredient returned normalized 'Elderberry' (found=true) with category 'HERBAL REMEDIES' and subcategory 'SINGLES'."
+    },
+    {
+      "name": "zinc",
+      "position": 132,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'zinc' begins at character index 132. lookup_ingredient returned normalized 'Zinc' (found=true) with category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9515,
+      "completion": 6073,
+      "total": 15588
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "colloidal silver"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collodial Silver",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "colloidal silver",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "silversol"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Collodial Silver",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "silver hydrosol",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Resveratrol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "resveratrol",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cleavers",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cleavers",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 83.154351
+}

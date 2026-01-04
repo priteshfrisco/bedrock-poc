@@ -1,0 +1,62 @@
+{
+  "run_info": {
+    "file_id": "100_records",
+    "run_id": "run_4",
+    "run_num": 4,
+    "generated_at": "2026-01-01T17:11:18.127198",
+    "total_records_checked": 100,
+    "processing_duration_seconds": 0.0
+  },
+  "filtering_summary": {
+    "filtered_by_remove": {
+      "count": 70,
+      "percentage": 70.0
+    },
+    "filtered_by_keyword": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "marked_for_remap": {
+      "count": 30,
+      "percentage": 30.0
+    },
+    "unknown_subcategory": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "total_removed": {
+      "count": 70,
+      "percentage": 70.0
+    },
+    "total_to_llm": {
+      "count": 30,
+      "percentage": 30.0
+    }
+  },
+  "unknown_subcategories": {},
+  "keyword_breakdown": {},
+  "top_removed_subcategories": {
+    "sex toys": 4,
+    "surgical supplies & tools": 4,
+    "aromatherapy & essential oils": 4,
+    "professional massage equipment": 2,
+    "sound therapy & tuning forks": 2,
+    "fluid administration & collection": 2,
+    "athletic & medical tape": 2,
+    "pet relaxants": 2,
+    "inflatable bouncers": 2,
+    "hair cutting tools": 2
+  },
+  "top_remap_subcategories": {
+    "other herbal supplements": 4,
+    "single homeopathic remedies": 2,
+    "other dietary supplements": 2,
+    "whey protein": 2,
+    "magnesium supplements": 2,
+    "weight loss supplements": 2,
+    "electrolyte drink mixes": 2,
+    "multivitamins": 1,
+    "medicinal sleep aids": 1,
+    "antioxidants": 1
+  }
+}

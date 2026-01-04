@@ -1,0 +1,15 @@
+{
+  "product_id": 9918,
+  "asin": "B0CLBJ2L2G",
+  "title": "nautical elements organic beet juice powder - 20:1 concentration beet powder organic - circulation support - rich in nitric oxide - cold-pressed 100 servings of beet root powder supplement- 12.3oz",
+  "brand": "nautical elements",
+  "source_subcategory": "beet root supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "error": "Extra data: line 2 column 1 (char 75)",
+  "processing_time_sec": 74.729326
+}

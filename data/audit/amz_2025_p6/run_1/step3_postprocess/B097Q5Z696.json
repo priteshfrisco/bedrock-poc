@@ -1,0 +1,58 @@
+{
+  "product_id": 5652,
+  "asin": "B097Q5Z696",
+  "title": "luckyvitamin - coral calcium 1000 mg. - 100 veg capsules",
+  "brand": "luckyvitamin",
+  "source_subcategory": "calcium supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "coral calcium",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "coral calcium"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "MINERALS",
+  "health_focus": "BONE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9042,
+      "completion": 2611,
+      "total": 11653
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coral calcium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Coral Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "coral calcium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 33.283037
+}

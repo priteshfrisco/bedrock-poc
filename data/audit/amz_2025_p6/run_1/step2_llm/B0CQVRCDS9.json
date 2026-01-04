@@ -1,0 +1,196 @@
+{
+  "product_id": 10296,
+  "asin": "B0CQVRCDS9",
+  "title": "cod liver oil gummies 1000mg, sugar free for adults & kids, omega-3s & vitamin a&d for brain, cognitive, heart & eye, bone health, gluten free, non gmo, pectin, 120",
+  "brand": "tinies bers",
+  "source_subcategory": "omega oils",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "cod liver oil",
+      "position": 0,
+      "lookup_result": {
+        "ingredient": "cod liver oil",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "FISH",
+        "found": true
+      },
+      "reasoning": "Phrase 'cod liver oil' appears at the start of the title (index 0). Functionally a fish-derived oil (cod liver oil \u2192 FATTY ACIDS / FISH). lookup_ingredient returned ambiguous candidates; using domain knowledge, cod liver oil is classified as a fish oil (FATTY ACIDS - FISH)."
+    },
+    {
+      "name": "omega-3s",
+      "position": 60,
+      "lookup_result": {
+        "ingredient": "Fish Oil",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "FISH",
+        "found": true
+      },
+      "reasoning": "'omega-3s' appears in the title starting at index 60 ('omega-3s'). lookup_ingredient maps omega-3s to fish oil / fatty acids (FATTY ACIDS - FISH)."
+    },
+    {
+      "name": "vitamin a",
+      "position": 71,
+      "lookup_result": {
+        "ingredient": "Vitamin A",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "Title contains 'vitamin a&d' starting at index 71 (the word 'vitamin' begins at 71). Vitamin A is present (the 'a' after 'vitamin') and lookup_ingredient returns Vitamin A \u2192 BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin d",
+      "position": 71,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "Title contains 'vitamin a&d' (the grouping 'vitamin' at index 71 applies to both A and D). Vitamin D is present as part of 'vitamin a&d' and lookup_ingredient returns Vitamin D \u2192 BASIC VITAMINS & MINERALS / LETTER VITAMINS. (Position set to 71 where 'vitamin' begins; the 'd' character itself occurs at index 81 but 'vitamin' word covers both vitamins.)"
+    },
+    {
+      "name": "pectin",
+      "position": 153,
+      "lookup_result": {
+        "ingredient": "Pectin",
+        "nw_category": "OTC",
+        "nw_subcategory": "OTC - NON-SPECIFIC",
+        "found": true
+      },
+      "reasoning": "'pectin' appears near the end of the title at index 153. Pectin is used as the gelling agent for gummies; lookup_ingredient maps it to OTC / OTC - NON-SPECIFIC."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9618,
+      "completion": 6288,
+      "total": 15906
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cod liver oil"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Veg Supp Oils",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "ALL OTHER OILS",
+              "keyword": "castor oil",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Olive Leaf",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "olive leaf",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Liver Extract",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "bovine liver",
+              "match_type": "fuzzy",
+              "score": 56.00000000000001,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega-3s"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega-3",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 93
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin a"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin A",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "vitamin a",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pectin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pectin",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "pectin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 83.253131
+}

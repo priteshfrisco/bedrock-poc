@@ -1,0 +1,33 @@
+{
+  "product_id": 3530,
+  "asin": "B07MNMS9BY",
+  "title": "halls throat soothing blueberry cough drops, economy pack, 80 drops",
+  "brand": "halls",
+  "source_subcategory": "cough drops & lozenges",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4577,
+      "completion": 869,
+      "total": 5446
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 11.695992
+}

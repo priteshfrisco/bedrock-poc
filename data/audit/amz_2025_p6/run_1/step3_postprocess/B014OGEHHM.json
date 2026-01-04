@@ -1,0 +1,75 @@
+{
+  "product_id": 1733,
+  "asin": "B014OGEHHM",
+  "title": "kirkland signature natural fish oil concentrate with omega-3 fatty acids  400 softgels, 1000mg , pack of 3 kirkland-uu7m",
+  "brand": "remove",
+  "source_subcategory": "omega oils",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 400,
+  "unit": "COUNT",
+  "size": 3,
+  "primary_ingredient": "fish oil concentrate",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "fish oil concentrate",
+    "omega-3 fatty acids"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "FISH",
+  "health_focus": "CARDIOVASCULAR HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9183,
+      "completion": 4841,
+      "total": 14024
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fish oil concentrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "fish oil",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.138877282539227
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega-3 fatty acids"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.843989500065074
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.054281
+}

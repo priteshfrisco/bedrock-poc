@@ -1,0 +1,60 @@
+{
+  "product_id": 6250,
+  "asin": "B09PQWHT76",
+  "title": "beet root powder - 100% natural - 8 oz - no fillers - non gmo - by earthwise aromatics",
+  "brand": "earthwise aromatics",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 8,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "beet root",
+        "position": 0,
+        "category": "HERBAL REMEDIES",
+        "subcategory": "FOOD SUPPLEMENTS"
+      }
+    ],
+    "reasoning": "Detected 'beet root powder' at the start of the title. lookup_ingredient('beet root') returned category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'. Position calculated from the title string: 'beet root' begins at character index 0."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9057,
+      "completion": 3317,
+      "total": 12374
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 44.801493
+}

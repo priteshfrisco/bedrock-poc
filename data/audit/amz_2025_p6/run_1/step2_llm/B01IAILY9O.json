@@ -1,0 +1,58 @@
+{
+  "product_id": 2084,
+  "asin": "B01IAILY9O",
+  "title": "benefiber fiber sugar-free on the go stick packs, unflavored, 28 ea (pack of 9)",
+  "brand": "benefiber",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "PACKET",
+  "organic": "NOT ORGANIC",
+  "count": 28,
+  "unit": "COUNT",
+  "size": 9,
+  "ingredients": [
+    {
+      "name": "fiber",
+      "position": 10,
+      "category": "PROBIOTICS+",
+      "subcategory": "FIBER PRODUCTS & LAXATIVES",
+      "reasoning": "The word 'fiber' appears as a standalone ingredient at character index 10 in the title ('benefiber\u2423fiber...'). 'benefiber' (brand) was ignored as a source of false positive. lookup_ingredient returned normalized ingredient 'Acacia Fiber' with category 'PROBIOTICS+' and subcategory 'FIBER PRODUCTS & LAXATIVES'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9059,
+      "completion": 3972,
+      "total": 13031
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.336056
+}

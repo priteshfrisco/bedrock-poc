@@ -1,0 +1,102 @@
+{
+  "product_id": 6931,
+  "asin": "B0B3W3LR1D",
+  "title": "secrets of the tribe white willow tincture alcohol extract, high-potency herbal drops, tincture made from white willow salix alba healthy joints and muscles 2 oz",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other dietary supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": "2",
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "white willow",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "white willow",
+    "white willow",
+    "salix alba"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9349,
+      "completion": 7271,
+      "total": 16620
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "white willow"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Willow Bark",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "white willow",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "salix alba"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "caralluma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+              "keyword": "slimaluma",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Alfalfa",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "alfalfa",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Slippery Elm Bark",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "slippery elm",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 95.198112
+}

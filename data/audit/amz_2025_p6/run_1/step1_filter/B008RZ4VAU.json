@@ -1,0 +1,14 @@
+{
+  "product_id": 875,
+  "asin": "B008RZ4VAU",
+  "title": "seggiano extra virgin olive oil, 16.9 oz",
+  "brand": "seggiano",
+  "source_subcategory": "olive oil",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.018555,
+  "lookup_action": "REMOVE"
+}

@@ -1,0 +1,81 @@
+{
+  "product_id": 9743,
+  "asin": "B0CK1B8SNS",
+  "title": "armracolostrumpremiumpowder,grassfed,guthealthbloatingimmunityskin&hair,contains400+bioactivenutrients,keto,gluten&fatfree(unflavored,bloodorangebundle120servings)",
+  "brand": "armra",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "colostrum",
+      "position": 5,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The substring 'colostrum' appears at index 5 in the title ('armracolostrumpremiumpowder...'). lookup_ingredient returned normalized ingredient 'Colostrum' with category/subcategory as shown."
+    },
+    {
+      "name": "blood orange",
+      "position": 134,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title contains 'bloodorange' (no space) starting at index 134 in the '(unflavored,bloodorangebundle120servings)' portion. This appears to be a flavor/ingredient mention. lookup_ingredient was called for 'blood orange' and returned the listed category/subcategory (note: the tool matched to 'Bloodroot' with medium confidence)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9208,
+      "completion": 5721,
+      "total": 14929
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "colostrum"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Colostrum",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "colostrum",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "blood orange"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bloodroot",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "blood root",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 82.16181
+}

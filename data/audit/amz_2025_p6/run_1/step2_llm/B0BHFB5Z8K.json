@@ -1,0 +1,184 @@
+{
+  "product_id": 7528,
+  "asin": "B0BHFB5Z8K",
+  "title": "vitassium drinkmix with electrolytes for sodium & potassium replenishment, 12-ct carton of single serving packets, fruit punch",
+  "brand": "salt stick",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DRINK",
+  "organic": "NOT ORGANIC",
+  "count": 12,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 24,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reason": "lookup_ingredient() did not find an exact normalized match for 'electrolytes' and returned ambiguous candidates.",
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beetroot",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet crystals",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet powder",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714,
+            "confidence": "low"
+          }
+        ]
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "'electrolytes' appears explicitly in the title at index 24. lookup_ingredient() returned no exact normalized match (ambiguous candidates), so category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "sodium",
+      "position": 41,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Saline",
+        "nw_category": "OTC",
+        "nw_subcategory": "OTC - NON-SPECIFIC",
+        "keyword": "sodium chloride",
+        "match_type": "bm25",
+        "confidence": "medium",
+        "score": 5.691222859866249
+      },
+      "category": "OTC",
+      "subcategory": "OTC - NON-SPECIFIC",
+      "reasoning": "'sodium' appears explicitly at index 41. lookup_ingredient() returned 'Saline' mapping with category OTC / OTC - NON-SPECIFIC."
+    },
+    {
+      "name": "potassium",
+      "position": 50,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Potassium",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "keyword": "potassium",
+        "match_type": "exact",
+        "confidence": "exact",
+        "score": 100
+      },
+      "category": "BASIC VITamins & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "'potassium' appears explicitly at index 50 and lookup_ingredient() returned an exact match mapping to BASIC VITAMINS & MINERALS / MINERALS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9414,
+      "completion": 5960,
+      "total": 15374
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sodium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saline",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "sodium chloride",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "potassium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Potassium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "potassium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4387.81157
+}

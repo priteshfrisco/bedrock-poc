@@ -1,0 +1,247 @@
+{
+  "product_id": 9311,
+  "asin": "B0CG6V9SRX",
+  "title": "rize labs (2 pack) evaxatropin gummies for men, evoxatropin performance gumies reviews, evaxatropin gummy, evaxatropinmale support, health supplement gomitas, vitality and energy (120 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "multivitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - MALE",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "evaxatropin",
+      "position": 19,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "nw_category": null,
+        "nw_subcategory": null,
+        "reasoning": "Term 'evaxatropin' appears to be a brand/proprietary ingredient name. lookup_ingredient returned no exact match (ambiguous/low-confidence fuzzy candidates), so no validated category/subcategory available."
+      }
+    },
+    {
+      "name": "evoxatropin",
+      "position": 48,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "nw_category": null,
+        "nw_subcategory": null,
+        "reasoning": "Term 'evoxatropin' (alternate spelling) appears in the title; lookup_ingredient returned no exact match (ambiguous/low-confidence candidates). Treated as a proprietary ingredient with unknown category."
+      }
+    },
+    {
+      "name": "evaxatropin",
+      "position": 88,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "nw_category": null,
+        "nw_subcategory": null,
+        "reasoning": "Duplicate occurrence of 'evaxatropin' later in the title. Same lookup result: no exact match found in database (likely proprietary)."
+      }
+    },
+    {
+      "name": "evaxatropinmale",
+      "position": 107,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "nw_category": null,
+        "nw_subcategory": null,
+        "reasoning": "'evaxatropinmale' appears to be a concatenated form (brand/proprietary + 'male'). lookup_ingredient returned no exact match and low-confidence fuzzy candidates; treated as proprietary/unknown."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10119,
+      "completion": 6816,
+      "total": 16935
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evaxatropin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Valerian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "valarian",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Melatonin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "melatonin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gelatin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "gelatin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evoxatropin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Melatonin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "melatonin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gelatin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "gelatin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Keratin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "keratin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evaxatropin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Valerian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "valarian",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Melatonin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "melatonin",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gelatin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "gelatin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evaxatropinmale"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto kinase",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto-k",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto-serra",
+              "match_type": "fuzzy",
+              "score": 53.84615384615385,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 130.508887
+}

@@ -1,0 +1,14 @@
+{
+  "product_id": 1024,
+  "asin": "B00BL276TY",
+  "title": "medline msg1565 sensicare slt sterile powder and latex-free surgical glove, size 6.5, pack of 200",
+  "brand": "medline",
+  "source_subcategory": "surgical supplies & tools",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.007705,
+  "lookup_action": "REMOVE"
+}

@@ -1,0 +1,177 @@
+{
+  "product_id": 5723,
+  "asin": "B0992Q96S8",
+  "title": "morning routine daily hydration  electrolyte powder packets with apple cider vinegar, lemon and sea salt  hydrate powder, electrolyte drink mix  keto & paleo electrolytes hydration powder - 5 ct",
+  "brand": "routine",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 5,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 33,
+      "lookup_result": {
+        "queried_name": "electrolyte",
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "reason": "Lookup returned no exact match for 'electrolyte'. Candidate suggestions were low-confidence (e.g., beet root) and require disambiguation."
+      },
+      "reasoning": "The title's primary functional claim is 'electrolyte' (appears first as 'electrolyte powder'). Treated as a functional ingredient mention (general electrolytes)."
+    },
+    {
+      "name": "apple cider vinegar",
+      "position": 65,
+      "lookup_result": {
+        "queried_name": "apple cider vinegar",
+        "ingredient": "Cider Vinegar",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "found": true,
+        "confidence": "high"
+      },
+      "reasoning": "Title explicitly lists 'apple cider vinegar' starting at character 65; lookup matched normalized 'Cider Vinegar' with high confidence."
+    },
+    {
+      "name": "lemon",
+      "position": 86,
+      "lookup_result": {
+        "queried_name": "lemon",
+        "ingredient": "Lemon Balm",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true,
+        "confidence": "medium",
+        "note": "Lookup matched 'lemon' to 'Lemon Balm' (likely a fuzzy match)."
+      },
+      "reasoning": "Title contains 'lemon' at position 86. The lookup returned 'Lemon Balm' (medium confidence); however the title likely refers to the citrus ingredient 'lemon'. The output includes the lookup result as returned."
+    },
+    {
+      "name": "sea salt",
+      "position": 96,
+      "lookup_result": {
+        "queried_name": "sea salt",
+        "ingredient": "Cell Salt",
+        "nw_category": "HOMEOPATHICS",
+        "nw_subcategory": "NON-SPECIFIC",
+        "found": true,
+        "confidence": "medium",
+        "note": "Lookup returned 'Cell Salt' for 'sea salt' (possible mapping to homeopathic cell salts)."
+      },
+      "reasoning": "Title explicitly lists 'sea salt' starting at character 96; lookup returned a homeopathic mapping ('Cell Salt'). Included the lookup output as returned."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9524,
+      "completion": 6669,
+      "total": 16193
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lemon Balm",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lemon balm",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sea salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 6281.271397
+}

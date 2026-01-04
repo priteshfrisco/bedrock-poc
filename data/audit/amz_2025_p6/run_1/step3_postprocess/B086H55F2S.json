@@ -1,0 +1,39 @@
+{
+  "product_id": 4378,
+  "asin": "B086H55F2S",
+  "title": "estrogen - all natural bioidentical estrogen bi-est 5.0 - hormone replacement menopause relief estrogen cream for women - estriol & estradiol - maximum strength - two month supply - 3oz",
+  "brand": "biolabs pro",
+  "source_subcategory": "feminine menopause products",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4605,
+      "completion": 857,
+      "total": 5462
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.698133
+}

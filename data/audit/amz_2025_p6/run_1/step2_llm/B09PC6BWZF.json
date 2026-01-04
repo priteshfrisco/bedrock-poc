@@ -1,0 +1,151 @@
+{
+  "product_id": 6233,
+  "asin": "B09PC6BWZF",
+  "title": "gnarly nutrition, hydrate electrolyte powder, raspberry",
+  "brand": "gnarly nutrition",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 26,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reason": "lookup_ingredient returned no direct match for 'electrolyte' and suggested ambiguous candidates; LLM decision required.",
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beetroot",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet crystals",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet powder",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          }
+        ]
+      },
+      "reasoning": "The token 'electrolyte' appears in the title at character index 26 ('...hydrate electrolyte powder...') and represents the functional ingredient group. lookup_ingredient did not return a definitive mapping."
+    },
+    {
+      "name": "raspberry",
+      "position": 46,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Red Raspberry",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "keyword": "raspberry ketones",
+        "match_type": "bm25",
+        "confidence": "medium",
+        "score": 5.383094026799263
+      },
+      "reasoning": "The token 'raspberry' appears as a flavor/ingredient at character index 46 (end of title). lookup_ingredient returned 'Red Raspberry' mapped to category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9298,
+      "completion": 4003,
+      "total": 13301
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "raspberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Red Raspberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "raspberry ketones",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.383094026799263
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 62.223055
+}

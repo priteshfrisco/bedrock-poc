@@ -1,0 +1,118 @@
+{
+  "product_id": 2820,
+  "asin": "B078K22CMF",
+  "title": "eclipta - 450 mg (100 capsules, zin: 520002) - 2 pack",
+  "brand": "terravita",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "eclipta",
+      "position": 0,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reason": "lookup_ingredient returned no definitive match for 'eclipta'. Returned low-confidence candidate suggestions (CLA, Eucalyptol) which do not match 'eclipta' clearly. Because the lookup did not confirm a category/subcategory, category and subcategory are set to UNKNOWN.",
+        "candidates": [
+          {
+            "ingredient": "CLA",
+            "nw_category": "ACTIVE NUTRITION",
+            "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+            "keyword": "cla",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "CLA",
+            "nw_category": "ACTIVE NUTRITION",
+            "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+            "keyword": "conjugated linoleic acid",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Eucalyptol",
+            "nw_category": "OTC",
+            "nw_subcategory": "OTC - NON-SPECIFIC",
+            "keyword": "eucalyptol",
+            "match_type": "fuzzy",
+            "score": 58.82352941176471,
+            "confidence": "low"
+          }
+        ]
+      },
+      "reasoning": "The only clear functional ingredient word in the title is 'eclipta' starting at character 0. lookup_ingredient('eclipta') was called and returned no definitive mapping; therefore category/subcategory are reported as UNKNOWN while recording the lookup tool's returned candidate suggestions."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9216,
+      "completion": 3143,
+      "total": 12359
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "eclipta"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "CLA",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+              "keyword": "cla",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "CLA",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+              "keyword": "conjugated linoleic acid",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Eucalyptol",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "eucalyptol",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 41.057066
+}

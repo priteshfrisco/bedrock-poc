@@ -1,0 +1,62 @@
+{
+  "product_id": 2269,
+  "asin": "B01MXI6NBW",
+  "title": "surthrival: pine pollen gold liquid, 1 oz by surthrival",
+  "brand": "surthrival",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 1,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "pine pollen",
+      "position": 12,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Bee Pollen",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS"
+      },
+      "reasoning": "The title contains 'pine pollen' (starts at character index 12). lookup_ingredient() matched it to normalized ingredient 'Bee Pollen' in category 'HERBAL REMEDIES' / subcategory 'FOOD SUPPLEMENTS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9042,
+      "completion": 2997,
+      "total": 12039
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pine pollen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bee Pollen",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "bee pollen",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 44.624497
+}

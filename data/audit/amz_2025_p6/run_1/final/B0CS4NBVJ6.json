@@ -1,0 +1,58 @@
+{
+  "product_id": 10394,
+  "asin": "B0CS4NBVJ6",
+  "title": "isagenix nutritional_supplement",
+  "brand": "isagenix",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "primary_ingredient": "nutritional supplement",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "nutritional supplement"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "JOINT HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9027,
+      "completion": 3487,
+      "total": 12514
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nutritional supplement"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Yeast",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "nutritional yeast",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.698649
+}

@@ -1,0 +1,143 @@
+{
+  "product_id": 5281,
+  "asin": "B08X4G3XMB",
+  "title": "gpgp greenpeople (3pack natural hemp oil extract 12,000,000mg, immune system support, focus calm, stress, mood, pure extract, rich in omega 3&6&9 fatty acids",
+  "brand": "gpgp greenpeople",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "mg",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "hemp oil",
+      "position": 32,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'hemp oil extract' appears starting at character index 32 ('h' of 'hemp'). lookup_ingredient('hemp oil') returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "omega 3",
+      "position": 134,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The text 'omega 3' (part of 'omega 3&6&9') appears with 'omega' starting at index 134. lookup_ingredient('omega 3') returned a match mapped to category 'FATTY ACIDS' and subcategory 'FISH' (normalized to 'Fish Oil' in the lookup)."
+    },
+    {
+      "name": "omega 6",
+      "position": 134,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The title lists 'omega 3&6&9' after 'rich in', indicating omega-6 is present; the word 'omega' starts at index 134. lookup_ingredient('omega 6') returned a mapping similar to the omega-3 lookup (category 'FATTY ACIDS', subcategory 'FISH') in the lookup results."
+    },
+    {
+      "name": "omega 9",
+      "position": 134,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The title lists 'omega 3&6&9' after 'rich in', indicating omega-9 is present; 'omega' starts at index 134. lookup_ingredient('omega 9') returned a mapping consistent with the omega lookups (category 'FATTY ACIDS', subcategory 'FISH') in the lookup results."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9427,
+      "completion": 6929,
+      "total": 16356
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 6"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 9"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 95.96197
+}

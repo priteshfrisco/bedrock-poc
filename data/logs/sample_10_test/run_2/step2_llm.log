@@ -1,0 +1,19 @@
+[2026-01-01T02:44:33.419217] ============================================================
+[2026-01-01T02:44:33.419364] STEP 2: LLM EXTRACTION
+[2026-01-01T02:44:33.419387] ============================================================
+[2026-01-01T02:44:33.437277] [B0DT98X7C5] Starting LLM extraction: gpgpgreenpeoplemelatonin5mgextrastrengthadultextrastrengthsu...
+[2026-01-01T02:44:33.437592] [B0CRSR8NZ4] Starting LLM extraction: liquidhealth ultimate bariatric liquid vitamin supplement bu...
+[2026-01-01T02:44:33.437514] [B0F94G1PLD] Starting LLM extraction: (2 pack) presgera capsules - presgera supplements pills adva...
+[2026-01-01T02:44:33.438221] [B07661Z3YX] Starting LLM extraction: doctor's best high absorption coq10 with bioperine, gluten f...
+[2026-01-01T02:45:37.673813] [B0F94G1PLD] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-01T02:45:37.675797] [B0F94G1PLD] Extracted 1 ingredients
+[2026-01-01T02:45:37.677145] Saved: audit/sample_10_test/run_2/step2_llm/B0F94G1PLD.json
+[2026-01-01T02:45:39.086102] [B07661Z3YX] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-01T02:45:39.086541] [B07661Z3YX] Extracted 2 ingredients
+[2026-01-01T02:45:39.086848] Saved: audit/sample_10_test/run_2/step2_llm/B07661Z3YX.json
+[2026-01-01T02:46:40.908235] [B0DT98X7C5] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-01T02:46:40.909985] [B0DT98X7C5] Extracted 6 ingredients
+[2026-01-01T02:46:40.911468] Saved: audit/sample_10_test/run_2/step2_llm/B0DT98X7C5.json
+[2026-01-01T02:47:06.338020] [B0CRSR8NZ4] SUCCESS - Tokens: 0 (in: 0, out: 0), Cost: $0.0000
+[2026-01-01T02:47:06.340150] [B0CRSR8NZ4] Extracted 6 ingredients
+[2026-01-01T02:47:06.342016] Saved: audit/sample_10_test/run_2/step2_llm/B0CRSR8NZ4.json

@@ -1,0 +1,65 @@
+{
+  "product_id": 5,
+  "asin": "B0F94G1PLD",
+  "title": "(2 pack) presgera capsules - presgera supplements pills advanced formula for wellness & health support, all natural premium vitamin natural ingredients pastillas reviews, 120 capsules for 2 months",
+  "brand": "livorka",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": {
+    "value": [
+      {
+        "name": "vitamin",
+        "position": 116,
+        "lookup_result": {
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "found": true
+        },
+        "reasoning": "The word 'vitamin' appears in the title at character index 116. lookup_ingredient('vitamin') returned normalized 'Vitamin D' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'. The title does not specify which vitamin (e.g., D, C), so the extracted ingredient name is the literal 'vitamin' as found, with the tool's returned mapping."
+      }
+    ],
+    "reasoning": "Only the generic term 'vitamin' is present as a functional ingredient. No specific vitamins/minerals (e.g., 'vitamin D3', 'calcium') or other ingredients are named. Brand words like 'presgera' and generic phrases ('natural ingredients', 'wellness support') are not treated as functional ingredient names."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9079,
+      "completion": 4636,
+      "total": 13715
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 66.039099
+}

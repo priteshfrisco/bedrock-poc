@@ -1,0 +1,14 @@
+{
+  "product_id": 16,
+  "asin": "000000000815122802",
+  "title": "anesthetic and obstetric management of high-risk pregnancy",
+  "brand": "mosby",
+  "source_subcategory": "other pregnancy & maternity care",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.012945,
+  "lookup_action": "REMOVE"
+}

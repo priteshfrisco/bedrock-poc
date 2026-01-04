@@ -1,0 +1,36 @@
+{
+  "product_id": 7859,
+  "asin": "B0BRNXHX3N",
+  "title": "beeq - prime hydration sports drink variety pack - energy drink, electrolyte beverage - lemon lime, tropical punch, blue raspberry - 16.9 fl oz , pack of (6)",
+  "brand": "beeq",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title describes a sports/energy beverage (flavors listed: lemon lime, tropical punch, blue raspberry). Functional supplement ingredients were not identified because this is not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4599,
+      "completion": 1287,
+      "total": 5886
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 3479.161386
+}

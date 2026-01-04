@@ -1,0 +1,254 @@
+{
+  "product_id": 7739,
+  "asin": "B0BNR1TT2B",
+  "title": "hydrate strawberry lemonade, hydration electrolyte powdered drink mix",
+  "brand": "trulabs",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "strawberry",
+      "position": 8,
+      "lookup_result": {
+        "found": false,
+        "raw_tool_candidates": [
+          {
+            "ingredient": "Cranberry",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "actifruitcranberry",
+            "match_type": "fuzzy",
+            "score": 73.6842105263158
+          },
+          {
+            "ingredient": "Cranberry",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "cran berry",
+            "match_type": "fuzzy",
+            "score": 73.6842105263158
+          }
+        ],
+        "llm_decision": {
+          "ingredient": "strawberry",
+          "category": "HERBAL REMEDIES",
+          "subcategory": "FOOD SUPPLEMENTS",
+          "reasoning": "The title uses 'strawberry' as a flavor/fruit ingredient (position 8). The lookup tool returned no exact match and suggested botanical/food-supplement candidates; classify as a food/herbal flavor ingredient under HERBAL REMEDIES / FOOD SUPPLEMENTS."
+        }
+      }
+    },
+    {
+      "name": "lemonade",
+      "position": 19,
+      "lookup_result": {
+        "found": false,
+        "raw_tool_candidates": [
+          {
+            "ingredient": "Lemon Balm",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "lemon balm",
+            "match_type": "fuzzy",
+            "score": 66.66666666666667
+          },
+          {
+            "ingredient": "Lemongrass",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "lemongrass",
+            "match_type": "fuzzy",
+            "score": 66.66666666666667
+          }
+        ],
+        "llm_decision": {
+          "ingredient": "lemonade",
+          "category": "HERBAL REMEDIES",
+          "subcategory": "FOOD SUPPLEMENTS",
+          "reasoning": "'lemonade' in the title is a flavor descriptor (position 19). The lookup tool did not return a direct match; classify as a flavor/food-supplement ingredient under HERBAL REMEDIES / FOOD SUPPLEMENTS."
+        }
+      }
+    },
+    {
+      "name": "electrolyte",
+      "position": 39,
+      "lookup_result": {
+        "found": false,
+        "raw_tool_candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beetroot",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet powder",
+            "match_type": "fuzzy",
+            "score": 60.0
+          }
+        ],
+        "llm_decision": {
+          "ingredient": "electrolyte",
+          "category": "BASIC VITAMINS & MINERALS",
+          "subcategory": "ELECTROLYTES",
+          "reasoning": "'electrolyte' appears explicitly (position 39) and is the functional ingredient describing the product (hydration/electrolyte drink mix). The lookup tool returned no exact match and gave unrelated candidates; classify as BASIC VITAMINS & MINERALS / ELECTROLYTES."
+        }
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9727,
+      "completion": 5446,
+      "total": 15173
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "strawberry"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "actifruitcranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cran berry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemonade"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Lemon Balm",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemon balm",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemon grass",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lemongrass",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "lemongrass",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 57.992891
+}

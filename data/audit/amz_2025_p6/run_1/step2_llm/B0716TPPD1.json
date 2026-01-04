@@ -1,0 +1,36 @@
+{
+  "product_id": 2451,
+  "asin": "B0716TPPD1",
+  "title": "tylenol sinus congestion & pain severe caplets - 2pc",
+  "brand": "remove",
+  "source_subcategory": "sinus medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Ingredient extraction skipped because the product is a branded OTC drug (Tylenol) and not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4577,
+      "completion": 1085,
+      "total": 5662
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.97982
+}

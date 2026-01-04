@@ -1,0 +1,229 @@
+{
+  "product_id": 6428,
+  "asin": "B09TBQRDP8",
+  "title": "keto vitals sleep drink electrolyte sleep powder packets - fast-acting sleep blend of melatonin 3mg, gaba, l-theanine, & ashwagandha - elderberry, 30 count",
+  "brand": "keto vitals",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 24,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "tool_notes": "lookup_ingredient did not return an exact match for 'electrolyte' (candidates unrelated)."
+      },
+      "reasoning": "'electrolyte' appears in the title at index 24 and is a functional ingredient descriptor (electrolyte blend). The lookup tool did not return an exact mapping; treat category/subcategory as UNKNOWN from the tool."
+    },
+    {
+      "name": "melatonin",
+      "position": 86,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Melatonin",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+        "tool_notes": "Exact match from lookup_ingredient."
+      },
+      "reasoning": "Melatonin is explicitly listed ('melatonin 3mg') beginning at index 86. Lookup returned normalized 'Melatonin' with category/subcategory shown above."
+    },
+    {
+      "name": "gaba",
+      "position": 101,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "GABA",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "AMINO ACIDS",
+        "tool_notes": "Exact match from lookup_ingredient."
+      },
+      "reasoning": "'gaba' appears at index 101. Lookup returned 'GABA' mapped to AMINO ACIDS."
+    },
+    {
+      "name": "l-theanine",
+      "position": 107,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Theanine",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "AMINO ACIDS",
+        "tool_notes": "Exact match from lookup_ingredient (normalized to 'Theanine')."
+      },
+      "reasoning": "'l-theanine' appears starting at index 107 (includes hyphen). Lookup returned normalized 'Theanine' in AMINO ACIDS."
+    },
+    {
+      "name": "ashwagandha",
+      "position": 121,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "ashwaganda",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "tool_notes": "Lookup returned a result (note: tool mapping appears unexpected for ashwagandha but is the tool's result)."
+      },
+      "reasoning": "'ashwagandha' appears at index 121 following an ampersand. The lookup_ingredient call returned a mapping (tool-provided category/subcategory included above)."
+    },
+    {
+      "name": "elderberry",
+      "position": 135,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Elderberry",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "SINGLES",
+        "tool_notes": "Exact match from lookup_ingredient."
+      },
+      "reasoning": "'elderberry' appears near the end of the title at index 135. Lookup returned 'Elderberry' mapped to HERBAL REMEDIES / SINGLES."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9693,
+      "completion": 7283,
+      "total": 16976
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "melatonin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Melatonin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+          "keyword": "melatonin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gaba"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "GABA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "gaba",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-theanine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Theanine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "l-theanine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ashwagandha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 152.609027
+}

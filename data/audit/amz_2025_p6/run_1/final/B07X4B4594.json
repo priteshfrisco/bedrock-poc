@@ -1,0 +1,42 @@
+{
+  "product_id": 3956,
+  "asin": "B07X4B4594",
+  "title": "crane vapor pads for ee-5948 cordless personal steam inhaler, white, 12 count (pack of 1)",
+  "brand": "crane",
+  "source_subcategory": "cold & flu treatments",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4588,
+      "completion": 1357,
+      "total": 5945
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.774646
+}

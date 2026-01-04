@@ -1,0 +1,58 @@
+{
+  "product_id": 8740,
+  "asin": "B0C8ZRCGNY",
+  "title": "herbal secrets coconut oil 1000 mg 120 softgels supplement  non-gmo  gluten free  made in usa",
+  "brand": "herbal secrets",
+  "source_subcategory": "other essential fatty acids",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "ALL OTHER OIL",
+  "remap_reason": "Maps to OIL CATEGORY / ALL OTHER OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "coconut oil",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "coconut oil"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "COCONUT",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9055,
+      "completion": 2792,
+      "total": 11847
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coconut oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Coconut Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "COCONUT",
+          "keyword": "coconut oil",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 29.66676
+}

@@ -1,0 +1,117 @@
+{
+  "product_id": 4693,
+  "asin": "B08G1T1Q86",
+  "title": "biosteel hydration mix, sugar-free with essential electrolytes and b vitamins, watermelon, 45 servings",
+  "brand": "biosteel sports",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 45,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 50,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "tool_reasoning": "lookup_ingredient returned no definitive match for 'electrolytes' (candidates suggested but low confidence)."
+      },
+      "reasoning": "The phrase 'essential electrolytes' appears in the title at character index 50. Electrolytes are a functional ingredient in a hydration mix."
+    },
+    {
+      "name": "b vitamins",
+      "position": 67,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Multivitamin",
+        "nw_category": "COMBINED MULTIVITAMINS",
+        "nw_subcategory": "COMBINED MULTIVITAMINS",
+        "tool_reasoning": "lookup_ingredient matched 'b vitamins' to a normalized 'Multivitamin' entry (tool returned this mapping)."
+      },
+      "reasoning": "The phrase 'b vitamins' appears in the title at character index 67 and denotes B-complex vitamins as functional ingredients."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9330,
+      "completion": 4530,
+      "total": 13860
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "b vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 61.162533
+}

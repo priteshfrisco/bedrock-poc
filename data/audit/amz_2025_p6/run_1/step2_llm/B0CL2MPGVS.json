@@ -1,0 +1,130 @@
+{
+  "product_id": 9881,
+  "asin": "B0CL2MPGVS",
+  "title": "puregen labs sodium chloride tablets 1 gm (1000 mg), usp  (15.4gr.)  100 count  normal salt tablets  made in usa  electrolytes replenisher hydration drink",
+  "brand": "p puregen labs",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "sodium chloride",
+      "position": 13,
+      "category": "OTC",
+      "subcategory": "OTC - NON-SPECIFIC",
+      "reasoning": "Exact phrase 'sodium chloride' appears starting at character index 13. lookup_ingredient returned ingredient 'Saline' with nw_category 'OTC' and nw_subcategory 'OTC - NON-SPECIFIC'."
+    },
+    {
+      "name": "salt",
+      "position": 88,
+      "category": "HOMEOPATHICS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The word 'salt' appears in 'normal salt tablets' starting at index 88. lookup_ingredient for 'salt' returned a match 'Cell Salt' (nw_category 'HOMEOPATHICS', nw_subcategory 'NON-SPECIFIC'). Note: 'salt' is a synonym/duplicate of sodium chloride in this context but is present separately in the title, so it is listed."
+    },
+    {
+      "name": "electrolytes",
+      "position": 115,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The word 'electrolytes' appears starting at index 115 ('electrolytes replenisher'). lookup_ingredient returned no definitive match (found:false) and candidate results were ambiguous; therefore category/subcategory are set to UNKNOWN. The title indicates the product functions as an electrolyte replenisher but the ingredient lookup did not yield a clear normalized category."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9440,
+      "completion": 5554,
+      "total": 14994
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sodium chloride"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saline",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "sodium chloride",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 74.562924
+}

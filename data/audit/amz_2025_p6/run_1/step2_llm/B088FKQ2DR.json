@@ -1,0 +1,36 @@
+{
+  "product_id": 4469,
+  "asin": "B088FKQ2DR",
+  "title": "longevity dehydrated sea grapes, 8.4 oz of (pack of 12), umibudo green caviar, lato seaweed  enhance health, boosting immune system, valued natural gift from sea (original, 240g)",
+  "brand": "longevity",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: The product is a food (sea grapes/umibudo/lato seaweed). Ingredient lookup for supplements is not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4611,
+      "completion": 1133,
+      "total": 5744
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 17.212775
+}

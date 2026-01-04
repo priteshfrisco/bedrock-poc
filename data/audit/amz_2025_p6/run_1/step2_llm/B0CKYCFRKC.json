@@ -1,0 +1,225 @@
+{
+  "product_id": 9871,
+  "asin": "B0CKYCFRKC",
+  "title": "zyn electrolytes powder hydration packets with vitamins, zinc & turmeric curcumin for gut health, immune support, low sugar electrolyte drink mix packets with piperine, mango pomegranate, 16 pack",
+  "brand": "zyn",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 16,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 4,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The title begins with 'zyn electrolytes...'. 'Electrolytes' is the first functional term (position 4). Electrolytes are mineral ions (sodium, potassium, magnesium) so mapped to BASIC VITAMINS & MINERALS / MINERALS. (lookup_ingredient returned no direct match; mapped to MINERALS based on ingredient meaning.)"
+    },
+    {
+      "name": "vitamins",
+      "position": 47,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "Title contains 'vitamins' at index 47. lookup_ingredient normalized 'vitamins' to Multivitamin (COMBINED MULTIVITAMINS)."
+    },
+    {
+      "name": "zinc",
+      "position": 57,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Title contains 'zinc' at index 57. lookup_ingredient returned Zinc \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "turmeric",
+      "position": 64,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "HERBAL EXTRACTS",
+      "reasoning": "Title contains 'turmeric' starting at index 64. lookup_ingredient returned Turmeric (tool output had inconsistent category data); turmeric is a botanical typically mapped to herbal remedies / herbal extracts, so mapped accordingly."
+    },
+    {
+      "name": "curcumin",
+      "position": 73,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "HERBAL EXTRACTS",
+      "reasoning": "Title contains 'curcumin' at index 73 (immediately after 'turmeric'). Curcumin is the active constituent of turmeric and treated here as a botanical/herbal extract."
+    },
+    {
+      "name": "piperine",
+      "position": 157,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "HERBAL EXTRACTS",
+      "reasoning": "Title contains 'piperine' at index 157. lookup_ingredient did not return an exact match but suggested Bioperine/black pepper candidates; piperine (black pepper extract) is a botanical extract and is mapped to HERBAL REMEDIES / HERBAL EXTRACTS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9861,
+      "completion": 9867,
+      "total": 19728
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "curcumin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "piperine"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Bioperine",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bioperine",
+              "match_type": "fuzzy",
+              "score": 82.35294117647058,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Bioperine",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "black pepper",
+              "match_type": "fuzzy",
+              "score": 82.35294117647058,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Epinephrine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "epinephrine",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 126.054234
+}

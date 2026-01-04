@@ -1,0 +1,33 @@
+{
+  "product_id": 1789,
+  "asin": "B017KW5CNA",
+  "title": "martin & pleasance combo s stomach, 125 ct",
+  "brand": "schuessler tissue salts",
+  "source_subcategory": "other mineral supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 125,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4575,
+      "completion": 2097,
+      "total": 6672
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 28.197434
+}

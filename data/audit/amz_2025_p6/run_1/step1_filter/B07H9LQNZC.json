@@ -1,0 +1,14 @@
+{
+  "product_id": 3333,
+  "asin": "B07H9LQNZC",
+  "title": "daiwa tsukishita beauty",
+  "brand": "daiwa",
+  "source_subcategory": "body care sets & kits",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.018716,
+  "lookup_action": "REMOVE"
+}

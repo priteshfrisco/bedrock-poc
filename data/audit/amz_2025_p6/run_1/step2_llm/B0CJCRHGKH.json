@@ -1,0 +1,36 @@
+{
+  "product_id": 9671,
+  "asin": "B0CJCRHGKH",
+  "title": "bodyarmor flash iv electrolyte packets, grape - zero sugar drink mix, single serve packs, coconut water powder, hydration for workout, travel essentials, just add sticks to liquid (15 count)",
+  "brand": "bodyarmor",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title lists beverage/drink mix descriptors (grape, coconut water powder, electrolyte packets) rather than dietary supplement functional ingredients \u2014 ingredient lookup not performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4600,
+      "completion": 1206,
+      "total": 5806
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 21.977711
+}

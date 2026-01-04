@@ -1,0 +1,33 @@
+{
+  "product_id": 5770,
+  "asin": "B09B7MYFRS",
+  "title": "carmel organics shikakai powder 8 ounce or 227 grams  natural hair care cleansing & conditioning  no added preservatives  acacia concinna powder",
+  "brand": "carmel organics",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4596,
+      "completion": 801,
+      "total": 5397
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 11.624809
+}

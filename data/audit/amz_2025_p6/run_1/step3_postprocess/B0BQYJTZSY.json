@@ -1,0 +1,58 @@
+{
+  "product_id": 7820,
+  "asin": "B0BQYJTZSY",
+  "title": "365 by whole foods market, black cohosh, 60 count",
+  "brand": "whole foods market",
+  "source_subcategory": "menopause care products",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "black cohosh",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "black cohosh"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "REPRODUCTIVE HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9034,
+      "completion": 2635,
+      "total": 11669
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black cohosh"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Black Cohosh",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black cohosh",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 3493.70026
+}

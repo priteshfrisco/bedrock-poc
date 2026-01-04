@@ -1,0 +1,81 @@
+{
+  "product_id": 533,
+  "asin": "B003NQZ5IK",
+  "title": "gaia herbs echinacea goldenseal supreme",
+  "brand": "gaia herbs",
+  "source_subcategory": "echinacea herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "echinacea",
+      "position": 11,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The token 'echinacea' appears in the title starting at character index 11. lookup_ingredient('echinacea') returned ingredient='Echinacea', nw_category='HERBAL REMEDIES', nw_subcategory='SINGLES'."
+    },
+    {
+      "name": "goldenseal",
+      "position": 20,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The token 'goldenseal' appears in the title starting at character index 20. lookup_ingredient('goldenseal') returned ingredient='Goldenseal', nw_category='FATTY ACIDS', nw_subcategory='HEMP/CBD'. (Using the tool's returned category/subcategory.)"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9121,
+      "completion": 2864,
+      "total": 11985
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "echinacea"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Echinacea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "echinacea",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "goldenseal"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Goldenseal",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "goldenseal",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 69.134457
+}

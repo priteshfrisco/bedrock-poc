@@ -1,0 +1,145 @@
+{
+  "product_id": 31,
+  "asin": "B077XK525F",
+  "title": "abrotanum 6c homeopathic remedy, urenus",
+  "brand": "urenus",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "abrotanum",
+      "position": 0,
+      "category": null,
+      "subcategory": null,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reason": "lookup_ingredient() did not return a definitive match for 'abrotanum'. Returned candidates (low confidence) reference unrelated herbal entries; no confident mapping available."
+      },
+      "reasoning": "'abrotanum' appears as the first token in the title and is a Latin/ingredient name (homeopathic remedy). Position calculated from the title string ('abrotanum 6c homeopathic remedy, urenus') where 'a' is index 0.",
+      "found": false
+    },
+    {
+      "name": "urenus",
+      "position": 33,
+      "category": null,
+      "subcategory": null,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reason": "lookup_ingredient() did not return a definitive match for 'urenus'. The lookup returned ambiguous/low-confidence candidates; no confident mapping available."
+      },
+      "reasoning": "'urenus' appears after the comma near the end of the title. Its start index in the title 'abrotanum 6c homeopathic remedy, urenus' is 33 (0-indexed). Treated as an ingredient token as written.",
+      "found": false
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9464,
+      "completion": 3187,
+      "total": 12651
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "abrotanum"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Pelargonium",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "african geranium",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pelargonium",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "pelargonium",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pelargonium",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "south african geranium",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "urenus"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Shepherds Purse",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "purepurse",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Eye Health",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "areds",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ibuprofen",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "ibuprofen",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 45.613354
+}

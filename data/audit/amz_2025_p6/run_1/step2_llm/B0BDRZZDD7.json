@@ -1,0 +1,127 @@
+{
+  "product_id": 7367,
+  "asin": "B0BDRZZDD7",
+  "title": "keto blast gummies maax acv with pomegranate juice beet root b12 60 gummys",
+  "brand": "nutrocell",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "apple cider vinegar",
+      "position": 24,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected as 'acv' at character index 24 in the title. 'acv' interpreted as apple cider vinegar; lookup_ingredient returned normalized 'Cider Vinegar' with category HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "pomegranate juice",
+      "position": 33,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected 'pomegranate juice' starting at character index 33. lookup_ingredient returned normalized 'Pomegranate' with category HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "beet root",
+      "position": 51,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected 'beet root' starting at character index 51. lookup_ingredient returned 'Beet Root' with category HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "vitamin b12",
+      "position": 61,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Detected 'b12' starting at character index 61; interpreted as vitamin B12. lookup_ingredient returned 'Vitamin B12' with category BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9327,
+      "completion": 4383,
+      "total": 13710
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pomegranate juice"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pomegranate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "pomegranate",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b12"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B12",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 12",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 48.292892
+}

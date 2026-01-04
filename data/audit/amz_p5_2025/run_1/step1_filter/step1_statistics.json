@@ -1,0 +1,75 @@
+{
+  "run_info": {
+    "file_id": "amz_p5_2025",
+    "run_id": "run_1",
+    "run_num": 1,
+    "generated_at": "2026-01-01T02:25:54.556712",
+    "total_records_checked": 31446,
+    "processing_duration_seconds": 0.09
+  },
+  "filtering_summary": {
+    "filtered_by_remove": {
+      "count": 25283,
+      "percentage": 80.4
+    },
+    "filtered_by_keyword": {
+      "count": 243,
+      "percentage": 0.77
+    },
+    "marked_for_remap": {
+      "count": 5916,
+      "percentage": 18.81
+    },
+    "unknown_subcategory": {
+      "count": 4,
+      "percentage": 0.01
+    },
+    "total_removed": {
+      "count": 25526,
+      "percentage": 81.17
+    },
+    "total_to_llm": {
+      "count": 5920,
+      "percentage": 18.83
+    }
+  },
+  "unknown_subcategories": {
+    "intimate moisturizers": 4
+  },
+  "keyword_breakdown": {
+    "gemstone": 145,
+    "jewelry": 55,
+    "essential oil": 18,
+    "book": 10,
+    "cleanser": 5,
+    "machine": 4,
+    "lotion": 3,
+    "dvd": 1,
+    "perfume": 1,
+    "key chain": 1
+  },
+  "top_removed_subcategories": {
+    "aromatherapy & essential oils": 1155,
+    "pet recovery collars & suits": 910,
+    "sex toys": 831,
+    "fluid administration & collection": 605,
+    "piercing & tattoo supplies": 583,
+    "surgical supplies & tools": 541,
+    "stethoscopes & accessories": 487,
+    "aromatherapy products & supplies": 460,
+    "other medical & healthcare supplies": 447,
+    "body creams & lotions": 437
+  },
+  "top_remap_subcategories": {
+    "electrolyte drink mixes": 545,
+    "other herbal supplements": 475,
+    "other dietary supplements": 374,
+    "other alternative medicine": 347,
+    "cbd & hemp extract products": 192,
+    "multivitamins": 173,
+    "magnesium supplements": 160,
+    "antioxidants": 155,
+    "probiotics": 144,
+    "creatine amino acids": 135
+  }
+}

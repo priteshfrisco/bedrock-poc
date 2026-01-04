@@ -1,0 +1,14 @@
+{
+  "product_id": 1234,
+  "asin": "B00HXD8DY2",
+  "title": "nature's blend tea tree oil 100% pure australian 2 oz oil",
+  "brand": "natures blend",
+  "source_subcategory": "aromatherapy products & supplies",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.010001,
+  "lookup_action": "REMOVE"
+}

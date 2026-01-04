@@ -1,0 +1,101 @@
+{
+  "product_id": 55,
+  "asin": "B0DM63Y1QR",
+  "title": "creatine monohydrate gummies 5000mg for men & women, chewables creatine monohydrate for muscle strength, muscle builder, energy boost, pre-workout supplement-180 pineapple gummies",
+  "brand": "noavii",
+  "source_subcategory": "creatine amino acids",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "creatine monohydrate",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "creatine monohydrate",
+    "pineapple"
+  ],
+  "category": "ACTIVE NUTRITION",
+  "subcategory": "PERFORMANCE NUTRITION",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "NON-PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9368,
+      "completion": 5489,
+      "total": 14857
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "creatine monohydrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Creatine",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PERFORMANCE NUTRITION",
+          "keyword": "creatine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pineapple"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Epinephrine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "epinephrine",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pine Bark",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "pine bark",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pine Bark",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "pycnogenol",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 71.401814
+}

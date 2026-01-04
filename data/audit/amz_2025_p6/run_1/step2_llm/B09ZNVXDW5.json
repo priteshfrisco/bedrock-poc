@@ -1,0 +1,197 @@
+{
+  "product_id": 6720,
+  "asin": "B09ZNVXDW5",
+  "title": "dr. danielle's original electrolyte powder - hydration drink mix supplement - boosts energy & keto-friendly - no maltodextrin & sugar free - raspberry lemonade flavor",
+  "brand": "doctor danielle",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 25,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup": {
+        "called_with": "electrolyte",
+        "result_found": false,
+        "note": "lookup_ingredient returned no confident match; 'electrolyte' is a class of minerals (e.g., sodium, potassium) rather than a single normalized ingredient in the lookup response."
+      },
+      "reasoning": "The title explicitly contains 'electrolyte' (starts at character 25). This is a functional ingredient/group (hydration/electrolytes). lookup_ingredient did not return a confident normalized match."
+    },
+    {
+      "name": "maltodextrin",
+      "position": 114,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup": {
+        "called_with": "maltodextrin",
+        "result_found": false,
+        "note": "lookup_ingredient returned no confident match for 'maltodextrin'."
+      },
+      "reasoning": "Title contains 'maltodextrin' in the phrase 'no maltodextrin' (starts at character 114). Although the product states it contains no maltodextrin, the word is present and therefore extracted as an ingredient mention."
+    },
+    {
+      "name": "sugar",
+      "position": 129,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup": {
+        "called_with": "sugar",
+        "result_found": false,
+        "note": "lookup_ingredient returned no confident match for 'sugar'."
+      },
+      "reasoning": "Title contains 'sugar' in the phrase 'sugar free' (starts at character 129). This is an ingredient mention (noted as absent in this product)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9757,
+      "completion": 5411,
+      "total": 15168
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "maltodextrin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Valerian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "valarian",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Valerian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "valerian",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Melatonin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "melatonin",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sugar"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Suma",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "suma",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Garlic",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "garlic",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Guarana",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "guarana",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 77.093662
+}

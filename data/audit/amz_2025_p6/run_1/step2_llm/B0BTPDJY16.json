@@ -1,0 +1,36 @@
+{
+  "product_id": 7925,
+  "asin": "B0BTPDJY16",
+  "title": "green jade crystal pendulums - chakra crystal - witchcraft supplies - crystals healing stones - chakra pendulum - spiritual things - positive energy crystals - meditation tools",
+  "brand": "naribabu",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains no functional supplement ingredients to lookup; items are crystals/pendulums (not ingestible ingredients)."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4594,
+      "completion": 1012,
+      "total": 5606
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.023127
+}

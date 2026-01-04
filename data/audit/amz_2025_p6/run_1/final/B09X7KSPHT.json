@@ -1,0 +1,15 @@
+{
+  "product_id": 6578,
+  "asin": "B09X7KSPHT",
+  "title": "wilderness athlete - hydrate & recover  liquid hydration packets electrolyte drink mix - recover faster with bcaas - hydrate packets with 1000mg of vitamin c - 30 single serving packets (lemon lime)",
+  "brand": "wilderness athlete",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 83)",
+  "processing_time_sec": 93.037485
+}

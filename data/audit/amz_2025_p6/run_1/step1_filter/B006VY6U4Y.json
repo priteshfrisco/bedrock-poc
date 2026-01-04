@@ -1,0 +1,14 @@
+{
+  "product_id": 777,
+  "asin": "B006VY6U4Y",
+  "title": "dr miracle hot gro",
+  "brand": "dr.miracle",
+  "source_subcategory": "hair loss & regrowth products",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004232,
+  "lookup_action": "REMOVE"
+}

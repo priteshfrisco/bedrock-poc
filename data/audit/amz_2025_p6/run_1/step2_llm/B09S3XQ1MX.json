@@ -1,0 +1,33 @@
+{
+  "product_id": 6351,
+  "asin": "B09S3XQ1MX",
+  "title": "nature's bounty advanced hair, skin, and nails jelly beans, 160 total count (pack of 2)",
+  "brand": "natures bounty",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "160",
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4585,
+      "completion": 1686,
+      "total": 6271
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 26.725765
+}

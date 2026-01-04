@@ -1,0 +1,58 @@
+{
+  "product_id": 1734,
+  "asin": "B014PR5XFK",
+  "title": "polenectar brazil imported premium bee propolis extract wax free 60 (30ml) from polenectar - 4 bottles",
+  "brand": "polenectar",
+  "source_subcategory": "multimineral supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 1.01442,
+  "unit": "OZ",
+  "size": 4,
+  "primary_ingredient": "bee propolis",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "bee propolis"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "SINGLES",
+  "health_focus": "COUGH, COLD & FLU",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9057,
+      "completion": 5560,
+      "total": 14617
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bee propolis"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bee Propolis",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "bee propolis",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 78.299475
+}

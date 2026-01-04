@@ -1,0 +1,81 @@
+{
+  "product_id": 662,
+  "asin": "B0053PJCHE",
+  "title": "heavy mineral bugleweed by christopher's original formulas - 100 capsules ( multi-pack)",
+  "brand": "remove",
+  "source_subcategory": "multimineral supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "mineral",
+      "position": 6,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "'mineral' appears in the title beginning at character index 6. lookup_ingredient('mineral') returned category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "bugleweed",
+      "position": 14,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "'bugleweed' appears in the title beginning at character index 14. lookup_ingredient('bugleweed') returned category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9146,
+      "completion": 4215,
+      "total": 13361
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bugleweed"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "bugleweed",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bugle weed",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mineral"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 66.348467
+}

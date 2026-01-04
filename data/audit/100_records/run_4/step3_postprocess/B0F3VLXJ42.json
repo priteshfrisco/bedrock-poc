@@ -1,0 +1,58 @@
+{
+  "product_id": 93,
+  "asin": "B0F3VLXJ42",
+  "title": "herbalife nutrition personalized protein powder, health supplement for adults (200 gram, unflavored)",
+  "brand": "herbalife nutrition",
+  "source_subcategory": "protein powder blends",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 7.0548,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "protein",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "protein"
+  ],
+  "category": "SPORTS NUTRITION",
+  "subcategory": "PROTEIN",
+  "health_focus": "CARDIOVASCULAR HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9050,
+      "completion": 3747,
+      "total": 12797
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 55.327828
+}

@@ -1,0 +1,170 @@
+{
+  "product_id": 4942,
+  "asin": "B08LPSZ9L7",
+  "title": "suja organic vitamin d shot with zinc (60 pack) ginger and turmeric | immunity boost & support | functional shots | cold-pressed juice with live probiotics | plant-based & gluten-free",
+  "brand": "suja",
+  "source_subcategory": "vitamin d supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 60,
+  "ingredients": [
+    {
+      "name": "vitamin d",
+      "position": 13,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "Found the phrase 'vitamin d' starting at character index 13. lookup_ingredient returned Vitamin D \u2192 BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "zinc",
+      "position": 33,
+      "lookup_result": {
+        "ingredient": "Zinc",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS"
+      },
+      "reasoning": "Found 'zinc' starting at character index 33. lookup_ingredient returned Zinc \u2192 BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "ginger",
+      "position": 48,
+      "lookup_result": {
+        "ingredient": "Ginger",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "Found 'ginger' starting at character index 48. lookup_ingredient returned Ginger (mapped to the provided category/subcategory by the tool)."
+    },
+    {
+      "name": "turmeric",
+      "position": 59,
+      "lookup_result": {
+        "ingredient": "Turmeric",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "Found 'turmeric' starting at character index 59. lookup_ingredient returned Turmeric (mapped to the provided category/subcategory by the tool)."
+    },
+    {
+      "name": "probiotics",
+      "position": 145,
+      "lookup_result": {
+        "ingredient": "Probiotic",
+        "found": true,
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "PREBIOTICS AND PROBIOTICS"
+      },
+      "reasoning": "Found 'probiotics' starting at character index 145 in the phrase 'live probiotics'. lookup_ingredient returned Probiotic \u2192 PROBIOTICS+ / PREBIOTICS AND PROBIOTICS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9419,
+      "completion": 8382,
+      "total": 17801
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "probiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 110.528817
+}

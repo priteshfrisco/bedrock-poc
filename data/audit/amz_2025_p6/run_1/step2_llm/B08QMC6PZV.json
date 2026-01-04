@@ -1,0 +1,104 @@
+{
+  "product_id": 5084,
+  "asin": "B08QMC6PZV",
+  "title": "addot welllife hemp gummies 20x natural high potency vitamin gummies, vegan infused with hemp oil for wellness (2 pack 120 gummies)",
+  "brand": "addot",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 15,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The word 'hemp' appears at character position 15 ('...welllife hemp gummies...'). lookup_ingredient returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "vitamin",
+      "position": 53,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The word 'vitamin' appears at character position 53 ('...potency vitamin gummies...'). lookup_ingredient('vitamin') returned a match to 'Vitamin D' (category 'BASIC VITAMINS & MINERALS', subcategory 'LETTER VITAMINS'). The title only states 'vitamin' (unspecified), so the tool result is provided as returned."
+    },
+    {
+      "name": "hemp oil",
+      "position": 89,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'hemp oil' begins at character position 89 ('...infused with hemp oil...'). lookup_ingredient returned 'Hemp' (category 'FATTY ACIDS', subcategory 'HEMP/CBD') for 'hemp oil'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9243,
+      "completion": 5274,
+      "total": 14517
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 74.682871
+}

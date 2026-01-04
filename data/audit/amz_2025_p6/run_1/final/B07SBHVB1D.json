@@ -1,0 +1,58 @@
+{
+  "product_id": 3759,
+  "asin": "B07SBHVB1D",
+  "title": "vidanatzinc100tablets\u00e2immunesupport,skinhealth&antioxidantpower(100servings)",
+  "brand": "vidanat",
+  "source_subcategory": "zinc supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "zinc",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "zinc"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "MINERALS",
+  "health_focus": "IMMUNE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9054,
+      "completion": 2767,
+      "total": 11821
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 40.8495
+}

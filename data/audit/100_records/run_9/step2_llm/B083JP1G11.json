@@ -1,0 +1,58 @@
+{
+  "product_id": 41,
+  "asin": "B083JP1G11",
+  "title": "baccoff, premium flavored coffee pouches, no tobacco dip, no nicotine smokeless alternative snuff, 50 mg of caffeine per serving, vanilla (5 cans)",
+  "brand": "bacc off",
+  "source_subcategory": "energy chews & gels",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": [
+    {
+      "name": "R",
+      "position": 999
+    },
+    {
+      "name": "E",
+      "position": 999
+    },
+    {
+      "name": "M",
+      "position": 999
+    },
+    {
+      "name": "O",
+      "position": 999
+    },
+    {
+      "name": "V",
+      "position": 999
+    },
+    {
+      "name": "E",
+      "position": 999
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 5763,
+      "completion": 1070,
+      "total": 6833
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.3581
+}

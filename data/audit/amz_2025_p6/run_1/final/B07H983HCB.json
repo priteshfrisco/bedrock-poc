@@ -1,0 +1,101 @@
+{
+  "product_id": 3326,
+  "asin": "B07H983HCB",
+  "title": "ayurveda 3-month herbal blend (17-in-1) supplement complex  natural ayurvedic herbs  strong mind, body, & spirit supplements  pills  ayurveda products  bulk savings 90-day supply  90 capsules",
+  "brand": "elevate recovery supplements",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "herbal blend",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "herbal blend",
+    "ayurvedic herbs"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "BRAIN HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9388,
+      "completion": 5585,
+      "total": 14973
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal blend"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Yerba Mate",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "yerba mate",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ayurvedic Herb",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ayurvedic herbal supplement",
+              "match_type": "fuzzy",
+              "score": 51.28205128205128,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Adrenal Glandular",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "adrenal cortex",
+              "match_type": "fuzzy",
+              "score": 48.275862068965516,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ayurvedic herbs"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ayurvedic Herb",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ayurvedic herbal supplement",
+          "match_type": "fuzzy",
+          "confidence": "high",
+          "score": 96
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 71.903026
+}

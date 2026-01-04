@@ -1,0 +1,39 @@
+{
+  "product_id": 9536,
+  "asin": "B0CHMRXSRJ",
+  "title": "(3 pack) blue vibe gummies, blue vibes cdc gummies for liver kidney and memory blue vibez bcd max performance formula, bluevibe advanced health gummys, bluevibe gomitas reviews (180 gummies)",
+  "brand": "rize labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4607,
+      "completion": 1475,
+      "total": 6082
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 25.084034
+}

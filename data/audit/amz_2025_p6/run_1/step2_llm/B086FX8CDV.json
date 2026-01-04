@@ -1,0 +1,36 @@
+{
+  "product_id": 4372,
+  "asin": "B086FX8CDV",
+  "title": "magnavox mhp4820-tl gummy earbuds in teal  available in pink, white, black, blue, & teal  earbuds gummy  extra value comfort stereo earbuds  durable rubberized cable",
+  "brand": "magnavox",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains no dietary/functional ingredients \u2014 it describes earbuds (durable rubberized cable, comfort stereo)."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4603,
+      "completion": 1193,
+      "total": 5796
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 18.922625
+}

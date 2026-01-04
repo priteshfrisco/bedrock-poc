@@ -1,0 +1,92 @@
+{
+  "product_id": 5695,
+  "asin": "B098PHKMWR",
+  "title": "xprs nutra organic nettle leaf powder - premium usda organic stinging nettle powder for hair and nails - vegan friendly energy boosting organic stinging nettle leaf (4 oz)",
+  "brand": "xprs nutra",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 4,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "nettle leaf",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "nettle leaf",
+    "stinging nettle",
+    "stinging nettle leaf"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "COUGH, COLD & FLU",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9277,
+      "completion": 5422,
+      "total": 14699
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nettle leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Nettles",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "nettle",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "stinging nettle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Nettles",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "nettle",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "stinging nettle leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Nettles",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "nettle",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.892681
+}

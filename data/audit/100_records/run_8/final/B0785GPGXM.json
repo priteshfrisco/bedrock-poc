@@ -1,0 +1,16 @@
+{
+  "product_id": 51,
+  "asin": "B0785GPGXM",
+  "title": "spigelia 200c homeopathic remedy, urenus",
+  "brand": "urenus",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "error",
+  "step_completed": 0,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/main.py\", line 101, in process_single_record\n    attributes = extract_attributes_from_llm_result(llm_result)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/pipeline/step2_llm.py\", line 125, in extract_attributes_from_llm_result\n    'gender': llm_result.get('gender', {}).get('value', 'N/A'),\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+  "error": "'str' object has no attribute 'get'",
+  "processing_time_sec": 28.661711
+}

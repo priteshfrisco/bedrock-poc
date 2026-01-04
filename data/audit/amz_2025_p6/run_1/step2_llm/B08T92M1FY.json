@@ -1,0 +1,33 @@
+{
+  "product_id": 5176,
+  "asin": "B08T92M1FY",
+  "title": "o15 nutrition | exalt | 30 servings (gummy candy, 30 sevings)",
+  "brand": "mts nutrition",
+  "source_subcategory": "multivitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4581,
+      "completion": 1498,
+      "total": 6079
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.789992
+}

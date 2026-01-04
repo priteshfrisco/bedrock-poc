@@ -1,0 +1,104 @@
+{
+  "product_id": 3953,
+  "asin": "B07X3WTVV8",
+  "title": "rena-vite multivitamin supplement folic acid/vitamin b 0.8 mg strength tablet 100 per bottle, 60258016001-1 bottle",
+  "brand": "wanghui",
+  "source_subcategory": "vitamin b9 (folic acid)",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "multivitamin",
+      "position": 10,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The term 'multivitamin' appears at character index 10. lookup_ingredient returned 'Multivitamin' mapped to COMBINED MULTIVITAMINS."
+    },
+    {
+      "name": "folic acid",
+      "position": 34,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The term 'folic acid' appears at character index 34 (the title contains 'folic acid/vitamin b'). lookup_ingredient returned 'Folic Acid' mapped to LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin b",
+      "position": 45,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The term 'vitamin b' (after the slash) starts at character index 45. lookup_ingredient matched this to Vitamin B (tool returned Vitamin B1) under LETTER VITAMINS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9270,
+      "completion": 3892,
+      "total": 13162
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multivitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "alive once daily",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "folic acid"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Folic Acid",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 9",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B1",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 1",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 94
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 52.466804
+}

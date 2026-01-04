@@ -1,0 +1,81 @@
+{
+  "product_id": 7376,
+  "asin": "B0BDZJ9PLB",
+  "title": "pomegranate peel powder 7.05 ounce, 100% pure & natural pomegranate powder for herbal tea & skin care, additive-free supplement, resealable pack- 100g (pack of 2)",
+  "brand": "herb essential",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 7.05,
+  "unit": "OZ",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "pomegranate peel",
+      "position": 0,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found at the start of the title: 'pomegranate peel powder...'. lookup_ingredient() returned normalized ingredient 'Pomegranate' with category/subcategory as shown."
+    },
+    {
+      "name": "pomegranate powder",
+      "position": 56,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found later in the title: '...natural pomegranate powder...'. lookup_ingredient() returned normalized ingredient 'Pomegranate' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9198,
+      "completion": 5808,
+      "total": 15006
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pomegranate peel"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pomegranate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "pomegranate",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pomegranate powder"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pomegranate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "pomegranate",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 62.334398
+}

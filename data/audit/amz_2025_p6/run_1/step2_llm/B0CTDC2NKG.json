@@ -1,0 +1,104 @@
+{
+  "product_id": 10500,
+  "asin": "B0CTDC2NKG",
+  "title": "mulleindropsforlungs300,000\u00e2mg,lungdetox&cleanse,16in1veganmulleinleafextracttincturewithchlorophyll,elderberry,etc,naturalherbalsupplementforrespiratory,immune,30servings",
+  "brand": "lukaree",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "mullein",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'mullein' as part of 'mulleindropsforlungs...' and later as 'mulleinleaf...'. First occurrence starts at character index 0. lookup_ingredient returned category/subcategory shown."
+    },
+    {
+      "name": "chlorophyll",
+      "position": 89,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The substring 'chlorophyll' appears in '...tincturewithchlorophyll,...' starting at index 89. lookup_ingredient returned the category/subcategory shown."
+    },
+    {
+      "name": "elderberry",
+      "position": 101,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The substring 'elderberry' appears at '...chlorophyll,elderberry,...' starting at index 101. lookup_ingredient returned the category/subcategory shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9291,
+      "completion": 7023,
+      "total": 16314
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mullein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Mullein",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "mullein",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chlorophyll"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chlorella",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "chlorophyll",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 110.024623
+}

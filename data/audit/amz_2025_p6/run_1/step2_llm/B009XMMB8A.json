@@ -1,0 +1,107 @@
+{
+  "product_id": 943,
+  "asin": "B009XMMB8A",
+  "title": "hammer nutrition endurolytes fizz sports drink mix grapefruit 13-ct. tube box/12",
+  "brand": "hammer",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 13,
+  "unit": "COUNT",
+  "size": 12,
+  "ingredients": [
+    {
+      "name": "endurolytes",
+      "position": 17,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The term 'endurolytes' appears in the title at position 17 and is the product/functional name. lookup_ingredient returned no direct match (found=false) and ambiguous low-confidence candidates, so category/subcategory cannot be determined from the lookup result."
+    },
+    {
+      "name": "grapefruit",
+      "position": 51,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The word 'grapefruit' appears at position 51. lookup_ingredient matched this to 'Grape Fruit Seed' with category 'HERBAL REMEDIES' and subcategory 'SINGLES'. Note: here 'grapefruit' is likely a flavor, but it is present as an ingredient word in the title and was returned by the lookup tool."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9323,
+      "completion": 5181,
+      "total": 14504
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "endurolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Menthol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "mentho-lyptus",
+              "match_type": "fuzzy",
+              "score": 58.33333333333333,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Eucalyptus",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "eucalyptus",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Yeast",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "nutritional yeast",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "grapefruit"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Grape Fruit Seed",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "grapefruit seed",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 88.194901
+}

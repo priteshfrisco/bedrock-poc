@@ -1,0 +1,39 @@
+{
+  "product_id": 1353,
+  "asin": "B00L2JPCS8",
+  "title": "sqwincher .11 ounce powder concentrate electrolyte drink - yields 20 ounces (50 pack) - flavor: orange",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4586,
+      "completion": 851,
+      "total": 5437
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.345025
+}

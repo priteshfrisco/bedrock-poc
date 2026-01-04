@@ -1,0 +1,17 @@
+{
+  "total_records": 31446,
+  "success": 0,
+  "filtered": 0,
+  "errors": 0,
+  "total_cost": 0,
+  "total_tokens": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "duration_seconds": 7.364698,
+  "test_mode_step1_only": true,
+  "generated_at": "2026-01-01T02:25:54.563282",
+  "filename": "uncoded_amz_p5_2025",
+  "file_id": "amz_p5_2025",
+  "run_id": "run_1",
+  "run_num": 1
+}

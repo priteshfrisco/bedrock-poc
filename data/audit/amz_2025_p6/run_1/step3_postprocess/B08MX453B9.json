@@ -1,0 +1,75 @@
+{
+  "product_id": 4998,
+  "asin": "B08MX453B9",
+  "title": "micro ingredients vitex berry supplement, 1,000mg per serving, 240 caplets  potent chaste tree berry extract  promotes menstrual, fertility, & hormone balance for women  non-gmo",
+  "brand": "micro ingredients",
+  "source_subcategory": "other dietary supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "CAPLET",
+  "organic": "NOT ORGANIC",
+  "count": 240,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "vitex berry",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "vitex berry",
+    "chaste tree berry"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "WEIGHT MANAGEMENT",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9198,
+      "completion": 4911,
+      "total": 14109
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitex berry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitex",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "vitex",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.613956342756415
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chaste tree berry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chastetree",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "chaste tree",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.659930753304817
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 82.402456
+}

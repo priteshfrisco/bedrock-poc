@@ -1,0 +1,39 @@
+{
+  "product_id": 5131,
+  "asin": "B08RDL1VP4",
+  "title": "charak ayurvedic kofol syrup (100 ml) by exportmall",
+  "brand": "exportmall",
+  "source_subcategory": "cold & flu treatments",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "ml",
+  "size": 1,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4578,
+      "completion": 2280,
+      "total": 6858
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 29.313305
+}

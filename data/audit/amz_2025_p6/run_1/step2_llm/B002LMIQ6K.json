@@ -1,0 +1,33 @@
+{
+  "product_id": 433,
+  "asin": "B002LMIQ6K",
+  "title": "jason natural products vitamin e crm 5000 iu 4 oz",
+  "brand": "jason",
+  "source_subcategory": "vitamin e supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4577,
+      "completion": 664,
+      "total": 5241
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 10.163649
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 5983,
+  "asin": "B09HHMJ5TK",
+  "title": "mutant madness all-in  full dosed pre-workout - tropical cyclone - 18 serving - 504 g (17.8oz)",
+  "brand": "mutant",
+  "source_subcategory": "pre-workout powders",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "18",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4591,
+      "completion": 2008,
+      "total": 6599
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 33.697379
+}

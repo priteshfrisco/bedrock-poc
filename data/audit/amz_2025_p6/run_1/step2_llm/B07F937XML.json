@@ -1,0 +1,110 @@
+{
+  "product_id": 3188,
+  "asin": "B07F937XML",
+  "title": "celebrate vitamins bariatric calcium citrate soft chews with vitamin d3, 500mg, sugar-free & gluten-free calcium citrate for bariatric patients, sweet treats, 90 count",
+  "brand": "celebrate bariatric supplements",
+  "source_subcategory": "calcium vitamin d combination supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFT CHEW",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "calcium citrate",
+        "position": 29,
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "MINERALS",
+        "found": true,
+        "reasoning": "Phrase 'calcium citrate' appears starting at character index 29 in the title. lookup_ingredient returned normalization 'Calcium' with category/subcategory as shown."
+      },
+      {
+        "name": "vitamin d3",
+        "position": 61,
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "LETTER VITAMINS",
+        "found": true,
+        "reasoning": "Phrase 'vitamin d3' appears starting at character index 61 in the title. lookup_ingredient returned normalization 'Vitamin D' with category/subcategory as shown."
+      },
+      {
+        "name": "calcium citrate",
+        "position": 105,
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "MINERALS",
+        "found": true,
+        "reasoning": "A second occurrence of 'calcium citrate' appears starting at character index 105 in the title. lookup_ingredient returned normalization 'Calcium' with category/subcategory as shown."
+      }
+    ],
+    "reasoning": "All functional ingredients explicitly present in the title were extracted with their starting character positions. Brand/phrases like 'celebrate vitamins', 'bariatric', 'sweet treats' are not ingredient names and were ignored."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9286,
+      "completion": 4891,
+      "total": 14177
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium citrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.409833504706679
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium citrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.409833504706679
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.867263
+}

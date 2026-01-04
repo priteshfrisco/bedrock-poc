@@ -1,0 +1,36 @@
+{
+  "product_id": 5594,
+  "asin": "B0961F7MJC",
+  "title": "mistic 1 bottle 7 spirits spiritual water-7 espiritus agua espiritual 16 oz. - magick pagan",
+  "brand": "mistic",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title describes a ritual/spiritual water product, not a dietary supplement; ingredient extraction and lookup not performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4587,
+      "completion": 1077,
+      "total": 5664
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.593214
+}

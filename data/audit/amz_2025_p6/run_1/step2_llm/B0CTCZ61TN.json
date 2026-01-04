@@ -1,0 +1,81 @@
+{
+  "product_id": 10498,
+  "asin": "B0CTCZ61TN",
+  "title": "sugar free fiber gummies for adults (4g) digestive supprt prebiotic fiber supplement  60 count",
+  "brand": "wellyeah",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "AGE GROUP - ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "fiber",
+      "position": 11,
+      "category": "PROBIOTICS+",
+      "subcategory": "FIBER PRODUCTS & LAXATIVES",
+      "reasoning": "The title contains 'fiber' at character index 11 ('sugar free [11]fiber gummies...'). lookup_ingredient('fiber') returned normalized ingredient 'Acacia Fiber' with category/subcategory shown."
+    },
+    {
+      "name": "prebiotic fiber",
+      "position": 57,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "reasoning": "The title contains 'prebiotic fiber' starting at index 57 ('...supprt [57]prebiotic fiber supplement...'). lookup_ingredient('prebiotic fiber') returned category/subcategory for prebiotic-related products."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9164,
+      "completion": 4058,
+      "total": 13222
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "prebiotic fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "prebiotic",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 69.783428
+}

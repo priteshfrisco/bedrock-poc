@@ -1,0 +1,84 @@
+{
+  "product_id": 5016,
+  "asin": "B08NRRM12T",
+  "title": "pure encapsulations dimpro 100 | antioxidant supplement to support hormone metabolism, and breast health*",
+  "brand": "pure encapsulations",
+  "source_subcategory": "probiotics",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+  "remap_reason": "Maps to PREBIOTICS & PROBIOTICS / PREBIOTICS & PROBIOTICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "dimpro",
+      "position": 20,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The title contains the token 'dimpro' starting at character index 20. lookup_ingredient('dimpro') returned no exact match but suggested DIM (diindolylmethane) as the closest candidate with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'. Given the product name 'DimPro' is commonly used for DIM products, the best mapping from the lookup candidates is to DIM (diindolylmethane). The title does not contain any other distinct ingredient names."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9210,
+      "completion": 4124,
+      "total": 13334
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "dimpro"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "DIM",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "diindolylmethane",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DIM",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "dim",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Iron",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "iron",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 65.813468
+}

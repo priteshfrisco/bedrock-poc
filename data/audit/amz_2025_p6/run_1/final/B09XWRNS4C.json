@@ -1,0 +1,15 @@
+{
+  "product_id": 6604,
+  "asin": "B09XWRNS4C",
+  "title": "inspired amino fuego - eaa+ thermogenics - for hydration and endurance - northern lights, 30 servings",
+  "brand": "inspired nutraceuticals",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 85)",
+  "processing_time_sec": 60.992506
+}

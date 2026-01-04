@@ -1,0 +1,15 @@
+{
+  "product_id": 2014,
+  "asin": "B01FK87L5I",
+  "title": "sun ten - trichosanthes fruit gua lou concentrated granules 100g t6121 by baicao",
+  "brand": "yaco",
+  "source_subcategory": "other herbal supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "error": "Extra data: line 2 column 1 (char 30)",
+  "processing_time_sec": 57.372065
+}

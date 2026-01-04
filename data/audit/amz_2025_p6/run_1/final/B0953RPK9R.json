@@ -1,0 +1,42 @@
+{
+  "product_id": 5554,
+  "asin": "B0953RPK9R",
+  "title": "violet abbaye de flavigny anise drops all natural bulk 8.82 oz bag two pack",
+  "brand": "les anis de flavigny",
+  "source_subcategory": "cough drops & lozenges",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4584,
+      "completion": 1182,
+      "total": 5766
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.569978
+}

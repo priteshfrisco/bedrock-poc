@@ -1,0 +1,14 @@
+{
+  "product_id": 7,
+  "asin": "000000000613081633",
+  "title": "junie b. jones is a beauty shop guy",
+  "brand": "turtleback",
+  "source_subcategory": "skin care kits & sets",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.013166,
+  "lookup_action": "REMOVE"
+}

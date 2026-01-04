@@ -1,0 +1,36 @@
+{
+  "product_id": 196,
+  "asin": "B000R8MZ1M",
+  "title": "broncolin honey syrup with natural plant extracts, helps relieve cough, 11.4 oz, bottle",
+  "brand": "broncolin",
+  "source_subcategory": "cough syrups & liquids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title contains 'natural plant extracts' and 'honey' but product is a cough syrup (medicinal); per safety check, do not extract functional supplement ingredients for non-supplements."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4584,
+      "completion": 1259,
+      "total": 5843
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 22.720466
+}

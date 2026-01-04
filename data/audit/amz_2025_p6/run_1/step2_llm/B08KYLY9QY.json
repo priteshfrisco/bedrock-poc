@@ -1,0 +1,58 @@
+{
+  "product_id": 4885,
+  "asin": "B08KYLY9QY",
+  "title": "saw palmetto 10:1 extract - 450 mg (100 capsules, zin: 420569)",
+  "brand": "terravita",
+  "source_subcategory": "saw palmetto herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "saw palmetto",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'saw palmetto' starting at character index 0 in the title. lookup_ingredient('saw palmetto') returned category/subcategory as above."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9055,
+      "completion": 2966,
+      "total": 12021
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "saw palmetto"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saw Palmetto",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "saw palmetto",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 41.02149
+}

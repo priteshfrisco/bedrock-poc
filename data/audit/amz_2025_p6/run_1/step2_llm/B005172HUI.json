@@ -1,0 +1,62 @@
+{
+  "product_id": 656,
+  "asin": "B005172HUI",
+  "title": "solaray organic beetroot juice from concentrate  supports healthy energy, heart & brain function  16 fl oz, 16 servings",
+  "brand": "solaray",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "ORGANIC",
+  "count": 16,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beetroot juice",
+      "position": 16,
+      "lookup_result": {
+        "ingredient": "Beet Root",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "found": true
+      },
+      "reasoning": "Detected 'beetroot juice' starting at character index 16 (0-based). lookup_ingredient returned normalized 'Beet Root' in category HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9065,
+      "completion": 5098,
+      "total": 14163
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beetroot juice"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beetroot",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 79.750314
+}

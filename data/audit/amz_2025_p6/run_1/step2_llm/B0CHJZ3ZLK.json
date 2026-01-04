@@ -1,0 +1,150 @@
+{
+  "product_id": 9517,
+  "asin": "B0CHJZ3ZLK",
+  "title": "auri super mushroom hsn gummies - hair skin and nails gummies functional mushrooms supplement - with wild chaga, chlorophyll, lutein and astaxanthin - 60 orange citrus gummies",
+  "brand": "auri",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "mushroom",
+      "position": 11,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title contains 'mushroom' as part of 'auri super mushroom' and 'functional mushrooms'. First occurrence starts at character index 11. lookup_ingredient returned normalized 'Other Mushroom' with category/subcategory as shown."
+    },
+    {
+      "name": "chaga",
+      "position": 106,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title lists 'wild chaga' starting at character index 106. lookup_ingredient returned 'Chaga Mushroom' with category/subcategory as shown."
+    },
+    {
+      "name": "chlorophyll",
+      "position": 113,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The title lists 'chlorophyll' (after the comma following 'chaga'); the word starts at index 113. lookup_ingredient returned 'Chlorella' mapping to category/subcategory as shown (tool matched 'chlorophyll' to 'Chlorella')."
+    },
+    {
+      "name": "lutein",
+      "position": 126,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The title lists 'lutein' after 'chlorophyll,' beginning at index 126. lookup_ingredient returned 'Lutein' with category/subcategory as shown."
+    },
+    {
+      "name": "astaxanthin",
+      "position": 137,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The title lists 'astaxanthin' after 'lutein and'; its first character is at index 137. lookup_ingredient returned 'Astaxanthin' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9424,
+      "completion": 6095,
+      "total": 15519
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mushroom"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Other Mushroom",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "mushroom",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chaga"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chaga Mushroom",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "chaga",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chlorophyll"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chlorella",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "chlorophyll",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lutein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lutein",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "lutein",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "astaxanthin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Astaxanthin",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "astaxanthin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 107.216028
+}

@@ -1,0 +1,127 @@
+{
+  "product_id": 5052,
+  "asin": "B08PC81JBV",
+  "title": "collagenc hydrolysate - collagen capsules 4 pack with biotin & vitamin c - 60 capsules per bottle for skin, hair, nails, immune & joint support - 4 pack",
+  "brand": "alfa vitamins",
+  "source_subcategory": "collagen supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 4,
+  "ingredients": [
+    {
+      "name": "collagen hydrolysate",
+      "position": 0,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The title begins with 'collagenc hydrolysate' (typoed but reads as 'collagen hydrolysate'). lookup_ingredient returned normalized 'Collagen' with category 'ACTIVE NUTRITION' and subcategory 'NON-SPECIFIC'. This is the first ingredient by position, so it will be primary."
+    },
+    {
+      "name": "collagen",
+      "position": 24,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The title also contains 'collagen' later ('- collagen capsules ...'). lookup_ingredient returned normalized 'Collagen' with category 'ACTIVE NUTRITION' and subcategory 'NON-SPECIFIC'. This is a repeat/variant of the first ingredient."
+    },
+    {
+      "name": "biotin",
+      "position": 54,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Title contains 'biotin' ('with biotin & vitamin c'). lookup_ingredient returned 'biotin' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'. Position measured at the 'b' of 'biotin' (index 54)."
+    },
+    {
+      "name": "vitamin c",
+      "position": 63,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Title contains 'vitamin c' ('with biotin & vitamin c'). lookup_ingredient was called for 'vitamin c' but the lookup tool returned a normalized result of 'Vitamin D' (category 'BASIC VITAMINS & MINERALS', subcategory 'LETTER VITAMINS'). The returned category/subcategory are provided as-is from the lookup results; the lookup mapping appears to have mis-matched the specific vitamin name, but the title clearly shows 'vitamin c' starting at index 63."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9351,
+      "completion": 5288,
+      "total": 14639
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen hydrolysate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.270795
+}

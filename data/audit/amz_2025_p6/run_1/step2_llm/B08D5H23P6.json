@@ -1,0 +1,185 @@
+{
+  "product_id": 4617,
+  "asin": "B08D5H23P6",
+  "title": "nature's way sambucus zinc lozenges - with elderberry & vitamin c - black elderberry extract - for immune support* - honey lemon flavor - 24 lozenges (2 pack)",
+  "brand": "nature's way",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LOZENGE",
+  "organic": "NOT ORGANIC",
+  "count": 24,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "sambucus",
+      "position": 13,
+      "lookup_result": {
+        "ingredient": "Elderberry",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "SINGLES",
+        "note": "lookup_ingredient returned normalized ingredient 'Elderberry' for keyword 'sambucus'."
+      },
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The word 'sambucus' appears in the title at index 13; lookup maps Sambucus to Elderberry (HERBAL REMEDIES / SINGLES)."
+    },
+    {
+      "name": "zinc",
+      "position": 22,
+      "lookup_result": {
+        "ingredient": "Zinc",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "note": "lookup_ingredient returned Zinc."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'zinc' appears in the title at index 22 and lookup confirms Zinc (MINERALS)."
+    },
+    {
+      "name": "elderberry",
+      "position": 43,
+      "lookup_result": {
+        "ingredient": "Elderberry",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "SINGLES",
+        "note": "lookup_ingredient returned Elderberry."
+      },
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The word 'elderberry' appears in the title at index 43 and lookup maps it to Elderberry (HERBAL REMEDIES / SINGLES)."
+    },
+    {
+      "name": "vitamin c",
+      "position": 56,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "note": "lookup_ingredient returned 'Vitamin D' for this lookup (likely a fuzzy/tool mismatch)."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The phrase 'vitamin c' (starting at index 56) is present in the title. lookup_ingredient returned 'Vitamin D' (BASIC VITAMINS & MINERALS / LETTER VITAMINS) \u2014 this is the tool's returned mapping and is reported here exactly as returned by the lookup."
+    },
+    {
+      "name": "black elderberry extract",
+      "position": 68,
+      "lookup_result": {
+        "ingredient": "Elderberry",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "SINGLES",
+        "note": "lookup_ingredient returned Elderberry for 'black elderberry extract'."
+      },
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The phrase 'black elderberry extract' begins at index 68; lookup maps this to Elderberry (HERBAL REMEDIES / SINGLES)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9432,
+      "completion": 6999,
+      "total": 16431
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sambucus"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "sambucus",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black elderberry extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.409833504706679
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.765944
+}

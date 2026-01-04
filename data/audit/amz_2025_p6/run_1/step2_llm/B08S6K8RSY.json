@@ -1,0 +1,181 @@
+{
+  "product_id": 5145,
+  "asin": "B08S6K8RSY",
+  "title": "extrastrengthenergyshot\u00e2fruitpunch\u00e2260mgcaffeinewithb12,b6,niacin&electrolytes\u00e22servings\u00e2all-dayenergy&focussupport\u00e2sugar-free,zerocalories\u00e2vegan\u00e21.93floz(packof48)",
+  "brand": "vitamin energy",
+  "source_subcategory": "energy shots",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 48,
+  "unit": "COUNT",
+  "size": 48,
+  "ingredients": [
+    {
+      "name": "caffeine",
+      "position": 40,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "found": true,
+      "lookup_reasoning": "Detected '260mgcaffeine' (despite formatting). lookup_ingredient returned 'Caffeine' \u2192 category MISCELLANEOUS SUPPLEMENTS, subcategory NON-SPECIFIC."
+    },
+    {
+      "name": "b12",
+      "position": 52,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "found": true,
+      "lookup_reasoning": "Detected 'b12' after 'with'. lookup_ingredient returned 'Vitamin B12' \u2192 category BASIC VITAMINS & MINERALS, subcategory LETTER VITAMINS."
+    },
+    {
+      "name": "b6",
+      "position": 56,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "found": true,
+      "lookup_reasoning": "Detected 'b6' following the comma. lookup_ingredient returned 'Vitamin B6' \u2192 category BASIC VITAMINS & MINERALS, subcategory LETTER VITAMINS."
+    },
+    {
+      "name": "niacin",
+      "position": 59,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "found": true,
+      "lookup_reasoning": "Detected 'niacin' after 'b6,'. lookup_ingredient returned 'Vitamin B3' (niacin) \u2192 category BASIC VITAMINS & MINERALS, subcategory LETTER VITAMINS."
+    },
+    {
+      "name": "electrolytes",
+      "position": 66,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "found": false,
+      "lookup_reasoning": "Detected '&electrolytes' in title. lookup_ingredient did not return a direct match (found:false) and returned low-confidence candidate suggestions unrelated to 'electrolytes'. Marked as not found/UNKNOWN in the lookup. The title explicitly lists 'electrolytes' as a functional component, but no category/subcategory was returned by the lookup tool."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9651,
+      "completion": 7180,
+      "total": 16831
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "caffeine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Caffeine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "caffeinated",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "b12"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B12",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b12",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "b6"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B6",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b6",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "niacin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B3",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "niacin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 96.972791
+}

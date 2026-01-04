@@ -1,0 +1,62 @@
+{
+  "product_id": 8835,
+  "asin": "B0CB1SSMPR",
+  "title": "(2-pack) high potency hemp oil capsules - 180 veggie softgels - 60,000 maximum strength, immune system support, focus calm, relaxation, mood, pure extract, organic, vegan, non-gmo",
+  "brand": "gornvb",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp oil",
+      "position": 22,
+      "lookup_result": {
+        "ingredient": "Hemp",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The phrase 'hemp oil' is present in the title starting at character index 22. lookup_ingredient('hemp oil') returned category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9097,
+      "completion": 5392,
+      "total": 14489
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 104.299819
+}

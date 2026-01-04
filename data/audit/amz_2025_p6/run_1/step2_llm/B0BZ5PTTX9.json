@@ -1,0 +1,153 @@
+{
+  "product_id": 8114,
+  "asin": "B0BZ5PTTX9",
+  "title": "drinkade boost (12 pack) hydration drink with caffeine, electrolytes, vitamin b, milk thistle for energy and health",
+  "brand": "drinkade",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 12,
+  "ingredients": [
+    {
+      "name": "caffeine",
+      "position": 46,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Matched 'caffeine' at character index 46. lookup_ingredient returned ingredient='Caffeine', nw_category='MISCELLANEOUS SUPPLEMENTS', nw_subcategory='NON-SPECIFIC' (found=true)."
+    },
+    {
+      "name": "electrolytes",
+      "position": 56,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Matched 'electrolytes' at character index 56. lookup_ingredient did not return an exact match (found=false) and provided low-confidence candidate suggestions unrelated to generic 'electrolytes'. No clear Nature's Way category/subcategory available from the tool for the generic term 'electrolytes'."
+    },
+    {
+      "name": "vitamin b",
+      "position": 70,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Matched 'vitamin b' starting at index 70. lookup_ingredient returned ingredient='Vitamin B1' (fuzzy match) with nw_category='BASIC VITAMINS & MINERALS' and nw_subcategory='LETTER VITAMINS' (found=true, medium confidence). The title says 'vitamin b' (unspecified B), and the tool mapped to a specific B vitamin (B1)."
+    },
+    {
+      "name": "milk thistle",
+      "position": 81,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Matched 'milk thistle' at index 81. lookup_ingredient returned ingredient='Milk Thistle' with nw_category='FATTY ACIDS' and nw_subcategory='HEMP/CBD' (found=true, exact). (Note: this category/subcategory mapping is the tool's returned result.)"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9495,
+      "completion": 6159,
+      "total": 15654
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "caffeine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Caffeine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "caffeinated",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B1",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 1",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 94
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 74.649991
+}

@@ -1,0 +1,104 @@
+{
+  "product_id": 50,
+  "asin": "B0DQFBTG4K",
+  "title": "protein powder, brownie batter flavor, 25 g whey protein per scoop, low lactose, high protein for men & women with active lifestyles, perfect for shakes, smoothies, and recipes, 30 servings",
+  "brand": "ekkovision",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 0,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The title starts with 'protein powder' -> 'protein' found at character index 0. lookup_ingredient returned category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'."
+    },
+    {
+      "name": "whey protein",
+      "position": 44,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "'whey protein' appears in the phrase '25 g whey protein per scoop' starting at index 44. lookup_ingredient returned category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'."
+    },
+    {
+      "name": "lactose",
+      "position": 72,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "'low lactose' appears in the title starting at index 72; lactose is an ingredient-related term. lookup_ingredient returned category 'PROBIOTICS+' and subcategory 'DIGESTIVE AIDS & ENZYMES' (mapped to 'Lactase' by the lookup)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9285,
+      "completion": 5269,
+      "total": 14554
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lactose"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lactase",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "lactase",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.430981
+}

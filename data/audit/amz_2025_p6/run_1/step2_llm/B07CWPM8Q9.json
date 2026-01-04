@@ -1,0 +1,66 @@
+{
+  "product_id": 3077,
+  "asin": "B07CWPM8Q9",
+  "title": "pure product australia - l-arginine alpha-ketoglutarate (aakg) 2:1 powder- 2.2 lbs - vegetarian friendly",
+  "brand": "pure product australia",
+  "source_subcategory": "l-arginine amino acids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 35.2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "l-arginine alpha-ketoglutarate",
+      "position": 25,
+      "normalized_name": "OKG",
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "lookup_result": {
+        "ingredient": "OKG",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "AMINO ACIDS",
+        "found": true,
+        "confidence": "high"
+      },
+      "reasoning": "The title contains the compound 'l-arginine alpha-ketoglutarate (aakg)'. The phrase begins at character index 25 (0-indexed). lookup_ingredient() returned normalized 'OKG' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9093,
+      "completion": 4394,
+      "total": 13487
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-arginine alpha-ketoglutarate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "OKG",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "ornithine alpha ketoglutarate",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.242603173270265
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 49.916471
+}

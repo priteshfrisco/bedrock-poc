@@ -1,0 +1,104 @@
+{
+  "product_id": 6838,
+  "asin": "B0B29G4R1Q",
+  "title": "365 health skin, nails & hair, advanced formula, 120 tablets - supports collagen for hair, nail and skin health - provides zinc, vitamin c & non gmo, vegan, gluten & dairy free - 120 servings",
+  "brand": "health lfe",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "collagen",
+      "position": 72,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The title text 'collagen' starts at character index 72. lookup_ingredient returned ingredient='Collagen', category='ACTIVE NUTRITION', subcategory='NON-SPECIFIC'."
+    },
+    {
+      "name": "zinc",
+      "position": 123,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The title text 'zinc' starts at character index 123. lookup_ingredient returned ingredient='Zinc', category='BASIC VITAMINS & MINERALS', subcategory='MINERALS'."
+    },
+    {
+      "name": "vitamin c",
+      "position": 129,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The title text 'vitamin c' begins at character index 129. lookup_ingredient was called with 'vitamin c' and the tool returned category='BASIC VITAMINS & MINERALS', subcategory='LETTER VITAMINS' (tool returned normalized ingredient='Vitamin D' in its response metadata, but the lookup result provided the listed category/subcategory and is included here as returned)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9275,
+      "completion": 5118,
+      "total": 14393
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 77.422197
+}

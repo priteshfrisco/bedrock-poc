@@ -1,0 +1,81 @@
+{
+  "product_id": 10018,
+  "asin": "B0CM2XPBCM",
+  "title": "nubest bundle tall protein powders for kids & teens with vanilla plant-based flavor 10 serving tall kids 90 chewable vitamins - complete bone strength & height growth boost",
+  "brand": "nubest",
+  "source_subcategory": "plant powders",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 10,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 19,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The word 'protein' appears in 'protein powders' at character index 19. lookup_ingredient('protein') returned category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'."
+    },
+    {
+      "name": "vitamins",
+      "position": 117,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The phrase 'chewable vitamins' contains 'vitamins' starting at character index 117. lookup_ingredient('vitamin') returned normalized result 'Vitamin D' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'. The title only contains the generic term 'vitamins' (plural), so 'vitamins' is recorded as found with the tool-derived category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9179,
+      "completion": 6216,
+      "total": 15395
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 90.563863
+}

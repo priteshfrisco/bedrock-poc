@@ -1,0 +1,81 @@
+{
+  "product_id": 10269,
+  "asin": "B0CQKC9KWZ",
+  "title": "nature made f.ish oil 1000 mg- omega 3 supplement for heart healths - 90softgels?",
+  "brand": "nature made",
+  "source_subcategory": "omega oils",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "fish oil",
+      "position": 12,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Detected 'f.ish oil' in title (accounting for formatting with a dot). Starts at character index 12. lookup_ingredient returned: ingredient='Fish Oil', nw_category='FATTY ACIDS', nw_subcategory='FISH'."
+    },
+    {
+      "name": "omega 3",
+      "position": 31,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Detected 'omega 3' in title starting at index 31. lookup_ingredient returned: ingredient='Fish Oil' (omega-3 mapped to Fish Oil category), nw_category='FATTY ACIDS', nw_subcategory='FISH'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9144,
+      "completion": 3861,
+      "total": 13005
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fish oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "fish oil",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 54.474784
+}

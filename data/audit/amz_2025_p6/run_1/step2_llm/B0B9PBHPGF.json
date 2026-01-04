@@ -1,0 +1,58 @@
+{
+  "product_id": 7248,
+  "asin": "B0B9PBHPGF",
+  "title": "nature's way premium herbal asian ginseng, cruelty free, environmentally friendly, 100 vegan capsules (pack of 1)",
+  "brand": "nature's way",
+  "source_subcategory": "ginseng herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "asian ginseng",
+      "position": 28,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'asian ginseng' appears starting at character index 28 in the title. lookup_ingredient(\"asian ginseng\") returned normalized ingredient 'Ginseng' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. (Using the tool result as provided.)"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9057,
+      "completion": 3672,
+      "total": 12729
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "asian ginseng"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginseng",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginseng",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.613956342756415
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 43.746931
+}

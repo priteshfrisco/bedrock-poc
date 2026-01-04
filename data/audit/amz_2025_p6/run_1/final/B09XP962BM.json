@@ -1,0 +1,39 @@
+{
+  "product_id": 6597,
+  "asin": "B09XP962BM",
+  "title": "pedialyte advancedcare plus electrolyte powder, strawberry freeze and berry frost, has preactiv prebiotics, electrolyte drink, 0.6 oz powder packs, 48 count",
+  "brand": "pedialyte",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4600,
+      "completion": 980,
+      "total": 5580
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.42958
+}

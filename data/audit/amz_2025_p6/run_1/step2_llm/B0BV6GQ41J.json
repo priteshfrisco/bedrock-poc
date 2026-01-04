@@ -1,0 +1,127 @@
+{
+  "product_id": 7945,
+  "asin": "B0BV6GQ41J",
+  "title": "hemp gummies extra strength for adults - 6 fruity flavors infused hemp oil, vitamins, omega 3 - chewable gummy for deep bedtimes, focus, pressure - pack of 4 - made in usa",
+  "brand": "hooloo",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 4,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title begins with 'hemp' at index 0 ('hemp gummies'). lookup_ingredient('hemp') returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "hemp oil",
+      "position": 66,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'hemp oil' appears starting at index 66 ('...infused hemp oil,...'). lookup_ingredient('hemp oil') mapped to 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "vitamins",
+      "position": 76,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The term 'vitamins' appears at index 76 (', vitamins, ...'). lookup_ingredient('vitamins') returned 'Multivitamin' with category/subcategory 'COMBINED MULTIVITAMINS'. Note: the title uses plural 'vitamins' but not the explicit term 'multivitamin'; it nevertheless matched the multivitamin category in lookup."
+    },
+    {
+      "name": "omega 3",
+      "position": 86,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "The phrase 'omega 3' appears starting at index 86 ('omega 3'). lookup_ingredient('omega 3') returned normalized ingredient 'Fish Oil' with category 'FATTY ACIDS' and subcategory 'FISH' (omega-3 mapping)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9357,
+      "completion": 5109,
+      "total": 14466
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 57.961416
+}

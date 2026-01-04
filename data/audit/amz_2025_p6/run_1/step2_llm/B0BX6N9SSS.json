@@ -1,0 +1,116 @@
+{
+  "product_id": 8029,
+  "asin": "B0BX6N9SSS",
+  "title": "nature's truth, turmeric curcumin complex plus black pepper extract, 500mg, 60 count",
+  "brand": "nature's truth",
+  "source_subcategory": "turmeric & curcumin supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "turmeric",
+      "position": 16,
+      "lookup_result": {
+        "ingredient": "Turmeric",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The token 'turmeric' appears starting at character index 16 in the title ('...truth, turmeric...'). lookup_ingredient returned the above normalized result."
+    },
+    {
+      "name": "curcumin",
+      "position": 25,
+      "lookup_result": {
+        "ingredient": "Turmeric",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The token 'curcumin' appears starting at character index 25 ('...turmeric curcumin...'). lookup_ingredient was called for 'curcumin' and returned the shown normalized result."
+    },
+    {
+      "name": "black pepper extract",
+      "position": 47,
+      "lookup_result": {
+        "ingredient": "Bioperine",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The phrase 'black pepper extract' begins at character index 47 ('...plus black pepper extract...'). lookup_ingredient for 'black pepper extract' returned the shown normalized result (Bioperine)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9227,
+      "completion": 4581,
+      "total": 13808
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "curcumin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black pepper extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black pepper",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.673573603647004
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.622478
+}

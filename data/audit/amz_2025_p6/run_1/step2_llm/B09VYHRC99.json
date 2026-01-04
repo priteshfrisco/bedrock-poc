@@ -1,0 +1,176 @@
+{
+  "product_id": 6510,
+  "asin": "B09VYHRC99",
+  "title": "real ketones hydration multiplier with d bhb and mct, zero sugar, orange flavor, 30 drink mix packets",
+  "brand": "real ketones",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "PACKET",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "ketones",
+      "position": 5,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'ketones' at character index 5. lookup_ingredient returned ingredient 'Ketones' with category MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC."
+    },
+    {
+      "name": "d bhb",
+      "position": 39,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found substring starting at index 39: 'd bhb'. This refers to D\u2011BHB (a ketone salt) in the title. lookup_ingredient() returned a match for 'd' (Vitamin D) with category BASIC VITAMINS & MINERALS / LETTER VITAMINS \u2014 the lookup result is ambiguous relative to the expected meaning (D\u2011BHB), but the tool output is reported here as returned."
+    },
+    {
+      "name": "mct",
+      "position": 49,
+      "category": "FATTY ACIDS",
+      "subcategory": "MCT",
+      "reasoning": "Found 'mct' at index 49. lookup_ingredient returned 'MCT' categorized as FATTY ACIDS / MCT."
+    },
+    {
+      "name": "sugar",
+      "position": 59,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Title contains 'zero sugar' (starts at index 59). lookup_ingredient() did not return a clear match for 'sugar' (returned found=false / ambiguous candidates). Included here because 'sugar' appears in the title, but no definitive category/subcategory was provided by the lookup tool."
+    },
+    {
+      "name": "orange",
+      "position": 66,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Found 'orange' (as part of 'orange flavor') at index 66. lookup_ingredient returned 'Orange Peel' with category HERBAL REMEDIES / FOOD SUPPLEMENTS. 'orange flavor' indicates flavoring; lookup result reported as given."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9565,
+      "completion": 6719,
+      "total": 16284
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ketones"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ketones",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "ketones",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "d bhb"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.061197584802089
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mct"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MCT",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "MCT",
+          "keyword": "m.c.t.",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sugar"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Suma",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "suma",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Garlic",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "garlic",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Guarana",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "guarana",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "orange"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Orange Peel",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "limonene",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 118.048965
+}

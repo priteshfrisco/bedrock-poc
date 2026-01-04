@@ -1,0 +1,118 @@
+{
+  "product_id": 8359,
+  "asin": "B0C3MXDVX9",
+  "title": "perfect sports diesel 100% new zealand wey protein isolate  stevia sweetened, no artificial ingredients, keto  0g carb, 0g fat, 27g protein  2 pounds (strawberry)",
+  "brand": "perfect sports",
+  "source_subcategory": "whey protein",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 32.0,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "whey protein isolate",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "whey protein isolate",
+    "stevia",
+    "strawberry"
+  ],
+  "category": "SPORTS NUTRITION",
+  "subcategory": "PROTEIN",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9462,
+      "completion": 6563,
+      "total": 16025
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey protein isolate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "stevia"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Stevia",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "stevia",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "strawberry"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "actifruitcranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cran berry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 72.84786
+}

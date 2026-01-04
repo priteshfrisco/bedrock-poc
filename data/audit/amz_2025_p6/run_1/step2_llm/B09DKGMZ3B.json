@@ -1,0 +1,58 @@
+{
+  "product_id": 5881,
+  "asin": "B09DKGMZ3B",
+  "title": "pure encapsulations gluten/dairy digest  unique mix of enzymes to support healthy gluten and dairy digestion*  60 capsules",
+  "brand": "pure encapsulations",
+  "source_subcategory": "enzyme supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "digestive enzymes",
+      "position": 55,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The title includes the phrase 'mix of enzymes' (the word 'enzymes' starts at character index 55). This refers to digestive enzymes supporting gluten/dairy digestion. lookup_ingredient was called for 'digestive enzymes' and returned category 'PROBIOTICS+' and subcategory 'DIGESTIVE AIDS & ENZYMES'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9064,
+      "completion": 5392,
+      "total": 14456
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "digestive enzymes"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Digestive Bitters",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "digestive bitters",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 132.65696
+}

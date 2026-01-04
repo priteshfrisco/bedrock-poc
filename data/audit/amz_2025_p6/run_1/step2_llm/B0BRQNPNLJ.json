@@ -1,0 +1,15 @@
+{
+  "product_id": 7863,
+  "asin": "B0BRQNPNLJ",
+  "title": "herbion naturals taurine gummies with ginseng, l-theanine, vitamin c, b3, b6, & b12, support mental clarity & concentration*, natural peach flavor, gluten-free, usa made,120 count (pack of 2)",
+  "brand": "herbion",
+  "source_subcategory": "vitamin c-complex",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "error": "Extra data: line 2 column 1 (char 83)",
+  "processing_time_sec": 3528.903264
+}

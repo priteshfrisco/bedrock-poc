@@ -1,0 +1,201 @@
+{
+  "product_id": 6986,
+  "asin": "B0B4T7FNFD",
+  "title": "hydralyte liver support - blood orange electrolyte powder packets for liver detox and rehydration  hydration packets for late night recovery with milk thistle, turmeric and ginger - (8oz, 20 count)",
+  "brand": "hydralyte",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "PACKET",
+  "organic": "NOT ORGANIC",
+  "count": "20",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "blood orange",
+      "position": 26,
+      "lookup": {
+        "found": true,
+        "ingredient_normalized": "Bloodroot",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "note": "lookup_ingredient returned a match to 'Bloodroot' for the query 'blood orange' (tool result)."
+      },
+      "reasoning": "The phrase 'blood orange' appears in the title at index 26. Treated as a flavor/ingredient in the title; lookup was called and returned the above result."
+    },
+    {
+      "name": "electrolyte",
+      "position": 39,
+      "lookup": {
+        "found": false,
+        "ingredient_normalized": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "note": "lookup_ingredient did not return an exact match for 'electrolyte' and suggested ambiguous candidates (tool indicated needs disambiguation)."
+      },
+      "reasoning": "The word 'electrolyte' appears at index 39 ('electrolyte powder'). It is a functional ingredient/constituent (electrolytes) but the lookup tool did not provide a clear category/subcategory match."
+    },
+    {
+      "name": "milk thistle",
+      "position": 146,
+      "lookup": {
+        "found": true,
+        "ingredient_normalized": "Milk Thistle",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "note": "lookup_ingredient returned an exact match for 'milk thistle' with the above category/subcategory (tool result)."
+      },
+      "reasoning": "The phrase 'milk thistle' appears in the title at index 146 and is a named herbal ingredient; lookup returned the shown category/subcategory."
+    },
+    {
+      "name": "turmeric",
+      "position": 160,
+      "lookup": {
+        "found": true,
+        "ingredient_normalized": "Turmeric",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "note": "lookup_ingredient returned an exact match for 'turmeric' with the above category/subcategory (tool result)."
+      },
+      "reasoning": "The word 'turmeric' appears in the title at index 160 and is a named herbal ingredient; lookup returned the shown category/subcategory."
+    },
+    {
+      "name": "ginger",
+      "position": 173,
+      "lookup": {
+        "found": true,
+        "ingredient_normalized": "Ginger",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "note": "lookup_ingredient returned an exact match for 'ginger' with the above category/subcategory (tool result)."
+      },
+      "reasoning": "The word 'ginger' appears in the title at index 173 and is a named herbal ingredient; lookup returned the shown category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9595,
+      "completion": 7569,
+      "total": 17164
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "blood orange"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bloodroot",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "blood root",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 141.528331
+}

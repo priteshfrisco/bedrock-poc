@@ -1,0 +1,157 @@
+{
+  "product_id": 7419,
+  "asin": "B0BFKQSPKV",
+  "title": "ultra muscle growth 9800mg creatine monohydrate ginseng 4000 mg l-arginine 100mg l citrulline 100mg - increase stamina energy performance (90 count (pack of 1))",
+  "brand": "ultra herbs",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "creatine monohydrate",
+      "position": 27,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PERFORMANCE NUTRITION",
+      "lookup_found": true,
+      "reasoning": "Found 'creatine monohydrate' starting at character index ~27. lookup_ingredient returned normalized ingredient 'Creatine' with category 'ACTIVE NUTRITION' and subcategory 'PERFORMANCE NUTRITION'."
+    },
+    {
+      "name": "ginseng",
+      "position": 48,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_found": true,
+      "reasoning": "Found 'ginseng' starting at character index ~48. lookup_ingredient returned normalized ingredient 'Ginseng' (tool returned category 'FATTY ACIDS' and subcategory 'HEMP/CBD' in its response)."
+    },
+    {
+      "name": "l-arginine",
+      "position": 63,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "lookup_found": true,
+      "reasoning": "Found 'l-arginine' starting at character index ~63. lookup_ingredient returned normalized ingredient 'Arginine' with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS'."
+    },
+    {
+      "name": "l citrulline",
+      "position": 80,
+      "category": null,
+      "subcategory": null,
+      "lookup_found": false,
+      "reasoning": "Found 'l citrulline' starting at character index ~80. lookup_ingredient did not return a definitive match (found=false) and provided several low-confidence candidate matches for other 'L-' amino acids. The title text clearly indicates 'l citrulline' but the lookup tool could not map it to a confirmed category/subcategory in this call."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9575,
+      "completion": 5930,
+      "total": 15505
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "creatine monohydrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Creatine",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PERFORMANCE NUTRITION",
+          "keyword": "creatine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginseng"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginseng",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginseng",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-arginine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Arginine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "arginine",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l citrulline"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Acetyl L Carnitine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "l carnitine",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cysteine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "l cysteine",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Tyrosine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "l tyrosine",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 94.606827
+}

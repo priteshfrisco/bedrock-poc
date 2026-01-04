@@ -1,0 +1,173 @@
+{
+  "product_id": 8135,
+  "asin": "B0BZJS8D6X",
+  "title": "reseth2o natural hangover relief, 7 electrolytes, super b complex, caffeinated green tea leaf & green coffee bean extracts",
+  "brand": "reset",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 36,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "note": "lookup_ingredient returned no direct match for the generic term 'electrolytes' and suggested multiple fuzzy candidates (disambiguation required). 'Electrolytes' is a class of minerals (e.g., sodium, potassium, magnesium) rather than a single normalized ingredient in the lookup."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title explicitly lists '7 electrolytes' starting at character index 36. The lookup did not return a definitive category/subcategory for this generic term, so category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "super b complex",
+      "position": 50,
+      "lookup_result": {
+        "ingredient": "Vitamin Bcomplex",
+        "found": true,
+        "note": "lookup_ingredient matched 'b complex' to Vitamin Bcomplex."
+      },
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The phrase 'super b complex' appears beginning at index 50. Lookup returned Vitamin Bcomplex mapped to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "green tea leaf",
+      "position": 79,
+      "lookup_result": {
+        "ingredient": "Green Tea",
+        "found": true,
+        "note": "lookup_ingredient matched 'green tea' (title phrasing 'green tea leaf')."
+      },
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "The phrase 'green tea leaf' begins at index 79. Lookup returned Green Tea mapped to HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "green coffee bean extracts",
+      "position": 96,
+      "lookup_result": {
+        "ingredient": "Green Coffee",
+        "found": true,
+        "note": "lookup_ingredient matched 'green coffee' for the phrase 'green coffee bean extracts'."
+      },
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'green coffee bean extracts' begins at index 96. The lookup returned 'Green Coffee' with the provided category/subcategory from the tool (FATTY ACIDS / HEMP/CBD). Although this mapping is unexpected for green coffee, it is reported as returned by the lookup tool and therefore used here."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9516,
+      "completion": 5079,
+      "total": 14595
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "super b complex"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin Bcomplex",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b complex",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.782398146843168
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green tea leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Green Tea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "green tea",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.121474533637393
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green coffee bean extracts"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Green Coffee",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "green coffee",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 11.311410790053557
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 64.687347
+}

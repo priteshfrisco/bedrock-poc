@@ -1,0 +1,36 @@
+{
+  "product_id": 1471,
+  "asin": "B00PG3K0D8",
+  "title": "sqwincher fast pack .6 ounce liquid concentrate packet mixed berry electrolyte drink - yields 6 ounces (50 single serving packets per box)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title is for a mixed-berry electrolyte drink concentrate (beverage). Ingredient extraction and lookup not performed because product is not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4590,
+      "completion": 1259,
+      "total": 5849
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.77921
+}

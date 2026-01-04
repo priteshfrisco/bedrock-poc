@@ -1,0 +1,120 @@
+{
+  "product_id": 7186,
+  "asin": "B0B8HXJZDF",
+  "title": "admart planet ayurveda yakrit plihantak churna advanced - 200 g for liver problems",
+  "brand": "admart",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 7.0548,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "yakrit plihantak",
+      "position": 23,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Plantain",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "plantain",
+            "match_type": "fuzzy",
+            "score": 50.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Triphala",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "triphala",
+            "match_type": "fuzzy",
+            "score": 50.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Yeast",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "yeast flakes",
+            "match_type": "fuzzy",
+            "score": 50.0,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no exact match; multiple low-confidence fuzzy candidates."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title contains the formulation name 'yakrit plihantak' (starts at character index 23). This appears to be the Ayurvedic product/formula name rather than a single common Western ingredient. lookup_ingredient() returned no exact match (found=false) and provided low-confidence candidate suggestions; therefore category/subcategory cannot be determined with confidence and are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9211,
+      "completion": 5208,
+      "total": 14419
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "yakrit plihantak"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Plantain",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "plantain",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Triphala",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "triphala",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Yeast",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "yeast flakes",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.876527
+}

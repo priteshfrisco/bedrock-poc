@@ -1,0 +1,81 @@
+{
+  "product_id": 3372,
+  "asin": "B07J4F5GGZ",
+  "title": "dairyland management panax ginseng + gingko biloba capsules 150ct 1000 mg of panax ginseng, 60 mg of gingko biloba per serving",
+  "brand": "dairyland management llc",
+  "source_subcategory": "ginseng herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 150,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "panax ginseng",
+      "position": 21,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found the phrase 'panax ginseng' starting at character index 21. lookup_ingredient returned normalized ingredient 'Ginseng' with category/subcategory as above."
+    },
+    {
+      "name": "gingko biloba",
+      "position": 37,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found the phrase 'gingko biloba' starting at character index 37. lookup_ingredient returned normalized ingredient 'Ginkgo' with category/subcategory as above."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9183,
+      "completion": 4037,
+      "total": 13220
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "panax ginseng"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginseng",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginseng",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.613956342756415
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gingko biloba"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginkgo",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "gingko biloba",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 57.769581
+}

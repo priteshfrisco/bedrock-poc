@@ -1,0 +1,14 @@
+{
+  "product_id": 37,
+  "asin": "000000001907410201",
+  "title": "bloody valentine: blue bloods",
+  "brand": "atom",
+  "source_subcategory": "cocktail mixers & additives",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.005146,
+  "lookup_action": "REMOVE"
+}

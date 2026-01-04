@@ -1,0 +1,36 @@
+{
+  "product_id": 8625,
+  "asin": "B0C785PKD8",
+  "title": "indian grey roasted clay 1 kg",
+  "brand": "india clay",
+  "source_subcategory": "other mineral supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title describes a clay material ('indian grey roasted clay'), not a supplement with functional ingredients."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4571,
+      "completion": 996,
+      "total": 5567
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 12.827018
+}

@@ -1,0 +1,81 @@
+{
+  "product_id": 6753,
+  "asin": "B0B13X3D1F",
+  "title": "nutraprolonghairgummiesanti-hairlosssupplementforfasthairgrowthofweak,thinninghairgrowlongthickhair&increasehairvolumewithbiotinand10othervitamins.formenandwomen.",
+  "brand": "nutrapro",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "biotin",
+      "position": 122,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Exact match 'biotin' found in title at character index 122 (substring '...withbiotinand...'). lookup_ingredient returned category/subcategory accordingly."
+    },
+    {
+      "name": "vitamins",
+      "position": 138,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "The phrase '10 other vitamins' appears in the title starting at index 133 ('10othervitamins'); the word 'vitamins' starts at index 138. lookup_ingredient matched this to a multivitamin entry (normalized as 'Multivitamin'). Note: the title does not literally contain the word 'multivitamin', only 'vitamins' and a count ('10 other vitamins')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9213,
+      "completion": 5227,
+      "total": 14440
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.624091
+}

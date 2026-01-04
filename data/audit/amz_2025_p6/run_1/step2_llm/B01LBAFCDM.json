@@ -1,0 +1,58 @@
+{
+  "product_id": 2149,
+  "asin": "B01LBAFCDM",
+  "title": "kirkland wcaqz  coq10 300 mg 100 softgels (pack of 2)",
+  "brand": "remove",
+  "source_subcategory": "antioxidants",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "coq10",
+      "position": 16,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "COENZYME Q10",
+      "reasoning": "Found the token 'coq10' starting at character index 16. lookup_ingredient returned category/subcategory matching Co Q10."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9057,
+      "completion": 3015,
+      "total": 12072
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coq10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "coq10",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 49.885341
+}

@@ -1,0 +1,205 @@
+{
+  "product_id": 1339,
+  "asin": "B00KLGIXRA",
+  "title": "fringe tree liquid extract, fringe tree (chionanthus virginicus) tincture supplement 2x2 oz",
+  "brand": "hawaiipharm",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "fringe tree",
+      "position": 0,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Orange Peel",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "limonene",
+            "match_type": "fuzzy",
+            "score": 63.63636363636363,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Orange Peel",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "orange peel",
+            "match_type": "fuzzy",
+            "score": 63.63636363636363,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Tea Tree Oil",
+            "nw_category": "HOMEOPATHICS",
+            "nw_subcategory": "NON-SPECIFIC",
+            "keyword": "tea tree",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no exact match for 'fringe tree' and suggested low-confidence fuzzy candidates. Manual disambiguation required."
+      },
+      "reasoning": "The common name 'fringe tree' appears at the start of the title. It is a functional herbal ingredient. A lookup was performed but returned no definitive exact match."
+    },
+    {
+      "name": "chionanthus virginicus",
+      "position": 41,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Licorice",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "deglycyrrhizinated licorice",
+            "match_type": "fuzzy",
+            "score": 44.89795918367348,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "CLA",
+            "nw_category": "ACTIVE NUTRITION",
+            "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+            "keyword": "conjugated linoleic acid",
+            "match_type": "fuzzy",
+            "score": 43.47826086956522,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Chondroitin",
+            "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+            "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+            "keyword": "chondroitin",
+            "match_type": "fuzzy",
+            "score": 42.42424242424242,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no exact match for the scientific name 'chionanthus virginicus' and suggested several low-confidence fuzzy candidates. Manual disambiguation required."
+      },
+      "reasoning": "The scientific name '(chionanthus virginicus)' appears in parentheses after 'fringe tree' and is the botanical name for the same herbal ingredient. Included as a separate ingredient entry with its starting position."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9523,
+      "completion": 6961,
+      "total": 16484
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fringe tree"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Orange Peel",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "limonene",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Orange Peel",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "orange peel",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Tea Tree Oil",
+              "nw_category": "HOMEOPATHICS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "tea tree",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chionanthus virginicus"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 44.89795918367348,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "CLA",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+              "keyword": "conjugated linoleic acid",
+              "match_type": "fuzzy",
+              "score": 43.47826086956522,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Chondroitin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+              "keyword": "chondroitin",
+              "match_type": "fuzzy",
+              "score": 42.42424242424242,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 99.553901
+}

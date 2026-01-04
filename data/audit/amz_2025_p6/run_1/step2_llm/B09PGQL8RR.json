@@ -1,0 +1,151 @@
+{
+  "product_id": 6243,
+  "asin": "B09PGQL8RR",
+  "title": "nasabeahava coq10 200mg capsules  vegan friendly coenzyme q10 200mg from easy absorption ubiquinone supplement for skin heart and energy support  made in the usa in cgmp facilities (400 servings)",
+  "brand": "nasabeahava",
+  "source_subcategory": "antioxidants",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 400,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "coq10",
+      "position": 12,
+      "lookup_result": {
+        "ingredient": "Co Q10",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "COENZYME Q10",
+        "note": "Exact match from lookup_ingredient for 'coq10'."
+      },
+      "reasoning": "Title begins with brand then 'coq10' at character index 12. This is a functional ingredient (coenzyme Q10)."
+    },
+    {
+      "name": "coenzyme q10",
+      "position": 49,
+      "lookup_result": {
+        "ingredient": "Co Q10",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "COENZYME Q10",
+        "note": "Lookup matched 'coenzyme q10' to Co Q10 (high-confidence)."
+      },
+      "reasoning": "'coenzyme q10' appears again in the title at position 49; it is the same functional ingredient (confirmed by lookup)."
+    },
+    {
+      "name": "ubiquinone",
+      "position": 89,
+      "lookup_result": {
+        "ingredient": "UNKNOWN (ambiguous lookup)",
+        "found": false,
+        "candidates": [
+          {
+            "ingredient": "Ubiquinol",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "COENZYME Q10",
+            "confidence": "medium"
+          }
+        ],
+        "note": "lookup_ingredient did not return an exact match for 'ubiquinone'; the best candidate maps to the CoQ10 subcategory (Ubiquinol). Ubiquinone is a form/name related to coenzyme Q10, so category/subcategory are inferred accordingly with a note of ambiguity."
+      },
+      "reasoning": "'ubiquinone' appears in the title at position 89. It is a term closely related to CoQ10; lookup returned ambiguous/no exact match but suggested CoQ10-related candidate. Included as a functional ingredient with the candidate mapping."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9480,
+      "completion": 6606,
+      "total": 16086
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coq10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "coq10",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coenzyme q10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "co enzyme q10",
+          "match_type": "fuzzy",
+          "confidence": "high",
+          "score": 96
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ubiquinone"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ubiquinol",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "ubiquinol",
+              "match_type": "fuzzy",
+              "score": 84.21052631578947,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "billion",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Inosine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "inosine",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 104.367499
+}

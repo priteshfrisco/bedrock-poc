@@ -1,0 +1,15 @@
+{
+  "product_id": 10317,
+  "asin": "B0CR4K6YY5",
+  "title": "orgain protein shake, grass fed dairy, chocolate - 20g whey protein, meal replacement, ready to drink, gluten free, soy free, kosher, 11 fl oz (pack of 6) with drinkolin straws",
+  "brand": "drinkolin",
+  "source_subcategory": "ready to drink protein",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT LIQUID",
+  "error": "Extra data: line 2 column 1 (char 89)",
+  "processing_time_sec": 94.547812
+}

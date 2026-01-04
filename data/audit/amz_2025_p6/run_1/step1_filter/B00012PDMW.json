@@ -1,0 +1,14 @@
+{
+  "product_id": 70,
+  "asin": "B00012PDMW",
+  "title": "bosu balance trainer home version",
+  "brand": "bosu",
+  "source_subcategory": "balance trainers",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004426,
+  "lookup_action": "REMOVE"
+}

@@ -1,0 +1,93 @@
+{
+  "product_id": 7585,
+  "asin": "B0BJW5HV5Z",
+  "title": "hempgummies-premiumbutterflieshempgummy-besttastinghmgummy,softfruityandfresh-naturalhmoilforcalm,relax,rest,discomfort-madeinusa",
+  "brand": "healthergize",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 0,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_result": {
+        "ingredient": "Hemp",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The title begins with 'hempgummies' (characters 0-3 = 'hemp'). This is a clear functional ingredient mention. lookup_ingredient returned category/subcategory FATTY ACIDS / HEMP/CBD."
+    },
+    {
+      "name": "hemp oil",
+      "position": 85,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_result": {
+        "ingredient": "Hemp",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The title contains the concatenated fragment 'naturalhmoil' (characters 78-89 include 'hmoil' at 85-89), which, given formatting issues, is interpreted as 'hemp oil' (natural hemp oil). This is a functional ingredient mention. lookup_ingredient for 'hemp oil' mapped to Hemp (FATTY ACIDS / HEMP/CBD)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9188,
+      "completion": 4047,
+      "total": 13235
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 4359.293086
+}

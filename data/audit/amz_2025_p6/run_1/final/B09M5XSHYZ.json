@@ -1,0 +1,15 @@
+{
+  "product_id": 6145,
+  "asin": "B09M5XSHYZ",
+  "title": "ucan hydrate watermelon jar & berry jar bundle - great for running, training, fitness, cycling, crossfit & more  sugar-free, vegan, & keto friendly energy supplement",
+  "brand": "ucan",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 86)",
+  "processing_time_sec": 65.97475
+}

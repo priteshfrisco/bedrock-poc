@@ -1,0 +1,14 @@
+{
+  "product_id": 1905,
+  "asin": "B01BPHGRGC",
+  "title": "so delicious, coconut strawberry yogurt, 5.3 ounce",
+  "brand": "so delicious",
+  "source_subcategory": "yogurt",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.004541,
+  "lookup_action": "REMOVE"
+}

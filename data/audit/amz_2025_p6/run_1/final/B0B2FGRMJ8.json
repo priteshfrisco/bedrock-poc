@@ -1,0 +1,15 @@
+{
+  "product_id": 6851,
+  "asin": "B0B2FGRMJ8",
+  "title": "waterboy weekend recovery  3,187mg electrolyte powder packets  ginger + l-theanine + vitamins  no sugar, all natural, gluten free  24 drink stick mixes (lemon ginger)",
+  "brand": "waterboy",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 84)",
+  "processing_time_sec": 82.636199
+}

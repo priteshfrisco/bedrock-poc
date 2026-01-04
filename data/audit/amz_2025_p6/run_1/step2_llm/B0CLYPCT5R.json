@@ -1,0 +1,15 @@
+{
+  "product_id": 10010,
+  "asin": "B0CLYPCT5R",
+  "title": "1000mg vitamin c powder, with antioxidants, b vitamins and electrolytes, immunity supplements for immune support, caffeine free fizzy drink mix, raspberry flavor, 0.32 ounce (pack of 30)",
+  "brand": "emergen-c",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 542)",
+  "processing_time_sec": 105.827828
+}

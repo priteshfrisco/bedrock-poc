@@ -1,0 +1,88 @@
+{
+  "product_id": 2706,
+  "asin": "B076JH2L3S",
+  "title": "celebrate vitamins bariatric calcium citrate soft chews with vitamin d3, 500mg, sugar-free & gluten-free calcium citrate for bariatric patients, cafe mocha, 90 count",
+  "brand": "celebrate bariatric supplements",
+  "source_subcategory": "calcium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFT CHEW",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "calcium citrate",
+      "position": 29,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Found 'calcium citrate' starting at character index 29. lookup_ingredient('calcium citrate') returned ingredient='Calcium', nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='MINERALS'."
+    },
+    {
+      "name": "vitamin d3",
+      "position": 61,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'vitamin d3' starting at character index 61. lookup_ingredient('vitamin d3') returned ingredient='Vitamin D', nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='LETTER VITAMINS'."
+    },
+    {
+      "name": "calcium citrate",
+      "position": 105,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "Second occurrence of 'calcium citrate' starting at character index 105. Same lookup result as the first occurrence (Calcium \u2192 BASIC VITAMINS & MINERALS / MINERALS)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9197,
+      "completion": 4704,
+      "total": 13901
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium citrate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.409833504706679
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 71.568161
+}

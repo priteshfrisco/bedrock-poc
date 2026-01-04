@@ -1,0 +1,14 @@
+{
+  "product_id": 19,
+  "asin": "000000001444102826",
+  "title": "manual of definitive surgical trauma care, 3rd edition",
+  "brand": "crc press",
+  "source_subcategory": "surgical supplies & tools",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.008306,
+  "lookup_action": "REMOVE"
+}

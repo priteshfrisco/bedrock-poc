@@ -1,0 +1,58 @@
+{
+  "product_id": 8601,
+  "asin": "B0C6W727HH",
+  "title": "femiclear daily urinary tract flush  day & night urinary support  d-mannose supplement  urinary tract health supplement  20 capsules",
+  "brand": "femiclear",
+  "source_subcategory": "cranberry herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to HERBAL REMEDIES / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 20,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "d-mannose",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "d-mannose"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "SINGLES",
+  "health_focus": "URINARY TRACT HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9070,
+      "completion": 3541,
+      "total": 12611
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "d-mannose"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Dmannose",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "mannose",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 38.801567
+}

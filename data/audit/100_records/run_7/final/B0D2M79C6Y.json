@@ -1,0 +1,39 @@
+{
+  "product_id": 87,
+  "asin": "B0D2M79C6Y",
+  "title": "nutrarize (2 pack) pronerve6 neuropathy, pronerve 6 nerve support supplement, pro nerve 6 capsules, pronerve6 pastillas reviews (120 capsules)",
+  "brand": "nutrarize",
+  "source_subcategory": "other dietary supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4599,
+      "completion": 1565,
+      "total": 6164
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.332675
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 9251,
+  "asin": "B0CFSR48YS",
+  "title": "agent nateur holi (mane) hair, skin & nails powder - unflavored (30 servings)",
+  "brand": "agent nateur",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4584,
+      "completion": 1788,
+      "total": 6372
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 38.731507
+}

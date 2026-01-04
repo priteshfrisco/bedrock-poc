@@ -1,0 +1,60 @@
+{
+  "product_id": 5895,
+  "asin": "B09DXZYTDW",
+  "title": "organic vitamin d3 5000 iu | 100% vegan high-potency immune support | promotes bone & muscle health | 90 tablets",
+  "brand": "omnibiotics",
+  "source_subcategory": "vitamin d supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "vitamin d3",
+        "position": 8,
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "LETTER VITAMINS"
+      }
+    ],
+    "reasoning": "Detected 'vitamin d3' starting at character index 8 in the title. This is a functional ingredient. Lookup returned category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS'. No other ingredient names (e.g., minerals, herbs, protein types) appear in the title."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9072,
+      "completion": 2581,
+      "total": 11653
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.033652
+}

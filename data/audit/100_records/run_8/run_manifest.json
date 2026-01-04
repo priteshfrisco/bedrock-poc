@@ -1,0 +1,18 @@
+{
+  "total_records": 100,
+  "success": 24,
+  "filtered": 0,
+  "errors": 6,
+  "total_cost": 0,
+  "total_tokens": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "duration_seconds": 131.050677,
+  "test_mode_step1_only": false,
+  "output_csv": "data/output/100_records/run_8/uncoded_100_records.csv",
+  "generated_at": "2026-01-04T22:45:59.006920",
+  "filename": "uncoded_100_records",
+  "file_id": "100_records",
+  "run_id": "run_8",
+  "run_num": 8
+}

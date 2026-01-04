@@ -1,0 +1,33 @@
+{
+  "product_id": 6746,
+  "asin": "B09ZYLDV5B",
+  "title": "bulk lot of 25 aluminum 3 month aa medallions 90 day sobriety chips",
+  "brand": "recoverychip",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4582,
+      "completion": 740,
+      "total": 5322
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 12.14555
+}

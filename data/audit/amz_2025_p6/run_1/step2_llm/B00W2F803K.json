@@ -1,0 +1,107 @@
+{
+  "product_id": 1587,
+  "asin": "B00W2F803K",
+  "title": "lignans for life flaxseed hulls bulk powder organic 2 pack",
+  "brand": "lignans for life",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "lignans",
+      "position": 0,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_reasoning": "lookup_ingredient returned found=false for 'lignans' (no definitive match). The title explicitly contains the term 'lignans' at position 0, so it is extracted as a functional ingredient, but the ingredient lookup did not map it to a Nature's Way category/subcategory."
+    },
+    {
+      "name": "flaxseed hulls",
+      "position": 17,
+      "category": "FATTY ACIDS",
+      "subcategory": "SEED",
+      "lookup_reasoning": "lookup_ingredient matched 'flaxseed hulls' to normalized ingredient 'Flax Seed' with nw_category='FATTY ACIDS' and nw_subcategory='SEED'. 'flaxseed hulls' appears starting at character index 17 in the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9307,
+      "completion": 3601,
+      "total": 12908
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lignans"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Linden",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "linden",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Gentian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "gentian",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cinnamon",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cinnamon",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "flaxseed hulls"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Flax Seed",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "SEED",
+          "keyword": "flaxseed",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 60.447034
+}

@@ -1,0 +1,228 @@
+{
+  "product_id": 3072,
+  "asin": "B07CWKX7RN",
+  "title": "whey protein blend (wpi + wpc + casein) powder - grass-fed au & nz - 28g protein per serve - 13g bcaas - non-gmo - 5kg (11 lbs) chocolate",
+  "brand": "pure product australia",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 176.37,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "whey protein",
+      "position": 0,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "Found at start of title ('whey protein blend ...'). lookup_ingredient returned a match mapped to PROTEIN & MEAL REPLACEMENTS (ACTIVE NUTRITION). This is the first ingredient and therefore primary."
+    },
+    {
+      "name": "wpi",
+      "position": 20,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "Found in parentheses ' (wpi + wpc + casein)'. 'WPI' is a common abbreviation for whey protein isolate. lookup_ingredient returned no direct match and ambiguous candidates, so using domain knowledge to normalize WPI \u2192 whey protein isolate and map to PROTEIN & MEAL REPLACEMENTS (ACTIVE NUTRITION)."
+    },
+    {
+      "name": "wpc",
+      "position": 26,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "Found in parentheses. 'WPC' is a common abbreviation for whey protein concentrate. lookup_ingredient returned no direct match and ambiguous candidates, so using domain knowledge to normalize WPC \u2192 whey protein concentrate and map to PROTEIN & MEAL REPLACEMENTS (ACTIVE NUTRITION)."
+    },
+    {
+      "name": "casein",
+      "position": 32,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "Found in parentheses. lookup_ingredient returned ambiguous/no direct match, but casein is a milk-derived protein; mapped to PROTEIN & MEAL REPLACEMENTS (ACTIVE NUTRITION)."
+    },
+    {
+      "name": "bcaas",
+      "position": 97,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Found as '13g bcaas' later in the title. lookup_ingredient returned a direct match 'BCAA' with category BASIC VITAMINS & MINERALS and subcategory AMINO ACIDS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9977,
+      "completion": 6147,
+      "total": 16124
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "wpi"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Papain",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "papain",
+              "match_type": "fuzzy",
+              "score": 44.44444444444444,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pectin",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "pectin",
+              "match_type": "fuzzy",
+              "score": 44.44444444444444,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Aspirin",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "aspirin",
+              "match_type": "fuzzy",
+              "score": 40.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "wpc"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin Cnot Ester",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "c",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pectin",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "pectin",
+              "match_type": "fuzzy",
+              "score": 44.44444444444444,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "billion",
+              "match_type": "fuzzy",
+              "score": 33.333333333333336,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "casein"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Caffeine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "caffeinated",
+              "match_type": "fuzzy",
+              "score": 71.42857142857143,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Caffeine",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "caffeine",
+              "match_type": "fuzzy",
+              "score": 71.42857142857143,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cysteine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "cysteine",
+              "match_type": "fuzzy",
+              "score": 71.42857142857143,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bcaas"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "bcaa",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.456485
+}

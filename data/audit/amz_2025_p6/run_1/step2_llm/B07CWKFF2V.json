@@ -1,0 +1,115 @@
+{
+  "product_id": 3069,
+  "asin": "B07CWKFF2V",
+  "title": "micellar casein - gmo-free - grass-fed - protein powder - new zealand protein (chocolate) 4.4 lbs",
+  "brand": "pure product australia",
+  "source_subcategory": "protein powder blends",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 70.4,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "micellar casein",
+      "position": 0,
+      "lookup_result": {
+        "found": false,
+        "ingredient_normalized": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "reasoning": "lookup_ingredient returned no exact match for 'micellar casein' (found=false). Candidate fuzzy matches were suggested but no clear normalized mapping; micellar casein remains the extracted ingredient from the title."
+      }
+    },
+    {
+      "name": "protein",
+      "position": 41,
+      "lookup_result": {
+        "found": true,
+        "ingredient_normalized": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+        "reasoning": "lookup_ingredient returned a match for 'protein' mapping to category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'. The word 'protein' appears in the phrase 'protein powder' starting at position 41."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9360,
+      "completion": 5092,
+      "total": 14452
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "micellar casein"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Celadrin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "celadrin",
+              "match_type": "fuzzy",
+              "score": 60.86956521739131,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "n acetyl l cysteine",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "NAC",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "nacetyllcysteine",
+              "match_type": "fuzzy",
+              "score": 58.06451612903225,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.044097
+}

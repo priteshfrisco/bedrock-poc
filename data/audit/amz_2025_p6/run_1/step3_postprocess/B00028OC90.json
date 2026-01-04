@@ -1,0 +1,58 @@
+{
+  "product_id": 79,
+  "asin": "B00028OC90",
+  "title": "eclectic institute kids herbs lemon balm, lemon flavor  calming and nervous system support  1 fl oz (30 ml)",
+  "brand": "eclectic",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - CHILD",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 1,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "lemon balm",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "lemon balm"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9052,
+      "completion": 3589,
+      "total": 12641
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemon balm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lemon Balm",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lemon balm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 78.053217
+}

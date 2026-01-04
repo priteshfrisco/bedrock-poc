@@ -1,0 +1,33 @@
+{
+  "product_id": 7454,
+  "asin": "B0BG65N26M",
+  "title": "goodsport electrolyte sports drink, rapid & long-lasting hydration (variety, 16.9 fl oz (pack of 4))",
+  "brand": "goodsport",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4590,
+      "completion": 975,
+      "total": 5565
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.624656
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 10583,
+  "asin": "B0CVQYPQ9G",
+  "title": "alka-seltzer fizzy melts, orange flavor, 16ct",
+  "brand": "alka-seltzer",
+  "source_subcategory": "antacids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4577,
+      "completion": 861,
+      "total": 5438
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 15.389885
+}

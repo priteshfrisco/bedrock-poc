@@ -1,0 +1,58 @@
+{
+  "product_id": 10206,
+  "asin": "B0CPJR2XSH",
+  "title": "piping rock cayenne pepper drops  4 fl oz tincture  liquid extract supplement  vegetarian, alcohol free  non-gmo, gluten free",
+  "brand": "piping rock",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 4,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "cayenne pepper",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "cayenne pepper"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "CLEANSE & DETOX",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9072,
+      "completion": 4030,
+      "total": 13102
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cayenne pepper"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cayenne",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "cayenne",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 55.230272
+}

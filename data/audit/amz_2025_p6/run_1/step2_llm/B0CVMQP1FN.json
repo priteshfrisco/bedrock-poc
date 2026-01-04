@@ -1,0 +1,36 @@
+{
+  "product_id": 10581,
+  "asin": "B0CVMQP1FN",
+  "title": "premier protein shake variety sampler pack  cinnamon roll,cafe latte, vanilla, chocolate, chocolate peanut butter  pack of 6 with straws - by drinkolin",
+  "brand": "drinkolin",
+  "source_subcategory": "ready to drink protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT LIQUID",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title lists flavors (cinnamon roll, cafe latte, vanilla, chocolate, chocolate peanut butter) rather than functional supplement ingredients; no supplement ingredient extraction performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4596,
+      "completion": 1600,
+      "total": 6196
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 33.484195
+}

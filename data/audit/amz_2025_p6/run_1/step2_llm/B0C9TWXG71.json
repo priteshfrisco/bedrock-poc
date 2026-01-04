@@ -1,0 +1,153 @@
+{
+  "product_id": 8820,
+  "asin": "B0C9TWXG71",
+  "title": "organic cadane quercetin supplements 10000mg - body mangement, immune system & joint support - 12in1 blended with resveratrol, vitamin c, green tea, turmeric & more - 90 superfood capsules",
+  "brand": "organic cadane",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "quercetin",
+        "position": 15,
+        "category": "HERBAL REMEDIES",
+        "subcategory": "POLYPHENOLS",
+        "reasoning": "Found the word 'quercetin' starting at character index 15. lookup_ingredient returned category HERBAL REMEDIES / POLYPHENOLS."
+      },
+      {
+        "name": "resveratrol",
+        "position": 114,
+        "category": "HERBAL REMEDIES",
+        "subcategory": "POLYPHENOLS",
+        "reasoning": "Found 'resveratrol' starting at character index 114. lookup_ingredient returned category HERBAL REMEDIES / POLYPHENOLS."
+      },
+      {
+        "name": "vitamin c",
+        "position": 127,
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "LETTER VITAMINS",
+        "reasoning": "Found 'vitamin c' starting at character index 127. lookup_ingredient was called for 'vitamin c' and returned the category BASIC VITAMINS & MINERALS and subcategory LETTER VITAMINS (tool returned a close/fuzzy match)."
+      },
+      {
+        "name": "green tea",
+        "position": 138,
+        "category": "HERBAL REMEDIES",
+        "subcategory": "POLYPHENOLS",
+        "reasoning": "Found 'green tea' starting at character index 138. lookup_ingredient returned category HERBAL REMEDIES / POLYPHENOLS."
+      },
+      {
+        "name": "turmeric",
+        "position": 149,
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD",
+        "reasoning": "Found 'turmeric' starting at character index 149. lookup_ingredient returned category FATTY ACIDS and subcategory HEMP/CBD (this is the tool's returned mapping and is included as given)."
+      }
+    ],
+    "reasoning": "Extracted all explicit functional ingredients listed in the title: 'quercetin', 'resveratrol', 'vitamin c', 'green tea', and 'turmeric'. Positions are 0-indexed character start positions in the provided title. Each ingredient was looked up via lookup_ingredient() and the returned category/subcategory values are included per ingredient."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9438,
+      "completion": 6647,
+      "total": 16085
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "resveratrol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Resveratrol",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "resveratrol",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "green tea"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Green Tea",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "green tea",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 114.729918
+}

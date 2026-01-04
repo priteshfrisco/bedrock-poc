@@ -1,0 +1,36 @@
+{
+  "product_id": 6449,
+  "asin": "B09TV5LS2X",
+  "title": "dr. peanut butter cookies &cream with whey protein added creamy butter for snacks, cooking and baking - 22.9oz  no sugar  no gluten  natural sweetener  keto  paleo (cookies & cream)",
+  "brand": "partyreal",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Product is a food/spread ('peanut butter cookies & cream with whey protein added'); ingredient extraction for supplement classification is not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4606,
+      "completion": 1180,
+      "total": 5786
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.70307
+}

@@ -1,0 +1,197 @@
+{
+  "product_id": 6607,
+  "asin": "B09XX836WS",
+  "title": "orgabay liposomal quercetin phytosome 1600 mg,bromelain 200mg,zinc 30mg,vitamin c turmeric 40 mg,highest absorption,quercetin complex, 120 softgels",
+  "brand": "orgabay",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 18,
+      "lookup_result": {
+        "ingredient": "Quercetin",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS"
+      },
+      "reasoning": "Found 'quercetin' in the title at index 18 ('...liposomal quercetin...'). lookup_ingredient returned category/subcategory HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "bromelain",
+      "position": 46,
+      "lookup_result": {
+        "ingredient": "bromelain",
+        "found": true,
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "DIGESTIVE AIDS & ENZYMES"
+      },
+      "reasoning": "Found 'bromelain' in the title at index 46 ('...mg,bromelain 200mg...'). lookup_ingredient returned PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES."
+    },
+    {
+      "name": "zinc",
+      "position": 62,
+      "lookup_result": {
+        "ingredient": "Zinc",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS"
+      },
+      "reasoning": "Found 'zinc' in the title at index 62 ('...200mg,zinc 30mg...'). lookup_ingredient returned BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "vitamin c",
+      "position": 72,
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "Found the phrase 'vitamin c' at index 72 ('...zinc 30mg,vitamin c turmeric...'). lookup_ingredient was called for 'vitamin c' but returned a normalized name of 'Vitamin D' with category BASIC VITAMINS & MINERALS / LETTER VITAMINS (this is the tool's returned mapping and is recorded as-is)."
+    },
+    {
+      "name": "turmeric",
+      "position": 82,
+      "lookup_result": {
+        "ingredient": "Turmeric",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "Found 'turmeric' at index 82 ('...vitamin c turmeric 40 mg...'). lookup_ingredient returned category/subcategory (note: the returned category/subcategory appear atypical for turmeric but are included as provided by the lookup)."
+    },
+    {
+      "name": "quercetin complex",
+      "position": 116,
+      "lookup_result": {
+        "ingredient": "Quercetin",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS"
+      },
+      "reasoning": "The phrase 'quercetin complex' appears at index 116 ('...highest absorption,quercetin complex, 120 softgels'). lookup_ingredient for 'quercetin complex' returned Quercetin \u2192 HERBAL REMEDIES / POLYPHENOLS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9537,
+      "completion": 6464,
+      "total": 16001
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bromelain"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "bromelain",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "bromelain",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin complex"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 102.265668
+}

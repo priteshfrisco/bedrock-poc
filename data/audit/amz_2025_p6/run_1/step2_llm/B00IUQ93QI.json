@@ -1,0 +1,58 @@
+{
+  "product_id": 1274,
+  "asin": "B00IUQ93QI",
+  "title": "100%pureroyaljellypowderlyophilizedantiaging400mg*200capsules,10-had6.0%",
+  "brand": "ungrol",
+  "source_subcategory": "royal jelly",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 200,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "royal jelly",
+      "position": 8,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Title (interpreted as '100%pureroyaljellypowder...') contains 'royaljelly' starting at character index 8. 'royal jelly' is the functional ingredient. 'powder' and 'lyophilized' are processing descriptors, not separate functional ingredients. Lookup result: ingredient normalized as 'Royal Jelly', category 'HERBAL REMEDIES', subcategory 'FOOD SUPPLEMENTS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9062,
+      "completion": 3338,
+      "total": 12400
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "royal jelly"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Royal Jelly",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "royal jelly",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 49.624777
+}

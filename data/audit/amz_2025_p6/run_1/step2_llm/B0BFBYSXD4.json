@@ -1,0 +1,15 @@
+{
+  "product_id": 7396,
+  "asin": "B0BFBYSXD4",
+  "title": "nature's hair growth vitamins with biotin, vitamin e & c, premium absorption hair strength support for thicker & stronger hair & nails, biotin hair supplement, non-gmo & gluten free - 180 capsules",
+  "brand": "nature's nutrition",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "error": "Extra data: line 2 column 1 (char 98)",
+  "processing_time_sec": 59.629066
+}

@@ -1,0 +1,109 @@
+{
+  "product_id": 8336,
+  "asin": "B0C3D4V4Y8",
+  "title": "ved glucosamine chondroitin turmeric vitamin c  joint support supplement non-gmo, gluten free  120 capsules  60 days supply.",
+  "brand": "ved",
+  "source_subcategory": "chondroitin & glucosamine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+  "remap_reason": "Maps to GLUCOSAMINE & CHONDROITIN / GLUCOSAMINE & CHONDROITIN",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "glucosamine",
+  "num_ingredients": 4,
+  "all_ingredients": [
+    "glucosamine",
+    "chondroitin",
+    "turmeric",
+    "vitamin c"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "JOINT HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9349,
+      "completion": 4167,
+      "total": 13516
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "glucosamine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glucosamine",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+          "keyword": "glucosamine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chondroitin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Chondroitin",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "GLUCOSAMINE & CHONDROITIN",
+          "keyword": "chondroitin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 47.559957
+}

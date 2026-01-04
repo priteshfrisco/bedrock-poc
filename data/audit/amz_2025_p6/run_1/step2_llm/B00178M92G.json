@@ -1,0 +1,36 @@
+{
+  "product_id": 278,
+  "asin": "B00178M92G",
+  "title": "sqwincher powder concentrate electrolyte replacement beverage mix, 1 gal, orange 016004-or (case of 80)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: ingredient extraction skipped because product is a beverage mix / electrolyte replacement drink (food/beverage), not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4587,
+      "completion": 1542,
+      "total": 6129
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 29.095506
+}

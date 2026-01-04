@@ -1,0 +1,75 @@
+{
+  "product_id": 4752,
+  "asin": "B08HRBJX3Z",
+  "title": "frezzor collagen peptides powder, fine lines & wrinkles, hair & nails, supports youthful flexibility & mobility, 100% new zealand hydrolyzed beef bone collagen, unflavored 675g 3 jars",
+  "brand": "frezzor",
+  "source_subcategory": "collagen supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 23.80995,
+  "unit": "OZ",
+  "size": 3,
+  "primary_ingredient": "collagen peptides",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "collagen peptides",
+    "hydrolyzed beef bone collagen"
+  ],
+  "category": "ACTIVE NUTRITION",
+  "subcategory": "NON-SPECIFIC",
+  "health_focus": "BEAUTY",
+  "high_level_category": "NON-PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9204,
+      "completion": 5827,
+      "total": 15031
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen peptides"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hydrolyzed beef bone collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 2403.849658
+}

@@ -1,0 +1,58 @@
+{
+  "product_id": 10344,
+  "asin": "B0CRH43X9B",
+  "title": "(3 pack) prohealth keto acv gummies, pro health keto acv gummies, prohealth keto plus acv gummies, prohealth keto acv gummies advanced weight loss, prohealth acv gummies 750mg, prohealth (180 gummies)",
+  "brand": "titan labs",
+  "source_subcategory": "apple cider vinegar supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to HERBAL REMEDIES / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "primary_ingredient": "apple cider vinegar",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "apple cider vinegar"
+  ],
+  "category": "ACTIVE NUTRITION",
+  "subcategory": "WEIGHT MANAGEMENT",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "NON-PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9111,
+      "completion": 5412,
+      "total": 14523
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "apple cider vinegar"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cider Vinegar",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cider vinegar",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 12.317288299709466
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 79.589235
+}

@@ -1,0 +1,143 @@
+{
+  "product_id": 8106,
+  "asin": "B0BYV4BJL5",
+  "title": "powerful red vine leaf 15000mg with horse chestnut, beetroot, ginger - natural support for vein strength and heart health - made in the usa - 90 capsules (90 count (pack of 1))",
+  "brand": "aumeto",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "red vine leaf",
+      "position": 9,
+      "lookup_result": {
+        "ingredient": "Squaw Vine",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "Phrase 'red vine leaf' appears starting at character index 9 in the title ('powerful red vine leaf...'). Identified as a functional ingredient in the title."
+    },
+    {
+      "name": "horse chestnut",
+      "position": 36,
+      "lookup_result": {
+        "ingredient": "Horse Chestnut",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "Phrase 'horse chestnut' appears starting at character index 36 ('...with horse chestnut, ...'). Identified as a functional ingredient in the title."
+    },
+    {
+      "name": "beetroot",
+      "position": 52,
+      "lookup_result": {
+        "ingredient": "Beet Root",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "found": true
+      },
+      "reasoning": "Phrase 'beetroot' appears starting at character index 52 ('..., beetroot, ...'). Identified as a functional ingredient in the title."
+    },
+    {
+      "name": "ginger",
+      "position": 62,
+      "lookup_result": {
+        "ingredient": "Ginger",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "Phrase 'ginger' appears starting at character index 62 ('..., ginger - ...'). Identified as a functional ingredient in the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9358,
+      "completion": 4544,
+      "total": 13902
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "red vine leaf"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Squaw Vine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "squaw vine",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "horse chestnut"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Horse Chestnut",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "horse chestnut",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beetroot"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beetroot",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 57.088179
+}

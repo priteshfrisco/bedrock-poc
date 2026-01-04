@@ -1,0 +1,104 @@
+{
+  "product_id": 9316,
+  "asin": "B0CG8SQWXK",
+  "title": "(2 pack) hemp oil organic premium - 2,800,000 maximum strength - 100% natural hemp drops tincture - hemp oils with vegan, non-gmo, grown and made in usa",
+  "brand": "maxhemp",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp oil",
+      "position": 9,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Phrase 'hemp oil' appears starting at character index 9. lookup_ingredient('hemp oil') normalized to 'Hemp' with category/subcategory FATTY ACIDS / HEMP/CBD."
+    },
+    {
+      "name": "hemp",
+      "position": 78,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Phrase 'hemp' appears as part of '100% natural hemp drops tincture' starting at index 78. lookup_ingredient('hemp') normalized to 'Hemp' with category/subcategory FATTY ACIDS / HEMP/CBD."
+    },
+    {
+      "name": "hemp oils",
+      "position": 100,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Phrase 'hemp oils' appears later in the title starting at index 100. lookup_ingredient('hemp oils') normalized to 'Hemp' with category/subcategory FATTY ACIDS / HEMP/CBD."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9269,
+      "completion": 5441,
+      "total": 14710
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oils"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 117.493992
+}

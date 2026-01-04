@@ -1,0 +1,75 @@
+{
+  "product_id": 9639,
+  "asin": "B0CJ8CVZWC",
+  "title": "premium st. lucia sea moss gel: nature's ultimate multi-vitamin and skin superfood (16oz)",
+  "brand": "goodstuff",
+  "source_subcategory": "superfoods",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TOPICAL GELS & CREAMS",
+  "organic": "NOT ORGANIC",
+  "count": 16,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "multivitamin",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "sea moss",
+    "multivitamin"
+  ],
+  "category": "COMBINED MULTIVITAMINS",
+  "subcategory": "NON-SPECIFIC",
+  "health_focus": "OVERALL HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9160,
+      "completion": 5815,
+      "total": 14975
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sea moss"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Sea Buckthorn",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "sea buckthorn",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multivitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "alive once daily",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 81.226102
+}

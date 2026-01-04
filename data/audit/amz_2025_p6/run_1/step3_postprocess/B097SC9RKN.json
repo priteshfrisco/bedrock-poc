@@ -1,0 +1,58 @@
+{
+  "product_id": 5655,
+  "asin": "B097SC9RKN",
+  "title": "fgo organic wheatgrass powder, 8oz resealable pouch, 100% whole leaf,grown in usa, non gmo, packaging may vary (pack of 1)",
+  "brand": "fgo",
+  "source_subcategory": "superfoods",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 8,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "wheatgrass",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "wheatgrass"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9079,
+      "completion": 3602,
+      "total": 12681
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "wheatgrass"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Wheat Barley Grass",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "wheatgrass",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 45.061271
+}

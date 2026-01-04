@@ -1,0 +1,173 @@
+{
+  "product_id": 96,
+  "asin": "B0B4MBM3D6",
+  "title": "secrets of the tribe tribal cough ease alcohol-free extract, high-potency herbal drops, tincture made from lobelia, cinnamon, peppermint, ginger, elderberry, slippery elm. cough formula 2 oz",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "cough drops & lozenges",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "lobelia",
+      "position": 107,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'lobelia' in the phrase 'tincture made from lobelia,...' starting at character index 107. lookup_ingredient returned the shown category/subcategory."
+    },
+    {
+      "name": "cinnamon",
+      "position": 116,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'cinnamon' in the ingredient list starting at index 116. lookup_ingredient returned the shown category/subcategory."
+    },
+    {
+      "name": "peppermint",
+      "position": 126,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'peppermint' in the ingredient list starting at index 126. lookup_ingredient returned the shown category/subcategory (normalized as 'Pepper Spear Mint')."
+    },
+    {
+      "name": "ginger",
+      "position": 138,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'ginger' in the ingredient list starting at index 138. lookup_ingredient returned the shown category/subcategory."
+    },
+    {
+      "name": "elderberry",
+      "position": 146,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "Found 'elderberry' in the ingredient list starting at index 146. lookup_ingredient returned the shown category/subcategory."
+    },
+    {
+      "name": "slippery elm",
+      "position": 158,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'slippery elm' in the ingredient list starting at index 158. lookup_ingredient returned the shown category/subcategory (normalized as 'Slippery Elm Bark')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9501,
+      "completion": 5802,
+      "total": 15303
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lobelia"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lobelia",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lobelia",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cinnamon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cinnamon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "cinnamon",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "peppermint"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pepper Spear Mint",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "peppermint",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "slippery elm"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Slippery Elm Bark",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "slippery elm",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 86.611261
+}

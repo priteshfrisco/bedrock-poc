@@ -1,0 +1,14 @@
+{
+  "product_id": 3231,
+  "asin": "B07FZJPMWP",
+  "title": "365 by wfm sliced 1 year sharp cheddar",
+  "brand": "whole foods market",
+  "source_subcategory": "cheddar cheese",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.003616,
+  "lookup_action": "REMOVE"
+}

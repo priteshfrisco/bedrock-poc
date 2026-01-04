@@ -1,0 +1,212 @@
+{
+  "product_id": 9401,
+  "asin": "B0CGTDKYMW",
+  "title": "ryse element series loaded creatine  muscle building formula  3 forms of creatine + electrolytes, betaine anhydrous, & peak atp  30 servings (electric lemonade)",
+  "brand": "ryse up supplements",
+  "source_subcategory": "creatine amino acids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "creatine",
+      "position": 27,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PERFORMANCE NUTRITION",
+      "reasoning": "The word 'creatine' appears first at character index 27 ('...loaded creatine...'). lookup_ingredient returned: ingredient='Creatine', nw_category='ACTIVE NUTRITION', nw_subcategory='PERFORMANCE NUTRITION' (found: true). This is the primary functional ingredient by position."
+    },
+    {
+      "name": "creatine",
+      "position": 73,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PERFORMANCE NUTRITION",
+      "reasoning": "A second occurrence of 'creatine' appears at index 73 in '3 forms of creatine'. This is the same ingredient as above; lookup_ingredient matched 'Creatine' (same category/subcategory)."
+    },
+    {
+      "name": "electrolytes",
+      "position": 84,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The term 'electrolytes' appears starting at index 84 ('+ electrolytes,'). lookup_ingredient did not return a confident match (returned found:false with ambiguous/low-confidence candidates). Electrolytes is a general functional ingredient but the lookup tool returned no definitive nw_category/nw_subcategory, so category/subcategory set to UNKNOWN."
+    },
+    {
+      "name": "betaine anhydrous",
+      "position": 98,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'betaine anhydrous' begins at index 98 ('betaine anhydrous'). lookup_ingredient returned no exact match (found:false) and ambiguous candidates; tool suggested possible related 'betaine' entries at low confidence. Because the tool did not return a definitive nw_category/nw_subcategory, category/subcategory set to UNKNOWN here (ingredient recognized by title but lookup ambiguous)."
+    },
+    {
+      "name": "peak atp",
+      "position": 119,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'peak atp' begins at index 119 ('peak atp'). 'Peak ATP' is a branded ingredient (appears in the title). lookup_ingredient returned no confident match (found:false, ambiguous candidates). Therefore category/subcategory set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9884,
+      "completion": 6850,
+      "total": 16734
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "creatine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Creatine",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PERFORMANCE NUTRITION",
+          "keyword": "creatine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "betaine anhydrous"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hydrochloride",
+              "match_type": "fuzzy",
+              "score": 68.42105263157895,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hci",
+              "match_type": "fuzzy",
+              "score": 64.28571428571428,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Betaine H C L",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "betaine hcl",
+              "match_type": "fuzzy",
+              "score": 64.28571428571428,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "peak atp"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Yerba Mate",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "yerba mate",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pomegranate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "pomegranate",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pomegranate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "pomeguard",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 161.948109
+}

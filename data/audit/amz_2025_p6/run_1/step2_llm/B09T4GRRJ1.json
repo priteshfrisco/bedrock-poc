@@ -1,0 +1,88 @@
+{
+  "product_id": 6416,
+  "asin": "B09T4GRRJ1",
+  "title": "superfruitgummies-superfruitbiotinhairvitamingummyforhairskinandnailssuperfruitbiotinsupplementforwomenhairgrowth,strength&healthenrichedbeautyvitamins-60gummies",
+  "brand": "built by nature",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "biotin",
+      "position": 28,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Explicit substring 'biotin' found starting at index 28. lookup_ingredient returned Biotin \u2192 BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin",
+      "position": 38,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Substring 'vitamin' found starting at index 38 (part of 'vitamingummy'). A lookup_ingredient call for 'vitamin' returned a match to a letter vitamin category (tool returned 'Vitamin D' mapping to BASIC VITAMINS & MINERALS / LETTER VITAMINS). Title does not specify which specific vitamin(s), so generic 'vitamin' is recorded with the tool's category."
+    },
+    {
+      "name": "biotin",
+      "position": 79,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Second occurrence of 'biotin' starts at index 79 ('superfruitbiotinsupplement...'). Same lookup result as the first occurrence."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9198,
+      "completion": 6274,
+      "total": 15472
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 126.611529
+}

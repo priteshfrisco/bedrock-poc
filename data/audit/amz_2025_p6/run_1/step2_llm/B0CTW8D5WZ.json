@@ -1,0 +1,153 @@
+{
+  "product_id": 10536,
+  "asin": "B0CTW8D5WZ",
+  "title": "ultimate strength plant based omega 3 supplement, vegan omega 3 supplement, organic omega3 fatty acids epa & dha supplements from cold pressed algae oil, omega3 algae based supplements, 240 softgels",
+  "brand": "aquaomega",
+  "source_subcategory": "omega oils",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "ORGANIC",
+  "count": 240,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "omega 3",
+      "position": 30,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Phrase 'omega 3' (also appears as 'omega3') first occurs at character index 30. lookup_ingredient returned ingredient='Fish Oil', nw_category='FATTY ACIDS', nw_subcategory='FISH' for the matched keyword 'omega 3'."
+    },
+    {
+      "name": "epa",
+      "position": 103,
+      "category": "FATTY ACIDS",
+      "subcategory": "EPA",
+      "reasoning": "'epa' appears at index 103. The lookup_ingredient call returned no exact normalized match (ambiguous candidates). By domain knowledge EPA is an omega-3 long-chain fatty acid, so assigned category 'FATTY ACIDS' and subcategory 'EPA'. The title explicitly lists 'epa' so it is included as a functional ingredient."
+    },
+    {
+      "name": "dha",
+      "position": 109,
+      "category": "FATTY ACIDS",
+      "subcategory": "DHA",
+      "reasoning": "'dha' appears at index 109. lookup_ingredient returned ingredient='DHA', nw_category='FATTY ACIDS', nw_subcategory='DHA' (exact match)."
+    },
+    {
+      "name": "algae oil",
+      "position": 143,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The phrase 'algae oil' (part of 'cold pressed algae oil') starts at index 143 ('algae'). lookup_ingredient returned ingredient='Algae', nw_category='HERBAL REMEDIES', nw_subcategory='FOOD SUPPLEMENTS'. The title explicitly states the oil source is algae, so 'algae oil' is included."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9544,
+      "completion": 6576,
+      "total": 16120
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "epa"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ephedra",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ephedra",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dehydroepiandrosterone",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dhea",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "dha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "DHA",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "DHA",
+          "keyword": "dha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "algae oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Algae",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "algae",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.1655548375503155
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 108.768931
+}

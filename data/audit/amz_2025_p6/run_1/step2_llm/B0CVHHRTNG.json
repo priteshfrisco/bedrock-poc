@@ -1,0 +1,104 @@
+{
+  "product_id": 10576,
+  "asin": "B0CVHHRTNG",
+  "title": "earth fed muscle common ground vegan protein powder, plant based protein with himalayan pink salt & mct oil - soy free - gluten free - zero added sugar - keto (29.6 ounce, chocolate peanut butter)",
+  "brand": "earth fed muscle",
+  "source_subcategory": "plant powders",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "oz",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 37,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The word 'protein' appears as part of 'vegan protein' beginning at character index 37. lookup_ingredient returned normalized ingredient 'Soy Foods' with nw_category 'ACTIVE NUTRITION' and nw_subcategory 'PROTEIN & MEAL REPLACEMENTS'. (Note: title also contains 'plant based protein' later, but the first occurrence at index 37 is recorded here.)"
+    },
+    {
+      "name": "himalayan pink salt",
+      "position": 78,
+      "category": "HOMEOPATHICS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The phrase 'himalayan pink salt' starts at index 78 ('h' of himalayan). lookup_ingredient returned normalized ingredient 'Cell Salt' with nw_category 'HOMEOPATHICS' and nw_subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "mct oil",
+      "position": 100,
+      "category": "FATTY ACIDS",
+      "subcategory": "MCT",
+      "reasoning": "The phrase 'mct oil' begins at index 100. lookup_ingredient returned normalized ingredient 'MCT' with nw_category 'FATTY ACIDS' and nw_subcategory 'MCT'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9279,
+      "completion": 7591,
+      "total": 16870
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "himalayan pink salt"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cell Salt",
+          "nw_category": "HOMEOPATHICS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "cell salt",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mct oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MCT",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "MCT",
+          "keyword": "mct oil",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 123.067728
+}

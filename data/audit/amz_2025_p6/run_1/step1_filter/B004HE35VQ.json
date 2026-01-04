@@ -1,0 +1,14 @@
+{
+  "product_id": 611,
+  "asin": "B004HE35VQ",
+  "title": "avon pro sport refreshing body wash",
+  "brand": "avon",
+  "source_subcategory": "body washes & shower gels",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.036135,
+  "lookup_action": "REMOVE"
+}

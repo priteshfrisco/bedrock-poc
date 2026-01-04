@@ -1,0 +1,33 @@
+{
+  "product_id": 6915,
+  "asin": "B0B3NFR7J8",
+  "title": "peakrefuelre-energizingdrinkmixhydrationblendextendedenergyimprovedperformanceincreasedfocuspremiumflavorseasy-tearsingleservingstickspiacolada-10-pack",
+  "brand": "peak refuel",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DRINK",
+  "organic": "NOT ORGANIC",
+  "count": 10,
+  "unit": "COUNT",
+  "size": 10,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4600,
+      "completion": 2831,
+      "total": 7431
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 37.151276
+}

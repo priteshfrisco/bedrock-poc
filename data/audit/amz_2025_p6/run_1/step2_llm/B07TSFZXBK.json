@@ -1,0 +1,36 @@
+{
+  "product_id": 3849,
+  "asin": "B07TSFZXBK",
+  "title": "magnavox mhp4820m-bk gummy earbuds with microphone in black  available in pink, purple, white, black, & blue  earbuds gummy  extra value comfort stereo earbuds  durable rubberized cable",
+  "brand": "magnavox",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains no dietary functional ingredients; mentions 'gummy' as a descriptor for earbuds, not an ingredient. No ingredient lookups performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4606,
+      "completion": 1090,
+      "total": 5696
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.806545
+}

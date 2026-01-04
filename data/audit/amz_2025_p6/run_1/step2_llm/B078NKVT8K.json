@@ -1,0 +1,62 @@
+{
+  "product_id": 2830,
+  "asin": "B078NKVT8K",
+  "title": "oat grass powder (4 oz, zin: 520959) - 2 pack",
+  "brand": "terravita",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 4,
+  "unit": "OZ",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "oat grass",
+      "position": 0,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Oats",
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "FIBER PRODUCTS & LAXATIVES"
+      },
+      "reasoning": "'oat grass' appears at the start of the title (position 0). Lookup returned normalized ingredient 'Oats' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9049,
+      "completion": 3343,
+      "total": 12392
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "oat grass"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Oats",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "oat",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 42.407088
+}

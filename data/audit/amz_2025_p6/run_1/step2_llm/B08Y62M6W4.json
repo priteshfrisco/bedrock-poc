@@ -1,0 +1,36 @@
+{
+  "product_id": 5321,
+  "asin": "B08Y62M6W4",
+  "title": "unclebud\u00e2shemppainreliefgelfromarthritis,backache,muscle&jointpain",
+  "brand": "uncle bud's",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: product is a topical hemp pain relief gel; ingredient extraction for dietary-supplement classification is not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4586,
+      "completion": 1090,
+      "total": 5676
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.889927
+}

@@ -1,0 +1,92 @@
+{
+  "product_id": 7933,
+  "asin": "B0BTVS1PW4",
+  "title": "activated charcoal gummies sugar free, 400mg charcoal supplements from coconut, quicker to cleanse, detox, gas relief, gut & oral health for adults & kids, gluten free, non gmo, vegan, pectin, 120",
+  "brand": "tinies bers",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "activated charcoal",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "activated charcoal",
+    "coconut",
+    "pectin"
+  ],
+  "category": "PROBIOTICS+",
+  "subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "health_focus": "DIGESTIVE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9284,
+      "completion": 6166,
+      "total": 15450
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "activated charcoal"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Charcoal",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "charcoal",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coconut"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Coconut Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "COCONUT",
+          "keyword": "coconut oil",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pectin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pectin",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "pectin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.01032
+}

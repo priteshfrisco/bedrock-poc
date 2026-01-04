@@ -1,0 +1,150 @@
+{
+  "product_id": 7725,
+  "asin": "B0BN2HGMNP",
+  "title": "liquidbiotinkeratincollagenpeptides&vitamind3forhairgrowthmctoildrops210,000mcgpowerfulformulaforhairskinandnails,mostadvancedhairgrowthsupplementforwomen&men",
+  "brand": "new elements",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "biotin",
+      "position": 6,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found substring 'biotin' starting at character index 6 in the title. lookup_ingredient returned normalized 'biotin' mapped to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "keratin",
+      "position": 12,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found substring 'keratin' starting at character index 12. lookup_ingredient returned 'Keratin' mapped to MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC."
+    },
+    {
+      "name": "collagen peptides",
+      "position": 19,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found substring 'collagen' starting at index 19 (title contains 'collagenpeptides'). Interpreted as 'collagen peptides'. lookup_ingredient returned 'Collagen' mapped to ACTIVE NUTRITION / NON-SPECIFIC."
+    },
+    {
+      "name": "vitamin d3",
+      "position": 36,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found substring 'vitamind3' starting at index 36. Interpreted as 'vitamin d3'. lookup_ingredient returned 'Vitamin D' mapped to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "mct oil",
+      "position": 58,
+      "category": "FATTY ACIDS",
+      "subcategory": "MCT",
+      "reasoning": "Found substring 'mcto il' (as 'mcto il' concatenated) starting at index 58 ('mctoildrops...'), interpreted as 'mct oil'. lookup_ingredient returned 'MCT' mapped to FATTY ACIDS / MCT."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9460,
+      "completion": 6254,
+      "total": 15714
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "keratin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Keratin",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "keratin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen peptides"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin d3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mct oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "MCT",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "MCT",
+          "keyword": "mct oil",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.285625
+}

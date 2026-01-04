@@ -87,9 +87,27 @@ RESPONSE_SCHEMA = {
         "primary_ingredient": {
             "type": ["string", "null"],
             "description": "Name of the primary ingredient (first by position or multivitamin)"
+        },
+        "business_rules": {
+            "type": "object",
+            "properties": {
+                "initial_category": {"type": "string"},
+                "initial_subcategory": {"type": "string"},
+                "final_category": {"type": "string"},
+                "final_subcategory": {"type": "string"},
+                "primary_ingredient": {"type": "string"},
+                "has_changes": {"type": "boolean"},
+                "has_unknown": {"type": "boolean"},
+                "reasoning": {
+                    "type": ["string", "null"],
+                    "description": "Reasoning explaining changes - only if should_explain was true"
+                }
+            },
+            "required": ["final_category", "final_subcategory", "primary_ingredient"],
+            "additionalProperties": False
         }
     },
-    "required": ["age", "gender", "form", "organic", "count", "unit", "size", "ingredients", "primary_ingredient"],
+    "required": ["age", "gender", "form", "organic", "count", "unit", "size", "ingredients", "primary_ingredient", "business_rules"],
     "additionalProperties": False
 }
 

@@ -1,0 +1,66 @@
+{
+  "product_id": 4286,
+  "asin": "B084WNHC73",
+  "title": "betteryou b complete oral spray  vitamin b complex supplement  suitable for vegans  sugar & caffeine free  natural peach, plum & raspberry flavour')",
+  "brand": "betteryou",
+  "source_subcategory": "vitamin b-complex",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SPRAY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "vitamin b complex",
+      "position": 33,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "lookup": {
+        "ingredient": "Vitamin Bcomplex",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true,
+        "matched_keyword": "vitamin b complex",
+        "confidence": "exact"
+      },
+      "reasoning": "The title explicitly includes 'vitamin b complex' starting at character index 33. This is a functional ingredient."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9072,
+      "completion": 3982,
+      "total": 13054
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b complex"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin Bcomplex",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "vitamin b complex",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 47.707498
+}

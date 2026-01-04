@@ -1,0 +1,33 @@
+{
+  "product_id": 8528,
+  "asin": "B0C5X26MM6",
+  "title": "nature'sritesinusrelief\u00e2nasalspray,1.5oz(45ml)\u00e2all-naturalsinussupportforcongestion&irritation\u00e2promoteshealthysinusfunction\u00e2easy-to-use,portablespray\u00e2madeinusa",
+  "brand": "nature's rite",
+  "source_subcategory": "sinus medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4616,
+      "completion": 1061,
+      "total": 5677
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.12218
+}

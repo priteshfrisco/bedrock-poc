@@ -1,0 +1,75 @@
+{
+  "product_id": 6093,
+  "asin": "B09KQS9JKB",
+  "title": "nestle prenatal postpartum vitamin & mineral supplement 100 tablets (two pack)",
+  "brand": "materna",
+  "source_subcategory": "fertility & natal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "PRENATAL",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / PRENATAL",
+  "age": "AGE GROUP - PRENATAL",
+  "gender": "GENDER - FEMALE",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 2,
+  "primary_ingredient": "vitamin",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "vitamin",
+    "mineral"
+  ],
+  "category": "BASIC VITamins & MINERALS",
+  "subcategory": "LETTER VITAMINS",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9141,
+      "completion": 3548,
+      "total": 12689
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mineral"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.871833
+}

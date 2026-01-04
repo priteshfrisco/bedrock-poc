@@ -1,0 +1,14 @@
+{
+  "product_id": 9454,
+  "asin": "B0CH4VQVQZ",
+  "title": "monster pipeline punch can 500ml x 24",
+  "brand": "monster energy",
+  "source_subcategory": "energy drinks",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.008941,
+  "lookup_action": "REMOVE"
+}

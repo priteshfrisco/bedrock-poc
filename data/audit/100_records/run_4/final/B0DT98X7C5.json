@@ -1,0 +1,143 @@
+{
+  "product_id": 8,
+  "asin": "B0DT98X7C5",
+  "title": "gpgpgreenpeoplemelatonin5mgextrastrengthadultextrastrengthsupplement,sleepaidwithashwagandha,saffronltheanine,valerianroot,gaba-120sleepingcapsules",
+  "brand": "gpgp greenpeople",
+  "source_subcategory": "medicinal sleep aids",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / DHEA & PREGNENOLONE & HORMONES",
+  "age": "AGE GROUP - ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "melatonin",
+  "num_ingredients": 6,
+  "all_ingredients": [
+    "melatonin",
+    "ashwagandha",
+    "saffron",
+    "l-theanine",
+    "valerian root",
+    "gaba"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "DHEA & PREGNENOLONE & HORMONES",
+  "health_focus": "SLEEP",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9537,
+      "completion": 6109,
+      "total": 15646
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "melatonin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Melatonin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+          "keyword": "melatonin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ashwagandha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "ashwaganda",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ashwagandha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "saffron"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saffron",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "saffron",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-theanine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Theanine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "l-theanine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "valerian root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Valerian",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "valarian",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gaba"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "GABA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "gaba",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 81.950919
+}

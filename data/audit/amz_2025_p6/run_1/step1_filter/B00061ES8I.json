@@ -1,0 +1,14 @@
+{
+  "product_id": 94,
+  "asin": "B00061ES8I",
+  "title": "schweppes tonic water, 1 liter bottle",
+  "brand": "schweppes",
+  "source_subcategory": "cocktail mixers & additives",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.005879,
+  "lookup_action": "REMOVE"
+}

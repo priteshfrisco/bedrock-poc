@@ -1,0 +1,130 @@
+{
+  "product_id": 3082,
+  "asin": "B07CZ2D4JP",
+  "title": "prescribed for life ginger root powder 5% gingerol  natural ginger root extract powder  natural ginger powder for digestive health and immune support  gluten free, vegan, non gmo (2 kg / 4.4 lb)",
+  "brand": "prescribed for life",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "kg",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "ginger root",
+        "position": 20,
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD",
+        "reasoning": "Phrase 'ginger root powder' begins at character index 20; extracted as functional ingredient and looked up."
+      },
+      {
+        "name": "gingerol",
+        "position": 42,
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD",
+        "reasoning": "The term 'gingerol' appears at index 42 and was extracted as a functional ingredient and looked up."
+      },
+      {
+        "name": "ginger root extract",
+        "position": 60,
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD",
+        "reasoning": "The phrase 'ginger root extract powder' contains 'ginger root extract' starting at index 60; extracted and looked up."
+      },
+      {
+        "name": "ginger powder",
+        "position": 96,
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD",
+        "reasoning": "The phrase 'natural ginger powder' contains 'ginger powder' starting at index 96; extracted and looked up."
+      }
+    ],
+    "reasoning": "All ingredient mentions are ginger-related (ginger root, gingerol, ginger root extract, ginger powder). Each was looked up via lookup_ingredient(); tool returned normalized mapping to Ginger with nw_category='FATTY ACIDS' and nw_subcategory='HEMP/CBD' for each match."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9368,
+      "completion": 6861,
+      "total": 16229
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gingerol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger root extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger powder"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 74.441036
+}

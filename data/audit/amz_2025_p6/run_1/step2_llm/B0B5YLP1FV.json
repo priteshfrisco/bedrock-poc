@@ -1,0 +1,130 @@
+{
+  "product_id": 7055,
+  "asin": "B0B5YLP1FV",
+  "title": "humann superbeets black cherry powder & tart cherry gummies",
+  "brand": "humann",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beet",
+      "position": 12,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Detected from 'superbeets' (substring 'beet' starts at index 12). lookup_ingredient('beet') returned no exact high-confidence match but suggested 'Beet Root' as the best candidate (category: HERBAL REMEDIES, subcategory: FOOD SUPPLEMENTS). I selected Beet/Beet Root as the functional ingredient based on the product name 'superbeets'. Confidence: low-to-medium (tool returned candidates; LLM chose 'Beet Root')."
+    },
+    {
+      "name": "black cherry",
+      "position": 18,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Exact phrase 'black cherry' begins at index 18. lookup_ingredient('black cherry') returned a match labeled 'Blackberry' (category: FATTY ACIDS, subcategory: HEMP/CBD) with medium confidence from the tool. Although 'black cherry' is semantically a cherry variant, the tool returned 'Blackberry' as the matched record; per instructions, returned category/subcategory are taken from the tool result. Confidence: medium; note possible mismatch between phrase and tool normalization."
+    },
+    {
+      "name": "tart cherry",
+      "position": 40,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Phrase 'tart cherry' begins at index 40. lookup_ingredient('tart cherry') returned 'Cherry' with category HERBAL REMEDIES and subcategory FOOD SUPPLEMENTS (match via cherry/extract). Confidence: medium."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9380,
+      "completion": 5688,
+      "total": 15068
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Boneset",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "boneset",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black cherry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Blackberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black berry",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 86
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "tart cherry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cherry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "cherry extract",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.613956342756415
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 92.393099
+}

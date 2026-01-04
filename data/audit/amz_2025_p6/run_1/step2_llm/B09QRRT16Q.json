@@ -1,0 +1,84 @@
+{
+  "product_id": 6289,
+  "asin": "B09QRRT16Q",
+  "title": "gf biotic - 17 billion cfu - 60 capsules",
+  "brand": "gluten-free remedies",
+  "source_subcategory": "probiotics",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+  "remap_reason": "Maps to PREBIOTICS & PROBIOTICS / PREBIOTICS & PROBIOTICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "probiotic",
+      "position": 3,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "reasoning": "The title contains 'biotic' immediately after 'gf'. Combined with '17 billion cfu' (CFU = colony forming units) this indicates a probiotic product. lookup_ingredient was called for the term present ('biotic'); the lookup returned candidate mapping to 'Probiotic' (category PROBIOTICS+, subcategory PREBIOTICS AND PROBIOTICS)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9202,
+      "completion": 3738,
+      "total": 12940
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotic"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "biotin",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "biotin",
+              "match_type": "fuzzy",
+              "score": 83.33333333333334,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "billion",
+              "match_type": "fuzzy",
+              "score": 80.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "cfu",
+              "match_type": "fuzzy",
+              "score": 80.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.29246
+}

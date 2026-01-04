@@ -1,0 +1,104 @@
+{
+  "product_id": 5525,
+  "asin": "B094KX1S5S",
+  "title": "pureclean protein 25g organic grass fed beef bone broth protein from swedish cattle - paleo, keto-friendly, gluten-free, sugar-free, dairy-free - enhanced with collagen peptides - (4 bags unflavored)",
+  "brand": "pureclean performance",
+  "source_subcategory": "collagen supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "ORGANIC",
+  "count": "4",
+  "unit": "COUNT",
+  "size": 4,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 10,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "The word 'protein' appears at character index 10 in 'pureclean protein...'. lookup_ingredient returned category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'."
+    },
+    {
+      "name": "beef bone broth protein",
+      "position": 40,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The phrase 'beef bone broth protein' begins at the word 'beef' (character index 40). lookup_ingredient called for 'beef bone broth protein' returned category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    },
+    {
+      "name": "collagen peptides",
+      "position": 160,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "The phrase 'collagen peptides' appears starting at character index 160 ('collagen' at 160). lookup_ingredient returned category 'ACTIVE NUTRITION' and subcategory 'NON-SPECIFIC' for 'collagen peptides'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9291,
+      "completion": 8468,
+      "total": 17759
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beef bone broth protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Liver Extract",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beef liver",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen peptides"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 100.424929
+}

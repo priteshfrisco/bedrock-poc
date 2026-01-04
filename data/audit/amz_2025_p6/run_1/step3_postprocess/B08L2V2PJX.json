@@ -1,0 +1,75 @@
+{
+  "product_id": 4893,
+  "asin": "B08L2V2PJX",
+  "title": "herbes du monde - rosehip cy+ organic 250g - rich in vitamin c, immune boost & organic antioxidant, digestive support, energy, ab certified - 1 sachet",
+  "brand": "herbes du monde",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "PACKET",
+  "organic": "ORGANIC",
+  "count": 8.8185,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "rosehip",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "rosehip",
+    "vitamin c"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "IMMUNE HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9178,
+      "completion": 6243,
+      "total": 15421
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rosehip"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Rose Hips",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "rosehip",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 84.178504
+}

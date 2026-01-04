@@ -1,0 +1,133 @@
+{
+  "product_id": 7723,
+  "asin": "B0BN1JRF25",
+  "title": "probiotics for women and men, 300 billion cfu 24 strains probiotics + 15 organic herbs prebiotics blend, shelf stable gut health supplement for digestive immune & whole-body health, 6 month supply",
+  "brand": "dmeisy",
+  "source_subcategory": "probiotics",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+  "remap_reason": "Maps to PREBIOTICS & PROBIOTICS / PREBIOTICS & PROBIOTICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "probiotics",
+      "position": 0,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "lookup_found": true,
+      "lookup_reasoning": "Exact match for 'probiotics' returned by lookup_ingredient -> ingredient normalized to 'Probiotic', category 'PROBIOTICS+', subcategory 'PREBIOTICS AND PROBIOTICS'."
+    },
+    {
+      "name": "prebiotics",
+      "position": 87,
+      "category": "PROBIOTICS+",
+      "subcategory": "PREBIOTICS AND PROBIOTICS",
+      "lookup_found": true,
+      "lookup_reasoning": "Exact match for 'prebiotics' returned by lookup_ingredient and mapped to the same category/subcategory as probiotics."
+    },
+    {
+      "name": "organic herbs",
+      "position": 73,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_found": false,
+      "lookup_reasoning": "Lookup did not return an exact normalized match for the generic phrase 'organic herbs'. The lookup returned low-confidence candidate mappings (e.g., generic herbal/ayurvedic categories) but no clear exact match, so category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9462,
+      "completion": 6572,
+      "total": 16034
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "probiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "prebiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "prebiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "organic herbs"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ayurvedic Herb",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ayurvedic herbal supplement",
+              "match_type": "fuzzy",
+              "score": 59.25925925925925,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ayurvedic Herb",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FORMULAS",
+              "keyword": "ayurvedic herbs - other",
+              "match_type": "fuzzy",
+              "score": 59.25925925925925,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ornithine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "ornithine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 70.483391
+}

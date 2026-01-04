@@ -1,0 +1,60 @@
+{
+  "product_id": 9921,
+  "asin": "B0CLBS4JBD",
+  "title": "armracolostrumpremiumpowder,grassfed,guthealthbloatingimmunityskin&hair,contains400+bioactivenutrients,potentbioavailable,keto,gluten&fatfree(unflavored120servings)",
+  "brand": "armra",
+  "source_subcategory": "glandular extracts",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "colostrum",
+      "position": 5,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "lookup_found": true,
+      "lookup_normalized": "Colostrum",
+      "reasoning": "The string 'colostrum' appears in the title starting at character index 5 (title begins 'armracolostrumpremium...'). lookup_ingredient returned category/subcategory accordingly."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9108,
+      "completion": 3073,
+      "total": 12181
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "colostrum"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Colostrum",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "colostrum",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 43.392733
+}

@@ -1,0 +1,170 @@
+{
+  "product_id": 3903,
+  "asin": "B07VWSG2C5",
+  "title": "aspen naturals organic beetroot powder - nitric oxide supplement for enhanced performance, from pure red beets, add to workout shakes & smoothies-30 day supply",
+  "brand": "aspennaturals\u00e3\u00e2",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": "30",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beetroot",
+      "position": 23,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Beet Root",
+        "category": "HERBAL REMEDIES",
+        "subcategory": "FOOD SUPPLEMENTS"
+      },
+      "reasoning": "The title contains 'beetroot powder' starting at character index 23. lookup_ingredient returned 'Beet Root' in HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    },
+    {
+      "name": "nitric oxide",
+      "position": 41,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "category": null,
+        "subcategory": null,
+        "notes": "lookup_ingredient did not return a direct match for 'nitric oxide'."
+      },
+      "reasoning": "The phrase 'nitric oxide supplement' appears starting at character index 41. 'Nitric oxide' is a functional claim (vasodilator/physiological effect) but was not found as a normalized ingredient in the lookup tool."
+    },
+    {
+      "name": "red beets",
+      "position": 101,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "category": null,
+        "subcategory": null,
+        "notes": "lookup_ingredient did not return a direct match for 'red beets' (duplicate concept of beetroot)."
+      },
+      "reasoning": "The title contains 'red beets' starting at character index 101 ('from pure red beets'). This is essentially the same raw ingredient as 'beetroot' but appears separately in the title; the lookup did not return a direct normalized match for the exact phrase 'red beets' in this call."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9611,
+      "completion": 6158,
+      "total": 15769
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beetroot"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beetroot",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric oxide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B6",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "pyridoxine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "red beets"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "elder berries",
+              "match_type": "fuzzy",
+              "score": 63.63636363636363,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Red Root",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "red root",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Eye Health",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "areds",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 88.131915
+}

@@ -1,0 +1,127 @@
+{
+  "product_id": 648,
+  "asin": "B004YBOZDE",
+  "title": "elete citrilyte electrolyte add-in hydration drops  sodium, magnesium, potassium & trace minerals  slight lemon flavor, all natural  leg and muscle cramp relief  transform any drink into a sports drink, 8.3oz",
+  "brand": "elete",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "oz",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "sodium",
+      "position": 52,
+      "category": "OTC",
+      "subcategory": "OTC - NON-SPECIFIC",
+      "reasoning": "The title explicitly lists 'sodium' (starts at character index 52). lookup_ingredient returned normalized 'Saline' with category 'OTC' and subcategory 'OTC - NON-SPECIFIC'."
+    },
+    {
+      "name": "magnesium",
+      "position": 60,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The title explicitly lists 'magnesium' (starts at index 60). lookup_ingredient returned category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "potassium",
+      "position": 71,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The title explicitly lists 'potassium' (starts at index 71). lookup_ingredient returned category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    },
+    {
+      "name": "trace minerals",
+      "position": 83,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The title explicitly lists 'trace minerals' (the word 'trace' starts at index 83). lookup_ingredient returned category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9368,
+      "completion": 4047,
+      "total": 13415
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sodium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saline",
+          "nw_category": "OTC",
+          "nw_subcategory": "OTC - NON-SPECIFIC",
+          "keyword": "sodium chloride",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "potassium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Potassium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "potassium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "trace minerals"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "minerals and trace",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.569243
+}

@@ -1,0 +1,14 @@
+{
+  "product_id": 10586,
+  "asin": "B0CVSDK8WK",
+  "title": "collar",
+  "brand": "topsum",
+  "source_subcategory": "pet relaxants",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.011144,
+  "lookup_action": "REMOVE"
+}

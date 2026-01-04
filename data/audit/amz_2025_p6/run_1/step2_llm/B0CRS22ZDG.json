@@ -1,0 +1,202 @@
+{
+  "product_id": 10363,
+  "asin": "B0CRS22ZDG",
+  "title": "liquid collagen biotin (2pk) and fadogia tongkat ali (1pk) supplement bundle - potent vitamins for hair, skin, nails, heart, energy, & testosterone support - non-gmo, vegan",
+  "brand": "primemd",
+  "source_subcategory": "collagen supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": "2 (biotin) and 1 (fadogia tongkat ali) \u2014 bundle",
+  "ingredients": [
+    {
+      "name": "collagen",
+      "position": 7,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'collagen' at character index 7 ('liquid collagen ...'). lookup_ingredient returned: ingredient='Collagen', nw_category='ACTIVE NUTRITION', nw_subcategory='NON-SPECIFIC'."
+    },
+    {
+      "name": "biotin",
+      "position": 16,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'biotin' at character index 16 ('...collagen biotin (2pk)...'). lookup_ingredient returned: ingredient='biotin', nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='LETTER VITAMINS'."
+    },
+    {
+      "name": "fadogia",
+      "position": 33,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "TRADITIONAL HERBS",
+      "reasoning": "Found 'fadogia' at character index 33 ('...and fadogia tongkat ali...'). lookup_ingredient returned no exact match (found=false) and low-confidence candidates. 'Fadogia' is an herbal ingredient (Fadogia agrestis); assigned category 'HERBAL REMEDIES' and subcategory 'TRADITIONAL HERBS' based on common botanical classification and the ambiguous lookup result."
+    },
+    {
+      "name": "tongkat ali",
+      "position": 41,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "TRADITIONAL HERBS",
+      "reasoning": "Found 'tongkat ali' starting at character index 41 ('tongkat ali (1pk)'). lookup_ingredient returned no exact match (found=false) with low-confidence fuzzy candidates. Tongkat ali (Eurycoma longifolia) is a known herbal supplement used for testosterone support; assigned category 'HERBAL REMEDIES' and subcategory 'TRADITIONAL HERBS' consistent with its herbal classification."
+    },
+    {
+      "name": "vitamins",
+      "position": 86,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "Found 'vitamins' at character index 86 in the phrase 'potent vitamins for hair...'. lookup_ingredient returned 'Multivitamin' mapping to nw_category='COMBINED MULTIVITAMINS', nw_subcategory='COMBINED MULTIVITAMINS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9779,
+      "completion": 7576,
+      "total": 17355
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fadogia"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Angelica",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "angelica",
+              "match_type": "fuzzy",
+              "score": 53.333333333333336,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Andrographis",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "andrographis",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Algae",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "algae",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "tongkat ali"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Dong Quai",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "dong quai",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Oat Bran",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "oat bran",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bone Meal",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "bone meal",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 125.051431
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 9824,
+  "asin": "B0CKMKF4N8",
+  "title": "(3 pack) wellness peak gummies - official formula - wellness peak advanced strength gummies, 25mg per gummy 1500mg per bottle, great taste new 2023 formula big size wellnesspeak cbs cdc (180 gummies)",
+  "brand": "vitaking",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4609,
+      "completion": 1730,
+      "total": 6339
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 22.740104
+}

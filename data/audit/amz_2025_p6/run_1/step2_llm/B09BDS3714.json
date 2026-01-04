@@ -1,0 +1,130 @@
+{
+  "product_id": 5783,
+  "asin": "B09BDS3714",
+  "title": "maxx herb calcium akg, pure calcium alpha - ketoglutarate powder (ca-akg), for energy, mental focus, & dna structure, non-gmo & gluten free - 3 jars -100 grams each (201 servings) - save 15%",
+  "brand": "maxx herb",
+  "source_subcategory": "calcium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 201,
+  "unit": "COUNT",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "calcium akg",
+      "position": 10,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "lookup_reasoning": "The phrase 'calcium akg' begins at character index 10. lookup_ingredient('calcium akg') returned ingredient 'Calcium' with category 'BASIC VITAMINS & MINERALS' and subcategory 'MINERALS'. This matches the calcium component of the product name."
+    },
+    {
+      "name": "calcium alpha - ketoglutarate",
+      "position": 28,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "lookup_reasoning": "The second occurrence 'calcium alpha - ketoglutarate' starts at index 28. lookup_ingredient('calcium alpha-ketoglutarate') (query variant) returned a match mapped to 'OKG' with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS' (tool matched alpha-ketoglutarate/OKG variant). The title explicitly names this salt form of calcium."
+    },
+    {
+      "name": "ca-akg",
+      "position": 66,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_reasoning": "The abbreviation '(ca-akg)' appears starting at index 66. lookup_ingredient('ca-akg') did not return a single confident match (tool returned no exact found; provided low-confidence candidates). Therefore category/subcategory cannot be determined reliably from the lookup for this abbreviation; it is documented here as an occurrence of the same calcium alpha-ketoglutarate entity but the tool did not return a definitive mapping."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9504,
+      "completion": 6567,
+      "total": 16071
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium akg"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Calcium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "calcium",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.409833504706679
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "calcium alpha-ketoglutarate"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "OKG",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "ornithine alpha ketoglutarate",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.242603173270265
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ca-akg"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "BCAA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "bcaa",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "BCAA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "branched chain amino acids",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin A D K",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "a-d-k",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 6283.587082
+}

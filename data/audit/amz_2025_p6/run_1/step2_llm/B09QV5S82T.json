@@ -1,0 +1,174 @@
+{
+  "product_id": 6292,
+  "asin": "B09QV5S82T",
+  "title": "ucan hydrate lemon lime jar & pineapple jar bundle - great for running, training, fitness, cycling, crossfit & more  sugar-free, vegan, & keto friendly energy supplement",
+  "brand": "ucan",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "lemon",
+      "position": 13,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Lemon Balm",
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The word 'lemon' appears in the title starting at character index 13. lookup_ingredient returned a match 'Lemon Balm' (found: true) with the category/subcategory shown. Although 'lemon' as a flavor would normally map to a citrus/food category, the tool returned 'Lemon Balm' and its category/subcategory are reported exactly from the tool."
+    },
+    {
+      "name": "lime",
+      "position": 19,
+      "lookup_result": {
+        "found": false,
+        "chosen_candidate": {
+          "ingredient": "Orange Peel",
+          "category": "HERBAL REMEDIES",
+          "subcategory": "FOOD SUPPLEMENTS"
+        },
+        "note": "tool returned multiple low-confidence candidates; LLM selected the closest citrus-related candidate"
+      },
+      "reasoning": "The word 'lime' appears at index 19. lookup_ingredient returned no definite match and provided candidates (best candidate 'Orange Peel'). Because the tool did not return a clear found:true mapping, I selected the most semantically relevant candidate (orange/ citrus peel) from the tool's suggestions and reported its category/subcategory with a note about low confidence."
+    },
+    {
+      "name": "pineapple",
+      "position": 30,
+      "lookup_result": {
+        "found": false,
+        "chosen_candidate": {
+          "ingredient": "Pine Bark",
+          "category": "HERBAL REMEDIES",
+          "subcategory": "POLYPHENOLS"
+        },
+        "note": "tool returned multiple low-confidence candidates; LLM selected the closest available candidate from results"
+      },
+      "reasoning": "The word 'pineapple' appears at index 30. lookup_ingredient did not return a clear match and suggested several low-confidence candidates (e.g., 'Pine Bark'). I selected the most relevant candidate provided by the tool and reported its category/subcategory, noting the low confidence and that this is an LLM selection based on the tool output."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9599,
+      "completion": 6067,
+      "total": 15666
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lemon Balm",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lemon balm",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lime"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Orange Peel",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "limonene",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Multivitamin",
+              "nw_category": "COMBINED MULTIVITAMINS",
+              "nw_subcategory": "COMBINED MULTIVITAMINS",
+              "keyword": "alive!",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Linden",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "linden",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pineapple"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Epinephrine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "epinephrine",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pine Bark",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "pine bark",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pine Bark",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "pycnogenol",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 94.777939
+}

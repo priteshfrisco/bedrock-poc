@@ -1,0 +1,120 @@
+{
+  "product_id": 3576,
+  "asin": "B07NKLCLG5",
+  "title": "healthy care super greens 600g",
+  "brand": "healthy care",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 21.1644,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "super greens",
+      "position": 13,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Red Raspberry",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "raspberry ketones",
+            "match_type": "fuzzy",
+            "score": 55.172413793103445,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Whole Food Concentrate",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "superfoods",
+            "match_type": "fuzzy",
+            "score": 54.54545454545454,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Vitamin Eester",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "keyword": "ester e",
+            "match_type": "fuzzy",
+            "score": 52.63157894736843,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no definitive match for the phrase 'super greens'; multiple fuzzy candidates related to whole-food/superfood concepts were returned."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title string 'super greens' appears to be the functional ingredient/product name starting at character index 13. The lookup_ingredient call did not return a definitive match (found=false), so category and subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9198,
+      "completion": 4013,
+      "total": 13211
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "super greens"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Red Raspberry",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "raspberry ketones",
+              "match_type": "fuzzy",
+              "score": 55.172413793103445,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "superfoods",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin Eester",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "ester e",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 46.357201
+}

@@ -1,0 +1,107 @@
+{
+  "product_id": 2709,
+  "asin": "B076JT1CH6",
+  "title": "extra strength panax ginseng root 10:1 extract (30% ginsenosides) - 450 mg (100 capsules, zin: 514413) - 2 pack",
+  "brand": "terravita",
+  "source_subcategory": "ginseng herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "panax ginseng root",
+      "position": 15,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'panax ginseng root' starts at character index 15. lookup_ingredient returned normalized ingredient 'Ginseng' with nw_category 'FATTY ACIDS' and nw_subcategory 'HEMP/CBD' (tool result used as-is)."
+    },
+    {
+      "name": "ginsenosides",
+      "position": 52,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The term 'ginsenosides' (in '(30% ginsenosides)') starts at character index 52. lookup_ingredient did not return a confident match for 'ginsenosides' (tool returned no confirmed mapping and suggested unrelated candidates); therefore category/subcategory set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9382,
+      "completion": 4743,
+      "total": 14125
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "panax ginseng root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginseng",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginseng",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.613956342756415
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginsenosides"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Sennoside",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "sennosides",
+              "match_type": "fuzzy",
+              "score": 81.81818181818181,
+              "confidence": "medium"
+            },
+            {
+              "ingredient": "Sennoside",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "perdiem sennosides",
+              "match_type": "fuzzy",
+              "score": 76.19047619047619,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Sennoside",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "sennoside",
+              "match_type": "fuzzy",
+              "score": 76.19047619047619,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 61.940703
+}

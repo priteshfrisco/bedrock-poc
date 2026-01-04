@@ -1,0 +1,209 @@
+{
+  "product_id": 6853,
+  "asin": "B0B2HBLK3D",
+  "title": "bala turmeric enzyme electrolyte powder packets, post workout muscle recovery drink, sugar free keto hydration mix for gut health, pineapple, 10 pack with 34 oz premium water bottle",
+  "brand": "bala",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 10,
+  "unit": "COUNT",
+  "size": 10,
+  "ingredients": [
+    {
+      "name": "turmeric",
+      "position": 5,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_found": true,
+      "lookup_reasoning": "lookup_ingredient returned an exact match: ingredient 'Turmeric' with nw_category='FATTY ACIDS' and nw_subcategory='HEMP/CBD' (tool output used as-is)."
+    },
+    {
+      "name": "enzyme",
+      "position": 14,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "COENZYME Q10",
+      "lookup_found": false,
+      "lookup_reasoning": "lookup_ingredient did not return an exact match for the generic term 'enzyme' and returned low-confidence candidates; the top candidate returned by the tool was 'Co Q10' (nw_category='BASIC VITAMINS & MINERALS', nw_subcategory='COENZYME Q10'). Those category/subcategory values are assigned here per the tool's top candidate but flagged as low-confidence/ambiguous."
+    },
+    {
+      "name": "electrolyte",
+      "position": 21,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "lookup_found": false,
+      "lookup_reasoning": "lookup_ingredient did not return an exact match for 'electrolyte'; the tool's top candidate was 'Beet Root' (nw_category='HERBAL REMEDIES', nw_subcategory='FOOD SUPPLEMENTS'). Assigned those values per the tool's top candidate, but this is a low-confidence/ambiguous mapping (tool output used as-is)."
+    },
+    {
+      "name": "pineapple",
+      "position": 131,
+      "category": "OTC",
+      "subcategory": "OTC - NON-SPECIFIC",
+      "lookup_found": false,
+      "lookup_reasoning": "lookup_ingredient did not return an exact match for 'pineapple' and returned low-confidence candidates; the top candidate returned was 'Epinephrine' (nw_category='OTC', nw_subcategory='OTC - NON-SPECIFIC'). This mapping is likely a poor semantic match but is included per the tool's returned top candidate (low confidence)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9867,
+      "completion": 8331,
+      "total": 18198
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "enzyme"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Co Q10",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "co enzyme q10",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Co Q10",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "co-enzyme q10",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Co Q10",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "COENZYME Q10",
+              "keyword": "co-enzyme q 10",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pineapple"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Epinephrine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "epinephrine",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pine Bark",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "pine bark",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pine Bark",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "pycnogenol",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 113.347839
+}

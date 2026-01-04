@@ -1,0 +1,42 @@
+{
+  "product_id": 6445,
+  "asin": "B09TS1R7V7",
+  "title": "q2i vanes predator-x-precision performance archery accessories with tri-fusion vane adhesion technology for arrow fletching and arrow fletching vanes, ideal for archery enthusiasts (blue)",
+  "brand": "q2i",
+  "source_subcategory": "antacids",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4603,
+      "completion": 953,
+      "total": 5556
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 17.092266
+}

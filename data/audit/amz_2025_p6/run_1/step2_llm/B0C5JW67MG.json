@@ -1,0 +1,133 @@
+{
+  "product_id": 8494,
+  "asin": "B0C5JW67MG",
+  "title": "carlyle l-methylfolate drops 1mg  2 fl oz  with organic glycerin  liquid sublingual supplement  fruit punch flavor  vegetarian, non-gmo",
+  "brand": "carlyle",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "ORGANIC",
+  "count": "2",
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "l-methylfolate",
+      "position": 8,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'l-methylfolate' starting at character index 8. lookup_ingredient returned fuzzy match candidate 'Folic Acid' with category BASIC VITAMINS & MINERALS / LETTER VITAMINS (low confidence). L-methylfolate is the active form of folate; mapping to LETTER VITAMINS is the best match from the lookup results."
+    },
+    {
+      "name": "glycerin",
+      "position": 56,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Found 'glycerin' starting at character index 56. lookup_ingredient did not find an exact match and returned top fuzzy candidate 'Glycine' (BASIC VITAMINS & MINERALS / AMINO ACIDS) with low confidence. The tool did not return a definitive category for 'glycerin'; the listed category/subcategory reflect the lookup's top candidate but confidence is low and may not accurately represent 'glycerin' (which is not an amino acid)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9528,
+      "completion": 5161,
+      "total": 14689
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-methylfolate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "folate",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Menthol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "mentho-lyptus",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Menthol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "menthol",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "glycerin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Glycine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "glycine",
+              "match_type": "fuzzy",
+              "score": 80.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Celadrin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "celadrin",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Lycopene",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "lycopene",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.403996
+}

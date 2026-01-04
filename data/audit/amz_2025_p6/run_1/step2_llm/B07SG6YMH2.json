@@ -1,0 +1,89 @@
+{
+  "product_id": 3763,
+  "asin": "B07SG6YMH2",
+  "title": "fruit punch flavor amino acid complex for women to build lean strong muscles - proglow lean gains (30 servings)",
+  "brand": "yaco",
+  "source_subcategory": "pre-workout nitric oxide boosters",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "amino acid complex",
+      "position": 19,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reasoning": "Called lookup_ingredient('amino acid complex'). The tool did not return a definitive match (found: false) and provided low-confidence candidate suggestions (e.g., B-complex variants) that are not appropriate matches for 'amino acid complex'."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The title explicitly contains the phrase 'amino acid complex' starting at character index 19. This is the functional ingredient phrase present in the title. The ingredient lookup did not return a confident category/subcategory match, so category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9243,
+      "completion": 4023,
+      "total": 13266
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "amino acid complex"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin Bcomplex",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "vitamin b complex",
+              "match_type": "fuzzy",
+              "score": 74.28571428571429,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vandyl Sulfate",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "vanadyl complex",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin Bcomplex",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "b complex",
+              "match_type": "fuzzy",
+              "score": 70.58823529411764,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.534485
+}

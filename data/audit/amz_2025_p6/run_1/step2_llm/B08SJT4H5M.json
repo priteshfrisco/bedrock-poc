@@ -1,0 +1,160 @@
+{
+  "product_id": 5158,
+  "asin": "B08SJT4H5M",
+  "title": "premier research labs premier ph minerals - trace minerals, trace mineral drops, minerals for water, magnesium supplement for distilled water, reverse osmosis water, liquid concentrate - 2 fl oz",
+  "brand": "premier research",
+  "source_subcategory": "trace minerals",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "minerals",
+      "position": 33,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The word 'minerals' appears early in the product name ('premier ph minerals') starting at character index 33. lookup_ingredient returned ambiguous candidates pointing to Trace Minerals; resolved to BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "trace minerals",
+      "position": 44,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The phrase 'trace minerals' appears starting at index 44. lookup_ingredient returned 'Trace Minerals' \u2192 BASIC VITAMINS & MINERALS / MINERALS (exact match)."
+    },
+    {
+      "name": "trace mineral drops",
+      "position": 60,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The phrase 'trace mineral drops' begins at index 60. lookup_ingredient returned 'Trace Minerals' \u2192 BASIC VITAMINS & MINERALS / MINERALS (high-confidence match)."
+    },
+    {
+      "name": "minerals",
+      "position": 81,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The phrase 'minerals for water' appears (the word 'minerals' at index 81). Treated as the same functional ingredient class; lookup suggested Trace Minerals (resolved to BASIC VITAMINS & MINERALS / MINERALS)."
+    },
+    {
+      "name": "magnesium",
+      "position": 101,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The term 'magnesium' appears at index 101 ('magnesium supplement ...'). lookup_ingredient returned 'Magnesium' \u2192 BASIC VITAMINS & MINERALS / MINERALS (exact match)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9530,
+      "completion": 6725,
+      "total": 16255
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "trace minerals"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "minerals and trace",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "trace mineral drops"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.659930753304817
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "minerals"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "minerals and trace",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace mineral",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace minerals",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "magnesium"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Magnesium",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "magnesium",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 85.351015
+}

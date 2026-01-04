@@ -1,0 +1,36 @@
+{
+  "product_id": 7619,
+  "asin": "B0BKQTV4PZ",
+  "title": "8oz complete crested gecko food diet. premium mix, ready to use freshly made powder. unique formula, developed & made in the usa. enjoy! (tropical + insects protein)",
+  "brand": "gargeer",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title refers to crested gecko food (tropical + insects protein). Ingredient lookup and classification are skipped because the product is animal feed, not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4601,
+      "completion": 1280,
+      "total": 5881
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.681378
+}

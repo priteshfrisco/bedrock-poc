@@ -1,0 +1,14 @@
+{
+  "product_id": 5,
+  "asin": "000000000470026251",
+  "title": "complementary medicine for dummies",
+  "brand": "wiley",
+  "source_subcategory": "acupressure & acupuncture supplies",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.018579,
+  "lookup_action": "REMOVE"
+}

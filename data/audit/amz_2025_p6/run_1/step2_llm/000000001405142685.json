@@ -1,0 +1,36 @@
+{
+  "product_id": 18,
+  "asin": "000000001405142685",
+  "title": "evidence-based paediatric oncology",
+  "brand": "wiley-blackwell",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains no functional supplement ingredients; it's a medical/educational title ('paediatric oncology')."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4569,
+      "completion": 1070,
+      "total": 5639
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 24.198625
+}

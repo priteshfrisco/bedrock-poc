@@ -1,0 +1,33 @@
+{
+  "product_id": 1097,
+  "asin": "B00DV3WYIO",
+  "title": "motion sickness anti-nausea bracelets-adjustable acupressure bracelet-great for vertigo and stress-set of 2 (sm 6.5)",
+  "brand": "acupressure bracelets",
+  "source_subcategory": "motion sickness & nausea",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4594,
+      "completion": 715,
+      "total": 5309
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 10.567325
+}

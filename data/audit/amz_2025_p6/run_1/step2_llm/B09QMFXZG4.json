@@ -1,0 +1,150 @@
+{
+  "product_id": 6283,
+  "asin": "B09QMFXZG4",
+  "title": "quercetin gummies - quercetin with bromelain, vitamin c, zinc & elderberry 2000mg extra strength immune system booster, lung support supplement for adults kids - 60 quercetin gummies (2 pack)",
+  "brand": "gpgp greenpeople",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 0,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "The term 'quercetin' appears at the very start of the title ('quercetin gummies ...'). lookup_ingredient returned Normalized ingredient 'Quercetin' with category HERBAL REMEDIES and subcategory POLYPHENOLS."
+    },
+    {
+      "name": "bromelain",
+      "position": 35,
+      "category": "PROBIOTICS+",
+      "subcategory": "DIGESTIVE AIDS & ENZYMES",
+      "reasoning": "The title contains 'bromelain' after 'quercetin with' ('...quercetin with bromelain, ...'). lookup_ingredient returned 'bromelain' mapped to PROBIOTICS+ / DIGESTIVE AIDS & ENZYMES."
+    },
+    {
+      "name": "vitamin c",
+      "position": 46,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The phrase 'vitamin c' appears in the title ('...bromelain, vitamin c, zinc...') starting at index 46. lookup_ingredient was called for 'vitamin c' and returned a mapping (tool returned 'Vitamin D' as the normalized ingredient with category BASIC VITAMINS & MINERALS / LETTER VITAMINS). I am including the tool output as returned, although the tool's normalized name appears to be a mismatch; the title clearly contains 'vitamin c'."
+    },
+    {
+      "name": "zinc",
+      "position": 57,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "reasoning": "The title contains 'zinc' ('...vitamin c, zinc & elderberry...') starting at index 57. lookup_ingredient returned 'Zinc' mapped to BASIC VITAMINS & MINERALS / MINERALS."
+    },
+    {
+      "name": "elderberry",
+      "position": 64,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "The title contains 'elderberry' ('...zinc & elderberry 2000mg...') starting at index 64. lookup_ingredient returned 'Elderberry' with category HERBAL REMEDIES and subcategory SINGLES."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9445,
+      "completion": 6063,
+      "total": 15508
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bromelain"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "bromelain",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+          "keyword": "bromelain",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 95.559937
+}

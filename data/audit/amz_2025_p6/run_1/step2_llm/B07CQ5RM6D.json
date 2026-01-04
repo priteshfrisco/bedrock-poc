@@ -1,0 +1,36 @@
+{
+  "product_id": 3044,
+  "asin": "B07CQ5RM6D",
+  "title": "tribodyn synthetic 75w90 gear oil with limited slip differential additive (1 quart, 75w-90)",
+  "brand": "tribodyn",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title lists automotive product components (gear oil, limited slip differential additive) not functional supplement ingredients. No dietary ingredients to lookup."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4587,
+      "completion": 951,
+      "total": 5538
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 11.906327
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 7264,
+  "asin": "B0BB4TSCLQ",
+  "title": "pacifichealth endurox r4 4.56 lb and accelerade 4.11 lb bundle, workout recovery, hydration drink (fruit punch bundle)",
+  "brand": "accelerade",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "lb",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4595,
+      "completion": 2534,
+      "total": 7129
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 30.430299
+}

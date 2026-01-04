@@ -1,0 +1,78 @@
+{
+  "product_id": 9208,
+  "asin": "B0CFH683RW",
+  "title": "vhc nac supplement (n-acetyl cysteine) 1200mg plus quercetin, optimum dose (1200mg + 100mg), 2 in 1 dual action formula n-acetyl-l-cysteine with quercetin, for respiratory, liver, immune, made in usa",
+  "brand": "vhc",
+  "source_subcategory": "flavonoid supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "primary_ingredient": "nac",
+  "num_ingredients": 5,
+  "all_ingredients": [
+    "nac",
+    "n-acetyl cysteine",
+    "quercetin",
+    "n-acetyl-l-cysteine",
+    "quercetin"
+  ],
+  "category": "BASIC VITAMINS & MINERALS",
+  "subcategory": "AMINO ACIDS",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9241,
+      "completion": 6560,
+      "total": 15801
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "n-acetyl cysteine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NAC",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "n-acetylcysteine",
+          "match_type": "fuzzy",
+          "confidence": "high",
+          "score": 96
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 140.788953
+}

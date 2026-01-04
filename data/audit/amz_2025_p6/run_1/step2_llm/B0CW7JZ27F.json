@@ -1,0 +1,65 @@
+{
+  "product_id": 10623,
+  "asin": "B0CW7JZ27F",
+  "title": "true nutrition egg white protein powder - low carb, paleo, keto, carnivore, lactose-free, gluten-free - french vanilla - 2lb",
+  "brand": "true nutrition",
+  "source_subcategory": "protein powder blends",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 32.0,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "egg white protein",
+      "position": 15,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "lookup_result": {
+        "ingredient": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+        "found": true,
+        "notes": "Lookup returned normalized ingredient 'Soy Foods' with category/subcategory. Title ingredient detected as 'egg white protein'."
+      },
+      "reasoning": "The phrase 'egg white protein' appears starting at character index 15 ('true nutrition ' = 0-14, then 'egg...'). This is the functional ingredient (protein source) in the title. Lookup was called for this ingredient and returned the tool results above."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9072,
+      "completion": 3414,
+      "total": 12486
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "egg white protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 50.5118
+}

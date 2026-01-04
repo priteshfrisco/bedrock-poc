@@ -1,0 +1,14 @@
+{
+  "product_id": 7201,
+  "asin": "B0B8PCNQ6Z",
+  "title": "2 set of 6 pack - vitamin water energy - tropical citrus, 20 fl oz bottle",
+  "brand": "vitamin water",
+  "source_subcategory": "energy drinks",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.003735,
+  "lookup_action": "REMOVE"
+}

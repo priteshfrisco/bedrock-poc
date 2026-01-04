@@ -1,0 +1,33 @@
+{
+  "product_id": 1035,
+  "asin": "B00BT33KSG",
+  "title": "sqwincher qwik stick .11 ounce powder concentrate sticks fruit punch lite electrolyte drink - yields 20 ounces (50 each per package)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4590,
+      "completion": 1009,
+      "total": 5599
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.900441
+}

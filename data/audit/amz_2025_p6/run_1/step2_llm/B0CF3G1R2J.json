@@ -1,0 +1,216 @@
+{
+  "product_id": 9154,
+  "asin": "B0CF3G1R2J",
+  "title": "snap supplements hair, skin and nails vitamins, support hair growth, nourish skin and nails with biotin, collagen, kelp, bamboo and other vitamins, radiant skin, strong hair and nails, 60 capsules",
+  "brand": "snap supplements",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "vitamins",
+      "position": 38,
+      "lookup_result": {
+        "ingredient": "Multivitamin",
+        "nw_category": "COMBINED MULTIVITAMINS",
+        "nw_subcategory": "COMBINED MULTIVITAMINS",
+        "found": true
+      },
+      "reasoning": "The word 'vitamins' appears at character position 38 ('hair, skin and nails vitamins'). Lookup returned normalized 'Multivitamin' (COMBINED MULTIVITAMINS). Treated as a multivitamin-style ingredient in the title."
+    },
+    {
+      "name": "biotin",
+      "position": 97,
+      "lookup_result": {
+        "ingredient": "biotin",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "The word 'biotin' appears at position 97 ('...with biotin, collagen...'). Lookup returned biotin in BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "collagen",
+      "position": 105,
+      "lookup_result": {
+        "ingredient": "Collagen",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "NON-SPECIFIC",
+        "found": true
+      },
+      "reasoning": "The word 'collagen' appears at position 105 ('collagen, kelp...'). Lookup returned Collagen (ACTIVE NUTRITION)."
+    },
+    {
+      "name": "kelp",
+      "position": 114,
+      "lookup_result": {
+        "ingredient": "Kelp",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "found": true
+      },
+      "reasoning": "The word 'kelp' appears at position 114 ('kelp, bamboo...'). Lookup returned Kelp (HERBAL REMEDIES / FOOD SUPPLEMENTS)."
+    },
+    {
+      "name": "bamboo",
+      "position": 120,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "nw_category": null,
+        "nw_subcategory": null,
+        "found": false,
+        "candidates": [
+          {
+            "ingredient": "Elderberry",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "match_note": "fuzzy candidate (low confidence)"
+          },
+          {
+            "ingredient": "Boldo",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "match_note": "fuzzy candidate (low confidence)"
+          },
+          {
+            "ingredient": "Boron",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "MINERALS",
+            "match_note": "fuzzy candidate (low confidence)"
+          }
+        ]
+      },
+      "reasoning": "The word 'bamboo' appears at position 120 ('bamboo and other vitamins'). The lookup tool did not return a confident match (found:false) and returned low-confidence candidate suggestions. Category/subcategory are unknown from the lookup."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9610,
+      "completion": 6040,
+      "total": 15650
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "kelp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Kelp",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "kelp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bamboo"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "sambucol",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Boldo",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "boldo",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Boron",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "boron",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 104.113466
+}

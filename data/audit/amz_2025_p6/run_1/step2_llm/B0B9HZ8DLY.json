@@ -1,0 +1,65 @@
+{
+  "product_id": 7243,
+  "asin": "B0B9HZ8DLY",
+  "title": "bulksupplements.com grapefruit seed capsules - herbal supplements, grapefruit seed supplements - vegan, 2 capsules per serving (500mg), 360 count (pack of 1)",
+  "brand": "bulksupplements",
+  "source_subcategory": "grape seed extract herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "POLYPHENOLS",
+  "remap_reason": "Maps to HERBAL REMEDIES / POLYPHENOLS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 360,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "grapefruit seed",
+      "position": 20,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "Found 'grapefruit seed' starting at character index 20 in the title. lookup_ingredient returned category 'HERBAL REMEDIES' and subcategory 'SINGLES'."
+    },
+    {
+      "name": "grapefruit seed",
+      "position": 67,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "Second occurrence of 'grapefruit seed' starts at character index 67. Same lookup result as above."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9076,
+      "completion": 4179,
+      "total": 13255
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "grapefruit seed"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Grape Fruit Seed",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "grapefruit seed",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 49.695488
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 7620,
+  "asin": "B0BKQVR33T",
+  "title": "gargeer 8oz complete crested gecko food diet. premium ingredients mix, ready to use freshly made powder. unique superfood formula, developed & made in the usa. enjoy!",
+  "brand": "gargeer",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title refers to pet food ('complete crested gecko food', 'premium ingredients mix') rather than listing human supplement functional ingredients; ingredient lookup not performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4601,
+      "completion": 1046,
+      "total": 5647
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.249005
+}

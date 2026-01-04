@@ -1,0 +1,14 @@
+{
+  "product_id": 56,
+  "asin": "B00000020Q",
+  "title": "deep dark ocean",
+  "brand": "north star",
+  "source_subcategory": "aromatherapy & essential oils",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.001662,
+  "lookup_action": "REMOVE"
+}

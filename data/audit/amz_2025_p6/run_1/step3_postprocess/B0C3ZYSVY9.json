@@ -1,0 +1,39 @@
+{
+  "product_id": 8385,
+  "asin": "B0C3ZYSVY9",
+  "title": "organic stevia powder a sweetness from nature with zero calories & zero sugar (1 oz./622 servings)",
+  "brand": "plnt",
+  "source_subcategory": "stevia sugar substitutes",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4583,
+      "completion": 805,
+      "total": 5388
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 10.670164
+}

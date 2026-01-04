@@ -1,0 +1,85 @@
+{
+  "product_id": 195,
+  "asin": "B000R3W6KM",
+  "title": "sprayology acne tonic  homeopathic acne oral spray  natural acne relief for clearer skin  homeopathic medicine for acne  witch hazel, stinging nettle, & bloodroot  30 day supply (1.38 fl oz)",
+  "brand": "sprayology",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title explicitly says 'homeopathic medicine' and 'oral spray', product treated as medicine not dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9282,
+      "completion": 4009,
+      "total": 13291
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "witch hazel"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Witch Hazel",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "witch hazel",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "stinging nettle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Nettles",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "nettle",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bloodroot"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bloodroot",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "blood root",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 70.787042
+}

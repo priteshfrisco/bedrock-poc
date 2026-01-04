@@ -1,0 +1,127 @@
+{
+  "product_id": 9386,
+  "asin": "B0CGQ6NXQM",
+  "title": "liquid collagen supplements for women - comprehensive formula hair skin nails supplement with 10000mcg collagen 5000 mcg biotin 5000 mcg keratin 5000 mcg saw palmetto, made in usa, 2fl oz",
+  "brand": "sirunes",
+  "source_subcategory": "collagen supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "collagen",
+      "position": 7,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'collagen' in the title at character index 7 ('liquid collagen...'). lookup_ingredient returned category/subcategory."
+    },
+    {
+      "name": "biotin",
+      "position": 121,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'biotin' in the title at index 121 (after '5000 mcg'). lookup_ingredient returned category/subcategory."
+    },
+    {
+      "name": "keratin",
+      "position": 137,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'keratin' in the title at index 137 (after '5000 mcg'). lookup_ingredient returned category/subcategory."
+    },
+    {
+      "name": "saw palmetto",
+      "position": 154,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'saw palmetto' starting at index 154. lookup_ingredient returned category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9372,
+      "completion": 5306,
+      "total": 14678
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "keratin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Keratin",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "keratin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "saw palmetto"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Saw Palmetto",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "saw palmetto",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 93.265759
+}

@@ -1,0 +1,42 @@
+{
+  "product_id": 3551,
+  "asin": "B07N2YT9QN",
+  "title": "down to earth organic garden lime calcium carbonate, 5lb",
+  "brand": "down to earth all natural fertilizers",
+  "source_subcategory": "calcium supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4575,
+      "completion": 1048,
+      "total": 5623
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.54456
+}

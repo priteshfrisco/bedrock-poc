@@ -1,0 +1,130 @@
+{
+  "product_id": 6175,
+  "asin": "B09N46DVY1",
+  "title": "alovitox organic beet juice powder 100% pure, fresh & usda beet juice extract powder  nitric oxide superfood  vegan, non - gmo & gluten-free  support energised and effective workout session (8 oz)",
+  "brand": "alovitox",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 8,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beet juice powder",
+      "position": 17,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Phrase 'beet juice powder' starts at character index 17. lookup_ingredient returned normalized ingredient 'Beet Root' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS' (found: true)."
+    },
+    {
+      "name": "beet juice extract powder",
+      "position": 59,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Phrase 'beet juice extract powder' starts at character index 59. lookup_ingredient returned normalized ingredient 'Beet Root' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS' (found: true)."
+    },
+    {
+      "name": "nitric oxide",
+      "position": 86,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Phrase 'nitric oxide' starts at character index 86. lookup_ingredient did not return a definitive match for 'nitric oxide' (found: false); candidate suggestions were low-confidence and not a clear match, so category/subcategory set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9485,
+      "completion": 5642,
+      "total": 15127
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet juice powder"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet powder",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.198455465545914
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet juice extract powder"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet powder",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.198455465545914
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric oxide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B6",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "pyridoxine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 87.077314
+}

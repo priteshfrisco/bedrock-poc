@@ -1,0 +1,39 @@
+{
+  "product_id": 64,
+  "asin": "B0FBMFX7TK",
+  "title": "theraflu severe congestion relief nasal mist, 0.34 fl oz",
+  "brand": "theraflu",
+  "source_subcategory": "sinus medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4578,
+      "completion": 735,
+      "total": 5313
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 11.501008
+}

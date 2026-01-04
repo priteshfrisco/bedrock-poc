@@ -1,0 +1,89 @@
+{
+  "product_id": 97,
+  "asin": "B0FC4GYHK5",
+  "title": "vittaburnliquiddrops\u00e3\u0082naturalenergy&wellnessbooster,premiumherbalformula",
+  "brand": "vivalis",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "herbal",
+      "position": 59,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result_summary": {
+        "called_lookup_with": "herbal",
+        "lookup_found": false,
+        "note": "lookup_ingredient returned no confident match (generic term). Candidates returned were low-confidence fuzzy matches; no specific herb or botanical named in title."
+      },
+      "reasoning": "The title contains only the generic descriptor 'herbal' (in 'premiumherbalformula') and no specific herb/botanical or named active ingredient. 'Herbal' is recorded as a placeholder ingredient because no specific functional ingredients are named."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9248,
+      "completion": 5051,
+      "total": 14299
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ephedra",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ephedra",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dehydroepiandrosterone",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "DHEA",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+              "keyword": "dhea",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 68.255386
+}

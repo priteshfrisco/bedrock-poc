@@ -1,0 +1,125 @@
+{
+  "product_id": 5540,
+  "asin": "B094WCG5L7",
+  "title": "humann superbeets heart chews & superbeets black cherry",
+  "brand": "humann",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFT CHEW",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beet",
+      "position": 12,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "note": "lookup_ingredient returned no exact match for 'beet' and provided candidates. Best candidate: 'Beet Root' (category: HERBAL REMEDIES, subcategory: FOOD SUPPLEMENTS) with low confidence.",
+        "candidate_used": {
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "confidence": "low"
+        }
+      },
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "The product name 'superbeets' contains the functional ingredient 'beet' (appears as substring inside the product name). The character index where 'b' of the first 'superbeets' begins is 12; the beet substring begins at that same index within the word. lookup_ingredient() did not return an exact match but suggested 'Beet Root' as the best candidate (low confidence); therefore category/subcategory assigned from that candidate."
+    },
+    {
+      "name": "black cherry",
+      "position": 43,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Blackberry",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "note": "lookup_ingredient returned a match 'Blackberry' for the query 'black cherry' (medium confidence). This mapping may be imperfect (flavor vs botanical), but returned tool results are reported."
+      },
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'black cherry' appears at character index 43 and likely denotes flavoring/ingredient present in the product name ('superbeets black cherry'). lookup_ingredient() returned a match mapped to 'Blackberry' (category FATTY ACIDS / subcategory HEMP/CBD). The tool result is included despite apparent mismatch; reported category/subcategory reflect the tool output."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9296,
+      "completion": 5156,
+      "total": 14452
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Boneset",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "boneset",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black cherry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Blackberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "black berry",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 86
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 66.396156
+}

@@ -1,0 +1,192 @@
+{
+  "product_id": 8529,
+  "asin": "B0C5XDP6C9",
+  "title": "nutrija quercetin 100mg capsules - standardized to 95%  highly purified & bioavailable supplement  natural bio-flavonoids & powerful anti-oxidants (60 capsules)",
+  "brand": "nutrija",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 8,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Quercetin",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS"
+      },
+      "reasoning": "Exact match: the word 'quercetin' appears starting at character index 8 in the title ('nutrija quercetin ...'). lookup_ingredient returned Quercetin \u2192 HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "bio-flavonoids",
+      "position": 107,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "candidates": [
+          {
+            "ingredient": "Isoflavones",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "score": 75.0
+          },
+          {
+            "ingredient": "Bioflavonoid Complex",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "score": 72.73
+          }
+        ]
+      },
+      "reasoning": "The phrase 'natural bio-flavonoids' appears starting at character index 107. lookup_ingredient did not return an exact match for 'bioflavonoids' (found=false) and provided low-confidence candidates (e.g., Isoflavones, Bioflavonoid Complex). Because there was no exact tool match, category/subcategory set as unknown in the lookup_result and candidates are provided."
+    },
+    {
+      "name": "antioxidants",
+      "position": 133,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "candidates": [
+          {
+            "ingredient": "Astaxanthin",
+            "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+            "nw_subcategory": "NON-SPECIFIC",
+            "score": 52.17
+          },
+          {
+            "ingredient": "Nattokinase",
+            "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+            "nw_subcategory": "NON-SPECIFIC",
+            "score": 52.17
+          }
+        ]
+      },
+      "reasoning": "The term 'anti-oxidants' (normalized to 'antioxidants') begins at index 133 ('powerful anti-oxidants'). lookup_ingredient did not return an exact match for the general term 'antioxidants' and provided low-confidence candidate matches. Category/subcategory are unknown from an exact lookup."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9625,
+      "completion": 5411,
+      "total": 15036
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioflavonoids"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavone",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavones",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bioflavonoid Complex",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bioflavonoid complex",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "antioxidants"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Gentian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "gentian",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Astaxanthin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "astaxanthin",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto kinase",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 60.075616
+}

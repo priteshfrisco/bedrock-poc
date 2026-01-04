@@ -1,0 +1,14 @@
+{
+  "product_id": 123,
+  "asin": "B000CFZI0A",
+  "title": "pneumatic vibrator, 80 lb, 19, 000vpm, 60psi",
+  "brand": "vibco",
+  "source_subcategory": "sex toys",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.00514,
+  "lookup_action": "REMOVE"
+}

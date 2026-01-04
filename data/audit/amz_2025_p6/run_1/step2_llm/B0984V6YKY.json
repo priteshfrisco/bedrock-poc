@@ -1,0 +1,116 @@
+{
+  "product_id": 5671,
+  "asin": "B0984V6YKY",
+  "title": "beet root + coq10 gummies nitric oxide booster for healthy energy & circulation support with pomegranate extract  circulation supplements for heart health  mixed berry flavor 60 vegan gummies",
+  "brand": "havasu nutrition",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "beet root",
+      "position": 0,
+      "lookup_result": {
+        "ingredient": "Beet Root",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS"
+      },
+      "reasoning": "The phrase 'beet root' appears at the start of the title (character index 0). Lookup returned normalized ingredient 'Beet Root' with category/subcategory as shown."
+    },
+    {
+      "name": "coq10",
+      "position": 12,
+      "lookup_result": {
+        "ingredient": "Co Q10",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "COENZYME Q10"
+      },
+      "reasoning": "The token 'coq10' appears after 'beet root +' starting at character index 12. Lookup returned normalized 'Co Q10' in the CoQ10 subcategory."
+    },
+    {
+      "name": "pomegranate extract",
+      "position": 93,
+      "lookup_result": {
+        "ingredient": "Pomegranate",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS"
+      },
+      "reasoning": "The phrase 'pomegranate extract' appears later in the title starting at character index 93. Lookup returned normalized 'Pomegranate' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9266,
+      "completion": 4997,
+      "total": 14263
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coq10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "coq10",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pomegranate extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pomegranate",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "pomegranate",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 81.756175
+}

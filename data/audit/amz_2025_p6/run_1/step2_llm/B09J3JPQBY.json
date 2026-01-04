@@ -1,0 +1,33 @@
+{
+  "product_id": 6007,
+  "asin": "B09J3JPQBY",
+  "title": "timberline vita-bugs medium mealworms, count of 1000, 1000 ct",
+  "brand": "timberline",
+  "source_subcategory": "multivitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4583,
+      "completion": 723,
+      "total": 5306
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 12.618901
+}

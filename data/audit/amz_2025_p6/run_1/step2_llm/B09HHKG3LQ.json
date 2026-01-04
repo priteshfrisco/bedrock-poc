@@ -1,0 +1,104 @@
+{
+  "product_id": 5982,
+  "asin": "B09HHKG3LQ",
+  "title": "maac10 nadh supplement 20mg each 60 capsules for energy, fatigue, mental focus & nad+ longevity support  pharmaceutical grade 99% pure nadh",
+  "brand": "maac10",
+  "source_subcategory": "vitamin b3 (niacin)",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nadh",
+      "position": 7,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'nadh' starting at character index 7. lookup_ingredient('nadh') returned ingredient 'NADH' \u2192 category MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC."
+    },
+    {
+      "name": "nad+",
+      "position": 81,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'nad+' starting at character index 81. lookup_ingredient('nad+') matched to 'NADH' (fuzzy) \u2192 category MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC. The title uses 'nad+' in context of support; included as an ingredient mention."
+    },
+    {
+      "name": "nadh",
+      "position": 135,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found another occurrence of 'nadh' starting at character index 135. lookup_ingredient('nadh') returned 'NADH' \u2192 category MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9257,
+      "completion": 4951,
+      "total": 14208
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nadh"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nad+"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nadh"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 80.233163
+}

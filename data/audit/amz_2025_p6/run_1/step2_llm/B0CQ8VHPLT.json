@@ -1,0 +1,311 @@
+{
+  "product_id": 10253,
+  "asin": "B0CQ8VHPLT",
+  "title": "falcon performance vegan protein powder, 31g protein, 5g creatine, 5g bcaa, probiotics, electrolytes, pre workout, low carb, sugar free & dairy free, plant based chocolate protein -47 servings",
+  "brand": "birdman",
+  "source_subcategory": "protein powder blends",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 47,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "vegan protein",
+      "position": 19,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+        "raw_tool_note": "Matched via BM25 to 'soy protein' (medium confidence)"
+      },
+      "reasoning": "Phrase 'vegan protein' appears at character index 19. Treated as a functional protein ingredient; lookup returned 'Soy Foods' in PROTEIN & MEAL REPLACEMENTS."
+    },
+    {
+      "name": "protein",
+      "position": 45,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+        "raw_tool_note": "Matched via BM25 to 'soy protein' (medium confidence)"
+      },
+      "reasoning": "The word 'protein' appears again at index 45 ('31g protein'). It's an additional mention of protein; lookup returned same PROTEIN category."
+    },
+    {
+      "name": "creatine",
+      "position": 57,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Creatine",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PERFORMANCE NUTRITION",
+        "raw_tool_note": "Exact match"
+      },
+      "reasoning": "'creatine' appears at index 57 preceded by '5g'. Lookup returned Creatine in PERFORMANCE NUTRITION."
+    },
+    {
+      "name": "bcaa",
+      "position": 70,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "BCAA",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "AMINO ACIDS",
+        "raw_tool_note": "Exact match"
+      },
+      "reasoning": "'bcaa' appears at index 70 (as '5g bcaa'). Lookup returned BCAA in AMINO ACIDS."
+    },
+    {
+      "name": "probiotics",
+      "position": 76,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Probiotic",
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+        "raw_tool_note": "Exact match"
+      },
+      "reasoning": "'probiotics' appears at index 76. Lookup returned Probiotic in PREBIOTICS AND PROBIOTICS."
+    },
+    {
+      "name": "electrolytes",
+      "position": 88,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "raw_tool_note": "Lookup did not return a clear match for 'electrolytes'; candidates returned by tool were unrelated (low confidence)."
+      },
+      "reasoning": "'electrolytes' appears at index 88. The lookup call did not produce a definitive category/subcategory (tool returned low-confidence candidates), so category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "pre workout",
+      "position": 102,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "raw_tool_note": "Lookup did not return a clear match for 'pre workout'; tool returned low-confidence candidates."
+      },
+      "reasoning": "'pre workout' appears at index 102. Treated as a functional phrase in the title but lookup did not return a definitive match; category/subcategory set to UNKNOWN."
+    },
+    {
+      "name": "plant based chocolate protein",
+      "position": 150,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Plant Sterols",
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "NON-SPECIFIC",
+        "raw_tool_note": "Matched by tool to 'Plant Sterols' (medium confidence) -- likely the tool's best-fit result for the phrase"
+      },
+      "reasoning": "Phrase 'plant based chocolate protein' starts at index 150. The lookup returned 'Plant Sterols' (MISCELLANEOUS) as the best tool match; included as the tool result even though mapping seems indirect."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 10053,
+      "completion": 7457,
+      "total": 17510
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vegan protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "creatine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Creatine",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PERFORMANCE NUTRITION",
+          "keyword": "creatine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bcaa"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "bcaa",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "probiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pre workout"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Red Root",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "red root",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Poke",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "poke root",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Senna",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+              "keyword": "senokot",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "plant based chocolate protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Plant Sterols",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "plant sterols",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 97.695459
+}

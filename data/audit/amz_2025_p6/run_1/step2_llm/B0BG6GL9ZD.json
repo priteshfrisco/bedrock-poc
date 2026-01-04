@@ -1,0 +1,81 @@
+{
+  "product_id": 7457,
+  "asin": "B0BG6GL9ZD",
+  "title": "revive md fiber supplement for digestive & gut health - 5g of dietary fiber supports a healthy digestive system with psyllium husk & more - 30 servings, chocolate",
+  "brand": "revive",
+  "source_subcategory": "dietary fibers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+  "remap_reason": "Maps to FIBER PRODUCTS & LAXATIVES / FIBER PRODUCTS & LAXATIVES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "fiber",
+      "position": 10,
+      "category": "PROBIOTICS+",
+      "subcategory": "FIBER PRODUCTS & LAXATIVES",
+      "reasoning": "The word 'fiber' appears in the title starting at character index 10 ('revive md fiber ...'). Lookup for 'fiber' returned a match (normalized 'Acacia Fiber') in PROBIOTICS+, FIBER PRODUCTS & LAXATIVES."
+    },
+    {
+      "name": "psyllium husk",
+      "position": 117,
+      "category": "PROBIOTICS+",
+      "subcategory": "FIBER PRODUCTS & LAXATIVES",
+      "reasoning": "The phrase 'psyllium husk' appears starting at character index 117 ('...with psyllium husk & more...'). Lookup for 'psyllium husk' returned 'Psyllium' in PROBIOTICS+, FIBER PRODUCTS & LAXATIVES."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9197,
+      "completion": 5774,
+      "total": 14971
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "psyllium husk"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Psyllium",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "psyllium",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 93.872764
+}

@@ -1,0 +1,14 @@
+{
+  "product_id": 10114,
+  "asin": "B0CN7J3GWF",
+  "title": "yoplait protein yogurt cultured dairy snack cup, peach flavored, gluten free protein snacks, 5.6 oz",
+  "brand": "yoplait",
+  "source_subcategory": "yogurt",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.002792,
+  "lookup_action": "REMOVE"
+}

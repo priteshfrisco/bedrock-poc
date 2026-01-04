@@ -1,0 +1,58 @@
+{
+  "product_id": 2884,
+  "asin": "B079C6223C",
+  "title": "americannutriceuticals\u00e2s.o.d.support\u00e2190capsules\u00e2supportnaturalproductionofsuperoxidedismutase\u00e2destroysfreeradicals&supportsintracellulardetoxification",
+  "brand": "american nutriceuticals",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 190,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "superoxide dismutase",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "superoxide dismutase"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "CLEANSE & DETOX",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9102,
+      "completion": 4535,
+      "total": 13637
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "superoxide dismutase"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Super Oxide Dismutase",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "superoxide dismutase",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 60.908745
+}

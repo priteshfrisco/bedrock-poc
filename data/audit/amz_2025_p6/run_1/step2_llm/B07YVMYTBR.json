@@ -1,0 +1,66 @@
+{
+  "product_id": 4035,
+  "asin": "B07YVMYTBR",
+  "title": "secrets of the tribe - tribal cough-ease, cough formula, herbal supplement blend (120 capsules)",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "herbal supplement blend",
+        "position": 57,
+        "lookup_result": {
+          "found": true,
+          "ingredient": "Ayurvedic Herb",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "raw_tool_note": "lookup_ingredient(ingredient_name=\"herbal supplement blend\") returned a match mapped to 'Ayurvedic Herb' with NW category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+        },
+        "reasoning": "The title does not list specific herbs; the phrase 'herbal supplement blend' is the only functional ingredient-like phrase. It begins at character index 57 in the title. lookup_ingredient was called for this phrase and returned the above mapping."
+      }
+    ],
+    "reasoning": "No other discrete ingredient names (e.g., specific herbs like echinacea, licorice, or ingredient names such as menthol) appear in the title. Functional descriptors 'cough-ease' and 'cough formula' are product/function names, not ingredient names."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9055,
+      "completion": 4772,
+      "total": 13827
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal supplement blend"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ayurvedic Herb",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ayurvedic herbal supplement",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 9.489352188599828
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.829434
+}

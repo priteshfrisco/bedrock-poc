@@ -1,0 +1,176 @@
+{
+  "product_id": 8854,
+  "asin": "B0CB8ZJN1F",
+  "title": "alteya organics beauty omega 3,6,7 and 9 with rose otto extracts, supports beautiful clear skin, fuller hair and strong nails, skin beauty from within supplement - 30 capsules",
+  "brand": "alteya organics",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "omega 3",
+      "position": 23,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Found 'omega 3' starting at character index 23 ('omega' at index 23). lookup_ingredient returned mapping to Fish Oil; category 'FATTY ACIDS', subcategory 'FISH'."
+    },
+    {
+      "name": "omega 6",
+      "position": 31,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Title lists 'omega 3,6,7 and 9'. The '6' token occurs at index 31; interpreted as 'omega 6'. lookup_ingredient returned mapping to Fish Oil; category 'FATTY ACIDS', subcategory 'FISH'."
+    },
+    {
+      "name": "omega 7",
+      "position": 33,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Title lists 'omega 3,6,7 and 9'. The '7' token occurs at index 33; interpreted as 'omega 7'. lookup_ingredient returned mapping to Fish Oil; category 'FATTY ACIDS', subcategory 'FISH'."
+    },
+    {
+      "name": "omega 9",
+      "position": 39,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Title lists 'omega 3,6,7 and 9'. The '9' token occurs at index 39; interpreted as 'omega 9'. lookup_ingredient returned mapping to Fish Oil; category 'FATTY ACIDS', subcategory 'FISH'."
+    },
+    {
+      "name": "rose otto",
+      "position": 46,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Title contains 'rose otto extracts' starting at index 46 ('rose' at 46). lookup_ingredient did not return a confident match for 'rose otto' (lookup found no exact mapping). Candidate matches were low-confidence and ambiguous; therefore category/subcategory set to UNKNOWN. 'rose otto' retained as an ingredient string from the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9585,
+      "completion": 7302,
+      "total": 16887
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 6"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 7"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 9"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rose otto"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Red Root",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "red root",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Rose Hips",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "rose hip",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Poke",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "poke root",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 142.306965
+}

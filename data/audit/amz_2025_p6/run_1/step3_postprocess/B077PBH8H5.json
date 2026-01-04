@@ -1,0 +1,42 @@
+{
+  "product_id": 2767,
+  "asin": "B077PBH8H5",
+  "title": "pedialyte electrolyte powder, electrolyte drink, orange, powder sticks, 6 pcs of 0.6 oz packets (pack of 4)",
+  "brand": "pedialyte",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4593,
+      "completion": 1538,
+      "total": 6131
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.227435
+}

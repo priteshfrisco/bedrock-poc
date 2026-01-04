@@ -1,0 +1,224 @@
+{
+  "product_id": 7644,
+  "asin": "B0BL1R9P4D",
+  "title": "health by habit hair, skin and nails supplement (60 capsules) - biotin 2000mcg, vitamin a, vitamin b, vitamin c, hyaluronic acid, rosehip, and alo vera, vegan, non-gmo, sugar free (1 pack)",
+  "brand": "health by habit",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "biotin",
+      "position": 64,
+      "lookup_ingredient_return": {
+        "ingredient": "biotin",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "The substring 'biotin' appears in the title starting at character index 64. lookup_ingredient returned biotin mapped to BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin a",
+      "position": 80,
+      "lookup_ingredient_return": {
+        "ingredient": "Vitamin A",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "The substring 'vitamin a' appears starting at index 80. lookup_ingredient matched 'Vitamin A' in BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin b",
+      "position": 91,
+      "lookup_ingredient_return": {
+        "ingredient": "Vitamin B1",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "The substring 'vitamin b' appears starting at index 91. lookup_ingredient returned a close/fuzzy match to 'Vitamin B1' and categorized it under BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    },
+    {
+      "name": "vitamin c",
+      "position": 102,
+      "lookup_ingredient_return": {
+        "ingredient": "Vitamin D",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "The substring 'vitamin c' appears starting at index 102. The lookup_ingredient tool returned a result labeled 'Vitamin D' (fuzzy match) but placed it in BASIC VITAMINS & MINERALS / LETTER VITAMINS. The tool output is recorded as returned."
+    },
+    {
+      "name": "hyaluronic acid",
+      "position": 113,
+      "lookup_ingredient_return": {
+        "ingredient": "Hyaluronic Acid",
+        "found": true,
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "NON-SPECIFIC"
+      },
+      "reasoning": "The substring 'hyaluronic acid' appears starting at index 113. lookup_ingredient matched it and categorized it under MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC."
+    },
+    {
+      "name": "rosehip",
+      "position": 130,
+      "lookup_ingredient_return": {
+        "ingredient": "Rose Hips",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The substring 'rosehip' appears starting at index 130. lookup_ingredient returned 'Rose Hips' with the category/subcategory reported by the tool (FATTY ACIDS / HEMP/CBD)."
+    },
+    {
+      "name": "aloe vera",
+      "position": 143,
+      "lookup_ingredient_return": {
+        "ingredient": "Aloe Vera",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS"
+      },
+      "reasoning": "The title contains 'alo vera' (likely a minor spacing/typo) starting at index 143; interpreted as 'aloe vera'. lookup_ingredient matched 'Aloe Vera' and categorized it under HERBAL REMEDIES / FOOD SUPPLEMENTS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9635,
+      "completion": 8104,
+      "total": 17739
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin a"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin A",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "vitamin a",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B1",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 1",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 94
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hyaluronic acid"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hyaluronic Acid",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "hyaluronic acid",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "rosehip"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Rose Hips",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "rosehip",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "aloe vera"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Aloe Vera",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "aloe",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 112.415376
+}

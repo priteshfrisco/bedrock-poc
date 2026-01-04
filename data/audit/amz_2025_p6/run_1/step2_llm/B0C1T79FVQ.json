@@ -1,0 +1,36 @@
+{
+  "product_id": 8224,
+  "asin": "B0C1T79FVQ",
+  "title": "gericare ibuprofen 200mg pain reliever and fever reducer tablets for headaches, colds, toothaches, and joint pain 200 count (pack of 1)",
+  "brand": "gericare",
+  "source_subcategory": "non-aspirin pain relievers",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title names the active pharmaceutical ingredient 'ibuprofen' (an OTC drug), which indicates this is not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4597,
+      "completion": 1101,
+      "total": 5698
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.387079
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 9852,
+  "asin": "B0CKVXF8BK",
+  "title": "beetrootpowder,5poundsfinelygrounddriedbeetroot,pure,kosherandvegan,rawsuperfood.bulkpowder.richinfolate,potassiumandfiber.greatfordrinks,smoothies,sauces,andsoups",
+  "brand": "remove",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: The title is a food/bulk beetroot powder (beetroot), not a dietary supplement \u2014 ingredient lookup not performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4619,
+      "completion": 1214,
+      "total": 5833
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.978273
+}

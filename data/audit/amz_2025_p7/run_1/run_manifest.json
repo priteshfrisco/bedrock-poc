@@ -1,0 +1,17 @@
+{
+  "total_records": 35311,
+  "success": 0,
+  "filtered": 0,
+  "errors": 0,
+  "total_cost": 0,
+  "total_tokens": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "duration_seconds": 9.52781,
+  "test_mode_step1_only": true,
+  "generated_at": "2026-01-01T02:29:59.820382",
+  "filename": "uncoded_amz_2025_p7",
+  "file_id": "amz_2025_p7",
+  "run_id": "run_1",
+  "run_num": 1
+}

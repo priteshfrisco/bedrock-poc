@@ -1,0 +1,58 @@
+{
+  "product_id": 3241,
+  "asin": "B07G3NN4GS",
+  "title": "skratch labs anytime hydration passion fruit single drink mix, 0.5 oz",
+  "brand": "skratch labs",
+  "source_subcategory": "electrolyte drink mixes & supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 1,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "passion fruit",
+      "position": 31,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'passion fruit' appears in the title starting at character index 31. lookup_ingredient('passion fruit') returned normalized ingredient 'Passion Flower' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9043,
+      "completion": 4856,
+      "total": 13899
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "passion fruit"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Passion Flower",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "passion flower",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 63.586546
+}

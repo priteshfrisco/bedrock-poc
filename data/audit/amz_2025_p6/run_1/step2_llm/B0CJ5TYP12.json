@@ -1,0 +1,173 @@
+{
+  "product_id": 9629,
+  "asin": "B0CJ5TYP12",
+  "title": "ryse signature series pump daddy v2  official noel deyzel non stim pre workout  with citrulline, beta alanine, creatine  40 servings (blue raspberry)",
+  "brand": "ryse up supplements",
+  "source_subcategory": "pre-workout powders",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PERFORMANCE NUTRITION",
+  "remap_reason": "Maps to PERFORMANCE NUTRITION / PERFORMANCE NUTRITION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 40,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "citrulline",
+      "position": 85,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "notes": "lookup_ingredient returned no exact match for 'citrulline'; returned candidate suggestions (e.g., 'Spirulina', 'Cetirizine') which are not relevant. No authoritative category/subcategory provided by the lookup tool for this term."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "'citrulline' appears explicitly in the title as 'with citrulline' starting at character index 85. lookup_ingredient did not return an exact match."
+    },
+    {
+      "name": "beta alanine",
+      "position": 97,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "notes": "lookup_ingredient returned no exact match for 'beta alanine'; provided fuzzy candidates (e.g., 'Beta Glucan', 'Beta Carotene') which do not match the ingredient. No authoritative category/subcategory provided by the lookup tool for this term."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "'beta alanine' appears explicitly in the title as 'beta alanine' (the phrase starts at character index 97). lookup_ingredient did not return an exact match."
+    },
+    {
+      "name": "creatine",
+      "position": 111,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Creatine",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PERFORMANCE NUTRITION",
+        "notes": "lookup_ingredient returned an exact match."
+      },
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PERFORMANCE NUTRITION",
+      "reasoning": "'creatine' appears explicitly in the title starting at character index 111. lookup_ingredient returned an exact match with category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9618,
+      "completion": 5616,
+      "total": 15234
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "citrulline"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Spirulina",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "spirulina blue green algae",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cetirizine",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "cetirizine",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beta alanine"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beta glucans",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Glucan",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "glucan",
+              "match_type": "fuzzy",
+              "score": 69.56521739130434,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beta Carotene",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "beta carotene",
+              "match_type": "bm25",
+              "score": 4.466481390640588,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "creatine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Creatine",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PERFORMANCE NUTRITION",
+          "keyword": "creatine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 77.947645
+}

@@ -1,0 +1,42 @@
+{
+  "product_id": 3252,
+  "asin": "B07GD25SJF",
+  "title": "rose quartz spinning merkaba star pendant chakra balancing healing crystal therapy dowsing pendulum divination holistic metaphysical spiritual tool solar-lunar energy",
+  "brand": "vaibhav jewellers",
+  "source_subcategory": "other alternative medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4591,
+      "completion": 1200,
+      "total": 5791
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.465196
+}

@@ -1,0 +1,104 @@
+{
+  "product_id": 4585,
+  "asin": "B08C68WQ19",
+  "title": "niacinamide and vitamin c, anti-wrinkle pills - anti aging pills, wrinkle prevention for face, anti wrinkle collagen supplement, anti wrinkle face pills, wrinkle preventing pills 1 bottle 60 capsules",
+  "brand": "sport supplements",
+  "source_subcategory": "vitamin b3 (niacin)",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "niacinamide",
+      "position": 0,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'niacinamide' at the very start of the title (index 0). lookup_ingredient returned normalized ingredient 'Vitamin B3' in category 'BASIC VITAMINS & MINERALS' / 'LETTER VITAMINS'."
+    },
+    {
+      "name": "vitamin c",
+      "position": 16,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'vitamin c' starting at index 16 ('vitamin' at 16). lookup_ingredient() returned a result mapped to 'BASIC VITAMINS & MINERALS' / 'LETTER VITAMINS' (tool returned normalized ingredient 'Vitamin D' for the lookup call, but the detected ingredient text in the title is 'vitamin c' at position 16)."
+    },
+    {
+      "name": "collagen",
+      "position": 108,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'collagen' starting at index 108 in the phrase 'anti wrinkle collagen supplement'. lookup_ingredient returned 'Collagen' categorized as 'ACTIVE NUTRITION' / 'NON-SPECIFIC'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9271,
+      "completion": 4687,
+      "total": 13958
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "niacinamide"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B3",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "niacinamide",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 338.525962
+}

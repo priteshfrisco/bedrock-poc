@@ -1,0 +1,36 @@
+{
+  "product_id": 10064,
+  "asin": "B0CMJW6JMN",
+  "title": "irish sea moss gel organic raw - wildcrafted superfood seamoss gel - pineapple mango flavor, vitamin and mineral-rich from pristine caribbean waters - 10 oz.",
+  "brand": "wellness labsrx",
+  "source_subcategory": "superfoods",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to FOOD SUPPLEMENTS / FOOD SUPPLEMENTS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title describes a food/superfood product (sea moss gel) rather than a dietary supplement; therefore ingredient extraction and lookup are not performed and returned as REMOVE."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4595,
+      "completion": 1553,
+      "total": 6148
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 24.085346
+}

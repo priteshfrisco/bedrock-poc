@@ -1,0 +1,33 @@
+{
+  "product_id": 5546,
+  "asin": "B094YW6S5K",
+  "title": "produce organic gummy berry grapes, 16 oz",
+  "brand": "produce",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4572,
+      "completion": 818,
+      "total": 5390
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.012902
+}

@@ -1,0 +1,199 @@
+{
+  "product_id": 6904,
+  "asin": "B0B3J38XWQ",
+  "title": "osasuna liposomal artemisinin 600 mg with quercetin phytosome 200 mg, maximum absorption, sweet wormwood(artemisia annua) extract, 180 softgels",
+  "brand": "osasuna",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "artemisinin",
+      "position": 18,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "category": "UNKNOWN",
+        "subcategory": "UNKNOWN",
+        "tool_reasoning": "lookup_ingredient returned no exact match for 'artemisinin' and provided ambiguous candidates. No definitive category/subcategory was returned."
+      },
+      "reasoning": "The title contains 'artemisinin' as 'liposomal artemisinin 600 mg'. Position calculated from the title (0-indexed) where 'artemisinin' begins = 18."
+    },
+    {
+      "name": "quercetin",
+      "position": 42,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Quercetin",
+        "category": "HERBAL REMEDIES",
+        "subcategory": "POLYPHENOLS",
+        "tool_reasoning": "lookup_ingredient returned an exact match: Quercetin \u2192 HERBAL REMEDIES / POLYPHENOLS."
+      },
+      "reasoning": "The title contains 'quercetin phytosome 200 mg'. Position where 'quercetin' begins = 42."
+    },
+    {
+      "name": "sweet wormwood",
+      "position": 90,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Wormwood",
+        "category": "FATTY ACIDS",
+        "subcategory": "HEMP/CBD",
+        "tool_reasoning": "lookup_ingredient returned 'Wormwood' (mapped to FATTY ACIDS / HEMP/CBD) for the query 'sweet wormwood'."
+      },
+      "reasoning": "The title contains 'sweet wormwood(artemisia annua) extract'. 'sweet' starts at index 90; 'wormwood' follows at index 96. Extracted as 'sweet wormwood' because the phrase appears explicitly."
+    },
+    {
+      "name": "artemisia annua",
+      "position": 105,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "category": "UNKNOWN",
+        "subcategory": "UNKNOWN",
+        "tool_reasoning": "lookup_ingredient returned no exact match / ambiguous results for 'artemisia annua'. No definitive category/subcategory was provided."
+      },
+      "reasoning": "The botanical name appears in parentheses as '(artemisia annua)'. 'artemisia' starts at index 105 in the title. Included because it is an explicit botanical name in the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9710,
+      "completion": 6566,
+      "total": 16276
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "artemisinin"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Arginine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "arginine",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Reishi Mushroom",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "reishi",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Aspirin",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "aspirin",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "sweet wormwood"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Wormwood",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "wormwood",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "artemisia annua"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Adrenal Glandular",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "adrenal cortex",
+              "match_type": "fuzzy",
+              "score": 56.25,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Adrenal Glandular",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "adrenal cytotrophin",
+              "match_type": "fuzzy",
+              "score": 56.25,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Adrenal Glandular",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "adrenal extract",
+              "match_type": "fuzzy",
+              "score": 56.25,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 110.562149
+}

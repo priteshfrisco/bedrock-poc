@@ -1,0 +1,36 @@
+{
+  "product_id": 9571,
+  "asin": "B0CHWMKQ8T",
+  "title": "sulu organics 3 lbs pure usda organic unrefined cold pressed hemp seed butter",
+  "brand": "sulu organics",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: product is a food/food spread (hemp seed butter), not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4582,
+      "completion": 1323,
+      "total": 5905
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 22.063224
+}

@@ -1,0 +1,63 @@
+{
+  "product_id": 1218,
+  "asin": "B00HA82SDW",
+  "title": "extra strength ginkgo360 vgcdoctors best",
+  "brand": "doctor's best",
+  "source_subcategory": "ginkgo biloba herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "ginkgo",
+      "position": 15,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Ginkgo",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "raw_tool_response_note": "lookup_ingredient returned 'Ginkgo' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+      },
+      "reasoning": "The title contains 'ginkgo' (part of 'ginkgo360'), which is a functional ingredient. Its first character 'g' occurs at index 15 in the title string \"extra strength ginkgo360 vgcdoctors best\"."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9023,
+      "completion": 2564,
+      "total": 11587
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginkgo"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginkgo",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "gingko biloba",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 34.610783
+}

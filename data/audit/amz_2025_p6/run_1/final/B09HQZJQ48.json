@@ -1,0 +1,58 @@
+{
+  "product_id": 5994,
+  "asin": "B09HQZJQ48",
+  "title": "elp essential valerian root extract drops  2 fl oz  sugar free, alcohol free, non- gmo gluten free liquid",
+  "brand": "elp essential",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "valerian root",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "valerian root"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "SLEEP",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9061,
+      "completion": 3878,
+      "total": 12939
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "valerian root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Valerian",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "valarian",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 7.575711903241528
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.01551
+}

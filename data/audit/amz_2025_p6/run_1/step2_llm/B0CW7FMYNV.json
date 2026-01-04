@@ -1,0 +1,104 @@
+{
+  "product_id": 10621,
+  "asin": "B0CW7FMYNV",
+  "title": "sambucol black elderberry capsules - advanced immune, vitamin c and zinc, elderberry capsules, immune support supplement, black elderberry supplements, gluten free, easy to swallow capsules - 30 count",
+  "brand": "sambucol",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "black elderberry",
+      "position": 9,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "lookup_note": "lookup_ingredient('black elderberry') returned normalized ingredient 'Elderberry' in category HERBAL REMEDIES / SINGLES."
+    },
+    {
+      "name": "vitamin c",
+      "position": 54,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "lookup_note": "lookup_ingredient('vitamin c') returned a result normalized as 'Vitamin D' (BASIC VITAMINS & MINERALS / LETTER VITAMINS) from the lookup tool. The title clearly contains 'vitamin c' (position 54), and the tool output is recorded as returned."
+    },
+    {
+      "name": "zinc",
+      "position": 68,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "lookup_note": "lookup_ingredient('zinc') returned 'Zinc' in BASIC VITAMINS & MINERALS / MINERALS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9275,
+      "completion": 4964,
+      "total": 14239
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black elderberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Elderberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "elder berries",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.409833504706679
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 70.273315
+}

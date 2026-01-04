@@ -1,0 +1,36 @@
+{
+  "product_id": 8496,
+  "asin": "B0C5K6MV37",
+  "title": "naturejam dried beet root & cabbage mix-2 pound bag-to make side steamed vegetables or soups-dehydrated 2 ingredients only",
+  "brand": "naturejam",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Ingredients listed ('beet root' and 'cabbage') are food ingredients for a dehydrated vegetable mix, not functional supplement ingredients."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4589,
+      "completion": 1238,
+      "total": 5827
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.217888
+}

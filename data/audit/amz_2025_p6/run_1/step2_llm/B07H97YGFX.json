@@ -1,0 +1,182 @@
+{
+  "product_id": 3325,
+  "asin": "B07H97YGFX",
+  "title": "2-month adaptogen blend (all-in-1) supplement  synergistic formula with 9 herbal extracts  energizing adaptogen supplements  natural adaptogenic complex  bulk savings 60-day supply  120 capsules",
+  "brand": "elevate recovery supplements",
+  "source_subcategory": "ashwagandha herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "adaptogen",
+      "position": 8,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'adaptogen' appears at index 8 in '2-month adaptogen blend...'. This is a functional ingredient descriptor (adaptogen). lookup_ingredient('adaptogen') returned no definitive match (found:false / ambiguous), so category/subcategory are set to UNKNOWN. Candidates from the lookup tool were ambiguous and low-confidence; cannot assign a specific Nature's Way category/subcategory from the tool result."
+    },
+    {
+      "name": "herbal extracts",
+      "position": 72,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'herbal extracts' appears starting at index 72 in '...with 9 herbal extracts...'. It is a functional ingredient descriptor but not a list of specific herbs. lookup_ingredient('herbal extract') returned no definitive match (found:false / ambiguous), so category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "adaptogenic complex",
+      "position": 131,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'adaptogenic complex' begins at index 131 in '...natural adaptogenic complex...'. It describes a blend/complex of adaptogens rather than a single named ingredient. lookup_ingredient('adaptogenic complex') returned no definitive match (found:false / ambiguous), so category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9821,
+      "completion": 6590,
+      "total": 16411
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "adaptogen"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Naproxen",
+              "nw_category": "OTC",
+              "nw_subcategory": "OTC - NON-SPECIFIC",
+              "keyword": "naproxen",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Pine Bark",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "pycnogenol",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cats Claw",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "una de gato",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "herbal extract"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cherry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cherry extract",
+              "match_type": "fuzzy",
+              "score": 78.57142857142857,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Adrenal Glandular",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "adrenal extract",
+              "match_type": "fuzzy",
+              "score": 75.86206896551724,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Liver Extract",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beef liver",
+              "match_type": "fuzzy",
+              "score": 74.07407407407408,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "adaptogenic complex"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Tocotrienol Complex",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "tocotrienol complex",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Tocotrienol Complex",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "tocotrienols",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bioflavonoid Complex",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bioflavonoid complex",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 90.863515
+}

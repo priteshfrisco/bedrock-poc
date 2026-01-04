@@ -1,0 +1,141 @@
+{
+  "product_id": 6227,
+  "asin": "B09P456NWW",
+  "title": "pure kick hydration singles to go drink mix, strawberry watermelon, includes 12 boxes with 6 packets in each box, 72 total packets",
+  "brand": "pure kick",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 72,
+  "unit": "COUNT",
+  "size": 12,
+  "ingredients": [
+    {
+      "name": "strawberry",
+      "position": 45,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "reasoning": "lookup_ingredient() did not return a definitive Nature's Way match for 'strawberry'. Likely a flavor/food term rather than a cataloged functional supplement ingredient."
+      }
+    },
+    {
+      "name": "watermelon",
+      "position": 56,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "reasoning": "lookup_ingredient() did not return a definitive Nature's Way match for 'watermelon'. Likely a flavor/food term rather than a cataloged functional supplement ingredient."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9511,
+      "completion": 4898,
+      "total": 14409
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "strawberry"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "actifruitcranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cran berry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cranberry",
+              "match_type": "fuzzy",
+              "score": 73.6842105263158,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "watermelon"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Bitter Melon",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bitter melon",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bitter Melon",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "karela",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Wheat Germ Oil",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "ALL OTHER OILS",
+              "keyword": "octocosanol",
+              "match_type": "fuzzy",
+              "score": 58.33333333333333,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 67.134698
+}

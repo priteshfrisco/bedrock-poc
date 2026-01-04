@@ -1,0 +1,142 @@
+{
+  "product_id": 10711,
+  "asin": "B0CX865V7F",
+  "title": "pure whey isolate  high protein whey isolate protein powder  27g protein, 6g bcaas, sugar free, gluten free, low carb, low lactose  30 servings, 2lb (cookies & cream)",
+  "brand": "limitless pharma",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "whey isolate",
+      "position": 5,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN"
+      },
+      "reasoning": "'whey isolate' appears at character index 5 (the phrase 'pure whey isolate' at the start). lookup_ingredient() returned no clear match / ambiguous result for 'whey isolate' (tool returned found=false and suggested candidates). Despite the lookup failure, the phrase is a clear functional ingredient in the title."
+    },
+    {
+      "name": "protein",
+      "position": 24,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Soy Foods",
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS"
+      },
+      "reasoning": "'protein' appears in the title at character index 24 ('high protein ...'). lookup_ingredient() returned a match normalized to 'Soy Foods' under Nature's Way category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS' (use tool result as provided)."
+    },
+    {
+      "name": "bcaas",
+      "position": 77,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "BCAA",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "AMINO ACIDS"
+      },
+      "reasoning": "'bcaas' (branched-chain amino acids) appears starting at character index 77 in '6g bcaas'. lookup_ingredient() returned 'BCAA' with category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9471,
+      "completion": 6487,
+      "total": 15958
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey isolate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "White Tea",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FORMULAS",
+              "keyword": "white tea",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "CMO",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "cetyl myristoleate (cmo)",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Folic Acid",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "folate",
+              "match_type": "fuzzy",
+              "score": 55.55555555555556,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bcaas"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "bcaa",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 81.148931
+}

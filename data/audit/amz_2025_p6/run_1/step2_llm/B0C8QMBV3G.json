@@ -1,0 +1,127 @@
+{
+  "product_id": 8727,
+  "asin": "B0C8QMBV3G",
+  "title": "medterra fast acting relax, l theanine, gaba, skullcap & hemp, citrus gummies, 30 count",
+  "brand": "medterra",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "l theanine",
+      "position": 28,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Found 'l theanine' starting at character index 28. lookup_ingredient returned ingredient 'Theanine' -> BASIC VITAMINS & MINERALS / AMINO ACIDS."
+    },
+    {
+      "name": "gaba",
+      "position": 40,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Found 'gaba' starting at character index 40. lookup_ingredient returned 'GABA' -> BASIC VITAMINS & MINERALS / AMINO ACIDS."
+    },
+    {
+      "name": "skullcap",
+      "position": 46,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'skullcap' starting at character index 46. lookup_ingredient returned 'Skullcap' -> FATTY ACIDS / HEMP/CBD."
+    },
+    {
+      "name": "hemp",
+      "position": 57,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'hemp' starting at character index 57. lookup_ingredient returned 'Hemp' -> FATTY ACIDS / HEMP/CBD."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9312,
+      "completion": 3576,
+      "total": 12888
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l theanine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Theanine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "l theanine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gaba"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "GABA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "gaba",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "skullcap"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Skullcap",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "chinese skullcap",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 38.169481
+}

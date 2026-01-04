@@ -1,0 +1,84 @@
+{
+  "product_id": 9634,
+  "asin": "B0CJ7CS8WJ",
+  "title": "leader women 50+ multivitamin and mineral supplement, 100 tablets",
+  "brand": "leader",
+  "source_subcategory": "multivitamins",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / NON-SPECIFIC",
+  "age": "AGE GROUP - MATURE ADULT",
+  "gender": "GENDER - FEMALE",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "multivitamin",
+        "position": 17,
+        "category": "COMBINED MULTIVITAMINS",
+        "subcategory": "COMBINED MULTIVITAMINS",
+        "reasoning": "'multivitamin' appears at character index 17 in the title. lookup_ingredient returned category/subcategory as shown."
+      },
+      {
+        "name": "mineral",
+        "position": 34,
+        "category": "BASIC VITAMINS & MINERALS",
+        "subcategory": "MINERALS",
+        "reasoning": "'mineral' appears at character index 34 in the title. lookup_ingredient matched it to Trace Minerals category/subcategory."
+      }
+    ],
+    "reasoning": "Two functional ingredients explicitly present in the title: 'multivitamin' (pos 17) and 'mineral' (pos 34). Both were looked up and categories/subcategories returned above."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9147,
+      "completion": 3501,
+      "total": 12648
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "multivitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "alive once daily",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mineral"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 47.136544
+}

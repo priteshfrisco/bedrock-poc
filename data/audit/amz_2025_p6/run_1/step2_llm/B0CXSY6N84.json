@@ -1,0 +1,116 @@
+{
+  "product_id": 10746,
+  "asin": "B0CXSY6N84",
+  "title": "bunkka (2 pack) berberine supplement, 1500mg organic berberine liquid drops with ceylon cinnamon, bitter melon, sugar-free & vegan supplement supports immune system & gastrointestinal care - 4 fl oz",
+  "brand": "bunkka",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "ORGANIC",
+  "count": 4,
+  "unit": "OZ",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "berberine",
+      "position": 16,
+      "lookup_result": {
+        "ingredient": "barberry",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "First functional ingredient in the title is 'berberine' starting at character index 16. lookup_ingredient returned normalized ingredient 'barberry' with category/subcategory as shown."
+    },
+    {
+      "name": "ceylon cinnamon",
+      "position": 81,
+      "lookup_result": {
+        "ingredient": "Cinnamon",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The phrase 'ceylon cinnamon' appears; 'ceylon' starts at index 81 and 'cinnamon' at 88. lookup_ingredient returned 'Cinnamon' with category/subcategory as shown."
+    },
+    {
+      "name": "bitter melon",
+      "position": 98,
+      "lookup_result": {
+        "ingredient": "Bitter Melon",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "'bitter melon' appears in the title starting at index 98. lookup_ingredient returned 'Bitter Melon' with category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9281,
+      "completion": 6003,
+      "total": 15284
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "berberine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "barberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "berberine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ceylon cinnamon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cinnamon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "cinnamon",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bitter melon"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bitter Melon",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bitter melon",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 76.110076
+}

@@ -1,0 +1,39 @@
+{
+  "product_id": 10594,
+  "asin": "B0CVSL326Y",
+  "title": "3 pack - maximum edge male gummies - maximum edge 90 gummies for 3 months, maximum edge control, maximum edge gummies, maximum edge men.",
+  "brand": "livorka",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - MALE",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 3,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4592,
+      "completion": 1630,
+      "total": 6222
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 34.59339
+}

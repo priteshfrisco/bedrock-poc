@@ -1,0 +1,62 @@
+{
+  "product_id": 4423,
+  "asin": "B087CB33GZ",
+  "title": "best botanicals gotu kola herb powder 8 oz. (organic)",
+  "brand": "best botanicals",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 8,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "gotu kola",
+      "position": 16,
+      "lookup_result": {
+        "ingredient": "Gotu Kola",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The title contains the functional herb 'gotu kola' (starts at character index 16). lookup_ingredient was called for 'gotu kola' and returned the shown category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9033,
+      "completion": 2903,
+      "total": 11936
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gotu kola"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Gotu Kola",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "gotu kola",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 407.209614
+}

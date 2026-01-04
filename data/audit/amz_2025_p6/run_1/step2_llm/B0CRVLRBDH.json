@@ -1,0 +1,127 @@
+{
+  "product_id": 10370,
+  "asin": "B0CRVLRBDH",
+  "title": "ucessuyy nmnh 500mg per serving nad supplement to boost nad - 120 capsule",
+  "brand": "ucessuyy",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nmnh",
+      "position": 9,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "notes": "Lookup returned no confident match for 'nmnh'. Possible candidates (low confidence) were suggested by the tool, but none are a clear match. Candidate matches included Menthol and Cinnamon (low confidence)."
+      },
+      "reasoning": "Token 'nmnh' appears at character index 9. It resembles known NAD-related abbreviations (e.g., NMN, NMNH), but as spelled in the title it did not return a confident normalized ingredient via lookup."
+    },
+    {
+      "name": "nad",
+      "position": 32,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "NADH",
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "NON-SPECIFIC"
+      },
+      "reasoning": "Token 'nad' appears at character index 32 and again later at 56; lookup matched to 'NADH' (found=true) with category/subcategory returned by the lookup tool. The first occurrence (index 32) is recorded here. 'nad' in the title is a functional ingredient mention ('nad supplement to boost nad')."
+    },
+    {
+      "name": "nad",
+      "position": 56,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "NADH",
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "NON-SPECIFIC"
+      },
+      "reasoning": "Second occurrence of 'nad' at character index 56. Included because the instruction requires recording each ingredient occurrence and its position. Same lookup result as the earlier 'nad' occurrence."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9308,
+      "completion": 3712,
+      "total": 13020
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nmnh"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Menthol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "mentho-lyptus",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Menthol",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "menthol",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cinnamon",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cinnamon",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nad"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 53.977526
+}

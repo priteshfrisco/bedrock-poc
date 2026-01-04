@@ -1,0 +1,75 @@
+{
+  "run_info": {
+    "file_id": "amz_2025_p7",
+    "run_id": "run_1",
+    "run_num": 1,
+    "generated_at": "2026-01-01T02:29:59.814060",
+    "total_records_checked": 35311,
+    "processing_duration_seconds": 0.11
+  },
+  "filtering_summary": {
+    "filtered_by_remove": {
+      "count": 26456,
+      "percentage": 74.92
+    },
+    "filtered_by_keyword": {
+      "count": 200,
+      "percentage": 0.57
+    },
+    "marked_for_remap": {
+      "count": 8643,
+      "percentage": 24.48
+    },
+    "unknown_subcategory": {
+      "count": 12,
+      "percentage": 0.03
+    },
+    "total_removed": {
+      "count": 26656,
+      "percentage": 75.49
+    },
+    "total_to_llm": {
+      "count": 8655,
+      "percentage": 24.51
+    }
+  },
+  "unknown_subcategories": {
+    "intimate moisturizers": 11,
+    "wildlife encounter protection": 1
+  },
+  "keyword_breakdown": {
+    "gemstone": 118,
+    "jewelry": 43,
+    "book": 18,
+    "essential oil": 9,
+    "lotion": 4,
+    "cleanser": 3,
+    "machine": 2,
+    "banana drops": 2,
+    "shampoo": 1
+  },
+  "top_removed_subcategories": {
+    "aromatherapy & essential oils": 1167,
+    "sex toys": 1018,
+    "pet recovery collars & suits": 977,
+    "piercing & tattoo supplies": 545,
+    "hair cutting tools": 509,
+    "athletic & medical tape": 506,
+    "other salon & spa equipment": 502,
+    "face & sheet masks": 472,
+    "stethoscopes & accessories": 465,
+    "body creams & lotions": 454
+  },
+  "top_remap_subcategories": {
+    "single homeopathic remedies": 1024,
+    "other herbal supplements": 917,
+    "other dietary supplements": 883,
+    "apple cider vinegar supplements": 370,
+    "other alternative medicine": 279,
+    "electrolyte drink mixes": 262,
+    "magnesium supplements": 249,
+    "cbd & hemp extract products": 242,
+    "energy supplements": 205,
+    "energy chews & gels": 202
+  }
+}

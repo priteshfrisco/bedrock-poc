@@ -1,0 +1,14 @@
+{
+  "product_id": 962,
+  "asin": "B00AHZKHMY",
+  "title": "medline cur001109 curad bacitracin ointment, 8 ounce",
+  "brand": "medline",
+  "source_subcategory": "antibiotic ointments",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.006623,
+  "lookup_action": "REMOVE"
+}

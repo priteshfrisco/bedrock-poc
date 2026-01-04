@@ -1,0 +1,36 @@
+{
+  "product_id": 2727,
+  "asin": "B076Q2SLCV",
+  "title": "sqwincher 015310-cc fast pack liquid concentrate packet, cool citrus, 60 oz. (pack of 50)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Product is a beverage/liquid concentrate packet (Sqwincher cool citrus drink mix), not a dietary supplement; no functional supplement ingredients to extract."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4589,
+      "completion": 1243,
+      "total": 5832
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 16.931472
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 7223,
+  "asin": "B0B94SLNXK",
+  "title": "brilhantelimpezatotal-sab\u00e3oemp\u00e3,2,2kg",
+  "brand": "brilhante",
+  "source_subcategory": "magnesium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title refers to 'sab\u00e3o em p\u00f3' (powdered soap/cleaner); no dietary/functional ingredients to extract; ingredient lookup not performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4580,
+      "completion": 1002,
+      "total": 5582
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.077847
+}

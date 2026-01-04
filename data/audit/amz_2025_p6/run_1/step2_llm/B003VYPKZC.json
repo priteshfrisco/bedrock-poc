@@ -1,0 +1,89 @@
+{
+  "product_id": 550,
+  "asin": "B003VYPKZC",
+  "title": "efamol pure evening primrose oil - natural skin supplement - aids with skin firmness, hydration, wrinkles & smoothness - with omega-6 gla - 180 softgels",
+  "brand": "flora",
+  "source_subcategory": "omega oils",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 180,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "evening primrose oil",
+      "position": 12,
+      "lookup_result": {
+        "ingredient": "Evening Primrose",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "Extracted 'evening primrose oil' starting at character index 12. This is the first functional ingredient in the title. lookup_ingredient returned the above normalized category/subcategory."
+    },
+    {
+      "name": "omega-6 gla",
+      "position": 126,
+      "lookup_result": {
+        "ingredient": "Fish Oil",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "FISH"
+      },
+      "reasoning": "Extracted 'omega-6 gla' starting at character index 126. 'GLA' (gamma-linolenic acid) is an omega-6 fatty acid mentioned in the title. lookup_ingredient returned the above normalized category/subcategory for this term."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9188,
+      "completion": 4618,
+      "total": 13806
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "evening primrose oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Evening Primrose",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "primrose",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 11.849867009720981
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega-6 gla"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 77.592435
+}

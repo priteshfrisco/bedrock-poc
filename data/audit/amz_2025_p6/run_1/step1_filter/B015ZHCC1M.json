@@ -1,0 +1,14 @@
+{
+  "product_id": 1763,
+  "asin": "B015ZHCC1M",
+  "title": "grace harbor, vanilla yoghurt, 32 oz",
+  "brand": "grace harbor farms",
+  "source_subcategory": "yogurt",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.0034,
+  "lookup_action": "REMOVE"
+}

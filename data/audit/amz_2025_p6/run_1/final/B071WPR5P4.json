@@ -1,0 +1,39 @@
+{
+  "product_id": 2491,
+  "asin": "B071WPR5P4",
+  "title": "mucinex se 12 hour max strength chest congestion expectorant tablets, 28 count",
+  "brand": "mucinex",
+  "source_subcategory": "cold & flu treatments",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "OTC",
+  "nw_subcategory": "OTC - COUGH, COLD & FLU",
+  "remap_reason": "Maps to OTC / OTC - COUGH, COLD & FLU",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4582,
+      "completion": 719,
+      "total": 5301
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 9.963734
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 6969,
+  "asin": "B0B4PLTMN1",
+  "title": "nyspiceshopgingercitrusseasoning\u00e24ouncescitrusgingerblend-citrus&gingerrub\u00e2premiumgroundginger-gingerspiceblend,rubcitrusblend,perfectcomplementtochicken,fishorpasta",
+  "brand": "ny spice shop",
+  "source_subcategory": "ginger spice",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title is a culinary spice/seasoning (ginger-citrus blend). Per instructions, do not perform ingredient extraction or lookup for non-supplement products."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4617,
+      "completion": 1074,
+      "total": 5691
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 17.871494
+}

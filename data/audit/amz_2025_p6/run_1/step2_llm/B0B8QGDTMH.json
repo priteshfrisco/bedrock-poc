@@ -1,0 +1,36 @@
+{
+  "product_id": 7207,
+  "asin": "B0B8QGDTMH",
+  "title": "zweet sour gummy pink lemonade slices - 10 oz. tub",
+  "brand": "all city candy",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains no functional supplement ingredients \u2014 it appears to be a candy product ('sour gummy pink lemonade slices')."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4576,
+      "completion": 947,
+      "total": 5523
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.375751
+}

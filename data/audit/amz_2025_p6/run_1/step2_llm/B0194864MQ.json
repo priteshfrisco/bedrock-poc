@@ -1,0 +1,170 @@
+{
+  "product_id": 1830,
+  "asin": "B0194864MQ",
+  "title": "macamagic:100%organicgelatinizedpowdervegancapsules(60ct)-peruvianpremiumgradesuperfood\u00e2fullspectrumblendofblack,red,purple,andyellowmaca\u00e2certifiedorganic\u00e2glutenfree",
+  "brand": "maca magic",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "black maca",
+      "position": 107,
+      "lookup_result": {
+        "ingredient": "Maca",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The title phrase '...fullspectrumblendofblack,red,purple,andyellowmaca...' implies 'black maca' as part of the full-spectrum maca blend. 'black' begins at character index 107; interpreted as 'black maca'."
+    },
+    {
+      "name": "red maca",
+      "position": 113,
+      "lookup_result": {
+        "ingredient": "Maca",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The comma-separated list includes 'red' (index 113) as a color variant of maca; interpreted as 'red maca'."
+    },
+    {
+      "name": "purple maca",
+      "position": 117,
+      "lookup_result": {
+        "ingredient": "Maca",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The list includes 'purple' (index 117) as a color variant of maca; interpreted as 'purple maca'."
+    },
+    {
+      "name": "yellow maca",
+      "position": 127,
+      "lookup_result": {
+        "ingredient": "Maca",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The list ends with 'andyellowmaca' \u2014 'yellow' begins at index 127 and is followed by 'maca', so interpreted as 'yellow maca'."
+    },
+    {
+      "name": "maca",
+      "position": 133,
+      "lookup_result": {
+        "ingredient": "Maca",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "found": true
+      },
+      "reasoning": "The explicit string 'maca' appears as part of 'andyellowmaca' starting at index 133. This records the general ingredient name 'maca'. (The initial 'macamagic' at index 0 appears to be a brand-like prefix and was not used as the defining ingredient occurrence.)"
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9455,
+      "completion": 9678,
+      "total": 19133
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "maca"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Maca",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "maca",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black maca"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Maca",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "maca",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "red maca"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Maca",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "maca",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "purple maca"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Maca",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "maca",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "yellow maca"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Maca",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "maca",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 133.078495
+}

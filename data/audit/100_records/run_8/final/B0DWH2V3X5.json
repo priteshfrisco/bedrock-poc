@@ -1,0 +1,16 @@
+{
+  "product_id": 20,
+  "asin": "B0DWH2V3X5",
+  "title": "bronson elderberry extra strength, supports healthy immune system & antioxidant protection, non gmo, 90 vegetarian capsules",
+  "brand": "bronson",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "error",
+  "step_completed": 0,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/main.py\", line 101, in process_single_record\n    attributes = extract_attributes_from_llm_result(llm_result)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/pipeline/step2_llm.py\", line 125, in extract_attributes_from_llm_result\n    'gender': llm_result.get('gender', {}).get('value', 'N/A'),\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+  "error": "'str' object has no attribute 'get'",
+  "processing_time_sec": 95.817445
+}

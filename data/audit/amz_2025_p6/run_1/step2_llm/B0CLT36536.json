@@ -1,0 +1,156 @@
+{
+  "product_id": 9991,
+  "asin": "B0CLT36536",
+  "title": "lipo-flavonoid plus tinnitus relief for ringing ears, otc flavonoid ear health vitamins, bioflavonoids & vitamin c caplets",
+  "brand": "lipo-flavonoid",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPLET",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "flavonoid",
+      "position": 5,
+      "category": "Bioflavonoid Complex",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The title contains 'lipo-flavonoid' and 'flavonoid' (functional ingredient). lookup_ingredient('flavonoid') returned multiple candidates; the best match selected is 'Bioflavonoid Complex' (tool candidate). Position 5 corresponds to the 'f' in 'lipo-flavonoid'."
+    },
+    {
+      "name": "flavonoid",
+      "position": 58,
+      "category": "Bioflavonoid Complex",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'otc flavonoid ear health vitamins' includes 'flavonoid' starting at character index 58. lookup_ingredient('bioflavonoids') returned multiple candidates; the selected mapping is 'Bioflavonoid Complex' (tool candidate)."
+    },
+    {
+      "name": "vitamin c",
+      "position": 105,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Title explicitly contains 'vitamin c' (starts at index 105). lookup_ingredient('vitamin c') returned a tool result mapped to the LETTER VITAMINS category (tool returned 'Vitamin D' mapping to BASIC VITAMINS & MINERALS / LETTER VITAMINS); vitamin C is a letter vitamin, so the returned category/subcategory from the lookup tool (LETTER VITAMINS) is used."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9615,
+      "completion": 7358,
+      "total": 16973
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "flavonoid"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavone",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bioflavonoid Complex",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bioflavonoid complex",
+              "match_type": "fuzzy",
+              "score": 62.06896551724138,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ipriflavone",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "ipriflavone",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioflavonoids"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavone",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavones",
+              "match_type": "fuzzy",
+              "score": 75.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bioflavonoid Complex",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bioflavonoid complex",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 107.285012
+}

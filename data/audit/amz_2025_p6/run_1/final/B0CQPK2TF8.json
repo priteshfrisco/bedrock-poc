@@ -1,0 +1,58 @@
+{
+  "product_id": 10286,
+  "asin": "B0CQPK2TF8",
+  "title": "vitauthority fast acting uti support capsules- cranberry juice powder for utinary tract health and preventitive support- enhanced blend promotes urinary health- 120 vegetarian capsules",
+  "brand": "vitauthority",
+  "source_subcategory": "cranberry herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to HERBAL REMEDIES / FOOD SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "cranberry",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "cranberry"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "SINGLES",
+  "health_focus": "UNKNOWN",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9070,
+      "completion": 3526,
+      "total": 12596
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cranberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Cranberry",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "actifruitcranberry",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 46.757822
+}

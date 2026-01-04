@@ -1,0 +1,89 @@
+{
+  "product_id": 10,
+  "asin": "B07661Z3YX",
+  "title": "doctor's best high absorption coq10 with bioperine, gluten free, naturally fermented, heart health, energy production,100 mg, 120 count",
+  "brand": "doctor's best",
+  "source_subcategory": "antioxidants",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "coq10",
+      "position": 30,
+      "lookup_result": {
+        "ingredient": "Co Q10",
+        "found": true,
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "COENZYME Q10"
+      },
+      "reasoning": "Detected 'coq10' starting at character index 30. Called lookup_ingredient('coq10') which returned normalized ingredient 'Co Q10' and category/subcategory as shown."
+    },
+    {
+      "name": "bioperine",
+      "position": 41,
+      "lookup_result": {
+        "ingredient": "Bioperine",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "Detected 'bioperine' starting at character index 41 (immediately after 'with'). Called lookup_ingredient('bioperine') which returned normalized ingredient 'Bioperine' and category/subcategory as shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9171,
+      "completion": 4956,
+      "total": 14127
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coq10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "coq10",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioperine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bioperine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 78.111745
+}

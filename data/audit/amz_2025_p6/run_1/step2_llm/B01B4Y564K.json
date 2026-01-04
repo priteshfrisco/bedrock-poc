@@ -1,0 +1,36 @@
+{
+  "product_id": 1876,
+  "asin": "B01B4Y564K",
+  "title": "fonexgummystylingwaxultrahold150ml(2st\u00e3\u00e2k)",
+  "brand": "fonex",
+  "source_subcategory": "elderberry herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL/HOMEOPATHIC COLD & FLU / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title describes a styling wax (topical cosmetic) and does not list functional dietary supplement ingredients. No ingredient lookup performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4582,
+      "completion": 1754,
+      "total": 6336
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 27.329196
+}

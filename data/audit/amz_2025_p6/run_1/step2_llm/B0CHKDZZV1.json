@@ -1,0 +1,113 @@
+{
+  "product_id": 9521,
+  "asin": "B0CHKDZZV1",
+  "title": "(2 pack) blue vibe hemp gummies - blue vibe gummies, bluevibe gummies maximum strength blue vibe cbc gummies bluevibe advanced formula cdc gummy ss great taste gummies 1500mg formula (120 gummies)",
+  "brand": "healthly",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp",
+      "position": 19,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Hemp",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The title contains 'hemp' (\"blue vibe hemp gummies\"). lookup_ingredient returned a direct match to Hemp (FATTY ACIDS / HEMP/CBD)."
+    },
+    {
+      "name": "cbc",
+      "position": 97,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "reasoning": "lookup_ingredient did not return an exact match for 'cbc'. Top candidate returned was 'CBD' (cannabidiol) mapping to FATTY ACIDS / HEMP/CBD with low confidence. 'CBC' in the title likely refers to the cannabinoid 'cannabichromene', but the tool did not provide an exact mapping. Included as an ingredient extracted from the title with ambiguous lookup result."
+      }
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9360,
+      "completion": 5585,
+      "total": 14945
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "cbc"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "CBD",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cannabidiol (cbd)",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "AHCC",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "active hexose correlated compound",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "AHCC",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "ahcc",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 82.330453
+}

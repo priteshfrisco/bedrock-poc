@@ -1,0 +1,14 @@
+{
+  "product_id": 9999,
+  "asin": "B0CLVS1WFM",
+  "title": "hair clippers, flat tooth clippers, hair styling product sets, household hair clippers, bangs hair clippers",
+  "brand": "karfri",
+  "source_subcategory": "hair cutting tools",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.013179,
+  "lookup_action": "REMOVE"
+}

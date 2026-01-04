@@ -1,0 +1,295 @@
+{
+  "product_id": 7164,
+  "asin": "B0B831FKNB",
+  "title": "nitric oxide beet root powder  16 oz (454g)  natural mixed berry flavor  with nitrates  vegan, non-gmo, and gluten free supplement  by horbaach",
+  "brand": "horb\u00e3ach",
+  "source_subcategory": "beet root supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "16",
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nitric oxide",
+      "position": 0,
+      "lookup_result": {
+        "found": false,
+        "note": "lookup_ingredient returned no exact match for 'nitric oxide'. Tool provided low-confidence candidate suggestions which are not clear matches (tool candidates: e.g., vitamin B6, B3, licorice). No authoritative category/subcategory returned.",
+        "candidates": [
+          {
+            "ingredient": "Vitamin B6",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "match_type": "fuzzy",
+            "score": 54.54545454545454
+          },
+          {
+            "ingredient": "Vitamin B3",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "LETTER VITAMINS",
+            "match_type": "fuzzy",
+            "score": 52.17391304347826
+          },
+          {
+            "ingredient": "Licorice",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "match_type": "fuzzy",
+            "score": 50.0
+          }
+        ]
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The phrase 'nitric oxide' appears at the start of the title (position 0). lookup_ingredient() returned no exact match; therefore category/subcategory are unknown from the tool."
+    },
+    {
+      "name": "beet root",
+      "position": 13,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Beet Root",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "FOOD SUPPLEMENTS",
+        "match_type": "exact",
+        "confidence": "exact",
+        "score": 100
+      },
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "'beet root' appears in the title starting at character index 13. lookup_ingredient() returned 'Beet Root' with category 'HERBAL REMEDIES' and subcategory 'FOOD SUPPLEMENTS'."
+    },
+    {
+      "name": "mixed berry",
+      "position": 53,
+      "lookup_result": {
+        "found": false,
+        "note": "lookup_ingredient did not return an exact match for 'mixed berry'. Tool provided low-confidence fuzzy candidates (elderberry, maqui, etc.) which are not direct matches for 'mixed berry'.",
+        "candidates": [
+          {
+            "ingredient": "Elderberry",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "match_type": "fuzzy",
+            "score": 72.72727272727273
+          },
+          {
+            "ingredient": "Maqui",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "match_type": "fuzzy",
+            "score": 72.72727272727273
+          },
+          {
+            "ingredient": "Elderberry",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "match_type": "fuzzy",
+            "score": 66.66666666666667
+          }
+        ]
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "'mixed berry' (as flavor) appears at position 53. The lookup did not return an exact match; treat category/subcategory as unknown from the tool. Note: 'mixed berry flavor' is a flavoring, not a core functional ingredient in the context of primary functional ingredient selection."
+    },
+    {
+      "name": "nitrates",
+      "position": 78,
+      "lookup_result": {
+        "found": false,
+        "note": "lookup_ingredient did not return an exact match for 'nitrate'/'nitrates'. Tool returned unrelated low-confidence fuzzy candidates (e.g., Nettles, Maitake) \u2014 not reliable matches.",
+        "candidates": [
+          {
+            "ingredient": "Nettles",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "match_type": "fuzzy",
+            "score": 61.53846153846154
+          },
+          {
+            "ingredient": "Maitake Mushroom",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714
+          },
+          {
+            "ingredient": "Shitake",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "match_type": "fuzzy",
+            "score": 57.14285714285714
+          }
+        ]
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "'nitrates' is present in the title at position 78 ('with nitrates'). lookup_ingredient() did not return an exact mapping for 'nitrate/nitrates', so category/subcategory remain unknown from the tool."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9879,
+      "completion": 8147,
+      "total": 18026
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "beet root"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Beet Root",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "beet crystals",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitrate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Nettles",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "nettle",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Maitake Mushroom",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "maitake",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Shitake",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "mushrooms - shiitake",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nitric oxide"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Vitamin B6",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "pyridoxine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Vitamin B3",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "LETTER VITAMINS",
+              "keyword": "niacinamide",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Licorice",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "deglycyrrhizinated licorice",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mixed berry"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "elder berry",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Maqui",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "maqui berry",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "elder berries",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 115.240891
+}

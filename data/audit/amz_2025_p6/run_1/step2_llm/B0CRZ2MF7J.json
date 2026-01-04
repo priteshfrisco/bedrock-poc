@@ -1,0 +1,36 @@
+{
+  "product_id": 10383,
+  "asin": "B0CRZ2MF7J",
+  "title": "natural repair vagianal capsules, anniecare instant anti-itch detox slimming products, dexcara detox repair, slimming firming capsules for women (b/1 bag)",
+  "brand": "gdsafs",
+  "source_subcategory": "weight loss detox & cleanse",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - FEMALE",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": {
+    "value": [],
+    "reasoning": "No identifiable functional ingredient names (e.g., vitamin names, herb names, specific actives like 'turmeric', 'garlic', 'lactobacillus') appear in the title. The words present (e.g., 'natural', 'repair', 'detox', 'slimming', 'anti-itch', 'firming') are functional claims, not ingredient names. Brand-like tokens such as 'anniecare' and 'dexcara' were ignored as brands."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4598,
+      "completion": 1819,
+      "total": 6417
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.955363
+}

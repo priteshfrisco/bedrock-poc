@@ -1,0 +1,59 @@
+{
+  "product_id": 5382,
+  "asin": "B0916P9F22",
+  "title": "nutricost noni capsules 500mg 240 capsules - ccof certified made with organic noni, non-gmo, gluten free",
+  "brand": "nutricost",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "ORGANIC",
+  "count": 240,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "noni",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "noni",
+    "noni"
+  ],
+  "category": "HERBAL REMEDIES",
+  "subcategory": "FORMULAS",
+  "health_focus": "BEAUTY",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9063,
+      "completion": 3515,
+      "total": 12578
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "noni"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Noni",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "FOOD SUPPLEMENTS",
+          "keyword": "morinda citrifolia",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 42.677177
+}

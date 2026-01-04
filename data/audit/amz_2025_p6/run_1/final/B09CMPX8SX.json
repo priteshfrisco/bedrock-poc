@@ -1,0 +1,75 @@
+{
+  "product_id": 5857,
+  "asin": "B09CMPX8SX",
+  "title": "cold pressed black seed oil, omega 3 6 9  super antioxidant & immune support, joints, digestion, hair & skin, 3.38 fl oz., extracted on wooden churner, no gmo,untreated, unrefined",
+  "brand": "ayurvedashree",
+  "source_subcategory": "omega oils",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "FISH OIL",
+  "remap_reason": "Maps to OIL CATEGORY / FISH OIL",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 3.38,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "black seed oil",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "black seed oil",
+    "omega 3 6 9"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "SEED",
+  "health_focus": "IMMUNE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9216,
+      "completion": 5540,
+      "total": 14756
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "black seed oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Black Seed",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "SEED",
+          "keyword": "black cumin seed",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.305343350012532
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3 6 9"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.843989500065074
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 135.435341
+}

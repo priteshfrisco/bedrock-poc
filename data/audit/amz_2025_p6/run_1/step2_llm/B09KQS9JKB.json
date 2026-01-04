@@ -1,0 +1,93 @@
+{
+  "product_id": 6093,
+  "asin": "B09KQS9JKB",
+  "title": "nestle prenatal postpartum vitamin & mineral supplement 100 tablets (two pack)",
+  "brand": "materna",
+  "source_subcategory": "fertility & natal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "COMBINED MULTIVITAMINS",
+  "nw_subcategory": "PRENATAL",
+  "remap_reason": "Maps to COMBINED MULTIVITAMINS / PRENATAL",
+  "age": "AGE GROUP - PRENATAL",
+  "gender": "GENDER - FEMALE",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "vitamin",
+      "position": 28,
+      "category": "BASIC VITamins & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "lookup_result": {
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "The title includes the word 'vitamin' starting at character index 28. lookup_ingredient('vitamin') returned a normalized match 'Vitamin D' in BASIC VITAMINS & MINERALS / LETTER VITAMINS. The extracted ingredient name is the literal token from the title ('vitamin')."
+    },
+    {
+      "name": "mineral",
+      "position": 38,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "MINERALS",
+      "lookup_result": {
+        "ingredient": "Trace Minerals",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "found": true
+      },
+      "reasoning": "The title includes the word 'mineral' starting at character index 38. lookup_ingredient('mineral') returned 'Trace Minerals' in BASIC VITAMINS & MINERALS / MINERALS. The extracted ingredient name is the literal token from the title ('mineral')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9141,
+      "completion": 3548,
+      "total": 12689
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "mineral"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Trace Minerals",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "trace mineral",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 59.870057
+}

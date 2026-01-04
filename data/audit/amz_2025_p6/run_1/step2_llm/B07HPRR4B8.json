@@ -1,0 +1,36 @@
+{
+  "product_id": 3356,
+  "asin": "B07HPRR4B8",
+  "title": "skafe - linha natutrat (tonicos) - bomba vitaminas crescimento maximo 120 ml - (naturat (tonics) collection - maximum growth vitamin bomb 4.05 fl oz)",
+  "brand": "skafe",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: The title describes a topical 'vitamin bomb' tonic for hair growth; this is a cosmetic/topical product, so functional supplement ingredient extraction and lookup are not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4603,
+      "completion": 1202,
+      "total": 5805
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 18.723555
+}

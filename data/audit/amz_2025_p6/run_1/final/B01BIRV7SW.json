@@ -1,0 +1,14 @@
+{
+  "product_id": 1891,
+  "asin": "B01BIRV7SW",
+  "title": "vicks vaporub topical ointment, 100g",
+  "brand": "vicks",
+  "source_subcategory": "chest rubs & vapors",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.005046,
+  "lookup_action": "REMOVE"
+}

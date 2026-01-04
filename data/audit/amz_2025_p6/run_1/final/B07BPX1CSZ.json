@@ -1,0 +1,14 @@
+{
+  "product_id": 2959,
+  "asin": "B07BPX1CSZ",
+  "title": "organic pumpkin seed",
+  "brand": "whole foods market",
+  "source_subcategory": "pumpkin seeds",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.001656,
+  "lookup_action": "REMOVE"
+}

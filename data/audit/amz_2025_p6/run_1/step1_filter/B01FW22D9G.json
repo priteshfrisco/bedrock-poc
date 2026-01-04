@@ -1,0 +1,14 @@
+{
+  "product_id": 2019,
+  "asin": "B01FW22D9G",
+  "title": "kraft singles 2% milk reduced fat american cheese slices, 10.7 ounce (16 slices)",
+  "brand": "kraft",
+  "source_subcategory": "cheddar cheese",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.006636,
+  "lookup_action": "REMOVE"
+}

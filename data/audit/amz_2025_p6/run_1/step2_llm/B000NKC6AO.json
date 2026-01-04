@@ -1,0 +1,36 @@
+{
+  "product_id": 176,
+  "asin": "B000NKC6AO",
+  "title": "sierra, anode, magnesium, 18-6112",
+  "brand": "sierra",
+  "source_subcategory": "magnesium supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: although the word 'magnesium' appears, the context ('anode') indicates a magnesium metal part, not a functional supplement ingredient."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4576,
+      "completion": 1101,
+      "total": 5677
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.372408
+}

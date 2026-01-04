@@ -1,0 +1,14 @@
+{
+  "product_id": 2345,
+  "asin": "B01NANXDT2",
+  "title": "nest scientific 701201 tc-treated cell culture plate, v-bottom, sterile, 96 well, polystyrene, clear (pack of 100)",
+  "brand": "nest",
+  "source_subcategory": "fluid administration & collection",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.005022,
+  "lookup_action": "REMOVE"
+}

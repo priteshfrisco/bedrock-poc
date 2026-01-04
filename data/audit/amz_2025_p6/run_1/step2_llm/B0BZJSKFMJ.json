@@ -1,0 +1,121 @@
+{
+  "product_id": 8136,
+  "asin": "B0BZJSKFMJ",
+  "title": "secrets of the tribe hibiscus usda organic  alcohol extract, high-potency herbal drops  made from 100% certified organic hibiscus (hibiscus sabdariffa) dried flower 2 oz",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "ORGANIC",
+  "count": "2",
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "hibiscus",
+      "position": 21,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "called_name": "hibiscus",
+        "tool_found": false,
+        "tool_ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Probiotic",
+            "nw_category": "PROBIOTICS+",
+            "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+            "keyword": "dophilus",
+            "match_type": "fuzzy",
+            "score": 50.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Illicium",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "illicium",
+            "match_type": "fuzzy",
+            "score": 50.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Elderberry",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "SINGLES",
+            "keyword": "sambucus",
+            "match_type": "fuzzy",
+            "score": 50.0,
+            "confidence": "low"
+          }
+        ],
+        "tool_confidence": "low",
+        "tool_reason": "Lookup returned no clear match; multiple fuzzy candidates."
+      },
+      "reasoning": "The functional botanical 'hibiscus' appears in the title. The first occurrence starts at character index 21 (0-based). It also appears later in the title (as 'certified organic hibiscus' and inside the parenthetical species), but the earliest occurrence at index 21 is used to determine primary ingredient. lookup_ingredient('hibiscus') was called and returned no definitive match (tool_found=false), so category/subcategory are set to UNKNOWN and the tool output is included."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9252,
+      "completion": 5846,
+      "total": 15098
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hibiscus"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Probiotic",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+              "keyword": "dophilus",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Illicium",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "illicium",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Elderberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "SINGLES",
+              "keyword": "sambucus",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.158024
+}

@@ -1,0 +1,42 @@
+{
+  "product_id": 9763,
+  "asin": "B0CK3R6XKK",
+  "title": "trimedix (5 pack) aizen power - aizen power for men, aizen power supplement, male, aizen power men enhancement, aizen power pills, aizen power plus, aizenpower, 24, for 150 days",
+  "brand": "trimedix",
+  "source_subcategory": "other dietary supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - MALE",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "COUNT",
+  "size": 5,
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4614,
+      "completion": 2147,
+      "total": 6761
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 29.08358
+}

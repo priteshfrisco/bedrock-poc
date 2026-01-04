@@ -1,0 +1,16 @@
+{
+  "product_id": 70,
+  "asin": "B0BH6FHLHM",
+  "title": "quality choice advanced probiotic - ultra potency - digestive and immune support - dietary supplement in 60 count bottles of capsules (3 pack)",
+  "brand": "quality choice",
+  "source_subcategory": "probiotics",
+  "status": "error",
+  "step_completed": 0,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+  "remap_reason": "Maps to PREBIOTICS & PROBIOTICS / PREBIOTICS & PROBIOTICS",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/main.py\", line 101, in process_single_record\n    attributes = extract_attributes_from_llm_result(llm_result)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/priteshfrisco/Desktop/bedrock-poc/src/pipeline/step2_llm.py\", line 125, in extract_attributes_from_llm_result\n    'gender': llm_result.get('gender', {}).get('value', 'N/A'),\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+  "error": "'str' object has no attribute 'get'",
+  "processing_time_sec": 51.190938
+}

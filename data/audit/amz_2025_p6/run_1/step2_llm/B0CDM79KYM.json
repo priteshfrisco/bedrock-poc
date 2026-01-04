@@ -1,0 +1,94 @@
+{
+  "product_id": 9100,
+  "asin": "B0CDM79KYM",
+  "title": "new roots herbal - silica 7% extract - 90 capsules - 600mg per capsule - silica supplement - healthy hair nail and skin vitamins for men and women",
+  "brand": "new roots herbal",
+  "source_subcategory": "hair, skin & nails supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "silica",
+      "position": 19,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_normalized": "Horsetail",
+      "lookup_found": true,
+      "reasoning": "The word 'silica' occurs at character index 19 ('...herbal - silica 7%...'). lookup_ingredient('silica') returned normalized ingredient 'Horsetail' with category/subcategory as shown."
+    },
+    {
+      "name": "silica",
+      "position": 73,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "lookup_normalized": "Horsetail",
+      "lookup_found": true,
+      "reasoning": "The word 'silica' appears again at character index 73 ('...per capsule - silica supplement ...'). This is a repeated mention of the same functional ingredient; lookup_ingredient returned the same mapping."
+    },
+    {
+      "name": "vitamins",
+      "position": 120,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "lookup_normalized": "Multivitamin",
+      "lookup_found": true,
+      "reasoning": "The phrase 'vitamins' (as in 'healthy hair nail and skin vitamins') begins at character index 120. lookup_ingredient('vitamins') returned normalized 'Multivitamin' with the category/subcategory shown."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9188,
+      "completion": 5538,
+      "total": 14726
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "silica"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Horsetail",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "horsetail (silica)",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 115.891807
+}

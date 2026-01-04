@@ -1,0 +1,36 @@
+{
+  "product_id": 5126,
+  "asin": "B08RB4L3F2",
+  "title": "ayurvedic mahakalyanaka ghritam (150 grams)",
+  "brand": "kottakkal",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title does not list discrete functional supplement ingredients to extract; 'mahakalyanaka ghritam' is a named Ayurvedic formulation (medicated ghee), so ingredient extraction and lookup are not performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4577,
+      "completion": 1593,
+      "total": 6170
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 20.215197
+}

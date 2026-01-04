@@ -1,0 +1,33 @@
+{
+  "product_id": 364,
+  "asin": "B001OUIWAU",
+  "title": "galeffi effervescent - 2 jars (each 250 grams)",
+  "brand": "galeffi",
+  "source_subcategory": "antacids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 8.8185,
+  "unit": "OZ",
+  "size": 2,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4578,
+      "completion": 1805,
+      "total": 6383
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 34.761078
+}

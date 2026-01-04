@@ -1,0 +1,63 @@
+{
+  "product_id": 5855,
+  "asin": "B09CKLFZQP",
+  "title": "isorich protein  2.21lb  malai kulfi flavour  29g protein  29 servings",
+  "brand": "avvatar",
+  "source_subcategory": "protein powder blends",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENT POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 29,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 8,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "lookup": {
+        "ingredient": "Soy Foods",
+        "found": true,
+        "notes": "lookup_ingredient('protein') returned normalized ingredient 'Soy Foods' with category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'."
+      },
+      "reasoning": "The word 'protein' appears in the title at index 8 (first occurrence). This is the functional ingredient in the product name."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9060,
+      "completion": 3736,
+      "total": 12796
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 102.764815
+}

@@ -1,0 +1,14 @@
+{
+  "product_id": 4999,
+  "asin": "B08MZF3S4G",
+  "title": "topiclear pure glycerin (pack of 6)",
+  "brand": "topiclear",
+  "source_subcategory": "body creams & lotions",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.03363,
+  "lookup_action": "REMOVE"
+}

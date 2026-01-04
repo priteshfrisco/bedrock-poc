@@ -1,0 +1,36 @@
+{
+  "product_id": 201,
+  "asin": "B000RMEZRU",
+  "title": "sqwincher fast pack liquid concentrate, fruit punch, .6 fl oz (4 packs of 50)",
+  "brand": "sqwincher",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title describes a beverage/liquid concentrate (drink mix). Ingredient extraction and lookup not performed for non-supplement products."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4584,
+      "completion": 1160,
+      "total": 5744
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 21.808083
+}

@@ -1,0 +1,5 @@
+[2026-01-04T22:46:39.683866] [B0785GPGXM] EXCEPTION: 'str' object has no attribute 'get'
+[2026-01-04T22:46:43.932361] [B0DM63Y1QR] EXCEPTION: 'str' object has no attribute 'get'
+[2026-01-04T22:46:58.126696] [B0BH6FHLHM] EXCEPTION: 'str' object has no attribute 'get'
+[2026-01-04T22:46:58.685782] [B0F3VLXJ42] EXCEPTION: 'str' object has no attribute 'get'
+[2026-01-04T22:47:07.133249] [B0FC4GYHK5] EXCEPTION: 'str' object has no attribute 'get'

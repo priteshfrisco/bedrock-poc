@@ -1,0 +1,14 @@
+{
+  "product_id": 1799,
+  "asin": "B017WFKMHQ",
+  "title": "sugar in the raw sugar packets 4 oz (pack of 4)",
+  "brand": "in the raw",
+  "source_subcategory": "sugars",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.008062,
+  "lookup_action": "REMOVE"
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 219,
+  "asin": "B000W6KKMK",
+  "title": "protect slip 56 ud. cotton feel flexiform",
+  "brand": "carefree",
+  "source_subcategory": "collagen supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains no dietary/functional ingredients and refers to a non-supplement product, so ingredient extraction is not applicable."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4573,
+      "completion": 1186,
+      "total": 5759
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 22.660784
+}

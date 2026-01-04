@@ -1,0 +1,204 @@
+{
+  "product_id": 9444,
+  "asin": "B0CH31GPSX",
+  "title": "grimed nad + boosting 16,550mg- x12 power with nr + resveratrol turmeric + quercetin - cellular energy, cellular repair, healthy aging - usa made & tested (90 count (pack of 1))",
+  "brand": "grimed",
+  "source_subcategory": "antioxidants",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "NOT ORGANIC",
+  "count": 90,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "nad",
+      "position": 7,
+      "lookup_result": {
+        "ingredient": "NADH",
+        "found": true,
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "NON-SPECIFIC",
+        "tool_note": "lookup returned 'NADH' (fuzzy match)"
+      },
+      "reasoning": "The title contains 'nad' at index 7. Likely referring to NAD / NADH-related ingredient used for cellular energy/aging support. The lookup returned NADH (fuzzy match) with category 'MISCELLANEOUS SUPPLEMENTS'."
+    },
+    {
+      "name": "nr",
+      "position": 47,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "tool_note": "lookup returned ambiguous results / needs disambiguation (no exact match). Common interpretation of 'NR' in supplements is nicotinamide riboside."
+      },
+      "category_decision": {
+        "ingredient_interpretation": "nicotinamide riboside (NR)",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS"
+      },
+      "reasoning": "'nr' appears at index 47. The automated lookup call returned ambiguous/no exact match. In supplement context 'NR' is commonly nicotinamide riboside (a form of vitamin B3), so I interpret it as nicotinamide riboside and assigned the category 'BASIC VITAMINS & MINERALS' / 'LETTER VITAMINS'. This decision is based on common industry usage of the abbreviation 'NR'."
+    },
+    {
+      "name": "resveratrol",
+      "position": 52,
+      "lookup_result": {
+        "ingredient": "Resveratrol",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS",
+        "tool_note": "exact match"
+      },
+      "reasoning": "'resveratrol' is explicitly present starting at index 52. Lookup returned Resveratrol in 'HERBAL REMEDIES' \u2192 'POLYPHENOLS'."
+    },
+    {
+      "name": "turmeric",
+      "position": 64,
+      "lookup_result": {
+        "ingredient": "Turmeric",
+        "found": true,
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "tool_note": "lookup returned Turmeric (exact match; tool mapped to given category/subcategory)"
+      },
+      "reasoning": "'turmeric' is explicitly present starting at index 64. The lookup returned Turmeric (tool-mapped category/subcategory as shown)."
+    },
+    {
+      "name": "quercetin",
+      "position": 73,
+      "lookup_result": {
+        "ingredient": "Quercetin",
+        "found": true,
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS",
+        "tool_note": "exact match"
+      },
+      "reasoning": "'quercetin' is explicitly present starting at index 73. Lookup returned Quercetin in 'HERBAL REMEDIES' \u2192 'POLYPHENOLS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9600,
+      "completion": 6163,
+      "total": 15763
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nad"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "NADH",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "nadh",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 85
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "nr"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Cranberry",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "cranrx",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ginger",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ginger",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Juniper",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "juniper",
+              "match_type": "fuzzy",
+              "score": 44.44444444444444,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "resveratrol"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Resveratrol",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "resveratrol",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "turmeric"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Turmeric",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "curcumin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 150.027397
+}

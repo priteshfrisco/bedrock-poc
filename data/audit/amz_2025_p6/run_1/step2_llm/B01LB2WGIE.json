@@ -1,0 +1,62 @@
+{
+  "product_id": 2148,
+  "asin": "B01LB2WGIE",
+  "title": "natrol milk thistle advantage capsule, 525 mg, 60 count",
+  "brand": "natrol",
+  "source_subcategory": "milk thistle herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "milk thistle",
+      "position": 7,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Milk Thistle",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD"
+      },
+      "reasoning": "The phrase 'milk thistle' appears in the title starting at character index 7 (0-based). This is the functional ingredient; 'natrol' is a brand and 'advantage' is a product line, not ingredients. Dosage '525 mg' corresponds to this ingredient."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9034,
+      "completion": 2798,
+      "total": 11832
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "milk thistle"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Milk Thistle",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "milk thistle",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 50.084193
+}

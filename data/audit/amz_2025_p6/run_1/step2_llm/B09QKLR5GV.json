@@ -1,0 +1,15 @@
+{
+  "product_id": 6278,
+  "asin": "B09QKLR5GV",
+  "title": "salty beets beetroot powder, all-in-one endurance powder for cyclists and runners, includes electrolytes, nitric oxide booster, vo2 max booster, lactic acid inhibitor, and easy-to-digest energy",
+  "brand": "salty",
+  "source_subcategory": "beet root supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "error": "Extra data: line 2 column 1 (char 79)",
+  "processing_time_sec": 73.537734
+}

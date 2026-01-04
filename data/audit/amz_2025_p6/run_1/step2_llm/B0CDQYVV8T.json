@@ -1,0 +1,33 @@
+{
+  "product_id": 9124,
+  "asin": "B0CDQYVV8T",
+  "title": "gatorade thirst quencher powder sticks, orange, total of 20 counts, 1.23oz gatorade powder packets with electrolytes (2 packs of 10)",
+  "brand": "ayd goods",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4599,
+      "completion": 666,
+      "total": 5265
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.887832
+}

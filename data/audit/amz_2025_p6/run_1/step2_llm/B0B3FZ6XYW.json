@@ -1,0 +1,36 @@
+{
+  "product_id": 6902,
+  "asin": "B0B3FZ6XYW",
+  "title": "greater than - electrolyte packed fruit infused coconut water - all natural - no added sugar. ditch the powders, packets, artifical colors & flavors - variety #2 - pack of 8 -11.2oz",
+  "brand": "greater than",
+  "source_subcategory": "lactation consumables & supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title describes coconut water beverage (fruit infused coconut water) \u2014 ingredient extraction skipped because product is not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4606,
+      "completion": 1168,
+      "total": 5774
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 18.308796
+}

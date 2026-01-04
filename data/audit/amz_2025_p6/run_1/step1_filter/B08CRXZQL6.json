@@ -1,0 +1,14 @@
+{
+  "product_id": 4607,
+  "asin": "B08CRXZQL6",
+  "title": "365 by whole foods market, ground cardamom, 1.98 ounce",
+  "brand": "whole foods market",
+  "source_subcategory": "cardamom seed spice",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.04282,
+  "lookup_action": "REMOVE"
+}

@@ -1,0 +1,33 @@
+{
+  "product_id": 100,
+  "asin": "B0D2L5D3QB",
+  "title": "nano defense pro supplement, (official) nano defense pro advanced nail support capsules, nano defense pro pills for healthy fingernails and nail growth, nano defensepro reviews (60 capsules)",
+  "brand": "nutrarize",
+  "source_subcategory": "weight loss supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4599,
+      "completion": 1796,
+      "total": 6395
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 29.215386
+}

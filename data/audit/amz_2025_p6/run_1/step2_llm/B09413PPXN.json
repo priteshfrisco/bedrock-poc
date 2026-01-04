@@ -1,0 +1,36 @@
+{
+  "product_id": 5500,
+  "asin": "B09413PPXN",
+  "title": "blue tea -japanese matcha green tea powder - 1.76oz  gifting delight  natural ingredients - ceremonial grade - flavourful fusion  non-gmo - vegan - gluten free  tin packaging",
+  "brand": "blue tea",
+  "source_subcategory": "green tea herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "POLYPHENOLS",
+  "remap_reason": "Maps to HERBAL REMEDIES / POLYPHENOLS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title lists a food ingredient ('japanese matcha green tea powder') rather than functional supplement ingredients; ingredient lookup not performed because product is a food/beverage, not a dietary supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4604,
+      "completion": 1479,
+      "total": 6083
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 23.768573
+}

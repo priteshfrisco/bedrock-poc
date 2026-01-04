@@ -1,0 +1,14 @@
+{
+  "product_id": 6,
+  "asin": "B0D9W7H2VN",
+  "title": "la fermiere hibiscus raspberry yogurt, 5.6 oz",
+  "brand": "la fermiere",
+  "source_subcategory": "yogurt",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.008604,
+  "lookup_action": "REMOVE"
+}

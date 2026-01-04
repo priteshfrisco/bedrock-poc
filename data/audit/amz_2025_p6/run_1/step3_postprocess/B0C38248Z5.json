@@ -1,0 +1,39 @@
+{
+  "product_id": 8328,
+  "asin": "B0C38248Z5",
+  "title": "3 pack - amiclear drops - amiclear liquid, amiclear reviews, ami clear, amiclear healthy drops, (3 bottle for 3 month)",
+  "brand": "feelgo",
+  "source_subcategory": "calcium supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 3,
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4597,
+      "completion": 2315,
+      "total": 6912
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 26.066004
+}

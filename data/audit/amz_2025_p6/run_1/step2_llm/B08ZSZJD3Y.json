@@ -1,0 +1,136 @@
+{
+  "product_id": 5361,
+  "asin": "B08ZSZJD3Y",
+  "title": "gnc lean shake 25 meal replacement powder, weight management, with 25g protein and high fiber, keto, banana, 16 servings",
+  "brand": "gnc",
+  "source_subcategory": "weight loss shakes & powders",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 16,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "protein",
+      "position": 71,
+      "lookup_found": true,
+      "lookup_normalized_name": "Soy Foods",
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "Title contains '25g protein' (starts at character index 71). lookup_ingredient returned a match mapping protein-related term to category 'ACTIVE NUTRITION' / 'PROTEIN & MEAL REPLACEMENTS'."
+    },
+    {
+      "name": "fiber",
+      "position": 88,
+      "lookup_found": true,
+      "lookup_normalized_name": "Acacia Fiber",
+      "category": "PROBIOTICS+",
+      "subcategory": "FIBER PRODUCTS & LAXATIVES",
+      "reasoning": "Title contains the phrase 'high fiber' (starts at character index 88). lookup_ingredient returned a fiber-related match in 'PROBIOTICS+' / 'FIBER PRODUCTS & LAXATIVES'."
+    },
+    {
+      "name": "banana",
+      "position": 101,
+      "lookup_found": false,
+      "lookup_normalized_name": "UNKNOWN",
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "Title lists 'banana' as the flavor (starts at character index 101). lookup_ingredient did not return a confident normalized match for 'banana' (found=false); candidates returned by the lookup tool were low-confidence / non-matching, so category/subcategory are set to UNKNOWN."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9417,
+      "completion": 4703,
+      "total": 14120
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fiber"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Acacia Fiber",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "acacia fiber",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.152766640198825
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "banana"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Belladonna",
+              "nw_category": "HOMEOPATHICS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "bella donna",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Belladonna",
+              "nw_category": "HOMEOPATHICS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "belladonna",
+              "match_type": "fuzzy",
+              "score": 62.5,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Damiana",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "damiana",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 56.08861
+}

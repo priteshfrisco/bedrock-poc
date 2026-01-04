@@ -1,0 +1,167 @@
+{
+  "product_id": 6931,
+  "asin": "B0B3W3LR1D",
+  "title": "secrets of the tribe white willow tincture alcohol extract, high-potency herbal drops, tincture made from white willow salix alba healthy joints and muscles 2 oz",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other dietary supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to MISCELLANEOUS SUPPLEMENTS / MISCELLANEOUS SUPPLEMENTS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": "2",
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "white willow",
+      "position": 21,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Willow Bark",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "raw_tool_info": {
+          "keyword": "white willow",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      "reasoning": "The phrase 'white willow' appears in the title starting at character index 21. lookup_ingredient returned a match (normalized to 'Willow Bark')."
+    },
+    {
+      "name": "white willow",
+      "position": 106,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Willow Bark",
+        "nw_category": "FATTY ACIDS",
+        "nw_subcategory": "HEMP/CBD",
+        "raw_tool_info": {
+          "keyword": "white willow",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      "reasoning": "The title repeats 'white willow' (\"tincture made from white willow ...\") starting at index 106. This is the same functional ingredient as the earlier occurrence; lookup result is the same."
+    },
+    {
+      "name": "salix alba",
+      "position": 119,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "caralluma",
+            "nw_category": "ACTIVE NUTRITION",
+            "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+            "keyword": "slimaluma",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Alfalfa",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "alfalfa",
+            "match_type": "fuzzy",
+            "score": 58.82352941176471,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Slippery Elm Bark",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "slippery elm",
+            "match_type": "fuzzy",
+            "score": 51.85185185185186,
+            "confidence": "low"
+          }
+        ],
+        "note": "Tool returned no direct match for the exact latin name."
+      },
+      "reasoning": "The title contains the botanical name 'salix alba' starting at index 119. This is present in the title as a functional ingredient string. The lookup tool did not return an exact match for 'salix alba' (returned 'UNKNOWN' and candidate matches). Note: 'salix alba' is the botanical name for white willow (title contains both forms), but the lookup tool did not resolve the botanical name \u2014 the entry is included because the literal term appears in the title."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9349,
+      "completion": 7271,
+      "total": 16620
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "white willow"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Willow Bark",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "white willow",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "salix alba"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "caralluma",
+              "nw_category": "ACTIVE NUTRITION",
+              "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+              "keyword": "slimaluma",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Alfalfa",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "alfalfa",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Slippery Elm Bark",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "slippery elm",
+              "match_type": "fuzzy",
+              "score": 51.85185185185186,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 95.19628
+}

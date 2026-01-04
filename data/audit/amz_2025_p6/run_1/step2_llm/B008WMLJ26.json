@@ -1,0 +1,120 @@
+{
+  "product_id": 882,
+  "asin": "B008WMLJ26",
+  "title": "all american efx kre-alkalyn efx powder - 140 servings",
+  "brand": "all american efx",
+  "source_subcategory": "creatine amino acids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "AMINO ACIDS",
+  "remap_reason": "Maps to AMINO ACIDS / AMINO ACIDS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 140,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "kre-alkalyn",
+      "position": 17,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "needs_disambiguation": true,
+        "candidates": [
+          {
+            "ingredient": "Bitter Melon",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "karela",
+            "match_type": "fuzzy",
+            "score": 58.82352941176471,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "bromelain",
+            "nw_category": "PROBIOTICS+",
+            "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+            "keyword": "bromelain",
+            "match_type": "fuzzy",
+            "score": 50,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Relora",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "relora",
+            "match_type": "fuzzy",
+            "score": 47.05882352941176,
+            "confidence": "low"
+          }
+        ],
+        "confidence": "low",
+        "reason": "Lookup returned no confident match for the branded term 'kre-alkalyn'."
+      },
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "'kre-alkalyn' is present in the title starting at character index 17. This appears to be a branded form of creatine (Kre-Alkalyn) but the ingredient lookup did not return a confident category/subcategory match. Therefore category/subcategory set to UNKNOWN based on lookup result."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9212,
+      "completion": 3618,
+      "total": 12830
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "kre-alkalyn"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Bitter Melon",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "karela",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "bromelain",
+              "nw_category": "PROBIOTICS+",
+              "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+              "keyword": "bromelain",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Relora",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "relora",
+              "match_type": "fuzzy",
+              "score": 47.05882352941176,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 51.053907
+}

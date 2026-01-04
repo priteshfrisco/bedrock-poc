@@ -1,0 +1,65 @@
+{
+  "product_id": 1376,
+  "asin": "B00MB0UNO0",
+  "title": "ecoideas organic red maca root powder - 454g  vegan, non-gmo, gluten-free  sustainably sourced from peru  organic red maca boost powder for energy & wellness",
+  "brand": "ecoideas",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 16.014396,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "red maca",
+      "position": 17,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Detected phrase 'red maca' starting at character index 17 ('ecoideas organic red maca...'). lookup_ingredient('red maca') returned normalized ingredient 'Maca' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "red maca",
+      "position": 115,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Detected repeated phrase 'organic red maca' starting at character index 107; the 'red maca' portion begins at index 115 ('...peru  organic red maca boost...'). lookup_ingredient('red maca') returned normalized ingredient 'Maca' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9078,
+      "completion": 4911,
+      "total": 13989
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "red maca"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Maca",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "maca",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.320622
+}

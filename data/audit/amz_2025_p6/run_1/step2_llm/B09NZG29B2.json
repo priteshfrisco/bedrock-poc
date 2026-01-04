@@ -1,0 +1,158 @@
+{
+  "product_id": 6220,
+  "asin": "B09NZG29B2",
+  "title": "siberian green lung support complex 60 capsules - traditional formula supplement rich in quercetin, citrus bioflavonoids, pine bark, strong respiratory bronchial",
+  "brand": "siberian green",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 89,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Quercetin",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS"
+      },
+      "reasoning": "The word 'quercetin' appears in the title starting at character index 89. lookup_ingredient returned Quercetin \u2192 HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "citrus bioflavonoids",
+      "position": 100,
+      "lookup_result": {
+        "found": false,
+        "note": "lookup_ingredient returned ambiguous/low-confidence matches for this phrase.",
+        "candidates": [
+          {
+            "ingredient": "Isoflavones",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "score": 64.51612903225806
+          },
+          {
+            "ingredient": "Bioflavonoid Complex",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "score": 60.0
+          }
+        ]
+      },
+      "assigned_category": {
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS"
+      },
+      "reasoning": "The phrase 'citrus bioflavonoids' appears at index 100. The lookup returned ambiguous/low-confidence candidates. Based on the common classification of bioflavonoids, I assign category HERBAL REMEDIES / POLYPHENOLS (tool did not return an exact match)."
+    },
+    {
+      "name": "pine bark",
+      "position": 122,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Pine Bark",
+        "nw_category": "HERBAL REMEDIES",
+        "nw_subcategory": "POLYPHENOLS"
+      },
+      "reasoning": "The words 'pine bark' appear at character index 122. lookup_ingredient returned Pine Bark \u2192 HERBAL REMEDIES / POLYPHENOLS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9437,
+      "completion": 5253,
+      "total": 14690
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "citrus bioflavonoids"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavone",
+              "match_type": "fuzzy",
+              "score": 64.51612903225806,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Isoflavones",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "isoflavones",
+              "match_type": "fuzzy",
+              "score": 64.51612903225806,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bioflavonoid Complex",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "bioflavonoid complex",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pine bark"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pine Bark",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "pine bark",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 80.655677
+}

@@ -1,0 +1,271 @@
+{
+  "product_id": 8726,
+  "asin": "B0C8QKDHCF",
+  "title": "vitamin hydrate electrolyte powdered drink mix, super hydration, boost stamina & fight fatigue, bursting with electrolytes, vitamins & minerals, 0 sugar, blue raspberry, 10 stick packs",
+  "brand": "vitamin hydrate",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 10,
+  "unit": "COUNT",
+  "size": 10,
+  "ingredients": [
+    {
+      "name": "vitamin",
+      "position": 0,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "note": "Lookup returned 'Vitamin D' for the token 'vitamin' (medium confidence). The title uses a generic 'vitamin' term; the tool mapped it to a specific vitamin."
+      },
+      "reasoning": "The word 'vitamin' appears at the very start of the title (position 0). Lookup returned a Vitamin D mapping (see lookup_result)."
+    },
+    {
+      "name": "electrolyte",
+      "position": 16,
+      "lookup_result": {
+        "found": false,
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "confidence": "low",
+            "note": "Tool produced fuzzy candidates that do not clearly match the functional term 'electrolyte'."
+          }
+        ],
+        "note": "Lookup did not return a confident direct match for 'electrolyte'."
+      },
+      "reasoning": "The singular 'electrolyte' appears after 'vitamin hydrate' (position 16). The product explicitly advertises electrolytes; tool lookup returned no clear direct match (candidates only)."
+    },
+    {
+      "name": "electrolytes",
+      "position": 110,
+      "lookup_result": {
+        "found": false,
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "confidence": "low",
+            "note": "Tool produced fuzzy candidates that do not clearly match the functional term 'electrolytes'."
+          }
+        ],
+        "note": "Lookup did not return a confident direct match for 'electrolytes'."
+      },
+      "reasoning": "The plural 'electrolytes' appears later in the title ('bursting with electrolytes', position 110). This repeats the functional ingredient; lookup had no clear direct mapping."
+    },
+    {
+      "name": "vitamins",
+      "position": 124,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Multivitamin",
+        "nw_category": "COMBINED MULTIVITAMINS",
+        "nw_subcategory": "COMBINED MULTIVITAMINS",
+        "note": "Tool mapped 'vitamins' to 'Multivitamin' (medium confidence)."
+      },
+      "reasoning": "The term 'vitamins' appears at position 124 ('vitamins & minerals'). Lookup mapped this to Multivitamin, which is significant for primary ingredient determination."
+    },
+    {
+      "name": "minerals",
+      "position": 135,
+      "lookup_result": {
+        "found": false,
+        "candidates": [
+          {
+            "ingredient": "Trace Minerals",
+            "nw_category": "BASIC VITAMINS & MINERALS",
+            "nw_subcategory": "MINERALS",
+            "confidence": "low",
+            "note": "Tool provided 'Trace Minerals' as the best fuzzy candidate for 'minerals'."
+          }
+        ],
+        "note": "Lookup did not return a single confident canonical match but suggested 'Trace Minerals' as the closest candidate."
+      },
+      "reasoning": "The word 'minerals' appears after 'vitamins &' (position 135). Tool lookup gave 'Trace Minerals' as a low-confidence candidate."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9957,
+      "completion": 9889,
+      "total": 19846
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "minerals"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "minerals and trace",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace mineral",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Trace Minerals",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "MINERALS",
+              "keyword": "trace minerals",
+              "match_type": "fuzzy",
+              "score": 72.72727272727273,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 111.876862
+}

@@ -1,0 +1,42 @@
+{
+  "product_id": 7995,
+  "asin": "B0BWDW2CJ4",
+  "title": "jic gem natural quartz obelisk crystal wand tower balmatin crystal point 6 faceted column crystal wand reiki healing 1.1-1.8 lbs",
+  "brand": "jic gem",
+  "source_subcategory": "other alternative medicine",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "primary_ingredient": "value",
+  "num_ingredients": 2,
+  "all_ingredients": [
+    "value",
+    "reasoning"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "SLEEP",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4598,
+      "completion": 1022,
+      "total": 5620
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 13.959991
+}

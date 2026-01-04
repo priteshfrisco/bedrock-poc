@@ -1,0 +1,173 @@
+{
+  "product_id": 4911,
+  "asin": "B08L5Q1SRV",
+  "title": "pedialyte with immune support, electrolytes with vitamin c and zinc, advanced hydration with preactiv prebiotics, fruit punch, electrolyte drink powder packets, 24 count (pack of 4)",
+  "brand": "pedialyte",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "24",
+  "unit": "COUNT",
+  "size": 4,
+  "ingredients": [
+    {
+      "name": "electrolytes",
+      "position": 31,
+      "lookup_result": {
+        "found": false,
+        "ingredient": "UNKNOWN",
+        "nw_category": "UNKNOWN",
+        "nw_subcategory": "UNKNOWN",
+        "tool_note": "lookup_ingredient returned found=false and no direct match for 'electrolytes'. Multiple low-confidence candidates were suggested by the tool; none were a clear match. Electrolytes are a functional ingredient phrase in the title and are recorded as-is."
+      },
+      "reasoning": "'electrolytes' is explicitly present in the title ('...electrolytes with vitamin c and zinc...') and appears at character index 31 (0-indexed). Recorded as an ingredient string exactly as shown."
+    },
+    {
+      "name": "vitamin c",
+      "position": 49,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Vitamin D",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "tool_note": "lookup_ingredient was called for 'vitamin c' but the tool returned 'Vitamin D' (BASIC VITAMINS & MINERALS / LETTER VITAMINS). Returning the tool's response as required."
+      },
+      "reasoning": "'vitamin c' appears explicitly in the title ('electrolytes with vitamin c and zinc') at index 49. The original ingredient name is recorded; lookup results are included per the tool output (note: the tool mapped to 'Vitamin D')."
+    },
+    {
+      "name": "zinc",
+      "position": 63,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Zinc",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "MINERALS",
+        "tool_note": "lookup_ingredient returned Zinc with category BASIC VITAMINS & MINERALS and subcategory MINERALS."
+      },
+      "reasoning": "'zinc' is explicitly present in the title ('...vitamin c and zinc...') at index 63 and was matched by the lookup tool to Zinc (MINERALS)."
+    },
+    {
+      "name": "preactiv prebiotics",
+      "position": 93,
+      "lookup_result": {
+        "found": true,
+        "ingredient": "Probiotic",
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+        "tool_note": "lookup_ingredient mapped 'preactiv prebiotics' to Probiotic (PROBIOTICS+ / PREBIOTICS AND PROBIOTICS)."
+      },
+      "reasoning": "'preactiv prebiotics' appears explicitly in the title ('advanced hydration with preactiv prebiotics') at index 93. The trademarked phrase was recorded as given; lookup result associates it with prebiotics/probiotics category."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9536,
+      "completion": 7049,
+      "total": 16585
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolytes"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "zinc"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Zinc",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "MINERALS",
+          "keyword": "cold eeze",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "preactiv prebiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "prebiotics",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 119.759538
+}

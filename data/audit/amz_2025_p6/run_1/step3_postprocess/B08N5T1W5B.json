@@ -1,0 +1,39 @@
+{
+  "product_id": 5003,
+  "asin": "B08N5T1W5B",
+  "title": "dr. reckeweg r29 (theridon) (22ml)",
+  "brand": "dr. reckeweg",
+  "source_subcategory": "single homeopathic remedies",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HOMEOPATHICS",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HOMEOPATHICS / HOMEOPATHICS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "primary_ingredient": null,
+  "num_ingredients": 0,
+  "all_ingredients": [],
+  "category": null,
+  "subcategory": null,
+  "health_focus": "UNKNOWN",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4577,
+      "completion": 1377,
+      "total": 5954
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 25.318596
+}

@@ -1,0 +1,58 @@
+{
+  "product_id": 3113,
+  "asin": "B07D7X4M3X",
+  "title": "herb essential 100% organic gotu kola tablets 500mg, 60 count,vegan & gluten-free herbal supplement, no added colors, flavors, & preservatives, 60 tablets",
+  "brand": "herb essential",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "ORGANIC",
+  "count": 60,
+  "unit": "COUNT",
+  "size": 1,
+  "primary_ingredient": "gotu kola",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "gotu kola"
+  ],
+  "category": "FATTY ACIDS",
+  "subcategory": "HEMP/CBD",
+  "health_focus": "BRAIN HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9083,
+      "completion": 4760,
+      "total": 13843
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gotu kola"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Gotu Kola",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "gotu kola",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 50.564911
+}

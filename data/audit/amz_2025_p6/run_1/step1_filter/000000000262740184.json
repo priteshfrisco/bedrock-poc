@@ -1,0 +1,14 @@
+{
+  "product_id": 1,
+  "asin": "000000000262740184",
+  "title": "baths and bathing in classical antiquity",
+  "brand": "mit press",
+  "source_subcategory": "bubble baths & soaks",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.019321,
+  "lookup_action": "REMOVE"
+}

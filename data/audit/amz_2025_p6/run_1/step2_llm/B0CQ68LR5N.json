@@ -1,0 +1,150 @@
+{
+  "product_id": 10246,
+  "asin": "B0CQ68LR5N",
+  "title": "sugarbear sleep gummy 14 day supply, extra strength melatonin 6mg, for men & women, vegan vitamin b6, l-theanine, 5 htp, valerian, sleep aid for adults & teens, certified kosher, halal, cruelty-free",
+  "brand": "sugarbearhair",
+  "source_subcategory": "medicinal sleep aids",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / DHEA & PREGNENOLONE & HORMONES",
+  "age": "AGE GROUP - ADULT",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "melatonin",
+      "position": 52,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "DHEA & PREGNENOLONE & HORMONES",
+      "reasoning": "Found 'melatonin' in 'extra strength melatonin 6mg'. Position calculated as the index where 'melatonin' begins (0-indexed). lookup_ingredient() returned normalized 'Melatonin' and the shown category/subcategory."
+    },
+    {
+      "name": "vitamin b6",
+      "position": 90,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'vitamin b6' in 'vegan vitamin b6'. Position is the index where 'vitamin' begins. lookup_ingredient() returned normalized 'Vitamin B6' and the shown category/subcategory."
+    },
+    {
+      "name": "l-theanine",
+      "position": 102,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Found 'l-theanine' (as 'l-theanine') following 'vitamin b6'. Position is the index where 'l-theanine' begins. lookup_ingredient() returned normalized 'Theanine' and the shown category/subcategory."
+    },
+    {
+      "name": "5 htp",
+      "position": 114,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "DHEA & PREGNENOLONE & HORMONES",
+      "reasoning": "Found '5 htp' in the title (appears as '5 htp'). Position is the index where '5' begins. lookup_ingredient() returned normalized '5HTP' and the shown category/subcategory."
+    },
+    {
+      "name": "valerian",
+      "position": 121,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'valerian' in the title. Position is the index where 'valerian' begins. lookup_ingredient() returned normalized 'Valerian' and the shown category/subcategory."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9485,
+      "completion": 6971,
+      "total": 16456
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "melatonin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Melatonin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+          "keyword": "melatonin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin b6"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B6",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b 6",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "l-theanine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Theanine",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "l-theanine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "5 htp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "5HTP",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "DHEA & PREGNENOLONE & HORMONES",
+          "keyword": "5 htp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "valerian"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Valerian",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "valarian",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 88.388972
+}

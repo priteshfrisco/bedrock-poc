@@ -1,0 +1,127 @@
+{
+  "product_id": 10575,
+  "asin": "B0CVH68BGD",
+  "title": "wellbeing nutrition beauty collagen with hyaluronic acid  collagen supplements for women & men  collagen powder with biotin and vitamins for skin radiance & anti-aging  250g-strawberry watermelon",
+  "brand": "wellbeing nutrition",
+  "source_subcategory": "collagen supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 8.8185,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "collagen",
+      "position": 27,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "First occurrence of 'collagen' begins at character index 27. lookup_ingredient returned normalized 'Collagen' with category 'ACTIVE NUTRITION' and subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "hyaluronic acid",
+      "position": 41,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "'hyaluronic acid' appears starting at index 41. lookup_ingredient returned 'Hyaluronic Acid' with category 'MISCELLANEOUS SUPPLEMENTS' and subcategory 'NON-SPECIFIC'."
+    },
+    {
+      "name": "biotin",
+      "position": 117,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "'biotin' appears at index 117. lookup_ingredient returned 'biotin' mapped to 'BASIC VITAMINS & MINERALS' / 'LETTER VITAMINS'."
+    },
+    {
+      "name": "vitamins",
+      "position": 128,
+      "category": "COMBINED MULTIVITAMINS",
+      "subcategory": "COMBINED MULTIVITAMINS",
+      "reasoning": "'vitamins' appears at index 128. lookup_ingredient matched this to 'Multivitamin' (category 'COMBINED MULTIVITAMINS' / subcategory 'COMBINED MULTIVITAMINS') with medium confidence."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9362,
+      "completion": 7077,
+      "total": 16439
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "collagen"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Collagen",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "collagen",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hyaluronic acid"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hyaluronic Acid",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "hyaluronic acid",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "biotin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "biotin",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "biotin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 114.69898
+}

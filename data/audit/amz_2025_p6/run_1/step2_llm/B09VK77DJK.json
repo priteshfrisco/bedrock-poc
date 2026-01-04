@@ -1,0 +1,15 @@
+{
+  "product_id": 6475,
+  "asin": "B09VK77DJK",
+  "title": "biox natural whey isolate  unflavoured whey isolate protein powder  no artificial flavours or sweeteners  32g protein, sugar free, carb free, low lactose protein powder  5lb (unflavoured)",
+  "brand": "wutain",
+  "source_subcategory": "whey protein",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "error": "Extra data: line 2 column 1 (char 93)",
+  "processing_time_sec": 133.782189
+}

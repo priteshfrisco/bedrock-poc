@@ -1,0 +1,130 @@
+{
+  "product_id": 10723,
+  "asin": "B0CXBLCXBD",
+  "title": "limitless pharma pure whey protein  high protein whey concentrate powder  23g protein, 6g bcaas, gluten free, low sugar, low carb, low lactose  65 servings, 5lb (coffee chocolate crisp)",
+  "brand": "limitless pharma",
+  "source_subcategory": "whey protein",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+  "remap_reason": "Maps to PROTEIN SUPPLEMENTS & MEAL REPLACEMENTS / PROTEIN & MEAL REPLACEMENTS POWDER",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": 65,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "whey protein",
+      "position": 22,
+      "category": "ACTIVE NUTRITION",
+      "subcategory": "PROTEIN & MEAL REPLACEMENTS",
+      "reasoning": "Phrase 'pure whey protein' appears beginning at character index 22. lookup_ingredient('whey protein') returned category 'ACTIVE NUTRITION' and subcategory 'PROTEIN & MEAL REPLACEMENTS'. (Tool match confidence: medium.)"
+    },
+    {
+      "name": "whey concentrate",
+      "position": 49,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "FOOD SUPPLEMENTS",
+      "reasoning": "Phrase 'whey concentrate' appears beginning at character index 49. lookup_ingredient('whey concentrate') returned no high-confidence exact match and provided candidates (top candidate mapped to 'Whole Food Concentrate' with category 'HERBAL REMEDIES' / 'FOOD SUPPLEMENTS') \u2014 low confidence. I include the tool's returned category/subcategory but note the mapping is uncertain."
+    },
+    {
+      "name": "bcaas",
+      "position": 89,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Phrase 'bcaas' appears beginning at character index 89 as '6g bcaas'. lookup_ingredient('bcaas') returned category 'BASIC VITAMINS & MINERALS' and subcategory 'AMINO ACIDS' (tool match confidence: medium/high)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9470,
+      "completion": 5795,
+      "total": 15265
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey protein"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Soy Foods",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "PROTEIN & MEAL REPLACEMENTS",
+          "keyword": "soy protein",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 6.158644149854733
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "whey concentrate"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "metabolic response",
+              "match_type": "fuzzy",
+              "score": 78.94736842105263,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "superfood",
+              "match_type": "fuzzy",
+              "score": 78.94736842105263,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Whole Food Concentrate",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "superfoods",
+              "match_type": "fuzzy",
+              "score": 78.94736842105263,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bcaas"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "bcaa",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.644333
+}

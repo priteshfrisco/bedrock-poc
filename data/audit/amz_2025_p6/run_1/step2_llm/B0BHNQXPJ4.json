@@ -1,0 +1,33 @@
+{
+  "product_id": 7540,
+  "asin": "B0BHNQXPJ4",
+  "title": "gem avenue natural oval selenite crystal palm stone collectible -rsh130",
+  "brand": "gem avenue",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "N/A",
+  "unit": "N/A",
+  "size": "N/A",
+  "ingredients": [],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4578,
+      "completion": 782,
+      "total": 5360
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 11.687792
+}

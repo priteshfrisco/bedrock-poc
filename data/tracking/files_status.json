@@ -1,0 +1,64 @@
+{
+  "uncoded_amz_p5_2025": {
+    "status": "completed",
+    "last_run_id": "run_1",
+    "completed_at": "2026-01-01T02:25:54.563438",
+    "total_records": 0,
+    "success": 0,
+    "filtered": 0,
+    "errors": 0,
+    "total_cost": 0,
+    "total_tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "duration_seconds": 7.364698
+  },
+  "uncoded_amz_2025_p7": {
+    "status": "completed",
+    "last_run_id": "run_1",
+    "completed_at": "2026-01-01T02:29:59.821032",
+    "total_records": 0,
+    "success": 0,
+    "filtered": 0,
+    "errors": 0,
+    "total_cost": 0,
+    "total_tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "duration_seconds": 9.52781
+  },
+  "uncoded_100_records": {
+    "status": "completed",
+    "last_run_id": "run_9",
+    "completed_at": "2026-01-04T22:48:25.175437",
+    "total_records": 30,
+    "success": 25,
+    "filtered": 0,
+    "errors": 5,
+    "total_cost": 0,
+    "total_tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "duration_seconds": 138.271856
+  },
+  "sample_10_test": {
+    "status": "completed",
+    "last_run_id": "run_5",
+    "completed_at": "2026-01-04T23:04:13.866724",
+    "total_records": 4,
+    "success": 4,
+    "filtered": 0,
+    "errors": 0,
+    "total_cost": 0,
+    "total_tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "duration_seconds": 154.026521
+  },
+  "uncoded_amz_2025_p6": {
+    "status": "processing",
+    "current_run_id": "run_1",
+    "started_at": "2026-01-01T04:39:27.189494",
+    "total_records": 21694
+  }
+}

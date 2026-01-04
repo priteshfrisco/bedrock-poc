@@ -1,0 +1,201 @@
+{
+  "product_id": 2797,
+  "asin": "B078B421S3",
+  "title": "electrolyte powder - balanced, hydrating electrolyte replacement - grape - 20 count packets (pack of 2)",
+  "brand": "ultima",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "NOT ORGANIC",
+  "count": "20",
+  "unit": "COUNT",
+  "size": "2",
+  "ingredients": [
+    {
+      "name": "electrolyte",
+      "position": 0,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "reason": "lookup_ingredient returned no direct normalized match for 'electrolyte'. Candidate suggestions returned (low confidence) but none were a direct match to the term 'electrolyte'.",
+        "candidates": [
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beetroot",
+            "match_type": "fuzzy",
+            "score": 63.1578947368421,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet crystals",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Beet Root",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "FOOD SUPPLEMENTS",
+            "keyword": "beet powder",
+            "match_type": "fuzzy",
+            "score": 60.0,
+            "confidence": "low"
+          }
+        ]
+      },
+      "reasoning": "The functional term 'electrolyte' appears at the start of the title and denotes the active function/ingredient (electrolyte replacement). It is the first ingredient occurrence by position."
+    },
+    {
+      "name": "grape",
+      "position": 67,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "reason": "lookup_ingredient returned no direct normalized match for 'grape' as a functional ingredient. Candidate suggestions (low confidence) include 'Grape Seed', but the title uses 'grape' as a flavor.",
+        "candidates": [
+          {
+            "ingredient": "Grape Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "POLYPHENOLS",
+            "keyword": "grapeseed",
+            "match_type": "fuzzy",
+            "score": 71.42857142857143,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Grape Seed",
+            "nw_category": "HERBAL REMEDIES",
+            "nw_subcategory": "POLYPHENOLS",
+            "keyword": "grape seed",
+            "match_type": "fuzzy",
+            "score": 66.66666666666667,
+            "confidence": "low"
+          },
+          {
+            "ingredient": "Oregon Grape",
+            "nw_category": "FATTY ACIDS",
+            "nw_subcategory": "HEMP/CBD",
+            "keyword": "oregon grape",
+            "match_type": "bm25",
+            "score": 4.815361438746651,
+            "confidence": "low"
+          }
+        ]
+      },
+      "reasoning": "The word 'grape' appears after 'replacement -' and is likely a flavor descriptor ('grape'). It is included as an ingredient-like token because it appears in the title; lookup did not return a direct normalized match (found=false)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9498,
+      "completion": 6094,
+      "total": 15592
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "electrolyte"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beetroot",
+              "match_type": "fuzzy",
+              "score": 63.1578947368421,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet crystals",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Beet Root",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FOOD SUPPLEMENTS",
+              "keyword": "beet powder",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "grape"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Grape Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "grapeseed",
+              "match_type": "fuzzy",
+              "score": 71.42857142857143,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Grape Seed",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "POLYPHENOLS",
+              "keyword": "grape seed",
+              "match_type": "fuzzy",
+              "score": 66.66666666666667,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Oregon Grape",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "oregon grape",
+              "match_type": "bm25",
+              "score": 4.815361438746651,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 89.249188
+}

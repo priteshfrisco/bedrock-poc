@@ -1,0 +1,85 @@
+{
+  "product_id": 7833,
+  "asin": "B0BR6TNBMK",
+  "title": "gaia herbs quercetin synergy - supports immunity - with lemon fruit extract - 50 vegan capsules (50-day supply)",
+  "brand": "gaia herbs",
+  "source_subcategory": "flavonoid supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "VEGETABLE CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 50,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "quercetin",
+      "position": 11,
+      "lookup_name": "Quercetin",
+      "found": true,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "POLYPHENOLS",
+      "reasoning": "The token 'quercetin' appears starting at character index 11 in the title. lookup_ingredient returned Quercetin -> HERBAL REMEDIES / POLYPHENOLS."
+    },
+    {
+      "name": "lemon fruit extract",
+      "position": 56,
+      "lookup_name": "Lemon Balm",
+      "found": true,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "The phrase 'lemon fruit extract' begins at character index 56. lookup_ingredient matched this query to 'Lemon Balm' with low/medium confidence in the tool response; the returned category/subcategory (FATTY ACIDS / HEMP/CBD) reflect the tool result, though the mapping appears of limited confidence for the exact phrase 'lemon fruit extract'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9159,
+      "completion": 3918,
+      "total": 13077
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "quercetin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Quercetin",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "POLYPHENOLS",
+          "keyword": "quercetin",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lemon fruit extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lemon Balm",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lemon balm",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 3513.348952
+}

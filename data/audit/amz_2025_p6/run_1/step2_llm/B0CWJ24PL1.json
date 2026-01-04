@@ -1,0 +1,92 @@
+{
+  "product_id": 10640,
+  "asin": "B0CWJ24PL1",
+  "title": "(2 pack) biogreen gummies, biogreen hemp gummies, bio green gummies, biogreen supplement gummies all natural hemp formual vitamin, biogreen advanced formula hemp support gummies (120 gummies)",
+  "brand": "titan labs",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "GUMMY",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 2,
+  "ingredients": {
+    "value": [
+      {
+        "name": "hemp",
+        "position": 36,
+        "lookup_result": {
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "found": true
+        },
+        "reasoning": "The word 'hemp' appears multiple times; the first occurrence is at character index 36. 'Hemp' is a functional ingredient (confirmed via lookup)."
+      },
+      {
+        "name": "vitamin",
+        "position": 122,
+        "lookup_result": {
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "found": true
+        },
+        "reasoning": "The word 'vitamin' appears in the title starting at index 122 ('formual vitamin'). A lookup for 'vitamin' returned a normalized match to 'Vitamin D' (fuzzy match). The title only contains the generic term 'vitamin' (no specific letter is given), so we record the term as found and include the lookup result."
+      }
+    ],
+    "reasoning": "Extracted functional ingredients present explicitly in the title. Brand terms like 'biogreen' were ignored. Positions are 0-indexed character offsets in the original title string."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9184,
+      "completion": 5387,
+      "total": 14571
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 73.342192
+}

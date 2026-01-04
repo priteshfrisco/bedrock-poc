@@ -1,0 +1,36 @@
+{
+  "product_id": 10274,
+  "asin": "B0CQKZLBS2",
+  "title": "natural rainbow fluorite 12 faceted therapy healing 7 chakra dowsing divination chakra reiki point pendulum 3 inch",
+  "brand": "justinstones",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title contains mineral/crystal names ('fluorite') and metaphysical terms ('chakra', 'reiki', 'dowsing') \u2014 not ingestible functional ingredients. No ingredient lookups performed."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4590,
+      "completion": 1074,
+      "total": 5664
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.532013
+}

@@ -1,0 +1,58 @@
+{
+  "product_id": 4423,
+  "asin": "B087CB33GZ",
+  "title": "best botanicals gotu kola herb powder 8 oz. (organic)",
+  "brand": "best botanicals",
+  "source_subcategory": "other herbal supplements",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "POWDER",
+  "organic": "ORGANIC",
+  "count": 8,
+  "unit": "OZ",
+  "size": 1,
+  "primary_ingredient": "gotu kola",
+  "num_ingredients": 1,
+  "all_ingredients": [
+    "gotu kola"
+  ],
+  "category": "",
+  "subcategory": "",
+  "health_focus": "BRAIN HEALTH",
+  "high_level_category": "REMOVE",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9033,
+      "completion": 2903,
+      "total": 11936
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "gotu kola"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Gotu Kola",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "gotu kola",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 407.213163
+}

@@ -1,0 +1,36 @@
+{
+  "product_id": 89,
+  "asin": "B0002VYQDO",
+  "title": "le best of cirque du soleil",
+  "brand": "import",
+  "source_subcategory": "multimineral supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: No functional ingredients present; title refers to Cirque du Soleil compilation (media), not a supplement."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4570,
+      "completion": 988,
+      "total": 5558
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 17.610996
+}

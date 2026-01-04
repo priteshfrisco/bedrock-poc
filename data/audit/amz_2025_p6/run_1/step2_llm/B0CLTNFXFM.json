@@ -1,0 +1,36 @@
+{
+  "product_id": 9995,
+  "asin": "B0CLTNFXFM",
+  "title": "valchoose 60 pack kids barf bags, children emesis bags disposable 800ml, leak-proof, puke, throw up, nausea, vomit, easy to use, perfect for car sick, motion, chemo, road trip, travel (blue)",
+  "brand": "valchoose",
+  "source_subcategory": "motion sickness & nausea",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "DIGESTIVE AIDS & ENZYMES",
+  "remap_reason": "Maps to DIGESTIVE AIDS & ENZYMES / DIGESTIVE AIDS & ENZYMES",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: No functional supplement ingredients present; product is a disposable barf/emesis bag (not a dietary supplement)."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4614,
+      "completion": 920,
+      "total": 5534
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 14.195137
+}

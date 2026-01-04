@@ -1,0 +1,89 @@
+{
+  "product_id": 302,
+  "asin": "B001B7NN32",
+  "title": "pioneer b complex stress formula  high potency b vitamins  whole food based  verified no gluten  120 vegetarian tablets",
+  "brand": "urnex brands",
+  "source_subcategory": "vitamin b-complex",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TABLET",
+  "organic": "NOT ORGANIC",
+  "count": 120,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "b complex",
+      "position": 8,
+      "lookup_result": {
+        "ingredient": "Vitamin Bcomplex",
+        "nw_category": "BASIC VITAMINS & MINERALS",
+        "nw_subcategory": "LETTER VITAMINS",
+        "found": true
+      },
+      "reasoning": "Detected the phrase 'b complex' starting at character index 8. lookup_ingredient returned normalized ingredient 'Vitamin Bcomplex' in category 'BASIC VITAMINS & MINERALS' / subcategory 'LETTER VITAMINS'."
+    },
+    {
+      "name": "b vitamins",
+      "position": 47,
+      "lookup_result": {
+        "ingredient": "Multivitamin",
+        "nw_category": "COMBINED MULTIVITAMINS",
+        "nw_subcategory": "COMBINED MULTIVITAMINS",
+        "found": true
+      },
+      "reasoning": "Detected the phrase 'b vitamins' starting at character index 47. lookup_ingredient returned normalized ingredient 'Multivitamin' in category 'COMBINED MULTIVITAMINS' / subcategory 'COMBINED MULTIVITAMINS'."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9166,
+      "completion": 4917,
+      "total": 14083
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "b complex"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin Bcomplex",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "b complex",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "b vitamins"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Multivitamin",
+          "nw_category": "COMBINED MULTIVITAMINS",
+          "nw_subcategory": "COMBINED MULTIVITAMINS",
+          "keyword": "multi vitamins",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.691222859866249
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 111.230801
+}

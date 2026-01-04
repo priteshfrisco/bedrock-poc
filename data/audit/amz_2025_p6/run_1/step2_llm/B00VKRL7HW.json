@@ -1,0 +1,85 @@
+{
+  "product_id": 1576,
+  "asin": "B00VKRL7HW",
+  "title": "alacer emergen-c vitamin c fizzy drink mix raspberry - 1000 mg - 30 packets",
+  "brand": "alacer",
+  "source_subcategory": "vitamin c-complex",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 30,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "vitamin c",
+      "position": 17,
+      "lookup_name": "Vitamin D",
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "found": true,
+      "reasoning": "The title explicitly contains 'vitamin c' starting at character index 17. lookup_ingredient() was called for 'vitamin c' and returned the tool result shown (normalized as 'Vitamin D' with category/subcategory as above). Regardless of the tool mapping anomaly, 'vitamin c' is present in the title and recorded at this position."
+    },
+    {
+      "name": "raspberry",
+      "position": 43,
+      "lookup_name": "Red Raspberry",
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "found": true,
+      "reasoning": "The title contains 'raspberry' starting at character index 43. lookup_ingredient() was called for 'raspberry' and returned the tool result shown (normalized as 'Red Raspberry' with category/subcategory as above). 'raspberry' is a flavor/ingredient present in the title and recorded at this position."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9156,
+      "completion": 5623,
+      "total": 14779
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin c"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "raspberry"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Red Raspberry",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "raspberry ketones",
+          "match_type": "bm25",
+          "confidence": "medium",
+          "score": 5.383094026799263
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 96.148393
+}

@@ -1,0 +1,222 @@
+{
+  "product_id": 6963,
+  "asin": "B0B4LS5YY5",
+  "title": "secrets of the tribe respiratory alcohol extract, high-potency herbal drops, tincture made from ginger, lungwort, lobelia, thyme, plantain, osha, eucalyptus. respiratory health formula 2 oz",
+  "brand": "secrets of the tribe",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "TINCTURE",
+  "organic": "NOT ORGANIC",
+  "count": 2,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "ginger",
+      "position": 96,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'ginger' at character index 96. lookup_ingredient returned ingredient 'Ginger' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'. Using the lookup result as provided."
+    },
+    {
+      "name": "lungwort",
+      "position": 104,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "Found 'lungwort' at index 104. lookup_ingredient did not return an exact match and listed ambiguous candidates; lungwort is a botanical/herb, so assigned to HERBAL REMEDIES / SINGLES (chosen as the best-fit category for lungwort)."
+    },
+    {
+      "name": "lobelia",
+      "position": 114,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'lobelia' at index 114. lookup_ingredient returned 'Lobelia' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD' \u2014 using the lookup result as provided."
+    },
+    {
+      "name": "thyme",
+      "position": 123,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'thyme' at index 123. lookup_ingredient returned 'Thyme' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD' \u2014 using the lookup result as provided."
+    },
+    {
+      "name": "plantain",
+      "position": 130,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'plantain' at index 130. lookup_ingredient returned 'Plantain' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD' \u2014 using the lookup result as provided."
+    },
+    {
+      "name": "osha",
+      "position": 140,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'osha' at index 140. lookup_ingredient returned 'Osha' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD' \u2014 using the lookup result as provided."
+    },
+    {
+      "name": "eucalyptus",
+      "position": 146,
+      "category": "HERBAL REMEDIES",
+      "subcategory": "SINGLES",
+      "reasoning": "Found 'eucalyptus' at index 146. lookup_ingredient returned 'Eucalyptus' with category 'HERBAL REMEDIES' and subcategory 'SINGLES' \u2014 using the lookup result as provided."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9740,
+      "completion": 6152,
+      "total": 15892
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "ginger"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Ginger",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "ginger",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lungwort"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Fluoride",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "fluoride",
+              "match_type": "fuzzy",
+              "score": 50.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "False Unicorn",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "false unicorn",
+              "match_type": "fuzzy",
+              "score": 47.61904761904761,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "St Johns Wort",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "saint john's wort",
+              "match_type": "fuzzy",
+              "score": 47.61904761904761,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "lobelia"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Lobelia",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "lobelia",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "thyme"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Thyme",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "thyme",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "plantain"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Plantain",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "plantain",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "osha"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Osha",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "osha",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "eucalyptus"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Eucalyptus",
+          "nw_category": "HERBAL REMEDIES",
+          "nw_subcategory": "SINGLES",
+          "keyword": "eucalyptus",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 101.497619
+}

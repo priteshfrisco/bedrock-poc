@@ -1,0 +1,69 @@
+{
+  "product_id": 1036,
+  "asin": "B00BT788LG",
+  "title": "gnc pantothenic acid 500mg, 100 capsules, supports in energy metabolism",
+  "brand": "gnc",
+  "source_subcategory": "other vitamin b supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "LETTER VITAMINS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / LETTER VITAMINS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": 100,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": {
+    "value": [
+      {
+        "name": "pantothenic acid",
+        "position": 4,
+        "lookup_result": {
+          "ingredient": "Vitamin B5",
+          "found": true,
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "pantothenic acid",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        },
+        "reasoning": "The phrase 'pantothenic acid' appears in the title starting at character index 4. lookup_ingredient() matched it to Vitamin B5 in BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+      }
+    ],
+    "reasoning": "Only one functional ingredient phrase ('pantothenic acid') was found in the title. Other words are brand ('gnc') or descriptive ('supports in energy metabolism')."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9048,
+      "completion": 3217,
+      "total": 12265
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pantothenic acid"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin B5",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "pantothenic acid",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 65.298094
+}

@@ -1,0 +1,118 @@
+{
+  "product_id": 7723,
+  "asin": "B0BN1JRF25",
+  "title": "probiotics for women and men, 300 billion cfu 24 strains probiotics + 15 organic herbs prebiotics blend, shelf stable gut health supplement for digestive immune & whole-body health, 6 month supply",
+  "brand": "dmeisy",
+  "source_subcategory": "probiotics",
+  "status": "success",
+  "step_completed": 3,
+  "lookup_action": "REMAP",
+  "nw_category": "PROBIOTICS+",
+  "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+  "remap_reason": "Maps to PREBIOTICS & PROBIOTICS / PREBIOTICS & PROBIOTICS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "OTHER/UNKNOWN",
+  "organic": "ORGANIC",
+  "count": "UNKNOWN",
+  "unit": "UNKNOWN",
+  "size": 1,
+  "primary_ingredient": "probiotics",
+  "num_ingredients": 3,
+  "all_ingredients": [
+    "probiotics",
+    "prebiotics",
+    "organic herbs"
+  ],
+  "category": "PROBIOTICS+",
+  "subcategory": "PREBIOTICS AND PROBIOTICS",
+  "health_focus": "DIGESTIVE HEALTH",
+  "high_level_category": "PRIORITY VMS",
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9462,
+      "completion": 6572,
+      "total": 16034
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "probiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "probiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "prebiotics"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Probiotic",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "PREBIOTICS AND PROBIOTICS",
+          "keyword": "prebiotics",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "organic herbs"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Ayurvedic Herb",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "ayurvedic herbal supplement",
+              "match_type": "fuzzy",
+              "score": 59.25925925925925,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ayurvedic Herb",
+              "nw_category": "HERBAL REMEDIES",
+              "nw_subcategory": "FORMULAS",
+              "keyword": "ayurvedic herbs - other",
+              "match_type": "fuzzy",
+              "score": 59.25925925925925,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Ornithine",
+              "nw_category": "BASIC VITAMINS & MINERALS",
+              "nw_subcategory": "AMINO ACIDS",
+              "keyword": "ornithine",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 70.484509
+}

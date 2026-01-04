@@ -1,0 +1,154 @@
+[2026-01-04T22:46:06.904527] ============================================================
+[2026-01-04T22:46:06.904616] STEP 3: POST-PROCESSING (Business Rules, HF, HLC)
+[2026-01-04T22:46:06.904653] ============================================================
+[2026-01-04T22:46:17.618428] [B0FBMFX7TK] Applying business rules...
+[2026-01-04T22:46:17.618685] [B0FBMFX7TK] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:17.618818] [B0FBMFX7TK] High Level Category: REMOVE
+[2026-01-04T22:46:17.618927] [B0FBMFX7TK] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:17.619562] Saved: audit/100_records/run_9/step3_postprocess/B0FBMFX7TK.json
+[2026-01-04T22:46:17.619675] [B0FBMFX7TK] COMPLETE in 10.69s
+[2026-01-04T22:46:18.674279] [B00ORTRKRG] Applying business rules...
+[2026-01-04T22:46:18.674408] [B00ORTRKRG] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:18.674501] [B00ORTRKRG] High Level Category: REMOVE
+[2026-01-04T22:46:18.674592] [B00ORTRKRG] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:18.675021] Saved: audit/100_records/run_9/step3_postprocess/B00ORTRKRG.json
+[2026-01-04T22:46:18.675123] [B00ORTRKRG] COMPLETE in 11.77s
+[2026-01-04T22:46:22.463841] [B07BZT4NR7] Applying business rules...
+[2026-01-04T22:46:22.463993] [B07BZT4NR7] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:22.464095] [B07BZT4NR7] High Level Category: REMOVE
+[2026-01-04T22:46:22.464210] [B07BZT4NR7] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:22.464695] Saved: audit/100_records/run_9/step3_postprocess/B07BZT4NR7.json
+[2026-01-04T22:46:22.464815] [B07BZT4NR7] COMPLETE in 15.53s
+[2026-01-04T22:46:23.283636] [B083JP1G11] Applying business rules...
+[2026-01-04T22:46:23.283811] [B083JP1G11] Category: , Subcategory: , Primary: R
+[2026-01-04T22:46:23.287010] [B083JP1G11] Health Focus: UNKNOWN
+[2026-01-04T22:46:23.287430] [B083JP1G11] High Level Category: REMOVE
+[2026-01-04T22:46:23.287778] [B083JP1G11] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:23.288397] Saved: audit/100_records/run_9/step3_postprocess/B083JP1G11.json
+[2026-01-04T22:46:23.288526] [B083JP1G11] COMPLETE in 16.36s
+[2026-01-04T22:46:36.800694] [B07661Z3YX] Applying business rules...
+[2026-01-04T22:46:36.800829] [B07661Z3YX] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:36.800914] [B07661Z3YX] High Level Category: REMOVE
+[2026-01-04T22:46:36.800992] [B07661Z3YX] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:36.801445] Saved: audit/100_records/run_9/step3_postprocess/B07661Z3YX.json
+[2026-01-04T22:46:36.801565] [B07661Z3YX] COMPLETE in 29.89s
+[2026-01-04T22:46:43.538570] [B088FFV6YV] Applying business rules...
+[2026-01-04T22:46:43.538731] [B088FFV6YV] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:43.538835] [B088FFV6YV] High Level Category: REMOVE
+[2026-01-04T22:46:43.538931] [B088FFV6YV] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:43.539457] Saved: audit/100_records/run_9/step3_postprocess/B088FFV6YV.json
+[2026-01-04T22:46:43.539573] [B088FFV6YV] COMPLETE in 36.60s
+[2026-01-04T22:46:44.331109] [B077XK525F] Applying business rules...
+[2026-01-04T22:46:44.331255] [B077XK525F] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:44.331368] [B077XK525F] High Level Category: REMOVE
+[2026-01-04T22:46:44.331477] [B077XK525F] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:44.331980] Saved: audit/100_records/run_9/step3_postprocess/B077XK525F.json
+[2026-01-04T22:46:44.332092] [B077XK525F] COMPLETE in 37.41s
+[2026-01-04T22:46:44.683722] [B0D2M79C6Y] Applying business rules...
+[2026-01-04T22:46:44.683854] [B0D2M79C6Y] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:44.683956] [B0D2M79C6Y] High Level Category: REMOVE
+[2026-01-04T22:46:44.684050] [B0D2M79C6Y] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:44.684583] Saved: audit/100_records/run_9/step3_postprocess/B0D2M79C6Y.json
+[2026-01-04T22:46:44.684717] [B0D2M79C6Y] COMPLETE in 37.74s
+[2026-01-04T22:46:54.629193] [B0FDH4WMJY] Applying business rules...
+[2026-01-04T22:46:54.629398] [B0FDH4WMJY] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:54.629543] [B0FDH4WMJY] High Level Category: REMOVE
+[2026-01-04T22:46:54.629674] [B0FDH4WMJY] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:54.630350] Saved: audit/100_records/run_9/step3_postprocess/B0FDH4WMJY.json
+[2026-01-04T22:46:54.630488] [B0FDH4WMJY] COMPLETE in 47.70s
+[2026-01-04T22:46:55.845315] [B0FD1WF2HJ] Applying business rules...
+[2026-01-04T22:46:55.845468] [B0FD1WF2HJ] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:46:55.845575] [B0FD1WF2HJ] High Level Category: REMOVE
+[2026-01-04T22:46:55.845669] [B0FD1WF2HJ] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:46:55.846250] Saved: audit/100_records/run_9/step3_postprocess/B0FD1WF2HJ.json
+[2026-01-04T22:46:55.846435] [B0FD1WF2HJ] COMPLETE in 48.92s
+[2026-01-04T22:47:00.448822] [B0D2L5D3QB] Applying business rules...
+[2026-01-04T22:47:00.448947] [B0D2L5D3QB] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:00.449039] [B0D2L5D3QB] High Level Category: REMOVE
+[2026-01-04T22:47:00.449125] [B0D2L5D3QB] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:00.449594] Saved: audit/100_records/run_9/step3_postprocess/B0D2L5D3QB.json
+[2026-01-04T22:47:00.449731] [B0D2L5D3QB] COMPLETE in 53.50s
+[2026-01-04T22:47:01.679967] [B0FFHS6LJ7] Applying business rules...
+[2026-01-04T22:47:01.680136] [B0FFHS6LJ7] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:01.680242] [B0FFHS6LJ7] High Level Category: REMOVE
+[2026-01-04T22:47:01.680332] [B0FFHS6LJ7] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:01.680929] Saved: audit/100_records/run_9/step3_postprocess/B0FFHS6LJ7.json
+[2026-01-04T22:47:01.681046] [B0FFHS6LJ7] COMPLETE in 54.75s
+[2026-01-04T22:47:02.193782] [B0DSQMLMZ7] Applying business rules...
+[2026-01-04T22:47:02.193943] [B0DSQMLMZ7] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:02.194055] [B0DSQMLMZ7] High Level Category: REMOVE
+[2026-01-04T22:47:02.194146] [B0DSQMLMZ7] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:02.194577] Saved: audit/100_records/run_9/step3_postprocess/B0DSQMLMZ7.json
+[2026-01-04T22:47:02.194678] [B0DSQMLMZ7] COMPLETE in 55.26s
+[2026-01-04T22:47:06.509042] [B09Z1F981N] Applying business rules...
+[2026-01-04T22:47:06.509176] [B09Z1F981N] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:06.509273] [B09Z1F981N] High Level Category: REMOVE
+[2026-01-04T22:47:06.509381] [B09Z1F981N] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:06.509936] Saved: audit/100_records/run_9/step3_postprocess/B09Z1F981N.json
+[2026-01-04T22:47:06.510045] [B09Z1F981N] COMPLETE in 59.56s
+[2026-01-04T22:47:09.558354] [B0D93N7GZM] Applying business rules...
+[2026-01-04T22:47:09.558527] [B0D93N7GZM] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:09.558649] [B0D93N7GZM] High Level Category: REMOVE
+[2026-01-04T22:47:09.558769] [B0D93N7GZM] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:09.559308] Saved: audit/100_records/run_9/step3_postprocess/B0D93N7GZM.json
+[2026-01-04T22:47:09.559426] [B0D93N7GZM] COMPLETE in 62.61s
+[2026-01-04T22:47:11.308208] [B0F94G1PLD] Applying business rules...
+[2026-01-04T22:47:11.308347] [B0F94G1PLD] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:11.308455] [B0F94G1PLD] High Level Category: REMOVE
+[2026-01-04T22:47:11.308558] [B0F94G1PLD] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:11.309053] Saved: audit/100_records/run_9/step3_postprocess/B0F94G1PLD.json
+[2026-01-04T22:47:11.309194] [B0F94G1PLD] COMPLETE in 64.40s
+[2026-01-04T22:47:18.123451] [B0DWH2V3X5] Applying business rules...
+[2026-01-04T22:47:18.123616] [B0DWH2V3X5] Category: , Subcategory: , Primary: 
+[2026-01-04T22:47:18.123759] [B0DWH2V3X5] High Level Category: REMOVE
+[2026-01-04T22:47:18.123865] [B0DWH2V3X5] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:18.124310] Saved: audit/100_records/run_9/step3_postprocess/B0DWH2V3X5.json
+[2026-01-04T22:47:18.124424] [B0DWH2V3X5] COMPLETE in 71.21s
+[2026-01-04T22:47:20.729753] [B0B4MBM3D6] Applying business rules...
+[2026-01-04T22:47:20.729921] [B0B4MBM3D6] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:20.730042] [B0B4MBM3D6] High Level Category: REMOVE
+[2026-01-04T22:47:20.730173] [B0B4MBM3D6] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:20.730800] Saved: audit/100_records/run_9/step3_postprocess/B0B4MBM3D6.json
+[2026-01-04T22:47:20.730922] [B0B4MBM3D6] COMPLETE in 73.78s
+[2026-01-04T22:47:22.876850] [B0DQFBTG4K] Applying business rules...
+[2026-01-04T22:47:22.877029] [B0DQFBTG4K] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:22.877162] [B0DQFBTG4K] High Level Category: REMOVE
+[2026-01-04T22:47:22.877280] [B0DQFBTG4K] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:22.878365] Saved: audit/100_records/run_9/step3_postprocess/B0DQFBTG4K.json
+[2026-01-04T22:47:22.878593] [B0DQFBTG4K] COMPLETE in 75.95s
+[2026-01-04T22:47:25.642403] [B0F3QJ841K] Applying business rules...
+[2026-01-04T22:47:25.642548] [B0F3QJ841K] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:25.642668] [B0F3QJ841K] High Level Category: REMOVE
+[2026-01-04T22:47:25.642791] [B0F3QJ841K] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:25.643324] Saved: audit/100_records/run_9/step3_postprocess/B0F3QJ841K.json
+[2026-01-04T22:47:25.643426] [B0F3QJ841K] COMPLETE in 78.71s
+[2026-01-04T22:47:27.625539] [B0D73JWQSJ] Applying business rules...
+[2026-01-04T22:47:27.625692] [B0D73JWQSJ] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:27.625813] [B0D73JWQSJ] High Level Category: REMOVE
+[2026-01-04T22:47:27.625944] [B0D73JWQSJ] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:27.626738] Saved: audit/100_records/run_9/step3_postprocess/B0D73JWQSJ.json
+[2026-01-04T22:47:27.626886] [B0D73JWQSJ] COMPLETE in 80.69s
+[2026-01-04T22:47:27.772832] [B0DT98X7C5] Applying business rules...
+[2026-01-04T22:47:27.772985] [B0DT98X7C5] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:27.773089] [B0DT98X7C5] High Level Category: REMOVE
+[2026-01-04T22:47:27.773188] [B0DT98X7C5] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:27.773707] Saved: audit/100_records/run_9/step3_postprocess/B0DT98X7C5.json
+[2026-01-04T22:47:27.773817] [B0DT98X7C5] COMPLETE in 80.87s
+[2026-01-04T22:47:28.539476] [B0DN2YNDNP] Applying business rules...
+[2026-01-04T22:47:28.539608] [B0DN2YNDNP] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:28.539721] [B0DN2YNDNP] High Level Category: REMOVE
+[2026-01-04T22:47:28.539820] [B0DN2YNDNP] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:28.540342] Saved: audit/100_records/run_9/step3_postprocess/B0DN2YNDNP.json
+[2026-01-04T22:47:28.540460] [B0DN2YNDNP] COMPLETE in 81.60s
+[2026-01-04T22:47:53.753973] [B0CRSR8NZ4] Applying business rules...
+[2026-01-04T22:47:53.754342] [B0CRSR8NZ4] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:47:53.754481] [B0CRSR8NZ4] High Level Category: REMOVE
+[2026-01-04T22:47:53.754597] [B0CRSR8NZ4] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:47:53.755235] Saved: audit/100_records/run_9/step3_postprocess/B0CRSR8NZ4.json
+[2026-01-04T22:47:53.755350] [B0CRSR8NZ4] COMPLETE in 106.85s
+[2026-01-04T22:48:25.134023] [B0F69PMFS4] Applying business rules...
+[2026-01-04T22:48:25.134147] [B0F69PMFS4] Category: None, Subcategory: None, Primary: None
+[2026-01-04T22:48:25.134278] [B0F69PMFS4] High Level Category: REMOVE
+[2026-01-04T22:48:25.134363] [B0F69PMFS4] WARNING: LLM did not call business_rules tool, using Python fallback
+[2026-01-04T22:48:25.135195] Saved: audit/100_records/run_9/step3_postprocess/B0F69PMFS4.json
+[2026-01-04T22:48:25.135417] [B0F69PMFS4] COMPLETE in 138.19s

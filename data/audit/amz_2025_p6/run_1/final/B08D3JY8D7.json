@@ -1,0 +1,14 @@
+{
+  "product_id": 4615,
+  "asin": "B08D3JY8D7",
+  "title": "monster energy - ultra black - lot de 12 canettes de 500 ml",
+  "brand": "monster energy",
+  "source_subcategory": "energy drinks",
+  "status": "filtered_by_remove",
+  "step_completed": 1,
+  "filter_reason": "Non-supplement category",
+  "category": "REMOVE",
+  "high_level_category": "REMOVE",
+  "processing_time_sec": 0.048195,
+  "lookup_action": "REMOVE"
+}

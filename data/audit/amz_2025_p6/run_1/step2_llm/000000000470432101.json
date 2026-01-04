@@ -1,0 +1,36 @@
+{
+  "product_id": 6,
+  "asin": "000000000470432101",
+  "title": "frommer's italy day by day",
+  "brand": "wiley",
+  "source_subcategory": "weight loss diet kits & systems",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+  "remap_reason": "Maps to WEIGHT MANAGEMENT FORMULAS / WEIGHT MANAGEMENT FORMULAS",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: Title is a travel guide/book ('Frommer's Italy Day by Day'), not a dietary supplement; no functional ingredients to extract."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4570,
+      "completion": 969,
+      "total": 5539
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 22.989056
+}

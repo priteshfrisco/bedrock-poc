@@ -1,0 +1,197 @@
+{
+  "product_id": 2873,
+  "asin": "B0793WBX95",
+  "title": "glucomannan & chicory root (fos) glycerite liquid extract (1:5) - vanilla flavored (1 oz, zin: 522524)",
+  "brand": "terravita",
+  "source_subcategory": "ginseng herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 1,
+  "unit": "OZ",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "glucomannan",
+      "position": 0,
+      "lookup_result": {
+        "ingredient": "Glucomannan",
+        "found": true,
+        "nw_category": "ACTIVE NUTRITION",
+        "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS"
+      },
+      "reasoning": "The title begins with 'glucomannan'. lookup_ingredient returned an exact match (Glucomannan) mapped to ACTIVE NUTRITION / WEIGHT MANAGEMENT FORMULAS."
+    },
+    {
+      "name": "chicory root",
+      "position": 14,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "notes": "Tool returned no exact match and provided unrelated low-confidence candidates; LLM assigned likely category.",
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "FIBER PRODUCTS & LAXATIVES"
+      },
+      "reasoning": "'chicory root' appears directly after the ampersand. Chicory root is a common source of inulin/FOS and functions as a prebiotic/fiber; the tool did not return an exact match, so it is categorized as PROBIOTICS+ / FIBER PRODUCTS & LAXATIVES based on common usage."
+    },
+    {
+      "name": "fos",
+      "position": 28,
+      "lookup_result": {
+        "ingredient": "FOS",
+        "found": true,
+        "nw_category": "PROBIOTICS+",
+        "nw_subcategory": "FIBER PRODUCTS & LAXATIVES"
+      },
+      "reasoning": "'(fos)' appears after 'chicory root' in the title. lookup_ingredient returned an exact match mapping FOS to PROBIOTICS+ / FIBER PRODUCTS & LAXATIVES (FOS = fructo-oligosaccharides, a prebiotic fiber)."
+    },
+    {
+      "name": "vanilla",
+      "position": 66,
+      "lookup_result": {
+        "ingredient": "UNKNOWN",
+        "found": false,
+        "notes": "Tool returned no exact match; treated as flavoring (non-primary functional ingredient).",
+        "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+        "nw_subcategory": "FLAVORINGS/EXCIPIENTS (assigned)"
+      },
+      "reasoning": "The phrase 'vanilla flavored' indicates vanilla is present as a flavoring. The lookup did not return an exact functional-category match; vanilla is therefore recorded as a flavoring/non-core ingredient and provisionally mapped to a miscellaneous/flavorings category."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9663,
+      "completion": 6514,
+      "total": 16177
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "glucomannan"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Glucomannan",
+          "nw_category": "ACTIVE NUTRITION",
+          "nw_subcategory": "WEIGHT MANAGEMENT FORMULAS",
+          "keyword": "glucomannan",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "chicory root"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Red Root",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "red root",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Poke",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "poke root",
+              "match_type": "fuzzy",
+              "score": 57.14285714285714,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Bloodroot",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "blood root",
+              "match_type": "fuzzy",
+              "score": 54.54545454545454,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "fos"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "FOS",
+          "nw_category": "PROBIOTICS+",
+          "nw_subcategory": "FIBER PRODUCTS & LAXATIVES",
+          "keyword": "fos",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vanilla"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "arnica",
+              "nw_category": "HOMEOPATHICS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "arnica",
+              "match_type": "fuzzy",
+              "score": 61.53846153846154,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Alpha Lipoic Acid",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "ala",
+              "match_type": "fuzzy",
+              "score": 60.0,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Cranesbill",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "cranesbill",
+              "match_type": "fuzzy",
+              "score": 58.82352941176471,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 82.994782
+}

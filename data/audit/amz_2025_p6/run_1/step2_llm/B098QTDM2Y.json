@@ -1,0 +1,107 @@
+{
+  "product_id": 5697,
+  "asin": "B098QTDM2Y",
+  "title": "(2 pack) hemp oil extract drops 1,200,000mg - natural plantlife dietary supplement for stress relief/slep aid, rich in omega 3 6 9 & vitamin e",
+  "brand": "m inch",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "DROPS",
+  "organic": "NOT ORGANIC",
+  "count": 42.3288,
+  "unit": "OZ",
+  "size": 2,
+  "ingredients": [
+    {
+      "name": "hemp oil extract",
+      "position": 9,
+      "lookup_name": "Hemp",
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Phrase 'hemp oil extract' starts at character index 9. lookup_ingredient('hemp oil extract') returned normalized ingredient 'Hemp' with category 'FATTY ACIDS' and subcategory 'HEMP/CBD'."
+    },
+    {
+      "name": "omega 3 6 9",
+      "position": 119,
+      "lookup_name": "Fish Oil",
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Phrase 'omega 3 6 9' starts at character index 119. lookup_ingredient('omega 3 6 9') returned normalized ingredient 'Fish Oil' (mapped to FATTY ACIDS / FISH), which corresponds to omega-3 family."
+    },
+    {
+      "name": "vitamin e",
+      "position": 133,
+      "lookup_name": "Vitamin D",
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Phrase 'vitamin e' starts at character index 133. lookup_ingredient('vitamin e') returned a normalized result of 'Vitamin D' with category 'BASIC VITAMINS & MINERALS' and subcategory 'LETTER VITAMINS' (tool mapping returned Vitamin D for this lookup; included as returned by the lookup tool)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9278,
+      "completion": 6706,
+      "total": 15984
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil extract"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3 6 9"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.843989500065074
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin e"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 88.76475
+}

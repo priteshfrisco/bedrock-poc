@@ -1,0 +1,176 @@
+{
+  "product_id": 8525,
+  "asin": "B0C5W55YHS",
+  "title": "kannabu premium hemp oil  complete source of omega 3 6 9 fatty acids, essential amino acids and antioxidants  hemp seeds  vegan, gluten free, kosher & non gmo (1 fl oz - pack of 3)",
+  "brand": "kannabu",
+  "source_subcategory": "cbd & hemp extract products",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "FATTY ACIDS",
+  "nw_subcategory": "HEMP/CBD",
+  "remap_reason": "Maps to OIL CATEGORY / HEMP/CBD",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "LIQUID",
+  "organic": "NOT ORGANIC",
+  "count": 1,
+  "unit": "OZ",
+  "size": 3,
+  "ingredients": [
+    {
+      "name": "hemp oil",
+      "position": 16,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Phrase 'hemp oil' appears starting at character index 16. lookup_ingredient('hemp oil') returned normalized 'Hemp' with category FATTY ACIDS and subcategory HEMP/CBD."
+    },
+    {
+      "name": "omega 3 6 9 fatty acids",
+      "position": 45,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Phrase 'omega 3 6 9 fatty acids' starts at index 45. lookup_ingredient('omega 3 6 9 fatty acids') returned a best-match normalization 'Fish Oil' with category FATTY ACIDS and subcategory FISH (tool matched on 'omega 3')."
+    },
+    {
+      "name": "essential amino acids",
+      "position": 70,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "AMINO ACIDS",
+      "reasoning": "Phrase 'essential amino acids' starts at index 70. lookup_ingredient('essential amino acids') returned a match normalized to BCAA and categorized under BASIC VITAMINS & MINERALS \u2192 AMINO ACIDS."
+    },
+    {
+      "name": "antioxidants",
+      "position": 96,
+      "category": "UNKNOWN",
+      "subcategory": "UNKNOWN",
+      "reasoning": "The word 'antioxidants' appears starting at index 96. lookup_ingredient('antioxidants') returned no high-confidence match (found=false / ambiguous candidates). Because the lookup did not return a clear category/subcategory, category/subcategory are set to UNKNOWN."
+    },
+    {
+      "name": "hemp seeds",
+      "position": 110,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Phrase 'hemp seeds' starts at index 110. lookup_ingredient('hemp seeds') returned normalized 'Hemp' with category FATTY ACIDS and subcategory HEMP/CBD (same family as 'hemp oil')."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9654,
+      "completion": 7939,
+      "total": 17593
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp oil"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3 6 9 fatty acids"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.843989500065074
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "essential amino acids"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "BCAA",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "AMINO ACIDS",
+          "keyword": "branched chain amino acids",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.225189729299222
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "antioxidants"
+        },
+        "result": {
+          "found": false,
+          "ingredient": "UNKNOWN",
+          "needs_disambiguation": true,
+          "candidates": [
+            {
+              "ingredient": "Gentian",
+              "nw_category": "FATTY ACIDS",
+              "nw_subcategory": "HEMP/CBD",
+              "keyword": "gentian",
+              "match_type": "fuzzy",
+              "score": 52.63157894736843,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Astaxanthin",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "astaxanthin",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            },
+            {
+              "ingredient": "Nattokinase",
+              "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+              "nw_subcategory": "NON-SPECIFIC",
+              "keyword": "natto kinase",
+              "match_type": "fuzzy",
+              "score": 52.17391304347826,
+              "confidence": "low"
+            }
+          ],
+          "confidence": "low",
+          "reason": "Multiple possible matches found, LLM should decide"
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "hemp seeds"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Hemp",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "hemp",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 8.197906661307545
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 95.817485
+}

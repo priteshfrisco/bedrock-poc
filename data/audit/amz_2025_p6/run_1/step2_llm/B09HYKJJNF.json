@@ -1,0 +1,15 @@
+{
+  "product_id": 6003,
+  "asin": "B09HYKJJNF",
+  "title": "finest nutrition cranberry (30,000 mg) + vitamin c 60 capsules | triple strength ultimate potency gluten free cranberry pills supplement from concentrate extract",
+  "brand": "finest nutrition",
+  "source_subcategory": "cranberry herbal supplements",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "FOOD SUPPLEMENTS",
+  "remap_reason": "Maps to HERBAL REMEDIES / FOOD SUPPLEMENTS",
+  "error": "Extra data: line 2 column 1 (char 32)",
+  "processing_time_sec": 41.497016
+}

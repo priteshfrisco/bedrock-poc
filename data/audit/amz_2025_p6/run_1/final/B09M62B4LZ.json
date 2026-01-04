@@ -1,0 +1,15 @@
+{
+  "product_id": 6146,
+  "asin": "B09M62B4LZ",
+  "title": "ucan hydrate watermelon jar & lemon lime jar bundle - great for running, training, fitness, cycling, crossfit & more  sugar-free, vegan, & keto friendly energy supplement",
+  "brand": "ucan",
+  "source_subcategory": "electrolyte drink mixes",
+  "status": "error",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "ACTIVE NUTRITION",
+  "nw_subcategory": "HYDRATION",
+  "remap_reason": "Maps to ACTIVE NUTRITION / HYDRATION",
+  "error": "Extra data: line 2 column 1 (char 86)",
+  "processing_time_sec": 57.494558
+}

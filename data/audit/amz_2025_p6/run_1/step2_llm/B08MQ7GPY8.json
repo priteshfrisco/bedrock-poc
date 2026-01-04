@@ -1,0 +1,36 @@
+{
+  "product_id": 4993,
+  "asin": "B08MQ7GPY8",
+  "title": "3 witch bells,witchy things,magic home protection,clear negative energies,attracts positive,wicca decor,witchcraft wicca supplies (pentagram)",
+  "brand": "lfaize",
+  "source_subcategory": "other alternative medicine",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "REMOVE",
+  "gender": "REMOVE",
+  "form": "REMOVE",
+  "organic": "REMOVE",
+  "count": "REMOVE",
+  "unit": "REMOVE",
+  "size": "REMOVE",
+  "ingredients": {
+    "value": "REMOVE",
+    "reasoning": "Non-supplement detected: title contains no functional dietary ingredients \u2014 it describes witchcraft/home decor items ('witch bells', 'pentagram')."
+  },
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 4597,
+      "completion": 1138,
+      "total": 5735
+    },
+    "tool_calls": null
+  },
+  "processing_time_sec": 19.917059
+}

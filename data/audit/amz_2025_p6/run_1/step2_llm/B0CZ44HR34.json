@@ -1,0 +1,173 @@
+{
+  "product_id": 10880,
+  "asin": "B0CZ44HR34",
+  "title": "coq10 200mg softgels with vitamin e & omega 3-6-9 & pqq - coenzyme q10 with bioperine, high absorption heart supports & cellular energy production supplement - 107 servings",
+  "brand": "drfoster",
+  "source_subcategory": "antioxidants",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "BASIC VITAMINS & MINERALS",
+  "nw_subcategory": "MINERALS",
+  "remap_reason": "Maps to BASIC VITAMINS & MINERALS / MINERALS",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "SOFTGEL",
+  "organic": "NOT ORGANIC",
+  "count": 107,
+  "unit": "COUNT",
+  "size": 1,
+  "ingredients": [
+    {
+      "name": "coq10",
+      "position": 0,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "COENZYME Q10",
+      "reasoning": "Found 'coq10' at the start of the title (position 0). lookup_ingredient returned 'Co Q10' \u2192 BASIC VITAMINS & MINERALS / COENZYME Q10."
+    },
+    {
+      "name": "vitamin e",
+      "position": 26,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "Found 'vitamin e' starting at position 26. lookup_ingredient returned (normalized) 'Vitamin D' with category LETTER VITAMINS (tool matched to letter-vitamin group). The extraction is based on the title text; the tool result is reported as returned."
+    },
+    {
+      "name": "omega 3-6-9",
+      "position": 38,
+      "category": "FATTY ACIDS",
+      "subcategory": "FISH",
+      "reasoning": "Found 'omega 3-6-9' starting at position 38. lookup_ingredient returned 'Fish Oil' \u2192 FATTY ACIDS / FISH (tool matched omega-3 family to fish oil category)."
+    },
+    {
+      "name": "pqq",
+      "position": 52,
+      "category": "MISCELLANEOUS SUPPLEMENTS",
+      "subcategory": "NON-SPECIFIC",
+      "reasoning": "Found 'pqq' starting at position 52. lookup_ingredient returned 'Pqq' \u2192 MISCELLANEOUS SUPPLEMENTS / NON-SPECIFIC."
+    },
+    {
+      "name": "coenzyme q10",
+      "position": 58,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "COENZYME Q10",
+      "reasoning": "Found 'coenzyme q10' starting at position 58 (explicit phrase). lookup_ingredient returned 'Co Q10' \u2192 BASIC VITAMINS & MINERALS / COENZYME Q10. (This is the same functional ingredient as 'coq10' earlier; both occurrences are recorded.)"
+    },
+    {
+      "name": "bioperine",
+      "position": 76,
+      "category": "FATTY ACIDS",
+      "subcategory": "HEMP/CBD",
+      "reasoning": "Found 'bioperine' starting at position 76. lookup_ingredient returned 'Bioperine' with category/subcategory as returned by the lookup tool (FATTY ACIDS / HEMP/CBD)."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 9544,
+      "completion": 6054,
+      "total": 15598
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coq10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "coq10",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin e"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 88
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "omega 3-6-9"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Fish Oil",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "FISH",
+          "keyword": "omega 3",
+          "match_type": "bm25",
+          "confidence": "high",
+          "score": 10.843989500065074
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "pqq"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Pqq",
+          "nw_category": "MISCELLANEOUS SUPPLEMENTS",
+          "nw_subcategory": "NON-SPECIFIC",
+          "keyword": "pqq",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "coenzyme q10"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Co Q10",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "COENZYME Q10",
+          "keyword": "co enzyme q10",
+          "match_type": "fuzzy",
+          "confidence": "high",
+          "score": 96
+        }
+      },
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "bioperine"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Bioperine",
+          "nw_category": "FATTY ACIDS",
+          "nw_subcategory": "HEMP/CBD",
+          "keyword": "bioperine",
+          "match_type": "exact",
+          "confidence": "exact",
+          "score": 100
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 86.600928
+}
