@@ -109,9 +109,7 @@ terraform apply deployment.tfplan
 # Get outputs
 echo ""
 echo "Getting resource names..."
-INPUT_BUCKET=$(terraform output -raw input_bucket_name)
-OUTPUT_BUCKET=$(terraform output -raw output_bucket_name)
-REFERENCE_BUCKET=$(terraform output -raw reference_bucket_name)
+S3_BUCKET=$(terraform output -raw s3_bucket_name)
 ECR_REPO=$(terraform output -raw ecr_repository_url)
 AWS_REGION=$(terraform output -raw aws_region)
 
@@ -124,7 +122,7 @@ echo "==========================================================================
 echo ""
 
 export AWS_REGION=$AWS_REGION
-./upload_reference_data.sh "$REFERENCE_BUCKET"
+./upload_reference_data.sh "$S3_BUCKET" "reference/"
 
 echo ""
 echo "================================================================================"
@@ -140,16 +138,19 @@ echo "  ✅ DEPLOYMENT COMPLETE!"
 echo "================================================================================"
 echo ""
 echo "Resources created:"
-echo "  • Input Bucket:  s3://$INPUT_BUCKET"
-echo "  • Output Bucket: s3://$OUTPUT_BUCKET"
-echo "  • Reference Bucket: s3://$REFERENCE_BUCKET"
+echo "  • S3 Bucket: s3://$S3_BUCKET/"
+echo "    - input/      (upload CSVs here)"
+echo "    - output/     (results)"
+echo "    - audit/      (audit files)"
+echo "    - logs/       (application logs)"
+echo "    - reference/  (lookup tables)"
 echo "  • ECR Repository: $ECR_REPO"
 echo "  • Email notifications configured for: $TF_VAR_notification_email"
 echo ""
 echo "Next steps:"
 echo "  1. Check your email and confirm SNS subscription"
 echo "  2. Upload a CSV file to test:"
-echo "     aws s3 cp your_file.csv s3://$INPUT_BUCKET/"
+echo "     aws s3 cp your_file.csv s3://$S3_BUCKET/input/"
 echo "  3. Processing will start automatically"
 echo "  4. You'll receive an email when complete"
 echo ""
@@ -158,7 +159,7 @@ echo "  • CloudWatch Logs: aws logs tail /ecs/bedrock-ai-data-enrichment-task 
 echo "  • ECS Tasks: aws ecs list-tasks --cluster bedrock-ai-data-enrichment-cluster"
 echo ""
 echo "View results:"
-echo "  aws s3 ls s3://$OUTPUT_BUCKET/runs/"
+echo "  aws s3 ls s3://$S3_BUCKET/output/runs/"
 echo ""
 echo "To cleanup/destroy:"
 echo "  cd terraform && terraform destroy"

@@ -624,10 +624,11 @@ def send_notification(sns_topic_arn: str, subject: str, message: str):
 
 
 def process_aws_mode(
-    input_bucket: str,
+    s3_bucket: str,
     input_key: str,
-    output_bucket: str,
-    audit_bucket: str,
+    output_prefix: str,
+    audit_prefix: str,
+    logs_prefix: str,
     dynamodb_table: str,
     run_id: str,
     sns_topic_arn: str = None
@@ -635,6 +636,7 @@ def process_aws_mode(
     """
     AWS Cloud Processing Mode
     Reads from S3, processes, writes to S3, tracks in DynamoDB
+    Uses single S3 bucket with folder prefixes
     """
     if not AWS_AVAILABLE:
         print("❌ AWS mode requires boto3 and AWS modules")
@@ -646,9 +648,11 @@ def process_aws_mode(
     print("AWS CLOUD PROCESSING - Bedrock AI Data Enrichment")
     print("="*80)
     print(f"\nRun ID: {run_id}")
-    print(f"Input: s3://{input_bucket}/{input_key}")
-    print(f"Output: s3://{output_bucket}/")
-    print(f"Audit: s3://{audit_bucket}/")
+    print(f"S3 Bucket: s3://{s3_bucket}/")
+    print(f"Input: s3://{s3_bucket}/{input_key}")
+    print(f"Output: s3://{s3_bucket}/{output_prefix}")
+    print(f"Audit: s3://{s3_bucket}/{audit_prefix}")
+    print(f"Logs: s3://{s3_bucket}/{logs_prefix}")
     
     try:
         # Initialize AWS managers
@@ -657,7 +661,7 @@ def process_aws_mode(
         
         # Read input CSV from S3
         print(f"\n📥 Reading input data...")
-        df = s3.read_csv_from_s3(input_bucket, input_key, encoding='latin-1')
+        df = s3.read_csv_from_s3(s3_bucket, input_key, encoding='latin-1')
         
         if df is None:
             print("❌ Failed to read input file")
@@ -766,26 +770,26 @@ def process_aws_mode(
         if results:
             results_df = pd.DataFrame(results)
             
-            # Write to S3
-            output_key = f"runs/{run_id}/{input_filename}_coded.csv"
-            s3.write_csv_to_s3(results_df, output_bucket, output_key)
+            # Write to S3 (output folder)
+            output_key = f"{output_prefix}runs/{run_id}/{input_filename}_coded.csv"
+            s3.write_csv_to_s3(results_df, s3_bucket, output_key)
             
             print(f"\n✅ Processing complete!")
             print(f"   Processed: {len(results)} products")
-            print(f"   Output: s3://{output_bucket}/{output_key}")
+            print(f"   Output: s3://{s3_bucket}/{output_key}")
         
-        # Upload audit files to S3
-        audit_prefix = f"runs/{run_id}/audit"
+        # Upload audit files to S3 (audit folder)
+        audit_s3_prefix = f"{audit_prefix}runs/{run_id}/audit"
         audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
         if audit_dir.exists():
-            count = s3.upload_directory(audit_dir, audit_bucket, audit_prefix)
+            count = s3.upload_directory(audit_dir, s3_bucket, audit_s3_prefix)
             print(f"   Uploaded {count} audit files to S3")
         
-        # Upload logs to S3 (same structure as local)
-        logs_prefix = f"runs/{run_id}/logs"
+        # Upload logs to S3 (logs folder)
+        logs_s3_prefix = f"{logs_prefix}runs/{run_id}/logs"
         logs_dir = Path(f'/tmp/bedrock-data/logs/{input_filename}')
         if logs_dir.exists():
-            count = s3.upload_directory(logs_dir, audit_bucket, logs_prefix)
+            count = s3.upload_directory(logs_dir, s3_bucket, logs_s3_prefix)
             print(f"   Uploaded {count} log files to S3")
         
         # Send success notification
@@ -802,9 +806,10 @@ Total Products: {total_records:,}
 Processed: {len(results):,}
 Duration: {duration:.1f} minutes
 
-Output: s3://{output_bucket}/runs/{run_id}/{input_filename}_coded.csv
-Audit: s3://{audit_bucket}/runs/{run_id}/audit/
-Logs: s3://{audit_bucket}/runs/{run_id}/logs/
+S3 Bucket: s3://{s3_bucket}/
+Output: s3://{s3_bucket}/{output_prefix}runs/{run_id}/{input_filename}_coded.csv
+Audit: s3://{s3_bucket}/{audit_prefix}runs/{run_id}/audit/
+Logs: s3://{s3_bucket}/{logs_prefix}runs/{run_id}/logs/
 
 Status Summary:
 - Success: {len(results)}
@@ -834,31 +839,32 @@ if __name__ == '__main__':
                        help='Execution mode: local (default) or aws (cloud)')
     
     # AWS mode arguments
-    parser.add_argument('--input-bucket', help='S3 input bucket (AWS mode)')
     parser.add_argument('--input-key', help='S3 input key (AWS mode)')
-    parser.add_argument('--output-bucket', help='S3 output bucket (AWS mode)')
-    parser.add_argument('--audit-bucket', help='S3 audit bucket (AWS mode)')
-    parser.add_argument('--dynamodb-table', help='DynamoDB table name (AWS mode)')
     parser.add_argument('--run-id', help='Run ID (AWS mode)')
-    parser.add_argument('--sns-topic-arn', help='SNS topic ARN for notifications (AWS mode)')
     
     args = parser.parse_args()
     
     if args.mode == 'aws':
-        # AWS mode - use env vars as fallback
-        INPUT_BUCKET = args.input_bucket or os.getenv('INPUT_BUCKET', 'bedrock-ai-data-enrichment-input-081671069810')
-        INPUT_KEY = args.input_key or os.getenv('INPUT_KEY', 'sample_10_test.csv')
-        OUTPUT_BUCKET = args.output_bucket or os.getenv('OUTPUT_BUCKET', 'bedrock-ai-data-enrichment-output-081671069810')
-        AUDIT_BUCKET = args.audit_bucket or os.getenv('AUDIT_BUCKET', 'bedrock-ai-data-enrichment-audit-081671069810')
-        DYNAMODB_TABLE = args.dynamodb_table or os.getenv('DYNAMODB_TABLE', 'bedrock-ai-data-enrichment-processing-state')
+        # AWS mode - use env vars (set by ECS task)
+        S3_BUCKET = os.getenv('S3_BUCKET')
+        INPUT_KEY = args.input_key or os.getenv('INPUT_KEY')
+        OUTPUT_PREFIX = os.getenv('OUTPUT_PREFIX', 'output/')
+        AUDIT_PREFIX = os.getenv('AUDIT_PREFIX', 'audit/')
+        LOGS_PREFIX = os.getenv('LOGS_PREFIX', 'logs/')
+        DYNAMODB_TABLE = os.getenv('DYNAMODB_TABLE')
         RUN_ID = args.run_id or os.getenv('RUN_ID', f"run-{datetime.now().strftime('%Y%m%d-%H%M%S')}")
-        SNS_TOPIC_ARN = args.sns_topic_arn or os.getenv('SNS_TOPIC_ARN')
+        SNS_TOPIC_ARN = os.getenv('SNS_TOPIC_ARN')
+        
+        if not S3_BUCKET or not INPUT_KEY:
+            print("❌ Error: S3_BUCKET and INPUT_KEY are required for AWS mode")
+            sys.exit(1)
         
         process_aws_mode(
-            input_bucket=INPUT_BUCKET,
+            s3_bucket=S3_BUCKET,
             input_key=INPUT_KEY,
-            output_bucket=OUTPUT_BUCKET,
-            audit_bucket=AUDIT_BUCKET,
+            output_prefix=OUTPUT_PREFIX,
+            audit_prefix=AUDIT_PREFIX,
+            logs_prefix=LOGS_PREFIX,
             dynamodb_table=DYNAMODB_TABLE,
             run_id=RUN_ID,
             sns_topic_arn=SNS_TOPIC_ARN

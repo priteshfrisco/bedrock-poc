@@ -3,19 +3,21 @@
 
 set -e
 
-# Get bucket name from argument or terraform output
+# Get bucket name and prefix from arguments or terraform output
 if [ -n "$1" ]; then
-    REFERENCE_BUCKET="$1"
+    S3_BUCKET="$1"
+    REFERENCE_PREFIX="${2:-reference/}"
 else
-    echo "Getting reference bucket name from Terraform..."
+    echo "Getting S3 bucket name from Terraform..."
     cd "$(dirname "$0")/terraform"
-    REFERENCE_BUCKET=$(terraform output -raw reference_bucket_name 2>/dev/null)
+    S3_BUCKET=$(terraform output -raw s3_bucket_name 2>/dev/null)
+    REFERENCE_PREFIX="reference/"
     cd ..
 fi
 
-if [ -z "$REFERENCE_BUCKET" ]; then
-    echo "❌ Error: Reference bucket name not provided"
-    echo "Usage: $0 <bucket-name>"
+if [ -z "$S3_BUCKET" ]; then
+    echo "❌ Error: S3 bucket name not provided"
+    echo "Usage: $0 <bucket-name> [reference-prefix]"
     echo "Or run from deploy.sh which passes it automatically"
     exit 1
 fi
@@ -26,7 +28,7 @@ echo "=========================================="
 echo "Uploading Reference Data to S3"
 echo "=========================================="
 echo ""
-echo "Bucket: s3://$REFERENCE_BUCKET/"
+echo "Bucket: s3://$S3_BUCKET/$REFERENCE_PREFIX"
 echo "Region: $REGION"
 echo ""
 
@@ -39,7 +41,7 @@ fi
 
 # Upload all reference data files
 echo "Uploading files..."
-aws s3 sync reference_data/ s3://$REFERENCE_BUCKET/ \
+aws s3 sync reference_data/ s3://$S3_BUCKET/$REFERENCE_PREFIX \
   --exclude "backup/*" \
   --region $REGION
 
@@ -47,7 +49,7 @@ echo ""
 echo "✅ Reference data uploaded!"
 echo ""
 echo "Files in bucket:"
-aws s3 ls s3://$REFERENCE_BUCKET/ --region $REGION
+aws s3 ls s3://$S3_BUCKET/$REFERENCE_PREFIX --region $REGION
 
 echo ""
 echo "=========================================="
