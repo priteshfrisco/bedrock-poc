@@ -112,7 +112,7 @@ resource "aws_s3_bucket" "data" {
   
   tags = {
     Name    = "Bedrock AI Data Bucket"
-    Purpose = "Stores all data: input, output, audit, logs, reference"
+    Purpose = "Stores all data - input output audit logs reference"
   }
 }
 
