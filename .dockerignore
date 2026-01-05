@@ -1,0 +1,52 @@
+# Don't include these in Docker image
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+
+# Data directories (will be mounted or fetched from S3)
+data/input/*
+data/output/*
+data/audit/*
+data/logs/*
+data/tracking/*
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Terraform
+infrastructure/
+
+# Old R data
+old_r_data/
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
