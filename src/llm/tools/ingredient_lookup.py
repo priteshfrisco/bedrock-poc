@@ -286,16 +286,16 @@ class IngredientLookup:
             row = self.df.iloc[fuzzy_idx]
             # Check for number variant mismatch (e.g., "vitamin d" vs "vitamin d3")
             if not self._is_number_variant_mismatch(ingredient_name, row['keyword']):
-            return {
-                "found": True,
-                "ingredient": row['ingredient'],
-                "nw_category": row['nw_category'],
-                "nw_subcategory": row['nw_subcategory'],
-                "keyword": row['keyword'],
-                "match_type": "fuzzy",
-                "confidence": "high",
-                "score": int(fuzzy_score)
-            }
+                return {
+                    "found": True,
+                    "ingredient": row['ingredient'],
+                    "nw_category": row['nw_category'],
+                    "nw_subcategory": row['nw_subcategory'],
+                    "keyword": row['keyword'],
+                    "match_type": "fuzzy",
+                    "confidence": "high",
+                    "score": int(fuzzy_score)
+                }
         
         # High confidence BM25 match (>8.0)
         if bm25_score > 8.0:
