@@ -781,11 +781,6 @@ output "data_bucket_name" {
   value       = aws_s3_bucket.data.id
 }
 
-output "ecr_repository_url" {
-  description = "ECR repository URL"
-  value       = aws_ecr_repository.app.repository_url
-}
-
 output "setup_complete" {
   description = "Setup instructions"
   value       = <<-EOT
