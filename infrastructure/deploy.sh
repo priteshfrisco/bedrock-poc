@@ -99,6 +99,7 @@ INPUT_BUCKET=$(terraform output -raw input_bucket_name)
 OUTPUT_BUCKET=$(terraform output -raw output_bucket_name)
 REFERENCE_BUCKET=$(terraform output -raw reference_bucket_name)
 ECR_REPO=$(terraform output -raw ecr_repository_url)
+AWS_REGION=$(terraform output -raw aws_region)
 
 cd ..
 
@@ -108,7 +109,8 @@ echo "Step 3: Uploading Reference Data to S3"
 echo "================================================================================"
 echo ""
 
-./upload_reference_data.sh
+export AWS_REGION=$AWS_REGION
+./upload_reference_data.sh "$REFERENCE_BUCKET"
 
 echo ""
 echo "================================================================================"
@@ -116,15 +118,7 @@ echo "Step 4: Building and Pushing Docker Image"
 echo "================================================================================"
 echo ""
 
-./deploy_docker.sh
-
-echo ""
-echo "================================================================================"
-echo "Step 5: Testing Setup"
-echo "================================================================================"
-echo ""
-
-./test_aws_setup.sh
+./deploy_docker.sh "$ECR_REPO"
 
 echo ""
 echo "================================================================================"
@@ -134,6 +128,7 @@ echo ""
 echo "Resources created:"
 echo "  • Input Bucket:  s3://$INPUT_BUCKET"
 echo "  • Output Bucket: s3://$OUTPUT_BUCKET"
+echo "  • Reference Bucket: s3://$REFERENCE_BUCKET"
 echo "  • ECR Repository: $ECR_REPO"
 echo "  • Email notifications configured for: $TF_VAR_notification_email"
 echo ""

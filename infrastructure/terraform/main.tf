@@ -874,3 +874,52 @@ output "setup_complete" {
   EOT
 }
 
+# ============================================================================
+# OUTPUTS
+# ============================================================================
+
+output "input_bucket_name" {
+  description = "Name of the S3 input bucket"
+  value       = aws_s3_bucket.input.id
+}
+
+output "output_bucket_name" {
+  description = "Name of the S3 output bucket"
+  value       = aws_s3_bucket.output.id
+}
+
+output "audit_bucket_name" {
+  description = "Name of the S3 audit bucket"
+  value       = aws_s3_bucket.audit.id
+}
+
+output "reference_bucket_name" {
+  description = "Name of the S3 reference bucket"
+  value       = aws_s3_bucket.reference.id
+}
+
+output "ecr_repository_url" {
+  description = "ECR repository URL for Docker images"
+  value       = aws_ecr_repository.app.repository_url
+}
+
+output "ecs_cluster_name" {
+  description = "Name of the ECS cluster"
+  value       = aws_ecs_cluster.main.name
+}
+
+output "dynamodb_table_name" {
+  description = "Name of the DynamoDB processing state table"
+  value       = aws_dynamodb_table.processing_state.id
+}
+
+output "sns_topic_arn" {
+  description = "ARN of the SNS notification topic"
+  value       = aws_sns_topic.notifications.arn
+}
+
+output "aws_region" {
+  description = "AWS region"
+  value       = var.aws_region
+}
+
