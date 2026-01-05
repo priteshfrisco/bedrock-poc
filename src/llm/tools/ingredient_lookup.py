@@ -318,16 +318,16 @@ class IngredientLookup:
                 row = self.df.iloc[fuzzy_idx]
                 # Check for number variant mismatch
                 if not self._is_number_variant_mismatch(ingredient_name, row['keyword']):
-                return {
-                    "found": True,
-                    "ingredient": row['ingredient'],
-                    "nw_category": row['nw_category'],
-                    "nw_subcategory": row['nw_subcategory'],
-                    "keyword": row['keyword'],
-                    "match_type": "fuzzy",
-                    "confidence": "medium",
-                    "score": int(fuzzy_score)
-                }
+                    return {
+                        "found": True,
+                        "ingredient": row['ingredient'],
+                        "nw_category": row['nw_category'],
+                        "nw_subcategory": row['nw_subcategory'],
+                        "keyword": row['keyword'],
+                        "match_type": "fuzzy",
+                        "confidence": "medium",
+                        "score": int(fuzzy_score)
+                    }
             else:
                 row = self.df.iloc[bm25_idx]
                 return {
