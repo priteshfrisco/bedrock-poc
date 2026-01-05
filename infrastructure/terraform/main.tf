@@ -14,6 +14,16 @@ terraform {
       version = "~> 3.0"
     }
   }
+  
+  # Remote state configuration (optional but recommended)
+  # Uncomment after creating the state bucket
+  # backend "s3" {
+  #   bucket         = "bedrock-ai-terraform-state"  # UPDATE THIS
+  #   key            = "infrastructure/terraform.tfstate"
+  #   region         = "us-east-2"
+  #   encrypt        = true
+  #   dynamodb_table = "bedrock-ai-terraform-locks"  # UPDATE THIS
+  # }
 }
 
 provider "aws" {

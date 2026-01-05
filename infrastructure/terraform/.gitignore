@@ -6,6 +6,12 @@ terraform.tfvars
 *.tfstate.*
 *.tfplan
 
+# Track lock file (important for team collaboration)
+!.terraform.lock.hcl
+
+# Ignore provider downloads
+.terraform/
+
 # Ignore override files
 override.tf
 override.tf.json
