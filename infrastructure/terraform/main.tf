@@ -1,4 +1,4 @@
-# Terraform for Complete Production POC
+# Terraform for POC
 # Lambda trigger → ECS Fargate → SNS notifications
 
 terraform {
@@ -15,15 +15,14 @@ terraform {
     }
   }
   
-  # Remote state configuration (optional but recommended)
-  # Uncomment after creating the state bucket
-  # backend "s3" {
-  #   bucket         = "bedrock-ai-terraform-state"  # UPDATE THIS
-  #   key            = "infrastructure/terraform.tfstate"
-  #   region         = "us-east-2"
-  #   encrypt        = true
-  #   dynamodb_table = "bedrock-ai-terraform-locks"  # UPDATE THIS
-  # }
+  # Remote state configuration
+  backend "s3" {
+    bucket         = "bedrock-ai-terraform-state"
+    key            = "infrastructure/terraform.tfstate"
+    region         = "us-east-2"
+    encrypt        = true
+    dynamodb_table = "bedrock-ai-terraform-locks"
+  }
 }
 
 provider "aws" {
