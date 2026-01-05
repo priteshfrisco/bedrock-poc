@@ -9,6 +9,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0"
+    }
   }
 }
 
@@ -65,16 +69,24 @@ variable "openai_api_key" {
 # Get current AWS account ID
 data "aws_caller_identity" "current" {}
 
+# Generate unique bucket suffix for global uniqueness
+resource "random_string" "bucket_suffix" {
+  length  = 8
+  special = false
+  upper   = false
+}
+
 # Local variables
 locals {
   account_id    = data.aws_caller_identity.current.account_id
   name_prefix   = "${var.client_name}-${var.project_name}"
+  bucket_suffix = random_string.bucket_suffix.result
   
-  # S3 bucket names (globally unique)
-  input_bucket     = "${local.name_prefix}-input-${local.account_id}"
-  output_bucket    = "${local.name_prefix}-output-${local.account_id}"
-  audit_bucket     = "${local.name_prefix}-audit-${local.account_id}"
-  reference_bucket = "${local.name_prefix}-reference-${local.account_id}"
+  # S3 bucket names (globally unique with random suffix)
+  input_bucket     = "${local.name_prefix}-input-${local.bucket_suffix}"
+  output_bucket    = "${local.name_prefix}-output-${local.bucket_suffix}"
+  audit_bucket     = "${local.name_prefix}-audit-${local.bucket_suffix}"
+  reference_bucket = "${local.name_prefix}-reference-${local.bucket_suffix}"
 }
 
 # ============================================================================
@@ -96,6 +108,25 @@ resource "aws_s3_bucket_versioning" "input" {
   
   versioning_configuration {
     status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_public_access_block" "input" {
+  bucket = aws_s3_bucket.input.id
+  
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "input" {
+  bucket = aws_s3_bucket.input.id
+  
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
   }
 }
 
@@ -130,6 +161,25 @@ resource "aws_s3_bucket_versioning" "output" {
   }
 }
 
+resource "aws_s3_bucket_public_access_block" "output" {
+  bucket = aws_s3_bucket.output.id
+  
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "output" {
+  bucket = aws_s3_bucket.output.id
+  
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+}
+
 # Audit bucket for prompts/responses
 resource "aws_s3_bucket" "audit" {
   bucket = local.audit_bucket
@@ -140,6 +190,25 @@ resource "aws_s3_bucket" "audit" {
   }
 }
 
+resource "aws_s3_bucket_public_access_block" "audit" {
+  bucket = aws_s3_bucket.audit.id
+  
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "audit" {
+  bucket = aws_s3_bucket.audit.id
+  
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+}
+
 # Reference data bucket
 resource "aws_s3_bucket" "reference" {
   bucket = local.reference_bucket
@@ -147,6 +216,25 @@ resource "aws_s3_bucket" "reference" {
   tags = {
     Name    = "Reference-Data-Bucket"
     Purpose = "Stores-ingredient-lookups-and-business-rules"
+  }
+}
+
+resource "aws_s3_bucket_public_access_block" "reference" {
+  bucket = aws_s3_bucket.reference.id
+  
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "reference" {
+  bucket = aws_s3_bucket.reference.id
+  
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
   }
 }
 
@@ -166,6 +254,24 @@ resource "aws_s3_bucket_lifecycle_configuration" "audit" {
       days = 90
     }
   }
+}
+
+# ============================================================================
+# SECRETS MANAGER (OpenAI API Key)
+# ============================================================================
+
+resource "aws_secretsmanager_secret" "openai_key" {
+  name_prefix             = "${local.name_prefix}-openai-"
+  recovery_window_in_days = 7
+  
+  tags = {
+    Name = "OpenAI API Key"
+  }
+}
+
+resource "aws_secretsmanager_secret_version" "openai_key" {
+  secret_id     = aws_secretsmanager_secret.openai_key.id
+  secret_string = var.openai_api_key
 }
 
 # ============================================================================
@@ -272,6 +378,48 @@ resource "aws_ecr_repository" "app" {
 }
 
 # ============================================================================
+# SECURITY GROUP FOR ECS TASKS
+# ============================================================================
+
+# Get default VPC for security group
+data "aws_vpc" "default" {
+  default = true
+}
+
+data "aws_subnets" "default" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.default.id]
+  }
+}
+
+resource "aws_security_group" "ecs_tasks" {
+  name_prefix = "${local.name_prefix}-ecs-"
+  description = "Security group for ECS tasks"
+  vpc_id      = data.aws_vpc.default.id
+
+  egress {
+    description = "Allow HTTPS outbound for API calls"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  
+  egress {
+    description = "Allow HTTP outbound"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "ECS Tasks Security Group"
+  }
+}
+
+# ============================================================================
 # ECS CLUSTER
 # ============================================================================
 
@@ -311,6 +459,21 @@ resource "aws_iam_role" "ecs_execution_role" {
 resource "aws_iam_role_policy_attachment" "ecs_execution_role_policy" {
   role       = aws_iam_role.ecs_execution_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+
+# Secrets Manager access for ECS execution role
+resource "aws_iam_role_policy" "ecs_secrets_access" {
+  name = "secrets-access"
+  role = aws_iam_role.ecs_execution_role.id
+  
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect = "Allow"
+      Action = ["secretsmanager:GetSecretValue"]
+      Resource = aws_secretsmanager_secret.openai_key.arn
+    }]
+  })
 }
 
 # ECS Task Role (for application permissions - S3, DynamoDB, SNS)
@@ -448,11 +611,13 @@ resource "aws_iam_role_policy" "lambda_ecs_access" {
     Version = "2012-10-17"
     Statement = [{
       Effect = "Allow"
-      Action = [
-        "ecs:RunTask",
-        "ecs:DescribeTasks"
-      ]
-      Resource = "*"
+      Action = ["ecs:RunTask"]
+      Resource = aws_ecs_task_definition.app.arn
+      Condition = {
+        ArnEquals = {
+          "ecs:cluster" = aws_ecs_cluster.main.arn
+        }
+      }
     }, {
       Effect = "Allow"
       Action = "iam:PassRole"
@@ -511,12 +676,13 @@ resource "aws_ecs_task_definition" "app" {
       {
         name  = "AWS_REGION"
         value = var.aws_region
-      },
-      {
-        name  = "OPENAI_API_KEY"
-        value = var.openai_api_key
       }
     ]
+    
+    secrets = [{
+      name      = "OPENAI_API_KEY"
+      valueFrom = aws_secretsmanager_secret.openai_key.arn
+    }]
     
     logConfiguration = {
       logDriver = "awslogs"
@@ -569,6 +735,7 @@ def lambda_handler(event, context):
         networkConfiguration={
             'awsvpcConfiguration': {
                 'subnets': os.environ['SUBNETS'].split(','),
+                'securityGroups': [os.environ['SECURITY_GROUP']],
                 'assignPublicIp': 'ENABLED'
             }
         },
@@ -604,29 +771,19 @@ resource "aws_lambda_function" "trigger" {
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
   runtime         = "python3.13"
   timeout         = 60
+  reserved_concurrent_executions = 3  # Limit concurrent executions for cost control
   
   environment {
     variables = {
       ECS_CLUSTER     = aws_ecs_cluster.main.name
       TASK_DEFINITION = aws_ecs_task_definition.app.family
       SUBNETS         = join(",", data.aws_subnets.default.ids)
+      SECURITY_GROUP  = aws_security_group.ecs_tasks.id
     }
   }
   
   tags = {
     Name = "S3 Upload Trigger"
-  }
-}
-
-# Get default VPC subnets for ECS
-data "aws_vpc" "default" {
-  default = true
-}
-
-data "aws_subnets" "default" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_vpc.default.id]
   }
 }
 
