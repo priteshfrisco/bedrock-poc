@@ -71,10 +71,8 @@ def process_from_s3(
     # Create log manager (will write to local /tmp then upload to S3)
     input_filename = Path(input_key).stem
     log_manager = LogManager(
-        base_output_dir=Path('/tmp/bedrock-output'),
-        base_logs_dir=Path('/tmp/bedrock-logs'),
-        base_audit_dir=Path('/tmp/bedrock-audit'),
-        input_filename=input_filename
+        input_filename=input_filename,
+        base_path='/tmp/bedrock-data'
     )
     
     print(f"\n🚀 Processing {total_records} records...")
@@ -177,9 +175,9 @@ def process_from_s3(
     
     # Upload audit logs to S3
     audit_prefix = f"runs/{run_id}/audit"
-    log_manager_audit_dir = Path('/tmp/bedrock-audit') / input_filename / 'run_1'
-    if log_manager_audit_dir.exists():
-        count = s3.upload_directory(log_manager_audit_dir, audit_bucket, audit_prefix)
+    audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
+    if audit_dir.exists():
+        count = s3.upload_directory(audit_dir, audit_bucket, audit_prefix)
         print(f"   Uploaded {count} audit files")
 
 
