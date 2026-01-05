@@ -575,7 +575,7 @@ def lambda_handler(event, context):
         overrides={
             'containerOverrides': [{
                 'name': 'bedrock-classifier',
-                'command': ['python', 'src/main_aws.py', key, run_id]
+                'command': ['python', 'src/main.py', '--mode', 'aws', '--input-key', key, '--run-id', run_id]
             }]
         }
     )
