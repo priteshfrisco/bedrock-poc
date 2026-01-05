@@ -774,12 +774,19 @@ def process_aws_mode(
             print(f"   Processed: {len(results)} products")
             print(f"   Output: s3://{output_bucket}/{output_key}")
         
-        # Upload audit logs to S3
+        # Upload audit files to S3
         audit_prefix = f"runs/{run_id}/audit"
         audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
         if audit_dir.exists():
             count = s3.upload_directory(audit_dir, audit_bucket, audit_prefix)
-            print(f"   Uploaded {count} audit files")
+            print(f"   Uploaded {count} audit files to S3")
+        
+        # Upload logs to S3 (same structure as local)
+        logs_prefix = f"runs/{run_id}/logs"
+        logs_dir = Path(f'/tmp/bedrock-data/logs/{input_filename}')
+        if logs_dir.exists():
+            count = s3.upload_directory(logs_dir, audit_bucket, logs_prefix)
+            print(f"   Uploaded {count} log files to S3")
         
         # Send success notification
         end_time = datetime.now()
@@ -797,6 +804,7 @@ Duration: {duration:.1f} minutes
 
 Output: s3://{output_bucket}/runs/{run_id}/{input_filename}_coded.csv
 Audit: s3://{audit_bucket}/runs/{run_id}/audit/
+Logs: s3://{audit_bucket}/runs/{run_id}/logs/
 
 Status Summary:
 - Success: {len(results)}
