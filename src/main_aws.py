@@ -1,6 +1,7 @@
 """
 AWS Main - Process products from S3
 Reads from S3, processes, and writes results back to S3
+Sends SNS notifications on completion
 """
 
 import sys
@@ -9,6 +10,7 @@ from pathlib import Path
 from datetime import datetime
 import pandas as pd
 from typing import Dict, List
+import boto3
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -23,13 +25,28 @@ from pipeline.utils.high_level_category import assign_high_level_category
 from core.log_manager import LogManager
 
 
+def send_notification(sns_topic_arn: str, subject: str, message: str):
+    """Send SNS notification"""
+    try:
+        sns = boto3.client('sns')
+        sns.publish(
+            TopicArn=sns_topic_arn,
+            Subject=subject,
+            Message=message
+        )
+        print(f"📧 Notification sent: {subject}")
+    except Exception as e:
+        print(f"⚠️  Failed to send notification: {str(e)}")
+
+
 def process_from_s3(
     input_bucket: str,
     input_key: str,
     output_bucket: str,
     audit_bucket: str,
     dynamodb_table: str,
-    run_id: str
+    run_id: str,
+    sns_topic_arn: str = None
 ):
     """
     Process products from S3
@@ -41,7 +58,10 @@ def process_from_s3(
         audit_bucket: S3 bucket for audit logs
         dynamodb_table: DynamoDB table name
         run_id: Unique run ID
+        sns_topic_arn: Optional SNS topic for notifications
     """
+    
+    start_time = datetime.now()
     
     print("="*80)
     print("AWS CLOUD PROCESSING - Bedrock AI Data Enrichment")
@@ -51,9 +71,10 @@ def process_from_s3(
     print(f"Output: s3://{output_bucket}/")
     print(f"Audit: s3://{audit_bucket}/")
     
-    # Initialize AWS managers
-    s3 = S3Manager()
-    db = DynamoDBManager(dynamodb_table)
+    try:
+        # Initialize AWS managers
+        s3 = S3Manager()
+        db = DynamoDBManager(dynamodb_table)
     
     # Read input CSV from S3
     print(f"\n📥 Reading input data...")
@@ -179,6 +200,44 @@ def process_from_s3(
     if audit_dir.exists():
         count = s3.upload_directory(audit_dir, audit_bucket, audit_prefix)
         print(f"   Uploaded {count} audit files")
+    
+    # Send success notification
+    end_time = datetime.now()
+    duration = (end_time - start_time).total_seconds() / 60
+    
+    if sns_topic_arn:
+        message = f"""
+✅ Processing Complete!
+
+File: {input_key}
+Run ID: {run_id}
+Total Products: {total_records:,}
+Processed: {len(results):,}
+Duration: {duration:.1f} minutes
+
+Output: s3://{output_bucket}/runs/{run_id}/{input_filename}_coded.csv
+Audit: s3://{audit_bucket}/runs/{run_id}/audit/
+
+Status Summary:
+- Success: {len(results)}
+- Total: {total_records}
+"""
+        send_notification(sns_topic_arn, f"✅ Processing Complete - {input_filename}", message)
+    
+    except Exception as e:
+        # Send error notification
+        if sns_topic_arn:
+            error_message = f"""
+❌ Processing Failed!
+
+File: {input_key}
+Run ID: {run_id}
+Error: {str(e)}
+
+Please check CloudWatch Logs for details.
+"""
+            send_notification(sns_topic_arn, f"❌ Processing Failed - {input_filename}", error_message)
+        raise
 
 
 if __name__ == '__main__':
@@ -187,6 +246,7 @@ if __name__ == '__main__':
     OUTPUT_BUCKET = os.getenv('OUTPUT_BUCKET', 'bedrock-ai-data-enrichment-output-081671069810')
     AUDIT_BUCKET = os.getenv('AUDIT_BUCKET', 'bedrock-ai-data-enrichment-audit-081671069810')
     DYNAMODB_TABLE = os.getenv('DYNAMODB_TABLE', 'bedrock-ai-data-enrichment-processing-state')
+    SNS_TOPIC_ARN = os.getenv('SNS_TOPIC_ARN')
     
     INPUT_KEY = sys.argv[1] if len(sys.argv) > 1 else 'sample_10_test.csv'
     RUN_ID = sys.argv[2] if len(sys.argv) > 2 else f"run-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
@@ -197,6 +257,7 @@ if __name__ == '__main__':
         output_bucket=OUTPUT_BUCKET,
         audit_bucket=AUDIT_BUCKET,
         dynamodb_table=DYNAMODB_TABLE,
-        run_id=RUN_ID
+        run_id=RUN_ID,
+        sns_topic_arn=SNS_TOPIC_ARN
     )
 
