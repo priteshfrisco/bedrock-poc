@@ -72,11 +72,25 @@ fi
 
 echo ""
 echo "================================================================================"
-echo "Step 2: Deploying Terraform Infrastructure"
+echo "Step 2: Setting Up Remote State Backend"
 echo "================================================================================"
 echo ""
 
 cd terraform
+
+# Check if backend already exists
+if aws s3 ls s3://bedrock-ai-terraform-state 2>/dev/null; then
+    echo "✅ Remote state backend already exists"
+else
+    echo "Creating remote state backend (S3 + DynamoDB)..."
+    ./setup_remote_state.sh
+fi
+
+echo ""
+echo "================================================================================"
+echo "Step 3: Deploying Terraform Infrastructure"
+echo "================================================================================"
+echo ""
 
 # Initialize Terraform
 echo "Initializing Terraform..."
@@ -105,7 +119,7 @@ cd ..
 
 echo ""
 echo "================================================================================"
-echo "Step 3: Uploading Reference Data to S3"
+echo "Step 4: Uploading Reference Data to S3"
 echo "================================================================================"
 echo ""
 
@@ -114,7 +128,7 @@ export AWS_REGION=$AWS_REGION
 
 echo ""
 echo "================================================================================"
-echo "Step 4: Building and Pushing Docker Image"
+echo "Step 5: Building and Pushing Docker Image"
 echo "================================================================================"
 echo ""
 
