@@ -119,7 +119,7 @@ jobs:
       - name: Deployment Summary
         run: |
           echo "✅ Deployment Complete!"
-          echo "📦 Data Bucket: ${{ steps.tf-outputs.outputs.data_bucket }}"
-          echo "🐳 ECR URL: ${{ steps.tf-outputs.outputs.ecr_url }}"
-          echo "🚀 Ready to process data!"
+          echo "Data Bucket: ${{ steps.tf-outputs.outputs.data_bucket }}"
+          echo "ECR URL: ${{ steps.tf-outputs.outputs.ecr_url }}"
+          echo "Ready to process data!"
 
