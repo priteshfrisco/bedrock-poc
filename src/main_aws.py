@@ -75,138 +75,138 @@ def process_from_s3(
         # Initialize AWS managers
         s3 = S3Manager()
         db = DynamoDBManager(dynamodb_table)
-    
-    # Read input CSV from S3
-    print(f"\n📥 Reading input data...")
-    df = s3.read_csv_from_s3(input_bucket, input_key, encoding='latin-1')
-    
-    if df is None:
-        print("❌ Failed to read input file")
-        return
-    
-    # Standardize
-    df = standardize_dataframe(df)
-    total_records = len(df)
-    print(f"✅ Loaded {total_records:,} records")
-    
-    # Create log manager (will write to local /tmp then upload to S3)
-    input_filename = Path(input_key).stem
-    log_manager = LogManager(
-        input_filename=input_filename,
-        base_path='/tmp/bedrock-data'
-    )
-    
-    print(f"\n🚀 Processing {total_records} records...")
-    
-    results = []
-    
-    for idx, record in df.iterrows():
-        product_id = idx + 1
-        asin = record.get('asin', f'P{product_id}')
-        title = record.get('title', '')
         
-        try:
-            # Step 1: Filter
-            step1_result = apply_step1_filter(
-                title,
-                record.get('amazon_subcategory', '').lower().strip(),
-                asin,
-                log_manager
-            )
+        # Read input CSV from S3
+        print(f"\n📥 Reading input data...")
+        df = s3.read_csv_from_s3(input_bucket, input_key, encoding='latin-1')
+        
+        if df is None:
+            print("❌ Failed to read input file")
+            return
+        
+        # Standardize
+        df = standardize_dataframe(df)
+        total_records = len(df)
+        print(f"✅ Loaded {total_records:,} records")
+        
+        # Create log manager (will write to local /tmp then upload to S3)
+        input_filename = Path(input_key).stem
+        log_manager = LogManager(
+            input_filename=input_filename,
+            base_path='/tmp/bedrock-data'
+        )
+        
+        print(f"\n🚀 Processing {total_records} records...")
+        
+        results = []
+        
+        for idx, record in df.iterrows():
+            product_id = idx + 1
+            asin = record.get('asin', f'P{product_id}')
+            title = record.get('title', '')
             
-            if not step1_result['passed']:
-                # Filtered - write to DynamoDB
+            try:
+                # Step 1: Filter
+                step1_result = apply_step1_filter(
+                    title,
+                    record.get('amazon_subcategory', '').lower().strip(),
+                    asin,
+                    log_manager
+                )
+                
+                if not step1_result['passed']:
+                    # Filtered - write to DynamoDB
+                    db.put_record(
+                        asin=asin,
+                        run_id=run_id,
+                        status='filtered',
+                        data={'reason': step1_result['filter_reason']}
+                    )
+                    continue
+                
+                # Step 2: LLM extraction
+                llm_result = extract_llm_attributes(title, asin, product_id, log_manager)
+                
+                if not llm_result['success']:
+                    # Error
+                    db.put_record(
+                        asin=asin,
+                        run_id=run_id,
+                        status='error',
+                        data={'error': llm_result.get('error', 'Unknown error')}
+                    )
+                    continue
+                
+                # Extract attributes
+                attrs = extract_attributes_from_llm_result(llm_result['data'])
+                
+                # Step 3: Business rules
+                business_rules = apply_all_business_rules(
+                    attrs['ingredients'],
+                    attrs['age'],
+                    attrs['gender'],
+                    title
+                )
+                
+                # Build result
+                result = {
+                    'asin': asin,
+                    'title': title,
+                    'category': business_rules['category'],
+                    'subcategory': business_rules['subcategory'],
+                    'primary_ingredient': business_rules['primary_ingredient'],
+                    'age': attrs['age'],
+                    'gender': attrs['gender'],
+                    'form': attrs['form'],
+                    'reasoning': business_rules.get('reasoning', '')
+                }
+                
+                results.append(result)
+                
+                # Write to DynamoDB
                 db.put_record(
                     asin=asin,
                     run_id=run_id,
-                    status='filtered',
-                    data={'reason': step1_result['filter_reason']}
+                    status='success',
+                    data=result
                 )
-                continue
-            
-            # Step 2: LLM extraction
-            llm_result = extract_llm_attributes(title, asin, product_id, log_manager)
-            
-            if not llm_result['success']:
-                # Error
+                
+                print(f"✅ [{product_id}/{total_records}] {asin}")
+                
+            except Exception as e:
+                print(f"❌ [{product_id}/{total_records}] {asin}: {str(e)}")
                 db.put_record(
                     asin=asin,
                     run_id=run_id,
                     status='error',
-                    data={'error': llm_result.get('error', 'Unknown error')}
+                    data={'error': str(e)}
                 )
-                continue
-            
-            # Extract attributes
-            attrs = extract_attributes_from_llm_result(llm_result['data'])
-            
-            # Step 3: Business rules
-            business_rules = apply_all_business_rules(
-                attrs['ingredients'],
-                attrs['age'],
-                attrs['gender'],
-                title
-            )
-            
-            # Build result
-            result = {
-                'asin': asin,
-                'title': title,
-                'category': business_rules['category'],
-                'subcategory': business_rules['subcategory'],
-                'primary_ingredient': business_rules['primary_ingredient'],
-                'age': attrs['age'],
-                'gender': attrs['gender'],
-                'form': attrs['form'],
-                'reasoning': business_rules.get('reasoning', '')
-            }
-            
-            results.append(result)
-            
-            # Write to DynamoDB
-            db.put_record(
-                asin=asin,
-                run_id=run_id,
-                status='success',
-                data=result
-            )
-            
-            print(f"✅ [{product_id}/{total_records}] {asin}")
-            
-        except Exception as e:
-            print(f"❌ [{product_id}/{total_records}] {asin}: {str(e)}")
-            db.put_record(
-                asin=asin,
-                run_id=run_id,
-                status='error',
-                data={'error': str(e)}
-            )
-    
-    # Convert results to DataFrame
-    if results:
-        results_df = pd.DataFrame(results)
         
-        # Write to S3
-        output_key = f"runs/{run_id}/{input_filename}_coded.csv"
-        s3.write_csv_to_s3(results_df, output_bucket, output_key)
+        # Convert results to DataFrame
+        if results:
+            results_df = pd.DataFrame(results)
+            
+            # Write to S3
+            output_key = f"runs/{run_id}/{input_filename}_coded.csv"
+            s3.write_csv_to_s3(results_df, output_bucket, output_key)
+            
+            print(f"\n✅ Processing complete!")
+            print(f"   Processed: {len(results)} products")
+            print(f"   Output: s3://{output_bucket}/{output_key}")
         
-        print(f"\n✅ Processing complete!")
-        print(f"   Processed: {len(results)} products")
-        print(f"   Output: s3://{output_bucket}/{output_key}")
-    
-    # Upload audit logs to S3
-    audit_prefix = f"runs/{run_id}/audit"
-    audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
-    if audit_dir.exists():
-        count = s3.upload_directory(audit_dir, audit_bucket, audit_prefix)
-        print(f"   Uploaded {count} audit files")
-    
-    # Send success notification
-    end_time = datetime.now()
-    duration = (end_time - start_time).total_seconds() / 60
-    
-    if sns_topic_arn:
-        message = f"""
+        # Upload audit logs to S3
+        audit_prefix = f"runs/{run_id}/audit"
+        audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
+        if audit_dir.exists():
+            count = s3.upload_directory(audit_dir, audit_bucket, audit_prefix)
+            print(f"   Uploaded {count} audit files")
+        
+        # Send success notification
+        end_time = datetime.now()
+        duration = (end_time - start_time).total_seconds() / 60
+        
+        if sns_topic_arn:
+            message = f"""
 ✅ Processing Complete!
 
 File: {input_key}
@@ -222,7 +222,7 @@ Status Summary:
 - Success: {len(results)}
 - Total: {total_records}
 """
-        send_notification(sns_topic_arn, f"✅ Processing Complete - {input_filename}", message)
+            send_notification(sns_topic_arn, f"✅ Processing Complete - {input_filename}", message)
     
     except Exception as e:
         # Send error notification
