@@ -91,37 +91,41 @@ locals {
   name_prefix   = "${var.client_name}-${var.project_name}"
   bucket_suffix = random_string.bucket_suffix.result
   
-  # S3 bucket names (globally unique with random suffix)
-  input_bucket     = "${local.name_prefix}-input-${local.bucket_suffix}"
-  output_bucket    = "${local.name_prefix}-output-${local.bucket_suffix}"
-  audit_bucket     = "${local.name_prefix}-audit-${local.bucket_suffix}"
-  reference_bucket = "${local.name_prefix}-reference-${local.bucket_suffix}"
+  # Single S3 bucket with folders
+  data_bucket = "${local.name_prefix}-data-${local.bucket_suffix}"
+  
+  # Folder prefixes
+  input_prefix     = "input/"
+  output_prefix    = "output/"
+  audit_prefix     = "audit/"
+  logs_prefix      = "logs/"
+  reference_prefix = "reference/"
 }
 
 # ============================================================================
-# S3 BUCKETS
+# S3 BUCKET (Single bucket with folders)
 # ============================================================================
 
-# Input bucket for uncoded CSVs
-resource "aws_s3_bucket" "input" {
-  bucket = local.input_bucket
+# Main data bucket
+resource "aws_s3_bucket" "data" {
+  bucket = local.data_bucket
   
   tags = {
-    Name = "Input Data Bucket"
-    Purpose = "Stores uncoded product CSV files"
+    Name    = "Bedrock AI Data Bucket"
+    Purpose = "Stores all data: input, output, audit, logs, reference"
   }
 }
 
-resource "aws_s3_bucket_versioning" "input" {
-  bucket = aws_s3_bucket.input.id
+resource "aws_s3_bucket_versioning" "data" {
+  bucket = aws_s3_bucket.data.id
   
   versioning_configuration {
     status = "Enabled"
   }
 }
 
-resource "aws_s3_bucket_public_access_block" "input" {
-  bucket = aws_s3_bucket.input.id
+resource "aws_s3_bucket_public_access_block" "data" {
+  bucket = aws_s3_bucket.data.id
   
   block_public_acls       = true
   block_public_policy     = true
@@ -129,8 +133,8 @@ resource "aws_s3_bucket_public_access_block" "input" {
   restrict_public_buckets = true
 }
 
-resource "aws_s3_bucket_server_side_encryption_configuration" "input" {
-  bucket = aws_s3_bucket.input.id
+resource "aws_s3_bucket_server_side_encryption_configuration" "data" {
+  bucket = aws_s3_bucket.data.id
   
   rule {
     apply_server_side_encryption_by_default {
@@ -139,124 +143,43 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "input" {
   }
 }
 
-# S3 notification for Lambda trigger
+# S3 notification for Lambda trigger (input folder only)
 resource "aws_s3_bucket_notification" "input_notification" {
-  bucket = aws_s3_bucket.input.id
+  bucket = aws_s3_bucket.data.id
 
   lambda_function {
     lambda_function_arn = aws_lambda_function.trigger.arn
     events              = ["s3:ObjectCreated:*"]
+    filter_prefix       = local.input_prefix
     filter_suffix       = ".csv"
   }
 
   depends_on = [aws_lambda_permission.allow_s3]
 }
 
-# Output bucket for coded CSVs
-resource "aws_s3_bucket" "output" {
-  bucket = local.output_bucket
-  
-  tags = {
-    Name = "Output Data Bucket"
-    Purpose = "Stores coded product CSV files and summaries"
-  }
-}
-
-resource "aws_s3_bucket_versioning" "output" {
-  bucket = aws_s3_bucket.output.id
-  
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
-
-resource "aws_s3_bucket_public_access_block" "output" {
-  bucket = aws_s3_bucket.output.id
-  
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
-  restrict_public_buckets = true
-}
-
-resource "aws_s3_bucket_server_side_encryption_configuration" "output" {
-  bucket = aws_s3_bucket.output.id
-  
-  rule {
-    apply_server_side_encryption_by_default {
-      sse_algorithm = "AES256"
-    }
-  }
-}
-
-# Audit bucket for prompts/responses
-resource "aws_s3_bucket" "audit" {
-  bucket = local.audit_bucket
-  
-  tags = {
-    Name    = "Audit-Logs-Bucket"
-    Purpose = "Stores-prompts-responses-and-audit-trail"
-  }
-}
-
-resource "aws_s3_bucket_public_access_block" "audit" {
-  bucket = aws_s3_bucket.audit.id
-  
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
-  restrict_public_buckets = true
-}
-
-resource "aws_s3_bucket_server_side_encryption_configuration" "audit" {
-  bucket = aws_s3_bucket.audit.id
-  
-  rule {
-    apply_server_side_encryption_by_default {
-      sse_algorithm = "AES256"
-    }
-  }
-}
-
-# Reference data bucket
-resource "aws_s3_bucket" "reference" {
-  bucket = local.reference_bucket
-  
-  tags = {
-    Name    = "Reference-Data-Bucket"
-    Purpose = "Stores-ingredient-lookups-and-business-rules"
-  }
-}
-
-resource "aws_s3_bucket_public_access_block" "reference" {
-  bucket = aws_s3_bucket.reference.id
-  
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
-  restrict_public_buckets = true
-}
-
-resource "aws_s3_bucket_server_side_encryption_configuration" "reference" {
-  bucket = aws_s3_bucket.reference.id
-  
-  rule {
-    apply_server_side_encryption_by_default {
-      sse_algorithm = "AES256"
-    }
-  }
-}
-
-# Lifecycle policy for audit logs (delete after 90 days)
-resource "aws_s3_bucket_lifecycle_configuration" "audit" {
-  bucket = aws_s3_bucket.audit.id
+# Lifecycle policy for audit/logs (delete after 90 days)
+resource "aws_s3_bucket_lifecycle_configuration" "data" {
+  bucket = aws_s3_bucket.data.id
   
   rule {
     id     = "delete-old-audit-logs"
     status = "Enabled"
     
     filter {
-      prefix = ""
+      prefix = local.audit_prefix
+    }
+    
+    expiration {
+      days = 90
+    }
+  }
+  
+  rule {
+    id     = "delete-old-logs"
+    status = "Enabled"
+    
+    filter {
+      prefix = local.logs_prefix
     }
     
     expiration {
@@ -517,14 +440,8 @@ resource "aws_iam_role_policy" "ecs_s3_access" {
         "s3:ListBucket"
       ]
       Resource = [
-        aws_s3_bucket.input.arn,
-        "${aws_s3_bucket.input.arn}/*",
-        aws_s3_bucket.output.arn,
-        "${aws_s3_bucket.output.arn}/*",
-        aws_s3_bucket.audit.arn,
-        "${aws_s3_bucket.audit.arn}/*",
-        aws_s3_bucket.reference.arn,
-        "${aws_s3_bucket.reference.arn}/*"
+        aws_s3_bucket.data.arn,
+        "${aws_s3_bucket.data.arn}/*"
       ]
     }]
   })
@@ -659,20 +576,28 @@ resource "aws_ecs_task_definition" "app" {
     
     environment = [
       {
-        name  = "INPUT_BUCKET"
-        value = aws_s3_bucket.input.id
+        name  = "S3_BUCKET"
+        value = aws_s3_bucket.data.id
       },
       {
-        name  = "OUTPUT_BUCKET"
-        value = aws_s3_bucket.output.id
+        name  = "INPUT_PREFIX"
+        value = local.input_prefix
       },
       {
-        name  = "AUDIT_BUCKET"
-        value = aws_s3_bucket.audit.id
+        name  = "OUTPUT_PREFIX"
+        value = local.output_prefix
       },
       {
-        name  = "REFERENCE_BUCKET"
-        value = aws_s3_bucket.reference.id
+        name  = "AUDIT_PREFIX"
+        value = local.audit_prefix
+      },
+      {
+        name  = "LOGS_PREFIX"
+        value = local.logs_prefix
+      },
+      {
+        name  = "REFERENCE_PREFIX"
+        value = local.reference_prefix
       },
       {
         name  = "DYNAMODB_TABLE"
@@ -802,99 +727,28 @@ resource "aws_lambda_permission" "allow_s3" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.trigger.function_name
   principal     = "s3.amazonaws.com"
-  source_arn    = aws_s3_bucket.input.arn
+  source_arn    = aws_s3_bucket.data.arn
 }
 
 # ============================================================================
 # OUTPUTS
 # ============================================================================
 
-output "input_bucket_name" {
-  description = "S3 bucket for input CSV files"
-  value       = aws_s3_bucket.input.id
+output "s3_bucket_name" {
+  description = "Name of the main S3 bucket"
+  value       = aws_s3_bucket.data.id
 }
 
-output "output_bucket_name" {
-  description = "S3 bucket for output CSV files"
-  value       = aws_s3_bucket.output.id
-}
-
-output "audit_bucket_name" {
-  description = "S3 bucket for audit logs"
-  value       = aws_s3_bucket.audit.id
-}
-
-output "reference_bucket_name" {
-  description = "S3 bucket for reference data"
-  value       = aws_s3_bucket.reference.id
-}
-
-output "dynamodb_table_name" {
-  description = "DynamoDB table for processing state"
-  value       = aws_dynamodb_table.processing_state.id
-}
-
-output "sns_topic_arn" {
-  description = "SNS topic for notifications"
-  value       = aws_sns_topic.notifications.arn
-}
-
-output "ecr_repository_url" {
-  description = "ECR repository URL for Docker images"
-  value       = aws_ecr_repository.app.repository_url
-}
-
-output "ecs_cluster_name" {
-  description = "ECS cluster name"
-  value       = aws_ecs_cluster.main.name
-}
-
-output "setup_complete" {
-  description = "Setup instructions"
+output "bucket_structure" {
+  description = "S3 bucket folder structure"
   value       = <<-EOT
-    ✅ Complete Infrastructure Deployed!
-    
-    Resources:
-      - Input Bucket:     s3://${aws_s3_bucket.input.id}
-      - Output Bucket:    s3://${aws_s3_bucket.output.id}
-      - Audit Bucket:     s3://${aws_s3_bucket.audit.id}
-      - Reference Bucket: s3://${aws_s3_bucket.reference.id}
-      - DynamoDB Table:   ${aws_dynamodb_table.processing_state.id}
-      - SNS Topic:        ${aws_sns_topic.notifications.arn}
-      - ECR Repository:   ${aws_ecr_repository.app.repository_url}
-      - ECS Cluster:      ${aws_ecs_cluster.main.name}
-    
-    Next Steps:
-      1. Upload reference data: ./infrastructure/upload_reference_data.sh
-      2. Build & push Docker: ./infrastructure/deploy_docker.sh
-      3. Test: Upload CSV to s3://${aws_s3_bucket.input.id}/
-      4. Check email for completion notification
-      5. Download results from s3://${aws_s3_bucket.output.id}/
+    s3://${aws_s3_bucket.data.id}/
+    ├── input/       - Upload CSVs here
+    ├── output/      - Results
+    ├── audit/       - Audit JSONs
+    ├── logs/        - Log files
+    └── reference/   - Lookup tables
   EOT
-}
-
-# ============================================================================
-# OUTPUTS
-# ============================================================================
-
-output "input_bucket_name" {
-  description = "Name of the S3 input bucket"
-  value       = aws_s3_bucket.input.id
-}
-
-output "output_bucket_name" {
-  description = "Name of the S3 output bucket"
-  value       = aws_s3_bucket.output.id
-}
-
-output "audit_bucket_name" {
-  description = "Name of the S3 audit bucket"
-  value       = aws_s3_bucket.audit.id
-}
-
-output "reference_bucket_name" {
-  description = "Name of the S3 reference bucket"
-  value       = aws_s3_bucket.reference.id
 }
 
 output "ecr_repository_url" {
@@ -920,5 +774,33 @@ output "sns_topic_arn" {
 output "aws_region" {
   description = "AWS region"
   value       = var.aws_region
+}
+
+output "setup_complete" {
+  description = "Setup instructions"
+  value       = <<-EOT
+    ✅ Complete Infrastructure Deployed!
+    
+    Single S3 Bucket: s3://${aws_s3_bucket.data.id}/
+    Folders:
+      - input/      - Upload CSVs here  
+      - output/     - Processed results
+      - audit/      - Audit files
+      - logs/       - Application logs
+      - reference/  - Lookup tables
+    
+    Other Resources:
+      - DynamoDB Table: ${aws_dynamodb_table.processing_state.id}
+      - SNS Topic:      ${aws_sns_topic.notifications.arn}
+      - ECR Repository: ${aws_ecr_repository.app.repository_url}
+      - ECS Cluster:    ${aws_ecs_cluster.main.name}
+    
+    Next Steps:
+      1. Upload reference data: ./infrastructure/upload_reference_data.sh
+      2. Build & push Docker: ./infrastructure/deploy_docker.sh
+      3. Test: Upload CSV to s3://${aws_s3_bucket.data.id}/input/
+      4. Check email for completion notification
+      5. Download results from s3://${aws_s3_bucket.data.id}/output/
+  EOT
 }
 
