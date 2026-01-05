@@ -259,7 +259,8 @@ def save_results(output_dir: Path, results: List[Dict], input_filename: str, log
             'Unit of Measure': r.get('unit', ''),
             'Pack Count': r.get('count', ''),
             'Organic': r.get('organic', ''),
-            'Reasoning': r.get('business_rules_reasoning', ''),  # Single reasoning column
+            # Reasoning: Use business_rules_reasoning for supplements, filter_reason for filtered products
+            'Reasoning': r.get('business_rules_reasoning', '') if r.get('status') == 'success' else r.get('filter_reason', ''),
             
             # Additional Ingredients (at the end)
             'other ing. 2': get_ingredient(r, 2),

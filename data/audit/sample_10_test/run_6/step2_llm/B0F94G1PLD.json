@@ -1,0 +1,94 @@
+{
+  "product_id": 5,
+  "asin": "B0F94G1PLD",
+  "title": "(2 pack) presgera capsules - presgera supplements pills advanced formula for wellness & health support, all natural premium vitamin natural ingredients pastillas reviews, 120 capsules for 2 months",
+  "brand": "livorka",
+  "source_subcategory": "other herbal supplements",
+  "status": "step2_complete",
+  "step_completed": 2,
+  "lookup_action": "REMAP",
+  "nw_category": "HERBAL REMEDIES",
+  "nw_subcategory": "NON-SPECIFIC",
+  "remap_reason": "Maps to HERBAL REMEDIES / NON-SPECIFIC",
+  "age": "AGE GROUP - NON SPECIFIC",
+  "gender": "GENDER - NON SPECIFIC",
+  "form": "FORM - CAPSULE",
+  "organic": "NOT ORGANIC",
+  "count": "120",
+  "unit": "COUNT",
+  "size": "2",
+  "ingredients": [
+    {
+      "name": "vitamin",
+      "position": 124,
+      "category": "BASIC VITAMINS & MINERALS",
+      "subcategory": "LETTER VITAMINS",
+      "reasoning": "The word 'vitamin' appears in the title ('premium vitamin natural ingredients'); lookup returned category/subcategory BASIC VITAMINS & MINERALS / LETTER VITAMINS."
+    }
+  ],
+  "tokens_used": 0,
+  "api_cost": 0,
+  "_metadata": {
+    "model": "gpt-5-mini",
+    "tokens_used": {
+      "prompt": 18989,
+      "completion": 6456,
+      "total": 25445
+    },
+    "tool_calls": [
+      {
+        "function": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "vitamin"
+        },
+        "result": {
+          "found": true,
+          "ingredient": "Vitamin D",
+          "nw_category": "BASIC VITAMINS & MINERALS",
+          "nw_subcategory": "LETTER VITAMINS",
+          "keyword": "d",
+          "match_type": "fuzzy",
+          "confidence": "medium",
+          "score": 87
+        }
+      },
+      {
+        "function": "apply_business_rules",
+        "arguments": {
+          "ingredients": [
+            {
+              "name": "vitamin",
+              "position": 124,
+              "category": "BASIC VITAMINS & MINERALS",
+              "subcategory": "LETTER VITAMINS"
+            }
+          ],
+          "age_group": "AGE GROUP - NON SPECIFIC",
+          "gender": "GENDER - NON SPECIFIC",
+          "title": "(2 pack) presgera capsules - presgera supplements pills advanced formula for wellness & health support, all natural premium vitamin natural ingredients pastillas reviews, 120 capsules for 2 months"
+        },
+        "result": {
+          "initial_category": "BASIC VITAMINS & MINERALS",
+          "initial_subcategory": "LETTER VITAMINS",
+          "final_category": "BASIC VITAMINS & MINERALS",
+          "final_subcategory": "LETTER VITAMINS",
+          "primary_ingredient": "vitamin",
+          "all_ingredients": [
+            "vitamin"
+          ],
+          "rules_applied": [
+            "Primary Ingredient: 'vitamin' (position 124)",
+            "Initial Category/Subcategory: BASIC VITAMINS & MINERALS / LETTER VITAMINS"
+          ],
+          "changes_made": [],
+          "has_changes": false,
+          "has_unknown": false,
+          "should_explain": false,
+          "reasoning_context": "",
+          "full_reasoning": "Primary Ingredient: 'vitamin' (position 124) | Initial Category/Subcategory: BASIC VITAMINS & MINERALS / LETTER VITAMINS"
+        }
+      }
+    ]
+  },
+  "processing_time_sec": 80.209918
+}

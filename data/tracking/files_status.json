@@ -43,8 +43,8 @@
   },
   "sample_10_test": {
     "status": "completed",
-    "last_run_id": "run_5",
-    "completed_at": "2026-01-04T23:04:13.866724",
+    "last_run_id": "run_6",
+    "completed_at": "2026-01-05T00:08:11.342834",
     "total_records": 4,
     "success": 4,
     "filtered": 0,
@@ -53,7 +53,7 @@
     "total_tokens": 0,
     "input_tokens": 0,
     "output_tokens": 0,
-    "duration_seconds": 154.026521
+    "duration_seconds": 105.621316
   },
   "uncoded_amz_2025_p6": {
     "status": "processing",
