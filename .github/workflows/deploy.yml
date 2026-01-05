@@ -84,10 +84,9 @@ jobs:
           echo "ecr_url=$(terraform output -raw ecr_repository_url)" >> $GITHUB_OUTPUT
 
       - name: Upload Reference Data
-        working-directory: infrastructure
         run: |
-          chmod +x upload_reference_data.sh
-          ./upload_reference_data.sh ${{ steps.tf-outputs.outputs.data_bucket }}
+          chmod +x infrastructure/upload_reference_data.sh
+          ./infrastructure/upload_reference_data.sh ${{ steps.tf-outputs.outputs.data_bucket }}
 
       - name: Configure AWS credentials for ECR
         uses: aws-actions/configure-aws-credentials@v4

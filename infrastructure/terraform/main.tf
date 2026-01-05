@@ -776,6 +776,16 @@ output "aws_region" {
   value       = var.aws_region
 }
 
+output "data_bucket_name" {
+  description = "S3 bucket name for data storage"
+  value       = aws_s3_bucket.data.id
+}
+
+output "ecr_repository_url" {
+  description = "ECR repository URL"
+  value       = aws_ecr_repository.app.repository_url
+}
+
 output "setup_complete" {
   description = "Setup instructions"
   value       = <<-EOT
