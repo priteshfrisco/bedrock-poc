@@ -20,14 +20,11 @@ FROM python:3.13-slim
 WORKDIR /app
 
 # Copy Python dependencies from builder
-COPY --from=builder /root/.local /root/.local
+COPY --from=builder /root/.local /usr/local
 
 # Copy application code
 COPY src/ ./src/
 COPY reference_data/ ./reference_data/
-
-# Make sure scripts in .local are usable
-ENV PATH=/root/.local/bin:$PATH
 
 # Set Python path
 ENV PYTHONPATH=/app
