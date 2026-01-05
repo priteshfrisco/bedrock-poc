@@ -686,7 +686,7 @@ output "ecs_cluster_name" {
 output "setup_complete" {
   description = "Setup instructions"
   value       = <<-EOT
-    ✅ Complete Production Infrastructure Deployed!
+    ✅ Complete Infrastructure Deployed!
     
     Resources:
       - Input Bucket:     s3://${aws_s3_bucket.input.id}
