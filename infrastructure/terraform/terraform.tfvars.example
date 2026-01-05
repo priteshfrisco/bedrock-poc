@@ -1,0 +1,21 @@
+# Terraform Variables Configuration
+# Copy this file to terraform.tfvars and update with your values
+
+# Email address for job completion notifications
+notification_email = "your-email@company.com"
+
+# OpenAI API key (get from https://platform.openai.com/api-keys)
+openai_api_key = "sk-your-openai-api-key-here"
+
+# AWS region (optional, defaults to us-east-2)
+aws_region = "us-east-2"
+
+# Environment name (optional, defaults to dev)
+environment = "dev"
+
+# Client name (optional, used for resource naming)
+client_name = "bedrock"
+
+# Project name (optional, used for resource naming)
+project_name = "ai-data-enrichment"
+
