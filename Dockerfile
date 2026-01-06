@@ -37,8 +37,8 @@ RUN useradd -m -u 1000 appuser && \
     chown -R appuser:appuser /app
 USER appuser
 
-# Default command runs in AWS mode
+# Default command runs in AWS mode as a Python module
 # Override with --mode local for local processing
-CMD ["python", "src/main.py", "--mode", "aws"]
+CMD ["python", "-m", "src.main", "--mode", "aws"]
 
 # Force Docker rebuild
