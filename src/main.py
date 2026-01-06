@@ -641,6 +641,95 @@ def generate_presigned_url(bucket: str, key: str, expiration: int = 604800) -> s
         return f"s3://{bucket}/{key}"
 
 
+def process_single_product(record_data):
+    """
+    Worker function to process a single product
+    Returns: (result_dict or None, filtered_count, error_info)
+    """
+    idx, record, log_manager, db, run_id = record_data
+    product_id = idx + 1
+    asin = record.get('asin', f'P{product_id}')
+    title = record.get('title', '')
+    
+    try:
+        # Step 1: Filter
+        step1_result = apply_step1_filter(
+            title,
+            record.get('amazon_subcategory', '').lower().strip(),
+            asin,
+            log_manager
+        )
+        
+        if not step1_result['passed']:
+            # Filtered - write to DynamoDB
+            db.put_record(
+                asin=asin,
+                run_id=run_id,
+                status='filtered',
+                data={'reason': step1_result['filter_reason']}
+            )
+            return (None, 1, None)  # None result, 1 filtered, no error
+        
+        # Step 2: LLM extraction
+        llm_result = extract_llm_attributes(title, asin, product_id, log_manager)
+        
+        if not llm_result['success']:
+            # Error
+            db.put_record(
+                asin=asin,
+                run_id=run_id,
+                status='error',
+                data={'error': llm_result.get('error', 'Unknown error')}
+            )
+            return (None, 0, llm_result.get('error', 'Unknown error'))
+        
+        # Extract attributes
+        attrs = extract_attributes_from_llm_result(llm_result['data'])
+        business_rules_result = attrs.get('business_rules', {})
+        
+        # Build result
+        result = {
+            'asin': asin,
+            'title': title,
+            'brand': record.get('brand', ''),
+            'category': business_rules_result.get('final_category', 'UNKNOWN'),
+            'subcategory': business_rules_result.get('final_subcategory', 'UNKNOWN'),
+            'primary_ingredient': business_rules_result.get('primary_ingredient', ''),
+            'age': attrs.get('age', 'UNKNOWN'),
+            'gender': attrs.get('gender', 'UNKNOWN'),
+            'form': attrs.get('form', 'UNKNOWN'),
+            'organic': attrs.get('organic', 'NOT ORGANIC'),
+            'count': attrs.get('count', 'UNKNOWN'),
+            'unit': attrs.get('unit', 'UNKNOWN'),
+            'size': attrs.get('size', ''),
+            'health_focus': business_rules_result.get('health_focus', ''),
+            'high_level_category': assign_high_level_category(
+                business_rules_result.get('final_category', 'UNKNOWN')
+            ),
+            'reasoning': business_rules_result.get('reasoning', '')
+        }
+        
+        # Write success to DynamoDB
+        db.put_record(
+            asin=asin,
+            run_id=run_id,
+            status='success',
+            data=result
+        )
+        
+        return (result, 0, None)  # result, 0 filtered, no error
+        
+    except Exception as e:
+        error_msg = str(e)
+        db.put_record(
+            asin=asin,
+            run_id=run_id,
+            status='error',
+            data={'error': error_msg}
+        )
+        return (None, 0, error_msg)
+
+
 def process_aws_mode(
     s3_bucket: str,
     input_key: str,
@@ -697,94 +786,32 @@ def process_aws_mode(
             base_path='/tmp/bedrock-data'
         )
         
-        print(f"\n🚀 Processing {total_records} records...")
+        print(f"\n🚀 Processing {total_records} records with 100 parallel workers...")
         
         results = []
         filtered_count = 0
+        error_count = 0
         
-        for idx, record in df.iterrows():
-            product_id = idx + 1
-            asin = record.get('asin', f'P{product_id}')
-            title = record.get('title', '')
+        # Prepare data for workers
+        tasks = [(idx, record, log_manager, db, run_id) for idx, record in df.iterrows()]
+        
+        # Process with ThreadPoolExecutor (100 concurrent API calls)
+        with ThreadPoolExecutor(max_workers=100) as executor:
+            futures = {executor.submit(process_single_product, task): task[0] for task in tasks}
             
-            try:
-                # Step 1: Filter
-                step1_result = apply_step1_filter(
-                    title,
-                    record.get('amazon_subcategory', '').lower().strip(),
-                    asin,
-                    log_manager
-                )
-                
-                if not step1_result['passed']:
-                    # Filtered - write to DynamoDB
-                    db.put_record(
-                        asin=asin,
-                        run_id=run_id,
-                        status='filtered',
-                        data={'reason': step1_result['filter_reason']}
-                    )
-                    filtered_count += 1
-                    continue
-                
-                # Step 2: LLM extraction
-                llm_result = extract_llm_attributes(title, asin, product_id, log_manager)
-                
-                if not llm_result['success']:
-                    # Error
-                    db.put_record(
-                        asin=asin,
-                        run_id=run_id,
-                        status='error',
-                        data={'error': llm_result.get('error', 'Unknown error')}
-                    )
-                    continue
-                
-                # Extract attributes
-                attrs = extract_attributes_from_llm_result(llm_result['data'])
-                business_rules_result = attrs.get('business_rules', {})
-                
-                # Build result
-                result = {
-                    'asin': asin,
-                    'title': title,
-                    'brand': record.get('brand', ''),
-                    'category': business_rules_result.get('category', 'UNKNOWN'),
-                    'subcategory': business_rules_result.get('subcategory', 'UNKNOWN'),
-                    'primary_ingredient': business_rules_result.get('primary_ingredient', ''),
-                    'age': attrs['age'],
-                    'gender': attrs['gender'],
-                    'form': attrs['form'],
-                    'organic': attrs.get('organic', ''),
-                    'count': attrs.get('count', ''),
-                    'unit': attrs.get('unit', ''),
-                    'size': attrs.get('size', ''),
-                    'health_focus': business_rules_result.get('health_focus', ''),
-                    'high_level_category': business_rules_result.get('high_level_category', ''),
-                    'reasoning': business_rules_result.get('reasoning', '')
-                }
-                
-                results.append(result)
-                
-                # Write to DynamoDB
-                db.put_record(
-                    asin=asin,
-                    run_id=run_id,
-                    status='success',
-                    data=result
-                )
-                
-                if product_id % 100 == 0:
-                    print(f"✅ [{product_id}/{total_records}] Processed")
-                
-            except Exception as e:
-                print(f"❌ [{product_id}/{total_records}] {asin}: {str(e)}")
-                db.put_record(
-                    asin=asin,
-                    run_id=run_id,
-                    status='error',
-                    data={'error': str(e)}
-                )
+            # Progress bar
+            with tqdm(total=total_records, desc="Processing", unit="product") as pbar:
+                for future in as_completed(futures):
+                    result, filtered, error = future.result()
+                    
+                    if result:
+                        results.append(result)
+                    if filtered:
+                        filtered_count += filtered
+                    if error:
+                        error_count += 1
+                    
+                    pbar.update(1)
         
         # Convert results to DataFrame
         if results:
