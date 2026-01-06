@@ -940,9 +940,9 @@ def process_aws_mode(
             }
         )
         
-        # Process with ThreadPoolExecutor (10 concurrent API calls for AWS stability)
+        # Process with ThreadPoolExecutor (50 concurrent workers)
         processed_count = 0
-        with ThreadPoolExecutor(max_workers=10) as executor:
+        with ThreadPoolExecutor(max_workers=50) as executor:
             futures = {executor.submit(process_single_product, task): task[0] for task in tasks}
             
             # Progress bar
@@ -1030,8 +1030,9 @@ def process_aws_mode(
                 input_filename=input_filename,
                 run_folder=run_folder,
                 total_records=total_records,
-                enriched_count=len(results) - filtered_count,  # Only LLM enriched
+                enriched_count=len(results) - filtered_count - error_count,  # Only LLM enriched
                 filtered_count=filtered_count,
+                error_count=error_count,
                 duration_minutes=duration,
                 s3_bucket=s3_bucket,
                 output_prefix=output_prefix,
