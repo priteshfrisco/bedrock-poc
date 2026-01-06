@@ -855,7 +855,23 @@ def process_aws_mode(
         # Prepare data for workers
         tasks = [(idx, record, log_manager, db, run_id) for idx, record in df.iterrows()]
         
+        # Track overall processing status in DynamoDB
+        processing_key = f"{input_filename}_processing"
+        db.put_record(
+            asin=processing_key,
+            run_id=run_folder,
+            status='in_progress',
+            data={
+                'total': total_records,
+                'processed': 0,
+                'filtered': 0,
+                'errors': 0,
+                'start_time': start_time.isoformat()
+            }
+        )
+        
         # Process with ThreadPoolExecutor (100 concurrent API calls)
+        processed_count = 0
         with ThreadPoolExecutor(max_workers=100) as executor:
             futures = {executor.submit(process_single_product, task): task[0] for task in tasks}
             
@@ -871,7 +887,41 @@ def process_aws_mode(
                     if error:
                         error_count += 1
                     
+                    processed_count += 1
                     pbar.update(1)
+                    
+                    # Update DynamoDB heartbeat every 100 products
+                    if processed_count % 100 == 0:
+                        db.put_record(
+                            asin=processing_key,
+                            run_id=run_folder,
+                            status='in_progress',
+                            data={
+                                'total': total_records,
+                                'processed': processed_count,
+                                'enriched': len(results),
+                                'filtered': filtered_count,
+                                'errors': error_count,
+                                'progress_pct': round((processed_count / total_records) * 100, 1),
+                                'last_update': datetime.now().isoformat()
+                            }
+                        )
+        
+        # Final status update
+        db.put_record(
+            asin=processing_key,
+            run_id=run_folder,
+            status='completed',
+            data={
+                'total': total_records,
+                'processed': processed_count,
+                'enriched': len(results),
+                'filtered': filtered_count,
+                'errors': error_count,
+                'progress_pct': 100.0,
+                'end_time': datetime.now().isoformat()
+            }
+        )
         
         # Convert results to DataFrame
         if results:
