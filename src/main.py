@@ -631,8 +631,7 @@ def create_result_dict(asin: str, title: str, brand: str,
                        category: str = 'UNKNOWN', subcategory: str = 'UNKNOWN',
                        primary_ingredient: str = '', age: str = '', gender: str = '',
                        form: str = '', organic: str = '', count: str = '', unit: str = '',
-                       size: str = '', health_focus: str = '', reasoning: str = '',
-                       status: str = 'SUCCESS', error: str = '') -> dict:
+                       size: str = '', health_focus: str = '', reasoning: str = '') -> dict:
     """
     Helper function to create a standardized result dictionary
     """
@@ -652,9 +651,7 @@ def create_result_dict(asin: str, title: str, brand: str,
         'size': size,
         'health_focus': health_focus,
         'high_level_category': assign_high_level_category(category),
-        'reasoning': reasoning,
-        'status': status,
-        'error': error
+        'reasoning': reasoning
     }
 
 
@@ -732,9 +729,7 @@ def process_llm_only(record_data):
                 unit=step2_result['data'].get('unit', ''),
                 size=step2_result['data'].get('size', ''),
                 health_focus=step2_result['data'].get('health_focus', ''),
-                high_level_category=step2_result['data'].get('high_level_category', ''),
-                reasoning=step2_result['data'].get('reasoning', ''),
-                status='SUCCESS'
+                reasoning=step2_result['data'].get('reasoning', '')
             )
             
             # Save audit
@@ -761,8 +756,9 @@ def process_llm_only(record_data):
                 asin=asin,
                 title=title,
                 brand=brand,
-                status='ERROR',
-                error=step2_result['error']
+                category='ERROR',
+                subcategory='ERROR',
+                reasoning=f"LLM Error: {step2_result['error']}"
             )
             
             # Save error audit
@@ -790,8 +786,9 @@ def process_llm_only(record_data):
             asin=asin,
             title=title,
             brand=brand,
-            status='ERROR',
-            error=str(e)
+            category='ERROR',
+            subcategory='ERROR',
+            reasoning=f"Processing Error: {str(e)}"
         )
         
         log_manager.save_audit_json(
@@ -1100,8 +1097,7 @@ def process_aws_mode(
                     brand=brand,
                     category='REMOVE',
                     subcategory='REMOVE',
-                    reasoning=step1_result['filter_reason'],
-                    status='FILTERED'
+                    reasoning=step1_result['filter_reason']
                 )
                 results.append(filter_result)
                 filtered_count += 1
