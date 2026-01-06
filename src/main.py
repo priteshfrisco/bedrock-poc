@@ -661,7 +661,16 @@ def process_single_product(record_data):
         )
         
         if not step1_result['passed']:
-            # Filtered - write to DynamoDB
+            # Filtered - write to DynamoDB and audit
+            filter_result = {
+                'asin': asin,
+                'title': title,
+                'status': 'REMOVE',
+                'filter_reason': step1_result['filter_reason'],
+                'step_completed': 1
+            }
+            log_manager.save_audit_json('step1_filter', filter_result, f"{asin}.json")
+            
             db.put_record(
                 asin=asin,
                 run_id=run_id,
@@ -709,6 +718,16 @@ def process_single_product(record_data):
             'reasoning': business_rules_result.get('reasoning', '')
         }
         
+        # Save audit JSON with full processing details
+        audit_result = result.copy()
+        audit_result.update({
+            'status': 'SUCCESS',
+            'step_completed': 3,
+            'ingredients': attrs.get('ingredients', []),
+            'business_rules': business_rules_result
+        })
+        log_manager.save_audit_json('step3_postprocess', audit_result, f"{asin}.json")
+        
         # Write success to DynamoDB
         db.put_record(
             asin=asin,
@@ -721,6 +740,15 @@ def process_single_product(record_data):
         
     except Exception as e:
         error_msg = str(e)
+        error_result = {
+            'asin': asin,
+            'title': title,
+            'status': 'ERROR',
+            'error': error_msg,
+            'step_completed': 0
+        }
+        log_manager.save_audit_json('errors', error_result, f"{asin}.json")
+        
         db.put_record(
             asin=asin,
             run_id=run_id,
