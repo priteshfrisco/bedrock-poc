@@ -1210,16 +1210,28 @@ def process_aws_mode(
         # Upload audit files to S3 (audit folder with file/run_N structure)
         audit_s3_prefix = f"{audit_prefix}{input_filename}/{run_folder}/audit"
         audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
+        print(f"\n   Checking audit directory: {audit_dir}")
+        print(f"   Exists: {audit_dir.exists()}")
         if audit_dir.exists():
+            file_count = len(list(audit_dir.rglob('*.*')))
+            print(f"   Found {file_count} files in audit directory")
             count = s3.upload_directory(audit_dir, s3_bucket, audit_s3_prefix)
-            print(f"   Uploaded {count} audit files to S3")
+            print(f"   ✓ Uploaded {count} audit files to S3")
+        else:
+            print(f"   ⚠ Audit directory does not exist")
         
         # Upload logs to S3 (logs folder with file/run_N structure)
         logs_s3_prefix = f"{logs_prefix}{input_filename}/{run_folder}/logs"
         logs_dir = Path(f'/tmp/bedrock-data/logs/{input_filename}')
+        print(f"\n   Checking logs directory: {logs_dir}")
+        print(f"   Exists: {logs_dir.exists()}")
         if logs_dir.exists():
+            file_count = len(list(logs_dir.rglob('*.*')))
+            print(f"   Found {file_count} files in logs directory")
             count = s3.upload_directory(logs_dir, s3_bucket, logs_s3_prefix)
-            print(f"   Uploaded {count} log files to S3")
+            print(f"   ✓ Uploaded {count} log files to S3")
+        else:
+            print(f"   ⚠ Logs directory does not exist")
         
         # Send success notification
         end_time = datetime.now()
