@@ -56,34 +56,33 @@ def send_success_notification(
 ):
     """Send success notification with results summary"""
     message = f"""
-✅ Processing Complete!
+Processing Complete
 
 File: {input_key}
 Run: {run_folder}
 Duration: {duration_minutes:.1f} minutes
 
 Results:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Total Products:           {total_records:,}
 Enriched (Full):          {enriched_count:,}
 Enriched (Filtered):      {filtered_count:,}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ All {total_records} products successfully enriched!
+
+All {total_records} products successfully enriched.
 
 Download Results (expires in 7 days):
 {download_url}
 
 S3 Locations:
-• Bucket:  s3://{s3_bucket}/
-• Output:  s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv
-• Audit:   s3://{s3_bucket}/{audit_prefix}{input_filename}/{run_folder}/audit/
-• Logs:    s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/logs/
+Bucket:  s3://{s3_bucket}/
+Output:  s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv
+Audit:   s3://{s3_bucket}/{audit_prefix}{input_filename}/{run_folder}/audit/
+Logs:    s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/logs/
 
 Status Breakdown:
-• {enriched_count} products received full LLM enrichment
-• {filtered_count} products enriched with filter classification (non-supplements)
+{enriched_count} products received full LLM enrichment
+{filtered_count} products enriched with filter classification (non-supplements)
 """
-    send_notification(sns_topic_arn, f"✅ Processing Complete - {input_filename}", message)
+    send_notification(sns_topic_arn, f"Processing Complete - {input_filename}", message)
 
 
 def send_error_notification(
@@ -96,7 +95,7 @@ def send_error_notification(
     from pathlib import Path
     
     error_message = f"""
-❌ Processing Failed!
+Processing Failed
 
 File: {input_key}
 Run: {run_folder if run_folder else 'N/A'}
@@ -104,7 +103,7 @@ Error: {error}
 
 Please check CloudWatch Logs for details.
 """
-    send_notification(sns_topic_arn, f"❌ Processing Failed - {Path(input_key).stem}", error_message)
+    send_notification(sns_topic_arn, f"Processing Failed - {Path(input_key).stem}", error_message)
 
 
 def send_invalid_filename_notification(
@@ -113,20 +112,20 @@ def send_invalid_filename_notification(
 ):
     """Send notification for invalid filename"""
     error_msg = f"""
-❌ Invalid Filename!
+Invalid Filename
 
 File: {input_filename}
 
 Error: Input files must start with 'uncoded_'
 
 Valid examples:
-• uncoded_products.csv
-• uncoded_january_2026.csv
-• UNCODED_test.csv
+uncoded_products.csv
+uncoded_january_2026.csv
+UNCODED_test.csv
 
 Please rename your file and upload again.
 """
-    send_notification(sns_topic_arn, f"❌ Invalid Filename - {input_filename}", error_msg)
+    send_notification(sns_topic_arn, f"Invalid Filename - {input_filename}", error_msg)
 
 
 def send_processing_started_notification(
@@ -139,25 +138,17 @@ def send_processing_started_notification(
 ):
     """Send notification when processing starts"""
     message = f"""
-🚀 Processing Started!
+Processing Started
 
 File: {input_key}
 Run: {run_folder}
 Total Products: {total_records:,}
 
-Status: Processing in progress...
+Status: Processing in progress
 
 You will receive another email when processing completes.
-Estimated time: {int(total_records / 100 * 0.8)} - {int(total_records / 100 * 1.2)} minutes
 
 S3 Bucket: s3://{s3_bucket}/
-
-What's happening:
-• Products are being filtered and enriched
-• Progress updates every 100 products in DynamoDB
-• Full LLM processing with 100 parallel workers
-
-No action needed - just wait for completion notification!
 """
-    send_notification(sns_topic_arn, f"🚀 Processing Started - {input_filename}", message)
+    send_notification(sns_topic_arn, f"Processing Started - {input_filename}", message)
 
