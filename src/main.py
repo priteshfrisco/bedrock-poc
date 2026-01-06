@@ -623,6 +623,24 @@ def send_notification(sns_topic_arn: str, subject: str, message: str):
         print(f"⚠️  Failed to send notification: {str(e)}")
 
 
+def generate_presigned_url(bucket: str, key: str, expiration: int = 604800) -> str:
+    """
+    Generate a pre-signed URL for S3 object download
+    Default expiration: 7 days (604800 seconds)
+    """
+    try:
+        s3_client = boto3.client('s3')
+        url = s3_client.generate_presigned_url(
+            'get_object',
+            Params={'Bucket': bucket, 'Key': key},
+            ExpiresIn=expiration
+        )
+        return url
+    except Exception as e:
+        print(f"⚠️  Failed to generate pre-signed URL: {str(e)}")
+        return f"s3://{bucket}/{key}"
+
+
 def process_aws_mode(
     s3_bucket: str,
     input_key: str,
@@ -682,6 +700,7 @@ def process_aws_mode(
         print(f"\n🚀 Processing {total_records} records...")
         
         results = []
+        filtered_count = 0
         
         for idx, record in df.iterrows():
             product_id = idx + 1
@@ -705,6 +724,7 @@ def process_aws_mode(
                         status='filtered',
                         data={'reason': step1_result['filter_reason']}
                     )
+                    filtered_count += 1
                     continue
                 
                 # Step 2: LLM extraction
@@ -797,23 +817,37 @@ def process_aws_mode(
         duration = (end_time - start_time).total_seconds() / 60
         
         if sns_topic_arn:
+            # Generate pre-signed URL for output file
+            output_key = f"{output_prefix}runs/{run_id}/{input_filename}_coded.csv"
+            download_url = generate_presigned_url(s3_bucket, output_key, expiration=604800)
+            
             message = f"""
 ✅ Processing Complete!
 
 File: {input_key}
 Run ID: {run_id}
-Total Products: {total_records:,}
-Processed: {len(results):,}
 Duration: {duration:.1f} minutes
 
-S3 Bucket: s3://{s3_bucket}/
-Output: s3://{s3_bucket}/{output_prefix}runs/{run_id}/{input_filename}_coded.csv
-Audit: s3://{s3_bucket}/{audit_prefix}runs/{run_id}/audit/
-Logs: s3://{s3_bucket}/{logs_prefix}runs/{run_id}/logs/
+Results:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total Products:           {total_records:,}
+Enriched (Full):          {len(results):,}
+Enriched (Filtered):      {filtered_count:,}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ All {total_records} products successfully enriched!
 
-Status Summary:
-- Success: {len(results)}
-- Total: {total_records}
+Download Results (expires in 7 days):
+{download_url}
+
+S3 Locations:
+• Bucket:  s3://{s3_bucket}/
+• Output:  s3://{s3_bucket}/{output_prefix}runs/{run_id}/{input_filename}_coded.csv
+• Audit:   s3://{s3_bucket}/{audit_prefix}runs/{run_id}/audit/
+• Logs:    s3://{s3_bucket}/{logs_prefix}runs/{run_id}/logs/
+
+Status Breakdown:
+• {len(results)} products received full LLM enrichment
+• {filtered_count} products enriched with filter classification (non-supplements)
 """
             send_notification(sns_topic_arn, f"✅ Processing Complete - {input_filename}", message)
     
