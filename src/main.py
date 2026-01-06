@@ -1047,39 +1047,84 @@ def process_aws_mode(
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Bedrock AI Data Enrichment Pipeline')
-    parser.add_argument('--mode', choices=['local', 'aws'], default='local',
-                       help='Execution mode: local (default) or aws (cloud)')
+    import sys
+    import traceback
     
-    # AWS mode arguments
-    parser.add_argument('--input-key', help='S3 input key (AWS mode)')
+    # Force stdout/stderr to flush immediately for Docker/CloudWatch
+    sys.stdout.reconfigure(line_buffering=True)
+    sys.stderr.reconfigure(line_buffering=True)
     
-    args = parser.parse_args()
+    print("="*80)
+    print("BEDROCK AI DATA ENRICHMENT - STARTING")
+    print("="*80)
     
-    if args.mode == 'aws':
-        # AWS mode - use env vars (set by ECS task)
-        S3_BUCKET = os.getenv('S3_BUCKET')
-        INPUT_KEY = args.input_key or os.getenv('INPUT_KEY')
-        OUTPUT_PREFIX = os.getenv('OUTPUT_PREFIX', 'output/')
-        AUDIT_PREFIX = os.getenv('AUDIT_PREFIX', 'audit/')
-        LOGS_PREFIX = os.getenv('LOGS_PREFIX', 'logs/')
-        DYNAMODB_TABLE = os.getenv('DYNAMODB_TABLE')
-        SNS_TOPIC_ARN = os.getenv('SNS_TOPIC_ARN')
+    try:
+        parser = argparse.ArgumentParser(description='Bedrock AI Data Enrichment Pipeline')
+        parser.add_argument('--mode', choices=['local', 'aws'], default='local',
+                           help='Execution mode: local (default) or aws (cloud)')
         
-        if not S3_BUCKET or not INPUT_KEY:
-            print("❌ Error: S3_BUCKET and INPUT_KEY are required for AWS mode")
-            sys.exit(1)
+        # AWS mode arguments
+        parser.add_argument('--input-key', help='S3 input key (AWS mode)')
         
-        process_aws_mode(
-            s3_bucket=S3_BUCKET,
-            input_key=INPUT_KEY,
-            output_prefix=OUTPUT_PREFIX,
-            audit_prefix=AUDIT_PREFIX,
-            logs_prefix=LOGS_PREFIX,
-            dynamodb_table=DYNAMODB_TABLE,
-            sns_topic_arn=SNS_TOPIC_ARN
-        )
-    else:
-        # Local mode - existing behavior
-        main()
+        args = parser.parse_args()
+        
+        if args.mode == 'aws':
+            # AWS mode - use env vars (set by ECS task)
+            S3_BUCKET = os.getenv('S3_BUCKET')
+            INPUT_KEY = args.input_key or os.getenv('INPUT_KEY')
+            OUTPUT_PREFIX = os.getenv('OUTPUT_PREFIX', 'output/')
+            AUDIT_PREFIX = os.getenv('AUDIT_PREFIX', 'audit/')
+            LOGS_PREFIX = os.getenv('LOGS_PREFIX', 'logs/')
+            DYNAMODB_TABLE = os.getenv('DYNAMODB_TABLE')
+            SNS_TOPIC_ARN = os.getenv('SNS_TOPIC_ARN')
+            
+            if not S3_BUCKET or not INPUT_KEY:
+                print("ERROR: S3_BUCKET and INPUT_KEY are required for AWS mode")
+                sys.exit(1)
+            
+            process_aws_mode(
+                s3_bucket=S3_BUCKET,
+                input_key=INPUT_KEY,
+                output_prefix=OUTPUT_PREFIX,
+                audit_prefix=AUDIT_PREFIX,
+                logs_prefix=LOGS_PREFIX,
+                dynamodb_table=DYNAMODB_TABLE,
+                sns_topic_arn=SNS_TOPIC_ARN
+            )
+        else:
+            # Local mode - existing behavior
+            main()
+    
+    except Exception as e:
+        # Emergency error logging - catches ANY error including startup failures
+        error_msg = f"CRITICAL ERROR: {str(e)}"
+        error_trace = traceback.format_exc()
+        
+        print("=" * 80)
+        print("CRITICAL ERROR CAUGHT AT TOP LEVEL")
+        print("=" * 80)
+        print(error_msg)
+        print("")
+        print("Full traceback:")
+        print(error_trace)
+        print("=" * 80)
+        
+        # Try to send SNS notification if possible
+        try:
+            if args.mode == 'aws':
+                SNS_TOPIC_ARN = os.getenv('SNS_TOPIC_ARN')
+                INPUT_KEY = args.input_key or os.getenv('INPUT_KEY', 'unknown')
+                if SNS_TOPIC_ARN and AWS_AVAILABLE:
+                    import boto3
+                    sns = boto3.client('sns')
+                    sns.publish(
+                        TopicArn=SNS_TOPIC_ARN,
+                        Subject=f"CRITICAL: Startup Failure - {INPUT_KEY}",
+                        Message=f"Critical error during startup:\n\n{error_msg}\n\nTraceback:\n{error_trace}"
+                    )
+                    print("Emergency notification sent to SNS")
+        except Exception as notification_error:
+            print(f"Could not send emergency notification: {notification_error}")
+        
+        sys.exit(2)
 
