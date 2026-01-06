@@ -648,15 +648,35 @@ def process_single_product(record_data):
         )
         
         if not step1_result['passed']:
-            # Filtered - write to DynamoDB and audit
+            # Filtered - create basic result with filter reason
             filter_result = {
+                'asin': asin,
+                'title': title,
+                'brand': record.get('brand', ''),
+                'category': 'REMOVE',
+                'subcategory': 'REMOVE',
+                'primary_ingredient': '',
+                'age': '',
+                'gender': '',
+                'form': '',
+                'organic': '',
+                'count': '',
+                'unit': '',
+                'size': '',
+                'health_focus': '',
+                'high_level_category': '',
+                'reasoning': step1_result['filter_reason']
+            }
+            
+            # Save audit
+            audit_filter = {
                 'asin': asin,
                 'title': title,
                 'status': 'REMOVE',
                 'filter_reason': step1_result['filter_reason'],
                 'step_completed': 1
             }
-            log_manager.save_audit_json('step1_filter', filter_result, f"{asin}.json")
+            log_manager.save_audit_json('step1_filter', audit_filter, f"{asin}.json")
             
             db.put_record(
                 asin=asin,
@@ -664,7 +684,7 @@ def process_single_product(record_data):
                 status='filtered',
                 data={'reason': step1_result['filter_reason']}
             )
-            return (None, 1, None)  # None result, 1 filtered, no error
+            return (filter_result, 1, None)  # Return result for CSV, count as filtered
         
         # Step 2: LLM extraction
         llm_result = extract_llm_attributes(title, asin, product_id, log_manager)
