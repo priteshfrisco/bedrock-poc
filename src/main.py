@@ -771,7 +771,6 @@ def process_aws_mode(
     audit_prefix: str,
     logs_prefix: str,
     dynamodb_table: str,
-    run_id: str,
     sns_topic_arn: str = None
 ):
     """
@@ -877,8 +876,8 @@ def process_aws_mode(
         filtered_count = 0
         error_count = 0
         
-        # Prepare data for workers
-        tasks = [(idx, record, log_manager, db, run_id) for idx, record in df.iterrows()]
+        # Prepare data for workers (use run_folder, not run_id)
+        tasks = [(idx, record, log_manager, db, run_folder) for idx, record in df.iterrows()]
         
         # Track overall processing status in DynamoDB
         processing_key = f"{input_filename}_processing"
@@ -1008,7 +1007,6 @@ if __name__ == '__main__':
     
     # AWS mode arguments
     parser.add_argument('--input-key', help='S3 input key (AWS mode)')
-    parser.add_argument('--run-id', help='Run ID (AWS mode)')
     
     args = parser.parse_args()
     
@@ -1020,7 +1018,6 @@ if __name__ == '__main__':
         AUDIT_PREFIX = os.getenv('AUDIT_PREFIX', 'audit/')
         LOGS_PREFIX = os.getenv('LOGS_PREFIX', 'logs/')
         DYNAMODB_TABLE = os.getenv('DYNAMODB_TABLE')
-        RUN_ID = args.run_id or os.getenv('RUN_ID', f"run-{datetime.now().strftime('%Y%m%d-%H%M%S')}")
         SNS_TOPIC_ARN = os.getenv('SNS_TOPIC_ARN')
         
         if not S3_BUCKET or not INPUT_KEY:
@@ -1034,7 +1031,6 @@ if __name__ == '__main__':
             audit_prefix=AUDIT_PREFIX,
             logs_prefix=LOGS_PREFIX,
             dynamodb_table=DYNAMODB_TABLE,
-            run_id=RUN_ID,
             sns_topic_arn=SNS_TOPIC_ARN
         )
     else:
