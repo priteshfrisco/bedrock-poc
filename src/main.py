@@ -366,6 +366,17 @@ def main():
     # Extract input filename (without path and extension)
     input_filename = Path(INPUT_FILE).stem  # e.g., "sample_10_test"
     
+    # ✅ VALIDATE: File must start with "uncoded_"
+    if not input_filename.lower().startswith('uncoded_'):
+        print(f"\n❌ ERROR: Input file must start with 'uncoded_'")
+        print(f"   Got: {input_filename}")
+        print(f"   Expected: uncoded_*.csv")
+        print(f"\nExample valid filenames:")
+        print(f"   - uncoded_products.csv")
+        print(f"   - uncoded_january_2026.csv")
+        print(f"   - UNCODED_test.csv")
+        sys.exit(1)
+    
     # Initialize LogManager (handles all logging and audit structure)
     log_manager = LogManager(input_filename=input_filename, base_path='data')
     info = log_manager.get_info()
@@ -782,6 +793,14 @@ def process_aws_mode(
     
     # Extract filename without extension
     input_filename = Path(input_key).stem
+    
+    # ✅ VALIDATE: File must start with "uncoded_"
+    if not input_filename.lower().startswith('uncoded_'):
+        error_msg = f"❌ ERROR: Input file must start with 'uncoded_'. Got: {input_filename}"
+        print(error_msg)
+        if sns_topic_arn:
+            send_notification(sns_topic_arn, f"❌ Invalid Filename - {input_filename}", error_msg)
+        raise ValueError(f"Invalid filename: {input_filename}. Must start with 'uncoded_'")
     
     # Get next run number by checking existing runs in S3
     s3 = S3Manager()
