@@ -46,7 +46,8 @@ try:
         generate_presigned_url,
         send_success_notification,
         send_error_notification,
-        send_invalid_filename_notification
+        send_invalid_filename_notification,
+        send_processing_started_notification
     )
     AWS_AVAILABLE = True
 except ImportError:
@@ -839,6 +840,17 @@ def process_aws_mode(
             input_filename=input_filename,
             base_path='/tmp/bedrock-data'
         )
+        
+        # Send "Processing Started" notification
+        if sns_topic_arn:
+            send_processing_started_notification(
+                sns_topic_arn=sns_topic_arn,
+                input_key=input_key,
+                input_filename=input_filename,
+                run_folder=run_folder,
+                total_records=total_records,
+                s3_bucket=s3_bucket
+            )
         
         print(f"\n🚀 Processing {total_records} records with 100 parallel workers...")
         

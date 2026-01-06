@@ -128,3 +128,36 @@ Please rename your file and upload again.
 """
     send_notification(sns_topic_arn, f"❌ Invalid Filename - {input_filename}", error_msg)
 
+
+def send_processing_started_notification(
+    sns_topic_arn: str,
+    input_key: str,
+    input_filename: str,
+    run_folder: str,
+    total_records: int,
+    s3_bucket: str
+):
+    """Send notification when processing starts"""
+    message = f"""
+🚀 Processing Started!
+
+File: {input_key}
+Run: {run_folder}
+Total Products: {total_records:,}
+
+Status: Processing in progress...
+
+You will receive another email when processing completes.
+Estimated time: {int(total_records / 100 * 0.8)} - {int(total_records / 100 * 1.2)} minutes
+
+S3 Bucket: s3://{s3_bucket}/
+
+What's happening:
+• Products are being filtered and enriched
+• Progress updates every 100 products in DynamoDB
+• Full LLM processing with 100 parallel workers
+
+No action needed - just wait for completion notification!
+"""
+    send_notification(sns_topic_arn, f"🚀 Processing Started - {input_filename}", message)
+
