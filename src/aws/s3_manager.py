@@ -54,7 +54,7 @@ class S3Manager:
             return csv_files
             
         except Exception as e:
-            print(f"❌ Error listing files in s3://{bucket}/{prefix}: {str(e)}")
+            print(f"⚠ Error listing files in s3://{bucket}/{prefix}: {str(e)}")
             return []
     
     def read_csv_from_s3(self, bucket: str, key: str, encoding: str = 'utf-8') -> Optional[pd.DataFrame]:
@@ -70,7 +70,7 @@ class S3Manager:
             pandas DataFrame or None if error
         """
         try:
-            print(f"📥 Reading s3://{bucket}/{key}")
+            print(f"Reading s3://{bucket}/{key}")
             
             response = self.s3.get_object(Bucket=bucket, Key=key)
             content = response['Body'].read()
@@ -83,11 +83,11 @@ class S3Manager:
                 print(f"⚠️  UTF-8 failed, trying latin-1 encoding...")
                 df = pd.read_csv(io.BytesIO(content), encoding='latin-1')
             
-            print(f"✅ Loaded {len(df):,} records")
+            print(f"✓ Loaded {len(df):,} records")
             return df
             
         except Exception as e:
-            print(f"❌ Error reading CSV from S3: {str(e)}")
+            print(f"⚠ Error reading CSV from S3: {str(e)}")
             return None
     
     def write_csv_to_s3(self, df: pd.DataFrame, bucket: str, key: str) -> bool:
@@ -117,11 +117,11 @@ class S3Manager:
                 ContentType='text/csv'
             )
             
-            print(f"✅ Uploaded {len(df):,} records")
+            print(f"✓ Uploaded {len(df):,} records")
             return True
             
         except Exception as e:
-            print(f"❌ Error writing CSV to S3: {str(e)}")
+            print(f"⚠ Error writing CSV to S3: {str(e)}")
             return False
     
     def write_json_to_s3(self, data: dict, bucket: str, key: str) -> bool:
@@ -146,7 +146,7 @@ class S3Manager:
             return True
             
         except Exception as e:
-            print(f"❌ Error writing JSON to S3: {str(e)}")
+            print(f"⚠ Error writing JSON to S3: {str(e)}")
             return False
     
     def upload_directory(self, local_dir: Path, bucket: str, s3_prefix: str) -> int:
@@ -178,11 +178,11 @@ class S3Manager:
                     )
                     count += 1
             
-            print(f"✅ Uploaded {count} files to s3://{bucket}/{s3_prefix}/")
+            print(f"✓ Uploaded {count} files to s3://{bucket}/{s3_prefix}/")
             return count
             
         except Exception as e:
-            print(f"❌ Error uploading directory: {str(e)}")
+            print(f"⚠ Error uploading directory: {str(e)}")
             return count
     
     def generate_presigned_url(self, bucket: str, key: str, expiration: int = 3600) -> Optional[str]:
@@ -206,7 +206,7 @@ class S3Manager:
             return url
             
         except Exception as e:
-            print(f"❌ Error generating presigned URL: {str(e)}")
+            print(f"⚠ Error generating presigned URL: {str(e)}")
             return None
 
 

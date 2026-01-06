@@ -55,7 +55,7 @@ class DynamoDBManager:
             return True
             
         except Exception as e:
-            print(f"❌ Error putting record to DynamoDB: {str(e)}")
+            print(f"⚠ Error putting record to DynamoDB: {str(e)}")
             return False
     
     def get_record(self, asin: str, run_id: str) -> Optional[Dict]:
@@ -76,7 +76,7 @@ class DynamoDBManager:
             return response.get('Item')
             
         except Exception as e:
-            print(f"❌ Error getting record from DynamoDB: {str(e)}")
+            print(f"⚠ Error getting record from DynamoDB: {str(e)}")
             return None
     
     def query_by_status(self, status: str, run_id: Optional[str] = None) -> List[Dict]:
@@ -105,7 +105,7 @@ class DynamoDBManager:
             return response.get('Items', [])
             
         except Exception as e:
-            print(f"❌ Error querying DynamoDB: {str(e)}")
+            print(f"⚠ Error querying DynamoDB: {str(e)}")
             return []
     
     def batch_write_records(self, records: List[Dict]) -> int:
@@ -130,11 +130,11 @@ class DynamoDBManager:
                     batch.put_item(Item=record_decimal)
                     count += 1
             
-            print(f"✅ Batch wrote {count} records to DynamoDB")
+            print(f"✓ Batch wrote {count} records to DynamoDB")
             return count
             
         except Exception as e:
-            print(f"❌ Error batch writing to DynamoDB: {str(e)}")
+            print(f"⚠ Error batch writing to DynamoDB: {str(e)}")
             return count
     
     def get_run_summary(self, run_id: str) -> Dict:
@@ -173,7 +173,7 @@ class DynamoDBManager:
             return summary
             
         except Exception as e:
-            print(f"❌ Error getting run summary: {str(e)}")
+            print(f"⚠ Error getting run summary: {str(e)}")
             return {'total': 0, 'success': 0, 'error': 0, 'filtered': 0, 'processing': 0}
 
 
@@ -199,12 +199,12 @@ if __name__ == '__main__':
     )
     
     if success:
-        print("✅ Successfully wrote test record")
+        print("✓ Successfully wrote test record")
         
         # Try reading it back
         record = db_manager.get_record(test_asin, test_run_id)
         if record:
-            print(f"✅ Successfully read test record: {record}")
+            print(f"✓ Successfully read test record: {record}")
     else:
-        print("❌ Failed to write test record")
+        print("⚠ Failed to write test record")
 

@@ -352,30 +352,30 @@ def main():
     # ⚠️  TEST MODE: Stop after Step 1 (filtering only)
     TEST_STEP1_ONLY = False  # Run complete pipeline (Steps 1, 2, 3)  # Set to False to run full pipeline
     
-    print(f"\n📋 Configuration:")
+    print(f"\nConfiguration:")
     print(f"   Input File: {INPUT_FILE}")
     print(f"   Max Workers: {MAX_WORKERS} (parallel API calls)")
     print(f"   Batch Size: {BATCH_SIZE} (save every N records)")
     
     # Load data
-    print(f"\n📂 Loading data...")
+    print(f"\nLoading data...")
     raw_df = pd.read_csv(INPUT_FILE, encoding='latin-1')
-    print(f"✅ Loaded {len(raw_df):,} raw records")
+    print(f"✓ Loaded {len(raw_df):,} raw records")
     
     # Standardize columns (rename, lowercase, clean)
-    print(f"🔧 Standardizing columns...")
+    print(f"Standardizing columns...")
     df = standardize_dataframe(raw_df)
     records = df.to_dict('records')
     total_records = len(records)
     
-    print(f"✅ Standardized {total_records:,} records")
+    print(f"✓ Standardized {total_records:,} records")
     
     # Extract input filename (without path and extension)
     input_filename = Path(INPUT_FILE).stem  # e.g., "sample_10_test"
     
-    # ✅ VALIDATE: File must start with "uncoded_"
+    # ✓ VALIDATE: File must start with "uncoded_"
     if not input_filename.lower().startswith('uncoded_'):
-        print(f"\n❌ ERROR: Input file must start with 'uncoded_'")
+        print(f"\n⚠ ERROR: Input file must start with 'uncoded_'")
         print(f"   Got: {input_filename}")
         print(f"   Expected: uncoded_*.csv")
         print(f"\nExample valid filenames:")
@@ -393,7 +393,7 @@ def main():
     
     # Check if file is already being processed
     if not file_tracker.can_process(input_filename):
-        print(f"❌ ERROR: File {input_filename} is already being processed!")
+        print(f"⚠ ERROR: File {input_filename} is already being processed!")
         return
     
     # Mark file as processing
@@ -429,7 +429,7 @@ def main():
         print(f"\n⚠️  TEST MODE: Running Step 1 (Filtering) ONLY")
         print(f"   LLM extraction will be SKIPPED")
     
-    print(f"\n🚀 Processing {total_records:,} records with {MAX_WORKERS} workers...")
+    print(f"\nProcessing {total_records:,} records with {MAX_WORKERS} workers...")
     if not TEST_STEP1_ONLY:
         print(f"   Estimated time: ~{(total_records * 50) / MAX_WORKERS / 60:.0f} minutes")
     print()
@@ -481,9 +481,9 @@ def main():
         batch_errors = sum(1 for r in batch_results if r['status'] == 'error')
         
         if TEST_STEP1_ONLY:
-            print(f"  ✅ Passed Filter: {batch_step1_complete} | 🚫 Filtered: {batch_filtered} | ❌ Errors: {batch_errors}")
+            print(f"  ✓ Passed Filter: {batch_step1_complete} | Filtered: {batch_filtered} | Errors: {batch_errors}")
         else:
-            print(f"  ✅ Success: {batch_success} | 🚫 Filtered: {batch_filtered} | ❌ Errors: {batch_errors}")
+            print(f"  ✓ Success: {batch_success} | Filtered: {batch_filtered} | Errors: {batch_errors}")
         print(f"  💾 Saved {len(all_results)} total results so far\n")
     
     end_time = datetime.now()
@@ -508,17 +508,17 @@ def main():
     input_tokens = 0
     output_tokens = 0
     
-    print(f"\n📊 OVERALL STATS:")
+    print(f"\nOVERALL STATS:")
     print(f"   Total Records: {len(all_results):,}")
     
     if TEST_STEP1_ONLY:
-        print(f"   ✅ Step 1 Complete (Passed Filter): {len(step1_complete):,} ({len(step1_complete)/len(all_results)*100:.1f}%)")
-        print(f"   🚫 Filtered Out: {len(filtered):,} ({len(filtered)/len(all_results)*100:.1f}%)")
-        print(f"   ❌ Errors: {len(errors):,} ({len(errors)/len(all_results)*100:.1f}%)")
+        print(f"   ✓ Step 1 Complete (Passed Filter): {len(step1_complete):,} ({len(step1_complete)/len(all_results)*100:.1f}%)")
+        print(f"   Filtered Out: {len(filtered):,} ({len(filtered)/len(all_results)*100:.1f}%)")
+        print(f"   Errors: {len(errors):,} ({len(errors)/len(all_results)*100:.1f}%)")
     else:
-        print(f"   ✅ Success: {len(success):,} ({len(success)/len(all_results)*100:.1f}%)")
-        print(f"   🚫 Filtered: {len(filtered):,} ({len(filtered)/len(all_results)*100:.1f}%)")
-        print(f"   ❌ Errors: {len(errors):,} ({len(errors)/len(all_results)*100:.1f}%)")
+        print(f"   ✓ Success: {len(success):,} ({len(success)/len(all_results)*100:.1f}%)")
+        print(f"   Filtered: {len(filtered):,} ({len(filtered)/len(all_results)*100:.1f}%)")
+        print(f"   Errors: {len(errors):,} ({len(errors)/len(all_results)*100:.1f}%)")
     
     if success:
         total_cost = sum(r['api_cost'] for r in success)
@@ -624,7 +624,7 @@ def main():
     print(f"End Time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Total Duration: {duration:.2f}s ({duration/60:.2f} minutes)")
     print("="*80)
-    print("\n✅ PRODUCTION RUN COMPLETE!")
+    print("\n✓ PRODUCTION RUN COMPLETE!")
 
 
 def create_result_dict(asin: str, title: str, brand: str, 
@@ -977,7 +977,7 @@ def process_aws_mode(
     Structure: {prefix}{filename}/run_1/, run_2/, etc.
     """
     if not AWS_AVAILABLE:
-        print("❌ AWS mode requires boto3 and AWS modules")
+        print("⚠ AWS mode requires boto3 and AWS modules")
         sys.exit(1)
     
     start_time = datetime.now()
@@ -985,9 +985,9 @@ def process_aws_mode(
     # Extract filename without extension
     input_filename = Path(input_key).stem
     
-    # ✅ VALIDATE: File must start with "uncoded_"
+    # ✓ VALIDATE: File must start with "uncoded_"
     if not input_filename.lower().startswith('uncoded_'):
-        error_msg = f"❌ ERROR: Input file must start with 'uncoded_'. Got: {input_filename}"
+        error_msg = f"⚠ ERROR: Input file must start with 'uncoded_'. Got: {input_filename}"
         print(error_msg)
         if sns_topic_arn:
             send_invalid_filename_notification(sns_topic_arn, input_filename)
@@ -1038,17 +1038,17 @@ def process_aws_mode(
         db = DynamoDBManager(dynamodb_table)
         
         # Read input CSV from S3
-        print(f"\n📥 Reading input data...")
+        print(f"\nReading input data...")
         df = s3.read_csv_from_s3(s3_bucket, input_key, encoding='latin-1')
         
         if df is None:
-            print("❌ Failed to read input file")
+            print("⚠ Failed to read input file")
             return
         
         # Standardize
         df = standardize_dataframe(df)
         total_records = len(df)
-        print(f"✅ Loaded {total_records:,} records")
+        print(f"✓ Loaded {total_records:,} records")
         
         # Create log manager (will write to local /tmp then upload to S3)
         log_manager = LogManager(
@@ -1067,7 +1067,7 @@ def process_aws_mode(
                 s3_bucket=s3_bucket
             )
         
-        print(f"\n📊 STEP 1: Fast filtering all {total_records:,} records...")
+        print(f"\nSTEP 1: Fast filtering all {total_records:,} records...")
         
         results = []
         filtered_count = 0
@@ -1120,11 +1120,11 @@ def process_aws_mode(
                 llm_needed_tasks.append((idx, record, log_manager, db, run_folder))
         
         llm_count = len(llm_needed_tasks)
-        print(f"✅ Step 1 complete: {filtered_count:,} filtered, {llm_count:,} need LLM enrichment")
+        print(f"✓ Step 1 complete: {filtered_count:,} filtered, {llm_count:,} need LLM enrichment")
         
         # STEP 2: Process LLM-needed products with 200 parallel workers
         if llm_count > 0:
-            print(f"\n🚀 STEP 2: LLM enrichment for {llm_count:,} products with 200 parallel workers...")
+            print(f"\nSTEP 2: LLM enrichment for {llm_count:,} products with 200 parallel workers...")
             
             # Track overall processing status in DynamoDB
             processing_key = f"{input_filename}_processing"
@@ -1177,7 +1177,7 @@ def process_aws_mode(
                                 }
                             )
         else:
-            print(f"\n✅ All products filtered - no LLM calls needed!")
+            print(f"\n✓ All products filtered - no LLM calls needed!")
         
         # Final status update
         db.put_record(
@@ -1203,7 +1203,7 @@ def process_aws_mode(
             output_key = f"{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv"
             s3.write_csv_to_s3(results_df, s3_bucket, output_key)
             
-            print(f"\n✅ Processing complete!")
+            print(f"\n✓ Processing complete!")
             print(f"   Processed: {len(results)} products")
             print(f"   Output: s3://{s3_bucket}/{output_key}")
         
