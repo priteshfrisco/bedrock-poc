@@ -16,9 +16,9 @@ def send_notification(sns_topic_arn: str, subject: str, message: str):
             Subject=subject,
             Message=message
         )
-        print(f"📧 Notification sent: {subject}")
+        print(f"Notification sent: {subject}")
     except Exception as e:
-        print(f"⚠️  Failed to send notification: {str(e)}")
+        print(f"Failed to send notification: {str(e)}")
 
 
 def generate_presigned_url(bucket: str, key: str, expiration: int = 604800) -> str:
@@ -35,7 +35,7 @@ def generate_presigned_url(bucket: str, key: str, expiration: int = 604800) -> s
         )
         return url
     except Exception as e:
-        print(f"⚠️  Failed to generate pre-signed URL: {str(e)}")
+        print(f"Failed to generate pre-signed URL: {str(e)}")
         return f"s3://{bucket}/{key}"
 
 
