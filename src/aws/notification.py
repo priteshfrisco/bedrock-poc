@@ -51,8 +51,7 @@ def send_success_notification(
     s3_bucket: str,
     output_prefix: str,
     audit_prefix: str,
-    logs_prefix: str,
-    download_url: str
+    logs_prefix: str
 ):
     """Send success notification with results summary"""
     message = f"""
@@ -64,13 +63,10 @@ Duration: {duration_minutes:.1f} minutes
 
 Results:
 Total Products:           {total_records:,}
-Enriched (Full):          {enriched_count:,}
+Enriched (Full LLM):      {enriched_count:,}
 Enriched (Filtered):      {filtered_count:,}
 
-All {total_records} products successfully enriched.
-
-Download Results (expires in 7 days):
-{download_url}
+All {total_records} products successfully processed.
 
 S3 Locations:
 Bucket:  s3://{s3_bucket}/
@@ -81,6 +77,9 @@ Logs:    s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/logs/
 Status Breakdown:
 {enriched_count} products received full LLM enrichment
 {filtered_count} products enriched with filter classification (non-supplements)
+
+Download using AWS CLI:
+aws s3 cp s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv .
 """
     send_notification(sns_topic_arn, f"Processing Complete - {input_filename}", message)
 

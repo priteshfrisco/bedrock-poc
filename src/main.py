@@ -43,7 +43,6 @@ try:
     from src.aws.dynamodb_manager import DynamoDBManager
     from src.aws.notification import (
         send_notification,
-        generate_presigned_url,
         send_success_notification,
         send_error_notification,
         send_invalid_filename_notification,
@@ -980,23 +979,19 @@ def process_aws_mode(
         duration = (end_time - start_time).total_seconds() / 60
         
         if sns_topic_arn:
-            output_key = f"{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv"
-            download_url = generate_presigned_url(s3_bucket, output_key, expiration=604800)
-            
             send_success_notification(
                 sns_topic_arn=sns_topic_arn,
                 input_key=input_key,
                 input_filename=input_filename,
                 run_folder=run_folder,
                 total_records=total_records,
-                enriched_count=len(results),
+                enriched_count=len(results) - filtered_count,  # Only LLM enriched
                 filtered_count=filtered_count,
                 duration_minutes=duration,
                 s3_bucket=s3_bucket,
                 output_prefix=output_prefix,
                 audit_prefix=audit_prefix,
-                logs_prefix=logs_prefix,
-                download_url=download_url
+                logs_prefix=logs_prefix
             )
     
     except Exception as e:
