@@ -631,7 +631,8 @@ def create_result_dict(asin: str, title: str, brand: str,
                        category: str = 'UNKNOWN', subcategory: str = 'UNKNOWN',
                        primary_ingredient: str = '', age: str = '', gender: str = '',
                        form: str = '', organic: str = '', count: str = '', unit: str = '',
-                       size: str = '', health_focus: str = '', reasoning: str = '') -> dict:
+                       size: str = '', health_focus: str = '', reasoning: str = '',
+                       status: str = 'SUCCESS', error: str = '') -> dict:
     """
     Helper function to create a standardized result dictionary
     """
@@ -651,7 +652,9 @@ def create_result_dict(asin: str, title: str, brand: str,
         'size': size,
         'health_focus': health_focus,
         'high_level_category': assign_high_level_category(category),
-        'reasoning': reasoning
+        'reasoning': reasoning,
+        'status': status,
+        'error': error
     }
 
 
