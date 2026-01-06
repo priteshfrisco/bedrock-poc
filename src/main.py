@@ -627,6 +627,34 @@ def main():
     print("\n✅ PRODUCTION RUN COMPLETE!")
 
 
+def create_result_dict(asin: str, title: str, brand: str, 
+                       category: str = 'UNKNOWN', subcategory: str = 'UNKNOWN',
+                       primary_ingredient: str = '', age: str = '', gender: str = '',
+                       form: str = '', organic: str = '', count: str = '', unit: str = '',
+                       size: str = '', health_focus: str = '', reasoning: str = '') -> dict:
+    """
+    Helper function to create a standardized result dictionary
+    """
+    return {
+        'asin': asin,
+        'title': title,
+        'brand': brand,
+        'category': category,
+        'subcategory': subcategory,
+        'primary_ingredient': primary_ingredient,
+        'age': age,
+        'gender': gender,
+        'form': form,
+        'organic': organic,
+        'count': count,
+        'unit': unit,
+        'size': size,
+        'health_focus': health_focus,
+        'high_level_category': assign_high_level_category(category),
+        'reasoning': reasoning
+    }
+
+
 def process_single_product(record_data):
     """
     Worker function to process a single product
@@ -648,24 +676,14 @@ def process_single_product(record_data):
         
         if not step1_result['passed']:
             # Filtered - create basic result with filter reason
-            filter_result = {
-                'asin': asin,
-                'title': title,
-                'brand': record.get('brand', ''),
-                'category': 'REMOVE',
-                'subcategory': 'REMOVE',
-                'primary_ingredient': '',
-                'age': '',
-                'gender': '',
-                'form': '',
-                'organic': '',
-                'count': '',
-                'unit': '',
-                'size': '',
-                'health_focus': '',
-                'high_level_category': '',
-                'reasoning': step1_result['filter_reason']
-            }
+            filter_result = create_result_dict(
+                asin=asin,
+                title=title,
+                brand=record.get('brand', ''),
+                category='REMOVE',
+                subcategory='REMOVE',
+                reasoning=step1_result['filter_reason']
+            )
             
             # Save audit
             audit_filter = {
@@ -689,40 +707,56 @@ def process_single_product(record_data):
         llm_result = extract_llm_attributes(title, asin, product_id, log_manager)
         
         if not llm_result['success']:
-            # Error
+            # Error - create error result for CSV
+            error_msg = llm_result.get('error', 'Unknown error')
+            error_result = create_result_dict(
+                asin=asin,
+                title=title,
+                brand=record.get('brand', ''),
+                category='ERROR',
+                subcategory='ERROR',
+                reasoning=f"LLM Error: {error_msg}"
+            )
+            
             db.put_record(
                 asin=asin,
                 run_id=run_id,
                 status='error',
-                data={'error': llm_result.get('error', 'Unknown error')}
+                data={'error': error_msg}
             )
-            return (None, 0, llm_result.get('error', 'Unknown error'))
+            
+            log_manager.save_audit_json('errors', {
+                'asin': asin,
+                'title': title,
+                'status': 'ERROR',
+                'error': error_msg,
+                'step_completed': 2
+            }, f"{asin}.json")
+            
+            return (error_result, 0, error_msg)  # Return error result for CSV
         
         # Extract attributes
         attrs = extract_attributes_from_llm_result(llm_result['data'])
         business_rules_result = attrs.get('business_rules', {})
         
-        # Build result
-        result = {
-            'asin': asin,
-            'title': title,
-            'brand': record.get('brand', ''),
-            'category': business_rules_result.get('final_category', 'UNKNOWN'),
-            'subcategory': business_rules_result.get('final_subcategory', 'UNKNOWN'),
-            'primary_ingredient': business_rules_result.get('primary_ingredient', ''),
-            'age': attrs.get('age', 'UNKNOWN'),
-            'gender': attrs.get('gender', 'UNKNOWN'),
-            'form': attrs.get('form', 'UNKNOWN'),
-            'organic': attrs.get('organic', 'NOT ORGANIC'),
-            'count': attrs.get('count', 'UNKNOWN'),
-            'unit': attrs.get('unit', 'UNKNOWN'),
-            'size': attrs.get('size', ''),
-            'health_focus': business_rules_result.get('health_focus', ''),
-            'high_level_category': assign_high_level_category(
-                business_rules_result.get('final_category', 'UNKNOWN')
-            ),
-            'reasoning': business_rules_result.get('reasoning', '')
-        }
+        # Build result using helper
+        result = create_result_dict(
+            asin=asin,
+            title=title,
+            brand=record.get('brand', ''),
+            category=business_rules_result.get('final_category', 'UNKNOWN'),
+            subcategory=business_rules_result.get('final_subcategory', 'UNKNOWN'),
+            primary_ingredient=business_rules_result.get('primary_ingredient', ''),
+            age=attrs.get('age', 'UNKNOWN'),
+            gender=attrs.get('gender', 'UNKNOWN'),
+            form=attrs.get('form', 'UNKNOWN'),
+            organic=attrs.get('organic', 'NOT ORGANIC'),
+            count=attrs.get('count', 'UNKNOWN'),
+            unit=attrs.get('unit', 'UNKNOWN'),
+            size=attrs.get('size', ''),
+            health_focus=business_rules_result.get('health_focus', ''),
+            reasoning=business_rules_result.get('reasoning', '')
+        )
         
         # Save audit JSON with full processing details
         audit_result = result.copy()
@@ -746,14 +780,26 @@ def process_single_product(record_data):
         
     except Exception as e:
         error_msg = str(e)
-        error_result = {
+        
+        # Create error result for CSV
+        error_result = create_result_dict(
+            asin=asin,
+            title=title,
+            brand=record.get('brand', ''),
+            category='ERROR',
+            subcategory='ERROR',
+            reasoning=f"Processing Error: {error_msg}"
+        )
+        
+        # Save audit
+        error_audit = {
             'asin': asin,
             'title': title,
             'status': 'ERROR',
             'error': error_msg,
             'step_completed': 0
         }
-        log_manager.save_audit_json('errors', error_result, f"{asin}.json")
+        log_manager.save_audit_json('errors', error_audit, f"{asin}.json")
         
         db.put_record(
             asin=asin,
@@ -761,7 +807,7 @@ def process_single_product(record_data):
             status='error',
             data={'error': error_msg}
         )
-        return (None, 0, error_msg)
+        return (error_result, 0, error_msg)  # Return error result for CSV
 
 
 def process_aws_mode(
