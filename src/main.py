@@ -940,9 +940,9 @@ def process_aws_mode(
             }
         )
         
-        # Process with ThreadPoolExecutor (100 concurrent API calls)
+        # Process with ThreadPoolExecutor (10 concurrent API calls for AWS stability)
         processed_count = 0
-        with ThreadPoolExecutor(max_workers=100) as executor:
+        with ThreadPoolExecutor(max_workers=10) as executor:
             futures = {executor.submit(process_single_product, task): task[0] for task in tasks}
             
             # Progress bar
