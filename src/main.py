@@ -772,6 +772,7 @@ def process_aws_mode(
     AWS Cloud Processing Mode
     Reads from S3, processes, writes to S3, tracks in DynamoDB
     Uses single S3 bucket with folder prefixes
+    Structure: {prefix}{filename}/run_1/, run_2/, etc.
     """
     if not AWS_AVAILABLE:
         print("❌ AWS mode requires boto3 and AWS modules")
@@ -779,19 +780,51 @@ def process_aws_mode(
     
     start_time = datetime.now()
     
+    # Extract filename without extension
+    input_filename = Path(input_key).stem
+    
+    # Get next run number by checking existing runs in S3
+    s3 = S3Manager()
+    s3_client = boto3.client('s3')
+    
+    run_number = 1
+    try:
+        # List existing runs for this file
+        prefix = f"{output_prefix}{input_filename}/"
+        response = s3_client.list_objects_v2(Bucket=s3_bucket, Prefix=prefix, Delimiter='/')
+        
+        if 'CommonPrefixes' in response:
+            # Extract run numbers
+            existing_runs = []
+            for item in response['CommonPrefixes']:
+                folder = item['Prefix'].rstrip('/').split('/')[-1]
+                if folder.startswith('run_'):
+                    try:
+                        num = int(folder.split('_')[1])
+                        existing_runs.append(num)
+                    except:
+                        pass
+            
+            if existing_runs:
+                run_number = max(existing_runs) + 1
+    except Exception as e:
+        print(f"⚠️  Could not determine run number, using run_1: {e}")
+    
+    run_folder = f"run_{run_number}"
+    
     print("="*80)
     print("AWS CLOUD PROCESSING - Bedrock AI Data Enrichment")
     print("="*80)
-    print(f"\nRun ID: {run_id}")
+    print(f"\nFile: {input_filename}")
+    print(f"Run: {run_folder}")
     print(f"S3 Bucket: s3://{s3_bucket}/")
     print(f"Input: s3://{s3_bucket}/{input_key}")
-    print(f"Output: s3://{s3_bucket}/{output_prefix}")
-    print(f"Audit: s3://{s3_bucket}/{audit_prefix}")
-    print(f"Logs: s3://{s3_bucket}/{logs_prefix}")
+    print(f"Output: s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/")
+    print(f"Audit: s3://{s3_bucket}/{audit_prefix}{input_filename}/{run_folder}/")
+    print(f"Logs: s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/")
     
     try:
-        # Initialize AWS managers
-        s3 = S3Manager()
+        # Initialize AWS managers (reuse s3 from above)
         db = DynamoDBManager(dynamodb_table)
         
         # Read input CSV from S3
@@ -808,7 +841,6 @@ def process_aws_mode(
         print(f"✅ Loaded {total_records:,} records")
         
         # Create log manager (will write to local /tmp then upload to S3)
-        input_filename = Path(input_key).stem
         log_manager = LogManager(
             input_filename=input_filename,
             base_path='/tmp/bedrock-data'
@@ -845,23 +877,23 @@ def process_aws_mode(
         if results:
             results_df = pd.DataFrame(results)
             
-            # Write to S3 (output folder)
-            output_key = f"{output_prefix}runs/{run_id}/{input_filename}_coded.csv"
+            # Write to S3 (output folder with file/run_N structure)
+            output_key = f"{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv"
             s3.write_csv_to_s3(results_df, s3_bucket, output_key)
             
             print(f"\n✅ Processing complete!")
             print(f"   Processed: {len(results)} products")
             print(f"   Output: s3://{s3_bucket}/{output_key}")
         
-        # Upload audit files to S3 (audit folder)
-        audit_s3_prefix = f"{audit_prefix}runs/{run_id}/audit"
+        # Upload audit files to S3 (audit folder with file/run_N structure)
+        audit_s3_prefix = f"{audit_prefix}{input_filename}/{run_folder}/audit"
         audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
         if audit_dir.exists():
             count = s3.upload_directory(audit_dir, s3_bucket, audit_s3_prefix)
             print(f"   Uploaded {count} audit files to S3")
         
-        # Upload logs to S3 (logs folder)
-        logs_s3_prefix = f"{logs_prefix}runs/{run_id}/logs"
+        # Upload logs to S3 (logs folder with file/run_N structure)
+        logs_s3_prefix = f"{logs_prefix}{input_filename}/{run_folder}/logs"
         logs_dir = Path(f'/tmp/bedrock-data/logs/{input_filename}')
         if logs_dir.exists():
             count = s3.upload_directory(logs_dir, s3_bucket, logs_s3_prefix)
@@ -873,14 +905,14 @@ def process_aws_mode(
         
         if sns_topic_arn:
             # Generate pre-signed URL for output file
-            output_key = f"{output_prefix}runs/{run_id}/{input_filename}_coded.csv"
+            output_key = f"{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv"
             download_url = generate_presigned_url(s3_bucket, output_key, expiration=604800)
             
             message = f"""
 ✅ Processing Complete!
 
 File: {input_key}
-Run ID: {run_id}
+Run: {run_folder}
 Duration: {duration:.1f} minutes
 
 Results:
@@ -896,9 +928,9 @@ Download Results (expires in 7 days):
 
 S3 Locations:
 • Bucket:  s3://{s3_bucket}/
-• Output:  s3://{s3_bucket}/{output_prefix}runs/{run_id}/{input_filename}_coded.csv
-• Audit:   s3://{s3_bucket}/{audit_prefix}runs/{run_id}/audit/
-• Logs:    s3://{s3_bucket}/{logs_prefix}runs/{run_id}/logs/
+• Output:  s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv
+• Audit:   s3://{s3_bucket}/{audit_prefix}{input_filename}/{run_folder}/audit/
+• Logs:    s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/logs/
 
 Status Breakdown:
 • {len(results)} products received full LLM enrichment
@@ -913,7 +945,7 @@ Status Breakdown:
 ❌ Processing Failed!
 
 File: {input_key}
-Run ID: {run_id}
+Run: {run_folder if 'run_folder' in locals() else 'N/A'}
 Error: {str(e)}
 
 Please check CloudWatch Logs for details.
