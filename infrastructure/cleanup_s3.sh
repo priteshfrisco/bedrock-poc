@@ -27,13 +27,15 @@ if [ "$CONFIRM" != "yes" ]; then
 fi
 
 echo ""
-echo "🗑️  Deleting all objects..."
+echo "🗑️  Deleting all objects (except reference data)..."
 
-# Delete all objects
-aws s3 rm s3://$BUCKET/ --recursive --profile $PROFILE
+# Delete input, output, audit, and logs folders (preserve reference/)
+for prefix in "input/" "output/" "audit/" "logs/"; do
+    aws s3 rm s3://$BUCKET/$prefix --recursive --profile $PROFILE 2>/dev/null || true
+done
 
 echo ""
 echo "✅ Cleanup complete!"
 echo ""
-echo "Bucket is now empty and ready for fresh test."
+echo "Bucket is ready for fresh test. Reference data preserved."
 
