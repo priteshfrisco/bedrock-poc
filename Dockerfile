@@ -41,3 +41,4 @@ USER appuser
 # Override with --mode local for local processing
 CMD ["python", "src/main.py", "--mode", "aws"]
 
+# Force Docker rebuild
