@@ -41,6 +41,13 @@ try:
     import boto3
     from src.aws.s3_manager import S3Manager
     from src.aws.dynamodb_manager import DynamoDBManager
+    from src.aws.notification import (
+        send_notification,
+        generate_presigned_url,
+        send_success_notification,
+        send_error_notification,
+        send_invalid_filename_notification
+    )
     AWS_AVAILABLE = True
 except ImportError:
     AWS_AVAILABLE = False
@@ -620,38 +627,6 @@ def main():
     print("\n✅ PRODUCTION RUN COMPLETE!")
 
 
-def send_notification(sns_topic_arn: str, subject: str, message: str):
-    """Send SNS notification (AWS mode only)"""
-    try:
-        sns = boto3.client('sns')
-        sns.publish(
-            TopicArn=sns_topic_arn,
-            Subject=subject,
-            Message=message
-        )
-        print(f"📧 Notification sent: {subject}")
-    except Exception as e:
-        print(f"⚠️  Failed to send notification: {str(e)}")
-
-
-def generate_presigned_url(bucket: str, key: str, expiration: int = 604800) -> str:
-    """
-    Generate a pre-signed URL for S3 object download
-    Default expiration: 7 days (604800 seconds)
-    """
-    try:
-        s3_client = boto3.client('s3')
-        url = s3_client.generate_presigned_url(
-            'get_object',
-            Params={'Bucket': bucket, 'Key': key},
-            ExpiresIn=expiration
-        )
-        return url
-    except Exception as e:
-        print(f"⚠️  Failed to generate pre-signed URL: {str(e)}")
-        return f"s3://{bucket}/{key}"
-
-
 def process_single_product(record_data):
     """
     Worker function to process a single product
@@ -799,7 +774,7 @@ def process_aws_mode(
         error_msg = f"❌ ERROR: Input file must start with 'uncoded_'. Got: {input_filename}"
         print(error_msg)
         if sns_topic_arn:
-            send_notification(sns_topic_arn, f"❌ Invalid Filename - {input_filename}", error_msg)
+            send_invalid_filename_notification(sns_topic_arn, input_filename)
         raise ValueError(f"Invalid filename: {input_filename}. Must start with 'uncoded_'")
     
     # Get next run number by checking existing runs in S3
@@ -973,53 +948,29 @@ def process_aws_mode(
         duration = (end_time - start_time).total_seconds() / 60
         
         if sns_topic_arn:
-            # Generate pre-signed URL for output file
             output_key = f"{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv"
             download_url = generate_presigned_url(s3_bucket, output_key, expiration=604800)
             
-            message = f"""
-✅ Processing Complete!
-
-File: {input_key}
-Run: {run_folder}
-Duration: {duration:.1f} minutes
-
-Results:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Total Products:           {total_records:,}
-Enriched (Full):          {len(results):,}
-Enriched (Filtered):      {filtered_count:,}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ All {total_records} products successfully enriched!
-
-Download Results (expires in 7 days):
-{download_url}
-
-S3 Locations:
-• Bucket:  s3://{s3_bucket}/
-• Output:  s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv
-• Audit:   s3://{s3_bucket}/{audit_prefix}{input_filename}/{run_folder}/audit/
-• Logs:    s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/logs/
-
-Status Breakdown:
-• {len(results)} products received full LLM enrichment
-• {filtered_count} products enriched with filter classification (non-supplements)
-"""
-            send_notification(sns_topic_arn, f"✅ Processing Complete - {input_filename}", message)
+            send_success_notification(
+                sns_topic_arn=sns_topic_arn,
+                input_key=input_key,
+                input_filename=input_filename,
+                run_folder=run_folder,
+                total_records=total_records,
+                enriched_count=len(results),
+                filtered_count=filtered_count,
+                duration_minutes=duration,
+                s3_bucket=s3_bucket,
+                output_prefix=output_prefix,
+                audit_prefix=audit_prefix,
+                logs_prefix=logs_prefix,
+                download_url=download_url
+            )
     
     except Exception as e:
         # Send error notification
         if sns_topic_arn:
-            error_message = f"""
-❌ Processing Failed!
-
-File: {input_key}
-Run: {run_folder if 'run_folder' in locals() else 'N/A'}
-Error: {str(e)}
-
-Please check CloudWatch Logs for details.
-"""
-            send_notification(sns_topic_arn, f"❌ Processing Failed - {Path(input_key).stem}", error_message)
+            send_error_notification(sns_topic_arn, input_key, run_folder if 'run_folder' in locals() else None, str(e))
         raise
 
 
