@@ -655,6 +655,157 @@ def create_result_dict(asin: str, title: str, brand: str,
     }
 
 
+def apply_step2_llm(asin: str, title: str, brand: str, log_manager: LogManager, product_id: int):
+    """
+    Apply Step 2: LLM enrichment
+    Returns: {'success': bool, 'data': dict} or {'success': False, 'error': str}
+    """
+    try:
+        # LLM extraction
+        llm_result = extract_llm_attributes(title, asin, product_id, log_manager)
+        
+        if not llm_result['success']:
+            return {'success': False, 'error': llm_result.get('error', 'Unknown LLM error')}
+        
+        # Extract attributes and apply business rules
+        attrs = extract_attributes_from_llm_result(llm_result['data'])
+        business_rules_result = attrs.get('business_rules', {})
+        
+        # Return structured data
+        return {
+            'success': True,
+            'data': {
+                'category': business_rules_result.get('final_category', 'UNKNOWN'),
+                'subcategory': business_rules_result.get('final_subcategory', 'UNKNOWN'),
+                'primary_ingredient': business_rules_result.get('primary_ingredient', ''),
+                'age': attrs.get('age', 'UNKNOWN'),
+                'gender': attrs.get('gender', 'UNKNOWN'),
+                'form': attrs.get('form', 'UNKNOWN'),
+                'organic': attrs.get('organic', 'NOT ORGANIC'),
+                'count': attrs.get('count', 'UNKNOWN'),
+                'unit': attrs.get('unit', 'UNKNOWN'),
+                'size': attrs.get('size', ''),
+                'health_focus': business_rules_result.get('health_focus', ''),
+                'high_level_category': '',  # Will be assigned later if needed
+                'reasoning': business_rules_result.get('reasoning', ''),
+                'ingredients': attrs.get('ingredients', []),
+                'business_rules': business_rules_result
+            }
+        }
+    except Exception as e:
+        return {'success': False, 'error': str(e)}
+
+
+def process_llm_only(record_data):
+    """
+    Worker function to process a product that already passed Step 1 filter.
+    Only does LLM enrichment (Step 2).
+    Returns: (result_dict, error_flag)
+    """
+    idx, record, log_manager, db, run_id = record_data
+    product_id = idx + 1
+    asin = record.get('asin', f'P{product_id}')
+    title = record.get('title', '')
+    brand = record.get('brand', '')
+    
+    try:
+        # Step 2: LLM Enrichment (already passed Step 1)
+        step2_result = apply_step2_llm(asin, title, brand, log_manager, product_id)
+        
+        if step2_result['success']:
+            # Success - create full result
+            result = create_result_dict(
+                asin=asin,
+                title=title,
+                brand=brand,
+                category=step2_result['data'].get('category', ''),
+                subcategory=step2_result['data'].get('subcategory', ''),
+                primary_ingredient=step2_result['data'].get('primary_ingredient', ''),
+                age=step2_result['data'].get('age', ''),
+                gender=step2_result['data'].get('gender', ''),
+                form=step2_result['data'].get('form', ''),
+                organic=step2_result['data'].get('organic', ''),
+                count=step2_result['data'].get('count', ''),
+                unit=step2_result['data'].get('unit', ''),
+                size=step2_result['data'].get('size', ''),
+                health_focus=step2_result['data'].get('health_focus', ''),
+                high_level_category=step2_result['data'].get('high_level_category', ''),
+                reasoning=step2_result['data'].get('reasoning', ''),
+                status='SUCCESS'
+            )
+            
+            # Save audit
+            log_manager.save_audit_json(
+                step_name='step2_llm',
+                data={
+                    'product_id': product_id,
+                    'asin': asin,
+                    'title': title,
+                    'brand': brand,
+                    'success': True,
+                    'result': step2_result['data']
+                },
+                filename=f'{asin}.json'
+            )
+            
+            # Update DynamoDB
+            db.put_record(asin=asin, run_id=run_id, status='success', data=result)
+            
+            return (result, False)
+        else:
+            # LLM Error - create error result
+            error_result = create_result_dict(
+                asin=asin,
+                title=title,
+                brand=brand,
+                status='ERROR',
+                error=step2_result['error']
+            )
+            
+            # Save error audit
+            log_manager.save_audit_json(
+                step_name='step2_llm',
+                data={
+                    'product_id': product_id,
+                    'asin': asin,
+                    'title': title,
+                    'brand': brand,
+                    'success': False,
+                    'error': step2_result['error']
+                },
+                filename=f'{asin}.json'
+            )
+            
+            # Update DynamoDB
+            db.put_record(asin=asin, run_id=run_id, status='error', data={'error': step2_result['error']})
+            
+            return (error_result, True)
+            
+    except Exception as e:
+        # Unexpected error
+        error_result = create_result_dict(
+            asin=asin,
+            title=title,
+            brand=brand,
+            status='ERROR',
+            error=str(e)
+        )
+        
+        log_manager.save_audit_json(
+            step_name='step2_llm',
+            data={
+                'product_id': product_id,
+                'asin': asin,
+                'error': str(e)
+            },
+            filename=f'{asin}.json'
+        )
+        
+        db.put_record(asin=asin, run_id=run_id, status='error', data={'error': str(e)})
+        
+        return (error_result, True)
+
+
 def process_single_product(record_data):
     """
     Worker function to process a single product
@@ -916,66 +1067,117 @@ def process_aws_mode(
                 s3_bucket=s3_bucket
             )
         
-        print(f"\n🚀 Processing {total_records} records with 100 parallel workers...")
+        print(f"\n📊 STEP 1: Fast filtering all {total_records:,} records...")
         
         results = []
         filtered_count = 0
         error_count = 0
+        llm_needed_tasks = []  # Products that need LLM processing
         
-        # Prepare data for workers (use run_folder, not run_id)
-        tasks = [(idx, record, log_manager, db, run_folder) for idx, record in df.iterrows()]
-        
-        # Track overall processing status in DynamoDB
-        processing_key = f"{input_filename}_processing"
-        db.put_record(
-            asin=processing_key,
-            run_id=run_folder,
-            status='in_progress',
-            data={
-                'total': total_records,
-                'processed': 0,
-                'filtered': 0,
-                'errors': 0,
-                'start_time': start_time.isoformat()
-            }
-        )
-        
-        # Process with ThreadPoolExecutor (50 concurrent workers)
-        processed_count = 0
-        with ThreadPoolExecutor(max_workers=50) as executor:
-            futures = {executor.submit(process_single_product, task): task[0] for task in tasks}
+        # STEP 1: Filter ALL records first (fast, no API calls)
+        for idx, record in df.iterrows():
+            product_id = idx + 1
+            asin = record.get('asin', f'P{product_id}')
+            title = record.get('title', '')
+            brand = record.get('brand', '')
             
-            # Progress bar
-            with tqdm(total=total_records, desc="Processing", unit="product") as pbar:
-                for future in as_completed(futures):
-                    result, filtered, error = future.result()
-                    
-                    if result:
-                        results.append(result)
-                    if filtered:
-                        filtered_count += filtered
-                    if error:
-                        error_count += 1
-                    
-                    processed_count += 1
-                    pbar.update(1)
-                    
-                    # Update DynamoDB heartbeat every 100 products
-                    if processed_count % 100 == 0:
-                        db.put_record(
-                            asin=processing_key,
-                            run_id=run_folder,
-                            status='in_progress',
-                            data={
-                                'total': total_records,
-                                'processed': processed_count,
-                                'enriched': len(results),
-                                'filtered': filtered_count,
-                                'errors': error_count,
-                                'progress_pct': round((processed_count / total_records) * 100, 1),
-                                'last_update': datetime.now().isoformat()
-                            }
-                        )
+            # Apply Step 1 filter
+            step1_result = apply_step1_filter(
+                title,
+                record.get('amazon_subcategory', '').lower().strip(),
+                asin,
+                log_manager
+            )
+            
+            if not step1_result['passed']:
+                # Filtered - add to results immediately
+                filter_result = create_result_dict(
+                    asin=asin,
+                    title=title,
+                    brand=brand,
+                    category='REMOVE',
+                    subcategory='REMOVE',
+                    reasoning=step1_result['filter_reason'],
+                    status='FILTERED'
+                )
+                results.append(filter_result)
+                filtered_count += 1
+                
+                # Save audit for filtered product
+                log_manager.save_audit_json(
+                    step_name='step1_filter',
+                    data={
+                        'product_id': product_id,
+                        'asin': asin,
+                        'title': title,
+                        'passed': False,
+                        'filter_reason': step1_result['filter_reason']
+                    },
+                    filename=f'{asin}.json'
+                )
+            else:
+                # Passed filter - queue for LLM processing
+                llm_needed_tasks.append((idx, record, log_manager, db, run_folder))
+        
+        llm_count = len(llm_needed_tasks)
+        print(f"✅ Step 1 complete: {filtered_count:,} filtered, {llm_count:,} need LLM enrichment")
+        
+        # STEP 2: Process LLM-needed products with 200 parallel workers
+        if llm_count > 0:
+            print(f"\n🚀 STEP 2: LLM enrichment for {llm_count:,} products with 200 parallel workers...")
+            
+            # Track overall processing status in DynamoDB
+            processing_key = f"{input_filename}_processing"
+            db.put_record(
+                asin=processing_key,
+                run_id=run_folder,
+                status='in_progress',
+                data={
+                    'total': total_records,
+                    'filtered': filtered_count,
+                    'llm_needed': llm_count,
+                    'processed': 0,
+                    'errors': 0,
+                    'start_time': start_time.isoformat()
+                }
+            )
+            
+            processed_count = 0
+            with ThreadPoolExecutor(max_workers=200) as executor:
+                futures = {executor.submit(process_llm_only, task): task[0] for task in llm_needed_tasks}
+                
+                # Progress bar
+                with tqdm(total=llm_count, desc="LLM Processing", unit="product") as pbar:
+                    for future in as_completed(futures):
+                        result, error = future.result()
+                        
+                        if result:
+                            results.append(result)
+                        if error:
+                            error_count += 1
+                        
+                        processed_count += 1
+                        pbar.update(1)
+                        
+                        # Update DynamoDB heartbeat every 100 products
+                        if processed_count % 100 == 0:
+                            db.put_record(
+                                asin=processing_key,
+                                run_id=run_folder,
+                                status='in_progress',
+                                data={
+                                    'total': total_records,
+                                    'filtered': filtered_count,
+                                    'llm_needed': llm_count,
+                                    'llm_processed': processed_count,
+                                    'enriched': processed_count - error_count,
+                                    'errors': error_count,
+                                    'progress_pct': round((processed_count / llm_count) * 100, 1),
+                                    'last_update': datetime.now().isoformat()
+                                }
+                            )
+        else:
+            print(f"\n✅ All products filtered - no LLM calls needed!")
         
         # Final status update
         db.put_record(
