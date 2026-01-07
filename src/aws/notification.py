@@ -56,9 +56,15 @@ def send_success_notification(
     region: str = "us-east-2"
 ):
     """Send success notification with results summary"""
-    # AWS Console S3 links
+    # Extract file_id (remove 'uncoded_' prefix from input_filename)
+    file_id = input_filename[8:] if input_filename.lower().startswith('uncoded_') else input_filename
+    
+    # AWS Console S3 links (use file_id not input_filename)
     console_bucket = f"https://s3.console.aws.amazon.com/s3/buckets/{s3_bucket}"
-    console_output = f"{console_bucket}?prefix={output_prefix}{input_filename}/{run_folder}/"
+    console_output = f"{console_bucket}?prefix={output_prefix}{file_id}/{run_folder}/"
+    
+    # Output CSV filename
+    output_csv = f"{file_id}_coded.csv"
     
     message = f"""
 ✓ Processing Complete
@@ -79,14 +85,14 @@ AWS Console Links:
 {console_output}
 
 Download via AWS CLI:
-aws s3 cp s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv .
+aws s3 cp s3://{s3_bucket}/{output_prefix}{file_id}/{run_folder}/{output_csv} .
 
 S3 Locations:
-- Output: s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv
-- Audit:  s3://{s3_bucket}/{audit_prefix}{input_filename}/{run_folder}/audit/
-- Logs:   s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/logs/
+- Output: s3://{s3_bucket}/{output_prefix}{file_id}/{run_folder}/{output_csv}
+- Audit:  s3://{s3_bucket}/{audit_prefix}{file_id}/{run_folder}/
+- Logs:   s3://{s3_bucket}/{logs_prefix}{file_id}/{run_folder}/
 """
-    send_notification(sns_topic_arn, f"✓ Processing Complete - {input_filename}", message)
+    send_notification(sns_topic_arn, f"✓ Processing Complete - {file_id}", message)
 
 
 def send_error_notification(

@@ -537,7 +537,7 @@ def main():
         output_tokens = 0
         for r in success:
             metadata = r.get('_metadata', {})
-            tokens_breakdown = metadata.get('tokens', {})
+            tokens_breakdown = metadata.get('tokens_used', {})  # ✅ FIXED: was 'tokens', should be 'tokens_used'
             input_tokens += tokens_breakdown.get('prompt', 0)
             output_tokens += tokens_breakdown.get('completion', 0)
         
@@ -639,7 +639,7 @@ def create_result_dict(asin: str, title: str, brand: str,
                        category: str = 'UNKNOWN', subcategory: str = 'UNKNOWN',
                        primary_ingredient: str = '', age: str = '', gender: str = '',
                        form: str = '', organic: str = '', count: str = '', unit: str = '',
-                       size: str = '', health_focus: str = '', reasoning: str = '') -> dict:
+                       size: str = '', potency: str = '', health_focus: str = '', reasoning: str = '') -> dict:
     """
     Helper function to create a standardized result dictionary
     """
@@ -657,6 +657,7 @@ def create_result_dict(asin: str, title: str, brand: str,
         'count': count,
         'unit': unit,
         'size': size,
+        'potency': potency,
         'health_focus': health_focus,
         'high_level_category': assign_high_level_category(category),
         'reasoning': reasoning
@@ -708,12 +709,16 @@ def apply_step2_llm(asin: str, title: str, brand: str, log_manager: LogManager, 
             }
         
         business_rules_result = attrs.get('business_rules', {})
+        final_category = business_rules_result.get('final_category', 'UNKNOWN')
         
-        # Return structured data
+        # Extract cost metadata
+        metadata = extract_metadata_from_llm_result(llm_result['data'])
+        
+        # Return structured data WITH cost tracking
         return {
             'success': True,
             'data': {
-                'category': business_rules_result.get('final_category', 'UNKNOWN'),
+                'category': final_category,
                 'subcategory': business_rules_result.get('final_subcategory', 'UNKNOWN'),
                 'primary_ingredient': business_rules_result.get('primary_ingredient', ''),
                 'age': attrs.get('age', 'UNKNOWN'),
@@ -723,11 +728,16 @@ def apply_step2_llm(asin: str, title: str, brand: str, log_manager: LogManager, 
                 'count': attrs.get('count', 'UNKNOWN'),
                 'unit': attrs.get('unit', 'UNKNOWN'),
                 'size': attrs.get('size', ''),
+                'potency': attrs.get('potency', ''),  # Add potency extraction
                 'health_focus': business_rules_result.get('health_focus', ''),
-                'high_level_category': '',  # Will be assigned later if needed
+                'high_level_category': assign_high_level_category(final_category),  # Properly assign high level category
                 'reasoning': business_rules_result.get('reasoning', ''),
                 'ingredients': attrs.get('ingredients', []),
-                'business_rules': business_rules_result
+                'business_rules': business_rules_result,
+                # Cost tracking metadata
+                'tokens_used': metadata['tokens_used'],
+                'api_cost': metadata['api_cost'],
+                '_metadata': metadata['_metadata']
             }
         }
     except Exception as e:
@@ -768,6 +778,7 @@ def process_llm_only(record_data):
                     count='REMOVE',
                     unit='REMOVE',
                     size='REMOVE',
+                    potency='REMOVE',
                     health_focus='REMOVE',
                     reasoning='Step 2 LLM Filter: LLM detected non-supplement product (safety check)'
                 )
@@ -807,6 +818,7 @@ def process_llm_only(record_data):
                 count=step2_result['data'].get('count', ''),
                 unit=step2_result['data'].get('unit', ''),
                 size=step2_result['data'].get('size', ''),
+                potency=step2_result['data'].get('potency', ''),
                 health_focus=step2_result['data'].get('health_focus', ''),
                 reasoning=step2_result['data'].get('reasoning', '')
             )
@@ -932,6 +944,7 @@ def process_single_product(record_data):
                 count='REMOVE',
                 unit='REMOVE',
                 size='REMOVE',
+                potency='REMOVE',
                 health_focus='REMOVE',
                 reasoning=detailed_reason
             )
@@ -1013,6 +1026,7 @@ def process_single_product(record_data):
                 count='REMOVE',
                 unit='REMOVE',
                 size='REMOVE',
+                potency='REMOVE',
                 health_focus='REMOVE',
                 reasoning='Step 2 LLM Filter: LLM detected non-supplement product (safety check)'
             )
@@ -1052,6 +1066,7 @@ def process_single_product(record_data):
             count=attrs.get('count', 'UNKNOWN'),
             unit=attrs.get('unit', 'UNKNOWN'),
             size=attrs.get('size', ''),
+            potency=attrs.get('potency', ''),
             health_focus=business_rules_result.get('health_focus', ''),
             reasoning=business_rules_result.get('reasoning', '')
         )
@@ -1267,6 +1282,7 @@ def process_aws_mode(
                     count='REMOVE',
                     unit='REMOVE',
                     size='REMOVE',
+                    potency='REMOVE',
                     health_focus='REMOVE',
                     reasoning=detailed_reason
                 )
@@ -1295,6 +1311,7 @@ def process_aws_mode(
         # STEP 2: Process LLM-needed products with 200 parallel workers
         if llm_count > 0:
             print(f"\nSTEP 2: LLM enrichment for {llm_count:,} products with 200 parallel workers...")
+            print(f"Starting parallel processing... (progress updates every 100 products)")
             
             # Track overall processing status in DynamoDB
             processing_key = f"{input_filename}_processing"
@@ -1329,8 +1346,13 @@ def process_aws_mode(
                         processed_count += 1
                         pbar.update(1)
                         
-                        # Update DynamoDB heartbeat every 100 products
+                        # CloudWatch progress updates every 100 products
                         if processed_count % 100 == 0:
+                            progress_pct = round((processed_count / llm_count) * 100, 1)
+                            enriched_count = processed_count - error_count
+                            print(f"Progress: {processed_count:,}/{llm_count:,} ({progress_pct}%) | Enriched: {enriched_count:,} | Errors: {error_count}")
+                            
+                            # Update DynamoDB heartbeat
                             db.put_record(
                                 asin=processing_key,
                                 run_id=run_folder,
@@ -1340,12 +1362,18 @@ def process_aws_mode(
                                     'filtered': filtered_count,
                                     'llm_needed': llm_count,
                                     'llm_processed': processed_count,
-                                    'enriched': processed_count - error_count,
+                                    'enriched': enriched_count,
                                     'errors': error_count,
-                                    'progress_pct': round((processed_count / llm_count) * 100, 1),
+                                    'progress_pct': progress_pct,
                                     'last_update': datetime.now().isoformat()
                                 }
                             )
+            
+            # Final progress message
+            print(f"\n✓ LLM processing complete!")
+            print(f"   Total processed: {processed_count:,}/{llm_count:,}")
+            print(f"   Enriched: {processed_count - error_count:,}")
+            print(f"   Errors: {error_count}")
         else:
             print(f"\n✓ All products filtered - no LLM calls needed!")
         
@@ -1365,9 +1393,43 @@ def process_aws_mode(
             }
         )
         
-        # Convert results to DataFrame
+        # Convert results to DataFrame with formatted columns (matching local mode output)
         if results:
-            results_df = pd.DataFrame(results)
+            # Use the same column formatting as local mode (lines 283-316)
+            results_df = pd.DataFrame([
+                {
+                    # Core Output Columns (matching R system + Master Item File structure)
+                    'RetailerSku': r.get('asin', ''),  # Original ASIN from input
+                    'UPC': '',  # Empty - manual lookup required
+                    'Description': r['title'],
+                    'Brand': r['brand'],
+                    'NW Category': r.get('category', ''),
+                    'NW Subcategory': r.get('subcategory', ''),
+                    'NW Sub Brand 1': '',  # Empty - manual entry (NW/IT only)
+                    'NW Sub Brand 2': '',  # Empty - manual entry (NW/IT only)
+                    'NW Sub Brand 3': '',  # Empty - manual entry (NW/IT only)
+                    'Potency': r.get('potency', ''),  # LLM extracted (probiotics mostly)
+                    'FORM': r.get('form', ''),
+                    'AGE': r.get('age', ''),
+                    'GENDER': r.get('gender', ''),
+                    'COMPANY': r['brand'],  # Default to brand, manual refinement for parent companies
+                    'FUNCTIONAL INGREDIENT': r.get('primary_ingredient', ''),
+                    'HEALTH FOCUS': r.get('health_focus', ''),
+                    'SIZE': r.get('size', ''),
+                    'HIGH LEVEL CATEGORY': r.get('high_level_category', ''),
+                    'NW_UPC': '',  # Empty - manual lookup (NW/IT internal UPC only)
+                    'Unit of Measure': r.get('unit', ''),
+                    'Pack Count': r.get('count', ''),
+                    'Organic': r.get('organic', ''),
+                    # Reasoning: Populated from 'reasoning' field (includes filter reason, LLM detection, or business rules)
+                    'Reasoning': r.get('reasoning', '')
+                    
+                    # NOTE: Multiple ingredients are stored in audit JSON files only, not in CSV
+                    # NOTE: Tracking columns (Product_ID, Status, Tokens, Cost, Time, Errors, etc.)
+                    # are also stored in audit JSON files only, not in the CSV output
+                }
+                for r in results
+            ])
             
             # Write to S3 (output folder with file/run_N structure)
             # Output filename: {file_id}_coded.csv (e.g., 100_records_coded.csv)
@@ -1376,11 +1438,13 @@ def process_aws_mode(
             
             print(f"\n✓ Processing complete!")
             print(f"   Processed: {len(results)} products")
+            print(f"   Columns: {len(results_df.columns)}")
             print(f"   Output: s3://{s3_bucket}/{output_key}")
         
         # Upload audit files to S3 (audit folder with file/run_N structure)
-        audit_s3_prefix = f"{audit_prefix}{file_id}/{run_folder}/audit"
-        audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
+        # Use file_id (not input_filename) to match LogManager's folder structure
+        audit_s3_prefix = f"{audit_prefix}{file_id}/{run_folder}"
+        audit_dir = Path(f'/tmp/bedrock-data/audit/{file_id}/{run_folder}')
         print(f"\n   Checking audit directory: {audit_dir}")
         print(f"   Exists: {audit_dir.exists()}")
         if audit_dir.exists():
@@ -1389,11 +1453,12 @@ def process_aws_mode(
             count = s3.upload_directory(audit_dir, s3_bucket, audit_s3_prefix)
             print(f"   ✓ Uploaded {count} audit files to S3")
         else:
-            print(f"   ⚠ Audit directory does not exist")
+            print(f"   ⚠ Audit directory does not exist at {audit_dir}")
         
         # Upload logs to S3 (logs folder with file/run_N structure)
-        logs_s3_prefix = f"{logs_prefix}{file_id}/{run_folder}/logs"
-        logs_dir = Path(f'/tmp/bedrock-data/logs/{input_filename}')
+        # Use file_id (not input_filename) to match LogManager's folder structure
+        logs_s3_prefix = f"{logs_prefix}{file_id}/{run_folder}"
+        logs_dir = Path(f'/tmp/bedrock-data/logs/{file_id}/{run_folder}')
         print(f"\n   Checking logs directory: {logs_dir}")
         print(f"   Exists: {logs_dir.exists()}")
         if logs_dir.exists():
@@ -1402,7 +1467,7 @@ def process_aws_mode(
             count = s3.upload_directory(logs_dir, s3_bucket, logs_s3_prefix)
             print(f"   ✓ Uploaded {count} log files to S3")
         else:
-            print(f"   ⚠ Logs directory does not exist")
+            print(f"   ⚠ Logs directory does not exist at {logs_dir}")
         
         # Send success notification
         end_time = datetime.now()

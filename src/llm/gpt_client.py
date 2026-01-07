@@ -175,9 +175,10 @@ class GPTClient:
             
             result = json.loads(content)
             
-            # Calculate cost (GPT-4o mini pricing: $0.150/1M input, $0.600/1M output)
-            cost_per_1m_input = 0.150
-            cost_per_1m_output = 0.600
+            # Calculate cost (GPT-5 mini pricing: $0.25/1M input, $2.00/1M output)
+            # Note: Function/tool calling has NO extra cost - just counted as tokens
+            cost_per_1m_input = 0.25
+            cost_per_1m_output = 2.00
             input_cost = (total_tokens['prompt'] / 1_000_000) * cost_per_1m_input
             output_cost = (total_tokens['completion'] / 1_000_000) * cost_per_1m_output
             total_cost = input_cost + output_cost
