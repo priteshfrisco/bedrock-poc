@@ -27,11 +27,11 @@ from src.llm.tools.health_focus_lookup import lookup_health_focus
 from src.pipeline.utils.unit_converter import process_product_attributes
 from src.pipeline.utils.business_rules import apply_all_business_rules
 from src.pipeline.utils.high_level_category import assign_high_level_category
-from src.core.preprocessing import is_non_supplement, standardize_dataframe
+from src.utils.preprocessing import is_non_supplement, standardize_dataframe
 from src.core.log_manager import LogManager
-from src.core.file_utils import write_csv
+from src.utils.file_utils import write_csv
 from src.core.file_tracker import FileTracker
-from src.core.result_builder import build_error_result, build_success_result, build_filtered_result
+from src.utils.result_builder import build_error_result, build_success_result, build_filtered_result
 from src.pipeline.step1_filter import generate_step1_audits, apply_step1_filter
 from src.pipeline.step2_llm import extract_llm_attributes, extract_attributes_from_llm_result, extract_metadata_from_llm_result
 from src.pipeline.step3_postprocess import apply_postprocessing
@@ -75,11 +75,21 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         step1_result = apply_step1_filter(title, amazon_subcat, asin, log_manager)
         
         if not step1_result['passed']:
-            # Filtered out
+            # Filtered out - add "Step 1 Filter:" prefix to reasoning
+            filter_type = step1_result['filter_type']
+            raw_reason = step1_result['filter_reason']
+            
+            if filter_type == 'filtered_by_remove':
+                detailed_reason = f"Step 1 Filter: Amazon subcategory marked as REMOVE - {raw_reason}"
+            elif filter_type == 'filtered_by_keyword':
+                detailed_reason = f"Step 1 Filter: {raw_reason}"
+            else:
+                detailed_reason = f"Step 1 Filter: {raw_reason}"
+            
             result = build_filtered_result(
                 result,
-                step1_result['filter_reason'],
-                step1_result['filter_type'],
+                detailed_reason,
+                filter_type,
                 start_time,
                 lookup_action=step1_result.get('action')
             )
@@ -122,6 +132,22 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         gender = attributes['gender']
         form = attributes['form']
         organic = attributes['organic']
+        potency = attributes['potency']
+        
+        # ========== LLM SAFETY CHECK: If LLM returned REMOVE for any attribute, filter this product ==========
+        if age == 'REMOVE' or gender == 'REMOVE' or form == 'REMOVE':
+            log_manager.log_step('step2_llm', f"[{asin}] LLM detected non-supplement (returned REMOVE for attributes)")
+            detailed_reason = "Step 2 LLM Filter: LLM detected non-supplement product (safety check)"
+            filter_result = build_filtered_result(
+                result,
+                detailed_reason,
+                'filtered_by_llm',
+                start_time,
+                lookup_action='UNKNOWN'
+            )
+            # 💾 Save LLM filter result immediately
+            log_manager.save_audit_json('step2_llm', filter_result, f"{asin}.json")
+            return filter_result
         
         # Process size/count/unit
         llm_result = process_product_attributes(llm_result)
@@ -146,6 +172,7 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         step2_result['count'] = count
         step2_result['unit'] = unit
         step2_result['size'] = size
+        step2_result['potency'] = potency
         step2_result['ingredients'] = ingredients
         step2_result['tokens_used'] = metadata['tokens_used']
         step2_result['api_cost'] = metadata['api_cost']
@@ -178,14 +205,23 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
             if has_unknown:
                 log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: Contains UNKNOWN values")
         else:
-            # Fallback to Python business rules if LLM didn't call the tool
-            category = postprocess_result['category']
-            subcategory = postprocess_result['subcategory']
-            primary_ingredient = postprocess_result['primary_ingredient']
-            business_rules_reasoning = ''
+            # Fallback: If LLM extracted 0 ingredients, business rules returns None
+            # Use Step 1's NW Category/Subcategory from Amazon lookup if available
+            if result.get('nw_category') and result.get('nw_subcategory'):
+                category = result['nw_category']
+                subcategory = result['nw_subcategory']
+                primary_ingredient = 'UNKNOWN'
+                business_rules_reasoning = 'No ingredients extracted - using Step 1 Amazon category'
+                log_manager.log_step('step3_postprocess', f"[{asin}] No ingredients extracted, using Step 1 category: {category}/{subcategory}")
+            else:
+                # Final fallback to Python business rules
+                category = postprocess_result['category']
+                subcategory = postprocess_result['subcategory']
+                primary_ingredient = postprocess_result['primary_ingredient']
+                business_rules_reasoning = ''
+                log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: LLM did not call business_rules tool, using Python fallback")
             has_changes = False
             has_unknown = False
-            log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: LLM did not call business_rules tool, using Python fallback")
         
         # Build final result
         result['status'] = 'success'
@@ -197,6 +233,7 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         result['count'] = count
         result['unit'] = unit
         result['size'] = size
+        result['potency'] = potency
         result['primary_ingredient'] = primary_ingredient
         result['num_ingredients'] = len(ingredients)
         
@@ -213,6 +250,8 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         
         # Add reasoning from business rules (only if changes were made or has unknown)
         result['business_rules_reasoning'] = business_rules_reasoning if (has_changes or has_unknown) else ''
+        # Add unified reasoning field - use business_rules_reasoning or default message
+        result['reasoning'] = result['business_rules_reasoning'] if result['business_rules_reasoning'] else f"Category: {category}, Subcategory: {subcategory}"
         result['has_business_rule_changes'] = has_changes
         result['has_unknown_values'] = has_unknown
         
@@ -238,84 +277,53 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
 
 
 def save_results(output_dir: Path, results: List[Dict], input_filename: str, log_manager: LogManager):
-    """Save results to CSV only (R-system matching column names)"""
+    """Save results to CSV only (simplified column set)"""
     log_manager.log_step('step4_output', f"Saving {len(results)} results to CSV...")
-    
-    # Save CSV with EXACT R system column names (from Master Item File)
-    
-    # Helper to get ingredient by index (1-indexed, starting from 2 for "other ing. 2")
-    def get_ingredient(r, idx):
-        """Get ingredient at index. idx=1 is primary, idx=2 is 'other ing. 2', etc."""
-        all_ings = r.get('all_ingredients', [])
-        if idx == 1 and r.get('primary_ingredient'):
-            return r.get('primary_ingredient', '')
-        elif idx <= len(all_ings):
-            return all_ings[idx - 1]
-        else:
-            return ''
     
     df = pd.DataFrame([
         {
-            # R System Core Columns (Business Data)
-            'UPC': r.get('asin', ''),
+            # Core Output Columns (matching R system + Master Item File structure)
+            'RetailerSku': r.get('asin', ''),  # Original ASIN from input
+            'UPC': '',  # Empty - manual lookup required
             'Description': r['title'],
             'Brand': r['brand'],
             'NW Category': r.get('category', ''),
             'NW Subcategory': r.get('subcategory', ''),
-            'NW Sub Brand 1': '',
-            'NW Sub Brand 2': '',
-            'NW Sub Brand 3': '',
-            'Potency': '',
+            'NW Sub Brand 1': '',  # Empty - manual entry (NW/IT only)
+            'NW Sub Brand 2': '',  # Empty - manual entry (NW/IT only)
+            'NW Sub Brand 3': '',  # Empty - manual entry (NW/IT only)
+            'Potency': r.get('potency', ''),  # LLM extracted (probiotics mostly)
             'FORM': r.get('form', ''),
             'AGE': r.get('age', ''),
             'GENDER': r.get('gender', ''),
-            'COMPANY': r['brand'],
+            'COMPANY': r['brand'],  # Default to brand, manual refinement for parent companies
             'FUNCTIONAL INGREDIENT': r.get('primary_ingredient', ''),
             'HEALTH FOCUS': r.get('health_focus', ''),
             'SIZE': r.get('size', ''),
             'HIGH LEVEL CATEGORY': r.get('high_level_category', ''),
-            'NW_UPC': r.get('asin', ''),
+            'NW_UPC': '',  # Empty - manual lookup (NW/IT internal UPC only)
             'Unit of Measure': r.get('unit', ''),
             'Pack Count': r.get('count', ''),
             'Organic': r.get('organic', ''),
-            # Reasoning: Use business_rules_reasoning for supplements, filter_reason for filtered products
-            'Reasoning': r.get('business_rules_reasoning', '') if r.get('status') == 'success' else r.get('filter_reason', ''),
+            # Reasoning: Populated from 'reasoning' field (includes filter reason, LLM detection, or business rules)
+            'Reasoning': r.get('reasoning', '')
             
-            # Additional Ingredients (at the end)
-            'other ing. 2': get_ingredient(r, 2),
-            'other ing. 3': get_ingredient(r, 3),
-            'other ing. 4': get_ingredient(r, 4),
-            'other ing. 5': get_ingredient(r, 5),
-            'other ing. 6': get_ingredient(r, 6),
-            'other ing. 7': get_ingredient(r, 7),
-            'other ing. 8': get_ingredient(r, 8),
-            'other ing. 9': get_ingredient(r, 9),
-            'other ing. 10': get_ingredient(r, 10),
-            'other ing. 11': get_ingredient(r, 11),
-            'other ing. 12': get_ingredient(r, 12),
-            'other ing. 13': get_ingredient(r, 13),
-            'other ing. 14': get_ingredient(r, 14),
-            'other ing. 15': get_ingredient(r, 15),
-            'other ing. 16': get_ingredient(r, 16),
-            'other ing. 17': get_ingredient(r, 17),
-            'other ing. 18': get_ingredient(r, 18),
-            'other ing. 19': get_ingredient(r, 19),
-            'other ing. 20': get_ingredient(r, 20),
-            
-            # Reserved for future use (at the end)
-            'Spare1': '',
-            'Spare2': '',
-            'Spare3': '',
-            'Spare4': '',
-            'Spare5': ''
-            
+            # NOTE: Multiple ingredients are stored in audit JSON files only, not in CSV
             # NOTE: Tracking columns (Product_ID, Status, Tokens, Cost, Time, Errors, etc.)
-            # are stored in audit JSON files only, not in the CSV output
+            # are also stored in audit JSON files only, not in the CSV output
         }
         for r in results
     ])
     
-    csv_file = output_dir / f"{input_filename}.csv"  # Just filename.csv
+    # Create output filename: remove "uncoded_" prefix and add "_coded" suffix
+    # Example: uncoded_100_records -> 100_records_coded.csv
+    if input_filename.lower().startswith('uncoded_'):
+        base_name = input_filename[8:]  # Remove "uncoded_" prefix
+    else:
+        base_name = input_filename
+    
+    output_filename = f"{base_name}_coded.csv"
+    csv_file = output_dir / output_filename
     df.to_csv(csv_file, index=False)
     
     log_manager.log_step('step4_output', f"Saved CSV: {csv_file} ({len(results)} records)")
@@ -346,8 +354,8 @@ def main():
     # Configuration
     import sys
     INPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else 'data/input/uncoded_100_records.csv'  # Allow command line override
-    MAX_WORKERS = 100  # Number of parallel threads for maximum speed
-    BATCH_SIZE = 100  # Save results every 100 records (intermediate saves for safety)
+    MAX_WORKERS = 1000  # Number of parallel threads for maximum speed
+    BATCH_SIZE = 1000  # Save results every 1000 records (faster processing)
     
     # ⚠️  TEST MODE: Stop after Step 1 (filtering only)
     TEST_STEP1_ONLY = False  # Run complete pipeline (Steps 1, 2, 3)  # Set to False to run full pipeline
@@ -669,6 +677,36 @@ def apply_step2_llm(asin: str, title: str, brand: str, log_manager: LogManager, 
         
         # Extract attributes and apply business rules
         attrs = extract_attributes_from_llm_result(llm_result['data'])
+        
+        # ⚠️  CHECK: If LLM returned "REMOVE" for attributes, this is a non-supplement
+        # Don't process further - return a REMOVE result immediately
+        age_val = attrs.get('age', '').upper()
+        gender_val = attrs.get('gender', '').upper()
+        form_val = attrs.get('form', '').upper()
+        
+        if age_val == 'REMOVE' or gender_val == 'REMOVE' or form_val == 'REMOVE':
+            log_manager.log_step('step2_llm', f"[{asin}] LLM detected non-supplement (returned REMOVE for attributes)")
+            return {
+                'success': True,
+                'data': {
+                    'category': 'REMOVE',
+                    'subcategory': 'REMOVE',
+                    'primary_ingredient': 'REMOVE',
+                    'age': 'REMOVE',
+                    'gender': 'REMOVE',
+                    'form': 'REMOVE',
+                    'organic': 'REMOVE',
+                    'count': 'REMOVE',
+                    'unit': 'REMOVE',
+                    'size': 'REMOVE',
+                    'health_focus': 'REMOVE',
+                    'high_level_category': 'REMOVE',
+                    'reasoning': 'Step 2 LLM Filter: LLM detected non-supplement product (safety check)',
+                    'ingredients': [],
+                    'business_rules': {}
+                }
+            }
+        
         business_rules_result = attrs.get('business_rules', {})
         
         # Return structured data
@@ -713,6 +751,47 @@ def process_llm_only(record_data):
         step2_result = apply_step2_llm(asin, title, brand, log_manager, product_id)
         
         if step2_result['success']:
+            # Check if LLM detected it as REMOVE (non-supplement)
+            if step2_result['data'].get('category') == 'REMOVE':
+                # Create REMOVE result with REMOVE in ALL fields
+                result = create_result_dict(
+                    asin=asin,
+                    title=title,
+                    brand=brand,
+                    category='REMOVE',
+                    subcategory='REMOVE',
+                    primary_ingredient='REMOVE',
+                    age='REMOVE',
+                    gender='REMOVE',
+                    form='REMOVE',
+                    organic='REMOVE',
+                    count='REMOVE',
+                    unit='REMOVE',
+                    size='REMOVE',
+                    health_focus='REMOVE',
+                    reasoning='Step 2 LLM Filter: LLM detected non-supplement product (safety check)'
+                )
+                
+                # Save audit
+                log_manager.save_audit_json(
+                    step_name='step2_llm',
+                    data={
+                        'product_id': product_id,
+                        'asin': asin,
+                        'title': title,
+                        'brand': brand,
+                        'success': True,
+                        'status': 'REMOVE',
+                        'reason': 'LLM detected non-supplement'
+                    },
+                    filename=f'{asin}.json'
+                )
+                
+                # Update DynamoDB
+                db.put_record(asin=asin, run_id=run_id, status='filtered', data={'reason': 'LLM detected non-supplement'})
+                
+                return (result, False)
+            
             # Success - create full result
             result = create_result_dict(
                 asin=asin,
@@ -826,14 +905,35 @@ def process_single_product(record_data):
         )
         
         if not step1_result['passed']:
-            # Filtered - create basic result with filter reason
+            # Filtered - create result with REMOVE in ALL fields
+            # ⚠️  User requirement: ALL fields should say "REMOVE" for filtered items
+            filter_type = step1_result.get('filter_type', 'unknown')
+            filter_reason = step1_result.get('filter_reason', 'Non-supplement')
+            
+            # Create detailed reasoning
+            if filter_type == 'filtered_by_remove':
+                detailed_reason = f"Step 1 Filter: Amazon subcategory marked as REMOVE - {filter_reason}"
+            elif filter_type == 'filtered_by_keyword':
+                detailed_reason = f"Step 1 Filter: {filter_reason}"
+            else:
+                detailed_reason = f"Step 1 Filter: {filter_reason}"
+            
             filter_result = create_result_dict(
                 asin=asin,
                 title=title,
                 brand=record.get('brand', ''),
                 category='REMOVE',
                 subcategory='REMOVE',
-                reasoning=step1_result['filter_reason']
+                primary_ingredient='REMOVE',
+                age='REMOVE',
+                gender='REMOVE',
+                form='REMOVE',
+                organic='REMOVE',
+                count='REMOVE',
+                unit='REMOVE',
+                size='REMOVE',
+                health_focus='REMOVE',
+                reasoning=detailed_reason
             )
             
             # Save audit
@@ -888,6 +988,53 @@ def process_single_product(record_data):
         
         # Extract attributes
         attrs = extract_attributes_from_llm_result(llm_result['data'])
+        
+        # ⚠️  CHECK: If LLM returned "REMOVE" for attributes, this is a non-supplement
+        # Don't process further - return a REMOVE result immediately
+        age_val = attrs.get('age', '').upper()
+        gender_val = attrs.get('gender', '').upper()
+        form_val = attrs.get('form', '').upper()
+        
+        if age_val == 'REMOVE' or gender_val == 'REMOVE' or form_val == 'REMOVE':
+            log_manager.log_step('step2_llm', f"[{asin}] LLM detected non-supplement (returned REMOVE for attributes)")
+            
+            # Create REMOVE result with REMOVE in ALL fields
+            result = create_result_dict(
+                asin=asin,
+                title=title,
+                brand=record.get('brand', ''),
+                category='REMOVE',
+                subcategory='REMOVE',
+                primary_ingredient='REMOVE',
+                age='REMOVE',
+                gender='REMOVE',
+                form='REMOVE',
+                organic='REMOVE',
+                count='REMOVE',
+                unit='REMOVE',
+                size='REMOVE',
+                health_focus='REMOVE',
+                reasoning='Step 2 LLM Filter: LLM detected non-supplement product (safety check)'
+            )
+            
+            # Save audit
+            audit_filter = {
+                'asin': asin,
+                'title': title,
+                'status': 'REMOVE',
+                'filter_reason': 'LLM detected non-supplement product',
+                'step_completed': 2
+            }
+            log_manager.save_audit_json('step2_llm', audit_filter, f"{asin}.json")
+            
+            db.put_record(
+                asin=asin,
+                run_id=run_id,
+                status='filtered',
+                data={'reason': 'LLM detected non-supplement'}
+            )
+            return (result, 1, None)  # Return result for CSV, count as filtered
+        
         business_rules_result = attrs.get('business_rules', {})
         
         # Build result using helper
@@ -993,14 +1140,18 @@ def process_aws_mode(
             send_invalid_filename_notification(sns_topic_arn, input_filename)
         raise ValueError(f"Invalid filename: {input_filename}. Must start with 'uncoded_'")
     
+    # Create clean filename for output: remove "uncoded_" prefix
+    # Example: uncoded_100_records -> 100_records
+    file_id = input_filename[8:] if input_filename.lower().startswith('uncoded_') else input_filename
+    
     # Get next run number by checking existing runs in S3
     s3 = S3Manager()
     s3_client = boto3.client('s3')
     
     run_number = 1
     try:
-        # List existing runs for this file
-        prefix = f"{output_prefix}{input_filename}/"
+        # List existing runs for this file (use file_id without uncoded_ prefix)
+        prefix = f"{output_prefix}{file_id}/"
         response = s3_client.list_objects_v2(Bucket=s3_bucket, Prefix=prefix, Delimiter='/')
         
         if 'CommonPrefixes' in response:
@@ -1025,13 +1176,13 @@ def process_aws_mode(
     print("="*80)
     print("AWS CLOUD PROCESSING - Bedrock AI Data Enrichment")
     print("="*80)
-    print(f"\nFile: {input_filename}")
+    print(f"\nFile: {input_filename} (output as: {file_id}_coded.csv)")
     print(f"Run: {run_folder}")
     print(f"S3 Bucket: s3://{s3_bucket}/")
     print(f"Input: s3://{s3_bucket}/{input_key}")
-    print(f"Output: s3://{s3_bucket}/{output_prefix}{input_filename}/{run_folder}/")
-    print(f"Audit: s3://{s3_bucket}/{audit_prefix}{input_filename}/{run_folder}/")
-    print(f"Logs: s3://{s3_bucket}/{logs_prefix}{input_filename}/{run_folder}/")
+    print(f"Output: s3://{s3_bucket}/{output_prefix}{file_id}/{run_folder}/")
+    print(f"Audit: s3://{s3_bucket}/{audit_prefix}{file_id}/{run_folder}/")
+    print(f"Logs: s3://{s3_bucket}/{logs_prefix}{file_id}/{run_folder}/")
     
     try:
         # Initialize AWS managers (reuse s3 from above)
@@ -1090,14 +1241,34 @@ def process_aws_mode(
             )
             
             if not step1_result['passed']:
-                # Filtered - add to results immediately
+                # Filtered - add to results immediately with ALL fields as REMOVE
+                filter_type = step1_result.get('filter_type', 'unknown')
+                filter_reason = step1_result.get('filter_reason', 'Non-supplement')
+                
+                # Create detailed reasoning
+                if filter_type == 'filtered_by_remove':
+                    detailed_reason = f"Step 1 Filter: Amazon subcategory marked as REMOVE - {filter_reason}"
+                elif filter_type == 'filtered_by_keyword':
+                    detailed_reason = f"Step 1 Filter: {filter_reason}"
+                else:
+                    detailed_reason = f"Step 1 Filter: {filter_reason}"
+                
                 filter_result = create_result_dict(
                     asin=asin,
                     title=title,
                     brand=brand,
                     category='REMOVE',
                     subcategory='REMOVE',
-                    reasoning=step1_result['filter_reason']
+                    primary_ingredient='REMOVE',
+                    age='REMOVE',
+                    gender='REMOVE',
+                    form='REMOVE',
+                    organic='REMOVE',
+                    count='REMOVE',
+                    unit='REMOVE',
+                    size='REMOVE',
+                    health_focus='REMOVE',
+                    reasoning=detailed_reason
                 )
                 results.append(filter_result)
                 filtered_count += 1
@@ -1199,7 +1370,8 @@ def process_aws_mode(
             results_df = pd.DataFrame(results)
             
             # Write to S3 (output folder with file/run_N structure)
-            output_key = f"{output_prefix}{input_filename}/{run_folder}/{input_filename}_coded.csv"
+            # Output filename: {file_id}_coded.csv (e.g., 100_records_coded.csv)
+            output_key = f"{output_prefix}{file_id}/{run_folder}/{file_id}_coded.csv"
             s3.write_csv_to_s3(results_df, s3_bucket, output_key)
             
             print(f"\n✓ Processing complete!")
@@ -1207,7 +1379,7 @@ def process_aws_mode(
             print(f"   Output: s3://{s3_bucket}/{output_key}")
         
         # Upload audit files to S3 (audit folder with file/run_N structure)
-        audit_s3_prefix = f"{audit_prefix}{input_filename}/{run_folder}/audit"
+        audit_s3_prefix = f"{audit_prefix}{file_id}/{run_folder}/audit"
         audit_dir = Path(f'/tmp/bedrock-data/audit/{input_filename}')
         print(f"\n   Checking audit directory: {audit_dir}")
         print(f"   Exists: {audit_dir.exists()}")
@@ -1220,7 +1392,7 @@ def process_aws_mode(
             print(f"   ⚠ Audit directory does not exist")
         
         # Upload logs to S3 (logs folder with file/run_N structure)
-        logs_s3_prefix = f"{logs_prefix}{input_filename}/{run_folder}/logs"
+        logs_s3_prefix = f"{logs_prefix}{file_id}/{run_folder}/logs"
         logs_dir = Path(f'/tmp/bedrock-data/logs/{input_filename}')
         print(f"\n   Checking logs directory: {logs_dir}")
         print(f"   Exists: {logs_dir.exists()}")
@@ -1276,6 +1448,8 @@ if __name__ == '__main__':
         parser = argparse.ArgumentParser(description='Bedrock AI Data Enrichment Pipeline')
         parser.add_argument('--mode', choices=['local', 'aws'], default='local',
                            help='Execution mode: local (default) or aws (cloud)')
+        parser.add_argument('input_file', nargs='?', default=None,
+                           help='Input CSV file path (local mode)')
         
         # AWS mode arguments
         parser.add_argument('--input-key', help='S3 input key (AWS mode)')
@@ -1307,7 +1481,15 @@ if __name__ == '__main__':
             )
         else:
             # Local mode - existing behavior
-            main()
+            # Override INPUT_FILE if provided via command line
+            if args.input_file:
+                # Temporarily set sys.argv for main() to read
+                original_argv = sys.argv
+                sys.argv = ['main.py', args.input_file]
+                main()
+                sys.argv = original_argv
+            else:
+                main()
     
     except Exception as e:
         # Emergency error logging - catches ANY error including startup failures

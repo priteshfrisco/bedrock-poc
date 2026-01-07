@@ -33,8 +33,43 @@ def load_ingredient_categories():
     return herb_ingredients, protein_ingredients
 
 
+def load_health_focus_lookup():
+    """Load ingredient to health focus mapping"""
+    health_focus_map = {}
+    
+    with open('reference_data/ingredient_health_focus_lookup.csv', 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if not row['ingredient'] or not row['health_focus']:
+                continue
+            
+            ingredient = row['ingredient'].strip().upper()
+            health_focus = row['health_focus'].strip()
+            health_focus_map[ingredient] = health_focus
+    
+    return health_focus_map
+
+
 # Load once at module import
 HERB_INGREDIENTS, PROTEIN_INGREDIENTS = load_ingredient_categories()
+HEALTH_FOCUS_MAP = load_health_focus_lookup()
+
+
+def get_health_focus_from_ingredient(primary_ingredient: str) -> str:
+    """
+    Get health focus for a given ingredient from lookup table.
+    
+    Args:
+        primary_ingredient: The primary ingredient name (normalized)
+    
+    Returns:
+        Health focus string, or "HEALTH FOCUS NON-SPECIFIC" if not found
+    """
+    if not primary_ingredient:
+        return "HEALTH FOCUS NON-SPECIFIC"
+    
+    ingredient_upper = primary_ingredient.upper()
+    return HEALTH_FOCUS_MAP.get(ingredient_upper, "HEALTH FOCUS NON-SPECIFIC")
 
 
 def apply_herb_formula_rule(ingredients_data, primary_category, primary_subcategory):
@@ -299,7 +334,201 @@ def apply_title_based_overrides(title, category, subcategory):
             f"Weight Loss Override: Title contains weight loss/management → ACTIVE NUTRITION / WEIGHT MANAGEMENT"
         )
     
+    # RULE 3: Electrolyte/Hydration Keywords (R: FinalMerge.R Lines 395-409)
+    # Check for "HYDRAT" but exclude "DEHYDRAT"
+    if 'HYDRAT' in title_upper and 'DEHYDRAT' not in title_upper:
+        return (
+            'ACTIVE NUTRITION',
+            'HYDRATION',
+            f"Hydration Override: Title contains 'HYDRAT' (not 'DEHYDRAT') → ACTIVE NUTRITION / HYDRATION"
+        )
+    
+    # Check for "ELECTROLYTE" but exclude "CREATINE"
+    if 'ELECTROLYTE' in title_upper and 'CREATINE' not in title_upper:
+        return (
+            'ACTIVE NUTRITION',
+            'HYDRATION',
+            f"Electrolyte Override: Title contains 'ELECTROLYTE' (not 'CREATINE') → ACTIVE NUTRITION / HYDRATION"
+        )
+    
     return category, subcategory, ""
+
+
+def apply_health_focus_rules(title: str, primary_ingredient: str, current_health_focus: str, 
+                             category: str = "", subcategory: str = "", gender: str = "") -> str:
+    """
+    Apply R's health focus business rules (FinalMerge.R Lines 455-650).
+    These rules OVERRIDE the health focus from ingredient lookup.
+    
+    Args:
+        title: Product title
+        primary_ingredient: Primary ingredient name (normalized)
+        current_health_focus: Current health focus from ingredient lookup
+        category: Product category (for category-based rules)
+        gender: Gender attribute (for gender correction rules)
+    
+    Returns:
+        Final health focus after applying all override rules
+    """
+    if not title:
+        return current_health_focus
+    
+    title_upper = title.upper()
+    ingredient_upper = primary_ingredient.upper() if primary_ingredient else ""
+    
+    # ════════════════════════════════════════════════════════════════════════════
+    # HIGH-CONFIDENCE RULES (Always apply, override everything)
+    # R: FinalMerge.R Lines 456-614
+    # ════════════════════════════════════════════════════════════════════════════
+    
+    # Rule 1: Cough/Cold/Flu
+    if "COUGH" in title_upper:
+        return "COUGH, COLD & FLU"
+    
+    # Rule 2: Sleep
+    if "MELATONIN" in title_upper:
+        return "SLEEP"
+    
+    # Rule 3: Men's Health
+    if "TESTOSTERONE" in title_upper or "MALE ENHANCEMENT" in title_upper:
+        return "MEN'S HEALTH"
+    
+    # Rule 4: Women's Health
+    if "ESTROGEN" in title_upper or "MENOPAUSE" in title_upper or "PMS" in title_upper:
+        return "WOMEN'S HEALTH"
+    
+    # Rule 5: Bone Health (Calcium - exact match only)
+    # R: if (new_items$`Functional Ingredient`[i]=="CALCIUM")
+    if ingredient_upper == "CALCIUM":
+        return "BONE HEALTH"
+    
+    # Rule 6: Cleanse & Detox (Antioxidant + Liver)
+    if "ANTIOXIDANT" in title_upper and "LIVER" in title_upper:
+        return "CLEANSE & DETOX"
+    
+    # Rule 7: Urinary Tract Health
+    if ingredient_upper == "CRANBERRY SUPPLEMENTS":
+        return "URINARY TRACT HEALTH"
+    if "PROSTATE" in title_upper or "BLADDER" in title_upper:
+        return "URINARY TRACT HEALTH"
+    
+    # Rule 8: Daily Immune Health (Black Seed)
+    if ingredient_upper == "BLACK SEED (CUMIN)":
+        return "DAILY IMMUNE HEALTH"
+    
+    # Rule 9: Mood & Stress (Magnesium + Keywords)
+    if ingredient_upper == "MAGNESIUM":
+        if "MOOD" in title_upper or "STRESS" in title_upper:
+            return "MOOD & STRESS SUPPORT"
+    
+    # Rule 10: Weight Management (Muscle)
+    if "MUSCLE" in title_upper:
+        return "WEIGHT MANAGEMENT"
+    
+    # Rule 11: Daily Immune Health (Immunity)
+    if "IMMUNITY" in title_upper:
+        return "DAILY IMMUNE HEALTH"
+    
+    # Rule 12: Cough/Cold/Flu (Respiratory)
+    if "RESPITORY" in title_upper or "RESPIRATORY" in title_upper:
+        return "COUGH, COLD & FLU"
+    
+    # Rule 13: Cough/Cold/Flu (Cold - with exclusions)
+    if "COLD" in title_upper:
+        exclusions = ["PROCESSED", "PACKAGED", "PRESSED", "STONE", "MILLED"]
+        if not any(excl in title_upper for excl in exclusions):
+            return "COUGH, COLD & FLU"
+    
+    # Rule 14: Mood & Stress (Nervous System)
+    if "NERVOUS SYSTEM" in title_upper:
+        return "MOOD & STRESS SUPPORT"
+    
+    # Rule 15: Joint Health (Arthritis only - per R code)
+    # R: if (grepl("ARTHRITIS", new_items$Title[i]))
+    if "ARTHRITIS" in title_upper:
+        return "JOINT HEALTH"
+    
+    # Rule 16: Weight Management (Creatine)
+    if "CREATINE" in title_upper:
+        return "WEIGHT MANAGEMENT"
+    
+    # Rule 17: Cardiovascular (Blood - not Blood Orange)
+    if "BLOOD" in title_upper and "BLOOD ORANGE" not in title_upper:
+        return "CARDIOVASCULAR"
+    
+    # Rule 18: Blood Sugar Support
+    if "BLOOD SUGAR" in title_upper or "GLUCOSE" in title_upper or "DIABETES" in title_upper:
+        return "BLOOD SUGAR SUPPORT"
+    
+    # Rule 19: Digestive Health
+    digestive_keywords = ["ACID REFLUX", "HEARTBURN", "LAXATIVE", "DIGESTION", "STOOL SOFT"]
+    if any(keyword in title_upper for keyword in digestive_keywords):
+        return "DIGESTIVE HEALTH"
+    
+    # Rule 20: Energy Support (R code only checks this specific phrase)
+    # R: if (grepl("PERFORMANCE BOOST", new_items$Title[i]))
+    if "PERFORMANCE BOOST" in title_upper:
+        return "ENERGY SUPPORT"
+    
+    # Rule 21: Cleanse & Detox
+    if "DETOXIFICATION" in title_upper:
+        return "CLEANSE & DETOX"
+    
+    # Rule 22: Weight Management
+    if "FAT BURN" in title_upper or "METABOLISM SUPPORT" in title_upper:
+        return "WEIGHT MANAGEMENT"
+    
+    # Rule 23: Beauty (Collagen + Keywords - overrides Joint Health)
+    if current_health_focus == "JOINT HEALTH" and "COLLAGEN" in title_upper:
+        beauty_keywords = ["BEAUTY", "HAIR", "SKIN ", "NAILS"]
+        if any(keyword in title_upper for keyword in beauty_keywords):
+            return "BEAUTY"
+    
+    # Rule 24: Brain Health
+    if "MCT OIL" in title_upper or "KRILL OIL" in title_upper or "DHA" in title_upper:
+        return "BRAIN HEALTH"
+    
+    # ════════════════════════════════════════════════════════════════════════════
+    # LOW-CONFIDENCE RULES (Only apply if current = "HEALTH FOCUS NON-SPECIFIC")
+    # R: FinalMerge.R Lines 617-630
+    # ════════════════════════════════════════════════════════════════════════════
+    
+    if current_health_focus == "HEALTH FOCUS NON-SPECIFIC":
+        if "ANTIOXIDANT" in title_upper:
+            return "DAILY IMMUNE HEALTH"
+        if "COLON" in title_upper or "LIVER" in title_upper:
+            return "CLEANSE & DETOX"
+        if "NAUSEA" in title_upper:
+            return "DIGESTIVE HEALTH"
+    
+    # ════════════════════════════════════════════════════════════════════════════
+    # GENDER CORRECTION RULES
+    # R: FinalMerge.R Lines 634-640
+    # ════════════════════════════════════════════════════════════════════════════
+    
+    if gender:
+        if current_health_focus == "MEN'S HEALTH" and "GENDER - FEMALE" in gender:
+            return "WOMEN'S HEALTH"
+        if current_health_focus == "WOMEN'S HEALTH" and "GENDER - MALE" in gender:
+            return "MEN'S HEALTH"
+    
+    # ════════════════════════════════════════════════════════════════════════════
+    # CATEGORY/SUBCATEGORY-BASED RULES  
+    # R: FinalMerge.R Lines 643-650 (EXACT MATCH TO R CODE)
+    # ════════════════════════════════════════════════════════════════════════════
+    
+    # Hydration products default to ENERGY SUPPORT
+    # (Observed from R's master file output - ACTIVE NUTRITION / HYDRATION → ENERGY SUPPORT)
+    if category == "ACTIVE NUTRITION" and subcategory == "HYDRATION":
+        return "ENERGY SUPPORT"
+    
+    if category == "COMBINED MULTIVITAMINS":
+        return "GENERAL HEALTH"
+    elif current_health_focus == "GENERAL HEALTH":
+        return "HEALTH FOCUS NON-SPECIFIC"
+    
+    # No rules matched - return current health focus
+    return current_health_focus
 
 
 def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
@@ -332,6 +561,7 @@ def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
             'subcategory': None,
             'primary_ingredient': None,
             'all_ingredients': [],
+            'health_focus': "HEALTH FOCUS NON-SPECIFIC",
             'reasoning': "No ingredients found"
         }
     
@@ -352,6 +582,8 @@ def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
             'category': None,
             'subcategory': None,
             'primary_ingredient': 'N/A',
+            'all_ingredients': [],
+            'health_focus': "HEALTH FOCUS NON-SPECIFIC",
             'reasoning': "No valid ingredients after normalization"
         }
     
@@ -366,7 +598,7 @@ def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
             primary_ingredient = ing
             break
     
-    # If no multivitamin, use first by position
+    # If no multivitamin, use first by position (matches R's code)
     if not primary_ingredient:
         primary_ingredient = sorted_ingredients[0]
     
@@ -404,11 +636,26 @@ def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
     if multi_reasoning:
         reasoning_parts.append(multi_reasoning)
     
+    # RULE 6: Health Focus (ingredient lookup + business rules)
+    # Get initial health focus from ingredient lookup
+    health_focus = get_health_focus_from_ingredient(primary_name)
+    
+    # Apply health focus business rules (title-based overrides, etc.)
+    health_focus = apply_health_focus_rules(
+        title=title, 
+        primary_ingredient=primary_name, 
+        current_health_focus=health_focus,
+        category=category,
+        subcategory=subcategory,
+        gender=gender
+    )
+    
     return {
         'category': category,
         'subcategory': subcategory,
         'primary_ingredient': primary_name,
         'all_ingredients': [ing.get('name', '') for ing in sorted_ingredients],
+        'health_focus': health_focus,
         'reasoning': ' | '.join(reasoning_parts)
     }
 

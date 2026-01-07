@@ -12,7 +12,7 @@ from typing import List, Dict, Tuple, Any
 from pathlib import Path
 from datetime import datetime
 from src.core.log_manager import LogManager
-from src.core.preprocessing import is_non_supplement
+from src.utils.preprocessing import is_non_supplement
 
 
 # Global cache for lookup table

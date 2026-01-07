@@ -5,6 +5,7 @@ Uses Structured Outputs for guaranteed JSON schema compliance
 
 import os
 import json
+import inspect
 from typing import List, Dict, Optional, Callable
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -98,10 +99,25 @@ class GPTClient:
                     
                     # Execute the tool function
                     if function_name in self.tools:
-                        tool_result = self.tools[function_name](**function_args)
+                        # 🛡️ DEFENSE: Filter out unexpected parameters to prevent LLM hallucination errors
+                        # (e.g., LLM incorrectly passing 'position' to lookup_ingredient)
+                        tool_func = self.tools[function_name]
+                        sig = inspect.signature(tool_func)
+                        expected_params = set(sig.parameters.keys())
+                        
+                        # Filter function_args to only include expected parameters
+                        filtered_args = {k: v for k, v in function_args.items() if k in expected_params}
+                        
+                        # Log warning if we filtered out params (LLM hallucination)
+                        if filtered_args != function_args:
+                            removed_params = set(function_args.keys()) - expected_params
+                            print(f"⚠️  Filtered unexpected params from {function_name}(): {removed_params}")
+                        
+                        # Execute with filtered args
+                        tool_result = tool_func(**filtered_args)
                         tool_calls_made.append({
                             'function': function_name,
-                            'arguments': function_args,
+                            'arguments': function_args,  # Keep original args in audit trail
                             'result': tool_result
                         })
                     else:
@@ -159,10 +175,24 @@ class GPTClient:
             
             result = json.loads(content)
             
+            # Calculate cost (GPT-4o mini pricing: $0.150/1M input, $0.600/1M output)
+            cost_per_1m_input = 0.150
+            cost_per_1m_output = 0.600
+            input_cost = (total_tokens['prompt'] / 1_000_000) * cost_per_1m_input
+            output_cost = (total_tokens['completion'] / 1_000_000) * cost_per_1m_output
+            total_cost = input_cost + output_cost
+            
             # Add metadata
             result['_metadata'] = {
                 'model': self.model,
                 'tokens_used': total_tokens,
+                'total_cost': total_cost,
+                'cost_breakdown': {
+                    'input_tokens': total_tokens['prompt'],
+                    'output_tokens': total_tokens['completion'],
+                    'input_cost': input_cost,
+                    'output_cost': output_cost
+                },
                 'tool_calls': tool_calls_made if tool_calls_made else None
             }
             

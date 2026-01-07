@@ -93,11 +93,34 @@ class APIErrorHandler:
                 return {'success': False, 'error': error_msg}
             
             except Exception as api_error:
+                error_str = str(api_error)
+                error_type = type(api_error).__name__
+                
+                # Check if it's a tool call error (LLM formatting issue) - these are retryable
+                is_tool_call_error = (
+                    'unexpected keyword argument' in error_str or
+                    'Invalid JSON' in error_str or
+                    'lookup_ingredient()' in error_str or
+                    'apply_business_rules()' in error_str or
+                    'got an unexpected keyword' in error_str
+                )
+                
+                if is_tool_call_error and attempt < self.max_retries - 1:
+                    # ⚠️  TRANSIENT - Tool call formatting error, retry
+                    self.log_manager.log_step(
+                        'step2_llm',
+                        f"[{self.asin}] Tool call error (attempt {attempt + 1}/{self.max_retries}): {error_str[:150]}"
+                    )
+                    wait_time = 2  # Short wait for tool call errors
+                    print(f"\n⚠️  Tool call error for product {product_id}, retrying... (attempt {attempt + 1}/{self.max_retries})")
+                    time.sleep(wait_time)
+                    continue
+                
                 # ❌ OTHER ERRORS - Fail immediately
-                error_msg = f'API error: {str(api_error)}'
+                error_msg = f'{error_type}: {error_str}'
                 self.log_manager.log_step(
                     'step2_llm',
-                    f"[{self.asin}] ERROR: {str(api_error)[:200]}"
+                    f"[{self.asin}] ERROR: {error_msg[:200]}"
                 )
                 return {'success': False, 'error': error_msg}
         

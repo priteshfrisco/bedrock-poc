@@ -1,0 +1,128 @@
+{
+  "instructions": "Extract the potency/strength/dosage of the primary ingredient from the product title. This is typically expressed as a number followed by a unit (mg, IU, mcg, billion, etc.). ONLY extract potency for the PRIMARY ingredient, not for secondary ingredients.",
+  
+  "priority_order": [
+    {
+      "priority": 1,
+      "name": "Probiotics - Billion CFU",
+      "pattern_examples": ["50 billion CFU", "100B", "30 billion", "1 bil", "50B CFU", "100 billion live cultures"],
+      "unit": "billion",
+      "reason": "Probiotics are measured in billions of CFU (Colony Forming Units)",
+      "extraction": "Extract the number and normalize to just the numeric value (e.g., '50 billion CFU' → '50')"
+    },
+    {
+      "priority": 2,
+      "name": "Vitamins/Minerals - Standard Units",
+      "pattern_examples": ["5000 IU", "500mg", "100 mcg", "1000 mg", "25mcg"],
+      "unit": "varies (IU, mg, mcg, g)",
+      "reason": "Vitamins and minerals use standard supplement measurement units",
+      "extraction": "Extract number + unit (e.g., '5000 IU' → '5000 IU', '500mg' → '500mg')"
+    },
+    {
+      "priority": 3,
+      "name": "Percentage Concentration",
+      "pattern_examples": ["95% curcumin", "80% omega-3"],
+      "unit": "%",
+      "reason": "Some extracts show concentration as percentage",
+      "extraction": "Extract number + % (e.g., '95% curcumin' → '95%')"
+    }
+  ],
+  
+  "critical_rules": [
+    "⚠️  ONLY extract potency for the PRIMARY ingredient (first ingredient in title or multivitamin)",
+    "⚠️  Do NOT extract count/quantity - that's different from potency!",
+    "   ❌ WRONG: '60 capsules' → potency: '60'  (this is COUNT, not potency)",
+    "   ✓ CORRECT: '5000 IU vitamin D 60 capsules' → potency: '5000 IU'",
+    "⚠️  For probiotics, extract ONLY the billion CFU number without 'billion' word",
+    "   ✓ CORRECT: '50 billion CFU' → potency: '50'",
+    "   ✓ CORRECT: '100B' → potency: '100'",
+    "⚠️  For vitamins/minerals, include the unit (mg, IU, mcg, etc.)",
+    "   ✓ CORRECT: 'Vitamin D3 5000 IU' → potency: '5000 IU'",
+    "⚠️  If multiple dosages are mentioned, extract the PRIMARY ingredient's dosage",
+    "   Example: 'Calcium 500mg with Vitamin D 1000 IU' → potency: '500mg' (calcium is primary)",
+    "⚠️  If no potency is clearly stated, return empty string ''"
+  ],
+  
+  "examples": [
+    {
+      "title": "Nature's Way Fortify Extra Strength Probiotic 50 Billion CFU 30 Capsules",
+      "primary_ingredient": "probiotic",
+      "potency": "50",
+      "reasoning": "Probiotic with 50 billion CFU - extracted numeric value only"
+    },
+    {
+      "title": "Vitamin D3 5000 IU High Potency 120 Softgels",
+      "primary_ingredient": "vitamin d3",
+      "potency": "5000 IU",
+      "reasoning": "Primary ingredient (vitamin d3) has potency of 5000 IU"
+    },
+    {
+      "title": "Turmeric Curcumin 500mg with Black Pepper Extract 60 Capsules",
+      "primary_ingredient": "turmeric",
+      "potency": "500mg",
+      "reasoning": "Primary ingredient (turmeric) has potency of 500mg"
+    },
+    {
+      "title": "Fish Oil Omega-3 1000mg (EPA 180mg DHA 120mg) 180 Softgels",
+      "primary_ingredient": "fish oil",
+      "potency": "1000mg",
+      "reasoning": "Primary ingredient (fish oil) total potency is 1000mg (EPA/DHA are components, not separate potencies)"
+    },
+    {
+      "title": "Magnesium Glycinate 200mg with Vitamin B6 25mg 90 Capsules",
+      "primary_ingredient": "magnesium",
+      "potency": "200mg",
+      "reasoning": "Primary ingredient (magnesium) potency is 200mg, B6 is secondary"
+    },
+    {
+      "title": "Multivitamin for Women 60 Tablets",
+      "primary_ingredient": "multivitamin",
+      "potency": "",
+      "reasoning": "Multivitamins don't have a single potency value (mix of many nutrients)"
+    },
+    {
+      "title": "Prenatal DHA 200mg Omega-3 Softgels 90 Count",
+      "primary_ingredient": "dha",
+      "potency": "200mg",
+      "reasoning": "DHA is primary ingredient with 200mg potency"
+    },
+    {
+      "title": "Renew Life Ultimate Flora Probiotic 100B 30 Capsules",
+      "primary_ingredient": "probiotic",
+      "potency": "100",
+      "reasoning": "100B means 100 billion CFU - extracted numeric value only"
+    }
+  ],
+  
+  "edge_cases": [
+    {
+      "case": "Title mentions dosage AND count",
+      "example": "Vitamin C 1000mg 100 Tablets",
+      "correct": "1000mg",
+      "wrong": "100",
+      "explanation": "1000mg is the potency (dosage per serving), 100 is the count (number of tablets)"
+    },
+    {
+      "case": "Multiple ingredients with different potencies",
+      "example": "Calcium 600mg Magnesium 400mg Zinc 15mg",
+      "correct": "600mg",
+      "explanation": "Extract ONLY the primary (first) ingredient's potency"
+    },
+    {
+      "case": "Concentration percentage",
+      "example": "Curcumin Extract 95% Standardized 500mg",
+      "correct": "500mg",
+      "explanation": "The potency is 500mg, 95% is the extract standardization (quality metric, not potency)"
+    },
+    {
+      "case": "No clear potency",
+      "example": "Hair, Skin & Nails Formula 60 Capsules",
+      "correct": "",
+      "explanation": "Formula products without specific potency should return empty string"
+    }
+  ],
+  
+  "default": "",
+  "default_reasoning": "No clear potency stated for primary ingredient"
+}
+

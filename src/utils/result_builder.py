@@ -74,13 +74,28 @@ def build_filtered_result(
         lookup_action: Optional lookup action (REMAP, UNKNOWN, etc.)
     
     Returns:
-        Updated result dict
+        Updated result dict with ALL fields set to 'REMOVE'
     """
     result['status'] = filter_type
     result['step_completed'] = 1
     result['filter_reason'] = filter_reason
+    result['reasoning'] = filter_reason  # Add unified reasoning field
+    
+    # Set ALL fields to 'REMOVE' for filtered products
     result['category'] = 'REMOVE'
+    result['subcategory'] = 'REMOVE'
+    result['primary_ingredient'] = 'REMOVE'
+    result['age'] = 'REMOVE'
+    result['gender'] = 'REMOVE'
+    result['form'] = 'REMOVE'
+    result['organic'] = 'REMOVE'
+    result['count'] = 'REMOVE'
+    result['unit'] = 'REMOVE'
+    result['size'] = 'REMOVE'
+    result['potency'] = 'REMOVE'
+    result['health_focus'] = 'REMOVE'
     result['high_level_category'] = 'REMOVE'
+    
     result['processing_time_sec'] = (datetime.now() - start_time).total_seconds()
     
     if lookup_action:

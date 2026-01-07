@@ -122,6 +122,7 @@ def apply_business_rules_tool(
         'final_subcategory': final_subcategory,
         'primary_ingredient': result['primary_ingredient'],
         'all_ingredients': result['all_ingredients'],
+        'health_focus': result.get('health_focus', 'HEALTH FOCUS NON-SPECIFIC'),
         'rules_applied': rules_applied,
         'changes_made': changes_made,
         'has_changes': len(changes_made) > 0 or has_overrides,

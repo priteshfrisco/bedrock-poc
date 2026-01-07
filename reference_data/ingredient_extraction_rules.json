@@ -11,16 +11,59 @@
   ],
   
   "critical_rules": [
-    "⚠️ DO NOT split compound ingredient names into separate ingredients",
+    "DO NOT split compound ingredient names into separate ingredients",
     "Example: 'Vitamin D3' → Extract as ONE ingredient 'vitamin d3' (NOT 'vitamin d' + 'd3')",
     "Example: 'Vitamin B12' → Extract as ONE ingredient 'vitamin b12' (NOT 'vitamin b' + 'b12')",
     "Example: 'Omega-3' → Extract as ONE ingredient 'omega-3' (NOT 'omega' + '3')",
-    "⚠️ IMPORTANT: 'Vitamin D' and 'Vitamin D3' are DIFFERENT ingredients:",
+    "IMPORTANT: 'Vitamin D' and 'Vitamin D3' are DIFFERENT ingredients:",
     "  - 'Vitamin D3 5000 IU' → Extract 'vitamin d3' (specific form)",
     "  - 'Vitamin D 5000 IU' → Extract 'vitamin d' (generic)",
     "  - Only extract what's actually in the title - don't add or assume numbers",
     "If you see adjacent words that form a single ingredient name, extract them together"
   ],
+  
+  "exclusions": {
+    "description": "Keywords that should NOT be extracted as functional ingredients. Use context to determine if it's a flavor descriptor vs. real ingredient.",
+    "flavor_keywords": ["cherry", "acai", "cranberry", "blueberry", "blackberry", "peppermint", "spearmint", "pumpkin", "vanilla", "chocolate", "strawberry", "orange", "lemon", "lime", "grape", "raspberry"],
+    "instructions": [
+      "If a word appears to be a FLAVOR descriptor (e.g., 'cherry flavored', 'vanilla taste', 'mint flavor'), DO NOT extract it as an ingredient.",
+      "However, if it's clearly a functional ingredient or extract (e.g., 'cherry extract 200mg', 'acai berry extract', 'peppermint oil'), DO extract it.",
+      "Context clues for FLAVORS (don't extract): 'flavored', 'flavor', 'taste', 'natural', 'artificial'",
+      "Context clues for INGREDIENTS (do extract): 'extract', 'oil', 'powder', 'concentrate', dosage amounts like '200mg'"
+    ],
+    "examples": [
+      {
+        "title": "Cherry Flavored Multivitamin 60 Tablets",
+        "extract": ["multivitamin"],
+        "skip": ["cherry"],
+        "reason": "'cherry flavored' indicates taste, not functional ingredient"
+      },
+      {
+        "title": "Acai Berry Extract 500mg Antioxidant 90 Capsules",
+        "extract": ["acai"],
+        "skip": [],
+        "reason": "'acai berry extract 500mg' is a functional ingredient with dosage"
+      },
+      {
+        "title": "Vanilla Protein Shake Mix 2 lbs",
+        "extract": ["protein"],
+        "skip": ["vanilla"],
+        "reason": "'vanilla' describes flavor of the shake, not an ingredient"
+      },
+      {
+        "title": "Cranberry Extract 200mg for Urinary Health 60 Softgels",
+        "extract": ["cranberry"],
+        "skip": [],
+        "reason": "'cranberry extract 200mg' with health claim indicates functional ingredient"
+      },
+      {
+        "title": "Peppermint Oil Capsules 50mg Enteric Coated 60 Count",
+        "extract": ["peppermint"],
+        "skip": [],
+        "reason": "'peppermint oil' with dosage is a functional ingredient"
+      }
+    ]
+  },
   
   "special_cases": {
     "multivitamin": {

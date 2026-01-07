@@ -67,7 +67,7 @@ def extract_llm_attributes(
     
     # Log success
     metadata = llm_result.get('_metadata', {})
-    tokens = metadata.get('tokens', {})
+    tokens = metadata.get('tokens_used', {})  # ✅ FIXED: was 'tokens', should be 'tokens_used'
     total_tokens = tokens.get('total', 0)
     prompt_tokens = tokens.get('prompt', 0)
     completion_tokens = tokens.get('completion', 0)
@@ -130,6 +130,7 @@ def extract_attributes_from_llm_result(llm_result: Dict[str, Any]) -> Dict[str, 
         'count': llm_result.get('count', {}).get('value', 'N/A'),
         'unit': llm_result.get('unit', {}).get('value', 'N/A'),
         'size': llm_result.get('size', {}).get('value', 'N/A'),
+        'potency': llm_result.get('potency', {}).get('value', ''),
         'ingredients': normalized_ingredients,
         'business_rules': llm_result.get('business_rules', {})
     }
@@ -146,7 +147,7 @@ def extract_metadata_from_llm_result(llm_result: Dict[str, Any]) -> Dict[str, An
         Dict with metadata (tokens_used, cost, tokens_breakdown, full_metadata)
     """
     metadata = llm_result.get('_metadata', {})
-    tokens = metadata.get('tokens', {})
+    tokens = metadata.get('tokens_used', {})  # ✅ FIXED: was 'tokens', should be 'tokens_used'
     
     return {
         'tokens_used': tokens.get('total', 0),
