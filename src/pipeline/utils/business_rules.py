@@ -5,6 +5,7 @@ Applies R's business logic after ingredient lookup
 """
 
 import csv
+from typing import List, Dict, Optional
 from collections import defaultdict
 
 
@@ -531,6 +532,109 @@ def apply_health_focus_rules(title: str, primary_ingredient: str, current_health
     return current_health_focus
 
 
+def detect_granular_protein_type(title: str, ingredients: List[Dict]) -> str:
+    """
+    Detect specific protein type (matching R system's granular protein logic).
+    
+    This implements R's 200+ lines of protein detection from FI_CAT_Testing.R.
+    Returns granular protein subcategory based on title keywords.
+    
+    Args:
+        title: Product title
+        ingredients: List of ingredient dicts
+    
+    Returns:
+        Specific protein subcategory or empty string if not protein product
+    """
+    if not title:
+        return ""
+    
+    title_lower = title.lower()
+    
+    # Check if this is a protein product
+    has_protein = any('protein' in ing.get('name', '').lower() for ing in ingredients)
+    if not has_protein and 'protein' not in title_lower:
+        return ""
+    
+    # Count plant vs animal proteins (R system logic)
+    plant_keywords = ['pea', 'rice', 'soy', 'hemp', 'alfalfa', 'baobab']
+    animal_keywords = ['casein', 'egg', 'insect', 'beef', 'chicken', 'fish', 'meat', 'milk', 'whey']
+    
+    # Replace meat terms with generic "meat" (R system does this)
+    for meat_term in ['beef', 'chicken', 'fish']:
+        title_lower = title_lower.replace(meat_term, 'meat')
+    
+    plant_count = sum(1 for kw in plant_keywords if kw in title_lower)
+    animal_count = sum(1 for kw in animal_keywords if kw in title_lower)
+    
+    # Apply R system logic tree (matching FI_CAT_Testing.R Lines 619-759)
+    
+    # Case 1: Both plant AND animal
+    if plant_count > 0 and animal_count > 0:
+        return 'PROTEIN - ANIMAL & PLANT COMBO'
+    
+    # Case 2: Multiple plant proteins
+    if plant_count > 1:
+        return 'PROTEIN - PLANT - MULTI'
+    
+    # Case 3: Single plant protein
+    if plant_count == 1:
+        if 'pea' in title_lower:
+            return 'PROTEIN - PLANT - PEA'
+        elif 'rice' in title_lower:
+            return 'PROTEIN - PLANT - RICE'
+        elif 'soy' in title_lower:
+            return 'PROTEIN - PLANT - SOY'
+        elif 'hemp' in title_lower:
+            return 'PROTEIN - PLANT - HEMP'
+        else:
+            return 'PROTEIN - PLANT - GENERAL'
+    
+    # Case 4: Plant keyword with no specific type
+    if 'plant' in title_lower or 'vegan' in title_lower:
+        return 'PROTEIN - PLANT - GENERAL'
+    
+    # Case 5: Multiple animal proteins - check for common pairs
+    if animal_count == 2:
+        if 'whey' in title_lower and 'casein' in title_lower:
+            return 'PROTEIN - ANIMAL - WHEY & CASEIN'
+        elif 'milk' in title_lower and 'egg' in title_lower:
+            return 'PROTEIN - ANIMAL - MILK & EGG'
+        elif 'whey' in title_lower and 'milk' in title_lower:
+            return 'PROTEIN - ANIMAL - WHEY & MILK'
+        elif 'whey' in title_lower and 'egg' in title_lower:
+            return 'PROTEIN - ANIMAL - WHEY & EGG'
+        else:
+            return 'PROTEIN - ANIMAL - MULTI'
+    
+    # Case 6: More than 2 animal proteins
+    if animal_count > 2:
+        return 'PROTEIN - ANIMAL - MULTI'
+    
+    # Case 7: Single animal protein
+    if animal_count == 1:
+        if 'whey' in title_lower:
+            return 'PROTEIN - ANIMAL - WHEY'
+        elif 'casein' in title_lower:
+            return 'PROTEIN - ANIMAL - CASEIN'
+        elif 'egg' in title_lower:
+            return 'PROTEIN - ANIMAL - EGG'
+        elif 'meat' in title_lower:
+            return 'PROTEIN - ANIMAL - MEAT'
+        elif 'milk' in title_lower:
+            return 'PROTEIN - ANIMAL - MILK'
+        elif 'insect' in title_lower:
+            return 'PROTEIN - ANIMAL - INSECT'
+        else:
+            return 'PROTEIN - ANIMAL - GENERAL'
+    
+    # Case 8: No specific type detected
+    if animal_count == 0 and plant_count == 0:
+        return 'PROTEIN - ANIMAL - GENERAL'
+    
+    return ""
+
+
 def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
     """
     Apply all business rules in order (matching R system's FinalMerge.R):
@@ -539,6 +643,7 @@ def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
     3. Protein Rule (protein/whey/isolate)
     4. Herb Formula Rule (2+ herbs)
     5. Multivitamin Refinement (age + gender + title)
+    6. Granular Protein Type Detection (optional - R system granularity)
     
     Args:
         ingredients_data: List of ingredient dicts with category/subcategory
@@ -635,6 +740,14 @@ def apply_all_business_rules(ingredients_data, age_group, gender, title=""):
     category, subcategory, multi_reasoning = apply_multivitamin_refinement(category, subcategory, age_group, gender, title)
     if multi_reasoning:
         reasoning_parts.append(multi_reasoning)
+    
+    # RULE 5B: Granular Protein Type Detection (optional - for R system granularity)
+    # Only applies if protein rule already triggered (category = SPORTS NUTRITION)
+    if category == 'SPORTS NUTRITION' or subcategory == 'PROTEIN':
+        protein_type = detect_granular_protein_type(title, sorted_ingredients)
+        if protein_type:
+            subcategory = protein_type
+            reasoning_parts.append(f"Granular Protein Type: Detected '{protein_type}' from title keywords")
     
     # RULE 6: Health Focus (ingredient lookup + business rules)
     # Get initial health focus from ingredient lookup

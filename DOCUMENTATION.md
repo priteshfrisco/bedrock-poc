@@ -1623,7 +1623,9 @@ The LLM extracts ALL functional ingredients from the product title and for EACH 
   "special_handling": {
     "probiotics": { /* how to handle probiotic strains */ },
     "combo_products": { /* how to handle combo ingredients */ },
-    "normalized_names": { /* CRITICAL: use normalized names from lookup */ }
+    "normalized_names": { /* CRITICAL: use normalized names from lookup */ },
+    "combo_detection": { /* NEW: glucosamine+chondroitin, B vitamins, A+D combos */ },
+    "context_dependent_ingredients": { /* NEW: angelica/dong quai, arnica, basil, coq10 */ }
   },
   "primary_ingredient_logic": {
     "rule": "PRIMARY ingredient is determined by POSITION in title (first found = primary)",
@@ -1644,7 +1646,12 @@ The LLM extracts ALL functional ingredients from the product title and for EACH 
   - `examples` - 5 examples showing when to extract vs skip
 - `special_cases` - Multivitamin and protein keywords
 - `tool_calling` - How to call `lookup_ingredient()` tool correctly
-- `special_handling` - Probiotic strains, combo products, normalized names
+- `special_handling` - 5 advanced handlers:
+  - `probiotics` - Probiotic strain fallback logic
+  - `combo_products` - Try full phrase before splitting (e.g., "echinacea goldenseal")
+  - `normalized_names` - Use normalized names from lookup results
+  - **`combo_detection`** - ✨ NEW: Merge ingredient combos (glucosamine+chondroitin, B vitamins, A+D)
+  - **`context_dependent_ingredients`** - ✨ NEW: Context-aware lookups (angelica/dong quai, arnica types, etc.)
 - `primary_ingredient_logic` - How to determine which ingredient is primary
 - `output_format` - Structure for JSON output with ingredients array
 
@@ -1777,6 +1784,158 @@ The `lookup_ingredient()` tool queries this CSV database that contains ~900 ingr
   - If not found → Split and look up separately
 - ❌ WRONG: Immediately split into "echinacea" and "goldenseal"
 
+---
+
+**⚙️ Advanced R System Features (Post-Processing in Step 3)**
+
+After the LLM extracts ingredients in Step 8, our Step 3 post-processing applies three advanced features matching the original R system:
+
+**Feature 1: Ingredient Combo Detection**
+
+Automatically merges specific ingredient combinations (matching R system's FinalMerge.R logic):
+
+**Combo 1: Glucosamine + Chondroitin**
+- If both GLUCOSAMINE and CHONDROITIN are found
+- Merge into: `GLUCOSAMINE CHONDROITIN COMBO`
+- Category: `JOINT HEALTH`
+- Example:
+  - Before: ["GLUCOSAMINE", "CHONDROITIN", "MSM"]
+  - After: ["GLUCOSAMINE CHONDROITIN COMBO", "MSM"]
+
+**Combo 2: Vitamin B1 + B2 + B6 + B12**
+- If all four B vitamins are found AND no other vitamins present
+- Merge into: `VITAMIN B1 - B2 - B6 - B12`
+- Category: `BASIC VITAMINS & MINERALS`
+- Example:
+  - Title: "B1 B2 B6 B12 Complex with Magnesium"
+  - Before: ["VITAMIN B1 (THIAMIN)", "VITAMIN B2 (RIBOFLAVIN)", "VITAMIN B6 (PYRIDOXINE)", "VITAMIN B12", "MAGNESIUM"]
+  - After: ["VITAMIN B1 - B2 - B6 - B12", "MAGNESIUM"]
+  - Note: Magnesium is not a vitamin, so merge is OK
+
+**Combo 3: Vitamin A + D**
+- If both VITAMIN A and VITAMIN D are found AND no other vitamins present
+- Merge into: `VITAMIN A & D COMBO`
+- Category: `BASIC VITAMINS & MINERALS`
+- Example:
+  - Before: ["VITAMIN A", "VITAMIN D"]
+  - After: ["VITAMIN A & D COMBO"]
+
+**Implementation:**
+- Location: `src/pipeline/step3_postprocess.py` → `detect_ingredient_combos()`
+- Rules defined in: `reference_data/ingredient_extraction_rules.json` → `combo_detection` section
+- Applied automatically in Step 3 before business rules
+
+---
+
+**Feature 2: Granular Protein Type Detection**
+
+Automatically detects specific protein types with 200+ lines of logic matching R system's FI_CAT_Testing.R:
+
+**Animal Proteins:**
+- `PROTEIN - ANIMAL - WHEY` - Whey protein
+- `PROTEIN - ANIMAL - CASEIN` - Casein protein
+- `PROTEIN - ANIMAL - WHEY & CASEIN` - Both whey and casein
+- `PROTEIN - ANIMAL - EGG` - Egg protein
+- `PROTEIN - ANIMAL - MILK` - Milk protein
+- `PROTEIN - ANIMAL - MILK & EGG` - Both milk and egg
+- `PROTEIN - ANIMAL - WHEY & MILK` - Whey and milk combo
+- `PROTEIN - ANIMAL - WHEY & EGG` - Whey and egg combo
+- `PROTEIN - ANIMAL - MEAT` - Beef/chicken/fish protein
+- `PROTEIN - ANIMAL - INSECT` - Insect protein
+- `PROTEIN - ANIMAL - MULTI` - Multiple animal proteins (3+)
+- `PROTEIN - ANIMAL - GENERAL` - General animal protein
+
+**Plant Proteins:**
+- `PROTEIN - PLANT - PEA` - Pea protein
+- `PROTEIN - PLANT - RICE` - Rice protein
+- `PROTEIN - PLANT - SOY` - Soy protein
+- `PROTEIN - PLANT - HEMP` - Hemp protein
+- `PROTEIN - PLANT - MULTI` - Multiple plant proteins (2+)
+- `PROTEIN - PLANT - GENERAL` - General plant protein
+
+**Combo:**
+- `PROTEIN - ANIMAL & PLANT COMBO` - Mix of animal and plant proteins
+
+**How It Works:**
+1. Checks title for plant keywords: pea, rice, soy, hemp, alfalfa, baobab
+2. Checks title for animal keywords: casein, egg, insect, beef, chicken, fish, meat, milk, whey
+3. Counts plant vs animal proteins
+4. Applies decision tree matching R system logic:
+   - Both plant + animal → COMBO
+   - Multiple plant (2+) → PLANT - MULTI
+   - Single plant → Specific type (PEA, RICE, SOY, HEMP)
+   - Multiple animal (2) → Check for common pairs (WHEY & CASEIN, etc.)
+   - Multiple animal (3+) → ANIMAL - MULTI
+   - Single animal → Specific type (WHEY, CASEIN, EGG, MEAT, etc.)
+
+**Examples:**
+
+| Product Title | Detected Type | Logic |
+|--------------|---------------|-------|
+| "Whey Protein Isolate 2 lbs" | PROTEIN - ANIMAL - WHEY | Single animal keyword |
+| "Pea Protein Powder Vegan" | PROTEIN - PLANT - PEA | Single plant keyword |
+| "Whey Casein Blend 5 lbs" | PROTEIN - ANIMAL - WHEY & CASEIN | Common animal pair |
+| "Pea Rice Protein Organic" | PROTEIN - PLANT - MULTI | Multiple plant keywords |
+| "Whey Pea Protein Blend" | PROTEIN - ANIMAL & PLANT COMBO | Both plant and animal |
+
+**Implementation:**
+- Location: `src/pipeline/utils/business_rules.py` → `detect_granular_protein_type()`
+- Applied in Step 3 when primary ingredient is protein
+- Overrides subcategory with granular type
+
+---
+
+**Feature 3: Context-Dependent Ingredients**
+
+Some ingredients require context to identify correctly (matching R system special case logic):
+
+**Case 1: Angelica vs Dong Quai**
+- Rule: If title contains "angelica" AND "dong quai" → lookup "dong quai"
+- Otherwise → lookup "angelica"
+- Reasoning: Dong Quai is a specific type of Angelica, takes priority
+- Example: "Angelica Dong Quai Extract" → Use "DONG QUAI"
+
+**Case 2: Arnica (Homeopathic vs Herbal)**
+- Rule: If title contains "arnica" AND "homeopathic" → lookup "arnica homeopathic"
+- Otherwise → lookup "arnica herbal"
+- Reasoning: Homeopathic and herbal arnica are different products
+- Example: "Arnica Homeopathic 30C Pellets" → Use "ARNICA HOMEOPATHIC"
+
+**Case 3: Holy Basil vs Basil**
+- Rule: If "holy" appears near "basil" → lookup "holy basil"
+- Otherwise → lookup "basil"
+- Reasoning: Holy Basil (Tulsi) is different from culinary basil
+- Example: "Holy Basil Organic Capsules" → Use "HOLY BASIL (TULSI)"
+
+**Case 4: Ubiquinol vs CoQ10**
+- Rule: If "ubiquinol" in title → lookup "ubiquinol"
+- Else if "coq10" in title → lookup "coq10"
+- Reasoning: Ubiquinol is a specific form of CoQ10
+- Example: "Ubiquinol 100mg Softgels" → Use "UBIQUINOL"
+
+**Implementation:**
+- Location: `reference_data/ingredient_extraction_rules.json` → `context_dependent_ingredients` section
+- The LLM checks these rules BEFORE calling `lookup_ingredient()` tool
+- Ensures correct ingredient is looked up based on context
+
+**Defined in JSON:**
+```json
+"context_dependent_ingredients": {
+  "description": "Some ingredients require context to identify correctly",
+  "cases": [
+    {
+      "primary_keyword": "angelica",
+      "rule": "If title contains 'angelica' AND 'dong quai' → lookup 'dong quai', otherwise → lookup 'angelica'",
+      "reasoning": "Dong Quai is a specific type of Angelica, takes priority"
+    },
+    ...
+  ],
+  "instruction": "Before calling lookup_ingredient(), check these context rules."
+}
+```
+
+---
+
 **How to Modify:**
 
 **Modifying Extraction Rules (ingredient_extraction_rules.json):**
@@ -1789,6 +1948,8 @@ The `lookup_ingredient()` tool queries this CSV database that contains ~900 ingr
    - To add new protein keywords: Add to `special_cases.protein.keywords` array
    - To add new extraction examples: Add to `exclusions.examples` array
    - To add new critical rules: Add to `critical_rules` array
+   - **To add new ingredient combos:** Add to `special_handling.combo_detection.combos` array
+   - **To add new context-dependent ingredients:** Add to `special_handling.context_dependent_ingredients.cases` array
 
 **Example 1 - Adding "mango" as a flavor keyword:**
 
@@ -1815,6 +1976,33 @@ After:
 ```json
 "multivitamin": {
   "keywords": ["multivitamin", "multi vitamin", "multi-vitamin", "multiple vitamin", "daily vitamin"]
+}
+```
+
+**Example 3 - Adding a new ingredient combo (Vitamin E + Selenium):**
+
+Add this to `special_handling.combo_detection.combos` array:
+```json
+{
+  "combo_name": "VITAMIN E & SELENIUM COMBO",
+  "required_ingredients": ["vitamin e", "selenium"],
+  "condition": "Only merge if NO other vitamins are present",
+  "action": "Replace VITAMIN E with 'VITAMIN E & SELENIUM COMBO' and remove SELENIUM from the list",
+  "example": {
+    "before": ["VITAMIN E", "SELENIUM"],
+    "after": ["VITAMIN E & SELENIUM COMBO"]
+  }
+}
+```
+
+**Example 4 - Adding a context-dependent ingredient (Ginseng types):**
+
+Add this to `special_handling.context_dependent_ingredients.cases` array:
+```json
+{
+  "primary_keyword": "ginseng",
+  "rule": "If 'korean' or 'panax' appears near 'ginseng' → lookup 'korean ginseng', else if 'american' → lookup 'american ginseng', else if 'siberian' → lookup 'siberian ginseng'",
+  "reasoning": "Different ginseng types have different properties"
 }
 ```
 
@@ -1857,6 +2045,21 @@ TURMERIC,HERBS,TURMERIC & CURCUMIN
 3. **Upload the updated file** to S3 bucket **reference/** folder
 4. **Test**: Process products with the new/updated ingredients
 5. Next processing run will use the updated database
+
+---
+
+**⚠️ Note on Granular Protein Type Detection:**
+
+The granular protein type detection logic is implemented in Python code (`src/pipeline/utils/business_rules.py` → `detect_granular_protein_type()` function), not in JSON reference files. This is because it involves complex decision tree logic (200+ lines) that matches the R system's FI_CAT_Testing.R.
+
+To modify protein type detection:
+- Edit `src/pipeline/utils/business_rules.py`
+- Modify the `detect_granular_protein_type()` function
+- Update keyword lists: `plant_keywords` and `animal_keywords`
+- Modify decision tree logic as needed
+- Requires Docker image rebuild for AWS deployment
+
+**Note:** Ingredient combos and context-dependent ingredients are in JSON files and can be updated via S3 without code changes. Protein detection requires code changes because of its complexity.
 
 ---
 

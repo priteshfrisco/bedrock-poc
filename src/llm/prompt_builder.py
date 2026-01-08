@@ -422,6 +422,53 @@ Example:
     "name": "{ingredient_rules['special_handling']['normalized_names']['correct_example']['name']}",  ← {ingredient_rules['special_handling']['normalized_names']['correct_example']['note']}
     ...
   }}
+"""
+    
+    # Add combo detection section if present
+    if 'combo_detection' in ingredient_rules['special_handling']:
+        combo_section = ingredient_rules['special_handling']['combo_detection']
+        prompt += f"""
+COMBO INGREDIENT DETECTION (R SYSTEM BEHAVIOR):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{combo_section['description']}
+
+{combo_section['instructions']}
+
+"""
+        for combo in combo_section['combos']:
+            prompt += f"\n✅ {combo['combo_name']}:\n"
+            prompt += f"  Required: {', '.join(combo['required_ingredients'])}\n"
+            if 'condition' in combo:
+                prompt += f"  Condition: {combo['condition']}\n"
+            prompt += f"  Action: {combo['action']}\n"
+            if 'example' in combo:
+                example = combo['example']
+                prompt += f"  Example:\n"
+                prompt += f"    Before: {example['before']}\n"
+                prompt += f"    After: {example['after']}\n"
+                if 'note' in example:
+                    prompt += f"    Note: {example['note']}\n"
+    
+    # Add context-dependent ingredients section if present
+    if 'context_dependent_ingredients' in ingredient_rules['special_handling']:
+        context_section = ingredient_rules['special_handling']['context_dependent_ingredients']
+        prompt += f"""
+
+CONTEXT-DEPENDENT INGREDIENTS (R SYSTEM SPECIAL CASES):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{context_section['description']}
+
+"""
+        for case in context_section['cases']:
+            prompt += f"\n📌 {case['primary_keyword'].upper()}:\n"
+            prompt += f"  Rule: {case['rule']}\n"
+            prompt += f"  Reasoning: {case['reasoning']}\n"
+        
+        prompt += f"\n{context_section['instruction']}\n"
+    
+    prompt += """
 
 OUTPUT FORMAT:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

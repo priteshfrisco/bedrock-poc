@@ -130,6 +130,69 @@
         "name": "VITAMIN C (NOT ESTER-C)",
         "note": "Use the 'ingredient' field from lookup!"
       }
+    },
+    "combo_detection": {
+      "description": "After extracting ALL ingredients, check if specific combinations exist and merge them (matching R system behavior)",
+      "instructions": "Check the full ingredient list for these combinations and merge them before returning results:",
+      "combos": [
+        {
+          "combo_name": "GLUCOSAMINE CHONDROITIN COMBO",
+          "required_ingredients": ["glucosamine", "chondroitin"],
+          "action": "If both GLUCOSAMINE and CHONDROITIN are found, replace GLUCOSAMINE with 'GLUCOSAMINE CHONDROITIN COMBO' and remove CHONDROITIN from the list",
+          "example": {
+            "before": ["GLUCOSAMINE", "CHONDROITIN", "MSM"],
+            "after": ["GLUCOSAMINE CHONDROITIN COMBO", "MSM"]
+          }
+        },
+        {
+          "combo_name": "VITAMIN B1 - B2 - B6 - B12",
+          "required_ingredients": ["vitamin b1", "vitamin b2", "vitamin b6", "vitamin b12"],
+          "condition": "Only merge if NO other vitamins are present in the ingredient list",
+          "action": "Replace VITAMIN B1 with 'VITAMIN B1 - B2 - B6 - B12' and remove B2, B6, B12 from the list",
+          "example": {
+            "title": "B1 B2 B6 B12 Complex with Magnesium",
+            "before": ["VITAMIN B1 (THIAMIN)", "VITAMIN B2 (RIBOFLAVIN)", "VITAMIN B6 (PYRIDOXINE)", "VITAMIN B12", "MAGNESIUM"],
+            "after": ["VITAMIN B1 - B2 - B6 - B12", "MAGNESIUM"],
+            "note": "Magnesium is not a vitamin, so merge is OK"
+          }
+        },
+        {
+          "combo_name": "VITAMIN A & D COMBO",
+          "required_ingredients": ["vitamin a", "vitamin d"],
+          "condition": "Only merge if NO other vitamins are present",
+          "action": "Replace VITAMIN A with 'VITAMIN A & D COMBO' and remove VITAMIN D from the list",
+          "example": {
+            "before": ["VITAMIN A", "VITAMIN D"],
+            "after": ["VITAMIN A & D COMBO"]
+          }
+        }
+      ]
+    },
+    "context_dependent_ingredients": {
+      "description": "Some ingredients require context to identify correctly (matching R system special case logic)",
+      "cases": [
+        {
+          "primary_keyword": "angelica",
+          "rule": "If title contains 'angelica' AND 'dong quai' → lookup 'dong quai', otherwise → lookup 'angelica'",
+          "reasoning": "Dong Quai is a specific type of Angelica, takes priority"
+        },
+        {
+          "primary_keyword": "arnica",
+          "rule": "If title contains 'arnica' AND 'homeopathic' → lookup 'arnica homeopathic', otherwise → lookup 'arnica herbal'",
+          "reasoning": "Homeopathic and herbal arnica are different products"
+        },
+        {
+          "primary_keyword": "basil",
+          "rule": "If 'holy' appears near 'basil' → lookup 'holy basil', otherwise → lookup 'basil'",
+          "reasoning": "Holy Basil (Tulsi) is different from culinary basil"
+        },
+        {
+          "primary_keyword": "coq10",
+          "rule": "If 'ubiquinol' in title → lookup 'ubiquinol', else if 'coq10' → lookup 'coq10'",
+          "reasoning": "Ubiquinol is a specific form of CoQ10"
+        }
+      ],
+      "instruction": "Before calling lookup_ingredient(), check these context rules. Apply the appropriate lookup based on surrounding words."
     }
   },
   
