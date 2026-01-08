@@ -89,7 +89,7 @@ def build_filtered_result(
     result['gender'] = 'REMOVE'
     result['form'] = 'REMOVE'
     result['organic'] = 'REMOVE'
-    result['count'] = 'REMOVE'
+    result['pack_count'] = 'REMOVE'  # FIXED: was 'count', should be 'pack_count'
     result['unit'] = 'REMOVE'
     result['size'] = 'REMOVE'
     result['potency'] = 'REMOVE'

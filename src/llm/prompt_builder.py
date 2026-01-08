@@ -83,6 +83,7 @@ def build_complete_prompt(product_title: str):
     
     # Load all files
     general_instructions = load_json('reference_data/general_instructions.json')
+    safety_check_instructions = load_json('reference_data/safety_check_instructions.json')
     age_rules = load_json('reference_data/age_extraction_rules.json')
     gender_rules = load_json('reference_data/gender_extraction_rules.json')
     form_rules = load_json('reference_data/form_extraction_rules.json')
@@ -101,7 +102,7 @@ def build_complete_prompt(product_title: str):
     valid_forms = list(form_rules['keywords'].keys()) + [form_rules['default']]
     
     # Build safety check dynamically from CSV
-    safety_check = format_safety_check_section()
+    non_supplement_keywords_formatted = format_safety_check_section()
     
     # System prompt
     system_prompt = "You are a supplement classification expert. Extract structured information from product titles step by step. Be accurate and precise. Only extract information that is present in the title."
@@ -113,7 +114,7 @@ def build_complete_prompt(product_title: str):
 CRITICAL SAFETY CHECK - READ THIS FIRST!
 ================================================================================
 
-{general_instructions['safety_warnings'].format(safety_check=safety_check)}
+{safety_check_instructions['template'].format(non_supplement_keywords=non_supplement_keywords_formatted)}
 
 ================================================================================
 TASK: EXTRACT SUPPLEMENT ATTRIBUTES
@@ -580,6 +581,58 @@ Examples of BAD reasoning (don't do this):
 When should_explain is FALSE:
 - Leave reasoning field NULL or empty string
 - This means no significant changes occurred (standard processing)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"""
+
+    prompt += f"""
+================================================================================
+STEP 11: APPLY POST-PROCESSING (FINAL STEP)
+================================================================================
+
+🔧 CRITICAL: After calling apply_business_rules(), you MUST call apply_postprocessing()
+
+This tool performs final processing to get complete results:
+1. Detects and merges ingredient combos (Glucosamine+Chondroitin, B vitamins, A+D)
+2. Re-applies business rules (in case combos changed primary ingredient)
+3. Assigns health focus (e.g., "IMMUNE HEALTH", "JOINT HEALTH", "BRAIN HEALTH")
+4. Assigns high-level category (PRIORITY VMS / NON-PRIORITY VMS / OTC / REMOVE)
+
+CALL THE TOOL:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  apply_postprocessing(
+    ingredients=[...same ingredients array you passed to apply_business_rules...],
+    age_group="[the age value you extracted]",
+    gender="[the gender value you extracted]",
+    title="[the product title]"
+  )
+
+The tool will return:
+- combo_detected: Boolean (true if combos were merged)
+- combos_applied: Array of combo names (e.g., ["Glucosamine + Chondroitin"])
+- final_category: Final category AFTER combo processing
+- final_subcategory: Final subcategory AFTER combo processing
+- primary_ingredient: Final primary ingredient (may be a combo)
+- health_focus: Health focus category (e.g., "JOINT HEALTH", "IMMUNE HEALTH")
+- high_level_category: "PRIORITY VMS", "NON-PRIORITY VMS", "OTC", or "REMOVE"
+- reasoning_context: Complete summary for your final reasoning
+
+FINAL REASONING INSTRUCTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  CRITICAL: Use the reasoning_context from apply_postprocessing() for your final reasoning!
+
+Your final reasoning should include:
+- Combo detection (if any combos were merged)
+- Final category and subcategory
+- Health focus assignment
+- High-level category classification
+
+Examples of GOOD final reasoning:
+✅ "Ingredient combo detected: Glucosamine + Chondroitin merged | Final classification: JOINT HEALTH / GLUCOSAMINE & CHONDROITIN | Health focus: JOINT HEALTH | High-level category: PRIORITY VMS"
+✅ "Final classification: COMBINED MULTIVITAMINS / WOMEN | Health focus: IMMUNE HEALTH | High-level category: PRIORITY VMS"
+✅ "Combo detected: B Vitamin Complex merged | Final classification: BASIC VITAMINS & MINERALS / LETTER VITAMINS | Health focus: ENERGY SUPPORT | High-level category: PRIORITY VMS"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """

@@ -1,0 +1,89 @@
+{
+  "ingredient_combos": {
+    "description": "Ingredient combinations that should be merged into a single ingredient",
+    "combos": [
+      {
+        "combo_id": "COMBO-01",
+        "combo_name": "GLUCOSAMINE CHONDROITIN COMBO",
+        "required_ingredients": ["glucosamine", "chondroitin"],
+        "match_mode": "contains",
+        "merge_action": {
+          "keep_position": "first",
+          "combo_category": "JOINT HEALTH",
+          "combo_subcategory": "GLUCOSAMINE & CHONDROITIN"
+        },
+        "description": "Merge Glucosamine and Chondroitin into combo product"
+      },
+      {
+        "combo_id": "COMBO-02",
+        "combo_name": "VITAMIN B1 - B2 - B6 - B12",
+        "required_ingredients": ["vitamin b1", "vitamin b2", "vitamin b6", "vitamin b12"],
+        "match_mode": "contains",
+        "condition": "no_other_vitamins",
+        "merge_action": {
+          "keep_position": "first",
+          "combo_category": "BASIC VITAMINS & MINERALS",
+          "combo_subcategory": "LETTER VITAMINS"
+        },
+        "description": "Merge B1, B2, B6, B12 only if no other vitamins present"
+      },
+      {
+        "combo_id": "COMBO-03",
+        "combo_name": "VITAMIN A & D COMBO",
+        "required_ingredients": ["vitamin a", "vitamin d"],
+        "match_mode": "contains",
+        "condition": "no_other_vitamins",
+        "merge_action": {
+          "keep_position": "first",
+          "combo_category": "BASIC VITAMINS & MINERALS",
+          "combo_subcategory": "LETTER VITAMINS"
+        },
+        "description": "Merge Vitamin A and D only if no other vitamins present"
+      }
+    ]
+  },
+
+  "high_level_category_mapping": {
+    "description": "Maps category to high-level category (PRIORITY VMS, NON-PRIORITY VMS, OTC, REMOVE)",
+    "rules": [
+      {
+        "rule_id": "HLC-01",
+        "priority": 1,
+        "condition": "category equals 'OTC'",
+        "high_level_category": "OTC",
+        "description": "Over-the-counter medications"
+      },
+      {
+        "rule_id": "HLC-02",
+        "priority": 2,
+        "condition": "category equals 'REMOVE' OR category is null/empty",
+        "high_level_category": "REMOVE",
+        "description": "Products to be filtered out"
+      },
+      {
+        "rule_id": "HLC-03",
+        "priority": 3,
+        "condition": "category equals 'ACTIVE NUTRITION'",
+        "high_level_category": "NON-PRIORITY VMS",
+        "description": "Sports nutrition and active lifestyle products"
+      },
+      {
+        "rule_id": "HLC-04",
+        "priority": 4,
+        "condition": "all other categories",
+        "high_level_category": "PRIORITY VMS",
+        "description": "Core vitamins, minerals, and supplements"
+      }
+    ],
+    "default": "PRIORITY VMS"
+  },
+
+  "_notes": {
+    "ingredient_combos": "Combos are checked in order. If required_ingredients all match, they are merged into combo_name.",
+    "match_mode": "'contains' means substring match (e.g., 'glucosamine' matches 'GLUCOSAMINE HCL'), 'exact' means exact match",
+    "condition": "'no_other_vitamins' means only merge if no other vitamin ingredients are present",
+    "high_level_category": "Rules are applied in priority order (1-4). First matching rule wins.",
+    "modification_instructions": "To add a new combo, add a new object to the 'combos' array. To change high-level category logic, edit the 'rules' array."
+  }
+}
+

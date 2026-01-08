@@ -34,7 +34,8 @@ from src.core.file_tracker import FileTracker
 from src.utils.result_builder import build_error_result, build_success_result, build_filtered_result
 from src.pipeline.step1_filter import generate_step1_audits, apply_step1_filter
 from src.pipeline.step2_llm import extract_llm_attributes, extract_attributes_from_llm_result, extract_metadata_from_llm_result
-from src.pipeline.step3_postprocess import apply_postprocessing
+# Post-processing is now handled by LLM tool - no longer needed here
+# from src.pipeline.step3_postprocess import apply_postprocessing
 
 # AWS imports (only loaded in AWS mode)
 try:
@@ -181,47 +182,69 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         # 💾 Save Step 2 result immediately
         log_manager.save_audit_json('step2_llm', step2_result, f"{asin}.json")
         
-        # ========== STEP 3: POST-PROCESSING ==========
-        # Business rules already applied by LLM, but still get health focus and high level category
-        postprocess_result = apply_postprocessing(ingredients, age, gender, title, asin, log_manager)
+        # ========== STEP 3: EXTRACT POST-PROCESSING RESULTS FROM LLM ==========
+        # Post-processing is now done by LLM via apply_postprocessing() tool
+        # Extract results from LLM's JSON output
+        postprocessing = llm_result.get('postprocessing', {})
         
-        # Use business_rules from LLM if available, otherwise use postprocess_result
-        if business_rules and business_rules.get('final_category'):
+        if postprocessing and postprocessing.get('final_category'):
+            # LLM called apply_postprocessing() - use those results
+            category = postprocessing.get('final_category')
+            subcategory = postprocessing.get('final_subcategory')
+            primary_ingredient = postprocessing.get('primary_ingredient')
+            health_focus = postprocessing.get('health_focus', 'UNKNOWN')
+            high_level_category = postprocessing.get('high_level_category', 'PRIORITY VMS')
+            combo_detected = postprocessing.get('combo_detected', False)
+            combos_applied = postprocessing.get('combos_applied', [])
+            final_reasoning = postprocessing.get('reasoning', '')
+            
+            # Log post-processing results
+            log_manager.log_step('step3_postprocess', f"[{asin}] Post-processing complete from LLM")
+            log_manager.log_step('step3_postprocess', f"[{asin}] Category: {category}, Subcategory: {subcategory}")
+            log_manager.log_step('step3_postprocess', f"[{asin}] Health Focus: {health_focus}")
+            log_manager.log_step('step3_postprocess', f"[{asin}] High-Level Category: {high_level_category}")
+            
+            if combo_detected:
+                combos_str = ', '.join(combos_applied)
+                log_manager.log_step('step3_postprocess', f"[{asin}] Combos detected: {combos_str}")
+            
+        elif business_rules and business_rules.get('final_category'):
+            # LLM called business_rules but not postprocessing - use business_rules and add defaults
             category = business_rules.get('final_category')
             subcategory = business_rules.get('final_subcategory')
             primary_ingredient = business_rules.get('primary_ingredient')
-            business_rules_reasoning = business_rules.get('reasoning', '')
-            initial_category = business_rules.get('initial_category', category)
-            initial_subcategory = business_rules.get('initial_subcategory', subcategory)
-            has_changes = business_rules.get('has_changes', False)
-            has_unknown = business_rules.get('has_unknown', False)
+            health_focus = 'UNKNOWN'  # Would need Python fallback
+            high_level_category = 'PRIORITY VMS' if category != 'ACTIVE NUTRITION' and category != 'OTC' else ('NON-PRIORITY VMS' if category == 'ACTIVE NUTRITION' else 'OTC')
+            combo_detected = False
+            combos_applied = []
+            final_reasoning = business_rules.get('reasoning', '')
             
-            # Log if changes were made
-            if has_changes:
-                log_manager.log_step(
-                    'step3_postprocess',
-                    f"[{asin}] Business rules changed: {initial_category}/{initial_subcategory} → {category}/{subcategory}"
-                )
-            if has_unknown:
-                log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: Contains UNKNOWN values")
+            log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: LLM did not call postprocessing tool, using business_rules only")
+            
         else:
-            # Fallback: If LLM extracted 0 ingredients, business rules returns None
+            # Fallback: If LLM extracted 0 ingredients
             # Use Step 1's NW Category/Subcategory from Amazon lookup if available
             if result.get('nw_category') and result.get('nw_subcategory'):
                 category = result['nw_category']
                 subcategory = result['nw_subcategory']
                 primary_ingredient = 'UNKNOWN'
-                business_rules_reasoning = 'No ingredients extracted - using Step 1 Amazon category'
+                health_focus = 'UNKNOWN'
+                high_level_category = 'PRIORITY VMS'
+                combo_detected = False
+                combos_applied = []
+                final_reasoning = 'No ingredients extracted - using Step 1 Amazon category'
                 log_manager.log_step('step3_postprocess', f"[{asin}] No ingredients extracted, using Step 1 category: {category}/{subcategory}")
             else:
-                # Final fallback to Python business rules
-                category = postprocess_result['category']
-                subcategory = postprocess_result['subcategory']
-                primary_ingredient = postprocess_result['primary_ingredient']
-                business_rules_reasoning = ''
-                log_manager.log_step('step3_postprocess', f"[{asin}] WARNING: LLM did not call business_rules tool, using Python fallback")
-            has_changes = False
-            has_unknown = False
+                # Final fallback - should rarely happen
+                category = 'UNKNOWN'
+                subcategory = 'UNKNOWN'
+                primary_ingredient = 'UNKNOWN'
+                health_focus = 'UNKNOWN'
+                high_level_category = 'REMOVE'
+                combo_detected = False
+                combos_applied = []
+                final_reasoning = 'Processing incomplete'
+                log_manager.log_step('step3_postprocess', f"[{asin}] ERROR: No valid results from LLM")
         
         # Build final result
         result['status'] = 'success'
@@ -245,15 +268,13 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         
         result['category'] = category
         result['subcategory'] = subcategory
-        result['health_focus'] = postprocess_result['health_focus']
-        result['high_level_category'] = postprocess_result['high_level_category']
+        result['health_focus'] = health_focus
+        result['high_level_category'] = high_level_category
+        result['combo_detected'] = combo_detected
+        result['combos_applied'] = combos_applied
         
-        # Add reasoning from business rules (only if changes were made or has unknown)
-        result['business_rules_reasoning'] = business_rules_reasoning if (has_changes or has_unknown) else ''
-        # Add unified reasoning field - use business_rules_reasoning or default message
-        result['reasoning'] = result['business_rules_reasoning'] if result['business_rules_reasoning'] else f"Category: {category}, Subcategory: {subcategory}"
-        result['has_business_rule_changes'] = has_changes
-        result['has_unknown_values'] = has_unknown
+        # Add unified reasoning field from postprocessing
+        result['reasoning'] = final_reasoning if final_reasoning else f"Category: {category}, Subcategory: {subcategory}"
         
         result['tokens_used'] = metadata['tokens_used']
         result['api_cost'] = metadata['api_cost']
