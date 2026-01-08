@@ -22,7 +22,7 @@
     "volume_units": {
       "description": "Volume units",
       "indicators": ["oz", "fl oz", "fluid oz", "ounce", "ounces", "fluid ounce"],
-      "output": "oz"
+      "output": "OZ"
     },
     "weight_units": {
       "description": "Weight units",

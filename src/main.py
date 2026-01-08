@@ -149,12 +149,12 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
             log_manager.save_audit_json('step2_llm', filter_result, f"{asin}.json")
             return filter_result
         
-        # Process size/count/unit
+        # Process size/pack_count/unit
         llm_result = process_product_attributes(llm_result)
         attributes = extract_attributes_from_llm_result(llm_result)
-        count = attributes['count']
-        unit = attributes['unit']
         size = attributes['size']
+        unit = attributes['unit']
+        pack_count = attributes['pack_count']
         ingredients = attributes['ingredients']
         business_rules = attributes.get('business_rules', {})
         
@@ -169,9 +169,9 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         step2_result['gender'] = gender
         step2_result['form'] = form
         step2_result['organic'] = organic
-        step2_result['count'] = count
-        step2_result['unit'] = unit
         step2_result['size'] = size
+        step2_result['unit'] = unit
+        step2_result['pack_count'] = pack_count
         step2_result['potency'] = potency
         step2_result['ingredients'] = ingredients
         step2_result['tokens_used'] = metadata['tokens_used']
@@ -230,7 +230,7 @@ def process_single_record(record: Dict, product_id: int, log_manager, max_retrie
         result['gender'] = gender
         result['form'] = form
         result['organic'] = organic
-        result['count'] = count
+        result['pack_count'] = pack_count
         result['unit'] = unit
         result['size'] = size
         result['potency'] = potency
@@ -299,11 +299,11 @@ def save_results(output_dir: Path, results: List[Dict], input_filename: str, log
             'COMPANY': r['brand'],  # Default to brand, manual refinement for parent companies
             'FUNCTIONAL INGREDIENT': r.get('primary_ingredient', ''),
             'HEALTH FOCUS': r.get('health_focus', ''),
-            'SIZE': r.get('size', ''),
+            'SIZE': r.get('size', ''),  # SIZE = quantity (60, 120, 35.274)
             'HIGH LEVEL CATEGORY': r.get('high_level_category', ''),
             'NW_UPC': '',  # Empty - manual lookup (NW/IT internal UPC only)
             'Unit of Measure': r.get('unit', ''),
-            'Pack Count': r.get('count', ''),
+            'Pack Count': r.get('pack_count', ''),  # Pack Count = pack size (1, 2, 3)
             'Organic': r.get('organic', ''),
             # Reasoning: Populated from 'reasoning' field (includes filter reason, LLM detection, or business rules)
             'Reasoning': r.get('reasoning', '')
@@ -638,8 +638,8 @@ def main():
 def create_result_dict(asin: str, title: str, brand: str, 
                        category: str = 'UNKNOWN', subcategory: str = 'UNKNOWN',
                        primary_ingredient: str = '', age: str = '', gender: str = '',
-                       form: str = '', organic: str = '', count: str = '', unit: str = '',
-                       size: str = '', potency: str = '', health_focus: str = '', reasoning: str = '') -> dict:
+                       form: str = '', organic: str = '', size: str = '', unit: str = '',
+                       pack_count: str = '', potency: str = '', health_focus: str = '', reasoning: str = '') -> dict:
     """
     Helper function to create a standardized result dictionary
     """
@@ -654,9 +654,9 @@ def create_result_dict(asin: str, title: str, brand: str,
         'gender': gender,
         'form': form,
         'organic': organic,
-        'count': count,
-        'unit': unit,
         'size': size,
+        'unit': unit,
+        'pack_count': pack_count,
         'potency': potency,
         'health_focus': health_focus,
         'high_level_category': assign_high_level_category(category),
@@ -697,9 +697,9 @@ def apply_step2_llm(asin: str, title: str, brand: str, log_manager: LogManager, 
                     'gender': 'REMOVE',
                     'form': 'REMOVE',
                     'organic': 'REMOVE',
-                    'count': 'REMOVE',
-                    'unit': 'REMOVE',
                     'size': 'REMOVE',
+                    'unit': 'REMOVE',
+                    'pack_count': 'REMOVE',
                     'health_focus': 'REMOVE',
                     'high_level_category': 'REMOVE',
                     'reasoning': 'Step 2 LLM Filter: LLM detected non-supplement product (safety check)',
@@ -725,9 +725,9 @@ def apply_step2_llm(asin: str, title: str, brand: str, log_manager: LogManager, 
                 'gender': attrs.get('gender', 'UNKNOWN'),
                 'form': attrs.get('form', 'UNKNOWN'),
                 'organic': attrs.get('organic', 'NOT ORGANIC'),
-                'count': attrs.get('count', 'UNKNOWN'),
+                'size': attrs.get('size', 'UNKNOWN'),
                 'unit': attrs.get('unit', 'UNKNOWN'),
-                'size': attrs.get('size', ''),
+                'pack_count': attrs.get('pack_count', ''),
                 'potency': attrs.get('potency', ''),  # Add potency extraction
                 'health_focus': business_rules_result.get('health_focus', ''),
                 'high_level_category': assign_high_level_category(final_category),  # Properly assign high level category
@@ -775,9 +775,9 @@ def process_llm_only(record_data):
                     gender='REMOVE',
                     form='REMOVE',
                     organic='REMOVE',
-                    count='REMOVE',
-                    unit='REMOVE',
                     size='REMOVE',
+                    unit='REMOVE',
+                    pack_count='REMOVE',
                     potency='REMOVE',
                     health_focus='REMOVE',
                     reasoning='Step 2 LLM Filter: LLM detected non-supplement product (safety check)'
@@ -815,9 +815,9 @@ def process_llm_only(record_data):
                 gender=step2_result['data'].get('gender', ''),
                 form=step2_result['data'].get('form', ''),
                 organic=step2_result['data'].get('organic', ''),
-                count=step2_result['data'].get('count', ''),
-                unit=step2_result['data'].get('unit', ''),
                 size=step2_result['data'].get('size', ''),
+                unit=step2_result['data'].get('unit', ''),
+                pack_count=step2_result['data'].get('pack_count', ''),
                 potency=step2_result['data'].get('potency', ''),
                 health_focus=step2_result['data'].get('health_focus', ''),
                 reasoning=step2_result['data'].get('reasoning', '')
@@ -941,7 +941,7 @@ def process_single_product(record_data):
                 gender='REMOVE',
                 form='REMOVE',
                 organic='REMOVE',
-                count='REMOVE',
+                pack_count='REMOVE',
                 unit='REMOVE',
                 size='REMOVE',
                 potency='REMOVE',
@@ -1023,7 +1023,7 @@ def process_single_product(record_data):
                 gender='REMOVE',
                 form='REMOVE',
                 organic='REMOVE',
-                count='REMOVE',
+                pack_count='REMOVE',
                 unit='REMOVE',
                 size='REMOVE',
                 potency='REMOVE',
@@ -1063,9 +1063,9 @@ def process_single_product(record_data):
             gender=attrs.get('gender', 'UNKNOWN'),
             form=attrs.get('form', 'UNKNOWN'),
             organic=attrs.get('organic', 'NOT ORGANIC'),
-            count=attrs.get('count', 'UNKNOWN'),
+            size=attrs.get('size', 'UNKNOWN'),
             unit=attrs.get('unit', 'UNKNOWN'),
-            size=attrs.get('size', ''),
+            pack_count=attrs.get('pack_count', ''),
             potency=attrs.get('potency', ''),
             health_focus=business_rules_result.get('health_focus', ''),
             reasoning=business_rules_result.get('reasoning', '')
@@ -1279,9 +1279,9 @@ def process_aws_mode(
                     gender='REMOVE',
                     form='REMOVE',
                     organic='REMOVE',
-                    count='REMOVE',
-                    unit='REMOVE',
                     size='REMOVE',
+                    unit='REMOVE',
+                    pack_count='REMOVE',
                     potency='REMOVE',
                     health_focus='REMOVE',
                     reasoning=detailed_reason
@@ -1415,11 +1415,11 @@ def process_aws_mode(
                     'COMPANY': r['brand'],  # Default to brand, manual refinement for parent companies
                     'FUNCTIONAL INGREDIENT': r.get('primary_ingredient', ''),
                     'HEALTH FOCUS': r.get('health_focus', ''),
-                    'SIZE': r.get('size', ''),
+                    'SIZE': r.get('size', ''),  # SIZE = quantity (60, 120, 35.274)
                     'HIGH LEVEL CATEGORY': r.get('high_level_category', ''),
                     'NW_UPC': '',  # Empty - manual lookup (NW/IT internal UPC only)
                     'Unit of Measure': r.get('unit', ''),
-                    'Pack Count': r.get('count', ''),
+                    'Pack Count': r.get('pack_count', ''),  # Pack Count = pack size (1, 2, 3)
                     'Organic': r.get('organic', ''),
                     # Reasoning: Populated from 'reasoning' field (includes filter reason, LLM detection, or business rules)
                     'Reasoning': r.get('reasoning', '')

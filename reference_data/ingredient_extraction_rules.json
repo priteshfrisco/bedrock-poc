@@ -82,11 +82,54 @@
     "parameters": {
       "ingredient_name": "The name of the ingredient to look up"
     },
+    "critical_note": "lookup_ingredient() takes ONLY ingredient_name parameter!",
+    "correct_examples": [
+      "lookup_ingredient(ingredient_name=\"vitamin d3\")",
+      "lookup_ingredient(ingredient_name=\"calcium\")",
+      "lookup_ingredient(ingredient_name=\"probiotic\")"
+    ],
+    "wrong_examples": [
+      "lookup_ingredient(ingredient_name=\"vitamin d3\", position=0)  # ❌ WRONG!",
+      "lookup_ingredient(name=\"vitamin d3\", position=0)  # ❌ WRONG!",
+      "lookup_ingredient(\"vitamin d3\", 0)  # ❌ WRONG!"
+    ],
+    "note": "You track position internally and include it in your FINAL JSON output, but DO NOT pass position to lookup_ingredient()!",
     "response": {
-      "ingredient": "Normalized ingredient name",
+      "ingredient": "Normalized ingredient name (e.g., 'VITAMIN C (NOT ESTER-C)', 'PROBIOTIC SUPPLEMENT')",
       "nw_category": "Nature's Way category",
       "nw_subcategory": "Nature's Way subcategory",
       "found": "Boolean - whether ingredient was found in database"
+    }
+  },
+  
+  "special_handling": {
+    "probiotics": {
+      "description": "If you extract a specific probiotic strain (akkermansia, lactobacillus, bifidobacterium, etc.) and lookup_ingredient() returns 'found': false, BUT the title contains 'probiotic' or 'probiotics': Use lookup_ingredient(ingredient_name='probiotic') instead to get 'PROBIOTIC SUPPLEMENT'",
+      "example": {
+        "title": "Akkermansia Probiotic 300 Billion",
+        "step_1": "lookup_ingredient(ingredient_name=\"akkermansia\") → returns found: false",
+        "step_2": "Title has 'probiotic', so lookup_ingredient(ingredient_name=\"probiotic\") → returns 'PROBIOTIC SUPPLEMENT' ✅"
+      }
+    },
+    "combo_products": {
+      "description": "If you see multiple ingredients next to each other (e.g., 'echinacea goldenseal'), try looking up the FULL PHRASE first before splitting",
+      "example": {
+        "title": "Echinacea Goldenseal Supreme",
+        "correct_approach": "lookup_ingredient(ingredient_name=\"echinacea goldenseal\") first → If found, use that result ('ECHINACEA GOLDENSEAL COMBO') → If not found, then split and look up separately",
+        "wrong_approach": "Immediately split and look up 'echinacea' and 'goldenseal' separately"
+      }
+    },
+    "normalized_names": {
+      "critical_note": "USE THE NORMALIZED NAME FROM LOOKUP RESULTS!",
+      "description": "When you call lookup_ingredient('vitamin c'), it returns: {'ingredient': 'VITAMIN C (NOT ESTER-C)', 'nw_category': '...', ...}. You MUST use the 'ingredient' field value in your JSON output.",
+      "wrong_example": {
+        "name": "vitamin c",
+        "note": "This is your raw extraction, DON'T use it!"
+      },
+      "correct_example": {
+        "name": "VITAMIN C (NOT ESTER-C)",
+        "note": "Use the 'ingredient' field from lookup!"
+      }
     }
   },
   
@@ -106,21 +149,33 @@
   },
   
   "output_format": {
-    "description": "Return a list of ingredients with their lookup results",
-    "structure": {
+    "description": "Include 'ingredients' in your final JSON output",
+    "example": {
       "ingredients": [
         {
-          "name": "ingredient_name",
+          "name": "VITAMIN D",
           "position": 0,
-          "lookup_result": {
-            "nw_category": "CATEGORY",
-            "nw_subcategory": "SUBCATEGORY",
-            "found": true
-          }
+          "nw_category": "LETTER VITAMINS",
+          "nw_subcategory": "VITAMIN D3",
+          "found": true
+        },
+        {
+          "name": "CALCIUM",
+          "position": 18,
+          "nw_category": "MINERALS",
+          "nw_subcategory": "CALCIUM",
+          "found": true
         }
       ],
-      "primary_ingredient": "ingredient_name",
-      "reasoning": "Why this was chosen as primary"
-    }
+      "primary_ingredient": "VITAMIN D"
+    },
+    "critical_rules": [
+      "You MUST set 'primary_ingredient' to the NORMALIZED NAME!",
+      "Use the 'ingredient' field from lookup results (e.g., 'VITAMIN D', not 'vitamin d3')",
+      "If multivitamin is present → 'primary_ingredient': 'MULTIPLE VITAMIN'",
+      "Otherwise → 'primary_ingredient': '[first ingredient by position, NORMALIZED]'",
+      "NEVER use your raw extraction - ALWAYS use the normalized name from lookup!",
+      "NEVER leave it as 'N/A' or empty!"
+    ]
   }
 }

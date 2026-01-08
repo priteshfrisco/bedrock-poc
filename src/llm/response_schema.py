@@ -43,7 +43,7 @@ RESPONSE_SCHEMA = {
             "required": ["value", "reasoning"],
             "additionalProperties": False
         },
-        "count": {
+        "size": {
             "type": "object",
             "properties": {
                 "value": {"type": ["string", "number"]},  # Can be string or number
@@ -61,10 +61,19 @@ RESPONSE_SCHEMA = {
             "required": ["value", "reasoning"],
             "additionalProperties": False
         },
-        "size": {
+        "pack_count": {
             "type": "object",
             "properties": {
                 "value": {"type": ["integer", "number"]},
+                "reasoning": {"type": "string"}
+            },
+            "required": ["value", "reasoning"],
+            "additionalProperties": False
+        },
+        "potency": {
+            "type": "object",
+            "properties": {
+                "value": {"type": "string"},
                 "reasoning": {"type": "string"}
             },
             "required": ["value", "reasoning"],
@@ -107,7 +116,7 @@ RESPONSE_SCHEMA = {
             "additionalProperties": False
         }
     },
-    "required": ["age", "gender", "form", "organic", "count", "unit", "size", "ingredients", "primary_ingredient", "business_rules"],
+    "required": ["age", "gender", "form", "organic", "size", "unit", "pack_count", "potency", "ingredients", "primary_ingredient", "business_rules"],
     "additionalProperties": False
 }
 
@@ -131,7 +140,7 @@ if __name__ == '__main__':
     print(json.dumps(RESPONSE_SCHEMA, indent=2))
     print("\n" + "="*80)
     print("✅ Schema defines:")
-    print("  - All required fields (age, gender, form, organic, count, unit, size, ingredients)")
+    print("  - All required fields (age, gender, form, organic, size, unit, pack_count, potency, ingredients)")
     print("  - Each attribute has: value + reasoning")
     print("  - Ingredients array with: name, position, category, subcategory")
     print("  - primary_ingredient field")

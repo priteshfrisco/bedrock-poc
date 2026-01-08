@@ -1,0 +1,53 @@
+{
+  "description": "Rules for extracting Pack Count (number of packages/bottles in the product)",
+  "instructions": "Extract the pack count if explicitly mentioned. Look for keywords like 'pack', 'bottles', 'pack of', 'case of'. If NOT mentioned, default to 1 (single unit).",
+  "keywords": {
+    "pack_indicators": [
+      "pack", "packs", "pk", "pks",
+      "package", "packages",
+      "bottle", "bottles",
+      "pack of", "case of"
+    ]
+  },
+  "default": 1,
+  "default_reasoning": "No pack keywords found, default to 1",
+  "patterns": [
+    {
+      "pattern": "[NUMBER] pack/packs/bottles",
+      "examples": ["2 pack", "3 bottles", "4 packs"]
+    },
+    {
+      "pattern": "pack of [NUMBER] / case of [NUMBER]",
+      "examples": ["pack of 2", "case of 6"]
+    }
+  ],
+  "examples": [
+    {
+      "title": "2 Pack Fish Oil 180 Capsules",
+      "pack_count": 2,
+      "reasoning": "Found '2 pack' - pack count is 2"
+    },
+    {
+      "title": "Pack of 3 Vitamin D",
+      "pack_count": 3,
+      "reasoning": "Found 'pack of 3' - pack count is 3"
+    },
+    {
+      "title": "Multivitamin 60 Tablets",
+      "pack_count": 1,
+      "reasoning": "No pack keyword found - default to 1 (single unit)"
+    },
+    {
+      "title": "4 Bottles Vitamin C 500mg",
+      "pack_count": 4,
+      "reasoning": "Found '4 bottles' - pack count is 4"
+    }
+  ],
+  "warnings": [
+    "Do NOT confuse size (capsules/tablets quantity) with pack count (bottles/packages)",
+    "Example: '2 Pack Fish Oil 180 Capsules' → Pack Count = 2, Size = 180",
+    "If no pack keywords found, default to 1"
+  ]
+}
+
+

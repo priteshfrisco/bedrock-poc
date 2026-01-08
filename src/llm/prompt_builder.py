@@ -82,13 +82,13 @@ def build_complete_prompt(product_title: str):
     """Build the complete LLM prompt (brand not needed - R removes it before processing)"""
     
     # Load all files
-    prompts = load_json('src/llm/prompts.json')
+    general_instructions = load_json('reference_data/general_instructions.json')
     age_rules = load_json('reference_data/age_extraction_rules.json')
     gender_rules = load_json('reference_data/gender_extraction_rules.json')
     form_rules = load_json('reference_data/form_extraction_rules.json')
     form_priority = load_json('reference_data/form_priority_rules.json')
     organic_rules = load_json('reference_data/organic_extraction_rules.json')
-    count_rules = load_json('reference_data/count_extraction_rules.json')
+    count_rules = load_json('reference_data/pack_count_extraction_rules.json')
     unit_rules = load_json('reference_data/unit_extraction_rules.json')
     size_rules = load_json('reference_data/size_extraction_rules.json')
     potency_rules = load_json('reference_data/potency_extraction_rules.json')
@@ -103,76 +103,25 @@ def build_complete_prompt(product_title: str):
     # Build safety check dynamically from CSV
     safety_check = format_safety_check_section()
     
+    # System prompt
+    system_prompt = "You are a supplement classification expert. Extract structured information from product titles step by step. Be accurate and precise. Only extract information that is present in the title."
+    
     prompt = f"""
-{prompts['system_prompt']}
+{system_prompt}
 
 ================================================================================
 CRITICAL SAFETY CHECK - READ THIS FIRST!
 ================================================================================
 
-⚠️  BEFORE EXTRACTING ATTRIBUTES, CHECK IF THIS IS A NON-SUPPLEMENT:
-
-If the title appears to be a NON-SUPPLEMENT product (not a dietary supplement),
-return "REMOVE" for all fields.
-
-{safety_check}
-
-✅ IMPORTANT: These ARE supplements (do NOT mark as REMOVE):
-  • Sports drinks / Electrolyte drinks with vitamins/minerals (Gatorade, Sqwincher, Pedialyte)
-  • Protein shakes and meal replacement drinks
-  • Vitamin/mineral beverages (liquid supplements)
-  • Hydration formulas with electrolytes
-  • Energy drinks with vitamins/supplements
-
-❌ These are NOT supplements (mark as REMOVE):
-  • Regular food items (except bars/shakes designed as supplements)
-  • Personal care products (lotions, shampoos, soaps)
-  • Books, DVDs, equipment
-  • Apparel and jewelry
-  • Non-nutritional beverages (regular soda, plain juice)
-
-IF NON-SUPPLEMENT DETECTED (and no exceptions apply):
-Return JSON with ALL values set to "REMOVE":
-{{
-  "age": {{"value": "REMOVE", "reasoning": "Non-supplement detected: [reason]"}},
-  "gender": {{"value": "REMOVE", "reasoning": "Non-supplement detected: [reason]"}},
-  "form": {{"value": "REMOVE", "reasoning": "Non-supplement detected: [reason]"}},
-  "organic": {{"value": "REMOVE", "reasoning": "Non-supplement detected: [reason]"}}
-}}
-
-This is a SAFETY NET in case non-supplements slip through Step 1 filtering.
+{general_instructions['safety_warnings'].format(safety_check=safety_check)}
 
 ================================================================================
 TASK: EXTRACT SUPPLEMENT ATTRIBUTES
 ================================================================================
 
-You will extract 7 attributes from the product title. For EACH attribute, you must:
-1. Search for matching keywords
-2. Apply any priority rules if needed
-3. Provide your reasoning
-4. Output the final value
+{general_instructions['task_description']}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⚠️  CRITICAL: AVOID FALSE POSITIVES FROM BRAND/INGREDIENT NAMES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-IGNORE keywords that appear in:
-  • Brand names (e.g., "Women's Best" is a brand, NOT a gender indicator)
-  • Ingredient names (e.g., "Elderberry" contains "elder", NOT an age indicator)
-  
-Only EXTRACT keywords that describe:
-  • Target audience (age/gender) as a DESCRIPTOR
-  • Physical delivery form (not ingredient state)
-  • Organic certification
-
-Examples:
-  ✅ CORRECT: "Women's Daily Multivitamin" → "Women's" = gender descriptor
-  ✅ CORRECT: "Kids Chewable" → "Kids" = age descriptor
-  ✅ CORRECT: "Turmeric Powder in Capsules" → Form = "Capsules" (NOT powder)
-  ❌ WRONG: "Elderberry Extract" → Do NOT extract "elder" as age
-  ❌ WRONG: Brand="Baby's Only" → Do NOT extract "baby" from brand
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{general_instructions['false_positive_warnings']}
 
 ================================================================================
 STEP 1: EXTRACT AGE
@@ -263,18 +212,10 @@ STEP 5: EXTRACT COUNT
 
 Instructions: {count_rules['instructions']}
 
-Count Indicators (look for numbers BEFORE these keywords):
+Pack Count Indicators (look for numbers BEFORE these keywords):
 """
     
-    for keyword in count_rules['keywords']['count_indicators']:
-        prompt += f"  - {keyword}\n"
-    
-    prompt += "\nVolume Indicators:\n"
-    for keyword in count_rules['keywords']['volume_indicators']:
-        prompt += f"  - {keyword}\n"
-    
-    prompt += "\nWeight Indicators (for products like protein powder, creatine):\n"
-    for keyword in count_rules['keywords']['weight_indicators']:
+    for keyword in count_rules['keywords']['pack_indicators']:
         prompt += f"  - {keyword}\n"
     
     prompt += f"\nDefault: {count_rules['default']}\n\n"
@@ -282,7 +223,7 @@ Count Indicators (look for numbers BEFORE these keywords):
     # Add examples from JSON
     prompt += "Examples:\n"
     for example in count_rules['examples']:
-        prompt += f"  • \"{example['title']}\" → {example['count']}\n"
+        prompt += f"  • \"{example['title']}\" → Pack Count = {example['pack_count']}\n"
         prompt += f"    ({example['reasoning']})\n"
     prompt += "\n"
     
@@ -328,13 +269,21 @@ STEP 7: EXTRACT SIZE (PACK SIZE)
 
 Instructions: {size_rules['instructions']}
 
-Pack Indicators (keywords that indicate pack size):
+Size Indicators (keywords that indicate quantity):
 """
     
-    for keyword in size_rules['keywords']['pack_indicators']:
+    for keyword in size_rules['keywords']['size_indicators']:
         prompt += f"  - {keyword}\n"
     
-    prompt += f"\nDefault: {size_rules['default']} ({size_rules['default_reasoning']})\n\n"
+    prompt += "\nVolume Indicators:\n"
+    for keyword in size_rules['keywords']['volume_indicators']:
+        prompt += f"  - {keyword}\n"
+    
+    prompt += "\nWeight Indicators:\n"
+    for keyword in size_rules['keywords']['weight_indicators']:
+        prompt += f"  - {keyword}\n"
+    
+    prompt += f"\nDefault: {size_rules['default']}\n\n"
     
     # Add examples from JSON
     prompt += "Examples:\n"
@@ -347,45 +296,14 @@ Pack Indicators (keywords that indicate pack size):
     for warning in size_rules['warnings']:
         prompt += f"  {warning}\n"
     
-    # Potency Extraction
+    # Functional Ingredient Extraction (STEP 8 - must come before potency!)
     prompt += f"""
 
 ================================================================================
-STEP 8: EXTRACT POTENCY (DOSAGE/STRENGTH)
+STEP 8: EXTRACT FUNCTIONAL INGREDIENTS
 ================================================================================
 
-Instructions: {potency_rules['instructions']}
-
-Priority Order (check in this order):
-"""
-    
-    for rule in potency_rules['priority_order']:
-        prompt += f"{rule['priority']}. {rule['name']}\n"
-        prompt += f"   Examples: {', '.join(rule['pattern_examples'])}\n"
-        prompt += f"   Unit: {rule['unit']}\n"
-        prompt += f"   Extraction: {rule['extraction']}\n\n"
-    
-    prompt += "\n⚠️  CRITICAL RULES:\n"
-    for rule in potency_rules['critical_rules']:
-        prompt += f"{rule}\n"
-    
-    prompt += "\nExamples:\n"
-    for example in potency_rules['examples'][:5]:  # Show first 5 examples
-        prompt += f"Title: \"{example['title']}\"\n"
-        prompt += f"→ Primary Ingredient: {example['primary_ingredient']}\n"
-        prompt += f"→ Potency: \"{example['potency']}\"\n"
-        prompt += f"   Reasoning: {example['reasoning']}\n\n"
-    
-    prompt += f"Default: \"{potency_rules['default']}\" ({potency_rules['default_reasoning']})\n"
-    
-    # Functional Ingredient Extraction
-    prompt += f"""
-
-================================================================================
-STEP 9: EXTRACT FUNCTIONAL INGREDIENTS
-================================================================================
-
-🔍 CRITICAL: This is the MOST IMPORTANT step for determining Category/Subcategory!
+⚠️  NOTE: Extract potency AFTER identifying ingredients, so you know which is primary!
 
 Instructions: {ingredient_rules['instructions']}
 
@@ -422,43 +340,25 @@ INSTRUCTIONS:
             prompt += f"    ❌ Skip: {example['skip']}\n"
             prompt += f"    Reason: {example['reason']}\n\n"
     
+    # Load extraction steps, primary ingredient logic, and tool calling from JSON
     prompt += """
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-EXTRACTION PROCESS:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXTRACTION STEPS:"""
+    
+    for step in ingredient_rules['extraction_steps']:
+        prompt += f"\n{step}"
+    
+    prompt += f"""
 
-1. Scan the entire title for ingredient names
-2. For EACH ingredient found, record:
-   - ingredient_name: The name (e.g., "vitamin d3", "turmeric", "whey protein")
-   - position: Character position where it starts in title (0-indexed)
-3. For EACH ingredient, call lookup_ingredient() tool to get category/subcategory
-4. Return ALL ingredients with their tool results
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 PRIMARY INGREDIENT DETERMINATION:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-RULE: PRIMARY ingredient = FIRST ingredient by position in title
+RULE: {ingredient_rules['primary_ingredient_logic']['rule']}
 
-EXCEPTION: If "multivitamin" or "multiple vitamin" is detected ANYWHERE,
-          it becomes PRIMARY regardless of position.
-
-Examples:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Example 1:
-Title: "Vitamin D3 with Calcium and Magnesium 120 Softgels"
-→ Extract "vitamin d3" at position 0 (PRIMARY ✓) [NOT "vitamin d" + "d3" separately!]
-→ Extract "calcium" at position 18
-→ Extract "magnesium" at position 30
-
-Example 2:
-Title: "Vitamin B12 Methylcobalamin 1000mcg"
-→ Extract "vitamin b12" at position 0 (PRIMARY ✓) [NOT "vitamin b" + "b12" separately!]
-
-Example 3:
-Title: "Omega-3 Fish Oil 1200mg"
-→ Extract "omega-3" at position 0 (PRIMARY ✓) [NOT "omega" + "3" separately!]
+EXCEPTION: {ingredient_rules['primary_ingredient_logic']['exception']}
 
 PRIMARY INGREDIENT KEYWORDS:
 • Multivitamin: {', '.join(ingredient_rules['special_cases']['multivitamin']['keywords'])}
@@ -467,112 +367,113 @@ PRIMARY INGREDIENT KEYWORDS:
 TOOL CALLING:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-For EACH ingredient found, you MUST call:
+For EACH ingredient found, you MUST call: {ingredient_rules['tool_calling']['tool_name']}(ingredient_name="[name]")
 
-  lookup_ingredient(ingredient_name="[ingredient name]")
-
-⚠️  CRITICAL - lookup_ingredient() takes ONLY ingredient_name parameter!
+⚠️  CRITICAL - {ingredient_rules['tool_calling']['critical_note']}
 
 ✅ CORRECT EXAMPLES:
-  lookup_ingredient(ingredient_name="vitamin d3")
-  lookup_ingredient(ingredient_name="calcium")
-  lookup_ingredient(ingredient_name="probiotic")
+"""
+    for example in ingredient_rules['tool_calling']['correct_examples']:
+        prompt += f"  {example}\n"
+    
+    prompt += "\n❌ WRONG - DO NOT DO THIS:\n"
+    for example in ingredient_rules['tool_calling']['wrong_examples']:
+        prompt += f"  {example}\n"
+    
+    prompt += f"""
+{ingredient_rules['tool_calling']['note']}
 
-❌ WRONG - DO NOT DO THIS:
-  lookup_ingredient(ingredient_name="vitamin d3", position=0)  # ❌ WRONG!
-  lookup_ingredient(name="vitamin d3", position=0)  # ❌ WRONG!
-  lookup_ingredient("vitamin d3", 0)  # ❌ WRONG!
-
-You track position internally and include it in your FINAL JSON output,
-but DO NOT pass position to lookup_ingredient()!
-
-The tool will return:
-- ingredient: Normalized name (e.g., "VITAMIN C (NOT ESTER-C)", "PROBIOTIC SUPPLEMENT")
-- nw_category: Nature's Way category
-- nw_subcategory: Nature's Way subcategory  
-- found: Boolean
+The tool returns: {', '.join(ingredient_rules['tool_calling']['response'].keys())}
 
 SPECIAL HANDLING FOR PROBIOTICS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-If you extract a specific probiotic strain (akkermansia, lactobacillus, bifidobacterium, etc.)
-and lookup_ingredient() returns "found": false,
-BUT the title contains "probiotic" or "probiotics":
-→ Use lookup_ingredient(ingredient_name="probiotic") instead to get "PROBIOTIC SUPPLEMENT"
+{ingredient_rules['special_handling']['probiotics']['description']}
 
 Example:
-  Title: "Akkermansia Probiotic 300 Billion"
-  Step 1: lookup_ingredient(ingredient_name="akkermansia") → returns found: false
-  Step 2: Title has "probiotic", so lookup_ingredient(ingredient_name="probiotic") → returns "PROBIOTIC SUPPLEMENT" ✅
+  Title: "{ingredient_rules['special_handling']['probiotics']['example']['title']}"
+  {ingredient_rules['special_handling']['probiotics']['example']['step_1']}
+  {ingredient_rules['special_handling']['probiotics']['example']['step_2']}
 
 SPECIAL HANDLING FOR COMBO PRODUCTS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-If you see multiple ingredients next to each other (e.g., "echinacea goldenseal"),
-try looking up the FULL PHRASE first before splitting:
+{ingredient_rules['special_handling']['combo_products']['description']}
 
 Example:
-  Title: "Echinacea Goldenseal Supreme"
-  ✅ CORRECT: lookup_ingredient(ingredient_name="echinacea goldenseal") first
-     → If found, use that result ("ECHINACEA GOLDENSEAL COMBO")
-     → If not found, then split and look up separately
+  Title: "{ingredient_rules['special_handling']['combo_products']['example']['title']}"
+  ✅ CORRECT: {ingredient_rules['special_handling']['combo_products']['example']['correct_approach']}
   
-  ❌ WRONG: Immediately split and look up "echinacea" and "goldenseal" separately
+  ❌ WRONG: {ingredient_rules['special_handling']['combo_products']['example']['wrong_approach']}
 
-⚠️  CRITICAL: USE THE NORMALIZED NAME FROM LOOKUP RESULTS!
+⚠️  CRITICAL: {ingredient_rules['special_handling']['normalized_names']['critical_note']}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-When you call lookup_ingredient("vitamin c"), it returns:
-  {{"ingredient": "VITAMIN C (NOT ESTER-C)", "nw_category": "...", ...}}
-
-You MUST use the "ingredient" field value in your JSON output:
+{ingredient_rules['special_handling']['normalized_names']['description']}
 
 ❌ WRONG:
   {{
-    "name": "vitamin c",  ← This is your raw extraction, DON'T use it!
+    "name": "{ingredient_rules['special_handling']['normalized_names']['wrong_example']['name']}",  ← {ingredient_rules['special_handling']['normalized_names']['wrong_example']['note']}
     ...
   }}
 
 ✅ CORRECT:
   {{
-    "name": "VITAMIN C (NOT ESTER-C)",  ← Use the "ingredient" field from lookup!
+    "name": "{ingredient_rules['special_handling']['normalized_names']['correct_example']['name']}",  ← {ingredient_rules['special_handling']['normalized_names']['correct_example']['note']}
     ...
   }}
 
 OUTPUT FORMAT:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Include "ingredients" in your final JSON output:
+{ingredient_rules['output_format']['description']}
 
-{{
-  "ingredients": [
-    {{
-      "name": "VITAMIN D",
-      "position": 0,
-      "category": "BASIC VITAMINS & MINERALS",
-      "subcategory": "LETTER VITAMINS"
-    }},
-    {{
-      "name": "CALCIUM",
-      "position": 18,
-      "category": "BASIC VITAMINS & MINERALS",
-      "subcategory": "MINERALS"
-    }}
-  ],
-  "primary_ingredient": "VITAMIN D"
-}}
+Example: {ingredient_rules['output_format']['example']}
 
-⚠️  CRITICAL: You MUST set "primary_ingredient" to the NORMALIZED NAME!
-- Use the "ingredient" field from lookup results (e.g., "VITAMIN D", not "vitamin d3")
-- If multivitamin is present → "primary_ingredient": "MULTIPLE VITAMIN"
-- Otherwise → "primary_ingredient": "[first ingredient by position, NORMALIZED]"
-- NEVER use your raw extraction - ALWAYS use the normalized name from lookup!
-- NEVER leave it as "N/A" or empty!
+⚠️  CRITICAL RULES:
+"""
+    for rule in ingredient_rules['output_format']['critical_rules']:
+        prompt += f"- {rule}\n"
+    
+    prompt += f"""
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+================================================================================
+STEP 9: EXTRACT POTENCY (DOSAGE/STRENGTH)
+================================================================================
+
+{potency_rules.get('context_reminder', '')}
+
+Instructions: {potency_rules['instructions']}
+
+Priority Order (check in this order):
+"""
+    
+    for rule in potency_rules['priority_order']:
+        prompt += f"{rule['priority']}. {rule['name']}\n"
+        prompt += f"   Examples: {', '.join(rule['pattern_examples'])}\n"
+        prompt += f"   Unit: {rule['unit']}\n"
+        prompt += f"   Extraction: {rule['extraction']}\n\n"
+    
+    prompt += "\n⚠️  CRITICAL RULES:\n"
+    for rule in potency_rules['critical_rules']:
+        prompt += f"{rule}\n"
+    
+    prompt += "\nExamples:\n"
+    for example in potency_rules['examples'][:5]:  # Show first 5 examples
+        prompt += f"Title: \"{example['title']}\"\n"
+        prompt += f"→ Primary Ingredient: {example['primary_ingredient']}\n"
+        prompt += f"→ Potency: \"{example['potency']}\"\n"
+        prompt += f"   Reasoning: {example['reasoning']}\n\n"
+    
+    prompt += f"Default: \"{potency_rules['default']}\" ({potency_rules['default_reasoning']})\n"
+    
+    # Potency Extraction (STEP 9 - must come after ingredients!)
+    prompt += f"""
+
 
 ================================================================================
-STEP 9: APPLY BUSINESS RULES
+STEP 10: APPLY BUSINESS RULES
 ================================================================================
 
 🔧 CRITICAL: After extracting all ingredients, you MUST call apply_business_rules()
@@ -636,75 +537,23 @@ When should_explain is FALSE:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
     
-    prompt += """
+    prompt += f"""
 ================================================================================
 OUTPUT FORMAT
 ================================================================================
 
-Return a JSON object with ALL attributes AND business rules result.
-
-EXAMPLE COMPLETE OUTPUT STRUCTURE:
-
-{{
-  "age": {{ "value": "AGE GROUP - MATURE ADULT", "reasoning": "..." }},
-  "gender": {{ "value": "GENDER - FEMALE", "reasoning": "..." }},
-  "form": {{ "value": "SOFTGEL", "reasoning": "..." }},
-  "organic": {{ "value": "N/A", "reasoning": "..." }},
-  "count": {{ "value": "60", "reasoning": "..." }},
-  "unit": {{ "value": "N/A", "reasoning": "..." }},
-  "size": {{ "value": "1", "reasoning": "..." }},
-  "potency": {{ "value": "5000 IU", "reasoning": "..." }},
-  "ingredients": [ /* array from lookup_ingredient calls */ ],
-  "primary_ingredient": "multivitamin",
-  "business_rules": {{
-    "initial_category": "COMBINED MULTIVITAMINS",
-    "initial_subcategory": "COMBINED MULTIVITAMINS",
-    "final_category": "COMBINED MULTIVITAMINS",
-    "final_subcategory": "WOMEN 50+",
-    "primary_ingredient": "multivitamin",
-    "has_changes": true,
-    "has_unknown": false,
-    "reasoning": "Refined subcategory from COMBINED MULTIVITAMINS to WOMEN 50+ based on age (MATURE ADULT) and gender (FEMALE)"
-  }}
-}}
-
-IMPORTANT:
-- Always provide reasoning for EVERY attribute extraction
-- For count: Be careful NOT to confuse dosage (mg, IU) with count
-- For size: Default to 1 if no pack keywords found
-- For ingredients: Call lookup_ingredient() for EACH ingredient found
-- For business_rules: Call apply_business_rules() AFTER extracting all ingredients
-- CRITICAL: Include the full result from apply_business_rules() in your final JSON output
-- Provide business_rules.reasoning only when business rules made significant changes
+{general_instructions['output_format_instructions']}
 
 ================================================================================
 PRODUCT TO CLASSIFY
 ================================================================================
 
-IMPORTANT: The title may have formatting issues:
-- No spaces between words (e.g., "PrenatalMultivitamin")
-- All caps or inconsistent capitalization
-- Special characters or typos
-- Missing punctuation
-
-Your task is to extract information accurately DESPITE these formatting issues.
-Interpret the title as best as you can and extract all relevant attributes.
+{general_instructions['formatting_issues_warning']}
 
 """
     prompt += f'Title: "{product_title}"\n\n'
     
-    prompt += """Now extract all attributes (age, gender, form, organic, count, unit, size, potency, ingredients).
-
-WORKFLOW (CRITICAL - FOLLOW EXACTLY):
-1. Extract age, gender, form, organic, count, unit, size, potency from the title
-2. Extract ingredient names from the title
-3. For EACH ingredient, call lookup_ingredient() to get category/subcategory
-4. ⚠️  AFTER ALL lookups are complete, you MUST call apply_business_rules()
-   with the ingredients array, age_group, gender, and title
-
-Handle any formatting issues in the title gracefully.
-
-REMINDER: Your final JSON output MUST include the business_rules object!
+    prompt += f"""{general_instructions['workflow_instructions']}
 """
     
     return prompt
@@ -718,4 +567,5 @@ if __name__ == '__main__':
     
     print("\n" + "="*80)
     print("PROMPT LENGTH:", len(build_complete_prompt(example_title)), "characters")
+
 

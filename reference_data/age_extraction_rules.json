@@ -5,17 +5,17 @@
     "AGE GROUP - CHILD": ["kids", "children", "child", "pediatric", "kid's", "toddler"],
     "AGE GROUP - BABY": ["infant", "baby", "newborn"],
     "AGE GROUP - TEEN": ["teen", "teenager", "adolescent"],
-    "AGE GROUP - ADULT": ["adult", "adults"],
-    "AGE GROUP - MATURE ADULT": ["mature adult", "50+", "60+", "50 plus", "60 plus", "50 & wiser", "mature", "senior"],
-    "AGE GROUP - PRENATAL": ["prenatal", "pregnancy", "pregnant", "postnatal", "postpartum"]
+    "AGE GROUP - ADULT": ["adult", "adults", "prenatal", "pregnancy", "pregnant", "postnatal", "postpartum"],
+    "AGE GROUP - MATURE ADULT": ["mature adult", "50+", "60+", "50 plus", "60 plus", "50 & wiser", "mature", "senior"]
   },
   "important_notes": [
     "ADULT and NON SPECIFIC are DIFFERENT values with different business rule implications",
     "Only assign ADULT if the title explicitly contains 'adult' or 'adults' as a descriptor",
     "If no age keyword is found, use NON SPECIFIC (do not assume ADULT)",
-    "Prenatal products get AGE GROUP - PRENATAL (not ADULT like the R system did)",
+    "Prenatal/pregnancy/postnatal products are coded as AGE GROUP - ADULT",
     "IGNORE age keywords that appear in brand names (e.g., 'Baby's Only Organic' brand)",
     "IGNORE age keywords that are part of ingredient names (e.g., 'Elderberry' contains 'elder' but is NOT an age indicator)"
   ],
-  "business_rule_context": "In multivitamin subcategory logic: Age=ADULT+Gender=NON SPECIFIC → ADULT subcategory, but Age=NON SPECIFIC+Gender=NON SPECIFIC → NON-SPECIFIC subcategory. These are different outcomes."
+  "business_rule_context": "In multivitamin subcategory logic: Age=ADULT+Gender=NON SPECIFIC → ADULT subcategory, but Age=NON SPECIFIC+Gender=NON SPECIFIC → NON-SPECIFIC subcategory. These are different outcomes.",
+  "r_system_note": "The original R system had 6 age categories (NON SPECIFIC, CHILD, BABY, TEEN, ADULT, MATURE ADULT). Prenatal products were classified as ADULT, not as a separate category."
 }

@@ -1,52 +1,71 @@
 {
-  "description": "Rules for extracting Pack Size (number of packages/bottles in the product)",
-  "instructions": "Extract the pack size if explicitly mentioned. Look for keywords like 'pack', 'bottles', 'pack of', 'case of'. If NOT mentioned, default to 1 (single unit).",
+  "description": "Rules for extracting SIZE (quantity) from product title",
+  "instructions": "Extract the QUANTITY (size number) from the title. This can be: (1) Discrete units like '60 capsules' → size=60, (2) Weight amounts like '2 lbs' → size=2, or (3) Volume amounts like '8 fl oz' → size=8. Look for numbers before unit keywords. Be careful NOT to confuse dosage (mg, IU) with size.",
   "keywords": {
-    "pack_indicators": [
-      "pack", "packs", "pk", "pks",
-      "package", "packages",
-      "bottle", "bottles",
-      "pack of", "case of"
+    "size_indicators": [
+      "capsules", "capsule", "caps", "cap", "vcaps", "vegcaps",
+      "tablets", "tablet", "tabs", "tab",
+      "softgels", "softgel", "gels", "gel",
+      "gummies", "gummy",
+      "pills", "pill",
+      "servings", "serving",
+      "doses", "dose",
+      "pieces", "piece",
+      "lozenges", "lozenge",
+      "drops",
+      "count", "ct",
+      "ea", "each"
+    ],
+    "volume_indicators": ["oz", "fl oz", "fluid oz", "ounces", "ounce"],
+    "weight_indicators": [
+      "lb", "lbs", "pound", "pounds",
+      "kg", "kgs", "kilos", "kilogram", "kilograms",
+      "g", "gm", "gram", "grams",
+      "mg", "milligram", "milligrams",
+      "ml", "milliliter", "milliliters", "millil"
     ]
   },
-  "default": 1,
-  "default_reasoning": "No pack keywords found, default to 1",
-  "patterns": [
-    {
-      "pattern": "[NUMBER] pack/packs/bottles",
-      "examples": ["2 pack", "3 bottles", "4 packs"]
-    },
-    {
-      "pattern": "pack of [NUMBER] / case of [NUMBER]",
-      "examples": ["pack of 2", "case of 6"]
-    }
-  ],
+  "default": "UNKNOWN",
   "examples": [
     {
-      "title": "2 Pack Fish Oil 180 Capsules",
-      "size": 2,
-      "reasoning": "Found '2 pack' - pack size is 2"
+      "title": "Fish Oil 1000mg 180 Softgels",
+      "size": "180",
+      "reasoning": "Found '180 softgels' - the size is 180 (not 1000, which is dosage)"
     },
     {
-      "title": "Pack of 3 Vitamin D",
-      "size": 3,
-      "reasoning": "Found 'pack of 3' - pack size is 3"
+      "title": "Vitamin D 5000 IU 60 Capsules",
+      "size": "60",
+      "reasoning": "Found '60 capsules' - the size is 60 (not 5000, which is dosage in IU)"
     },
     {
-      "title": "Multivitamin 60 Tablets",
-      "size": 1,
-      "reasoning": "No pack keyword found - default to 1 (single unit)"
+      "title": "Elderberry Syrup 8 fl oz",
+      "size": "8",
+      "reasoning": "Found '8 fl oz' - the size is 8 (volume measurement)"
     },
     {
-      "title": "4 Bottles Vitamin C 500mg",
-      "size": 4,
-      "reasoning": "Found '4 bottles' - pack size is 4"
+      "title": "Whey Protein Powder 2 lbs",
+      "size": "2",
+      "reasoning": "Found '2 lbs' - the size is 2 (weight measurement, will be converted to OZ)"
+    },
+    {
+      "title": "Creatine Monohydrate 500 g",
+      "size": "500",
+      "reasoning": "Found '500 g' - the size is 500 grams (will be converted to OZ)"
+    },
+    {
+      "title": "Multivitamin Gummy",
+      "size": "UNKNOWN",
+      "reasoning": "No size information found in title"
     }
   ],
   "warnings": [
-    "Do NOT confuse count (capsules/tablets) with pack size (bottles/packages)",
-    "Example: '2 Pack Fish Oil 180 Capsules' → Pack Size = 2, Count = 180",
-    "If no pack keywords found, default to 1"
+    "CRITICAL: Do NOT confuse dosage numbers (mg, mcg, IU, mcg/ml) with size.",
+    "CRITICAL: Look for the number that comes BEFORE unit keywords (capsules, tablets, softgels, oz, lbs, g, kg).",
+    "CRITICAL: For weight/volume products (powder, liquid), EXTRACT the weight/volume number as size.",
+    "CRITICAL: If you see multiple numbers, choose the one associated with units, NOT dosage.",
+    "Example: 'CoQ10 100mg 60 Capsules' → Size is 60 (not 100, not 10 from CoQ10)",
+    "Example: 'Whey Protein 2 lbs' → Size is 2 (extract the weight number)",
+    "Example: 'Creatine 500g' → Size is 500 (extract the weight number)"
   ]
 }
 

@@ -1,4 +1,6 @@
 {
+  "context_reminder": "⚠️  REMINDER: You just extracted ingredients in STEP 8 and identified the PRIMARY ingredient. Now extract potency ONLY for that PRIMARY ingredient!",
+  
   "instructions": "Extract the potency/strength/dosage of the primary ingredient from the product title. This is typically expressed as a number followed by a unit (mg, IU, mcg, billion, etc.). ONLY extract potency for the PRIMARY ingredient, not for secondary ingredients.",
   
   "priority_order": [
